@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1/led_counter.tcl"
+  variable script "C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1/led_counter.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,12 +56,8 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/zuabi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-36020-OBSIDIAN-NITRO/incrSyn
-set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 6
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {ADVISORY} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -69,17 +65,17 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/wt} [current_project]
-set_property parent.project_path {X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.xpr} [current_project]
+set_property webtalk.parent_dir {C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/zuabi/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/AmZu/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
-set_property ip_output_repo {x:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/ip} [current_project]
+set_property ip_output_repo {c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {{X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/sources_1/new/led_counter.v}}
+read_verilog -library xil_defaultlib {{C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/sources_1/new/led_counter.v}}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -89,12 +85,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/constrs_1/new/zed_leds.xdc}}
-set_property used_in_implementation false [get_files {{X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/constrs_1/new/zed_leds.xdc}}]
+read_xdc {{C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/constrs_1/new/zed_leds.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/constrs_1/new/zed_leds.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/utils_1/imports/synth_1/led_counter.dcp}
+read_checkpoint -auto_incremental -incremental {C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.srcs/utils_1/imports/synth_1/led_counter.dcp}
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

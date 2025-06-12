@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Jun 11 15:24:12 2025
-| Host         : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+| Date         : Fri Jun 13 01:05:53 2025
+| Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file led_counter_utilization_synth.rpt -pb led_counter_utilization_synth.pb
 | Design       : led_counter
 | Device       : xc7z020clg484-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   12 |     0 |          0 |     53200 |  0.02 |
-|   LUT as Logic          |   12 |     0 |          0 |     53200 |  0.02 |
+| Slice LUTs*             |    2 |     0 |          0 |     53200 | <0.01 |
+|   LUT as Logic          |    2 |     0 |          0 |     53200 | <0.01 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         |   36 |     0 |          0 |    106400 |  0.03 |
-|   Register as Flip Flop |   36 |     0 |          0 |    106400 |  0.03 |
+| Slice Registers         |   21 |     0 |          0 |    106400 |  0.02 |
+|   Register as Flip Flop |   21 |     0 |          0 |    106400 |  0.02 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 36    |          Yes |       Reset |            - |
+| 21    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    9 |     0 |          0 |       200 |  4.50 |
+| Bonded IOB                  |   18 |     0 |          0 |       200 |  9.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -149,16 +149,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   36 |        Flop & Latch |
-| OBUF     |    8 |                  IO |
-| CARRY4   |    7 |          CarryLogic |
-| LUT6     |    6 |                 LUT |
-| LUT3     |    3 |                 LUT |
-| LUT5     |    2 |                 LUT |
-| LUT2     |    2 |                 LUT |
-| LUT1     |    2 |                 LUT |
-| LUT4     |    1 |                 LUT |
-| IBUF     |    1 |                  IO |
+| FDRE     |   21 |        Flop & Latch |
+| OBUF     |   15 |                  IO |
+| CARRY4   |    5 |          CarryLogic |
+| IBUF     |    3 |                  IO |
+| LUT2     |    1 |                 LUT |
+| LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

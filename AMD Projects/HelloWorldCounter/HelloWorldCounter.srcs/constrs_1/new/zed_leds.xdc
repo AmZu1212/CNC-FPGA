@@ -18,8 +18,47 @@ set_property PACKAGE_PIN V22 [get_ports {led[4]}]
 set_property PACKAGE_PIN W22 [get_ports {led[5]}]
 set_property PACKAGE_PIN U19 [get_ports {led[6]}]
 set_property PACKAGE_PIN U14 [get_ports {led[7]}]
+
 set_property IOSTANDARD LVCMOS33 [get_ports led[*]]
 
-# Button pin
-# set_property PACKAGE_PIN N15 [get_ports btn]
-# set_property IOSTANDARD LVCMOS33 [get_ports btn]
+
+# PMOD JA Inputs
+
+## Upper Slots
+#set_property PACKAGE_PIN Y11  [get_ports {ja_in[0]}]   ;# JA1
+#set_property PACKAGE_PIN AA11 [get_ports {ja_in[1]}]   ;# JA2
+#set_property PACKAGE_PIN Y10  [get_ports {ja_in[2]}]   ;# JA3
+#set_property PACKAGE_PIN AA9  [get_ports {ja_in[3]}]   ;# JA4
+
+## Lower Slots
+#set_property PACKAGE_PIN AB11  [get_ports {ja_in[4]}]  ;# JA7
+#set_property PACKAGE_PIN AB10  [get_ports {ja_in[5]}]  ;# JA8
+#set_property PACKAGE_PIN AB9 [get_ports {ja_in[6]}]    ;# JA9
+#set_property PACKAGE_PIN AA8 [get_ports {ja_in[7]}]    ;# JA10
+
+#set_property IOSTANDARD LVCMOS33 [get_ports ja_in[*]]
+#set_property PULLDOWN true [get_ports ja_in[*]]
+
+# A4988 stepper driver control signals on PMOD JA
+# Upper
+set_property PACKAGE_PIN Y11  [get_ports drv_dir]   ;
+set_property PACKAGE_PIN AA11 [get_ports drv_step]  ;
+set_property PACKAGE_PIN Y10  [get_ports drv_rst]   ;
+
+# Lower
+set_property PACKAGE_PIN AB11 [get_ports drv_en]    ;
+set_property PACKAGE_PIN AB10 [get_ports drv_ms1]   ;
+set_property PACKAGE_PIN AB9  [get_ports drv_ms2]   ;
+set_property PACKAGE_PIN AA8  [get_ports drv_ms3]   ;
+set_property IOSTANDARD LVCMOS33 [get_ports {drv_*}]
+
+# Button inputs
+set_property PACKAGE_PIN N15 [get_ports btn_ccw]  ; #Left Button
+set_property IOSTANDARD LVCMOS33 [get_ports btn_ccw]
+set_property PULLDOWN true [get_ports btn_ccw]
+
+set_property PACKAGE_PIN R18 [get_ports btn_cw]   ; #Right Button
+set_property IOSTANDARD LVCMOS33 [get_ports btn_cw]
+set_property PULLDOWN true [get_ports btn_cw]
+
+

@@ -3,22 +3,22 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Jun 11 15:23:42 2025
-# Process ID         : 73484
-# Current directory  : X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1
+# Start of session at: Fri Jun 13 01:05:23 2025
+# Process ID         : 24780
+# Current directory  : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1
 # Command line       : vivado.exe -log led_counter.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_counter.tcl
-# Log file           : X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1/led_counter.vds
-# Journal file       : X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1\vivado.jou
-# Running On         : OBSIDIAN-NITRO
+# Log file           : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1/led_counter.vds
+# Journal file       : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/synth_1\vivado.jou
+# Running On         : OBSIDIAN
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 26100
-# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
-# CPU Frequency      : 3294 MHz
-# CPU Physical cores : 6
-# CPU Logical cores  : 12
-# Host memory        : 16438 MB
-# Swap memory        : 9126 MB
-# Total Virtual      : 25565 MB
-# Available Virtual  : 8102 MB
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor            
+# CPU Frequency      : 3700 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 34269 MB
+# Swap memory        : 5100 MB
+# Total Virtual      : 39370 MB
+# Available Virtual  : 19293 MB
 #-----------------------------------------------------------
 source led_counter.tcl -notrace

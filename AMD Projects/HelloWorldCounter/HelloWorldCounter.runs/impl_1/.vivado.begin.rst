@@ -1,90 +1,50 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="59176" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="25304" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="62912" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="23200" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="62044" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="13528" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="62672" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="27696" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="61876" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="17912" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="36648" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="24728" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="65772" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="27748" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="68244" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="28532" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="66992" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="13804" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="51320" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="73708" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="62280" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="73716" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="69904" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="51048" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="73796" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="75780" HostCore="12" HostMemory="016438304768">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="75888" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="19696" HostCore="24" HostMemory="034269863936">
     </Process>
 </ProcessHandle>

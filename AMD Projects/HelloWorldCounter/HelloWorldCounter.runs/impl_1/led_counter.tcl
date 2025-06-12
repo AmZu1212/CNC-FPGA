@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/impl_1/led_counter.tcl"
+  variable script "C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.runs/impl_1/led_counter.tcl"
   variable category "vivado_impl"
 }
 
@@ -97,8 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {ADVISORY} 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -108,13 +106,11 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 3
-  set_param synth.incrementalSynthesisCache C:/Users/zuabi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-36020-OBSIDIAN-NITRO/incrSyn
-  set_param checkpoint.writeSynthRtdsInDcp 1
+  set_param chipscope.maxJobs 6
   set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 12  }
+  set_param runs.launchOptions { -jobs 24  }
   open_checkpoint led_counter_routed.dcp
-  set_property webtalk.parent_dir {X:/Git Repos/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/HelloWorldCounter/HelloWorldCounter.cache/wt} [current_project]
 set_property TOP led_counter [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
