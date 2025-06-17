@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt 2  -L xil_defaultlib -L xpm -L xlconstant_v1_1_9 -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot CNC_Top_wrapper xil_defaultlib.CNC_Top_wrapper xil_defaultlib.glbl -log elaborate.log

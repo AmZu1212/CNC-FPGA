@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Jun 13 01:09:29 2025
+| Date         : Tue Jun 17 19:22:48 2025
 | Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file led_counter_control_sets_placed.rpt
 | Design       : led_counter
@@ -60,7 +60,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              20 |            5 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               2 |            1 |
+| No           | Yes                   | No                     |               2 |            2 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -73,7 +73,7 @@ Table of Contents
 +----------------+---------------+------------------+------------------+----------------+--------------+
 |  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               | drv_step_i_1_n_0 |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG |               | led_OBUF[4]      |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG |               |                  |                5 |             20 |         4.00 |
 +----------------+---------------+------------------+------------------+----------------+--------------+
 

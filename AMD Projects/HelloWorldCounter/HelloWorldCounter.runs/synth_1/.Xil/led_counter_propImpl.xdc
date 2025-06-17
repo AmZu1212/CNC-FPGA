@@ -31,7 +31,7 @@ set_property src_info {type:XDC file:1 line:51 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN AB9  [get_ports drv_ms2]   ;
 set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AA8  [get_ports drv_ms3]   ;
-set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:1 line:66 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N15 [get_ports btn_ccw]  ; #Left Button
-set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R18 [get_ports btn_cw]   ; #Right Button

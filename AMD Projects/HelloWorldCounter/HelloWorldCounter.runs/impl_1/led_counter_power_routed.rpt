@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Fri Jun 13 01:09:54 2025
+| Date             : Tue Jun 17 19:23:12 2025
 | Host             : OBSIDIAN running 64-bit major release  (build 9200)
 | Command          : report_power -file led_counter_power_routed.rpt -pb led_counter_power_summary_routed.pb -rpx led_counter_power_routed.rpx
 | Design           : led_counter
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.110        |
+| Total On-Chip Power (W)  | 0.111        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
+| Dynamic (W)              | 0.005        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.7         |
@@ -59,9 +59,9 @@ Table of Contents
 |   LUT as Logic |    <0.001 |        2 |     53200 |           <0.01 |
 |   Others       |     0.000 |        2 |       --- |             --- |
 | Signals        |    <0.001 |       29 |       --- |             --- |
-| I/O            |     0.003 |       18 |       200 |            9.00 |
+| I/O            |     0.005 |       18 |       200 |            9.00 |
 | Static Power   |     0.106 |          |           |                 |
-| Total          |     0.110 |          |           |                 |
+| Total          |     0.111 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -147,7 +147,7 @@ Table of Contents
 +-------------+-----------+
 | Name        | Power (W) |
 +-------------+-----------+
-| led_counter |     0.004 |
+| led_counter |     0.005 |
 +-------------+-----------+
 
 

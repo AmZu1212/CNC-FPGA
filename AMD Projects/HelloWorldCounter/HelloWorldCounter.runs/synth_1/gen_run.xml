@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1749765920" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/led_counter.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1750177306" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/led_counter.dcp">
   <File Type="PA-TCL" Name="led_counter.tcl"/>
   <File Type="REPORTS-TCL" Name="led_counter_reports.tcl"/>
   <File Type="RDS-RDS" Name="led_counter.vds"/>
