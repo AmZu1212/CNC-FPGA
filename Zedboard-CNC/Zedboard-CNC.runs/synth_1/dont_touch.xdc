@@ -6,14 +6,14 @@
 # Block Designs: bd/CNC_Top/CNC_Top.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top || ORIG_REF_NAME==CNC_Top} -quiet] -quiet
 
-# IP: bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_0/CNC_Top_A4988_Driver_IO_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_A4988_Driver_IO_0_0 || ORIG_REF_NAME==CNC_Top_A4988_Driver_IO_0_0} -quiet] -quiet
-
 # IP: bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] -quiet
 
 # IP: bd/CNC_Top/ip/CNC_Top_xlconstant_0_1/CNC_Top_xlconstant_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_xlconstant_0_1 || ORIG_REF_NAME==CNC_Top_xlconstant_0_1} -quiet] -quiet
+
+# IP: bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_0/CNC_Top_A4988_Driver_IO_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_A4988_Driver_IO_0_0 || ORIG_REF_NAME==CNC_Top_A4988_Driver_IO_0_0} -quiet] -quiet
 
 # IP: bd/CNC_Top/ip/CNC_Top_DriverController_0_0/CNC_Top_DriverController_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_DriverController_0_0 || ORIG_REF_NAME==CNC_Top_DriverController_0_0} -quiet] -quiet
@@ -21,12 +21,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_Dri
 # IP: bd/CNC_Top/ip/CNC_Top_LED_IO_0_0/CNC_Top_LED_IO_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_LED_IO_0_0 || ORIG_REF_NAME==CNC_Top_LED_IO_0_0} -quiet] -quiet
 
-# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
+# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc
+# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_ooc.xdc
+# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_ooc.xdc
 
-# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc
+# XDC: c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc

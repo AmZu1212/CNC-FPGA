@@ -3,12 +3,12 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Jun 19 19:47:26 2025
-# Process ID         : 20056
-# Current directory  : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.runs/impl_1
+# Start of session at: Thu Jun 19 20:13:52 2025
+# Process ID         : 21456
+# Current directory  : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/impl_1
 # Command line       : vivado.exe -log CNC_Top_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source CNC_Top_wrapper.tcl -notrace
-# Log file           : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.runs/impl_1/CNC_Top_wrapper.vdi
-# Journal file       : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.runs/impl_1\vivado.jou
+# Log file           : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/impl_1/CNC_Top_wrapper.vdi
+# Journal file       : C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/impl_1\vivado.jou
 # Running On         : OBSIDIAN
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 19045
@@ -19,6 +19,6 @@
 # Host memory        : 34269 MB
 # Swap memory        : 5100 MB
 # Total Virtual      : 39370 MB
-# Available Virtual  : 23162 MB
+# Available Virtual  : 20822 MB
 #-----------------------------------------------------------
 source CNC_Top_wrapper.tcl -notrace

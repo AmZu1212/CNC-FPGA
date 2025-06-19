@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:{c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc} rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc id:1 order:EARLY scoped_inst:CNC_Top_i/clk_wiz/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:{C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc} rfile:../../../Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc id:1 order:EARLY scoped_inst:CNC_Top_i/clk_wiz/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc rfile:../../../Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc id:2} [current_design]
 current_instance CNC_Top_i/clk_wiz/inst
 set_property src_info {type:SCOPED_XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100

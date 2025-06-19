@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1750202756">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1750353188">
+  <File Type="PA-TCL" Name="CNC_Top_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="CNC_Top_wrapper_reports.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="CNC_Top_wrapper_power_summary_routed.pb"/>
-  <File Type="BITSTR-MMI" Name="CNC_Top_wrapper.mmi"/>
+  <File Type="INIT-TIMING" Name="CNC_Top_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="CNC_Top_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="CNC_Top_wrapper_drc_opted.rpt"/>
-  <File Type="BG-DRC" Name="CNC_Top_wrapper.drc"/>
-  <File Type="ROUTE-STATUS-PB" Name="CNC_Top_wrapper_route_status.pb"/>
-  <File Type="BG-BGN" Name="CNC_Top_wrapper.bgn"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CNC_Top_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="CNC_Top_wrapper.hwdef"/>
+  <File Type="OPT-TIMING" Name="CNC_Top_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="CNC_Top_wrapper_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="CNC_Top_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CNC_Top_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CNC_Top_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="CNC_Top_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="CNC_Top_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CNC_Top_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="CNC_Top_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="CNC_Top_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-IO" Name="CNC_Top_wrapper_io_placed.rpt"/>
-  <File Type="BG-BIN" Name="CNC_Top_wrapper.bin"/>
   <File Type="PLACE-CTRL" Name="CNC_Top_wrapper_control_sets_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="CNC_Top_wrapper_power_routed.rpx"/>
+  <File Type="PLACE-SIMILARITY" Name="CNC_Top_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="CNC_Top_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="CNC_Top_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="CNC_Top_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="CNC_Top_wrapper_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CNC_Top_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="CNC_Top_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CNC_Top_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="CNC_Top_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="CNC_Top_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="CNC_Top_wrapper_routed.dcp"/>
-  <File Type="BITSTR-MSK" Name="CNC_Top_wrapper.msk"/>
-  <File Type="BITSTR-RBT" Name="CNC_Top_wrapper.rbt"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="CNC_Top_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="CNC_Top_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="CNC_Top_wrapper_route_status.rpt"/>
-  <File Type="PA-TCL" Name="CNC_Top_wrapper.tcl"/>
-  <File Type="ROUTE-PWR" Name="CNC_Top_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="CNC_Top_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="CNC_Top_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="CNC_Top_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-DRC-PB" Name="CNC_Top_wrapper_drc_routed.pb"/>
-  <File Type="BITSTR-SYSDEF" Name="CNC_Top_wrapper.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="CNC_Top_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="CNC_Top_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CNC_Top_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="CNC_Top_wrapper.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CNC_Top_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="CNC_Top_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="CNC_Top_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="CNC_Top_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="CNC_Top_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="CNC_Top_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="CNC_Top_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="CNC_Top_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="CNC_Top_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="CNC_Top_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="RDI-RDI" Name="CNC_Top_wrapper.vdi"/>
   <File Type="ROUTE-CLK" Name="CNC_Top_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="CNC_Top_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="CNC_Top_wrapper_bus_skew_routed.rpx"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CNC_Top_wrapper_bus_skew_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="CNC_Top_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BITSTR-NKY" Name="CNC_Top_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="CNC_Top_wrapper_bd.bmm"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="CNC_Top_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="CNC_Top_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="CNC_Top_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="CNC_Top_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="CNC_Top_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="CNC_Top_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="CNC_Top_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="CNC_Top_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="CNC_Top_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="CNC_Top_wrapper_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="CNC_Top_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="CNC_Top_wrapper_rqs_routed.pb"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CNC_Top_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CNC_Top_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CNC_Top_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CNC_Top_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="CNC_Top_wrapper.bit"/>
+  <File Type="BG-BIN" Name="CNC_Top_wrapper.bin"/>
+  <File Type="BITSTR-MSK" Name="CNC_Top_wrapper.msk"/>
+  <File Type="BITSTR-RBT" Name="CNC_Top_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="CNC_Top_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="CNC_Top_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="CNC_Top_wrapper.mmi"/>
   <File Type="PDI-FILE" Name="CNC_Top_wrapper.pdi"/>
   <File Type="BOOT-PDI-FILE" Name="CNC_Top_wrapper_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="CNC_Top_wrapper_pld.pdi"/>
@@ -66,6 +73,13 @@
   <File Type="RNPI_FILE" Name="CNC_Top_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="CNC_Top_wrapper.npi"/>
   <File Type="RBD_FILE" Name="CNC_Top_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="CNC_Top_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="CNC_Top_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="CNC_Top_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="CNC_Top_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="CNC_Top_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="CNC_Top_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="CNC_Top_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>

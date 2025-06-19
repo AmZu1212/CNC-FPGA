@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/AMD Projects/Zedboard-CNC/Zedboard-CNC.runs/impl_1'
+HD_PWD='C:/Users/AmZu/Desktop/Github_Renovations/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log CNC_Top_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source CNC_Top_wrapper.tcl -notrace
 
 
