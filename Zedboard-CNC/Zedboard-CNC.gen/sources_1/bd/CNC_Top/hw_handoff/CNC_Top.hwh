@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 19 20:13:07 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 19 21:48:01 2025" VIVADOVERSION="2024.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
@@ -856,12 +856,12 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="const_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms1"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms2"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
+            <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
