@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 19 21:48:01 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 23 02:24:39 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -44,14 +44,18 @@
         <CONNECTION INSTANCE="LED_IO_0" PORT="led"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="left" SIGIS="undef" SIGNAME="External_Ports_left">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="DriverController" PORT="ccw"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" NAME="left" SIGIS="undef"/>
     <PORT DIR="I" NAME="right" SIGIS="undef" SIGNAME="External_Ports_right">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="DriverController" PORT="cw"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
+        <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
+        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="reset"/>
+        <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="reset"/>
+        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
@@ -71,9 +75,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_dir">
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController" PORT="dir"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
@@ -118,74 +122,364 @@
             <CONNECTION INSTANCE="LED_IO_0" PORT="in2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_en">
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Z_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController" PORT="en"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_step">
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController" PORT="step"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="step"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/DriverController" HWVERSION="1.0" INSTANCE="DriverController" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/A4988_Driver_IO_0" HWVERSION="1.0" INSTANCE="A4988_Driver_IO_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="A4988_Driver_IO" VLNV="xilinx.com:module_ref:A4988_Driver_IO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_A4988_Driver_IO_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_X_dir_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="dir_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_direction" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" NAME="drv_step" SIGIS="undef"/>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_X_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_X_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="step"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/A4988_Driver_IO_1" HWVERSION="1.0" INSTANCE="A4988_Driver_IO_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="A4988_Driver_IO" VLNV="xilinx.com:module_ref:A4988_Driver_IO:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_A4988_Driver_IO_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_direction" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_enable" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef"/>
+        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_LOW" SIGIS="rst"/>
+        <PORT DIR="O" NAME="drv_step" SIGIS="undef"/>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Y_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="step"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DriverController_X" HWVERSION="1.0" INSTANCE="DriverController_X" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_DriverController_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cycles_per_step" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_X_dir_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="direction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_X_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_X_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sync" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DriverController_Y" HWVERSION="1.0" INSTANCE="DriverController_Y" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_DriverController_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cycles_per_step" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="direction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Y_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sync" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/DriverController_Z" HWVERSION="1.0" INSTANCE="DriverController_Z" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="CNC_Top_DriverController_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="ccw" SIGIS="undef" SIGNAME="External_Ports_left">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="left"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="cw" SIGIS="undef" SIGNAME="External_Ports_right">
+        <PORT DIR="I" LEFT="31" NAME="cycles_per_step" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_x">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_x"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir" SIGIS="undef" SIGNAME="DriverController_dir">
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="direction"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_en">
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Z_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_step">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sync" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/GCODE_Parser_0" HWVERSION="1.0" INSTANCE="GCODE_Parser_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GCODE_Parser" VLNV="xilinx.com:module_ref:GCODE_Parser:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_GCODE_Parser_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="done" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="next_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="next_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="next_pos_z" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_pos_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="next_speed" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="9" FULLNAME="/Ground" HWVERSION="1.1" INSTANCE="Ground" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_xlconstant_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms1"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms2"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="ms1"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="ms2"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="ms3"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="ms1"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="ms2"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="ms3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -233,14 +527,101 @@
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in7" SIGIS="undef" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="in7" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="LED_IO_0_led">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/XYZ_Axis_Coordinator_0" HWVERSION="1.0" INSTANCE="XYZ_Axis_Coordinator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="XYZ_Axis_Coordinator" VLNV="xilinx.com:module_ref:XYZ_Axis_Coordinator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CYCLES_PER_SECOND" VALUE="100000000"/>
+        <PARAMETER NAME="MAX_SPEED" VALUE="20"/>
+        <PARAMETER NAME="MICRONS_PER_STEP" VALUE="79"/>
+        <PARAMETER NAME="MIN_SPEED" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_XYZ_Axis_Coordinator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cycles_per_step_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="cycles_per_step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cycles_per_step_y" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="cycles_per_step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cycles_per_step_z" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="cycles_per_step"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_x" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_y" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="dir_z" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="sync"/>
+            <CONNECTION INSTANCE="DriverController_X" PORT="sync"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="sync"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="next_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="next_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="next_pos_z" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_pos_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="next_speed" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -833,35 +1214,17 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController" PORT="clk"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
+            <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="const_0_dout">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="const_0" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/const_0" HWVERSION="1.1" INSTANCE="const_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_xlconstant_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="const_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms1"/>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms2"/>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
-            <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

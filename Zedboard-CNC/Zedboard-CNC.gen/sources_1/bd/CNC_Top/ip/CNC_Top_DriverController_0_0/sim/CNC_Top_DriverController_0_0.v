@@ -56,29 +56,38 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CNC_Top_DriverController_0_0 (
   clk,
-  cw,
-  ccw,
-  en,
+  rst,
+  sync,
+  cycles_per_step,
   dir,
+  en,
+  dir_out,
   step
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *)
 input wire clk;
-input wire cw;
-input wire ccw;
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+input wire rst;
+input wire sync;
+input wire [31 : 0] cycles_per_step;
+input wire dir;
 output wire en;
-output wire dir;
+output wire dir_out;
 output wire step;
 
   DriverController inst (
     .clk(clk),
-    .cw(cw),
-    .ccw(ccw),
-    .en(en),
+    .rst(rst),
+    .sync(sync),
+    .cycles_per_step(cycles_per_step),
     .dir(dir),
+    .en(en),
+    .dir_out(dir_out),
     .step(step)
   );
 endmodule

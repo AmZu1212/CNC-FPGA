@@ -1,28 +1,47 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8709A70DC3C91AE6",
+      "boundary_crc": "0x8709A70DB43AD96B",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top",
       "name": "CNC_Top",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2024.2"
+      "tool_version": "2024.2",
+      "validated": "true"
     },
     "design_tree": {
       "clk_wiz": "",
-      "const_0": "",
+      "Ground": "",
       "A4988_Driver_IO": "",
-      "DriverController": "",
-      "LED_IO_0": ""
+      "DriverController_Z": "",
+      "LED_IO_0": "",
+      "XYZ_Axis_Coordinator_0": "",
+      "GCODE_Parser_0": "",
+      "DriverController_X": "",
+      "A4988_Driver_IO_0": "",
+      "DriverController_Y": "",
+      "A4988_Driver_IO_1": ""
     },
     "ports": {
       "sys_clock": {
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "CNC_Top_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -43,7 +62,17 @@
       },
       "drv_reset": {
         "type": "rst",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH",
+            "value_src": "user_prop"
+          }
+        }
       },
       "drv_ms1": {
         "direction": "O"
@@ -82,12 +111,12 @@
           }
         }
       },
-      "const_0": {
+      "Ground": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "9",
         "xci_name": "CNC_Top_xlconstant_0_1",
         "xci_path": "ip\\CNC_Top_xlconstant_0_1\\CNC_Top_xlconstant_0_1.xci",
-        "inst_hier_path": "const_0",
+        "inst_hier_path": "Ground",
         "parameters": {
           "CONST_VAL": {
             "value": "0"
@@ -165,12 +194,12 @@
           }
         }
       },
-      "DriverController": {
+      "DriverController_Z": {
         "vlnv": "xilinx.com:module_ref:DriverController:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_DriverController_0_0",
         "xci_path": "ip\\CNC_Top_DriverController_0_0\\CNC_Top_DriverController_0_0.xci",
-        "inst_hier_path": "DriverController",
+        "inst_hier_path": "DriverController_Z",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "DriverController",
@@ -181,6 +210,10 @@
             "type": "clk",
             "direction": "I",
             "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
               "FREQ_HZ": {
                 "value": "100000000",
                 "value_src": "ip_prop"
@@ -195,16 +228,25 @@
               }
             }
           },
-          "cw": {
+          "rst": {
+            "type": "rst",
             "direction": "I"
           },
-          "ccw": {
+          "sync": {
+            "direction": "I"
+          },
+          "cycles_per_step": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dir": {
             "direction": "I"
           },
           "en": {
             "direction": "O"
           },
-          "dir": {
+          "dir_out": {
             "direction": "O"
           },
           "step": {
@@ -260,6 +302,398 @@
             "right": "0"
           }
         }
+      },
+      "XYZ_Axis_Coordinator_0": {
+        "vlnv": "xilinx.com:module_ref:XYZ_Axis_Coordinator:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_XYZ_Axis_Coordinator_0_0",
+        "xci_path": "ip\\CNC_Top_XYZ_Axis_Coordinator_0_0\\CNC_Top_XYZ_Axis_Coordinator_0_0.xci",
+        "inst_hier_path": "XYZ_Axis_Coordinator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "XYZ_Axis_Coordinator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "next_speed": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "next_pos_x": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "next_pos_y": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "next_pos_z": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "cycles_per_step_x": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "dir_x": {
+            "direction": "O"
+          },
+          "cycles_per_step_y": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "dir_y": {
+            "direction": "O"
+          },
+          "cycles_per_step_z": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "dir_z": {
+            "direction": "O"
+          },
+          "done": {
+            "direction": "O"
+          }
+        }
+      },
+      "GCODE_Parser_0": {
+        "vlnv": "xilinx.com:module_ref:GCODE_Parser:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_GCODE_Parser_0_0",
+        "xci_path": "ip\\CNC_Top_GCODE_Parser_0_0\\CNC_Top_GCODE_Parser_0_0.xci",
+        "inst_hier_path": "GCODE_Parser_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "GCODE_Parser",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "done": {
+            "direction": "I"
+          },
+          "next_speed": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "next_pos_x": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "next_pos_y": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "next_pos_z": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "O"
+          }
+        }
+      },
+      "DriverController_X": {
+        "vlnv": "xilinx.com:module_ref:DriverController:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_DriverController_0_1",
+        "xci_path": "ip\\CNC_Top_DriverController_0_1\\CNC_Top_DriverController_0_1.xci",
+        "inst_hier_path": "DriverController_X",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DriverController",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sync": {
+            "direction": "I"
+          },
+          "cycles_per_step": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dir": {
+            "direction": "I"
+          },
+          "en": {
+            "direction": "O"
+          },
+          "dir_out": {
+            "direction": "O"
+          },
+          "step": {
+            "direction": "O"
+          }
+        }
+      },
+      "A4988_Driver_IO_0": {
+        "vlnv": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_A4988_Driver_IO_0_1",
+        "xci_path": "ip\\CNC_Top_A4988_Driver_IO_0_1\\CNC_Top_A4988_Driver_IO_0_1.xci",
+        "inst_hier_path": "A4988_Driver_IO_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "A4988_Driver_IO",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enable": {
+            "direction": "I"
+          },
+          "direction": {
+            "direction": "I"
+          },
+          "step": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ms1": {
+            "direction": "I"
+          },
+          "ms2": {
+            "direction": "I"
+          },
+          "ms3": {
+            "direction": "I"
+          },
+          "drv_enable": {
+            "direction": "O"
+          },
+          "drv_direction": {
+            "direction": "O"
+          },
+          "drv_step": {
+            "direction": "O"
+          },
+          "drv_reset": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "drv_ms1": {
+            "direction": "O"
+          },
+          "drv_ms2": {
+            "direction": "O"
+          },
+          "drv_ms3": {
+            "direction": "O"
+          }
+        }
+      },
+      "DriverController_Y": {
+        "vlnv": "xilinx.com:module_ref:DriverController:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_DriverController_1_0",
+        "xci_path": "ip\\CNC_Top_DriverController_1_0\\CNC_Top_DriverController_1_0.xci",
+        "inst_hier_path": "DriverController_Y",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DriverController",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sync": {
+            "direction": "I"
+          },
+          "cycles_per_step": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dir": {
+            "direction": "I"
+          },
+          "en": {
+            "direction": "O"
+          },
+          "dir_out": {
+            "direction": "O"
+          },
+          "step": {
+            "direction": "O"
+          }
+        }
+      },
+      "A4988_Driver_IO_1": {
+        "vlnv": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_A4988_Driver_IO_1_0",
+        "xci_path": "ip\\CNC_Top_A4988_Driver_IO_1_0\\CNC_Top_A4988_Driver_IO_1_0.xci",
+        "inst_hier_path": "A4988_Driver_IO_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "A4988_Driver_IO",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enable": {
+            "direction": "I"
+          },
+          "direction": {
+            "direction": "I"
+          },
+          "step": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "ms1": {
+            "direction": "I"
+          },
+          "ms2": {
+            "direction": "I"
+          },
+          "ms3": {
+            "direction": "I"
+          },
+          "drv_enable": {
+            "direction": "O"
+          },
+          "drv_direction": {
+            "direction": "O"
+          },
+          "drv_step": {
+            "direction": "O"
+          },
+          "drv_reset": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "drv_ms1": {
+            "direction": "O"
+          },
+          "drv_ms2": {
+            "direction": "O"
+          },
+          "drv_ms3": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -312,22 +746,88 @@
           "LED_IO_0/in2"
         ]
       },
-      "DriverController_0_dir": {
+      "DriverController_0_dir_out": {
         "ports": [
-          "DriverController/dir",
-          "A4988_Driver_IO/direction"
+          "DriverController_X/dir_out",
+          "A4988_Driver_IO_0/direction"
         ]
       },
       "DriverController_0_en": {
         "ports": [
-          "DriverController/en",
+          "DriverController_Z/en",
           "A4988_Driver_IO/enable"
+        ]
+      },
+      "DriverController_0_en1": {
+        "ports": [
+          "DriverController_X/en",
+          "A4988_Driver_IO_0/enable"
         ]
       },
       "DriverController_0_step": {
         "ports": [
-          "DriverController/step",
+          "DriverController_Z/step",
           "A4988_Driver_IO/step"
+        ]
+      },
+      "DriverController_0_step1": {
+        "ports": [
+          "DriverController_X/step",
+          "A4988_Driver_IO_0/step"
+        ]
+      },
+      "DriverController_1_dir_out": {
+        "ports": [
+          "DriverController_Y/dir_out",
+          "A4988_Driver_IO_1/direction"
+        ]
+      },
+      "DriverController_1_en": {
+        "ports": [
+          "DriverController_Y/en",
+          "A4988_Driver_IO_1/enable"
+        ]
+      },
+      "DriverController_1_step": {
+        "ports": [
+          "DriverController_Y/step",
+          "A4988_Driver_IO_1/step"
+        ]
+      },
+      "DriverController_dir_out": {
+        "ports": [
+          "DriverController_Z/dir_out",
+          "A4988_Driver_IO/direction"
+        ]
+      },
+      "GCODE_Parser_0_enable": {
+        "ports": [
+          "GCODE_Parser_0/enable",
+          "XYZ_Axis_Coordinator_0/enable"
+        ]
+      },
+      "GCODE_Parser_0_next_pos_x": {
+        "ports": [
+          "GCODE_Parser_0/next_pos_x",
+          "XYZ_Axis_Coordinator_0/next_pos_x"
+        ]
+      },
+      "GCODE_Parser_0_next_pos_y": {
+        "ports": [
+          "GCODE_Parser_0/next_pos_y",
+          "XYZ_Axis_Coordinator_0/next_pos_y"
+        ]
+      },
+      "GCODE_Parser_0_next_pos_z": {
+        "ports": [
+          "GCODE_Parser_0/next_pos_z",
+          "XYZ_Axis_Coordinator_0/next_pos_z"
+        ]
+      },
+      "GCODE_Parser_0_next_speed": {
+        "ports": [
+          "GCODE_Parser_0/next_speed",
+          "XYZ_Axis_Coordinator_0/next_speed"
         ]
       },
       "LED_IO_0_led": {
@@ -336,22 +836,73 @@
           "led"
         ]
       },
-      "ccw_0_1": {
+      "XYZ_Axis_Coordinator_0_cycles_per_step_x": {
         "ports": [
-          "left",
-          "DriverController/ccw"
+          "XYZ_Axis_Coordinator_0/cycles_per_step_x",
+          "DriverController_Z/cycles_per_step"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_cycles_per_step_y": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/cycles_per_step_y",
+          "DriverController_X/cycles_per_step"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_cycles_per_step_z": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/cycles_per_step_z",
+          "DriverController_Y/cycles_per_step"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_dir_x": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/dir_x",
+          "DriverController_Z/dir"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_dir_y": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/dir_y",
+          "DriverController_X/dir"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_dir_z": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/dir_z",
+          "DriverController_Y/dir"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_done": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/done",
+          "DriverController_Z/sync",
+          "DriverController_X/sync",
+          "DriverController_Y/sync",
+          "GCODE_Parser_0/done"
         ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
-          "DriverController/clk"
+          "DriverController_Z/clk",
+          "DriverController_X/clk",
+          "DriverController_Y/clk",
+          "GCODE_Parser_0/clk",
+          "XYZ_Axis_Coordinator_0/clk"
         ]
       },
-      "cw_0_1": {
+      "right_1": {
         "ports": [
           "right",
-          "DriverController/cw"
+          "A4988_Driver_IO/reset",
+          "clk_wiz/reset",
+          "DriverController_Z/rst",
+          "A4988_Driver_IO_0/reset",
+          "DriverController_X/rst",
+          "A4988_Driver_IO_1/reset",
+          "DriverController_Y/rst",
+          "GCODE_Parser_0/rst",
+          "XYZ_Axis_Coordinator_0/rst"
         ]
       },
       "sys_clock_1": {
@@ -362,13 +913,17 @@
       },
       "xlconstant_1_dout": {
         "ports": [
-          "const_0/dout",
-          "A4988_Driver_IO/reset",
+          "Ground/dout",
           "A4988_Driver_IO/ms1",
           "A4988_Driver_IO/ms2",
           "A4988_Driver_IO/ms3",
           "LED_IO_0/in7",
-          "clk_wiz/reset"
+          "A4988_Driver_IO_0/ms1",
+          "A4988_Driver_IO_0/ms2",
+          "A4988_Driver_IO_0/ms3",
+          "A4988_Driver_IO_1/ms1",
+          "A4988_Driver_IO_1/ms2",
+          "A4988_Driver_IO_1/ms3"
         ]
       }
     }

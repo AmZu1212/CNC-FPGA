@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_xlconstant_0_1",
-    "cell_name": "const_0",
+    "cell_name": "Ground",
     "component_reference": "xilinx.com:ip:xlconstant:1.1",
     "ip_revision": "9",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_xlconstant_0_1",
