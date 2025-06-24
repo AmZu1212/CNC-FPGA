@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Jun 19 20:14:38 2025
-| Host             : OBSIDIAN running 64-bit major release  (build 9200)
+| Date             : Mon Jun 23 02:46:38 2025
+| Host             : Alex-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file CNC_Top_wrapper_power_routed.rpt -pb CNC_Top_wrapper_power_summary_routed.pb -rpx CNC_Top_wrapper_power_routed.rpx
 | Design           : CNC_Top_wrapper
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.219        |
+| Total On-Chip Power (W)  | 0.632        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.111        |
-| Device Static (W)        | 0.108        |
+| Dynamic (W)              | 0.518        |
+| Device Static (W)        | 0.114        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 77.7         |
+| Junction Temperature (C) | 32.3         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |       38 |       --- |             --- |
-|   CARRY4       |    <0.001 |        5 |     13300 |            0.04 |
-|   Register     |    <0.001 |       23 |    106400 |            0.02 |
-|   LUT as Logic |    <0.001 |        3 |     53200 |           <0.01 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |       32 |       --- |             --- |
+| Clocks         |     0.005 |        5 |       --- |             --- |
+| Slice Logic    |     0.149 |    15685 |       --- |             --- |
+|   LUT as Logic |     0.136 |    11779 |     53200 |           22.14 |
+|   CARRY4       |     0.013 |     2713 |     13300 |           20.40 |
+|   Register     |    <0.001 |      202 |    106400 |            0.19 |
+|   F7/F8 Muxes  |    <0.001 |       24 |     53200 |            0.05 |
+|   Others       |     0.000 |       11 |       --- |             --- |
+| Signals        |     0.247 |    16343 |       --- |             --- |
 | MMCM           |     0.106 |        1 |         4 |           25.00 |
-| I/O            |     0.004 |       18 |       200 |            9.00 |
-| Static Power   |     0.108 |          |           |                 |
-| Total          |     0.219 |          |           |                 |
+| DSPs           |     0.007 |       12 |       220 |            5.45 |
+| I/O            |     0.004 |       17 |       200 |            8.50 |
+| Static Power   |     0.114 |          |           |                 |
+| Total          |     0.632 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +74,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.002 |      0.008 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.069 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.417 |       0.408 |      0.009 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.070 |       0.059 |      0.012 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -81,11 +83,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.017 |       0.000 |      0.017 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,13 +149,19 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------+-----------+
-| Name            | Power (W) |
-+-----------------+-----------+
-| CNC_Top_wrapper |     0.111 |
-|   CNC_Top_i     |     0.107 |
-|     clk_wiz     |     0.106 |
-|       inst      |     0.106 |
-+-----------------+-----------+
++----------------------------+-----------+
+| Name                       | Power (W) |
++----------------------------+-----------+
+| CNC_Top_wrapper            |     0.518 |
+|   CNC_Top_i                |     0.514 |
+|     DriverController_Z     |     0.001 |
+|       inst                 |     0.001 |
+|     GCODE_Parser_0         |     0.002 |
+|       inst                 |     0.002 |
+|     XYZ_Axis_Coordinator_0 |     0.404 |
+|       inst                 |     0.404 |
+|     clk_wiz                |     0.107 |
+|       inst                 |     0.107 |
++----------------------------+-----------+
 
 

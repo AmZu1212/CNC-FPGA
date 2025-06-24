@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Company: The Technion
-// Engineer: Amir Zuabi
+// Engineer: Amir Vassiliev & Alex Zuabi
 // 
 // Create Date: 06/18/2025 01:14:28 AM
 // Design Name: DriverController Module
@@ -19,27 +19,50 @@
 module DriverController(
 	//inputs
 	input clk,
-	input cw,
-	input ccw,
+	input rst,
+	input sync,
+	input [31:0] cycles_per_step,
+	input dir,
+
 	//outputs
-	output en,
-	output reg dir,
+	output reg en,
+	output reg dir_out,
 	output reg step
     );
 
+    localparam STEP_WIDTH = 1500000;
+	wire active = (cycles_per_step > 0) ? 1 : 0;
+	
+	reg [31:0] clk_counter;
+	wire [31:0] cycle_count;
+	assign cycle_count = (cycles_per_step > (STEP_WIDTH * 2)) ? (cycles_per_step) : (STEP_WIDTH * 2);
 
-	wire active = cw || ccw;
-	assign en = active;
-	reg [19:0] clk_div;
 	always @(posedge clk) begin
-		clk_div <= clk_div + 1;
-
-		if(active) begin
-			step <= clk_div[19]; // 95Hz
-			dir <= ccw;
-		end
-		else begin
-			step <= 0;
-		end
+	   if(rst) begin
+	   //reset start
+	       clk_counter <= 0;
+	       en <= 0;
+	       dir_out <= 0;
+	       step <= 0;
+	   //reset end
+	   end else if(sync) begin
+	       clk_counter <= 0;
+	       en <= active;
+	       dir_out <= dir;
+	       step <= active;
+	   end else begin
+	       if(clk_counter < cycle_count) begin
+	       //step cycle running start
+	           clk_counter <= clk_counter + active;
+	           en <= active;
+	           dir_out <= dir;
+	           step <= (clk_counter  < STEP_WIDTH) ? active : 0;
+	       //step cycle running end
+	       end else begin
+	       //step cycle finished start
+	           clk_counter <= 0;
+	       //step cycle finished end
+	       end
+	   end
 	end
 endmodule
