@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "8aefbca1-e7da-4f07-8c17-5e9a3b39ea1e")
 	(paper "A4")
+	(title_block
+		(title "CNC-FPGA Driver Board")
+		(date "2025-06-24")
+		(rev "1.0")
+		(company "Amir Zuabi & Alex Vassiliev")
+	)
 	(lib_symbols
 		(symbol "Connector:Screw_Terminal_01x02"
 			(pin_names
@@ -13,23 +19,25 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 2.54 0)
+			(property "Reference" "J1"
+				(at 2.54 0.0001 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Screw_Terminal_01x02"
-				(at 0 -5.08 0)
+			(property "Value" "12V_Screw_Terminal"
+				(at 2.54 -2.5399 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
 				(at 0 0 0)
 				(effects
 					(font
@@ -166,7 +174,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -184,7 +192,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -403,23 +411,23 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 15.24 0)
+			(property "Reference" "JA1"
+				(at 0 -21.59 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_01x12"
-				(at 0 -17.78 0)
+			(property "Value" "2x6 DuPont PMOD"
+				(at 0 -19.05 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical"
 				(at 0 0 0)
 				(effects
 					(font
@@ -618,7 +626,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -636,7 +644,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -654,7 +662,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -672,7 +680,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -690,7 +698,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -708,7 +716,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -744,7 +752,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -762,7 +770,7 @@
 							)
 						)
 					)
-					(number "9"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -780,7 +788,7 @@
 							)
 						)
 					)
-					(number "10"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -816,7 +824,7 @@
 							)
 						)
 					)
-					(number "12"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -992,22 +1000,22 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "A"
-				(at -2.54 19.05 0)
+			(property "Reference" "A1"
+				(at 11.43 11.938 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
-			(property "Value" "Pololu_Breakout_A4988"
-				(at -2.54 16.51 0)
+			(property "Value" "A4988 Stepper Driver"
+				(at 11.43 14.224 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify right)
+					(justify left)
 				)
 			)
 			(property "Footprint" "Module:Pololu_Breakout-16_15.2x20.3mm"
@@ -1080,7 +1088,7 @@
 							)
 						)
 					)
-					(number "13"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1098,7 +1106,7 @@
 							)
 						)
 					)
-					(number "14"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1116,7 +1124,7 @@
 							)
 						)
 					)
-					(number "9"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1134,7 +1142,7 @@
 							)
 						)
 					)
-					(number "15"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1152,7 +1160,7 @@
 							)
 						)
 					)
-					(number "16"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1170,7 +1178,7 @@
 							)
 						)
 					)
-					(number "10"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1188,7 +1196,7 @@
 							)
 						)
 					)
-					(number "11"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1206,7 +1214,7 @@
 							)
 						)
 					)
-					(number "12"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1224,7 +1232,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "10"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1242,7 +1250,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1260,7 +1268,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "16"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1278,7 +1286,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1296,7 +1304,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "11"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1314,7 +1322,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1332,7 +1340,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "13"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1350,7 +1358,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "14"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1850,7 +1858,7 @@
 		)
 		(uuid "47d6e241-aac2-4858-bef7-28db986e1fb2")
 	)
-	(label "LS+"
+	(label "LS-"
 		(at 254 148.59 0)
 		(effects
 			(font
@@ -1960,7 +1968,7 @@
 		)
 		(uuid "94db2f2e-821e-4960-94a8-1593aa5bbdc6")
 	)
-	(label "LS-"
+	(label "LS+"
 		(at 254 153.67 0)
 		(effects
 			(font
@@ -2104,10 +2112,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1a2f1452-646b-464f-ae91-44c56879f182")
 		(property "Reference" "JA1"
-			(at 194.31 115.57 0)
+			(at 194.31 118.618 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2120,6 +2127,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical"
@@ -2152,7 +2160,7 @@
 		(pin "12"
 			(uuid "31fc1b14-ca07-44c4-b870-cd46985f9cc8")
 		)
-		(pin "5"
+		(pin "9"
 			(uuid "f1188b8a-4e81-4363-94ae-4388e8e5432a")
 		)
 		(pin "2"
@@ -2164,7 +2172,7 @@
 		(pin "8"
 			(uuid "c9933fff-3a79-4276-9bb0-7540f1ec814c")
 		)
-		(pin "9"
+		(pin "5"
 			(uuid "36aecc30-e464-47e2-920d-54d4dd6f6e46")
 		)
 		(pin "10"
@@ -2476,7 +2484,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "A4988 Stepper Driver"
+		(property "Value" "A4988 N Axis Driver"
 			(at 238.76 117.856 0)
 			(effects
 				(font
@@ -2513,7 +2521,7 @@
 				(hide yes)
 			)
 		)
-		(pin "9"
+		(pin "7"
 			(uuid "d235d095-70cd-4ba3-b054-3b0289d89af3")
 		)
 		(pin "3"
@@ -2552,7 +2560,7 @@
 		(pin "16"
 			(uuid "2f764c46-6a72-4e40-9d62-2cf740172e3a")
 		)
-		(pin "7"
+		(pin "9"
 			(uuid "3380001e-d7de-4d7a-8093-44074f97adcd")
 		)
 		(pin "5"
@@ -2588,7 +2596,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "C_Polarized"
+		(property "Value" "100[µF]"
 			(at 235.966 105.156 0)
 			(effects
 				(font
@@ -2713,10 +2721,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d4ad8350-428c-4724-b9a9-40082f4dde62")
 		(property "Reference" "StepperX1"
-			(at 247.65 132.0799 0)
+			(at 247.65 137.414 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2731,6 +2738,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
@@ -2798,6 +2806,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "12V_Screw_Terminal"
@@ -2861,7 +2870,7 @@
 		(dnp no)
 		(uuid "d9e43b77-7ad5-48e2-ad09-e63bac4d7ee5")
 		(property "Reference" "LimitSwitchX1"
-			(at 248.92 142.24 0)
+			(at 248.92 145.288 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2874,6 +2883,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
