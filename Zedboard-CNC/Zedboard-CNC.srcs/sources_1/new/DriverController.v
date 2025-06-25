@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////////////////////////
 // Company: The Technion
-// Engineer: Amir Vassiliev & Alex Zuabi
+// Engineer: Amir Zuabi & Alex Vassiliev
 // 
 // Create Date: 06/18/2025 01:14:28 AM
 // Design Name: DriverController Module
@@ -30,7 +30,7 @@ module DriverController(
 	output reg step
     );
 
-    localparam STEP_WIDTH = 1500000;
+    localparam STEP_WIDTH = 150000000; //150 microseconds = 263 MM/second tangential speed with just the shaft diameter.
 	wire active = (cycles_per_step > 0) ? 1 : 0;
 	
 	reg [31:0] clk_counter;
@@ -39,12 +39,12 @@ module DriverController(
 
 	always @(posedge clk) begin
 	   if(rst) begin
-	   //reset start
+	   //"reset" start
 	       clk_counter <= 0;
 	       en <= 0;
 	       dir_out <= 0;
 	       step <= 0;
-	   //reset end
+	   //"reset" end
 	   end else if(sync) begin
 	       clk_counter <= 0;
 	       en <= active;
@@ -52,16 +52,16 @@ module DriverController(
 	       step <= active;
 	   end else begin
 	       if(clk_counter < cycle_count) begin
-	       //step cycle running start
+	       //"step cycle running" start
 	           clk_counter <= clk_counter + active;
 	           en <= active;
 	           dir_out <= dir;
-	           step <= (clk_counter  < STEP_WIDTH) ? active : 0;
-	       //step cycle running end
+	           step <= (clk_counter  < (cycle_count >> 1)) ? active : 0;
+	       //"step cycle running" end
 	       end else begin
-	       //step cycle finished start
+	       //"step cycle finished" start
 	           clk_counter <= 0;
-	       //step cycle finished end
+	       //"step cycle finished" end
 	       end
 	   end
 	end

@@ -875,19 +875,19 @@
       "XYZ_Axis_Coordinator_0_done": {
         "ports": [
           "XYZ_Axis_Coordinator_0/done",
+          "GCODE_Parser_0/done",
           "DriverController_Z/sync",
           "DriverController_X/sync",
-          "DriverController_Y/sync",
-          "GCODE_Parser_0/done"
+          "DriverController_Y/sync"
         ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
+          "GCODE_Parser_0/clk",
           "DriverController_Z/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
-          "GCODE_Parser_0/clk",
           "XYZ_Axis_Coordinator_0/clk"
         ]
       },
@@ -896,12 +896,12 @@
           "right",
           "A4988_Driver_IO/reset",
           "clk_wiz/reset",
-          "DriverController_Z/rst",
           "A4988_Driver_IO_0/reset",
-          "DriverController_X/rst",
           "A4988_Driver_IO_1/reset",
-          "DriverController_Y/rst",
           "GCODE_Parser_0/rst",
+          "DriverController_Z/rst",
+          "DriverController_X/rst",
+          "DriverController_Y/rst",
           "XYZ_Axis_Coordinator_0/rst"
         ]
       },

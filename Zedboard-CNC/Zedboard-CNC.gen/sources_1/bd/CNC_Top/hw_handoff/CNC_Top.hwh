@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 23 02:24:39 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 24 21:23:24 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -49,12 +49,12 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
         <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
-        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
         <CONNECTION INSTANCE="A4988_Driver_IO_0" PORT="reset"/>
-        <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
         <CONNECTION INSTANCE="A4988_Driver_IO_1" PORT="reset"/>
-        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
@@ -588,10 +588,10 @@
         </PORT>
         <PORT DIR="O" NAME="done" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_done">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="done"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="sync"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="sync"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="sync"/>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="done"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -1214,10 +1214,10 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
