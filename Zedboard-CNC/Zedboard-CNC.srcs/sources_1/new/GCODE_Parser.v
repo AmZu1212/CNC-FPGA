@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Amir Zuabi & Alex Vassiliev
 // 
 // Create Date: 06/23/2025 12:48:40 AM
 // Design Name: 
@@ -41,7 +41,7 @@ module GCODE_Parser(
     
     
     always @* begin
-        next_speed = speed[curr_line];
+        next_speed = speed[curr_line]/60;
         next_pos_x = pos_x[curr_line];
         next_pos_y = pos_y[curr_line];
         next_pos_z = pos_z[curr_line];
@@ -49,19 +49,21 @@ module GCODE_Parser(
     
     always @(posedge clk) begin
         if (rst) begin
-        //reset start
+        //"reset" start
             enable <= 0;
             
             curr_line <= 0;
-        //reset end
+        //"reset" end
         end else begin
             enable <= 1;
             if(done) begin
+            //"next command" start
                 if(curr_line < 100) begin
                     curr_line <= curr_line + 1;
                 end else begin
                     enable <= 0;
                 end
+            //"next command" end
             end
         end
     end
