@@ -38,11 +38,21 @@ set_property src_info {type:XDC file:2 line:77 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN N15 [get_ports left]
 set_property src_info {type:XDC file:2 line:78 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R18 [get_ports right]
-set_property src_info {type:XDC file:2 line:104 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup
-set_property src_info {type:XDC file:2 line:105 export:INPUT save:INPUT read:READ} [current_design]
--from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -through [get_pins -hierarchical -filter { NAME =~  "*next_pos_*" }] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 32
+set_property src_info {type:XDC file:2 line:97 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
+set_property src_info {type:XDC file:2 line:100 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
+set_property src_info {type:XDC file:2 line:103 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
+set_property src_info {type:XDC file:2 line:106 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
+set_property src_info {type:XDC file:2 line:109 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
 set_property src_info {type:XDC file:2 line:112 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold
-set_property src_info {type:XDC file:2 line:113 export:INPUT save:INPUT read:READ} [current_design]
--from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -through [get_pins -hierarchical -filter { NAME =~  "*next_pos_*" }] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -through [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
+set_property src_info {type:XDC file:2 line:115 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
+set_property src_info {type:XDC file:2 line:118 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]] 31
+set_property src_info {type:XDC file:2 line:121 export:INPUT save:INPUT read:READ} [current_design]
+set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]] 31

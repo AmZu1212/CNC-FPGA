@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Wed Jun 25 17:15:21 2025
-# Process ID         : 11628
+# Start of session at: Thu Jun 26 22:23:44 2025
+# Process ID         : 12412
 # Current directory  : C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1
 # Command line       : vivado.exe -log CNC_Top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNC_Top_wrapper.tcl
 # Log file           : C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.vds
@@ -19,7 +19,7 @@
 # Host memory        : 14870 MB
 # Swap memory        : 8388 MB
 # Total Virtual      : 23258 MB
-# Available Virtual  : 8754 MB
+# Available Virtual  : 11069 MB
 #-----------------------------------------------------------
 source CNC_Top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -40,9 +40,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 8208
+INFO: [Synth 8-7075] Helper process launched with PID 14016
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1073.176 ; gain = 469.516
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1074.047 ; gain = 467.461
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_wrapper' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:13]
@@ -129,18 +129,18 @@ INFO: [Synth 8-6155] done synthesizing module 'CNC_Top' (0#1) [c:/Git Repos/CNC-
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_wrapper' (0#1) [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v:13]
 WARNING: [Synth 8-7129] Port left in module CNC_Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1184.652 ; gain = 580.992
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1185.469 ; gain = 578.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1184.652 ; gain = 580.992
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1185.469 ; gain = 578.883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1184.652 ; gain = 580.992
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1185.469 ; gain = 578.883
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1184.652 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1185.469 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -155,10 +155,417 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc]
-CRITICAL WARNING: [Common 17-163] Missing value for option 'path_multiplier', please type 'set_multicycle_path -help' for usage info. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:104]
-CRITICAL WARNING: [Designutils 20-1307] Command '-from' is not supported in the xdc constraint file. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:105]
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[0]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[0]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[0]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[0]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[10]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[10]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[10]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[10]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[11]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[11]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[11]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[11]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[12]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[12]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[12]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[12]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[1]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[1]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[1]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[1]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[2]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[2]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[2]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[2]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[3]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[3]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[3]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[3]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[4]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[4]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[4]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[4]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[5]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[5]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[5]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[5]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[6]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[6]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[6]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[6]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[7]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[7]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[7]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[7]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[8]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[8]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[8]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[8]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[9]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[9]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[9]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg[9]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[0]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[0]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[10]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[10]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[11]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[11]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[12]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[12]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[13]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[13]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[14]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[14]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[15]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[15]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[16]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[16]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[17]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[17]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[18]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[18]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[19]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[19]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[1]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[1]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[20]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[20]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[21]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[21]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[22]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[22]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[23]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[23]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[24]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[24]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[25]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[25]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[26]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[26]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[27]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[27]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[28]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[28]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[29]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[29]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[2]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[2]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[30]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[30]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[31]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[31]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[3]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[3]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[4]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[4]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[5]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[5]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[6]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[6]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[7]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[7]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[8]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[8]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[9]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[9]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[0]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[0]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[10]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[10]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[11]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[11]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[12]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[12]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[13]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[13]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[14]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[14]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[15]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[15]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[16]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[16]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[17]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[17]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[18]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[18]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[19]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[19]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[1]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[1]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[20]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[20]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[21]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[21]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[22]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[22]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[23]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[23]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[24]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[24]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[25]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[25]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+INFO: [Common 17-14] Message 'Constraints 18-401' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:97]
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[0]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[0]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[0]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[0]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[0]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[10]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[10]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[10]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[10]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[10]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[11]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[11]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[11]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[11]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[11]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[12]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[12]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[12]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[12]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[12]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[13]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[13]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[13]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[13]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[13]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[14]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[14]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[14]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[14]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[14]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[15]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[15]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[15]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[15]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[15]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[16]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[16]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[16]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[16]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[16]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[17]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[17]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[17]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[17]/RST' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[17]/SET' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[18]/CE' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[18]/D' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/num_clk_cycles_reg[18]/Q' is not a valid startpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+INFO: [Common 17-14] Message 'Constraints 18-402' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:99]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:100]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:103]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:106]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:109]
 WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:112]
-CRITICAL WARNING: [Designutils 20-1307] Command '-from' is not supported in the xdc constraint file. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:113]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:115]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:118]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:121]
 Finished Parsing XDC File [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -168,22 +575,22 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1272.543 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1274.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1272.543 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1274.988 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.543 ; gain = 668.883
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.543 ; gain = 668.883
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -203,10 +610,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/A4988_Driver_IO_0. (con
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/DriverController_Y. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/A4988_Driver_IO_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.543 ; gain = 668.883
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.543 ; gain = 668.883
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1274.988 ; gain = 668.402
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -297,7 +704,7 @@ DSP Report: operator val2 is absorbed into DSP val2.
 DSP Report: operator val2 is absorbed into DSP val2.
 WARNING: [Synth 8-7129] Port left in module CNC_Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1272.543 ; gain = 668.883
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1274.988 ; gain = 668.402
 ---------------------------------------------------------------------------------
  Sort Area is  val1_6 : 0 0 : 3101 5879 : Used 1 time 0
  Sort Area is  val1_6 : 0 1 : 2778 5879 : Used 1 time 0
@@ -350,13 +757,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1429.688 ; gain = 826.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1440.215 ; gain = 833.629
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1557.000 ; gain = 953.340
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1569.480 ; gain = 962.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -364,7 +771,7 @@ Start Technology Mapping
 INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg_rep__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 1557.000 ; gain = 953.340
+Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1569.480 ; gain = 962.895
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -382,37 +789,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1722.723 ; gain = 1119.062
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1734.691 ; gain = 1128.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1722.723 ; gain = 1119.062
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1734.691 ; gain = 1128.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1722.723 ; gain = 1119.062
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1734.691 ; gain = 1128.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1722.723 ; gain = 1119.062
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1734.691 ; gain = 1128.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1726.723 ; gain = 1123.062
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1726.723 ; gain = 1123.062
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -448,45 +855,44 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |CARRY4     |  1084|
+|2     |CARRY4     |  1089|
 |3     |DSP48E1    |    12|
 |4     |LUT1       |    88|
-|5     |LUT2       |   917|
+|5     |LUT2       |   929|
 |6     |LUT3       |  2484|
-|7     |LUT4       |   458|
+|7     |LUT4       |   484|
 |8     |LUT5       |   209|
-|9     |LUT6       |   542|
+|9     |LUT6       |   520|
 |10    |MMCME2_ADV |     1|
 |11    |RAMB18E1   |     2|
-|13    |FDRE       |   415|
+|13    |FDRE       |   422|
 |14    |FDSE       |    13|
 |15    |IBUF       |     2|
 |16    |OBUF       |    15|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1726.723 ; gain = 1123.062
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:17 . Memory (MB): peak = 1726.723 ; gain = 1035.172
-Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:20 . Memory (MB): peak = 1726.723 ; gain = 1123.062
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:24 . Memory (MB): peak = 1738.676 ; gain = 1042.570
+Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1738.676 ; gain = 1132.090
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 1726.723 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1099 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1738.676 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1104 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'CNC_Top_wrapper' is not ideal for floorplanning, since the cellview 'XYZ_Axis_Coordinator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1726.723 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1751.441 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 313e5665
+Synth Design complete | Checksum: caaec500
 INFO: [Common 17-83] Releasing license: Synthesis
-79 Infos, 24 Warnings, 3 Critical Warnings and 0 Errors encountered.
+81 Infos, 232 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:45 . Memory (MB): peak = 1726.723 ; gain = 1364.391
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1726.723 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:50 . Memory (MB): peak = 1751.441 ; gain = 1390.805
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1751.441 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 25 17:17:20 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 26 22:25:47 2025...

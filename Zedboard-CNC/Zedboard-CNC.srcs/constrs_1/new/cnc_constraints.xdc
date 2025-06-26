@@ -81,41 +81,41 @@ set_property IOSTANDARD LVCMOS33 [get_ports right]
 set_property PULLTYPE PULLDOWN [get_ports left]
 set_property PULLTYPE PULLDOWN [get_ports right]
 
-# 32-cycle multicycle path from square root result to final x-axis output
-#set_multicycle_path -setup -from $_distance_reg -through $_num_clk_cycles_reg -to $_cycles_per_step 32
-#set_multicycle_path -hold -from $_distance_reg -through $_num_clk_cycles_reg -to $_cycles_per_step 31
-
-#set_multicycle_path -setup -from $_curr_pos -to $_cycles_per_step 32
-#set_multicycle_path -hold -from $_curr_pos -to $_cycles_per_step 31
-#set_multicycle_path -setup -from $_curr_line_reg -through $_distance_reg -to $_num_clk_cycles_reg 32
-#set_multicycle_path -hold -from $_curr_line_reg -through $_distance_reg -to $_num_clk_cycles_reg 31
 
 
 set _curr_line_reg [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
 set _curr_pos [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
 set _next_pos [get_pins -hierarchical -filter { NAME =~  "*next_pos_*" }]
+set _next_speed [get_pins -hierarchical -filter { NAME =~  "*next_speed*" }]
 set _distance_reg [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
+set _val_reg [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
 set _num_clk_cycles_reg [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
 set _cycles_per_step [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
 
+# 32-cycle multicycle path from square root result to final x-axis output
+set_multicycle_path -setup -from $_curr_line_reg -to $_cycles_per_step 32
+set_multicycle_path -hold -from $_curr_line_reg -to $_cycles_per_step 31
 
+set_multicycle_path -setup -from $_num_clk_cycles_reg -to $_cycles_per_step 32
+set_multicycle_path -hold -from $_num_clk_cycles_reg -to $_cycles_per_step 31
 
+set_multicycle_path -setup -from $_curr_pos -to $_cycles_per_step 32
+set_multicycle_path -hold -from $_curr_pos -to $_cycles_per_step 31
 
-set_multicycle_path -setup 
-    -from $_curr_line_reg               \
-        -through $_next_pos             \
-        -through $_curr_pos             \
-        -through $_distance_reg         \
-        -through $_num_clk_cycles_reg   \
-    -to $_cycles_per_step 32
+set_multicycle_path -setup -from $_distance_reg -to $_cycles_per_step 32
+set_multicycle_path -hold -from $_distance_reg -to $_cycles_per_step 31
 
-set_multicycle_path -hold 
-    -from $_curr_line_reg               \
-        -through $_next_pos             \
-        -through $_curr_pos             \
-        -through $_distance_reg         \
-        -through $_num_clk_cycles_reg   \
-    -to $_cycles_per_step 31
+set_multicycle_path -setup -from $_curr_line_reg -to $_num_clk_cycles_reg 32
+set_multicycle_path -hold -from $_curr_line_reg -to $_num_clk_cycles_reg 31
 
+set_multicycle_path -setup -from $_distance_reg -to $_num_clk_cycles_reg 32
+set_multicycle_path -hold -from $_distance_reg -to $_num_clk_cycles_reg 31
 
+set_multicycle_path -setup -from $_curr_pos -to $_num_clk_cycles_reg 32
+set_multicycle_path -hold -from $_curr_pos -to $_num_clk_cycles_reg 31
 
+set_multicycle_path -setup -from $_curr_line_reg -to $_val_reg 32
+set_multicycle_path -hold -from $_curr_line_reg -to $_val_reg 31
+
+set_multicycle_path -setup -from $_curr_pos -to $_val_reg 32
+set_multicycle_path -hold -from $_curr_pos -to $_val_reg 31
