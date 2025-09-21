@@ -77,24 +77,24 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
 input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
 input wire enable;
 input wire [7 : 0] next_speed;
 input wire [15 : 0] next_pos_x;
 input wire [15 : 0] next_pos_y;
 input wire [15 : 0] next_pos_z;
-output wire [31 : 0] cycles_per_step_x;
+output wire [63 : 0] cycles_per_step_x;
 output wire dir_x;
-output wire [31 : 0] cycles_per_step_y;
+output wire [63 : 0] cycles_per_step_y;
 output wire dir_y;
-output wire [31 : 0] cycles_per_step_z;
+output wire [63 : 0] cycles_per_step_z;
 output wire dir_z;
 output wire done;
 
   XYZ_Axis_Coordinator #(
     .MIN_SPEED(1),
-    .MAX_SPEED(20),
+    .MAX_SPEED(60),
     .CYCLES_PER_SECOND(100000000),
     .MICRONS_PER_STEP(79)
   ) inst (

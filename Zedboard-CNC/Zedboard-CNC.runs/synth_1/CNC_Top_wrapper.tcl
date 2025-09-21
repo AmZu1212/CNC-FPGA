@@ -56,7 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -67,7 +71,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.cache/wt} [current_project]
 set_property parent.project_path {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.xpr} [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.cache/ip} [current_project]
@@ -86,6 +90,12 @@ add_files {{C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/bd/CN
 set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_ooc.xdc}}]
+set_property used_in_synthesis false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/bd_e2c7_ila_lib_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/bd_e2c7_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/CNC_Top_system_ila_0_0_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }
