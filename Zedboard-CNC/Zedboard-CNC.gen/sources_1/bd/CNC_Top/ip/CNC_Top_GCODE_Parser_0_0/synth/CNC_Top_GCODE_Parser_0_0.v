@@ -58,12 +58,15 @@
 module CNC_Top_GCODE_Parser_0_0 (
   clk,
   rst,
-  done,
+  start,
+  line_finished,
   next_speed,
   next_pos_x,
   next_pos_y,
   next_pos_z,
-  enable
+  enable,
+  running,
+  curr_line
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -74,21 +77,27 @@ input wire clk;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
-input wire done;
+input wire start;
+input wire line_finished;
 output wire [7 : 0] next_speed;
-output wire [15 : 0] next_pos_x;
-output wire [15 : 0] next_pos_y;
-output wire [15 : 0] next_pos_z;
+output wire [31 : 0] next_pos_x;
+output wire [31 : 0] next_pos_y;
+output wire [31 : 0] next_pos_z;
 output wire enable;
+output wire running;
+output wire [15 : 0] curr_line;
 
   GCODE_Parser inst (
     .clk(clk),
     .rst(rst),
-    .done(done),
+    .start(start),
+    .line_finished(line_finished),
     .next_speed(next_speed),
     .next_pos_x(next_pos_x),
     .next_pos_y(next_pos_y),
     .next_pos_z(next_pos_z),
-    .enable(enable)
+    .enable(enable),
+    .running(running),
+    .curr_line(curr_line)
   );
 endmodule

@@ -54,7 +54,7 @@
 #include "systemc.h"
 class CNC_Top_xlconstant_0_1 : public sc_module {
   public:
-xlconstant_v1_1_9<1,0> mod;
+xlconstant_v1_1_9<1,1> mod;
   sc_out< sc_bv<1> > dout;
 CNC_Top_xlconstant_0_1 (sc_core::sc_module_name name);
   };

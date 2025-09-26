@@ -14,21 +14,913 @@
                         "clk_input_freq_hz": "100000000"
                     },
                     {
-                        "type": "ILA_V3",
-                        "name": "CNC_Top_i/system_ila_0/inst/ila_lib",
-                        "spec": "labtools_ila_v6",
-                        "ipName": "ila",
+                        "type": "VIO_V2",
+                        "name": "CNC_Top_i/vio_0",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
                         "core_location": {
                             "user_chain": 1,
                             "slave_index": 0,
                             "bscan_switch_index": 0
                         },
-                        "uuid": "366DFC19F7275A4E802C08477E857B68",
+                        "uuid": "31A22D3A328158D48B8FB85A979ACFBA",
                         "pins": [
                             {
-                                "name": "probe0",
+                                "name": "probe_in0",
                                 "id": 0,
-                                "type": "DATA_TRIGGER",
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 15,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/GCODE_Parser_0_curr_line",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_curr_line[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in1",
+                                "id": 1,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in2",
+                                "id": 2,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in3",
+                                "id": 3,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "CNC_Top_i/vio_1",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "6D5381D6776057DC809893E0B5480449",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 4,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in1",
+                                "id": 5,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in2",
+                                "id": 6,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in3",
+                                "id": 7,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "CNC_Top_i/vio_2",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 2,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "47F46D9CAEEE5E599AF87A2D5FCE1E0E",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 8,
+                                "type": "DATA",
                                 "direction": "IN",
                                 "isVector": false,
                                 "leftIndex": 0,
@@ -36,31 +928,833 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "CNC_Top_i/system_ila_0/inst/probe0",
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_position_reached",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in1",
+                                "id": 9,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "CNC_Top_i/system_ila_0/inst/probe0[0]"
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state[0]"
                                             }
                                         ]
                                     }
                                 ]
-                            }
-                        ],
-                        "native_ports": [
+                            },
                             {
-                                "name": "probe0",
-                                "connectedBus": "GCODE_Parser_0_enable",
-                                "protocol": "PROBE",
-                                "port_maps": [
+                                "name": "probe_in2",
+                                "id": 10,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 2,
+                                "nets": [
                                     {
-                                        "logical_port": "probe0",
-                                        "physical_pin": {
-                                            "id": 0,
-                                            "name": "probe0",
-                                            "leftBit": 0,
-                                            "width": 1
-                                        }
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in3",
+                                "id": 11,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in4",
+                                "id": 12,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_x[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in5",
+                                "id": 13,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_y[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in6",
+                                "id": 14,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/GCODE_Parser_0_next_pos_z[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in7",
+                                "id": 15,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe_in8",
+                                "id": 16,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 31,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[31]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[30]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[29]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[28]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[27]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[26]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[25]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[24]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[23]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[22]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[21]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[20]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[19]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[18]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[17]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[16]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[15]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[14]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[13]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[12]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[11]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[10]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[9]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[8]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[7]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[6]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[5]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[4]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[3]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[2]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[1]"
+                                            },
+                                            {
+                                                "name": "CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             }

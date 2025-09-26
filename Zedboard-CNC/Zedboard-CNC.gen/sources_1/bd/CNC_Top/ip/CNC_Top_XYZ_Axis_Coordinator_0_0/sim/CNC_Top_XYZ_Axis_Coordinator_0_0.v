@@ -62,13 +62,29 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   next_pos_x,
   next_pos_y,
   next_pos_z,
+  step_feedback_x,
+  step_feedback_y,
+  step_feedback_z,
   cycles_per_step_x,
   dir_x,
   cycles_per_step_y,
   dir_y,
   cycles_per_step_z,
   dir_z,
-  done
+  line_finished,
+  curr_pos_x,
+  curr_pos_y,
+  curr_pos_z,
+  start_pos_x,
+  start_pos_y,
+  start_pos_z,
+  clk_counter,
+  position_reached,
+  target_pos_x,
+  target_pos_y,
+  target_pos_z,
+  state,
+  state_timer
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -81,23 +97,34 @@ input wire clk;
 input wire rst;
 input wire enable;
 input wire [7 : 0] next_speed;
-input wire [15 : 0] next_pos_x;
-input wire [15 : 0] next_pos_y;
-input wire [15 : 0] next_pos_z;
+input wire [31 : 0] next_pos_x;
+input wire [31 : 0] next_pos_y;
+input wire [31 : 0] next_pos_z;
+input wire step_feedback_x;
+input wire step_feedback_y;
+input wire step_feedback_z;
 output wire [63 : 0] cycles_per_step_x;
 output wire dir_x;
 output wire [63 : 0] cycles_per_step_y;
 output wire dir_y;
 output wire [63 : 0] cycles_per_step_z;
 output wire dir_z;
-output wire done;
+output wire line_finished;
+output wire [31 : 0] curr_pos_x;
+output wire [31 : 0] curr_pos_y;
+output wire [31 : 0] curr_pos_z;
+output wire [31 : 0] start_pos_x;
+output wire [31 : 0] start_pos_y;
+output wire [31 : 0] start_pos_z;
+output wire [31 : 0] clk_counter;
+output wire position_reached;
+output wire [31 : 0] target_pos_x;
+output wire [31 : 0] target_pos_y;
+output wire [31 : 0] target_pos_z;
+output wire [2 : 0] state;
+output wire [31 : 0] state_timer;
 
-  XYZ_Axis_Coordinator #(
-    .MIN_SPEED(1),
-    .MAX_SPEED(60),
-    .CYCLES_PER_SECOND(100000000),
-    .MICRONS_PER_STEP(79)
-  ) inst (
+  XYZ_Axis_Coordinator inst (
     .clk(clk),
     .rst(rst),
     .enable(enable),
@@ -105,12 +132,28 @@ output wire done;
     .next_pos_x(next_pos_x),
     .next_pos_y(next_pos_y),
     .next_pos_z(next_pos_z),
+    .step_feedback_x(step_feedback_x),
+    .step_feedback_y(step_feedback_y),
+    .step_feedback_z(step_feedback_z),
     .cycles_per_step_x(cycles_per_step_x),
     .dir_x(dir_x),
     .cycles_per_step_y(cycles_per_step_y),
     .dir_y(dir_y),
     .cycles_per_step_z(cycles_per_step_z),
     .dir_z(dir_z),
-    .done(done)
+    .line_finished(line_finished),
+    .curr_pos_x(curr_pos_x),
+    .curr_pos_y(curr_pos_y),
+    .curr_pos_z(curr_pos_z),
+    .start_pos_x(start_pos_x),
+    .start_pos_y(start_pos_y),
+    .start_pos_z(start_pos_z),
+    .clk_counter(clk_counter),
+    .position_reached(position_reached),
+    .target_pos_x(target_pos_x),
+    .target_pos_y(target_pos_y),
+    .target_pos_z(target_pos_z),
+    .state(state),
+    .state_timer(state_timer)
   );
 endmodule

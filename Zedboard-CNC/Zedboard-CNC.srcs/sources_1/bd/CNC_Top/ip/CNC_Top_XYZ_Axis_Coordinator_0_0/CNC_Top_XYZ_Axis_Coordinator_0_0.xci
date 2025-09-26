@@ -8,17 +8,7 @@
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_XYZ_Axis_Coordinator_0_0",
     "parameters": {
       "component_parameters": {
-        "MIN_SPEED": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "MAX_SPEED": [ { "value": "60", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "CYCLES_PER_SECOND": [ { "value": "100000000", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "MICRONS_PER_STEP": [ { "value": "79", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "CNC_Top_XYZ_Axis_Coordinator_0_0", "resolve_type": "user", "usage": "all" } ]
-      },
-      "model_parameters": {
-        "MIN_SPEED": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "MAX_SPEED": [ { "value": "60", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "CYCLES_PER_SECOND": [ { "value": "100000000", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "MICRONS_PER_STEP": [ { "value": "79", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -50,16 +40,32 @@
         "rst": [ { "direction": "in" } ],
         "enable": [ { "direction": "in" } ],
         "next_speed": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
-        "next_pos_x": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
-        "next_pos_y": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
-        "next_pos_z": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "next_pos_x": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "next_pos_y": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "next_pos_z": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "step_feedback_x": [ { "direction": "in" } ],
+        "step_feedback_y": [ { "direction": "in" } ],
+        "step_feedback_z": [ { "direction": "in" } ],
         "cycles_per_step_x": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
         "dir_x": [ { "direction": "out" } ],
         "cycles_per_step_y": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
         "dir_y": [ { "direction": "out" } ],
         "cycles_per_step_z": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
         "dir_z": [ { "direction": "out" } ],
-        "done": [ { "direction": "out" } ]
+        "line_finished": [ { "direction": "out" } ],
+        "curr_pos_x": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "curr_pos_y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "curr_pos_z": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "start_pos_x": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "start_pos_y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "start_pos_z": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "clk_counter": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "position_reached": [ { "direction": "out" } ],
+        "target_pos_x": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "target_pos_y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "target_pos_z": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "state": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "state_timer": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
       },
       "interfaces": {
         "rst": {

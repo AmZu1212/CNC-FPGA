@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_DriverController_0_0",
-    "cell_name": "DriverController_Z",
+    "cell_name": "DriverController_X",
     "component_reference": "xilinx.com:module_ref:DriverController:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_0",
@@ -40,11 +40,12 @@
         "rst": [ { "direction": "in" } ],
         "sync": [ { "direction": "in" } ],
         "cycles_per_step": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
-        "dir": [ { "direction": "in" } ],
         "enable": [ { "direction": "in" } ],
+        "dir": [ { "direction": "in" } ],
         "en": [ { "direction": "out" } ],
-        "dir_out": [ { "direction": "out" } ],
-        "step": [ { "direction": "out" } ]
+        "step": [ { "direction": "out" } ],
+        "step_risingedge": [ { "direction": "out" } ],
+        "dir_out": [ { "direction": "out" } ]
       },
       "interfaces": {
         "rst": {
