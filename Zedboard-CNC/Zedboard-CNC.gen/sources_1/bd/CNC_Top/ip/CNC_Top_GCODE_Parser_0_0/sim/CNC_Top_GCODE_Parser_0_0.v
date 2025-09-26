@@ -71,7 +71,7 @@ module CNC_Top_GCODE_Parser_0_0 (
 input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
 input wire done;
 output wire [7 : 0] next_speed;

@@ -60,6 +60,7 @@ module CNC_Top_DriverController_0_0 (
   sync,
   cycles_per_step,
   dir,
+  enable,
   en,
   dir_out,
   step
@@ -71,11 +72,12 @@ module CNC_Top_DriverController_0_0 (
 input wire clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 (* X_INTERFACE_MODE = "slave" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
 input wire sync;
-input wire [31 : 0] cycles_per_step;
+input wire [63 : 0] cycles_per_step;
 input wire dir;
+input wire enable;
 output wire en;
 output wire dir_out;
 output wire step;
@@ -86,6 +88,7 @@ output wire step;
     .sync(sync),
     .cycles_per_step(cycles_per_step),
     .dir(dir),
+    .enable(enable),
     .en(en),
     .dir_out(dir_out),
     .step(step)

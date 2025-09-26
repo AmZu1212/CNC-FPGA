@@ -33,11 +33,11 @@ set_property IOSTANDARD LVCMOS33 [get_ports drv_*]
 
 
 # CLK pin
-#set_property PACKAGE_PIN Y9 [get_ports clk]
-#set_property IOSTANDARD LVCMOS33 [get_ports clk]
-#create_clock -period 10.000 -name clk -waveform {0 5} [get_ports clk]
-
-
+set_property PACKAGE_PIN Y9 [get_ports sys_clock]
+set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
+# create_clock -period 10.000 -name sys_clk -waveform {0 5} [get_ports sys_clock]
+set_property IOSTANDARD LVCMOS33 [get_ports {le*}]
+set_property IOSTANDARD LVCMOS33 [get_ports {drv_*}]
 # LED pins
 set_property PACKAGE_PIN T22 [get_ports {led[0]}]
 set_property PACKAGE_PIN T21 [get_ports {led[1]}]

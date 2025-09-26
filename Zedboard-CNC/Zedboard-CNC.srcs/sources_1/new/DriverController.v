@@ -21,8 +21,9 @@ module DriverController(
 	input clk,
 	input rst,
 	input sync,
-	input [31:0] cycles_per_step,
+	input [63:0] cycles_per_step,
 	input dir,
+	input enable,
 
 	//outputs
 	output reg en,
@@ -30,12 +31,13 @@ module DriverController(
 	output reg step
     );
 
-    localparam STEP_WIDTH = 150000000; //150 microseconds = 263 MM/second tangential speed with just the shaft diameter.
-	wire active = (cycles_per_step > 0) ? 1 : 0;
+    //1.5micro = 1500nano, minimum half step width in cycles is 3000 cycles
+    localparam STEP_WIDTH = 150000; //150 microseconds = 263 MM/second tangential speed with just the shaft diameter.
+	wire active = (cycles_per_step > 0) ? enable : 0;
 	
-	reg [31:0] clk_counter;
-	wire [31:0] cycle_count;
-	assign cycle_count = (cycles_per_step > (STEP_WIDTH * 2)) ? (cycles_per_step) : (STEP_WIDTH * 2);
+	reg [63:0] clk_counter;
+	wire [63:0] cycle_count;
+	assign cycle_count = (cycles_per_step < (STEP_WIDTH * 2)) ? (STEP_WIDTH * 2): (cycles_per_step);
 
 	always @(posedge clk) begin
 	   if(rst) begin
@@ -53,7 +55,7 @@ module DriverController(
 	   end else begin
 	       if(clk_counter < cycle_count) begin
 	       //"step cycle running" start
-	           clk_counter <= clk_counter + active;
+	           clk_counter <= clk_counter + 1;
 	           en <= active;
 	           dir_out <= dir;
 	           step <= (clk_counter  < (cycle_count >> 1)) ? active : 0;

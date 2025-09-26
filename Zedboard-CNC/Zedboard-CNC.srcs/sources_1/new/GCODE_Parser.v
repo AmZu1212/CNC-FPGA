@@ -34,36 +34,50 @@ module GCODE_Parser(
     );
     
     reg [12:0] curr_line;
-    reg [15:0] speed [0:99]; //[0:911]
-    reg [15:0] pos_x [0:99];
-    reg [15:0] pos_y [0:99];
-    reg [15:0] pos_z [0:99];
-    
+    reg [15:0] speed [0:911]; //[0:911]
+    reg [15:0] pos_x [0:911];
+    reg [15:0] pos_y [0:911];
+    reg [15:0] pos_z [0:911];
+    reg finished;
+    localparam max_line = 912;
     
     always @* begin
-        next_speed = speed[curr_line]/60;
-        next_pos_x = pos_x[curr_line];
-        next_pos_y = pos_y[curr_line];
-        next_pos_z = pos_z[curr_line];
+        if (curr_line < max_line) begin
+            next_speed = speed[curr_line]/60;
+            next_pos_x = pos_x[curr_line];
+            next_pos_y = pos_y[curr_line];
+            next_pos_z = pos_z[curr_line];
+        end else begin
+            next_speed = 0;
+            next_pos_x = pos_x[max_line - 1];
+            next_pos_y = pos_y[max_line - 1];
+            next_pos_z = pos_z[max_line - 1];
+        end
     end
     
     always @(posedge clk) begin
         if (rst) begin
         //"reset" start
             enable <= 0;
+            finished <= 0;
             
             curr_line <= 0;
         //"reset" end
         end else begin
-            enable <= 1;
-            if(done) begin
-            //"next command" start
-                if(curr_line < 100) begin
-                    curr_line <= curr_line + 1;
-                end else begin
-                    enable <= 0;
+            if (finished) begin
+                enable <= 0;
+            end else begin
+                enable <= 1;
+                if(done) begin
+                //"next command" start
+                    if(curr_line < max_line) begin
+                        curr_line <= curr_line + 1;
+                    end else begin
+                        finished <= 1;
+                        enable <= 0;
+                    end
+                //"next command" end
                 end
-            //"next command" end
             end
         end
     end
@@ -170,7 +184,6 @@ module GCODE_Parser(
     pos_x[097] = 06994; pos_y[097] = 2382; pos_z[097] = 1000; speed[097] = 1000; 
     pos_x[098] = 06604; pos_y[098] = 2317; pos_z[098] = 1000; speed[098] = 1000; 
     pos_x[099] = 06194; pos_y[099] = 2297; pos_z[099] = 1000; speed[099] = 1000; 
-    /*
     pos_x[100] = 05709; pos_y[100] = 2327; pos_z[100] = 1000; speed[100] = 1000; 
     pos_x[101] = 05284; pos_y[101] = 2412; pos_z[101] = 1000; speed[101] = 1000; 
     pos_x[102] = 04909; pos_y[102] = 2552; pos_z[102] = 1000; speed[102] = 1000; 
@@ -983,7 +996,7 @@ module GCODE_Parser(
     pos_x[909] = 61884; pos_y[909] = 4952; pos_z[909] = 1000; speed[909] = 1000; 
     pos_x[910] = 61884; pos_y[910] = 4952; pos_z[910] = 3000; speed[910] = 1000; 
     pos_x[911] = 00000; pos_y[911] = 0000; pos_z[911] = 3000; speed[911] = 1000; 
-    */
+
 
     end
 endmodule

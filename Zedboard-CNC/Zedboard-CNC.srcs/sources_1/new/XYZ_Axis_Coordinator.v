@@ -29,18 +29,18 @@ module XYZ_Axis_Coordinator(
     input [15:0] next_pos_z,
     
     //Outputs
-    output reg [31:0] cycles_per_step_x,
+    output reg [63:0] cycles_per_step_x,
     output reg dir_x,
-    output reg [31:0] cycles_per_step_y,
+    output reg [63:0] cycles_per_step_y,
     output reg dir_y,
-    output reg [31:0] cycles_per_step_z,
+    output reg [63:0] cycles_per_step_z,
     output reg dir_z,
     output reg done
 );
     
     // Constants
     parameter MIN_SPEED = 1;
-    parameter MAX_SPEED = 20;
+    parameter MAX_SPEED = 60;
     parameter CYCLES_PER_SECOND = 100000000;
     parameter MICRONS_PER_STEP = 79;
     //each full step is 1/200 of a rotation (1.8 degrees) * 2pi * R(in mm * 1000). 
@@ -55,9 +55,9 @@ module XYZ_Axis_Coordinator(
     reg [63:0] num_clk_cycles;
     
     reg [63:0] next_num_clk_cycles;
-    reg [31:0] next_cycles_per_step_x;
-    reg [31:0] next_cycles_per_step_y;
-    reg [31:0] next_cycles_per_step_z;
+    reg [63:0] next_cycles_per_step_x;
+    reg [63:0] next_cycles_per_step_y;
+    reg [63:0] next_cycles_per_step_z;
     
     
     wire [31:0] distance_x, distance_y, distance_z;
@@ -114,10 +114,10 @@ module XYZ_Axis_Coordinator(
             done <= 0;
             squareroot_start <= 0;
         //"reset" end
-        end else begin
+        end else if(enable) begin
             if (clk_counter < num_clk_cycles) begin
             //"command running" start
-                clk_counter <= clk_counter + enable;
+                clk_counter <= clk_counter + 1;
                 done <= 0;
                 squareroot_start <= (clk_counter == 500) ? 1 : 0;
             //"command running" end
@@ -152,6 +152,11 @@ module XYZ_Axis_Coordinator(
                 end
             //"command finished" end
             end
+        end else begin
+            cycles_per_step_x <= 0;
+            cycles_per_step_y <= 0;
+            cycles_per_step_z <= 0;
+            done <= 0;
         end
     end
     

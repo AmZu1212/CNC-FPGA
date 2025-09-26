@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Jun 26 22:23:44 2025
-# Process ID         : 12412
+# Start of session at: Sun Sep 21 16:07:43 2025
+# Process ID         : 13668
 # Current directory  : C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1
 # Command line       : vivado.exe -log CNC_Top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNC_Top_wrapper.tcl
 # Log file           : C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.vds
@@ -19,7 +19,7 @@
 # Host memory        : 14870 MB
 # Swap memory        : 8388 MB
 # Total Virtual      : 23258 MB
-# Available Virtual  : 11069 MB
+# Available Virtual  : 10787 MB
 #-----------------------------------------------------------
 source CNC_Top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -40,45 +40,120 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14016
+INFO: [Synth 8-7075] Helper process launched with PID 11296
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1074.047 ; gain = 467.461
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1104.422 ; gain = 468.254
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_ext.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:69]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:71]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:109]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:111]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:150]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:152]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:192]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:194]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:235]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:237]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:279]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:281]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:324]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:326]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:370]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:372]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:419]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:465]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:467]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:514]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:516]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:564]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:566]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:615]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core.vh:617]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:65]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:67]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:100]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:102]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:135]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:137]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:170]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:172]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:205]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:207]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:240]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:242]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:275]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:277]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:310]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:312]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:345]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:347]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:380]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:382]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:415]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:417]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:450]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:452]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:485]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:487]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:30]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:32]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:65]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:67]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:100]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:102]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:135]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:137]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:170]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:172]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:205]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:207]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:240]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:242]
+INFO: [Synth 8-11241] undeclared symbol 'tms_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:275]
+INFO: [Synth 8-11241] undeclared symbol 'runtest_int', assumed default net type 'wire' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/52c0/hdl/verilog/xsdbm_v3_0_3_bs_core_vec.vh:277]
+INFO: [Common 17-14] Message 'Synth 8-11241' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_wrapper' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_A4988_Driver_IO_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_0/synth/CNC_Top_A4988_Driver_IO_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'A4988_Driver_IO' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/A4988_Driver_IO.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'A4988_Driver_IO' (0#1) [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/A4988_Driver_IO.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_A4988_Driver_IO_0_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_0/synth/CNC_Top_A4988_Driver_IO_0_0.v:53]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_A4988_Driver_IO_0_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_1/synth/CNC_Top_A4988_Driver_IO_0_1.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_A4988_Driver_IO_0_1' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_1/synth/CNC_Top_A4988_Driver_IO_0_1.v:53]
-WARNING: [Synth 8-7071] port 'drv_enable' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_direction' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_step' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_reset' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_ms1' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_ms2' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7071] port 'drv_ms3' of module 'CNC_Top_A4988_Driver_IO_0_1' is unconnected for instance 'A4988_Driver_IO_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-7023] instance 'A4988_Driver_IO_0' of module 'CNC_Top_A4988_Driver_IO_0_1' has 14 connections declared, but only 7 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_A4988_Driver_IO_1_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_1_0/synth/CNC_Top_A4988_Driver_IO_1_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_A4988_Driver_IO_1_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_1_0/synth/CNC_Top_A4988_Driver_IO_1_0.v:53]
-WARNING: [Synth 8-7071] port 'drv_enable' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_direction' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_step' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_reset' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_ms1' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_ms2' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7071] port 'drv_ms3' of module 'CNC_Top_A4988_Driver_IO_1_0' is unconnected for instance 'A4988_Driver_IO_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-WARNING: [Synth 8-7023] instance 'A4988_Driver_IO_1' of module 'CNC_Top_A4988_Driver_IO_1_0' has 14 connections declared, but only 7 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:95]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_DriverController_0_1' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_1/synth/CNC_Top_DriverController_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'CNC_Top_DriverController_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_0/synth/CNC_Top_DriverController_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'DriverController' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/DriverController.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'DriverController' (0#1) [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/DriverController.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_DriverController_0_1' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_1/synth/CNC_Top_DriverController_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_DriverController_1_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_1_0/synth/CNC_Top_DriverController_1_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_DriverController_1_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_1_0/synth/CNC_Top_DriverController_1_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_DriverController_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_0/synth/CNC_Top_DriverController_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_DriverController_0_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_0_0/synth/CNC_Top_DriverController_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_GCODE_Parser_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_GCODE_Parser_0_0/synth/CNC_Top_GCODE_Parser_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'GCODE_Parser' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/GCODE_Parser.v:22]
@@ -95,11 +170,16 @@ INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_LED_IO_0_0' (0#1) [c:/Git
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_XYZ_Axis_Coordinator_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_XYZ_Axis_Coordinator_0_0/synth/CNC_Top_XYZ_Axis_Coordinator_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'XYZ_Axis_Coordinator' [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:21]
 	Parameter MIN_SPEED bound to: 1 - type: integer 
-	Parameter MAX_SPEED bound to: 20 - type: integer 
+	Parameter MAX_SPEED bound to: 60 - type: integer 
 	Parameter CYCLES_PER_SECOND bound to: 100000000 - type: integer 
 	Parameter MICRONS_PER_STEP bound to: 79 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'XYZ_Axis_Coordinator' (0#1) [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_XYZ_Axis_Coordinator_0_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_XYZ_Axis_Coordinator_0_0/synth/CNC_Top_XYZ_Axis_Coordinator_0_0.v:53]
+WARNING: [Synth 8-7071] port 'cycles_per_step_y' of module 'CNC_Top_XYZ_Axis_Coordinator_0_0' is unconnected for instance 'XYZ_Axis_Coordinator_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
+WARNING: [Synth 8-7071] port 'dir_y' of module 'CNC_Top_XYZ_Axis_Coordinator_0_0' is unconnected for instance 'XYZ_Axis_Coordinator_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
+WARNING: [Synth 8-7071] port 'cycles_per_step_z' of module 'CNC_Top_XYZ_Axis_Coordinator_0_0' is unconnected for instance 'XYZ_Axis_Coordinator_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
+WARNING: [Synth 8-7071] port 'dir_z' of module 'CNC_Top_XYZ_Axis_Coordinator_0_0' is unconnected for instance 'XYZ_Axis_Coordinator_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
+WARNING: [Synth 8-7023] instance 'XYZ_Axis_Coordinator_0' of module 'CNC_Top_XYZ_Axis_Coordinator_0_0' has 14 connections declared, but only 10 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_clk_wiz_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.v:65]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_clk_wiz_0_clk_wiz' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_clk_wiz.v:65]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
@@ -123,25 +203,159 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2024.2/scripts
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_clk_wiz_0_clk_wiz' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_clk_wiz.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_clk_wiz_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.v:65]
-WARNING: [Synth 8-7071] port 'locked' of module 'CNC_Top_clk_wiz_0' is unconnected for instance 'clk_wiz' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:166]
-WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'CNC_Top_clk_wiz_0' has 4 connections declared, but only 3 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:166]
+WARNING: [Synth 8-7071] port 'locked' of module 'CNC_Top_clk_wiz_0' is unconnected for instance 'clk_wiz' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:119]
+WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'CNC_Top_clk_wiz_0' has 4 connections declared, but only 3 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:119]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:123]
+INFO: [Synth 8-6157] synthesizing module 'CNC_Top_system_ila_0_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/synth/CNC_Top_system_ila_0_0.v:53]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/synth/CNC_Top_system_ila_0_0.v:235]
+INFO: [Synth 8-6157] synthesizing module 'bd_e2c7' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/synth/bd_e2c7.v:10]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/synth/bd_e2c7.v:20]
+INFO: [Synth 8-6157] synthesizing module 'bd_e2c7_ila_lib_0' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:48]
+INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3129]
+INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3129]
+INFO: [Synth 8-6157] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3092]
+INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:3092]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149195]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149195]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149045]
+INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149134]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149134]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188]
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:43188]
+WARNING: [Synth 8-7071] port 'clk_nobuf' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7071] port 'clkdiv_out' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7071] port 'trig_in' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7071] port 'trig_in_ack' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7071] port 'trig_out' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7071] port 'trig_out_ack' of module 'ila_v6_2_16_ila' is unconnected for instance 'inst' [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+WARNING: [Synth 8-7023] instance 'inst' of module 'ila_v6_2_16_ila' has 1033 connections declared, but only 1027 given [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:3209]
+INFO: [Synth 8-6155] done synthesizing module 'bd_e2c7_ila_lib_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'bd_e2c7' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/synth/bd_e2c7.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_system_ila_0_0' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/synth/CNC_Top_system_ila_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top' (0#1) [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_wrapper' (0#1) [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v:13]
-WARNING: [Synth 8-7129] Port left in module CNC_Top is either unconnected or has no load
+WARNING: [Synth 8-3848] Net sl_iport0 in module/entity bd_e2c7_ila_lib_0 does not have driver. [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/synth/bd_e2c7_ila_lib_0.v:98]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'GCODE_Parser_0'. This will prevent further optimization [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:87]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:123]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'XYZ_Axis_Coordinator_0'. This will prevent further optimization [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:108]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LED_IO_0'. This will prevent further optimization [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:98]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'DriverController_Z'. This will prevent further optimization [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:77]
+WARNING: [Synth 8-7129] Port SEL_I[0] in module ltlib_v1_0_2_generic_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLKB in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[1] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA_I[0] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[9] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[8] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[7] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[6] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[5] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[4] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[3] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[2] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[1] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RDADDRECC_I[0] in module blk_mem_gen_v8_4_9_blk_mem_output_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[17] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[16] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[15] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[14] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[13] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[12] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[11] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[10] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[9] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[8] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[7] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[6] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[5] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[4] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[3] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[2] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[1] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DOUTA[0] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRA in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSRB in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[17] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[16] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[15] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[14] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[13] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[12] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[11] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[10] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[9] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[8] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[7] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[6] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[5] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[4] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[3] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[2] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SLEEP in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ECCPIPECE in module blk_mem_gen_v8_4_9_blk_mem_gen_prim_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTA[0] in module blk_mem_gen_v8_4_9_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTB[0] in module blk_mem_gen_v8_4_9_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_9_blk_mem_gen_generic_cstr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTA in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENA in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEA in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RSTB in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port REGCEB in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WEB[0] in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[1] in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DINB[0] in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTDBITERR in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port INJECTSBITERR in module blk_mem_gen_v8_4_9_blk_mem_input_block is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AClk in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[3] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[2] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[1] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[31] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[30] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[29] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[28] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[27] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[26] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[25] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[24] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[23] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[22] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[21] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[20] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[19] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[18] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[17] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[16] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[15] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[14] in module blk_mem_gen_v8_4_9_synth is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1185.469 ; gain = 578.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1185.469 ; gain = 578.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1185.469 ; gain = 578.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1185.469 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1642.070 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -152,6 +366,10 @@ Finished Parsing XDC File [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/s
 Parsing XDC File [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc] for cell 'CNC_Top_i/clk_wiz/inst'
 Finished Parsing XDC File [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc] for cell 'CNC_Top_i/clk_wiz/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'CNC_Top_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'CNC_Top_i/system_ila_0/inst/ila_lib/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc]
@@ -359,105 +577,105 @@ WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinat
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[31]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[32]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[32]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[33]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[33]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[34]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[34]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[35]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[35]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[36]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[36]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[37]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[37]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[38]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[38]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[39]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[39]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[3]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[3]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[40]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[40]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[41]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[41]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[42]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[42]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[43]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[43]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[44]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[44]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[45]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[45]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[46]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[46]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[47]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[47]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[48]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[48]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[49]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[49]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[4]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[4]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[5]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[50]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[5]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[50]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[6]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[51]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[6]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[51]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[7]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[52]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[7]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[52]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[8]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[53]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[8]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[53]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[9]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[54]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[9]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[0]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[0]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[10]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[10]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[11]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[11]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[12]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[12]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[13]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[13]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[14]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[14]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[15]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[15]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[16]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[16]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[17]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[17]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[18]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[18]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[19]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[19]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[1]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[1]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[20]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[20]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[21]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[21]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[22]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[22]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[23]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[23]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[24]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[24]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[25]/C' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
-Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
-WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_y_reg[25]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
+WARNING: [Constraints 18-401] set_multicycle_path: 'CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_x_reg[54]/Q' is not a valid endpoint. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 Resolution: A valid end point is a data pin of a sequential cell or a primary output or inout port. Please validate that all the objects returned by your query belong to this list.
 INFO: [Common 17-14] Message 'Constraints 18-401' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:96]
 WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:97]
@@ -575,28 +793,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1274.988 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1642.070 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 37 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 32 instances
+  CFGLUT5 => SRLC32E: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1274.988 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 1642.070 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property keep_hierarchy = soft for CNC_Top_i/clk_wiz/inst. (constraint file  {c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc}, line 53).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/clk_wiz/inst. (constraint file  {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc}, line 43).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/clk_wiz/inst. (constraint file  {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc}, line 40).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/system_ila_0/inst/ila_lib/inst. (constraint file  {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc}, line 48).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Ground. (constraint file  auto generated constraint).
@@ -605,51 +826,64 @@ Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/DriverController_Z. (co
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/LED_IO_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/XYZ_Axis_Coordinator_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/GCODE_Parser_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/DriverController_X. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/A4988_Driver_IO_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/DriverController_Y. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/A4988_Driver_IO_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/system_ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/system_ila_0/inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/system_ila_0/inst/ila_lib. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1274.988 ; gain = 668.402
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ltlib_v1_0_2_generic_memrd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_4_reg_p2s__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+              RESET_ADDR |                          0000001 |                          0000001
+            REQUEST_READ |                          0000010 |                          0000010
+           WAIT_READ_ACK |                          0000100 |                          0000100
+             OUTPUT_DATA |                          0001000 |                          0001000
+                    IDLE |                          0010000 |                          0010000
+       INCREMENT_ADDRESS |                          1000000 |                          1000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_2_generic_memrd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1274.988 ; gain = 668.402
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   64 Bit       Adders := 2     
-	   3 Input   64 Bit       Adders := 1     
-	   3 Input   32 Bit       Adders := 3     
-	   2 Input    7 Bit       Adders := 3     
-+---Registers : 
-	               64 Bit    Registers := 4     
-	               32 Bit    Registers := 4     
-	               16 Bit    Registers := 3     
-	               13 Bit    Registers := 2     
-	                7 Bit    Registers := 2     
-	                1 Bit    Registers := 17    
-+---Multipliers : 
-	              32x32  Multipliers := 3     
-	               7x49  Multipliers := 1     
-	              17x32  Multipliers := 1     
-+---ROMs : 
-	                    ROMs := 2     
-+---Muxes : 
-	   4 Input   64 Bit        Muxes := 1     
-	   3 Input   64 Bit        Muxes := 1     
-	   2 Input   64 Bit        Muxes := 4     
-	   2 Input   49 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 9     
-	 101 Input   16 Bit        Muxes := 2     
-	   2 Input    7 Bit        Muxes := 2     
-	   4 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 1     
-	   3 Input    6 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 29    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -666,45 +900,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP val2, operation Mode is: A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val1, operation Mode is: A*B.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: Generating DSP val1, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: Generating DSP val1, operation Mode is: A*B.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: Generating DSP val1, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: operator val1 is absorbed into DSP val1.
-DSP Report: Generating DSP val2, operation Mode is: A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: Generating DSP val2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator val2 is absorbed into DSP val2.
-DSP Report: operator val2 is absorbed into DSP val2.
-WARNING: [Synth 8-7129] Port left in module CNC_Top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1274.988 ; gain = 668.402
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
  Sort Area is  val1_6 : 0 0 : 3101 5879 : Used 1 time 0
  Sort Area is  val1_6 : 0 1 : 2778 5879 : Used 1 time 0
@@ -719,59 +916,25 @@ Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elaps
  Sort Area is  val2_9 : 0 0 : 2759 5418 : Used 1 time 0
  Sort Area is  val2_9 : 0 1 : 2659 5418 : Used 1 time 0
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+-------------------------+------------------------+---------------+----------------+
-|Module Name              | RTL Object             | Depth x Width | Implemented As | 
-+-------------------------+------------------------+---------------+----------------+
-|CNC_Top_GCODE_Parser_0_0 | inst/curr_line_reg_rep | 128x15        | Block RAM      | 
-|CNC_Top_GCODE_Parser_0_0 | inst/curr_line_reg_rep | 128x15        | Block RAM      | 
-+-------------------------+------------------------+---------------+----------------+
-
-
-DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+---------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name          | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+---------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|XYZ_Axis_Coordinator | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|XYZ_Axis_Coordinator | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+---------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1440.215 ; gain = 833.629
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 1642.070 ; gain = 1005.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1569.480 ; gain = 962.895
+Finished Timing Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:01:54 . Memory (MB): peak = 1661.227 ; gain = 1025.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg_rep__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/GCODE_Parser_0/inst/curr_line_reg_rep__1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1569.480 ; gain = 962.895
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:57 . Memory (MB): peak = 1665.406 ; gain = 1029.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -788,38 +951,78 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin dummy_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[36] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[35] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[34] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[33] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[32] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:trig_in to constant 0
+WARNING: [Synth 8-3295] tying undriven pin inst:trig_out_ack to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1734.691 ; gain = 1128.105
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:02:03 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1734.691 ; gain = 1128.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:03 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1734.691 ; gain = 1128.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1734.691 ; gain = 1128.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -855,44 +1058,51 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     2|
-|2     |CARRY4     |  1089|
-|3     |DSP48E1    |    12|
-|4     |LUT1       |    88|
-|5     |LUT2       |   929|
-|6     |LUT3       |  2484|
-|7     |LUT4       |   484|
-|8     |LUT5       |   209|
-|9     |LUT6       |   520|
-|10    |MMCME2_ADV |     1|
-|11    |RAMB18E1   |     2|
-|13    |FDRE       |   422|
-|14    |FDSE       |    13|
-|15    |IBUF       |     2|
-|16    |OBUF       |    15|
+|2     |CARRY4     |   933|
+|3     |CFGLUT5    |    37|
+|4     |DSP48E1    |    12|
+|5     |LUT1       |    96|
+|6     |LUT2       |   880|
+|7     |LUT3       |  2296|
+|8     |LUT4       |   274|
+|9     |LUT5       |   273|
+|10    |LUT6       |   604|
+|11    |MMCME2_ADV |     1|
+|12    |MUXF7      |     5|
+|13    |RAMB18E1   |     4|
+|17    |SRL16E     |     5|
+|18    |SRLC16E    |     2|
+|19    |SRLC32E    |    17|
+|20    |FDRE       |  1542|
+|21    |FDSE       |    23|
+|22    |IBUF       |     2|
+|23    |OBUF       |    15|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 1738.676 ; gain = 1132.090
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:24 . Memory (MB): peak = 1738.676 ; gain = 1042.570
-Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1738.676 ; gain = 1132.090
+Synthesis finished with 0 errors, 0 critical warnings and 2451 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:14 ; elapsed = 00:01:59 . Memory (MB): peak = 1832.934 ; gain = 1196.766
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:04 . Memory (MB): peak = 1832.934 ; gain = 1196.766
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1738.676 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1104 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1832.934 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 992 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'CNC_Top_wrapper' is not ideal for floorplanning, since the cellview 'XYZ_Axis_Coordinator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: CNC_Top_i/system_ila_0/inst/ila_lib UUID: 366dfc19-f727-5a4e-802c-08477e857b68 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1751.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1845.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 37 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 32 instances
+  CFGLUT5 => SRLC32E: 5 instances
 
-Synth Design complete | Checksum: caaec500
+Synth Design complete | Checksum: 3366c5f5
 INFO: [Common 17-83] Releasing license: Synthesis
-81 Infos, 232 Warnings, 0 Critical Warnings and 0 Errors encountered.
+209 Infos, 367 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:50 . Memory (MB): peak = 1751.441 ; gain = 1390.805
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1751.441 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:16 . Memory (MB): peak = 1845.734 ; gain = 1443.660
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1845.734 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 26 22:25:47 2025...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 21 16:10:06 2025...
