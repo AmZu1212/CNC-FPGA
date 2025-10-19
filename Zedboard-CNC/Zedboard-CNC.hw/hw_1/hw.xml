@@ -97,7 +97,7 @@
     <Object name="u_ila_0_XYZ_Axis_Coordinator_0_next_num_clk_cycles[0:0]" gui_info="Trigger Setup=15"/>
   </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
-    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	1045	Name	0	2147483647	15	456	456	Value	1	2147483647	15	342	342	Activity	2	2147483647	15	78	78	Direction	3	2147483647	15	90	90	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	759	Name	0	2147483647	15	424	424	Value	1	2147483647	15	124	124	Activity	2	2147483647	15	60	60	Direction	3	2147483647	15	72	72	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -6702,7 +6702,7 @@
         <net name="CNC_Top_i/GCODE_Parser_0_next_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -6770,7 +6770,7 @@
         <net name="CNC_Top_i/GCODE_Parser_0_next_speed[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -6924,7 +6924,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -7000,7 +7000,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -7306,7 +7306,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -7958,7 +7958,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_position_reached_3"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
