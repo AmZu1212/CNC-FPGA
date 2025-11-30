@@ -1,44 +1,21 @@
-set_property IOSTANDARD LVCMOS33 [get_ports {led[*]}]
-set_property IOSTANDARD LVCMOS33 [get_ports drv_*]
-
-# ================= FPGA PINS CHEAT SHEET ================= #
-
-# ==================== clk PINS =====================
-#IC18 - 33.33MHz CLK
-#IC17 - 100MHz CLK
-# PL CLK SUPPLY - Y9
-
-# ================= PMOD JA Inputs ==================
-## Upper Slots
-#set_property PACKAGE_PIN Y11  [get_ports {ja_in[0]}]   ;# JA1
-#set_property PACKAGE_PIN AA11 [get_ports {ja_in[1]}]   ;# JA2
-#set_property PACKAGE_PIN Y10  [get_ports {ja_in[2]}]   ;# JA3
-#set_property PACKAGE_PIN AA9  [get_ports {ja_in[3]}]   ;# JA4
-## Lower Slots
-#set_property PACKAGE_PIN AB11  [get_ports {ja_in[4]}]  ;# JA7
-#set_property PACKAGE_PIN AB10  [get_ports {ja_in[5]}]  ;# JA8
-#set_property PACKAGE_PIN AB9 [get_ports {ja_in[6]}]    ;# JA9
-#set_property PACKAGE_PIN AA8 [get_ports {ja_in[7]}]    ;# JA10
-#set_property IOSTANDARD LVCMOS33 [get_ports ja_in[*]]
-
-# Pull Up/Down, Important, else the signals float!
-#set_property PULLDOWN true [get_ports ja_in[*]]
-
-# ================= Button inputs  ==================
-# set_property PACKAGE_PIN N15 [get_ports btn_ccw]
-# set_property IOSTANDARD LVCMOS33 [get_ports btn_ccw]
-# set_property PULLDOWN true [get_ports btn_ccw]
-
-# =========================================================== #
-
-
 # CLK pin
 set_property PACKAGE_PIN Y9 [get_ports sys_clock]
 set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
 # create_clock -period 10.000 -name sys_clk -waveform {0 5} [get_ports sys_clock]
-set_property IOSTANDARD LVCMOS33 [get_ports le*]
-set_property IOSTANDARD LVCMOS33 [get_ports drv_*]
+
+# Button inputs
+set_property PACKAGE_PIN N15 [get_ports left]
+set_property PACKAGE_PIN R18 [get_ports right]
+set_property PULLTYPE PULLDOWN [get_ports {left right}]
+set_property IOSTANDARD LVCMOS33 [get_ports {left right}]
+
+# control switches - TBD
+##
+##
+##
+
 # LED pins
+set_property IOSTANDARD LVCMOS33 [get_ports {led[*]}]
 set_property PACKAGE_PIN T22 [get_ports {led[0]}]
 set_property PACKAGE_PIN T21 [get_ports {led[1]}]
 set_property PACKAGE_PIN U22 [get_ports {led[2]}]
@@ -49,40 +26,65 @@ set_property PACKAGE_PIN U19 [get_ports {led[6]}]
 set_property PACKAGE_PIN U14 [get_ports {led[7]}]
 
 
-# A4988 stepper driver control signals on PMOD JA
-# Upper
-set_property PACKAGE_PIN Y11 [get_ports drv_direction]
-set_property PACKAGE_PIN AA11 [get_ports drv_step]
-set_property PACKAGE_PIN Y10 [get_ports drv_reset]
+## A4988 Stepper Driver - Axis X on PMOD JA
+set_property PACKAGE_PIN Y11 [get_ports directionX]
+set_property PACKAGE_PIN AA11 [get_ports stepX]
+set_property PACKAGE_PIN Y10 [get_ports resetX]
+##set_property PACKAGE_PIN AA9 [get_ports lssX]
+set_property PACKAGE_PIN AB11 [get_ports enableX]
+set_property PACKAGE_PIN AB10 [get_ports ms1X]
+set_property PACKAGE_PIN AB9 [get_ports ms2X]
+set_property PACKAGE_PIN AA8 [get_ports ms3X]
 
-# Lower
-set_property PACKAGE_PIN AB11 [get_ports drv_enable]
-set_property PACKAGE_PIN AB10 [get_ports drv_ms1]
-set_property PACKAGE_PIN AB9 [get_ports drv_ms2]
-set_property PACKAGE_PIN AA8 [get_ports drv_ms3]
+# A4988 Stepper Driver - Axis Y on PMOD JB
+set_property PACKAGE_PIN W12 [get_ports directionY]
+set_property PACKAGE_PIN W11 [get_ports stepY]
+set_property PACKAGE_PIN V10 [get_ports resetY]
+##set_property PACKAGE_PIN W8 [get_ports lssY]
+set_property PACKAGE_PIN V12 [get_ports enableY]
+set_property PACKAGE_PIN W10 [get_ports ms1Y]
+set_property PACKAGE_PIN V9 [get_ports ms2Y]
+set_property PACKAGE_PIN V8 [get_ports ms3Y]
 
-# set 3.3V
+## A4988 Stepper Driver - Axis Z on PMOD JC
+set_property PACKAGE_PIN AB7 [get_ports directionZ]
+set_property PACKAGE_PIN AB6 [get_ports stepZ]
+set_property PACKAGE_PIN Y4 [get_ports resetZ]
+##set_property PACKAGE_PIN AA4 [get_ports lssZ]
+set_property PACKAGE_PIN R6 [get_ports enableZ]
+set_property PACKAGE_PIN T6 [get_ports ms1Z]
+set_property PACKAGE_PIN T4 [get_ports ms2Z]
+set_property PACKAGE_PIN U4 [get_ports ms3Z]
+
+
+
+
+
+# PMOD D - Template
+#set_property PACKAGE_PIN V7 [get_ports ]
+#set_property PACKAGE_PIN W7 [get_ports ]
+#set_property PACKAGE_PIN V5 [get_ports ]
+#set_property PACKAGE_PIN V4 [get_ports ]
+#set_property PACKAGE_PIN W6 [get_ports ]
+#set_property PACKAGE_PIN W5 [get_ports ]
+#set_property PACKAGE_PIN U6 [get_ports ]
+#set_property PACKAGE_PIN U5 [get_ports ]
+
+
+# set ports to 3.3V
+set_property IOSTANDARD LVCMOS33 [get_ports *X]
+set_property IOSTANDARD LVCMOS33 [get_ports *Y]
+set_property IOSTANDARD LVCMOS33 [get_ports *Z]
 
 # Pull Up & Downs
-set_property PULLTYPE PULLDOWN [get_ports drv_direction]
-set_property PULLTYPE PULLDOWN [get_ports drv_step]
-set_property PULLTYPE PULLUP [get_ports drv_reset]
-set_property PULLTYPE PULLDOWN [get_ports drv_enable]
-set_property PULLTYPE PULLDOWN [get_ports drv_ms1]
-set_property PULLTYPE PULLDOWN [get_ports drv_ms2]
-set_property PULLTYPE PULLDOWN [get_ports drv_ms3]
+set_property PULLTYPE PULLUP [get_ports {resetX resetY resetZ}]
+set_property PULLTYPE PULLDOWN [get_ports { \
+    stepX enableX directionX ms1X ms2X ms3X \
+    stepY enableY directionY ms1Y ms2Y ms3Y \
+    stepZ enableZ directionZ ms1Z ms2Z ms3Z \
+}]
 
-
-# Button inputs
-set_property PACKAGE_PIN N15 [get_ports left]
-set_property PACKAGE_PIN R18 [get_ports right]
-set_property IOSTANDARD LVCMOS33 [get_ports right]
-set_property PULLTYPE PULLDOWN [get_ports left]
-set_property PULLTYPE PULLDOWN [get_ports right]
-
-
-
-
+# xdc magic for root function
 # 32-cycle multicycle path from square root result to final x-axis output
 set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
 set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
@@ -117,7 +119,7 @@ set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
 set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
 set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31
 
-
+# debug stuff
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

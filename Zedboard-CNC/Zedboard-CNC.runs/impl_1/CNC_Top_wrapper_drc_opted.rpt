@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Fri Sep 26 21:39:18 2025
-| Host         : Alex-PC running 64-bit major release  (build 9200)
+| Date         : Sun Nov 30 19:26:48 2025
+| Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_drc -file CNC_Top_wrapper_drc_opted.rpt -pb CNC_Top_wrapper_drc_opted.pb -rpx CNC_Top_wrapper_drc_opted.rpx
 | Design       : CNC_Top_wrapper
 | Device       : xc7z020clg484-1

@@ -1,65 +1,35 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="6456" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="13112" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="1424" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="20576" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="18704" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="22928" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="14564" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="15236" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="9028" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="24124" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="3452" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="4816" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="1880" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="17180" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="4072" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="7176" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="16752" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="1532" HostCore="16" HostMemory="014870306816">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="Administrator" Host="ALEX-PC" Pid="16448" HostCore="16" HostMemory="014870306816">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="25884" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>

@@ -1,42 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep 26 21:34:19 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Nov 30 17:54:28 2025" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
+    <PORT DIR="O" NAME="directionX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_direction"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="drv_enable" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_enable">
+    <PORT DIR="O" NAME="directionY" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_direction">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_direction"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="directionZ" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_direction">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_direction"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="enableX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_enable">
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_enable"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="drv_ms1" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms1">
+    <PORT DIR="O" NAME="enableY" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_enable">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms1"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_enable"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="drv_ms2" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms2">
+    <PORT DIR="O" NAME="enableZ" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_enable">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms2"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="drv_ms3" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms3">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms3"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="A4988_Driver_IO_drv_reset">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_reset"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="drv_step" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_step"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_enable"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="LED_IO_0_led">
@@ -49,6 +44,66 @@
         <CONNECTION INSTANCE="GCODE_Parser_0" PORT="start"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="ms1X" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms1Y" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_ms1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms1Z" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_ms1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms2X" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms2Y" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_ms2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms2Z" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_ms2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms3X" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_ms3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms3Y" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_ms3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ms3Z" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_ms3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="resetX" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="A4988_Driver_IO_drv_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="resetY" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="resetZ" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_reset"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" NAME="right" SIGIS="undef" SIGNAME="External_Ports_right">
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
@@ -56,10 +111,25 @@
         <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="reset"/>
         <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
-        <CONNECTION INSTANCE="DriverController_X1" PORT="rst"/>
-        <CONNECTION INSTANCE="DriverController_X2" PORT="rst"/>
-        <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
         <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="stepX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_step"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="stepY" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_step">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="drv_step"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="stepZ" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_step">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_step"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
@@ -86,39 +156,39 @@
         </PORT>
         <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_direction"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="directionX"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_enable" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_enable"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="enableX"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_ms1" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_ms1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms1X"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_ms2" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_ms2"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms2X"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_ms3" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_ms3"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms3X"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="A4988_Driver_IO_drv_reset">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_reset"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetX"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_step" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="drv_step"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="stepX"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in2"/>
           </CONNECTIONS>
         </PORT>
@@ -127,19 +197,19 @@
             <CONNECTION INSTANCE="DriverController_X" PORT="en"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="I" NAME="ms1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="I" NAME="ms2" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="I" NAME="ms3" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
@@ -162,36 +232,64 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_X2_dir_out">
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="dir_out"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="drv_direction" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_enable" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
-        <PORT DIR="O" NAME="drv_step" SIGIS="undef"/>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_X2_en">
+        <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_direction">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="en"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="directionZ"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="O" NAME="drv_enable" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enableZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms1Z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms2Z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_ms3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms3Z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="A4988_Driver_IO1_drv_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_step" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="stepZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Z_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="I" NAME="ms2" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="I" NAME="ms3" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
@@ -199,9 +297,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_X2_step">
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="step"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="step"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -214,36 +312,64 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_X1_dir_out">
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="dir_out"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir_out"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="drv_direction" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_enable" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef"/>
-        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
-        <PORT DIR="O" NAME="drv_step" SIGIS="undef"/>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_X1_en">
+        <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_direction">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="en"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="directionY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms1" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="O" NAME="drv_enable" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enableY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms1" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms1Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms2" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms2Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_ms3" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_ms3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ms3Y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="A4988_Driver_IO2_drv_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drv_step" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_step">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="stepY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Y_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ms1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms2" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="I" NAME="ms2" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="ms3" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="I" NAME="ms3" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
@@ -251,9 +377,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_X1_step">
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="step"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="step"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -319,7 +445,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/DriverController_X1" HWVERSION="1.0" INSTANCE="DriverController_X1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/DriverController_Y" HWVERSION="1.0" INSTANCE="DriverController_Y" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="CNC_Top_DriverController_X_0"/>
@@ -341,12 +467,12 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_y"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_X1_dir_out">
+        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="direction"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_X1_en">
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Y_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="enable"/>
           </CONNECTIONS>
@@ -361,12 +487,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_X1_step">
+        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="step"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_X1_step_risingedge">
+        <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_Y_step_risingedge">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="step_feedback_y"/>
           </CONNECTIONS>
@@ -379,7 +505,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/DriverController_X2" HWVERSION="1.0" INSTANCE="DriverController_X2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/DriverController_Z" HWVERSION="1.0" INSTANCE="DriverController_Z" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DriverController" VLNV="xilinx.com:module_ref:DriverController:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="CNC_Top_DriverController_X_1"/>
@@ -401,12 +527,12 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_z"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_X2_dir_out">
+        <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="direction"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_X2_en">
+        <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Z_en">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="enable"/>
           </CONNECTIONS>
@@ -421,12 +547,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_X2_step">
+        <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="step"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_X2_step_risingedge">
+        <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_Z_step_risingedge">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="step_feedback_z"/>
           </CONNECTIONS>
@@ -460,8 +586,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="enable"/>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="enable"/>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="enable"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="enable"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="enable"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
@@ -520,7 +646,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Ground_dout">
+        <PORT DIR="O" LEFT="0" NAME="dout" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms1"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms2"/>
@@ -528,25 +654,11 @@
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="ms2"/>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="ms1"/>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="ms2"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Ground1" HWVERSION="1.1" INSTANCE="Ground1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_Ground_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Ground1_dout">
-          <CONNECTIONS>
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="ms3"/>
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="ms3"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in4"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -574,8 +686,16 @@
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_step"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in3" POLARITY="ACTIVE_HIGH" SIGIS="undef"/>
-        <PORT DIR="I" NAME="in4" SIGIS="undef"/>
+        <PORT DIR="I" NAME="in3" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="in4" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="in5" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_line_finished">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="line_finished"/>
@@ -638,12 +758,12 @@
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="cycles_per_step_y" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_y">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="cycles_per_step"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="cycles_per_step"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="cycles_per_step_z" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_z">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="cycles_per_step"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="cycles_per_step"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dir_x" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_x">
@@ -653,12 +773,12 @@
         </PORT>
         <PORT DIR="O" NAME="dir_y" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_y">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="dir"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dir_z" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_z">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="dir"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -670,8 +790,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in5"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="sync"/>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="sync"/>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="sync"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="sync"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="sync"/>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="line_finished"/>
           </CONNECTIONS>
         </PORT>
@@ -735,14 +855,14 @@
             <CONNECTION INSTANCE="DriverController_X" PORT="step_risingedge"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step_feedback_y" SIGIS="undef" SIGNAME="DriverController_X1_step_risingedge">
+        <PORT DIR="I" NAME="step_feedback_y" SIGIS="undef" SIGNAME="DriverController_Y_step_risingedge">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="step_risingedge"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="step_risingedge"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step_feedback_z" SIGIS="undef" SIGNAME="DriverController_X2_step_risingedge">
+        <PORT DIR="I" NAME="step_feedback_z" SIGIS="undef" SIGNAME="DriverController_Z_step_risingedge">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="step_risingedge"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="step_risingedge"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="target_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_x">
@@ -1354,10 +1474,10 @@
             <CONNECTION INSTANCE="vio_1" PORT="clk"/>
             <CONNECTION INSTANCE="vio_2" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
-            <CONNECTION INSTANCE="DriverController_X1" PORT="clk"/>
-            <CONNECTION INSTANCE="DriverController_X2" PORT="clk"/>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>

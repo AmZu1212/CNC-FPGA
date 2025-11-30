@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_DriverController_X_1",
-    "cell_name": "DriverController_X2",
+    "cell_name": "DriverController_Z",
     "component_reference": "xilinx.com:module_ref:DriverController:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_X_1",

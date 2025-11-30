@@ -48,24 +48,21 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio
 # IP: bd/CNC_Top/ip/CNC_Top_vio_2_0/CNC_Top_vio_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio_2_0 || ORIG_REF_NAME==CNC_Top_vio_2_0} -quiet] -quiet
 
-# IP: bd/CNC_Top/ip/CNC_Top_Ground_0/CNC_Top_Ground_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_Ground_0 || ORIG_REF_NAME==CNC_Top_Ground_0} -quiet] -quiet
-
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_ooc.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_ooc.xdc
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_1/CNC_Top_vio_0_1.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_1/CNC_Top_vio_0_1.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio_0_1 || ORIG_REF_NAME==CNC_Top_vio_0_1} -quiet] -quiet
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/CNC_Top_vio_1_0.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/CNC_Top_vio_1_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio_1_0 || ORIG_REF_NAME==CNC_Top_vio_1_0} -quiet] -quiet
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/CNC_Top_vio_2_0.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/CNC_Top_vio_2_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio_2_0 || ORIG_REF_NAME==CNC_Top_vio_2_0} -quiet] -quiet
 
-# XDC: c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc
+# XDC: e:/Github Repositories/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc
