@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Dec 24 02:09:36 2025
+# Process ID         : 74160
+# Current directory  : X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/impl_1
+# Command line       : vivado.exe -log SD_System_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SD_System_wrapper.tcl -notrace
+# Log file           : X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/impl_1/SD_System_wrapper.vdi
+# Journal file       : X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/impl_1\vivado.jou
+# Running On         : OBSIDIAN-NITRO
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16438 MB
+# Swap memory        : 9126 MB
+# Total Virtual      : 25565 MB
+# Available Virtual  : 9412 MB
+#-----------------------------------------------------------
+source SD_System_wrapper.tcl -notrace
