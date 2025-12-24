@@ -1,4 +1,4 @@
-# 2025-12-24T01:30:24.663745800
+# 2025-12-24T18:22:44.149583100
 import vitis
 
 client = vitis.create_client()
@@ -26,21 +26,15 @@ status = platform.build()
 
 comp.build()
 
-status = platform.build()
+domain = platform.get_domain(name="standalone_ps7_cortexa9_0")
 
-comp.build()
-
-status = platform.build()
-
-comp.build()
+status = domain.set_config(option = "lib", param = "XILFFS_use_strfunc", value = "1", lib_name="xilffs")
 
 status = platform.build()
 
 comp.build()
 
 status = platform.build()
-
-comp.build()
 
 status = platform.build()
 
@@ -49,30 +43,6 @@ comp.build()
 status = platform.build()
 
 comp.build()
-
-status = platform.build()
-
-comp.build()
-
-status = platform.update_hw(hw_design = "$COMPONENT_LOCATION/../../SD_Demo/SD_System_wrapper.xsa")
-
-status = platform.build()
-
-comp.build()
-
-status = platform.build()
-
-comp.build()
-
-status = platform.build()
-
-comp.build()
-
-status = platform.build()
-
-comp.build()
-
-status = platform.build()
 
 vitis.dispose()
 

@@ -15,7 +15,7 @@ include_directories(${CMAKE_INCLUDE_PATH})
 if (EXISTS ${metal_BINARY_DIR})
 include_directories(${metal_BINARY_DIR}/lib/include)
 endif()
-set (BSP_LIBSRC_SUBDIRS libsrc standalone xiltimer)
+set (BSP_LIBSRC_SUBDIRS libsrc standalone xiltimer xilffs)
 
 if (SUBDIR_LIST STREQUAL "ALL")
     set (SUBDIR_LIST ${BSP_LIBSRC_SUBDIRS})

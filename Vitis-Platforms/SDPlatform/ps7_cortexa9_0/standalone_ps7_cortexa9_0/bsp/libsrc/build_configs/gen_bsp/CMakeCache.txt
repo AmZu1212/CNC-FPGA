@@ -118,13 +118,13 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/CMakeFiles/pkgRedirects
 
 //No help, variable specified on the command line.
-CMAKE_INCLUDE_PATH:UNINITIALIZED=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include
+CMAKE_INCLUDE_PATH:UNINITIALIZED=X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\include
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/bsp
 
 //No help, variable specified on the command line.
-CMAKE_LIBRARY_PATH:UNINITIALIZED=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/lib
+CMAKE_LIBRARY_PATH:UNINITIALIZED=X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\lib
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=X:/Xilinx/Vitis/2024.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-ld.exe
@@ -153,7 +153,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //No help, variable specified on the command line.
-CMAKE_MODULE_PATH:UNINITIALIZED=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+CMAKE_MODULE_PATH:UNINITIALIZED=X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
 
 //Path to a program.
 CMAKE_NM:FILEPATH=X:/Xilinx/Vitis/2024.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-nm.exe
@@ -210,7 +210,7 @@ CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 CMAKE_SKIP_RPATH:BOOL=NO
 
 //Specs file path for using CMAKE toolchain files
-CMAKE_SPECS_FILE:STRING=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/Xilinx.spec
+CMAKE_SPECS_FILE:STRING=X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\Xilinx.spec
 
 //Flags used by the linker during the creation of static libraries
 // during all build types.
@@ -236,7 +236,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_STRIP:FILEPATH=X:/Xilinx/Vitis/2024.2/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-strip.exe
 
 //No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/cortexa9_toolchain.cmake
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\cortexa9_toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -270,6 +270,58 @@ TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
 
 //Extra CFLAGS
 TOOLCHAIN_EXTRA_C_FLAGS:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+
+//0:Disable exFAT, 1:Enable exFAT(Also Enables LFN)
+XILFFS_enable_exfat:BOOL=OFF
+
+//0:Single partition, 1:Enable multiple partition
+XILFFS_enable_multi_partition:BOOL=OFF
+
+//Enables file system with selected interface. Enter 1 for SD.
+// Enter 2 for RAM
+XILFFS_fs_interface:STRING=1
+
+//Maximum Sector size(valid values are 4096, 8192, 16384, 32768)
+XILFFS_max_sector_size:STRING=4096
+
+//Number of volumes (logical drives, from 1 to 175) to be used.
+XILFFS_num_logical_vol:STRING=35
+
+//RAM FS size
+XILFFS_ramfs_size:STRING=3145728
+
+//RAM FS start address
+XILFFS_ramfs_start_addr:STRING=
+
+//Enables the file system in Read_Only mode if true. ZynqMP fsbl
+// will set this to true
+XILFFS_read_only:BOOL=OFF
+
+//Configures relative path feature (valid values 0 to 2).
+XILFFS_set_fs_rpath:STRING=0
+
+//Enables use of CHMOD functionality for changing attributes (valid
+// only with read_only set to false)
+XILFFS_use_chmod:BOOL=OFF
+
+//Enables the Long File Name(LFN) support if non-zero. Disabled
+// by default: 0, LFN with static working buffer: 1, Dynamic working
+// buffer: 2 (on stack) or 3 (on heap)
+XILFFS_use_lfn:STRING=0
+
+//Disable(0) or Enable(1) f_mkfs function. ZynqMP fsbl will set
+// this to false
+XILFFS_use_mkfs:BOOL=ON
+
+//Enables the string functions (valid values 0 to 2).
+XILFFS_use_strfunc:STRING=1
+
+//Disable(0) or Enable(1) TRIM function. ZynqMP fsbl will set this
+// to false
+XILFFS_use_trim:BOOL=OFF
+
+//Enables word access for misaligned memory access platform
+XILFFS_word_access:BOOL=ON
 
 //Enable Interval Timer
 XILTIMER_en_interval_timer:BOOL=OFF
@@ -496,6 +548,15 @@ xadcps_IS_TOP_LEVEL:STATIC=OFF
 xadcps_SOURCE_DIR:STATIC=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xadcps/src
 
 //Value Computed by CMake
+xilffs_BINARY_DIR:STATIC=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/xilffs/src
+
+//Value Computed by CMake
+xilffs_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+xilffs_SOURCE_DIR:STATIC=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/xilffs/src
+
+//Value Computed by CMake
 xilstandalone_BINARY_DIR:STATIC=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src
 
 //Value Computed by CMake
@@ -623,7 +684,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=29
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=31
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -664,6 +725,14 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//STRINGS property for variable: XILFFS_fs_interface
+XILFFS_fs_interface-STRINGS:INTERNAL=1;2
+//STRINGS property for variable: XILFFS_set_fs_rpath
+XILFFS_set_fs_rpath-STRINGS:INTERNAL=0;1;2
+//STRINGS property for variable: XILFFS_use_lfn
+XILFFS_use_lfn-STRINGS:INTERNAL=0;1;2;3
+//STRINGS property for variable: XILFFS_use_strfunc
+XILFFS_use_strfunc-STRINGS:INTERNAL=0;1;2
 //STRINGS property for variable: XILTIMER_sleep_timer
 XILTIMER_sleep_timer-STRINGS:INTERNAL=Default;ps7_ttc_0;ps7_scutimer_0
 //STRINGS property for variable: XILTIMER_tick_timer
