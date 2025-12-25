@@ -85,11 +85,11 @@ static MotionCommand parse_line(const char *line)
             char *end;
             unsigned long val = strtoul(p + 1, &end, 10);
             switch (prefix) {
-            case 'G': m.cmd = (u8)val; break;
-            case 'X': m.x   = (u32)val; break;
-            case 'Y': m.y   = (u32)val; break;
-            case 'Z': m.z   = (u16)val; break;
-            case 'F': m.speed = (u8)val; break;
+            case 'G': m.cmd   = 	(u8)val; break;
+            case 'X': m.x     = 	(u32)val; break;
+            case 'Y': m.y     = 	(u32)val; break;
+            case 'Z': m.z     = 	(u16)val; break;
+			case 'F': m.speed = 	(u8)val; break;
             }
             p = end;
         } else {
@@ -102,8 +102,9 @@ static MotionCommand parse_line(const char *line)
 // =================== MAIN =================== //
 int main(void)
 {
-    init_platform(); // initialize hardware platform
-    xil_printf("Runtime mailbox loop\r\n");
+	// initialize hardware platform
+    init_platform();
+    xil_printf("PS Starting...\r\n");
 
     FATFS fs;
     FIL fil;
@@ -120,6 +121,7 @@ int main(void)
 
     write_width(INTRC_OUT_REG, 8U, 0U);
 
+	xil_printf("[Loop Active]\r\n");
     while (1) {
 
 		// load "mailbox"
@@ -161,7 +163,6 @@ int main(void)
                 f_lseek(&fil, 0); // rewind for reload, safety
             }
             write_width(INTRC_OUT_REG, 8U, MSG_FILE_LOADED);
-            xil_printf("SD file ready\r\n");
             break;
 
         case MACHINE_BUSY: // Machine signaled busy; do nothing...
@@ -194,7 +195,7 @@ int main(void)
             write_width(INTRC_OUT_REG, 8U, MSG_DATA_READY);
 
 			// print to serial
-            print_current_line(cmd);
+            // print_current_line(cmd);
             break;
 
         default:// shouldnt reach it
