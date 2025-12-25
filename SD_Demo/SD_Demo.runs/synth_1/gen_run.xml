@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1766534893" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SD_System_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1766691940" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SD_System_wrapper.dcp">
   <File Type="PA-TCL" Name="SD_System_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="SD_System_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="SD_System_wrapper.vds"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="SD_System_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Interconnect_Manager.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/SD_System/SD_System.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -33,6 +40,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -55,7 +68,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2024"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="SD_System_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="SD_System_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_Interconnect_Manager_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="SD_System_axi_gpio_0_3"/>
 </GenRun>

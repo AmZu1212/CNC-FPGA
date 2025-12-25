@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Dec 24 02:09:29 2025
+| Date         : Thu Dec 25 21:46:40 2025
 | Host         : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file SD_System_wrapper_utilization_synth.rpt -pb SD_System_wrapper_utilization_synth.pb
 | Design       : SD_System_wrapper
@@ -93,7 +93,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    8 |     0 |          0 |       200 |  4.00 |
+| Bonded IOB                  |    9 |     0 |          0 |       200 |  4.50 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -150,20 +150,26 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |    8 |                  IO |
+| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| SD_System_rst_ps7_0_100M_0       |    1 |
-| SD_System_processing_system7_0_0 |    1 |
-| SD_System_axi_smc_0              |    1 |
-| SD_System_axi_gpio_0_0           |    1 |
-+----------------------------------+------+
++------------------------------------+------+
+|              Ref Name              | Used |
++------------------------------------+------+
+| SD_System_rst_ps7_0_100M_0         |    1 |
+| SD_System_processing_system7_0_0   |    1 |
+| SD_System_axi_smc_0                |    1 |
+| SD_System_axi_gpio_1_0             |    1 |
+| SD_System_axi_gpio_0_3             |    1 |
+| SD_System_axi_gpio_0_2             |    1 |
+| SD_System_axi_gpio_0_1             |    1 |
+| SD_System_axi_gpio_0_0             |    1 |
+| SD_System_Interconnect_Manager_0_0 |    1 |
++------------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -72,6 +72,14 @@ SD_System_axi_smc_0_sc::SD_System_axi_smc_0_sc(const sc_core::sc_module_name& nm
   S00_AXI_tlm_aximm_write_socket = mp_impl->S00_AXI_tlm_aximm_write_socket;
   M00_AXI_tlm_aximm_read_socket = mp_impl->M00_AXI_tlm_aximm_read_socket;
   M00_AXI_tlm_aximm_write_socket = mp_impl->M00_AXI_tlm_aximm_write_socket;
+  M01_AXI_tlm_aximm_read_socket = mp_impl->M01_AXI_tlm_aximm_read_socket;
+  M01_AXI_tlm_aximm_write_socket = mp_impl->M01_AXI_tlm_aximm_write_socket;
+  M02_AXI_tlm_aximm_read_socket = mp_impl->M02_AXI_tlm_aximm_read_socket;
+  M02_AXI_tlm_aximm_write_socket = mp_impl->M02_AXI_tlm_aximm_write_socket;
+  M03_AXI_tlm_aximm_read_socket = mp_impl->M03_AXI_tlm_aximm_read_socket;
+  M03_AXI_tlm_aximm_write_socket = mp_impl->M03_AXI_tlm_aximm_write_socket;
+  M04_AXI_tlm_aximm_read_socket = mp_impl->M04_AXI_tlm_aximm_read_socket;
+  M04_AXI_tlm_aximm_write_socket = mp_impl->M04_AXI_tlm_aximm_write_socket;
 }
 
 SD_System_axi_smc_0_sc::~SD_System_axi_smc_0_sc()

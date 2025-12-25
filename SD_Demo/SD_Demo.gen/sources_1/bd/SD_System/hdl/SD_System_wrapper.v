@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed Dec 24 02:08:05 2025
+//Date        : Thu Dec 25 21:40:39 2025
 //Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
 //Command     : generate_target SD_System_wrapper.bd
 //Design      : SD_System_wrapper
@@ -32,7 +32,8 @@ module SD_System_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    leds_8bits_tri_o);
+    led,
+    sw0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,7 +55,8 @@ module SD_System_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [7:0]leds_8bits_tri_o;
+  output [7:0]led;
+  input sw0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -77,7 +79,8 @@ module SD_System_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [7:0]leds_8bits_tri_o;
+  wire [7:0]led;
+  wire sw0;
 
   SD_System SD_System_i
        (.DDR_addr(DDR_addr),
@@ -101,5 +104,6 @@ module SD_System_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .leds_8bits_tri_o(leds_8bits_tri_o));
+        .led(led),
+        .sw0(sw0));
 endmodule

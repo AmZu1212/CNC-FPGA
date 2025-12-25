@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE78A4D828F84CF72",
+      "boundary_crc": "0xC202FD8C762BDFAD",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../SD_Demo.gen/sources_1/bd/SD_System",
       "name": "SD_System",
@@ -12,9 +12,14 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "axi_gpio_0": "",
+      "X_GPIO": "",
       "axi_smc": "",
-      "rst_ps7_0_100M": ""
+      "rst_ps7_0_100M": "",
+      "Z_GPIO": "",
+      "INTERCONNECT_GPIO": "",
+      "Interconnect_Manager_0": "",
+      "COMMAND_GPIO": "",
+      "Y_GPIO": ""
     },
     "interface_ports": {
       "DDR": {
@@ -184,19 +189,16 @@
             "direction": "IO"
           }
         }
+      }
+    },
+    "ports": {
+      "led": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
       },
-      "leds_8bits": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "leds_8bits_tri_o",
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          }
-        }
+      "sw0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -1134,21 +1136,24 @@
           }
         }
       },
-      "axi_gpio_0": {
+      "X_GPIO": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "ip_revision": "35",
         "xci_name": "SD_System_axi_gpio_0_0",
         "xci_path": "ip\\SD_System_axi_gpio_0_0\\SD_System_axi_gpio_0_0.xci",
-        "inst_hier_path": "axi_gpio_0",
+        "inst_hier_path": "X_GPIO",
         "parameters": {
-          "C_GPIO2_WIDTH": {
-            "value": "8"
+          "C_GPIO_WIDTH": {
+            "value": "32"
+          },
+          "C_IS_DUAL": {
+            "value": "0"
           },
           "GPIO2_BOARD_INTERFACE": {
             "value": "Custom"
           },
           "GPIO_BOARD_INTERFACE": {
-            "value": "leds_8bits"
+            "value": "Custom"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -1162,6 +1167,9 @@
         "xci_path": "ip\\SD_System_axi_smc_0\\SD_System_axi_smc_0.xci",
         "inst_hier_path": "axi_smc",
         "parameters": {
+          "NUM_MI": {
+            "value": "5"
+          },
           "NUM_SI": {
             "value": "1"
           }
@@ -1180,10 +1188,114 @@
               }
             },
             "bridges": [
-              "M00_AXI"
+              "M00_AXI",
+              "M01_AXI",
+              "M02_AXI",
+              "M03_AXI",
+              "M04_AXI"
             ]
           },
           "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M02_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M03_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M04_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
@@ -1216,19 +1328,167 @@
         "xci_name": "SD_System_rst_ps7_0_100M_0",
         "xci_path": "ip\\SD_System_rst_ps7_0_100M_0\\SD_System_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
+      },
+      "Z_GPIO": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "35",
+        "xci_name": "SD_System_axi_gpio_1_0",
+        "xci_path": "ip\\SD_System_axi_gpio_1_0\\SD_System_axi_gpio_1_0.xci",
+        "inst_hier_path": "Z_GPIO",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "16"
+          },
+          "GPIO_BOARD_INTERFACE": {
+            "value": "Custom"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "INTERCONNECT_GPIO": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "35",
+        "xci_name": "SD_System_axi_gpio_0_1",
+        "xci_path": "ip\\SD_System_axi_gpio_0_1\\SD_System_axi_gpio_0_1.xci",
+        "inst_hier_path": "INTERCONNECT_GPIO",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_INPUTS_2": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "8"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "8"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
+      },
+      "Interconnect_Manager_0": {
+        "vlnv": "xilinx.com:module_ref:Interconnect_Manager:1.0",
+        "ip_revision": "1",
+        "xci_name": "SD_System_Interconnect_Manager_0_0",
+        "xci_path": "ip\\SD_System_Interconnect_Manager_0_0\\SD_System_Interconnect_Manager_0_0.xci",
+        "inst_hier_path": "Interconnect_Manager_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Interconnect_Manager",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "X": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Y": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Z": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "CMD": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "PS_Channel": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "switch0": {
+            "direction": "I"
+          },
+          "PL_Channel": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "led": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "COMMAND_GPIO": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "35",
+        "xci_name": "SD_System_axi_gpio_0_2",
+        "xci_path": "ip\\SD_System_axi_gpio_0_2\\SD_System_axi_gpio_0_2.xci",
+        "inst_hier_path": "COMMAND_GPIO",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
+      "Y_GPIO": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "35",
+        "xci_name": "SD_System_axi_gpio_0_3",
+        "xci_path": "ip\\SD_System_axi_gpio_0_3\\SD_System_axi_gpio_0_3.xci",
+        "inst_hier_path": "Y_GPIO",
+        "parameters": {
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "leds_8bits",
-          "axi_gpio_0/GPIO"
-        ]
-      },
       "axi_smc_M00_AXI": {
         "interface_ports": [
           "axi_smc/M00_AXI",
-          "axi_gpio_0/S_AXI"
+          "X_GPIO/S_AXI"
+        ]
+      },
+      "axi_smc_M01_AXI": {
+        "interface_ports": [
+          "axi_smc/M01_AXI",
+          "Z_GPIO/S_AXI"
+        ]
+      },
+      "axi_smc_M02_AXI": {
+        "interface_ports": [
+          "axi_smc/M02_AXI",
+          "INTERCONNECT_GPIO/S_AXI"
+        ]
+      },
+      "axi_smc_M03_AXI": {
+        "interface_ports": [
+          "axi_smc/M03_AXI",
+          "COMMAND_GPIO/S_AXI"
+        ]
+      },
+      "axi_smc_M04_AXI": {
+        "interface_ports": [
+          "axi_smc/M04_AXI",
+          "Y_GPIO/S_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1251,13 +1511,59 @@
       }
     },
     "nets": {
+      "COMMAND_GPIO_gpio_io_o": {
+        "ports": [
+          "COMMAND_GPIO/gpio_io_o",
+          "Interconnect_Manager_0/CMD"
+        ]
+      },
+      "INTERCONNECT_GPIO_gpio_io_o": {
+        "ports": [
+          "INTERCONNECT_GPIO/gpio_io_o",
+          "Interconnect_Manager_0/PS_Channel"
+        ]
+      },
+      "Interconnect_Manager_0_PL_Channel": {
+        "ports": [
+          "Interconnect_Manager_0/PL_Channel",
+          "INTERCONNECT_GPIO/gpio2_io_i"
+        ]
+      },
+      "Interconnect_Manager_0_led": {
+        "ports": [
+          "Interconnect_Manager_0/led",
+          "led"
+        ]
+      },
+      "XY_GPIO_gpio_io_o": {
+        "ports": [
+          "X_GPIO/gpio_io_o",
+          "Interconnect_Manager_0/X"
+        ]
+      },
+      "Y_GPIO_gpio_io_o": {
+        "ports": [
+          "Y_GPIO/gpio_io_o",
+          "Interconnect_Manager_0/Y"
+        ]
+      },
+      "Z_GPIO_gpio_io_o": {
+        "ports": [
+          "Z_GPIO/gpio_io_o",
+          "Interconnect_Manager_0/Z"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "axi_smc/aclk",
-          "axi_gpio_0/s_axi_aclk",
-          "rst_ps7_0_100M/slowest_sync_clk"
+          "X_GPIO/s_axi_aclk",
+          "rst_ps7_0_100M/slowest_sync_clk",
+          "Z_GPIO/s_axi_aclk",
+          "INTERCONNECT_GPIO/s_axi_aclk",
+          "COMMAND_GPIO/s_axi_aclk",
+          "Y_GPIO/s_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1269,8 +1575,18 @@
       "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
-          "axi_gpio_0/s_axi_aresetn",
-          "axi_smc/aresetn"
+          "X_GPIO/s_axi_aresetn",
+          "axi_smc/aresetn",
+          "Z_GPIO/s_axi_aresetn",
+          "INTERCONNECT_GPIO/s_axi_aresetn",
+          "COMMAND_GPIO/s_axi_aresetn",
+          "Y_GPIO/s_axi_aresetn"
+        ]
+      },
+      "switch_0_1": {
+        "ports": [
+          "sw0",
+          "Interconnect_Manager_0/switch0"
         ]
       }
     },
@@ -1279,9 +1595,29 @@
         "address_spaces": {
           "Data": {
             "segments": {
+              "SEG_COMMAND_GPIO_Reg": {
+                "address_block": "/COMMAND_GPIO/S_AXI/Reg",
+                "offset": "0x41230000",
+                "range": "64K"
+              },
+              "SEG_INTERCONNECT_GPIO_Reg": {
+                "address_block": "/INTERCONNECT_GPIO/S_AXI/Reg",
+                "offset": "0x41220000",
+                "range": "64K"
+              },
+              "SEG_Y_GPIO_Reg": {
+                "address_block": "/Y_GPIO/S_AXI/Reg",
+                "offset": "0x41240000",
+                "range": "64K"
+              },
               "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
+                "address_block": "/X_GPIO/S_AXI/Reg",
                 "offset": "0x41200000",
+                "range": "64K"
+              },
+              "SEG_axi_gpio_1_Reg": {
+                "address_block": "/Z_GPIO/S_AXI/Reg",
+                "offset": "0x41210000",
                 "range": "64K"
               }
             }

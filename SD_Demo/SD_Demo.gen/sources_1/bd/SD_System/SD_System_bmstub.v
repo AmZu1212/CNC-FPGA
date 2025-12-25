@@ -27,7 +27,8 @@ module SD_System (
   FIXED_IO_ps_srstb,
   FIXED_IO_ps_clk,
   FIXED_IO_ps_porb,
-  leds_8bits_tri_o
+  led,
+  sw0
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *)
@@ -76,9 +77,10 @@ module SD_System (
   inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *)
   inout FIXED_IO_ps_porb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 leds_8bits TRI_O" *)
-  (* X_INTERFACE_MODE = "master leds_8bits" *)
-  output [7:0]leds_8bits_tri_o;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output [7:0]led;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input sw0;
 
   // stub module has no contents
 

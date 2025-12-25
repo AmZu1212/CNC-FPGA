@@ -57,7 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -84,18 +84,74 @@ set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_0/SD_System_axi_gpio_0_0.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_1/bd_d332_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_1/bd_d332_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_5/bd_d332_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_6/bd_d332_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_7/bd_d332_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_8/bd_d332_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_9/bd_d332_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_10/bd_d332_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_11/bd_d332_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_2/bd_d332_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_3/bd_d332_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_4/bd_d332_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_5/bd_d332_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_6/bd_d332_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_7/bd_d332_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_8/bd_d332_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_9/bd_d332_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_10/bd_d332_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_11/bd_d332_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_12/bd_d332_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_13/bd_d332_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_14/bd_d332_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_15/bd_d332_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_16/bd_d332_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_20/bd_d332_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_21/bd_d332_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_22/bd_d332_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_23/bd_d332_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_24/bd_d332_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_25/bd_d332_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_26/bd_d332_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_27/bd_d332_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_28/bd_d332_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_29/bd_d332_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_30/bd_d332_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_31/bd_d332_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_33/bd_d332_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_34/bd_d332_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_35/bd_d332_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_36/bd_d332_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_37/bd_d332_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_38/bd_d332_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_40/bd_d332_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_41/bd_d332_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_42/bd_d332_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_43/bd_d332_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_44/bd_d332_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_45/bd_d332_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_47/bd_d332_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_48/bd_d332_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_49/bd_d332_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_50/bd_d332_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_51/bd_d332_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_52/bd_d332_m03bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_54/bd_d332_m04s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_55/bd_d332_m04arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_56/bd_d332_m04rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_57/bd_d332_m04awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_58/bd_d332_m04wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/bd_0/ip/ip_59/bd_d332_m04bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_rst_ps7_0_100M_0/SD_System_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_rst_ps7_0_100M_0/SD_System_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_rst_ps7_0_100M_0/SD_System_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_1/SD_System_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_1/SD_System_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_1/SD_System_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_2/SD_System_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_2/SD_System_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_2/SD_System_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_3/SD_System_axi_gpio_0_3_board.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_3/SD_System_axi_gpio_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_3/SD_System_axi_gpio_0_3.xdc]
 set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/SD_System_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -107,6 +163,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.srcs/constrs_1/new/constraints.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

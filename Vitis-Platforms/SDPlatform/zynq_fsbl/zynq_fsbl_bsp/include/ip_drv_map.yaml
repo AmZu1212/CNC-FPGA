@@ -1,4 +1,16 @@
-axi_gpio_0:
+COMMAND_GPIO:
+- axi_gpio
+- gpio
+INTERCONNECT_GPIO:
+- axi_gpio
+- gpio
+X_GPIO:
+- axi_gpio
+- gpio
+Y_GPIO:
+- axi_gpio
+- gpio
+Z_GPIO:
 - axi_gpio
 - gpio
 ps7_afi_0:
