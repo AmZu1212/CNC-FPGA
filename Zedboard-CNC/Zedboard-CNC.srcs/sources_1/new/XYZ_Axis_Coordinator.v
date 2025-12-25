@@ -59,10 +59,10 @@ module XYZ_Axis_Coordinator(
     localparam MIN_SPEED = 1;
     localparam MAX_SPEED = 60;
     localparam CYCLES_PER_SECOND = 100000000;
-    localparam MICRONS_PER_STEP_X = 5;
-    localparam MICRONS_PER_STEP_Y = 5;
+    localparam MICRONS_PER_STEP_X = 20;
+    localparam MICRONS_PER_STEP_Y = 20;
     localparam MICRONS_PER_STEP_Z = 5;
-    localparam MIN_HALF_STEP_WIDTH = 1500;
+    //localparam MIN_HALF_STEP_WIDTH = 1500;
     //each full step is 1/200 of a rotation (1.8 degrees) * 2pi * R(in mm * 1000). 
     //defaulting to the motor shaft diameter of 5000 microns (5mm).
     
