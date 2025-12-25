@@ -10,21 +10,23 @@
 #include <stdlib.h>
 
 // =================== DEFINES =================== //
-#define X_REG 				XPAR_X_GPIO_BASEADDR	// 32 bit
-#define Y_REG 				XPAR_Y_GPIO_BASEADDR	// 32 bit
-#define Z_REG 				XPAR_Z_GPIO_BASEADDR	// 16 bit
-#define CMD_REG 			XPAR_COMMAND_GPIO_BASEADDR	// 8 bit
-#define INTRC_REG 			XPAR_INTERCONNECT_GPIO_BASEADDR // 16 bit
-#define INTRC_OUT_REG 		(INTRC_REG + 0x00)	//  8 bit output (ch1)
-#define INTRC_IN_REG 		(INTRC_REG + 0x08)	//  8 bit input  (ch2 data offset for AXI GPIO)
-#define SLEEP_DURATION_USEC 1 		// in microseconds
+#define CMD_REG 			XPAR_COMMAND_GPIO_BASEADDR			//  8 bit
+#define X_REG 				XPAR_X_GPIO_BASEADDR				// 32 bit
+#define Y_REG 				XPAR_Y_GPIO_BASEADDR				// 32 bit
+#define Z_REG 				XPAR_Z_GPIO_BASEADDR				// 16 bit
+#define SPEED_REG 			XPAR_SPEED_GPIO_BASEADDR			//  8 bit
+#define INTRC_REG 			XPAR_INTERCONNECT_GPIO_BASEADDR 	// 16 bit
+#define INTRC_OUT_REG 		(INTRC_REG + 0x00)					//  8 bit output
+#define INTRC_IN_REG 		(INTRC_REG + 0x08)					//  8 bit input
+#define SLEEP_DURATION_USEC 1 									//    delay in microseconds
 
 // =================== ENUMS & STRUCTS =================== //
 typedef struct {
     u32 x;
     u32 y;
-    u32 z;
-    u32 cmd;
+    u16 z;
+	u8 speed;
+    u8 cmd;
 } MotionCommand;
 
 typedef enum {
@@ -66,13 +68,34 @@ static void write_width(u32 addr, u8 width_bits, u32 value)
 static MotionCommand parse_line(const char *line)
 {
     MotionCommand m = {0};
-    char *end = (char *)line;
+    const char *p = line;
 
-    m.x = strtoul(end, &end, 10);
-    m.y = strtoul(end, &end, 10);
-    m.z = strtoul(end, &end, 10);
-    m.cmd = strtoul(end, &end, 10);
+    while (*p != '\0') {
+        while (*p == ' ' || *p == '\t')
+            ++p;
+        if (*p == '\0' || *p == '\r' || *p == '\n')
+            break;
 
+        char prefix = *p;
+        if (prefix == 'G' ||
+            prefix == 'X' ||
+            prefix == 'Y' ||
+            prefix == 'Z' ||
+            prefix == 'F') {
+            char *end;
+            unsigned long val = strtoul(p + 1, &end, 10);
+            switch (prefix) {
+            case 'G': m.cmd = (u8)val; break;
+            case 'X': m.x   = (u32)val; break;
+            case 'Y': m.y   = (u32)val; break;
+            case 'Z': m.z   = (u16)val; break;
+            case 'F': m.speed = (u8)val; break;
+            }
+            p = end;
+        } else {
+            ++p; // skip unexpected character
+        }
+    }
     return m;
 }
 
@@ -89,10 +112,12 @@ int main(void)
     u8 error_active = 0U;
 
     // Clear outputs
+	write_width(CMD_REG, 8U, 0U);
     write_width(X_REG, 32U, 0U);
     write_width(Y_REG, 32U, 0U);
     write_width(Z_REG, 16U, 0U);
-    write_width(CMD_REG, 8U, 0U);
+	write_width(SPEED_REG, 8U, 0U);
+
     write_width(INTRC_OUT_REG, 8U, 0U);
 
     while (1) {
@@ -161,10 +186,11 @@ int main(void)
 
 			// all is fine, push command
             MotionCommand cmd = parse_line(line);
+			write_width(CMD_REG, 8U, cmd.cmd);
             write_width(X_REG, 32U, cmd.x);
             write_width(Y_REG, 32U, cmd.y);
             write_width(Z_REG, 16U, cmd.z);
-            write_width(CMD_REG, 8U, cmd.cmd);
+			write_width(SPEED_REG, 8U, cmd.speed);
             write_width(INTRC_OUT_REG, 8U, MSG_DATA_READY);
 
 			// print to serial
