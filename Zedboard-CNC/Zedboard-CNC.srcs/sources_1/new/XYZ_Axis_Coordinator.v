@@ -33,11 +33,11 @@ module XYZ_Axis_Coordinator(
     
     //Outputs
     output reg [63:0] cycles_per_step_x,
-    output reg dir_x,
+    output reg motor_dir_x,
     output reg [63:0] cycles_per_step_y,
-    output reg dir_y,
+    output reg motor_dir_y,
     output reg [63:0] cycles_per_step_z,
-    output reg dir_z,
+    output reg motor_dir_z,
     output reg line_finished,
     output reg signed [31:0] curr_pos_x,
     output reg signed [31:0] curr_pos_y,
@@ -51,17 +51,26 @@ module XYZ_Axis_Coordinator(
     output reg signed [31:0] target_pos_y,
     output reg signed [31:0] target_pos_z,
     output reg [2:0] state,       
-    output reg [31:0] state_timer
+    output reg [31:0] state_timer,
+    output reg [31:0] distance,
+    output [31:0] distance_x,
+    output [31:0] distance_y,
+    output [31:0] distance_z,
+    output reg [63:0] next_num_clk_cycles,
+    output [63:0] squared_distance
     
 );
     
     //Constants
     localparam MIN_SPEED = 1;
-    localparam MAX_SPEED = 60;
+    localparam MAX_SPEED = 150;
     localparam CYCLES_PER_SECOND = 100000000;
-    localparam MICRONS_PER_STEP_X = 20;
-    localparam MICRONS_PER_STEP_Y = 20;
+    localparam MICRONS_PER_STEP_X = 10; //was 20
+    localparam MICRONS_PER_STEP_Y = 10; //was 20
     localparam MICRONS_PER_STEP_Z = 5;
+    localparam REVERSE_DIR_X = 1;
+    localparam REVERSE_DIR_Y = 1;
+    localparam REVERSE_DIR_Z = 1;
     //localparam MIN_HALF_STEP_WIDTH = 1500;
     //each full step is 1/200 of a rotation (1.8 degrees) * 2pi * R(in mm * 1000). 
     //defaulting to the motor shaft diameter of 5000 microns (5mm).
@@ -88,13 +97,14 @@ module XYZ_Axis_Coordinator(
     //reg [31:0] clk_counter;
     //reg x_reached, y_reached, z_reached, position_reached;
    
-    reg [63:0] next_num_clk_cycles;
+    //reg [63:0] next_num_clk_cycles;
     
-    wire [31:0] distance_x, distance_y, distance_z;
-    wire [63:0] squared_distance;
+    //wire [31:0] distance_x, distance_y, distance_z;
+    //wire [63:0] squared_distance;
     reg squareroot_start, squareroot_running, result_ready;
-    reg [31:0] distance;
-    
+    //reg [31:0] distance;
+    reg [7:0] target_speed;
+    reg dir_x, dir_y, dir_z;
     reg x_reached, y_reached, z_reached;
     
     assign distance_x = (target_pos_x >= start_pos_x) ? (target_pos_x - start_pos_x) : (start_pos_x - target_pos_x);
@@ -118,10 +128,14 @@ module XYZ_Axis_Coordinator(
             target_pos_x <= 0;
             target_pos_y <= 0;
             target_pos_z <= 0;
+            target_speed <= 0;
             
             dir_x <= 0;
             dir_y <= 0;
             dir_z <= 0;
+            motor_dir_x <= 0;
+            motor_dir_y <= 0;
+            motor_dir_z <= 0;
             
             cycles_per_step_x <= 0;
             cycles_per_step_y <= 0; 
@@ -146,14 +160,19 @@ module XYZ_Axis_Coordinator(
                     target_pos_x <= next_pos_x;
                     target_pos_y <= next_pos_y;
                     target_pos_z <= next_pos_z;
+                    target_speed <= next_speed;
                     
                     start_pos_x <= curr_pos_x;
                     start_pos_y <= curr_pos_y;
                     start_pos_z <= curr_pos_z;
                     
-                    dir_x <= (next_pos_x >= curr_pos_x) ? 0 : 1;
-                    dir_y <= (next_pos_y >= curr_pos_y) ? 0 : 1;
-                    dir_z <= (next_pos_z >= curr_pos_z) ? 0 : 1;
+                    //blocking used to guarantee motor_dir_# is set correctly
+                    dir_x = (next_pos_x >= start_pos_x) ? 0 : 1;
+                    dir_y = (next_pos_y >= start_pos_y) ? 0 : 1;
+                    dir_z = (next_pos_z >= start_pos_z) ? 0 : 1;
+                    motor_dir_x <= dir_x^REVERSE_DIR_X;
+                    motor_dir_y <= dir_y^REVERSE_DIR_Y;
+                    motor_dir_z <= dir_z^REVERSE_DIR_Z;
                     
                     if (clk_counter < state_timer) begin
                         clk_counter <= clk_counter + 1;
@@ -165,6 +184,7 @@ module XYZ_Axis_Coordinator(
                 end
                 
                 CALC_1  : begin
+                    squareroot_start <= 0;
                     //squareroot_start <= (clk_counter == 0);         
                     if (result_ready) begin
                         state <= CALC_2;
@@ -172,26 +192,41 @@ module XYZ_Axis_Coordinator(
                 end
                 
                 CALC_2  : begin
-                    if (next_speed >= MIN_SPEED) begin
-                        if (next_speed <= MAX_SPEED) begin
-                            next_num_clk_cycles <= (distance * 100000) / next_speed;
+                    if (target_speed >= MIN_SPEED) begin
+                        if (target_speed <= MAX_SPEED) begin
+                            //5000Microns / mm/s * 1000
+                            //clk cycles = time * 100M = distance[microns]/(speed[mm]*1000) * 100M
+                            next_num_clk_cycles <= (distance * 100000) / target_speed;
                         end else begin
                             next_num_clk_cycles <= (distance * 100000) / MAX_SPEED;
                         end
                     end else begin
                         next_num_clk_cycles <= (distance * 100000) / MIN_SPEED;
                     end
+                    
+                    clk_counter <= 0;
+                    state_timer <= 32;
                     state <= CALC_3;
                 end
                 
                 CALC_3  : begin
-                    cycles_per_step_x <= (distance_x > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_X) / distance_x) : 0;
-                    cycles_per_step_y <= (distance_y > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Y) / distance_y) : 0;
-                    cycles_per_step_z <= (distance_z > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Z) / distance_z) : 0;
+                    if (clk_counter < state_timer) begin
+                        //timer to ensure next_num_clk_cycles is stable since division can take multiple cycles
+                        clk_counter <= clk_counter + 1;
+                    end else begin
+                        //5MM = 5000Microns
+                        //5000/20 = 250 [steps]
+                        //100M*Time[seconds] / 250 [steps]
+                        //100M*Time / [steps] = 100M*Time/(distance[microns]/distance per step[microns])
+                        cycles_per_step_x <= (distance_x > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_X) / distance_x) : 0;
+                        cycles_per_step_y <= (distance_y > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Y) / distance_y) : 0;
+                        cycles_per_step_z <= (distance_z > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Z) / distance_z) : 0;
+                        
+                        clk_counter <= 0;
+                        state_timer <= 10*CYCLES_PER_SECOND;
+                        state <= MOVE;
+                    end
                     
-                    clk_counter <= 0;
-                    state_timer <= 10*CYCLES_PER_SECOND;
-                    state <= MOVE;
                 end
                 
                 MOVE    : begin
@@ -238,7 +273,7 @@ module XYZ_Axis_Coordinator(
                 squareroot_running <= 1;
                 result_ready <= 0;
             end else if (squareroot_running) begin
-                if (bit > val) begin
+                if (i == 0 && bit > val) begin
                     bit <= (bit >> 2);
                 end else if (i < 32 && bit != 0) begin
                     if (val >= res + bit) begin
@@ -254,6 +289,8 @@ module XYZ_Axis_Coordinator(
                     squareroot_running <= 0;
                     result_ready <= 1;
                 end
+            end else if (state == CALC_2) begin
+                result_ready <= 0;
             end
         end
     end

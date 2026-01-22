@@ -475,7 +475,7 @@
             "left": "63",
             "right": "0"
           },
-          "dir_x": {
+          "motor_dir_x": {
             "direction": "O"
           },
           "cycles_per_step_y": {
@@ -483,7 +483,7 @@
             "left": "63",
             "right": "0"
           },
-          "dir_y": {
+          "motor_dir_y": {
             "direction": "O"
           },
           "cycles_per_step_z": {
@@ -491,7 +491,7 @@
             "left": "63",
             "right": "0"
           },
-          "dir_z": {
+          "motor_dir_z": {
             "direction": "O"
           },
           "line_finished": {
@@ -558,6 +558,36 @@
           "state_timer": {
             "direction": "O",
             "left": "31",
+            "right": "0"
+          },
+          "distance": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "distance_x": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "distance_y": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "distance_z": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "next_num_clk_cycles": {
+            "direction": "O",
+            "left": "63",
+            "right": "0"
+          },
+          "squared_distance": {
+            "direction": "O",
+            "left": "63",
             "right": "0"
           }
         }
@@ -966,13 +996,19 @@
         "inst_hier_path": "vio_0",
         "parameters": {
           "C_NUM_PROBE_IN": {
-            "value": "4"
+            "value": "12"
           },
           "C_NUM_PROBE_OUT": {
             "value": "0"
           },
           "C_PROBE_IN0_WIDTH": {
             "value": "16"
+          },
+          "C_PROBE_IN10_WIDTH": {
+            "value": "64"
+          },
+          "C_PROBE_IN11_WIDTH": {
+            "value": "64"
           },
           "C_PROBE_IN1_WIDTH": {
             "value": "32"
@@ -981,6 +1017,24 @@
             "value": "32"
           },
           "C_PROBE_IN3_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE_IN4_WIDTH": {
+            "value": "64"
+          },
+          "C_PROBE_IN5_WIDTH": {
+            "value": "64"
+          },
+          "C_PROBE_IN6_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE_IN7_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE_IN8_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE_IN9_WIDTH": {
             "value": "32"
           }
         }
@@ -1197,46 +1251,10 @@
           "A4988_Driver_IO/step"
         ]
       },
-      "DriverController_X1_dir_out": {
-        "ports": [
-          "DriverController_Y/dir_out",
-          "A4988_Driver_IO2/direction"
-        ]
-      },
-      "DriverController_X1_en": {
-        "ports": [
-          "DriverController_Y/en",
-          "A4988_Driver_IO2/enable"
-        ]
-      },
-      "DriverController_X1_step": {
-        "ports": [
-          "DriverController_Y/step",
-          "A4988_Driver_IO2/step"
-        ]
-      },
       "DriverController_X1_step_risingedge": {
         "ports": [
           "DriverController_Y/step_risingedge",
           "XYZ_Axis_Coordinator_0/step_feedback_y"
-        ]
-      },
-      "DriverController_X2_dir_out": {
-        "ports": [
-          "DriverController_Z/dir_out",
-          "A4988_Driver_IO1/direction"
-        ]
-      },
-      "DriverController_X2_en": {
-        "ports": [
-          "DriverController_Z/en",
-          "A4988_Driver_IO1/enable"
-        ]
-      },
-      "DriverController_X2_step": {
-        "ports": [
-          "DriverController_Z/step",
-          "A4988_Driver_IO1/step"
         ]
       },
       "DriverController_X2_step_risingedge": {
@@ -1255,6 +1273,42 @@
         "ports": [
           "DriverController_X/step_risingedge",
           "XYZ_Axis_Coordinator_0/step_feedback_x"
+        ]
+      },
+      "DriverController_Y_dir_out": {
+        "ports": [
+          "DriverController_Y/dir_out",
+          "A4988_Driver_IO1/direction"
+        ]
+      },
+      "DriverController_Y_en": {
+        "ports": [
+          "DriverController_Y/en",
+          "A4988_Driver_IO1/enable"
+        ]
+      },
+      "DriverController_Y_step": {
+        "ports": [
+          "DriverController_Y/step",
+          "A4988_Driver_IO1/step"
+        ]
+      },
+      "DriverController_Z_dir_out": {
+        "ports": [
+          "DriverController_Z/dir_out",
+          "A4988_Driver_IO2/direction"
+        ]
+      },
+      "DriverController_Z_en": {
+        "ports": [
+          "DriverController_Z/en",
+          "A4988_Driver_IO2/enable"
+        ]
+      },
+      "DriverController_Z_step": {
+        "ports": [
+          "DriverController_Z/step",
+          "A4988_Driver_IO2/step"
         ]
       },
       "GCODE_Parser_0_curr_line": {
@@ -1347,13 +1401,15 @@
       "XYZ_Axis_Coordinator_0_cycles_per_step_x": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_x",
-          "DriverController_X/cycles_per_step"
+          "DriverController_X/cycles_per_step",
+          "vio_0/probe_in4"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_y": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_y",
-          "DriverController_Y/cycles_per_step"
+          "DriverController_Y/cycles_per_step",
+          "vio_0/probe_in5"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_z": {
@@ -1364,20 +1420,44 @@
       },
       "XYZ_Axis_Coordinator_0_dir_x": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/dir_x",
+          "XYZ_Axis_Coordinator_0/motor_dir_x",
           "DriverController_X/dir"
         ]
       },
       "XYZ_Axis_Coordinator_0_dir_y": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/dir_y",
+          "XYZ_Axis_Coordinator_0/motor_dir_y",
           "DriverController_Y/dir"
         ]
       },
       "XYZ_Axis_Coordinator_0_dir_z": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/dir_z",
+          "XYZ_Axis_Coordinator_0/motor_dir_z",
           "DriverController_Z/dir"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_distance": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/distance",
+          "vio_0/probe_in6"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_distance_x": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/distance_x",
+          "vio_0/probe_in7"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_distance_y": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/distance_y",
+          "vio_0/probe_in8"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_distance_z": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/distance_z",
+          "vio_0/probe_in9"
         ]
       },
       "XYZ_Axis_Coordinator_0_done": {
@@ -1402,10 +1482,22 @@
           "vio_2/probe_in8"
         ]
       },
+      "XYZ_Axis_Coordinator_0_next_num_clk_cycles": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/next_num_clk_cycles",
+          "vio_0/probe_in10"
+        ]
+      },
       "XYZ_Axis_Coordinator_0_position_reached": {
         "ports": [
           "XYZ_Axis_Coordinator_0/position_reached",
           "vio_2/probe_in0"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_squared_distance": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/squared_distance",
+          "vio_0/probe_in11"
         ]
       },
       "XYZ_Axis_Coordinator_0_start_pos_x": {

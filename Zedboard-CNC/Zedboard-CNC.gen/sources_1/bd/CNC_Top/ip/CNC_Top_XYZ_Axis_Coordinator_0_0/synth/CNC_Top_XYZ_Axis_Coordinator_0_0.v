@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -67,11 +67,11 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   step_feedback_y,
   step_feedback_z,
   cycles_per_step_x,
-  dir_x,
+  motor_dir_x,
   cycles_per_step_y,
-  dir_y,
+  motor_dir_y,
   cycles_per_step_z,
-  dir_z,
+  motor_dir_z,
   line_finished,
   curr_pos_x,
   curr_pos_y,
@@ -85,7 +85,13 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   target_pos_y,
   target_pos_z,
   state,
-  state_timer
+  state_timer,
+  distance,
+  distance_x,
+  distance_y,
+  distance_z,
+  next_num_clk_cycles,
+  squared_distance
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -105,11 +111,11 @@ input wire step_feedback_x;
 input wire step_feedback_y;
 input wire step_feedback_z;
 output wire [63 : 0] cycles_per_step_x;
-output wire dir_x;
+output wire motor_dir_x;
 output wire [63 : 0] cycles_per_step_y;
-output wire dir_y;
+output wire motor_dir_y;
 output wire [63 : 0] cycles_per_step_z;
-output wire dir_z;
+output wire motor_dir_z;
 output wire line_finished;
 output wire [31 : 0] curr_pos_x;
 output wire [31 : 0] curr_pos_y;
@@ -124,6 +130,12 @@ output wire [31 : 0] target_pos_y;
 output wire [31 : 0] target_pos_z;
 output wire [2 : 0] state;
 output wire [31 : 0] state_timer;
+output wire [31 : 0] distance;
+output wire [31 : 0] distance_x;
+output wire [31 : 0] distance_y;
+output wire [31 : 0] distance_z;
+output wire [63 : 0] next_num_clk_cycles;
+output wire [63 : 0] squared_distance;
 
   XYZ_Axis_Coordinator inst (
     .clk(clk),
@@ -137,11 +149,11 @@ output wire [31 : 0] state_timer;
     .step_feedback_y(step_feedback_y),
     .step_feedback_z(step_feedback_z),
     .cycles_per_step_x(cycles_per_step_x),
-    .dir_x(dir_x),
+    .motor_dir_x(motor_dir_x),
     .cycles_per_step_y(cycles_per_step_y),
-    .dir_y(dir_y),
+    .motor_dir_y(motor_dir_y),
     .cycles_per_step_z(cycles_per_step_z),
-    .dir_z(dir_z),
+    .motor_dir_z(motor_dir_z),
     .line_finished(line_finished),
     .curr_pos_x(curr_pos_x),
     .curr_pos_y(curr_pos_y),
@@ -155,6 +167,12 @@ output wire [31 : 0] state_timer;
     .target_pos_y(target_pos_y),
     .target_pos_z(target_pos_z),
     .state(state),
-    .state_timer(state_timer)
+    .state_timer(state_timer),
+    .distance(distance),
+    .distance_x(distance_x),
+    .distance_y(distance_y),
+    .distance_z(distance_z),
+    .next_num_clk_cycles(next_num_clk_cycles),
+    .squared_distance(squared_distance)
   );
 endmodule

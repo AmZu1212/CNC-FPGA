@@ -37,7 +37,7 @@ module DriverController(
 	
 	reg [63:0] clk_counter;
 	wire [63:0] cycle_count;
-	assign cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH): (cycles_per_step);
+	assign cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH) : (cycles_per_step);
 
 	always @(posedge clk) begin
 	   dir_out <= dir;
@@ -49,6 +49,7 @@ module DriverController(
 	       step_risingedge <= 0;
 	   //"reset" end
 	   end else begin
+	       //en <= 1;
 	       if(sync) begin
                clk_counter <= 0;
                en <= 1;

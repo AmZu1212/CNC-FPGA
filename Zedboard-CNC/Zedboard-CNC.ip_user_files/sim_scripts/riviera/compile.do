@@ -13,10 +13,10 @@ vmap xil_defaultlib riviera/xil_defaultlib
 vmap xlconstant_v1_1_9 riviera/xlconstant_v1_1_9
 
 vlog -work xpm  -incr "+incdir+../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc" -l xpm -l xil_defaultlib -l xlconstant_v1_1_9 \
-"E:/Programs/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -93  -incr \
-"E:/Programs/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc" -l xpm -l xil_defaultlib -l xlconstant_v1_1_9 \
 "../../../Zedboard-CNC.srcs/sources_1/new/A4988_Driver_IO.v" \
@@ -44,7 +44,6 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../Zedboard-CNC.gen/source
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_1/sim/CNC_Top_vio_0_1.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/sim/CNC_Top_vio_1_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/sim/CNC_Top_vio_2_0.v" \
-"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Ground_0/sim/CNC_Top_Ground_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/sim/CNC_Top.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v" \
 

@@ -5,7 +5,7 @@
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z020_1" gui_info="dashboard1=hw_vios[xc7z020_1/hw_vio_3=VIO_PROBES_3;xc7z020_1/hw_vio_2=VIO_PROBES_2;xc7z020_1/hw_vio_1=VIO_PROBES_1;]"/>
+  <device name="xc7z020_1" gui_info="dashboard1=hw_vios[xc7z020_1/hw_vio_1=VIO_PROBES_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/CNC_Top_wrapper.ltx"/>
@@ -41,14 +41,14 @@
     <Object name="CNC_Top_i/&lt;const0>_7" gui_info=""/>
     <Object name="CNC_Top_i/GCODE_Parser_0/line_finished" gui_info="Trigger Setup=0,Capture Setup=0"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_curr_line[10:0]" gui_info="Trigger Setup=0"/>
-    <Object name="CNC_Top_i/GCODE_Parser_0_curr_line[15:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="CNC_Top_i/GCODE_Parser_0_curr_line[15:0]" gui_info="hw_vios/hw_vio_1=20"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_curr_line_1[15:0]" gui_info="hw_vios/hw_vio_1=0"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_enable" gui_info="Trigger Setup=0"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_x[15:0]" gui_info="hw_vios/hw_vio_1=13"/>
-    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=15"/>
+    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=11"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_y[15:0]" gui_info="hw_vios/hw_vio_1=12"/>
-    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=8"/>
-    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=16"/>
+    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=3"/>
+    <Object name="CNC_Top_i/GCODE_Parser_0_next_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=12"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_next_speed[7:0]" gui_info="hw_vios/hw_vio_1=14"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0/inst/clk_counter[63:0]" gui_info="Trigger Setup=2"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0/inst/curr_pos_x[15:0]" gui_info="Trigger Setup=3"/>
@@ -60,44 +60,49 @@
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0/inst/next_cycles_per_step_x[63:0]" gui_info="Trigger Setup=9"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0/inst/next_cycles_per_step_y[63:0]" gui_info="Trigger Setup=10"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0/inst/next_cycles_per_step_z[63:0]" gui_info="Trigger Setup=11"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[31:0]" gui_info="hw_vios/hw_vio_1=14"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[31:0]" gui_info="hw_vios/hw_vio_1=10"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_clk_counter[63:0]" gui_info="hw_vios/hw_vio_1=0"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[15:0]" gui_info="hw_vios/hw_vio_1=3"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=13"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[15:0]" gui_info="hw_vios/hw_vio_1=2"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=2"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=14"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[15:0]" gui_info="hw_vios/hw_vio_1=1"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=3"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance[31:0]" gui_info="hw_vios/hw_vio_1=4,Trigger Setup=12"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=15"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[63:0]" gui_info="hw_vios/hw_vio_1=16"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[63:0]" gui_info="hw_vios/hw_vio_1=17"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance[31:0]" gui_info="hw_vios/hw_vio_1=21,Trigger Setup=12"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_1[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=9"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=10"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[31:0]" gui_info="hw_vios/hw_vio_1=18"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[31:0]" gui_info="hw_vios/hw_vio_1=19"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[31:0]" gui_info="hw_vios/hw_vio_1=22"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=4"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_last_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=12"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_cycles_per_step_x[63:0]" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_cycles_per_step_y[63:0]" gui_info="hw_vios/hw_vio_1=6"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_cycles_per_step_z[63:0]" gui_info="hw_vios/hw_vio_1=7"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_num_clk_cycles[49:1]" gui_info="Trigger Setup=13"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_num_clk_cycles[63:0]" gui_info="hw_vios/hw_vio_1=8"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_num_clk_cycles[63:0]" gui_info="hw_vios/hw_vio_1=23"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_next_num_clk_cycles_1[63:0]" gui_info="hw_vios/hw_vio_1=2"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_num_clk_cycles[48:0]" gui_info=""/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_num_clk_cycles[63:0]" gui_info="hw_vios/hw_vio_1=9"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_num_clk_cycles_1[63:0]" gui_info="hw_vios/hw_vio_1=3"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_position_reached" gui_info="hw_vios/hw_vio_1=13"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_position_reached" gui_info="hw_vios/hw_vio_1=8"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_skip_timer[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_squared_distance[63:0]" gui_info="hw_vios/hw_vio_1=10"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=4"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=11"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=12"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_state[2:0]" gui_info="hw_vios/hw_vio_1=5"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[31:0]" gui_info="hw_vios/hw_vio_1=6"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=7"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_squared_distance[63:0]" gui_info="hw_vios/hw_vio_1=9"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_x[31:0]" gui_info="hw_vios/hw_vio_1=0,hw_vios/hw_vio_2=0"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=6,hw_vios/hw_vio_2=1"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_start_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=7,hw_vios/hw_vio_2=2"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_state[2:0]" gui_info=""/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_state_timer[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=2"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_x_reached" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_y_reached" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_z_reached" gui_info="hw_vios/hw_vio_1=6"/>
     <Object name="u_ila_0_XYZ_Axis_Coordinator_0_next_num_clk_cycles[0:0]" gui_info="Trigger Setup=15"/>
   </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
-    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	759	Name	0	2147483647	15	424	424	Value	1	2147483647	15	124	124	Activity	2	2147483647	15	60	60	Direction	3	2147483647	15	72	72	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	863	Name	0	2147483647	15	473	473	Value	1	2147483647	15	143	143	Activity	2	2147483647	15	78	78	Direction	3	2147483647	15	90	90	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -6656,7 +6661,7 @@
         <net name="CNC_Top_i/GCODE_Parser_0_next_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -6702,7 +6707,7 @@
         <net name="CNC_Top_i/GCODE_Parser_0_next_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -6770,7 +6775,7 @@
         <net name="CNC_Top_i/GCODE_Parser_0_next_speed[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -6924,7 +6929,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_x[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -7000,7 +7005,7 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -7127,8 +7132,164 @@
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_VIO" value="hw_vio_2"/>
-        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[63]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[62]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[61]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[60]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[59]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[58]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[57]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[56]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[55]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[54]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[53]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[52]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[51]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[50]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[49]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[48]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[47]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[46]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[45]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[44]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[43]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[42]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[41]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[40]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[39]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[38]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[37]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[36]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[35]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[34]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[33]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[32]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[31]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[30]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[29]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[28]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[27]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[26]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[25]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[24]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[23]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[22]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[21]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[20]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[19]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[18]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[17]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[16]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[15]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[14]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[13]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[12]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[11]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[10]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[9]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[8]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[7]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[6]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[5]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[4]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[3]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[2]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[1]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[63]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[62]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[61]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[60]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[59]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[58]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[57]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[56]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[55]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[54]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[53]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[52]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[51]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[50]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[49]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[48]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[47]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[46]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[45]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[44]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[43]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[42]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[41]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[40]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[39]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[38]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[37]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[36]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[35]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[34]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[33]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[32]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[31]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[30]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[29]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[28]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[27]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[26]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[25]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[24]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[23]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[22]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[21]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[20]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[19]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[18]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[17]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[16]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[15]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[14]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[13]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[12]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[11]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[10]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[9]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[8]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[7]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[6]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[5]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[4]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[3]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[2]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[1]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -7212,6 +7373,144 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_1[2]"/>
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_1[1]"/>
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[31]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[30]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[29]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[28]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[27]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[26]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[25]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[24]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[23]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[22]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[21]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[20]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[19]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[18]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[17]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[16]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[15]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[14]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[13]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[12]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[11]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[10]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[9]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[8]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[7]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[6]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[5]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[4]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[3]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[2]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[1]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_x[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[31]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[30]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[29]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[28]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[27]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[26]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[25]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[24]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[23]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[22]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[21]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[20]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[19]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[18]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[17]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[16]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[15]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[14]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[13]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[12]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[11]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[10]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[9]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[8]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[7]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[6]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[5]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[4]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[3]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[2]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[1]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_y[0]"/>
+      </nets>
+    </probe>
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[31]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[30]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[29]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[28]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[27]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[26]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[25]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[24]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[23]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[22]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[21]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[20]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[19]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[18]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[17]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[16]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[15]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[14]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[13]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[12]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[11]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[10]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[9]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[8]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[7]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[6]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[5]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[4]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[3]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[2]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[1]"/>
+        <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_z[0]"/>
       </nets>
     </probe>
     <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
@@ -7591,8 +7890,8 @@
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_VIO" value="hw_vio_2"/>
-        <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="SIGNED"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -8004,12 +8303,12 @@
         <net name="CNC_Top_i/XYZ_Axis_Coordinator_0_skip_timer[0]"/>
       </nets>
     </probe>
-    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+    <probe type="vio_input" busType="bus" source="netlist" spec="VIO_INPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
-        <Option Id="HW_VIO" value="hw_vio_2"/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="INPUT_VALUE_RADIX" value="UNSIGNED"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Nov 30 17:54:28 2025" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jan 22 19:57:11 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -232,9 +232,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Z" PORT="dir_out"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_direction">
@@ -272,9 +272,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="stepZ"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Z_en">
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Y_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Z" PORT="en"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ms1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
@@ -297,9 +297,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Z" PORT="step"/>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="step"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -312,9 +312,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
+        <PORT DIR="I" NAME="direction" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Y" PORT="dir_out"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO2_drv_direction">
@@ -352,9 +352,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="stepY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Y_en">
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_Z_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Y" PORT="en"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="en"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="ms1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
@@ -377,9 +377,9 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
+        <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Y" PORT="step"/>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="step"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -402,9 +402,9 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_x"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_x">
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_x">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_x"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="motor_dir_x"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_X_dir_out">
@@ -462,19 +462,19 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_y"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_y">
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_y">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_y"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="motor_dir_y"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Y_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="direction"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="direction"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Y_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="enable"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -489,7 +489,7 @@
         </PORT>
         <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="step"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="step"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_Y_step_risingedge">
@@ -522,19 +522,19 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_z"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_z">
+        <PORT DIR="I" NAME="dir" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_z">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="dir_z"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="motor_dir_z"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="dir_out" SIGIS="undef" SIGNAME="DriverController_Z_dir_out">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="direction"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="direction"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="en" SIGIS="undef" SIGNAME="DriverController_Z_en">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="enable"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -549,7 +549,7 @@
         </PORT>
         <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="step"/>
+            <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="step"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="step_risingedge" SIGIS="undef" SIGNAME="DriverController_Z_step_risingedge">
@@ -754,11 +754,13 @@
         <PORT DIR="O" LEFT="63" NAME="cycles_per_step_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_x">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DriverController_X" PORT="cycles_per_step"/>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="cycles_per_step_y" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_y">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DriverController_Y" PORT="cycles_per_step"/>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="cycles_per_step_z" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_z">
@@ -766,19 +768,24 @@
             <CONNECTION INSTANCE="DriverController_Z" PORT="cycles_per_step"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir_x" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_x">
+        <PORT DIR="O" LEFT="31" NAME="distance" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_X" PORT="dir"/>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in6"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir_y" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_y">
+        <PORT DIR="O" LEFT="31" NAME="distance_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_x">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Y" PORT="dir"/>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in7"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="dir_z" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_dir_z">
+        <PORT DIR="O" LEFT="31" NAME="distance_y" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_y">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DriverController_Z" PORT="dir"/>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in8"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="distance_z" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in9"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -793,6 +800,26 @@
             <CONNECTION INSTANCE="DriverController_Y" PORT="sync"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="sync"/>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="line_finished"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="motor_dir_x" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_X" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="motor_dir_y" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Y" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="motor_dir_z" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_motor_dir_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DriverController_Z" PORT="dir"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="next_num_clk_cycles" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_next_num_clk_cycles">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="next_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_x">
@@ -823,6 +850,11 @@
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="squared_distance" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_squared_distance">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in11"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="start_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_start_pos_x">
@@ -1509,7 +1541,7 @@
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2013"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
         <PARAMETER NAME="C_NEXT_SLAVE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="4"/>
+        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="12"/>
         <PARAMETER NAME="C_NUM_PROBE_OUT" VALUE="0"/>
         <PARAMETER NAME="C_PIPE_IFACE" VALUE="0"/>
         <PARAMETER NAME="C_PROBE_IN0_WIDTH" VALUE="16"/>
@@ -1523,7 +1555,7 @@
         <PARAMETER NAME="C_PROBE_IN107_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN108_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN109_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN10_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE_IN110_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN111_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN112_WIDTH" VALUE="1"/>
@@ -1534,7 +1566,7 @@
         <PARAMETER NAME="C_PROBE_IN117_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN118_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN119_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN11_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE_IN120_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN121_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN122_WIDTH" VALUE="1"/>
@@ -1712,7 +1744,7 @@
         <PARAMETER NAME="C_PROBE_IN47_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN48_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN49_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN4_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE_IN50_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN51_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN52_WIDTH" VALUE="1"/>
@@ -1723,7 +1755,7 @@
         <PARAMETER NAME="C_PROBE_IN57_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN58_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN59_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN5_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_PROBE_IN60_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN61_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN62_WIDTH" VALUE="1"/>
@@ -1734,7 +1766,7 @@
         <PARAMETER NAME="C_PROBE_IN67_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN68_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN69_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN6_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE_IN70_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN71_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN72_WIDTH" VALUE="1"/>
@@ -1745,7 +1777,7 @@
         <PARAMETER NAME="C_PROBE_IN77_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN78_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN79_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN7_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE_IN80_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN81_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN82_WIDTH" VALUE="1"/>
@@ -1756,7 +1788,7 @@
         <PARAMETER NAME="C_PROBE_IN87_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN88_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN89_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN8_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE_IN90_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN91_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN92_WIDTH" VALUE="1"/>
@@ -1767,7 +1799,7 @@
         <PARAMETER NAME="C_PROBE_IN97_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN98_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN99_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN9_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE_OUT0_INIT_VAL" VALUE="0x0"/>
         <PARAMETER NAME="C_PROBE_OUT0_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_OUT100_INIT_VAL" VALUE="0x0"/>
@@ -2311,6 +2343,46 @@
         <PORT DIR="I" LEFT="31" NAME="probe_in3" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_curr_pos_z">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="curr_pos_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="probe_in4" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="probe_in5" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_cycles_per_step_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="cycles_per_step_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe_in6" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="distance"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe_in7" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="distance_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe_in8" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="distance_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe_in9" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_distance_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="distance_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="probe_in10" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_next_num_clk_cycles">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_num_clk_cycles"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="probe_in11" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_squared_distance">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="squared_distance"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
