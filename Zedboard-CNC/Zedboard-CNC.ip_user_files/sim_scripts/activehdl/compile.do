@@ -24,6 +24,7 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../Zedboard-CNC.gen/sources_1/bd
 "../../../Zedboard-CNC.srcs/sources_1/new/LED_IO.v" \
 "../../../Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v" \
 "../../../Zedboard-CNC.srcs/sources_1/new/GCODE_Parser.v" \
+"../../../Zedboard-CNC.srcs/sim_1/new/Buttons_Vector.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_clk_wiz.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.v" \
 
@@ -44,6 +45,7 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../Zedboard-CNC.gen/sources_1/bd
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_1/sim/CNC_Top_vio_0_1.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/sim/CNC_Top_vio_1_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/sim/CNC_Top_vio_2_0.v" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_0/sim/CNC_Top_Buttons_Vector_0_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/sim/CNC_Top.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v" \
 

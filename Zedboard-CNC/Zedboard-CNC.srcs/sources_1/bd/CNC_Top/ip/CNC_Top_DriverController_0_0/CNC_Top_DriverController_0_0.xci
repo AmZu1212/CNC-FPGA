@@ -38,9 +38,7 @@
       "ports": {
         "clk": [ { "direction": "in" } ],
         "rst": [ { "direction": "in" } ],
-        "sync": [ { "direction": "in" } ],
         "cycles_per_step": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
-        "enable": [ { "direction": "in" } ],
         "dir": [ { "direction": "in" } ],
         "en": [ { "direction": "out" } ],
         "step": [ { "direction": "out" } ],

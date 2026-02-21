@@ -24,7 +24,7 @@ module GCODE_Parser(
     input clk,
     input rst,
     input start,
-    input line_finished,
+    input load_next_line,
     
     //Outputs
     output reg [7:0] next_speed,
@@ -74,7 +74,7 @@ module GCODE_Parser(
         end else begin
             if (running) begin
             //"running" start
-                if(line_finished) begin
+                if(load_next_line) begin
                 //"load next line" start
                     if(curr_line < max_line) begin
                         curr_line <= curr_line +1;

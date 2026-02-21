@@ -24,7 +24,9 @@
       "A4988_Driver_IO2": "",
       "vio_0": "",
       "vio_1": "",
-      "vio_2": ""
+      "vio_2": "",
+      "Buttons_Vector_0": "",
+      "Ground1": ""
     },
     "ports": {
       "sys_clock": {
@@ -312,16 +314,10 @@
               }
             }
           },
-          "sync": {
-            "direction": "I"
-          },
           "cycles_per_step": {
             "direction": "I",
             "left": "63",
             "right": "0"
-          },
-          "enable": {
-            "direction": "I"
           },
           "dir": {
             "direction": "I"
@@ -470,6 +466,11 @@
           "step_feedback_z": {
             "direction": "I"
           },
+          "manual_move": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
           "cycles_per_step_x": {
             "direction": "O",
             "left": "63",
@@ -494,7 +495,7 @@
           "motor_dir_z": {
             "direction": "O"
           },
-          "line_finished": {
+          "load_next_line": {
             "direction": "O"
           },
           "curr_pos_x": {
@@ -638,7 +639,7 @@
           "start": {
             "direction": "I"
           },
-          "line_finished": {
+          "load_next_line": {
             "direction": "I"
           },
           "next_speed": {
@@ -717,16 +718,10 @@
               }
             }
           },
-          "sync": {
-            "direction": "I"
-          },
           "cycles_per_step": {
             "direction": "I",
             "left": "63",
             "right": "0"
-          },
-          "enable": {
-            "direction": "I"
           },
           "dir": {
             "direction": "I"
@@ -788,16 +783,10 @@
               }
             }
           },
-          "sync": {
-            "direction": "I"
-          },
           "cycles_per_step": {
             "direction": "I",
             "left": "63",
             "right": "0"
-          },
-          "enable": {
-            "direction": "I"
           },
           "dir": {
             "direction": "I"
@@ -1107,6 +1096,58 @@
             "value": "32"
           }
         }
+      },
+      "Buttons_Vector_0": {
+        "vlnv": "xilinx.com:module_ref:Buttons_Vector:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_Buttons_Vector_0_0",
+        "xci_path": "ip\\CNC_Top_Buttons_Vector_0_0\\CNC_Top_Buttons_Vector_0_0.xci",
+        "inst_hier_path": "Buttons_Vector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Buttons_Vector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "X_POS": {
+            "direction": "I"
+          },
+          "X_NEG": {
+            "direction": "I"
+          },
+          "Y_POS": {
+            "direction": "I"
+          },
+          "Y_NEG": {
+            "direction": "I"
+          },
+          "Z_POS": {
+            "direction": "I"
+          },
+          "Z_NEG": {
+            "direction": "I"
+          },
+          "keys": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          }
+        }
+      },
+      "Ground1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "9",
+        "xci_name": "CNC_Top_Ground_0",
+        "xci_path": "ip\\CNC_Top_Ground_0\\CNC_Top_Ground_0.xci",
+        "inst_hier_path": "Ground1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
       }
     },
     "nets": {
@@ -1239,6 +1280,12 @@
           "LED_IO_0/in2"
         ]
       },
+      "Buttons_Vector_0_keys": {
+        "ports": [
+          "Buttons_Vector_0/keys",
+          "XYZ_Axis_Coordinator_0/manual_move"
+        ]
+      },
       "DriverController_0_en": {
         "ports": [
           "DriverController_X/en",
@@ -1321,9 +1368,6 @@
         "ports": [
           "GCODE_Parser_0/enable",
           "LED_IO_0/in7",
-          "DriverController_X/enable",
-          "DriverController_Y/enable",
-          "DriverController_Z/enable",
           "XYZ_Axis_Coordinator_0/enable"
         ],
         "hdl_attributes": {
@@ -1368,6 +1412,17 @@
           "LED_IO_0/in6"
         ]
       },
+      "Ground1_dout": {
+        "ports": [
+          "Ground1/dout",
+          "Buttons_Vector_0/X_POS",
+          "Buttons_Vector_0/X_NEG",
+          "Buttons_Vector_0/Y_POS",
+          "Buttons_Vector_0/Y_NEG",
+          "Buttons_Vector_0/Z_NEG",
+          "Buttons_Vector_0/Z_POS"
+        ]
+      },
       "LED_IO_0_led": {
         "ports": [
           "LED_IO_0/led",
@@ -1401,15 +1456,15 @@
       "XYZ_Axis_Coordinator_0_cycles_per_step_x": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_x",
-          "DriverController_X/cycles_per_step",
-          "vio_0/probe_in4"
+          "vio_0/probe_in4",
+          "DriverController_X/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_y": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_y",
-          "DriverController_Y/cycles_per_step",
-          "vio_0/probe_in5"
+          "vio_0/probe_in5",
+          "DriverController_Y/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_z": {
@@ -1460,16 +1515,6 @@
           "vio_0/probe_in9"
         ]
       },
-      "XYZ_Axis_Coordinator_0_done": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/line_finished",
-          "LED_IO_0/in5",
-          "DriverController_X/sync",
-          "DriverController_Y/sync",
-          "DriverController_Z/sync",
-          "GCODE_Parser_0/line_finished"
-        ]
-      },
       "XYZ_Axis_Coordinator_0_last_pos_x": {
         "ports": [
           "XYZ_Axis_Coordinator_0/target_pos_x",
@@ -1480,6 +1525,13 @@
         "ports": [
           "XYZ_Axis_Coordinator_0/target_pos_y",
           "vio_2/probe_in8"
+        ]
+      },
+      "XYZ_Axis_Coordinator_0_load_next_line": {
+        "ports": [
+          "XYZ_Axis_Coordinator_0/load_next_line",
+          "GCODE_Parser_0/load_next_line",
+          "LED_IO_0/in5"
         ]
       },
       "XYZ_Axis_Coordinator_0_next_num_clk_cycles": {

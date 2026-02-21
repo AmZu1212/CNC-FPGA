@@ -66,13 +66,14 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   step_feedback_x,
   step_feedback_y,
   step_feedback_z,
+  manual_move,
   cycles_per_step_x,
   motor_dir_x,
   cycles_per_step_y,
   motor_dir_y,
   cycles_per_step_z,
   motor_dir_z,
-  line_finished,
+  load_next_line,
   curr_pos_x,
   curr_pos_y,
   curr_pos_z,
@@ -110,13 +111,14 @@ input wire [31 : 0] next_pos_z;
 input wire step_feedback_x;
 input wire step_feedback_y;
 input wire step_feedback_z;
+input wire [5 : 0] manual_move;
 output wire [63 : 0] cycles_per_step_x;
 output wire motor_dir_x;
 output wire [63 : 0] cycles_per_step_y;
 output wire motor_dir_y;
 output wire [63 : 0] cycles_per_step_z;
 output wire motor_dir_z;
-output wire line_finished;
+output wire load_next_line;
 output wire [31 : 0] curr_pos_x;
 output wire [31 : 0] curr_pos_y;
 output wire [31 : 0] curr_pos_z;
@@ -148,13 +150,14 @@ output wire [63 : 0] squared_distance;
     .step_feedback_x(step_feedback_x),
     .step_feedback_y(step_feedback_y),
     .step_feedback_z(step_feedback_z),
+    .manual_move(manual_move),
     .cycles_per_step_x(cycles_per_step_x),
     .motor_dir_x(motor_dir_x),
     .cycles_per_step_y(cycles_per_step_y),
     .motor_dir_y(motor_dir_y),
     .cycles_per_step_z(cycles_per_step_z),
     .motor_dir_z(motor_dir_z),
-    .line_finished(line_finished),
+    .load_next_line(load_next_line),
     .curr_pos_x(curr_pos_x),
     .curr_pos_y(curr_pos_y),
     .curr_pos_z(curr_pos_z),

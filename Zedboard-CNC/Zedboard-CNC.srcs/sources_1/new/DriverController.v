@@ -20,28 +20,26 @@ module DriverController(
 	//inputs
 	input clk,
 	input rst,
-	input sync,
 	input [63:0] cycles_per_step,
-	input enable,
 	input dir,
-
+    
 	//outputs
 	output reg en,
 	output reg step,
 	output reg step_risingedge,
 	output reg dir_out
     );
-
+    
     localparam STEP_WIDTH = 3000;
-	wire active = (cycles_per_step > 0); //(cycles_per_step > 0) ? enable : 0;
+	wire active = (cycles_per_step > 0);
 	
 	reg [63:0] clk_counter;
 	wire [63:0] cycle_count;
 	assign cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH) : (cycles_per_step);
-
+    
 	always @(posedge clk) begin
 	   dir_out <= dir;
-	   if(rst || !enable || !active) begin
+	   if(rst || !active) begin
 	   //"reset" start
 	       clk_counter <= 0;
 	       en <= 0;
@@ -49,26 +47,19 @@ module DriverController(
 	       step_risingedge <= 0;
 	   //"reset" end
 	   end else begin
-	       //en <= 1;
-	       if(sync) begin
-               clk_counter <= 0;
-               en <= 1;
-               step <= 1;
-               step_risingedge <= 0;
+	       en <= 1;
+	       if(clk_counter < cycle_count) begin
+	       //"step cycle running" start
+	           clk_counter <= clk_counter + 1;
+	           en <= 1;
+	           step <= (clk_counter  < (cycle_count >> 1));// ? 1 : 0
+	           step_risingedge <= 0;
+	       //"step cycle running" end
 	       end else begin
-	           if(clk_counter < cycle_count) begin
-	           //"step cycle running" start
-	               clk_counter <= clk_counter + 1;
-	               en <= 1;
-	               step <= (clk_counter  < (cycle_count >> 1));// ? 1 : 0
-	               step_risingedge <= 0;
-	           //"step cycle running" end
-	           end else begin
-	           //"step cycle finished" start
-	               clk_counter <= 0;
-	               step_risingedge <= 1;
-	           //"step cycle finished" end
-	           end
+	       //"step cycle finished" start
+	           clk_counter <= 0;
+	           step_risingedge <= 1;
+	       //"step cycle finished" end
 	       end
 	   end
 	end

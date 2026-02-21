@@ -59,7 +59,7 @@ module CNC_Top_GCODE_Parser_0_0 (
   clk,
   rst,
   start,
-  line_finished,
+  load_next_line,
   next_speed,
   next_pos_x,
   next_pos_y,
@@ -78,7 +78,7 @@ input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
 input wire start;
-input wire line_finished;
+input wire load_next_line;
 output wire [7 : 0] next_speed;
 output wire [31 : 0] next_pos_x;
 output wire [31 : 0] next_pos_y;
@@ -91,7 +91,7 @@ output wire [15 : 0] curr_line;
     .clk(clk),
     .rst(rst),
     .start(start),
-    .line_finished(line_finished),
+    .load_next_line(load_next_line),
     .next_speed(next_speed),
     .next_pos_x(next_pos_x),
     .next_pos_y(next_pos_y),

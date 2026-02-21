@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Thu Jan 22 19:57:10 2026
+//Date        : Sat Feb 21 13:30:25 2026
 //Host        : Alex-PC running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=9,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
+(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=16,numReposBlks=16,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
 module CNC_Top
    (directionX,
     directionY,
@@ -63,6 +63,7 @@ module CNC_Top
   output stepZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN CNC_Top_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
 
+  wire [5:0]Buttons_Vector_0_keys;
   wire DriverController_0_en;
   wire DriverController_0_step;
   wire DriverController_X1_step_risingedge;
@@ -82,6 +83,7 @@ module CNC_Top
   wire [31:0]GCODE_Parser_0_next_pos_z;
   wire [7:0]GCODE_Parser_0_next_speed;
   wire GCODE_Parser_0_running;
+  wire [0:0]Ground1_dout;
   wire [31:0]XYZ_Axis_Coordinator_0_clk_counter;
   wire [31:0]XYZ_Axis_Coordinator_0_curr_pos_x;
   wire [31:0]XYZ_Axis_Coordinator_0_curr_pos_y;
@@ -96,9 +98,9 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_distance_x;
   wire [31:0]XYZ_Axis_Coordinator_0_distance_y;
   wire [31:0]XYZ_Axis_Coordinator_0_distance_z;
-  wire XYZ_Axis_Coordinator_0_done;
   wire [31:0]XYZ_Axis_Coordinator_0_last_pos_x;
   wire [31:0]XYZ_Axis_Coordinator_0_last_pos_y;
+  wire XYZ_Axis_Coordinator_0_load_next_line;
   wire [63:0]XYZ_Axis_Coordinator_0_next_num_clk_cycles;
   wire XYZ_Axis_Coordinator_0_position_reached;
   wire [63:0]XYZ_Axis_Coordinator_0_squared_distance;
@@ -181,44 +183,46 @@ module CNC_Top
         .ms3(xlconstant_1_dout),
         .reset(right),
         .step(DriverController_Z_step));
+  CNC_Top_Buttons_Vector_0_0 Buttons_Vector_0
+       (.X_NEG(Ground1_dout),
+        .X_POS(Ground1_dout),
+        .Y_NEG(Ground1_dout),
+        .Y_POS(Ground1_dout),
+        .Z_NEG(Ground1_dout),
+        .Z_POS(Ground1_dout),
+        .keys(Buttons_Vector_0_keys));
   CNC_Top_DriverController_0_0 DriverController_X
        (.clk(clk_wiz_clk_out1),
         .cycles_per_step(XYZ_Axis_Coordinator_0_cycles_per_step_x),
         .dir(XYZ_Axis_Coordinator_0_dir_x),
         .dir_out(DriverController_X_dir_out),
         .en(DriverController_0_en),
-        .enable(GCODE_Parser_0_enable),
         .rst(right),
         .step(DriverController_0_step),
-        .step_risingedge(DriverController_X_step_risingedge),
-        .sync(XYZ_Axis_Coordinator_0_done));
+        .step_risingedge(DriverController_X_step_risingedge));
   CNC_Top_DriverController_X_0 DriverController_Y
        (.clk(clk_wiz_clk_out1),
         .cycles_per_step(XYZ_Axis_Coordinator_0_cycles_per_step_y),
         .dir(XYZ_Axis_Coordinator_0_dir_y),
         .dir_out(DriverController_Y_dir_out),
         .en(DriverController_Y_en),
-        .enable(GCODE_Parser_0_enable),
         .rst(right),
         .step(DriverController_Y_step),
-        .step_risingedge(DriverController_X1_step_risingedge),
-        .sync(XYZ_Axis_Coordinator_0_done));
+        .step_risingedge(DriverController_X1_step_risingedge));
   CNC_Top_DriverController_X_1 DriverController_Z
        (.clk(clk_wiz_clk_out1),
         .cycles_per_step(XYZ_Axis_Coordinator_0_cycles_per_step_z),
         .dir(XYZ_Axis_Coordinator_0_dir_z),
         .dir_out(DriverController_Z_dir_out),
         .en(DriverController_Z_en),
-        .enable(GCODE_Parser_0_enable),
         .rst(right),
         .step(DriverController_Z_step),
-        .step_risingedge(DriverController_X2_step_risingedge),
-        .sync(XYZ_Axis_Coordinator_0_done));
+        .step_risingedge(DriverController_X2_step_risingedge));
   CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
        (.clk(clk_wiz_clk_out1),
         .curr_line(GCODE_Parser_0_curr_line),
         .enable(GCODE_Parser_0_enable),
-        .line_finished(XYZ_Axis_Coordinator_0_done),
+        .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
         .next_pos_x(GCODE_Parser_0_next_pos_x),
         .next_pos_y(GCODE_Parser_0_next_pos_y),
         .next_pos_z(GCODE_Parser_0_next_pos_z),
@@ -228,13 +232,15 @@ module CNC_Top
         .start(left));
   CNC_Top_xlconstant_0_1 Ground
        (.dout(xlconstant_1_dout));
+  CNC_Top_Ground_0 Ground1
+       (.dout(Ground1_dout));
   CNC_Top_LED_IO_0_0 LED_IO_0
        (.in0(enableX),
         .in1(directionX),
         .in2(stepX),
         .in3(xlconstant_1_dout),
         .in4(xlconstant_1_dout),
-        .in5(XYZ_Axis_Coordinator_0_done),
+        .in5(XYZ_Axis_Coordinator_0_load_next_line),
         .in6(GCODE_Parser_0_running),
         .in7(GCODE_Parser_0_enable),
         .led(led));
@@ -252,7 +258,8 @@ module CNC_Top
         .distance_y(XYZ_Axis_Coordinator_0_distance_y),
         .distance_z(XYZ_Axis_Coordinator_0_distance_z),
         .enable(GCODE_Parser_0_enable),
-        .line_finished(XYZ_Axis_Coordinator_0_done),
+        .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
+        .manual_move(Buttons_Vector_0_keys),
         .motor_dir_x(XYZ_Axis_Coordinator_0_dir_x),
         .motor_dir_y(XYZ_Axis_Coordinator_0_dir_y),
         .motor_dir_z(XYZ_Axis_Coordinator_0_dir_z),
