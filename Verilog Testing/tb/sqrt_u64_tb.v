@@ -2,7 +2,7 @@
 `define START_TIMEOUT_CYCLES 50
 `define DONE_TIMEOUT_CYCLES  250
 
-module sqrt_root_tb;
+module sqrt_u64_tb;
     reg         clk;
     reg         rst;
     reg         start;
@@ -13,7 +13,7 @@ module sqrt_root_tb;
 
     integer     errors;
 
-    sqrt_root dut (
+    sqrt_u64 dut (
         .clk(clk),
         .rst(rst),
         .start(start),
@@ -87,8 +87,8 @@ module sqrt_root_tb;
     reg [63:0] rnd;
 
     initial begin
-        $dumpfile("outputs/sqrt_root_tb.vcd");
-        $dumpvars(0, sqrt_root_tb);
+        $dumpfile("outputs/sqrt_u64_tb.vcd");
+        $dumpvars(0, sqrt_u64_tb);
 
         clk      = 1'b0;
         rst      = 1'b1;

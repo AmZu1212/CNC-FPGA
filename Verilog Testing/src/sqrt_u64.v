@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 // NOTE: This is an integer square root. so results like 2.7 are trunicated to 2.
-module sqrt_root (
+module sqrt_u64 (
     input  wire        clk,
     input  wire        rst,
     input  wire        start,
