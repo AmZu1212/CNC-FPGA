@@ -63,7 +63,7 @@ module XYZ_Axis_Coordinator(
 );
     
     //Constants
-    localparam MIN_SPEED = 1;
+    localparam MIN_SPEED = 50;
     localparam MAX_SPEED = 150;
     localparam CYCLES_PER_SECOND = 100000000;
     localparam MICRONS_PER_STEP_X = 10; //was 20
@@ -188,12 +188,7 @@ module XYZ_Axis_Coordinator(
                         motor_dir_x <= manual_move[5]^REVERSE_DIR_X;
                         motor_dir_y <= manual_move[3]^REVERSE_DIR_Y;
                         motor_dir_z <= manual_move[1]^REVERSE_DIR_Z;
-                    end
-                end
-                
-                LOAD    : begin
-                    if (!enable) state <= INIT; //previous GCODE was the last, resetting and returning to HOMING mode
-                    else begin
+                        
                         target_pos_x <= next_pos_x;
                         target_pos_y <= next_pos_y;
                         target_pos_z <= next_pos_z;
@@ -206,6 +201,13 @@ module XYZ_Axis_Coordinator(
                         motor_dir_x <= (next_pos_x >= curr_pos_x)^REVERSE_DIR_X;
                         motor_dir_y <= (next_pos_y >= curr_pos_y)^REVERSE_DIR_Y;
                         motor_dir_z <= (next_pos_z >= curr_pos_z)^REVERSE_DIR_Z;
+                    end
+                end
+                
+                LOAD    : begin
+                    if (!enable) state <= INIT; //previous GCODE was the last, resetting and returning to HOMING mode
+                    else begin
+                        
                         
                         if (clk_counter < state_timer) begin
                             clk_counter <= clk_counter + 1;
@@ -230,12 +232,12 @@ module XYZ_Axis_Coordinator(
                             //5000Microns / mm/s * 1000
                             //clk cycles = time * 100M = distance[microns]/(speed[mm]*1000) * 100M
                             // = distance[microns]*100000 / speed[mm]
-                            next_num_clk_cycles <= (distance * 100000) / target_speed;
+                            next_num_clk_cycles <= (distance * 64'd100000) / target_speed;
                         end else begin
-                            next_num_clk_cycles <= (distance * 100000) / MAX_SPEED;
+                            next_num_clk_cycles <= (distance * 64'd100000) / MAX_SPEED;
                         end
                     end else begin
-                        next_num_clk_cycles <= (distance * 100000) / MIN_SPEED;
+                        next_num_clk_cycles <= (distance * 64'd100000) / MIN_SPEED;
                     end
                     
                     clk_counter <= 0;
@@ -272,6 +274,19 @@ module XYZ_Axis_Coordinator(
                         clk_counter <= 0;
                         state_timer <= 10;
                         state <= LOAD;
+                        
+                        target_pos_x <= next_pos_x;
+                        target_pos_y <= next_pos_y;
+                        target_pos_z <= next_pos_z;
+                        target_speed <= next_speed;
+                        
+                        start_pos_x <= curr_pos_x;
+                        start_pos_y <= curr_pos_y;
+                        start_pos_z <= curr_pos_z;
+                        
+                        motor_dir_x <= (next_pos_x >= curr_pos_x)^REVERSE_DIR_X;
+                        motor_dir_y <= (next_pos_y >= curr_pos_y)^REVERSE_DIR_Y;
+                        motor_dir_z <= (next_pos_z >= curr_pos_z)^REVERSE_DIR_Z;
                     end else begin
                         clk_counter <= clk_counter + 1;
                     end
