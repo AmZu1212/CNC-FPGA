@@ -117,7 +117,7 @@ module XYZ_Axis_Coordinator(
     reg squareroot_start, squareroot_running, result_ready;
     //reg [31:0] distance;
     reg [7:0] target_speed;
-    wire dir_x, dir_y, dir_z;
+    //wire dir_x, dir_y, dir_z;
     wire x_reached, y_reached, z_reached;
     
     
@@ -126,10 +126,6 @@ module XYZ_Axis_Coordinator(
     assign distance_y = (target_pos_y >= start_pos_y) ? (target_pos_y - start_pos_y) : (start_pos_y - target_pos_y);
     assign distance_z = (target_pos_z >= start_pos_z) ? (target_pos_z - start_pos_z) : (start_pos_z - target_pos_z);
     assign squared_distance = (distance_x * distance_x) + (distance_y * distance_y) + (distance_z * distance_z);
-    
-    assign dir_x = (target_pos_x >= start_pos_x);
-    assign dir_y = (target_pos_y >= start_pos_y);
-    assign dir_z = (target_pos_z >= start_pos_z);
     
     assign x_reached = (curr_pos_x > target_pos_x - MICRONS_PER_STEP_X && curr_pos_x < target_pos_x + MICRONS_PER_STEP_X);
     assign y_reached = (curr_pos_y > target_pos_y - MICRONS_PER_STEP_Y && curr_pos_y < target_pos_y + MICRONS_PER_STEP_Y);
@@ -167,7 +163,7 @@ module XYZ_Axis_Coordinator(
             load_next_line <= 0;
             
             clk_counter <= 0;
-            state_timer <= 1*CYCLES_PER_SECOND; //only for the first LOAD
+            state_timer <= 10;
             state <= HOMING;
         end else begin
             squareroot_start <= 0;
@@ -189,9 +185,9 @@ module XYZ_Axis_Coordinator(
                         cycles_per_step_y <= (manual_move[3]^manual_move[2])*HOMING_CYCLES_PER_STEP_Y;
                         cycles_per_step_z <= (manual_move[1]^manual_move[0])*HOMING_CYCLES_PER_STEP_Z;
                         
-                        motor_dir_x <= (manual_move[5] - manual_move[4])^REVERSE_DIR_X;
-                        motor_dir_y <= (manual_move[3] - manual_move[2])^REVERSE_DIR_Y;
-                        motor_dir_z <= (manual_move[1] - manual_move[0])^REVERSE_DIR_Z;
+                        motor_dir_x <= manual_move[5]^REVERSE_DIR_X;
+                        motor_dir_y <= manual_move[3]^REVERSE_DIR_Y;
+                        motor_dir_z <= manual_move[1]^REVERSE_DIR_Z;
                     end
                 end
                 
@@ -252,10 +248,7 @@ module XYZ_Axis_Coordinator(
                         //timer to ensure next_num_clk_cycles is stable since division can take multiple cycles
                         clk_counter <= clk_counter + 1;
                     end else begin
-                        //5MM = 5000Microns
-                        //5000/20 = 250 [steps]
-                        //100M*Time[seconds] / 250 [steps]
-                        //100M*Time / [steps] = 100M*Time/(distance[microns]/distance per step[microns])
+                        //100M*Time / number_of_steps = 100M*Time/(distance[microns]/distance per step[microns])
                         cycles_per_step_x <= (distance_x > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_X) / distance_x) : 0;
                         cycles_per_step_y <= (distance_y > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Y) / distance_y) : 0;
                         cycles_per_step_z <= (distance_z > 0) ? ((next_num_clk_cycles * MICRONS_PER_STEP_Z) / distance_z) : 0;
@@ -267,9 +260,9 @@ module XYZ_Axis_Coordinator(
                 end
                 
                 MOVE    : begin
-                    if (step_feedback_x) curr_pos_x <= curr_pos_x + ((target_pos_x >= start_pos_x) ? -MICRONS_PER_STEP_X : MICRONS_PER_STEP_X);
-                    if (step_feedback_y) curr_pos_y <= curr_pos_y + ((target_pos_y >= start_pos_y) ? -MICRONS_PER_STEP_Y : MICRONS_PER_STEP_Y);
-                    if (step_feedback_z) curr_pos_z <= curr_pos_z + ((target_pos_z >= start_pos_z) ? -MICRONS_PER_STEP_Z : MICRONS_PER_STEP_Z);
+                    if (step_feedback_x) curr_pos_x <= curr_pos_x + ((target_pos_x >= start_pos_x) ? MICRONS_PER_STEP_X : -MICRONS_PER_STEP_X);
+                    if (step_feedback_y) curr_pos_y <= curr_pos_y + ((target_pos_y >= start_pos_y) ? MICRONS_PER_STEP_Y : -MICRONS_PER_STEP_Y);
+                    if (step_feedback_z) curr_pos_z <= curr_pos_z + ((target_pos_z >= start_pos_z) ? MICRONS_PER_STEP_Z : -MICRONS_PER_STEP_Z);
                     
                     if (x_reached) cycles_per_step_x <= 0;
                     if (y_reached) cycles_per_step_y <= 0;
@@ -278,7 +271,6 @@ module XYZ_Axis_Coordinator(
                     if (clk_counter >= state_timer || (x_reached && y_reached && z_reached)) begin
                         clk_counter <= 0;
                         state_timer <= 10;
-                        load_next_line <= 1;
                         state <= LOAD;
                     end else begin
                         clk_counter <= clk_counter + 1;
