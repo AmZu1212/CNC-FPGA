@@ -19,3 +19,6 @@
 
 _ide/logs
 _ide/.wsdata
+
+# Ignore Verilog simulation outputs
+/Verilog Testing/outputs/
