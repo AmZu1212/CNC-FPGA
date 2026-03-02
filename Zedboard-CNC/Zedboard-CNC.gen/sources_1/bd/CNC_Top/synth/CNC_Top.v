@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Sat Feb 21 13:30:25 2026
+//Date        : Mon Mar  2 13:21:16 2026
 //Host        : Alex-PC running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -77,12 +77,13 @@ module CNC_Top
   wire DriverController_Z_en;
   wire DriverController_Z_step;
   wire [15:0]GCODE_Parser_0_curr_line;
-  (* DEBUG = "true" *) (* MARK_DEBUG *) wire GCODE_Parser_0_enable;
+  wire [31:0]GCODE_Parser_0_detected_count;
+  wire GCODE_Parser_0_enable;
   wire [31:0]GCODE_Parser_0_next_pos_x;
   wire [31:0]GCODE_Parser_0_next_pos_y;
   wire [31:0]GCODE_Parser_0_next_pos_z;
   wire [7:0]GCODE_Parser_0_next_speed;
-  wire GCODE_Parser_0_running;
+  wire [2:0]GCODE_Parser_0_state;
   wire [0:0]Ground1_dout;
   wire [31:0]XYZ_Axis_Coordinator_0_clk_counter;
   wire [31:0]XYZ_Axis_Coordinator_0_curr_pos_x;
@@ -98,8 +99,6 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_distance_x;
   wire [31:0]XYZ_Axis_Coordinator_0_distance_y;
   wire [31:0]XYZ_Axis_Coordinator_0_distance_z;
-  wire [31:0]XYZ_Axis_Coordinator_0_last_pos_x;
-  wire [31:0]XYZ_Axis_Coordinator_0_last_pos_y;
   wire XYZ_Axis_Coordinator_0_load_next_line;
   wire [63:0]XYZ_Axis_Coordinator_0_next_num_clk_cycles;
   wire XYZ_Axis_Coordinator_0_position_reached;
@@ -109,7 +108,6 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_start_pos_z;
   wire [2:0]XYZ_Axis_Coordinator_0_state;
   wire [31:0]XYZ_Axis_Coordinator_0_state_timer;
-  wire [31:0]XYZ_Axis_Coordinator_0_target_pos_z;
   wire clk_wiz_clk_out1;
   wire directionX;
   wire directionY;
@@ -221,6 +219,7 @@ module CNC_Top
   CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
        (.clk(clk_wiz_clk_out1),
         .curr_line(GCODE_Parser_0_curr_line),
+        .detected_count(GCODE_Parser_0_detected_count),
         .enable(GCODE_Parser_0_enable),
         .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
         .next_pos_x(GCODE_Parser_0_next_pos_x),
@@ -228,8 +227,8 @@ module CNC_Top
         .next_pos_z(GCODE_Parser_0_next_pos_z),
         .next_speed(GCODE_Parser_0_next_speed),
         .rst(right),
-        .running(GCODE_Parser_0_running),
-        .start(left));
+        .start(left),
+        .state(GCODE_Parser_0_state));
   CNC_Top_xlconstant_0_1 Ground
        (.dout(xlconstant_1_dout));
   CNC_Top_Ground_0 Ground1
@@ -241,7 +240,7 @@ module CNC_Top
         .in3(xlconstant_1_dout),
         .in4(xlconstant_1_dout),
         .in5(XYZ_Axis_Coordinator_0_load_next_line),
-        .in6(GCODE_Parser_0_running),
+        .in6(xlconstant_1_dout),
         .in7(GCODE_Parser_0_enable),
         .led(led));
   CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator_0
@@ -278,10 +277,7 @@ module CNC_Top
         .state_timer(XYZ_Axis_Coordinator_0_state_timer),
         .step_feedback_x(DriverController_X_step_risingedge),
         .step_feedback_y(DriverController_X1_step_risingedge),
-        .step_feedback_z(DriverController_X2_step_risingedge),
-        .target_pos_x(XYZ_Axis_Coordinator_0_last_pos_x),
-        .target_pos_y(XYZ_Axis_Coordinator_0_last_pos_y),
-        .target_pos_z(XYZ_Axis_Coordinator_0_target_pos_z));
+        .step_feedback_z(DriverController_X2_step_risingedge));
   CNC_Top_clk_wiz_0 clk_wiz
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_clk_out1),
@@ -292,6 +288,7 @@ module CNC_Top
         .probe_in1(XYZ_Axis_Coordinator_0_curr_pos_x),
         .probe_in10(XYZ_Axis_Coordinator_0_next_num_clk_cycles),
         .probe_in11(XYZ_Axis_Coordinator_0_squared_distance),
+        .probe_in12(GCODE_Parser_0_detected_count),
         .probe_in2(XYZ_Axis_Coordinator_0_curr_pos_y),
         .probe_in3(XYZ_Axis_Coordinator_0_curr_pos_z),
         .probe_in4(XYZ_Axis_Coordinator_0_cycles_per_step_x),
@@ -311,10 +308,8 @@ module CNC_Top
         .probe_in0(XYZ_Axis_Coordinator_0_position_reached),
         .probe_in1(XYZ_Axis_Coordinator_0_state),
         .probe_in2(XYZ_Axis_Coordinator_0_state_timer),
-        .probe_in3(XYZ_Axis_Coordinator_0_target_pos_z),
+        .probe_in3(GCODE_Parser_0_state),
         .probe_in4(GCODE_Parser_0_next_pos_x),
         .probe_in5(GCODE_Parser_0_next_pos_y),
-        .probe_in6(GCODE_Parser_0_next_pos_z),
-        .probe_in7(XYZ_Axis_Coordinator_0_last_pos_x),
-        .probe_in8(XYZ_Axis_Coordinator_0_last_pos_y));
+        .probe_in6(GCODE_Parser_0_next_pos_z));
 endmodule

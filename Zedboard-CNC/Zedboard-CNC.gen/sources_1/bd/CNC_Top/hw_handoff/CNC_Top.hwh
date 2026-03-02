@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb 21 13:30:26 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  2 13:21:16 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -113,8 +113,8 @@
         <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
-        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
         <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="stepX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
@@ -597,6 +597,11 @@
             <CONNECTION INSTANCE="vio_0" PORT="probe_in0"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="detected_count" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_detected_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in12"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
@@ -636,14 +641,14 @@
             <CONNECTION INSTANCE="External_Ports" PORT="right"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="running" SIGIS="undef" SIGNAME="GCODE_Parser_0_running">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in6"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_left">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="state" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_2" PORT="probe_in3"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -671,6 +676,7 @@
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in4"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in3"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in6"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -735,9 +741,9 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in6" SIGIS="undef" SIGNAME="GCODE_Parser_0_running">
+        <PORT DIR="I" NAME="in6" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="Ground_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="running"/>
+            <CONNECTION INSTANCE="Ground" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="in7" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
@@ -829,8 +835,8 @@
         </PORT>
         <PORT DIR="O" NAME="load_next_line" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_load_next_line">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="load_next_line"/>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in5"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="5" NAME="manual_move" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
@@ -933,21 +939,9 @@
             <CONNECTION INSTANCE="DriverController_Z" PORT="step_risingedge"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_x">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="vio_2" PORT="probe_in7"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="vio_2" PORT="probe_in8"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_z" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_z">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="vio_2" PORT="probe_in3"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="target_pos_x" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="target_pos_y" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="target_pos_z" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -1544,8 +1538,8 @@
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
@@ -1577,7 +1571,7 @@
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2013"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
         <PARAMETER NAME="C_NEXT_SLAVE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="12"/>
+        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="13"/>
         <PARAMETER NAME="C_NUM_PROBE_OUT" VALUE="0"/>
         <PARAMETER NAME="C_PIPE_IFACE" VALUE="0"/>
         <PARAMETER NAME="C_PROBE_IN0_WIDTH" VALUE="16"/>
@@ -1613,7 +1607,7 @@
         <PARAMETER NAME="C_PROBE_IN127_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN128_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN129_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN12_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_PROBE_IN130_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN131_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN132_WIDTH" VALUE="1"/>
@@ -2419,6 +2413,11 @@
         <PORT DIR="I" LEFT="63" NAME="probe_in11" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_squared_distance">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="squared_distance"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="probe_in12" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_detected_count">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="detected_count"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3271,7 +3270,7 @@
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2013"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
         <PARAMETER NAME="C_NEXT_SLAVE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="9"/>
+        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="7"/>
         <PARAMETER NAME="C_NUM_PROBE_OUT" VALUE="0"/>
         <PARAMETER NAME="C_PIPE_IFACE" VALUE="0"/>
         <PARAMETER NAME="C_PROBE_IN0_WIDTH" VALUE="1"/>
@@ -3463,7 +3462,7 @@
         <PARAMETER NAME="C_PROBE_IN37_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN38_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN3_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_PROBE_IN3_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_PROBE_IN40_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN41_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN42_WIDTH" VALUE="1"/>
@@ -4070,9 +4069,9 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="state_timer"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe_in3" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_z">
+        <PORT DIR="I" LEFT="2" NAME="probe_in3" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_state">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="target_pos_z"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="state"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="probe_in4" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_x">
@@ -4088,16 +4087,6 @@
         <PORT DIR="I" LEFT="31" NAME="probe_in6" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_next_pos_z">
           <CONNECTIONS>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_pos_z"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe_in7" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_x">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="target_pos_x"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="probe_in8" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_pos_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="target_pos_y"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

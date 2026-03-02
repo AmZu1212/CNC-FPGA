@@ -379,7 +379,13 @@
             "direction": "I"
           },
           "in6": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
           },
           "in7": {
             "direction": "I"
@@ -665,12 +671,19 @@
           "enable": {
             "direction": "O"
           },
-          "running": {
-            "direction": "O"
-          },
           "curr_line": {
             "direction": "O",
             "left": "15",
+            "right": "0"
+          },
+          "state": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "detected_count": {
+            "direction": "O",
+            "left": "31",
             "right": "0"
           }
         }
@@ -985,7 +998,7 @@
         "inst_hier_path": "vio_0",
         "parameters": {
           "C_NUM_PROBE_IN": {
-            "value": "12"
+            "value": "13"
           },
           "C_NUM_PROBE_OUT": {
             "value": "0"
@@ -998,6 +1011,9 @@
           },
           "C_PROBE_IN11_WIDTH": {
             "value": "64"
+          },
+          "C_PROBE_IN12_WIDTH": {
+            "value": "32"
           },
           "C_PROBE_IN1_WIDTH": {
             "value": "32"
@@ -1063,7 +1079,7 @@
         "inst_hier_path": "vio_2",
         "parameters": {
           "C_NUM_PROBE_IN": {
-            "value": "9"
+            "value": "7"
           },
           "C_NUM_PROBE_OUT": {
             "value": "0"
@@ -1075,7 +1091,7 @@
             "value": "32"
           },
           "C_PROBE_IN3_WIDTH": {
-            "value": "32"
+            "value": "3"
           },
           "C_PROBE_IN4_WIDTH": {
             "value": "32"
@@ -1364,20 +1380,18 @@
           "vio_0/probe_in0"
         ]
       },
+      "GCODE_Parser_0_detected_count": {
+        "ports": [
+          "GCODE_Parser_0/detected_count",
+          "vio_0/probe_in12"
+        ]
+      },
       "GCODE_Parser_0_enable": {
         "ports": [
           "GCODE_Parser_0/enable",
           "LED_IO_0/in7",
           "XYZ_Axis_Coordinator_0/enable"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "GCODE_Parser_0_next_pos_x": {
         "ports": [
@@ -1406,10 +1420,10 @@
           "XYZ_Axis_Coordinator_0/next_speed"
         ]
       },
-      "GCODE_Parser_0_running": {
+      "GCODE_Parser_0_state": {
         "ports": [
-          "GCODE_Parser_0/running",
-          "LED_IO_0/in6"
+          "GCODE_Parser_0/state",
+          "vio_2/probe_in3"
         ]
       },
       "Ground1_dout": {
@@ -1515,23 +1529,11 @@
           "vio_0/probe_in9"
         ]
       },
-      "XYZ_Axis_Coordinator_0_last_pos_x": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/target_pos_x",
-          "vio_2/probe_in7"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_last_pos_y": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/target_pos_y",
-          "vio_2/probe_in8"
-        ]
-      },
       "XYZ_Axis_Coordinator_0_load_next_line": {
         "ports": [
           "XYZ_Axis_Coordinator_0/load_next_line",
-          "GCODE_Parser_0/load_next_line",
-          "LED_IO_0/in5"
+          "LED_IO_0/in5",
+          "GCODE_Parser_0/load_next_line"
         ]
       },
       "XYZ_Axis_Coordinator_0_next_num_clk_cycles": {
@@ -1582,12 +1584,6 @@
           "vio_2/probe_in2"
         ]
       },
-      "XYZ_Axis_Coordinator_0_target_pos_z": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/target_pos_z",
-          "vio_2/probe_in3"
-        ]
-      },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
@@ -1597,8 +1593,8 @@
           "DriverController_X/clk",
           "DriverController_Y/clk",
           "DriverController_Z/clk",
-          "GCODE_Parser_0/clk",
-          "XYZ_Axis_Coordinator_0/clk"
+          "XYZ_Axis_Coordinator_0/clk",
+          "GCODE_Parser_0/clk"
         ]
       },
       "left_1": {
@@ -1617,8 +1613,8 @@
           "DriverController_X/rst",
           "DriverController_Y/rst",
           "DriverController_Z/rst",
-          "GCODE_Parser_0/rst",
-          "XYZ_Axis_Coordinator_0/rst"
+          "XYZ_Axis_Coordinator_0/rst",
+          "GCODE_Parser_0/rst"
         ]
       },
       "sys_clock_1": {
@@ -1640,7 +1636,8 @@
           "A4988_Driver_IO2/ms3",
           "A4988_Driver_IO/ms3",
           "LED_IO_0/in4",
-          "LED_IO_0/in3"
+          "LED_IO_0/in3",
+          "LED_IO_0/in6"
         ]
       }
     }

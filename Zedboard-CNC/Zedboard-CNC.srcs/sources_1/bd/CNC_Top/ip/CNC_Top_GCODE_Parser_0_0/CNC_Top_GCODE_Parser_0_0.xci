@@ -45,8 +45,9 @@
         "next_pos_y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "next_pos_z": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "enable": [ { "direction": "out" } ],
-        "running": [ { "direction": "out" } ],
-        "curr_line": [ { "direction": "out", "size_left": "15", "size_right": "0" } ]
+        "curr_line": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "state": [ { "direction": "out", "size_left": "2", "size_right": "0" } ],
+        "detected_count": [ { "direction": "out", "size_left": "31", "size_right": "0" } ]
       },
       "interfaces": {
         "rst": {

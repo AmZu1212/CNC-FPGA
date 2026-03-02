@@ -46,6 +46,7 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../Zedboard-CNC.gen/source
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/sim/CNC_Top_vio_1_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/sim/CNC_Top_vio_2_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_0/sim/CNC_Top_Buttons_Vector_0_0.v" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Ground_0/sim/CNC_Top_Ground_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/sim/CNC_Top.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v" \
 

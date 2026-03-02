@@ -64,8 +64,9 @@ module CNC_Top_GCODE_Parser_0_0 (
   next_pos_y,
   next_pos_z,
   enable,
-  running,
-  curr_line
+  curr_line,
+  state,
+  detected_count
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -83,8 +84,9 @@ output wire [31 : 0] next_pos_x;
 output wire [31 : 0] next_pos_y;
 output wire [31 : 0] next_pos_z;
 output wire enable;
-output wire running;
 output wire [15 : 0] curr_line;
+output wire [2 : 0] state;
+output wire [31 : 0] detected_count;
 
   GCODE_Parser inst (
     .clk(clk),
@@ -96,7 +98,8 @@ output wire [15 : 0] curr_line;
     .next_pos_y(next_pos_y),
     .next_pos_z(next_pos_z),
     .enable(enable),
-    .running(running),
-    .curr_line(curr_line)
+    .curr_line(curr_line),
+    .state(state),
+    .detected_count(detected_count)
   );
 endmodule

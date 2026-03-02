@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Sat Feb 21 13:39:07 2026
+| Date             : Mon Mar  2 13:34:14 2026
 | Host             : Alex-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file CNC_Top_wrapper_power_routed.rpt -pb CNC_Top_wrapper_power_summary_routed.pb -rpx CNC_Top_wrapper_power_routed.rpx
 | Design           : CNC_Top_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.482        |
+| Total On-Chip Power (W)  | 0.517        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.370        |
-| Device Static (W)        | 0.112        |
+| Dynamic (W)              | 0.404        |
+| Device Static (W)        | 0.113        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 79.4         |
-| Junction Temperature (C) | 30.6         |
+| Max Ambient (C)          | 79.0         |
+| Junction Temperature (C) | 31.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.035 |        6 |       --- |             --- |
-| Slice Logic              |     0.096 |    21700 |       --- |             --- |
-|   LUT as Logic           |     0.080 |    11198 |     53200 |           21.05 |
-|   CARRY4                 |     0.014 |     2129 |     13300 |           16.01 |
-|   Register               |     0.001 |     6785 |    106400 |            6.38 |
-|   F7/F8 Muxes            |    <0.001 |      373 |     53200 |            0.70 |
+| Clocks                   |     0.036 |        6 |       --- |             --- |
+| Slice Logic              |     0.106 |    22395 |       --- |             --- |
+|   LUT as Logic           |     0.089 |    11893 |     53200 |           22.36 |
+|   CARRY4                 |     0.016 |     2362 |     13300 |           17.76 |
+|   Register               |     0.001 |     6627 |    106400 |            6.23 |
+|   F7/F8 Muxes            |    <0.001 |      369 |     53200 |            0.69 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
-|   Others                 |     0.000 |      141 |       --- |             --- |
-| Signals                  |     0.117 |    17107 |       --- |             --- |
+|   Others                 |     0.000 |      142 |       --- |             --- |
+| Signals                  |     0.134 |    17885 |       --- |             --- |
+| Block RAM                |     0.002 |      5.5 |       140 |            3.93 |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | DSPs                     |     0.010 |       12 |       220 |            5.45 |
-| I/O                      |     0.007 |       32 |       200 |           16.00 |
-| Static Power             |     0.112 |          |           |                 |
-| Total                    |     0.482 |          |           |                 |
+| I/O                      |     0.010 |       32 |       200 |           16.00 |
+| Static Power             |     0.113 |          |           |                 |
+| Total                    |     0.517 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.266 |       0.257 |      0.009 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.298 |       0.289 |      0.009 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.070 |       0.059 |      0.011 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -154,18 +155,20 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| CNC_Top_wrapper            |     0.370 |
-|   CNC_Top_i                |     0.359 |
-|     XYZ_Axis_Coordinator_0 |     0.212 |
-|       inst                 |     0.212 |
+| CNC_Top_wrapper            |     0.404 |
+|   CNC_Top_i                |     0.390 |
+|     GCODE_Parser_0         |     0.004 |
+|       inst                 |     0.002 |
+|     XYZ_Axis_Coordinator_0 |     0.239 |
+|       inst                 |     0.239 |
 |     clk_wiz                |     0.106 |
 |       inst                 |     0.106 |
-|     vio_0                  |     0.023 |
-|       inst                 |     0.023 |
-|     vio_1                  |     0.006 |
+|     vio_0                  |     0.026 |
+|       inst                 |     0.026 |
+|     vio_1                  |     0.007 |
+|       inst                 |     0.007 |
+|     vio_2                  |     0.006 |
 |       inst                 |     0.006 |
-|     vio_2                  |     0.008 |
-|       inst                 |     0.008 |
 |   dbg_hub                  |     0.004 |
 |     inst                   |     0.004 |
 |       BSCANID.u_xsdbm_id   |     0.004 |

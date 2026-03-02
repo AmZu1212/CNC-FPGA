@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1771673426">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1772450651">
   <File Type="PA-TCL" Name="CNC_Top_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="CNC_Top_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="CNC_Top_wrapper_timing_summary_init.rpt"/>
@@ -139,6 +139,30 @@
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../Users/Administrator/Desktop/New folder/pos_x.hex">
+      <FileInfo SFType="MEM">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../Users/Administrator/Desktop/New folder/speed.hex">
+      <FileInfo SFType="MEM">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../Users/Administrator/Desktop/New folder/pos_z.hex">
+      <FileInfo SFType="MEM">
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../Users/Administrator/Desktop/New folder/pos_y.hex">
+      <FileInfo SFType="MEM">
+        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>

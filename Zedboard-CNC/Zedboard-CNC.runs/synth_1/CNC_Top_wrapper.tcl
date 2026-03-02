@@ -57,6 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.statsThreshold 360
+set_param chipscope.maxJobs 4
+set_param project.hsv.suppressChildGraphs 0
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
 OPTRACE "Creating in-memory project" START { }
@@ -75,6 +78,12 @@ set_property ip_output_repo {c:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.cac
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem {
+  {C:/Users/Administrator/Desktop/New folder/pos_x.hex}
+  {C:/Users/Administrator/Desktop/New folder/speed.hex}
+  {C:/Users/Administrator/Desktop/New folder/pos_z.hex}
+  {C:/Users/Administrator/Desktop/New folder/pos_y.hex}
+}
 read_verilog -library xil_defaultlib {
   {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/A4988_Driver_IO.v}
   {C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/DriverController.v}
