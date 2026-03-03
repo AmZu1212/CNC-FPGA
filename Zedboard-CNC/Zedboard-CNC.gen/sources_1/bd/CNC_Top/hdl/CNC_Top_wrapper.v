@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Tue Mar  3 18:42:55 2026
+//Date        : Tue Mar  3 21:12:35 2026
 //Host        : Alex-PC running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top_wrapper.bd
 //Design      : CNC_Top_wrapper
@@ -11,14 +11,20 @@
 `timescale 1 ps / 1 ps
 
 module CNC_Top_wrapper
-   (directionX,
+   (Down,
+    Left,
+    Middle,
+    ResetSwitch,
+    Right,
+    Up,
+    Zswitch,
+    directionX,
     directionY,
     directionZ,
     enableX,
     enableY,
     enableZ,
     led,
-    left,
     ms1X,
     ms1Y,
     ms1Z,
@@ -31,11 +37,17 @@ module CNC_Top_wrapper
     resetX,
     resetY,
     resetZ,
-    right,
     stepX,
     stepY,
     stepZ,
     sys_clock);
+  input Down;
+  input Left;
+  input Middle;
+  input ResetSwitch;
+  input Right;
+  input Up;
+  input Zswitch;
   output directionX;
   output directionY;
   output directionZ;
@@ -43,7 +55,6 @@ module CNC_Top_wrapper
   output enableY;
   output enableZ;
   output [7:0]led;
-  input left;
   output ms1X;
   output ms1Y;
   output ms1Z;
@@ -56,12 +67,18 @@ module CNC_Top_wrapper
   output resetX;
   output resetY;
   output resetZ;
-  input right;
   output stepX;
   output stepY;
   output stepZ;
   input sys_clock;
 
+  wire Down;
+  wire Left;
+  wire Middle;
+  wire ResetSwitch;
+  wire Right;
+  wire Up;
+  wire Zswitch;
   wire directionX;
   wire directionY;
   wire directionZ;
@@ -69,7 +86,6 @@ module CNC_Top_wrapper
   wire enableY;
   wire enableZ;
   wire [7:0]led;
-  wire left;
   wire ms1X;
   wire ms1Y;
   wire ms1Z;
@@ -82,21 +98,26 @@ module CNC_Top_wrapper
   wire resetX;
   wire resetY;
   wire resetZ;
-  wire right;
   wire stepX;
   wire stepY;
   wire stepZ;
   wire sys_clock;
 
   CNC_Top CNC_Top_i
-       (.directionX(directionX),
+       (.Down(Down),
+        .Left(Left),
+        .Middle(Middle),
+        .ResetSwitch(ResetSwitch),
+        .Right(Right),
+        .Up(Up),
+        .Zswitch(Zswitch),
+        .directionX(directionX),
         .directionY(directionY),
         .directionZ(directionZ),
         .enableX(enableX),
         .enableY(enableY),
         .enableZ(enableZ),
         .led(led),
-        .left(left),
         .ms1X(ms1X),
         .ms1Y(ms1Y),
         .ms1Z(ms1Z),
@@ -109,7 +130,6 @@ module CNC_Top_wrapper
         .resetX(resetX),
         .resetY(resetY),
         .resetZ(resetZ),
-        .right(right),
         .stepX(stepX),
         .stepY(stepY),
         .stepZ(stepZ),

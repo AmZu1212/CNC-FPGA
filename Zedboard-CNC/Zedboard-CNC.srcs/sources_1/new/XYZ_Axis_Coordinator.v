@@ -30,9 +30,9 @@ module XYZ_Axis_Coordinator(
     input step_feedback_x,
     input step_feedback_y,
     input step_feedback_z,
-    input [5:0] manual_move,
+    input [4:0] manual_move,// -x, +x, -y/z, +y/z, zswitch.
     
-    
+       
     //Outputs
     output reg [63:0] cycles_per_step_x,
     output reg [63:0] cycles_per_step_y,
@@ -41,28 +41,13 @@ module XYZ_Axis_Coordinator(
     output reg motor_dir_y,
     output reg motor_dir_z,
     output reg load_next_line,
-    output reg signed [31:0] curr_pos_x,
-    output reg signed [31:0] curr_pos_y,
-    output reg signed [31:0] curr_pos_z,
-    output reg signed [31:0] start_pos_x,
-    output reg signed [31:0] start_pos_y,
-    output reg signed [31:0] start_pos_z,
-    output reg position_reached,
-    output reg signed [31:0] target_pos_x,
-    output reg signed [31:0] target_pos_y,
-    output reg signed [31:0] target_pos_z,
-    output [31:0] distance_x,
-    output [31:0] distance_y,
-    output [31:0] distance_z,
     output reg [7:0] current_speed,
     output reg [7:0] target_speed,
-    output reg signed [31:0] direction_change_buffer,
-    output passed_midpoint
+    output reg signed [31:0] direction_change_buffer
 );
     
-    //Constants
-    localparam MIN_SPEED = 10;
-    localparam MAX_SPEED = 120;
+    //constants
+    localparam MAX_SPEED = 100;
     localparam CYCLES_PER_SECOND = 100000000;
     localparam MICRONS_PER_STEP_X = 10; //was 20
     localparam MICRONS_PER_STEP_Y = 10; //was 20
@@ -70,8 +55,8 @@ module XYZ_Axis_Coordinator(
     localparam REVERSE_DIR_X = 0;
     localparam REVERSE_DIR_Y = 0;
     localparam REVERSE_DIR_Z = 0;
-    localparam HOMING_SPEED_XY = 2;
-    localparam HOMING_SPEED_Z = 1;
+    localparam HOMING_SPEED_XY = 10;
+    localparam HOMING_SPEED_Z = 5;
     
     
     //1 mm = 1000 microns = [1000/MICRONS_PER_STEP_#] steps
@@ -88,17 +73,7 @@ module XYZ_Axis_Coordinator(
     localparam MAX_INSTANT_SPEED_CHANGE = 10;
     localparam DELTA_SPEED = 1;
     
-    
-    //State registers
-    //reg [31:0] target_pos_x;
-    //reg [31:0] target_pos_y;
-    //reg [31:0] target_pos_z;
-    
-    //reg [31:0] curr_pos_x;
-    //reg [31:0] curr_pos_y;
-    //reg [31:0] curr_pos_z;
-    
-    //Statemachine values
+    //statemachine values
     localparam INIT     = 0;
     localparam HOMING   = 1;
     localparam LOAD     = 2;
@@ -111,10 +86,22 @@ module XYZ_Axis_Coordinator(
     reg [31:0] state_timer;
     reg [31:0] clk_counter;
     
-    //wire [31:0] distance_x, distance_y, distance_z;
+    wire [31:0] distance_x;
+    wire [31:0] distance_y;
+    wire [31:0] distance_z;
     wire [63:0] squared_distance;
     reg squareroot_start, squareroot_running, result_ready;
     reg [31:0] distance;
+    reg signed [31:0] curr_pos_x;
+    reg signed [31:0] curr_pos_y;
+    reg signed [31:0] curr_pos_z;
+    reg signed [31:0] start_pos_x;
+    reg signed [31:0] start_pos_y;
+    reg signed [31:0] start_pos_z;
+    reg signed [31:0] target_pos_x;
+    reg signed [31:0] target_pos_y;
+    reg signed [31:0] target_pos_z;
+    
     //reg [7:0] target_speed;
     //reg [7:0] current_speed;
     wire x_reached, y_reached, z_reached;
@@ -122,7 +109,7 @@ module XYZ_Axis_Coordinator(
     wire [63:0] cycles_per_step_y_result;
     wire [63:0] cycles_per_step_z_result;
     reg [63:0] move_clk_cycles_counter;
-    //reg [63:0] direction_change_buffer;
+    //reg signed [31:0] direction_change_buffer;
     
     
     assign distance_x = (target_pos_x >= start_pos_x) ? (target_pos_x - start_pos_x) : (start_pos_x - target_pos_x);
@@ -147,6 +134,7 @@ module XYZ_Axis_Coordinator(
     wire signed [31:0] midpoint_y;
     wire signed [31:0] midpoint_z;
     wire passed_midpoint_x, passed_midpoint_y, passed_midpoint_z;
+    wire passed_midpoint;
     
     assign midpoint_x = (target_pos_x + start_pos_x) >> 1;
     assign midpoint_y = (target_pos_y + start_pos_y) >> 1;
@@ -181,7 +169,6 @@ module XYZ_Axis_Coordinator(
             start_pos_x <= 0;
             start_pos_y <= 0;
             start_pos_z <= 0;
-            position_reached <= 0;
             
             squareroot_start <= 0;
             load_next_line <= 0;
@@ -193,15 +180,15 @@ module XYZ_Axis_Coordinator(
             squareroot_start <= 0;
             load_next_line <= 0;
             case (state)
-                HOMING  : begin
+                HOMING  : begin         // manual move : -x, +x, -y/z, +y/z, zswitch.
                     if (!enable) begin
-                        cycles_per_step_x <= (manual_move[5]^manual_move[4])*HOMING_CYCLES_PER_STEP_X;
-                        cycles_per_step_y <= (manual_move[3]^manual_move[2])*HOMING_CYCLES_PER_STEP_Y;
-                        cycles_per_step_z <= (manual_move[1]^manual_move[0])*HOMING_CYCLES_PER_STEP_Z;
+                        cycles_per_step_x <=  (!manual_move[4] && (manual_move[0]^manual_move[1])) ? HOMING_CYCLES_PER_STEP_X : 0;
+                        cycles_per_step_y <=  (!manual_move[4] && (manual_move[2]^manual_move[3])) ? HOMING_CYCLES_PER_STEP_Y : 0;
+                        cycles_per_step_z <=   (manual_move[4] && (manual_move[2]^manual_move[3])) ? HOMING_CYCLES_PER_STEP_Z : 0;
                         
-                        motor_dir_x <= manual_move[5]^REVERSE_DIR_X;
+                        motor_dir_x <= manual_move[1]^REVERSE_DIR_X;
                         motor_dir_y <= manual_move[3]^REVERSE_DIR_Y;
-                        motor_dir_z <= manual_move[1]^REVERSE_DIR_Z;
+                        motor_dir_z <= manual_move[3]^REVERSE_DIR_Z;
                     end else begin
                         cycles_per_step_x <= 0;
                         cycles_per_step_y <= 0;
@@ -215,8 +202,8 @@ module XYZ_Axis_Coordinator(
                         target_pos_x <= next_pos_x;
                         target_pos_y <= next_pos_y;
                         target_pos_z <= next_pos_z;
-                        target_speed <= ((next_speed >= MIN_SPEED) ? ((next_speed <= MAX_SPEED) ? next_speed : MAX_SPEED) : MIN_SPEED);
-                        current_speed <= MAX_INSTANT_SPEED_CHANGE;//(max_speed_instant_change != 0 ? max_speed_instant_change : MAX_INSTANT_SPEED_CHANGE);
+                        target_speed <= ((next_speed >= MAX_INSTANT_SPEED_CHANGE) ? ((next_speed <= MAX_SPEED) ? next_speed : MAX_SPEED) : MAX_INSTANT_SPEED_CHANGE);
+                        current_speed <= MAX_INSTANT_SPEED_CHANGE;
                         
                         start_pos_x <= curr_pos_x;
                         start_pos_y <= curr_pos_y;
@@ -269,9 +256,8 @@ module XYZ_Axis_Coordinator(
                 end
                 
                 MOVE    : begin
-                    position_reached <= 0;
                     move_clk_cycles_counter <= move_clk_cycles_counter + 1;
-                    if (current_speed > MAX_SPEED) current_speed <= MAX_SPEED;
+                    if (current_speed > target_speed) current_speed <= target_speed;
                     else if (current_speed < MAX_INSTANT_SPEED_CHANGE) current_speed <= MAX_INSTANT_SPEED_CHANGE;
                     
                     if (move_clk_cycles_counter > ACCEL_CLK_TIMER) begin
@@ -282,7 +268,7 @@ module XYZ_Axis_Coordinator(
                         if (!z_reached) cycles_per_step_z <= cycles_per_step_z_result;
                         
                         if (!passed_midpoint) begin
-                            if (current_speed < MAX_SPEED) begin
+                            if (current_speed < target_speed) begin
                                 current_speed <= current_speed + DELTA_SPEED;
                             end else direction_change_buffer <= direction_change_buffer + 1;
                         end else begin
@@ -304,7 +290,6 @@ module XYZ_Axis_Coordinator(
                     if (z_reached) cycles_per_step_z <= 0;
                     
                     if (clk_counter >= state_timer || (x_reached && y_reached && z_reached)) begin
-                        if (clk_counter < state_timer) position_reached <= 1;
                         clk_counter <= 0;
                         state_timer <= 10;
                         state <= LOAD;
@@ -316,7 +301,7 @@ module XYZ_Axis_Coordinator(
         end
     end
     
-    //Iterative function for square root
+    //iterative function for square root
     reg [63:0] val, res, bit;
     reg [6:0] i;
     

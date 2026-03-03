@@ -19,8 +19,8 @@ CNC_Top_DriverController_X_0.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/
 CNC_Top_DriverController_X_1.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_X_1/sim/CNC_Top_DriverController_X_1.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
 CNC_Top_A4988_Driver_IO_1.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_1/sim/CNC_Top_A4988_Driver_IO_1.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
 CNC_Top_A4988_Driver_IO_2.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_2/sim/CNC_Top_A4988_Driver_IO_2.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
-CNC_Top_Buttons_Vector_0_0.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_0/sim/CNC_Top_Buttons_Vector_0_0.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
-CNC_Top_Ground_0.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Ground_0/sim/CNC_Top_Ground_0.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
+CNC_Top_vio_0_0.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/sim/CNC_Top_vio_0_0.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
+CNC_Top_Buttons_Vector_0_1.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_1/sim/CNC_Top_Buttons_Vector_0_1.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
 CNC_Top.v,verilog,xil_defaultlib,../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/sim/CNC_Top.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
 CNC_Top_wrapper.v,verilog,xil_defaultlib,../../../../../../../../../../Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v,incdir="../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc"
 glbl.v,Verilog,xil_defaultlib,glbl.v

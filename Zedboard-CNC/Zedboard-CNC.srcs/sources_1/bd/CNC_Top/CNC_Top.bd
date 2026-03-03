@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC827ACB1321F545",
+      "boundary_crc": "0xBA5536EC10832ADC",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top",
       "name": "CNC_Top",
@@ -22,9 +22,8 @@
       "DriverController_Z": "",
       "A4988_Driver_IO1": "",
       "A4988_Driver_IO2": "",
-      "Buttons_Vector_0": "",
-      "Ground1": "",
-      "vio_0": ""
+      "vio_0": "",
+      "Buttons_Vector_0": ""
     },
     "ports": {
       "sys_clock": {
@@ -50,12 +49,6 @@
             "value": "0.0"
           }
         }
-      },
-      "right": {
-        "direction": "I"
-      },
-      "left": {
-        "direction": "I"
       },
       "directionX": {
         "direction": "O"
@@ -147,6 +140,27 @@
       },
       "ms3Z": {
         "direction": "O"
+      },
+      "ResetSwitch": {
+        "direction": "I"
+      },
+      "Middle": {
+        "direction": "I"
+      },
+      "Left": {
+        "direction": "I"
+      },
+      "Right": {
+        "direction": "I"
+      },
+      "Up": {
+        "direction": "I"
+      },
+      "Down": {
+        "direction": "I"
+      },
+      "Zswitch": {
+        "direction": "I"
       }
     },
     "components": {
@@ -475,7 +489,7 @@
           },
           "manual_move": {
             "direction": "I",
-            "left": "5",
+            "left": "4",
             "right": "0"
           },
           "cycles_per_step_x": {
@@ -505,69 +519,6 @@
           "load_next_line": {
             "direction": "O"
           },
-          "curr_pos_x": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "curr_pos_y": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "curr_pos_z": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "start_pos_x": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "start_pos_y": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "start_pos_z": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "position_reached": {
-            "direction": "O"
-          },
-          "target_pos_x": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "target_pos_y": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "target_pos_z": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "distance_x": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "distance_y": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "distance_z": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
           "current_speed": {
             "direction": "O",
             "left": "7",
@@ -582,9 +533,6 @@
             "direction": "O",
             "left": "31",
             "right": "0"
-          },
-          "passed_midpoint": {
-            "direction": "O"
           }
         }
       },
@@ -970,58 +918,6 @@
           }
         }
       },
-      "Buttons_Vector_0": {
-        "vlnv": "xilinx.com:module_ref:Buttons_Vector:1.0",
-        "ip_revision": "1",
-        "xci_name": "CNC_Top_Buttons_Vector_0_0",
-        "xci_path": "ip\\CNC_Top_Buttons_Vector_0_0\\CNC_Top_Buttons_Vector_0_0.xci",
-        "inst_hier_path": "Buttons_Vector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "Buttons_Vector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "X_POS": {
-            "direction": "I"
-          },
-          "X_NEG": {
-            "direction": "I"
-          },
-          "Y_POS": {
-            "direction": "I"
-          },
-          "Y_NEG": {
-            "direction": "I"
-          },
-          "Z_POS": {
-            "direction": "I"
-          },
-          "Z_NEG": {
-            "direction": "I"
-          },
-          "keys": {
-            "direction": "O",
-            "left": "5",
-            "right": "0"
-          }
-        }
-      },
-      "Ground1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "9",
-        "xci_name": "CNC_Top_Ground_0",
-        "xci_path": "ip\\CNC_Top_Ground_0\\CNC_Top_Ground_0.xci",
-        "inst_hier_path": "Ground1",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          },
-          "CONST_WIDTH": {
-            "value": "1"
-          }
-        }
-      },
       "vio_0": {
         "vlnv": "xilinx.com:ip:vio:3.0",
         "ip_revision": "26",
@@ -1030,7 +926,7 @@
         "inst_hier_path": "vio_0",
         "parameters": {
           "C_NUM_PROBE_IN": {
-            "value": "3"
+            "value": "4"
           },
           "C_NUM_PROBE_OUT": {
             "value": "0"
@@ -1043,6 +939,43 @@
           },
           "C_PROBE_IN2_WIDTH": {
             "value": "32"
+          },
+          "C_PROBE_IN3_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "Buttons_Vector_0": {
+        "vlnv": "xilinx.com:module_ref:Buttons_Vector:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_Buttons_Vector_0_1",
+        "xci_path": "ip\\CNC_Top_Buttons_Vector_0_1\\CNC_Top_Buttons_Vector_0_1.xci",
+        "inst_hier_path": "Buttons_Vector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Buttons_Vector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "left": {
+            "direction": "I"
+          },
+          "right": {
+            "direction": "I"
+          },
+          "up": {
+            "direction": "I"
+          },
+          "down": {
+            "direction": "I"
+          },
+          "Zswitch": {
+            "direction": "I"
+          },
+          "keys": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
           }
         }
       }
@@ -1180,7 +1113,14 @@
       "Buttons_Vector_0_keys": {
         "ports": [
           "Buttons_Vector_0/keys",
+          "vio_0/probe_in3",
           "XYZ_Axis_Coordinator_0/manual_move"
+        ]
+      },
+      "Down_1": {
+        "ports": [
+          "Down",
+          "Buttons_Vector_0/down"
         ]
       },
       "DriverController_0_en": {
@@ -1289,21 +1229,47 @@
           "XYZ_Axis_Coordinator_0/next_speed"
         ]
       },
-      "Ground1_dout": {
-        "ports": [
-          "Ground1/dout",
-          "Buttons_Vector_0/X_POS",
-          "Buttons_Vector_0/X_NEG",
-          "Buttons_Vector_0/Y_POS",
-          "Buttons_Vector_0/Y_NEG",
-          "Buttons_Vector_0/Z_NEG",
-          "Buttons_Vector_0/Z_POS"
-        ]
-      },
       "LED_IO_0_led": {
         "ports": [
           "LED_IO_0/led",
           "led"
+        ]
+      },
+      "Left_1": {
+        "ports": [
+          "Left",
+          "Buttons_Vector_0/left"
+        ]
+      },
+      "Middle_1": {
+        "ports": [
+          "Middle",
+          "GCODE_Parser_0/start"
+        ]
+      },
+      "ResetSwitch_1": {
+        "ports": [
+          "ResetSwitch",
+          "GCODE_Parser_0/rst",
+          "A4988_Driver_IO/reset",
+          "A4988_Driver_IO2/reset",
+          "A4988_Driver_IO1/reset",
+          "DriverController_X/rst",
+          "DriverController_Y/rst",
+          "DriverController_Z/rst",
+          "XYZ_Axis_Coordinator_0/rst"
+        ]
+      },
+      "Right_1": {
+        "ports": [
+          "Right",
+          "Buttons_Vector_0/right"
+        ]
+      },
+      "Up_1": {
+        "ports": [
+          "Up",
+          "Buttons_Vector_0/up"
         ]
       },
       "XYZ_Axis_Coordinator_0_current_speed": {
@@ -1367,35 +1333,21 @@
           "vio_0/probe_in1"
         ]
       },
+      "Zswitch_1": {
+        "ports": [
+          "Zswitch",
+          "Buttons_Vector_0/Zswitch"
+        ]
+      },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
+          "GCODE_Parser_0/clk",
+          "vio_0/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
           "DriverController_Z/clk",
-          "GCODE_Parser_0/clk",
-          "XYZ_Axis_Coordinator_0/clk",
-          "vio_0/clk"
-        ]
-      },
-      "left_1": {
-        "ports": [
-          "left",
-          "GCODE_Parser_0/start"
-        ]
-      },
-      "right_1": {
-        "ports": [
-          "right",
-          "A4988_Driver_IO/reset",
-          "clk_wiz/reset",
-          "A4988_Driver_IO2/reset",
-          "A4988_Driver_IO1/reset",
-          "DriverController_X/rst",
-          "DriverController_Y/rst",
-          "DriverController_Z/rst",
-          "GCODE_Parser_0/rst",
-          "XYZ_Axis_Coordinator_0/rst"
+          "XYZ_Axis_Coordinator_0/clk"
         ]
       },
       "sys_clock_1": {

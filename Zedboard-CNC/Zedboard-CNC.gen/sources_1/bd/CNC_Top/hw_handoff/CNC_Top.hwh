@@ -1,9 +1,51 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  3 18:42:55 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  3 21:12:36 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" NAME="Down" SIGIS="undef" SIGNAME="External_Ports_Down">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Buttons_Vector_0" PORT="down"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Left" SIGIS="undef" SIGNAME="External_Ports_Left">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Buttons_Vector_0" PORT="left"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Middle" SIGIS="undef" SIGNAME="External_Ports_Middle">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ResetSwitch" SIGIS="undef" SIGNAME="External_Ports_ResetSwitch">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="reset"/>
+        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="reset"/>
+        <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
+        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
+        <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Right" SIGIS="undef" SIGNAME="External_Ports_Right">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Buttons_Vector_0" PORT="right"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Up" SIGIS="undef" SIGNAME="External_Ports_Up">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Buttons_Vector_0" PORT="up"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Zswitch" SIGIS="undef" SIGNAME="External_Ports_Zswitch">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Buttons_Vector_0" PORT="Zswitch"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="directionX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_direction"/>
@@ -37,11 +79,6 @@
     <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="LED_IO_0_led">
       <CONNECTIONS>
         <CONNECTION INSTANCE="LED_IO_0" PORT="led"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="left" SIGIS="undef" SIGNAME="External_Ports_left">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="start"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="ms1X" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms1">
@@ -102,19 +139,6 @@
     <PORT DIR="O" NAME="resetZ" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="A4988_Driver_IO1_drv_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="drv_reset"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="right" SIGIS="undef" SIGNAME="External_Ports_right">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
-        <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
-        <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="reset"/>
-        <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="reset"/>
-        <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
-        <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
-        <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
-        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
-        <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="stepX" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
@@ -212,9 +236,9 @@
             <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_X_step">
@@ -292,9 +316,9 @@
             <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
@@ -372,9 +396,9 @@
             <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
@@ -388,43 +412,39 @@
     <MODULE COREREVISION="1" FULLNAME="/Buttons_Vector_0" HWVERSION="1.0" INSTANCE="Buttons_Vector_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Buttons_Vector" VLNV="xilinx.com:module_ref:Buttons_Vector:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_Buttons_Vector_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_Buttons_Vector_0_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="X_NEG" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="I" NAME="Zswitch" SIGIS="undef" SIGNAME="External_Ports_Zswitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Zswitch"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="X_POS" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="I" NAME="down" SIGIS="undef" SIGNAME="External_Ports_Down">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Down"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="Y_NEG" SIGIS="undef" SIGNAME="Ground1_dout">
+        <PORT DIR="O" LEFT="4" NAME="keys" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="Y_POS" SIGIS="undef" SIGNAME="Ground1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="Z_NEG" SIGIS="undef" SIGNAME="Ground1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="Z_POS" SIGIS="undef" SIGNAME="Ground1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Ground1" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="5" NAME="keys" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
-          <CONNECTIONS>
+            <CONNECTION INSTANCE="vio_0" PORT="probe_in3"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="manual_move"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="left" SIGIS="undef" SIGNAME="External_Ports_Left">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Left"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="right" SIGIS="undef" SIGNAME="External_Ports_Right">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Right"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="up" SIGIS="undef" SIGNAME="External_Ports_Up">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Up"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -467,9 +487,9 @@
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_X_step">
@@ -522,9 +542,9 @@
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Y_step">
@@ -577,9 +597,9 @@
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="step" SIGIS="undef" SIGNAME="DriverController_Z_step">
@@ -641,36 +661,14 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_speed"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_left">
+        <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_Middle">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="left"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="9" FULLNAME="/Ground1" HWVERSION="1.1" INSTANCE="Ground1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_Ground_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Ground1_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="X_POS"/>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="X_NEG"/>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="Y_POS"/>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="Y_NEG"/>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="Z_NEG"/>
-            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="Z_POS"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="Middle"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -771,9 +769,6 @@
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="curr_pos_x" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="curr_pos_y" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="curr_pos_z" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="7" NAME="current_speed" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_current_speed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="vio_0" PORT="probe_in0"/>
@@ -799,9 +794,6 @@
             <CONNECTION INSTANCE="vio_0" PORT="probe_in2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="distance_x" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="distance_y" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="distance_z" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
@@ -813,7 +805,7 @@
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="manual_move" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
+        <PORT DIR="I" LEFT="4" NAME="manual_move" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Buttons_Vector_0" PORT="keys"/>
           </CONNECTIONS>
@@ -853,16 +845,11 @@
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_speed"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="passed_midpoint" SIGIS="undef"/>
-        <PORT DIR="O" NAME="position_reached" SIGIS="undef"/>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="start_pos_x" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="start_pos_y" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="start_pos_z" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="step_feedback_x" SIGIS="undef" SIGNAME="DriverController_X_step_risingedge">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DriverController_X" PORT="step_risingedge"/>
@@ -878,9 +865,6 @@
             <CONNECTION INSTANCE="DriverController_Z" PORT="step_risingedge"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_x" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_y" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="31" NAME="target_pos_z" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="7" NAME="target_speed" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_target_speed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="vio_0" PORT="probe_in1"/>
@@ -1476,20 +1460,16 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
+            <CONNECTION INSTANCE="vio_0" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="vio_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef"/>
-        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_right">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="right"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -1513,7 +1493,7 @@
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2013"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
         <PARAMETER NAME="C_NEXT_SLAVE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="3"/>
+        <PARAMETER NAME="C_NUM_PROBE_IN" VALUE="4"/>
         <PARAMETER NAME="C_NUM_PROBE_OUT" VALUE="0"/>
         <PARAMETER NAME="C_PIPE_IFACE" VALUE="0"/>
         <PARAMETER NAME="C_PROBE_IN0_WIDTH" VALUE="8"/>
@@ -1705,7 +1685,7 @@
         <PARAMETER NAME="C_PROBE_IN37_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN38_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE_IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE_IN3_WIDTH" VALUE="5"/>
         <PARAMETER NAME="C_PROBE_IN40_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN41_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE_IN42_WIDTH" VALUE="1"/>
@@ -2310,6 +2290,11 @@
         <PORT DIR="I" LEFT="31" NAME="probe_in2" RIGHT="0" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_direction_change_buffer">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="direction_change_buffer"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="probe_in3" RIGHT="0" SIGIS="undef" SIGNAME="Buttons_Vector_0_keys">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Buttons_Vector_0" PORT="keys"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

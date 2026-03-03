@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Tue Mar  3 18:42:55 2026
+//Date        : Tue Mar  3 21:12:35 2026
 //Host        : Alex-PC running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -10,16 +10,22 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
+(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
 module CNC_Top
-   (directionX,
+   (Down,
+    Left,
+    Middle,
+    ResetSwitch,
+    Right,
+    Up,
+    Zswitch,
+    directionX,
     directionY,
     directionZ,
     enableX,
     enableY,
     enableZ,
     led,
-    left,
     ms1X,
     ms1Y,
     ms1Z,
@@ -32,11 +38,17 @@ module CNC_Top
     resetX,
     resetY,
     resetZ,
-    right,
     stepX,
     stepY,
     stepZ,
     sys_clock);
+  input Down;
+  input Left;
+  input Middle;
+  input ResetSwitch;
+  input Right;
+  input Up;
+  input Zswitch;
   output directionX;
   output directionY;
   output directionZ;
@@ -44,7 +56,6 @@ module CNC_Top
   output enableY;
   output enableZ;
   output [7:0]led;
-  input left;
   output ms1X;
   output ms1Y;
   output ms1Z;
@@ -57,13 +68,13 @@ module CNC_Top
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESETX RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESETX, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) output resetX;
   output resetY;
   output resetZ;
-  input right;
   output stepX;
   output stepY;
   output stepZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN CNC_Top_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
 
-  wire [5:0]Buttons_Vector_0_keys;
+  wire [4:0]Buttons_Vector_0_keys;
+  wire Down;
   wire DriverController_0_en;
   wire DriverController_0_step;
   wire DriverController_X1_step_risingedge;
@@ -81,7 +92,11 @@ module CNC_Top
   wire [31:0]GCODE_Parser_0_next_pos_y;
   wire [31:0]GCODE_Parser_0_next_pos_z;
   wire [7:0]GCODE_Parser_0_next_speed;
-  wire [0:0]Ground1_dout;
+  wire Left;
+  wire Middle;
+  wire ResetSwitch;
+  wire Right;
+  wire Up;
   wire [7:0]XYZ_Axis_Coordinator_0_current_speed;
   wire [63:0]XYZ_Axis_Coordinator_0_cycles_per_step_x;
   wire [63:0]XYZ_Axis_Coordinator_0_cycles_per_step_y;
@@ -92,6 +107,7 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_direction_change_buffer;
   wire XYZ_Axis_Coordinator_0_load_next_line;
   wire [7:0]XYZ_Axis_Coordinator_0_target_speed;
+  wire Zswitch;
   wire clk_wiz_clk_out1;
   wire directionX;
   wire directionY;
@@ -100,7 +116,6 @@ module CNC_Top
   wire enableY;
   wire enableZ;
   wire [7:0]led;
-  wire left;
   wire ms1X;
   wire ms1Y;
   wire ms1Z;
@@ -113,7 +128,6 @@ module CNC_Top
   wire resetX;
   wire resetY;
   wire resetZ;
-  wire right;
   wire stepX;
   wire stepY;
   wire stepZ;
@@ -133,7 +147,7 @@ module CNC_Top
         .ms1(xlconstant_1_dout),
         .ms2(xlconstant_1_dout),
         .ms3(xlconstant_1_dout),
-        .reset(right),
+        .reset(ResetSwitch),
         .step(DriverController_0_step));
   CNC_Top_A4988_Driver_IO_1 A4988_Driver_IO1
        (.direction(DriverController_Y_dir_out),
@@ -148,7 +162,7 @@ module CNC_Top
         .ms1(xlconstant_1_dout),
         .ms2(xlconstant_1_dout),
         .ms3(xlconstant_1_dout),
-        .reset(right),
+        .reset(ResetSwitch),
         .step(DriverController_Y_step));
   CNC_Top_A4988_Driver_IO_2 A4988_Driver_IO2
        (.direction(DriverController_Z_dir_out),
@@ -163,16 +177,15 @@ module CNC_Top
         .ms1(xlconstant_1_dout),
         .ms2(xlconstant_1_dout),
         .ms3(xlconstant_1_dout),
-        .reset(right),
+        .reset(ResetSwitch),
         .step(DriverController_Z_step));
-  CNC_Top_Buttons_Vector_0_0 Buttons_Vector_0
-       (.X_NEG(Ground1_dout),
-        .X_POS(Ground1_dout),
-        .Y_NEG(Ground1_dout),
-        .Y_POS(Ground1_dout),
-        .Z_NEG(Ground1_dout),
-        .Z_POS(Ground1_dout),
-        .keys(Buttons_Vector_0_keys));
+  CNC_Top_Buttons_Vector_0_1 Buttons_Vector_0
+       (.Zswitch(Zswitch),
+        .down(Down),
+        .keys(Buttons_Vector_0_keys),
+        .left(Left),
+        .right(Right),
+        .up(Up));
   CNC_Top_DriverController_0_0 DriverController_X
        (.clk(clk_wiz_clk_out1),
         .cycles_per_step(XYZ_Axis_Coordinator_0_cycles_per_step_x),
@@ -180,7 +193,7 @@ module CNC_Top
         .dir_out(DriverController_X_dir_out),
         .en(DriverController_0_en),
         .hold(GCODE_Parser_0_enable),
-        .rst(right),
+        .rst(ResetSwitch),
         .step(DriverController_0_step),
         .step_risingedge(DriverController_X_step_risingedge));
   CNC_Top_DriverController_X_0 DriverController_Y
@@ -190,7 +203,7 @@ module CNC_Top
         .dir_out(DriverController_Y_dir_out),
         .en(DriverController_Y_en),
         .hold(GCODE_Parser_0_enable),
-        .rst(right),
+        .rst(ResetSwitch),
         .step(DriverController_Y_step),
         .step_risingedge(DriverController_X1_step_risingedge));
   CNC_Top_DriverController_X_1 DriverController_Z
@@ -200,7 +213,7 @@ module CNC_Top
         .dir_out(DriverController_Z_dir_out),
         .en(DriverController_Z_en),
         .hold(GCODE_Parser_0_enable),
-        .rst(right),
+        .rst(ResetSwitch),
         .step(DriverController_Z_step),
         .step_risingedge(DriverController_X2_step_risingedge));
   CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
@@ -211,10 +224,8 @@ module CNC_Top
         .next_pos_y(GCODE_Parser_0_next_pos_y),
         .next_pos_z(GCODE_Parser_0_next_pos_z),
         .next_speed(GCODE_Parser_0_next_speed),
-        .rst(right),
-        .start(left));
-  CNC_Top_Ground_0 Ground1
-       (.dout(Ground1_dout));
+        .rst(ResetSwitch),
+        .start(Middle));
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
   CNC_Top_LED_IO_0_0 LED_IO_0
@@ -244,7 +255,7 @@ module CNC_Top
         .next_pos_y(GCODE_Parser_0_next_pos_y),
         .next_pos_z(GCODE_Parser_0_next_pos_z),
         .next_speed(GCODE_Parser_0_next_speed),
-        .rst(right),
+        .rst(ResetSwitch),
         .step_feedback_x(DriverController_X_step_risingedge),
         .step_feedback_y(DriverController_X1_step_risingedge),
         .step_feedback_z(DriverController_X2_step_risingedge),
@@ -252,10 +263,11 @@ module CNC_Top
   CNC_Top_clk_wiz_0 clk_wiz
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_clk_out1),
-        .reset(right));
+        .reset(1'b0));
   CNC_Top_vio_0_0 vio_0
        (.clk(clk_wiz_clk_out1),
         .probe_in0(XYZ_Axis_Coordinator_0_current_speed),
         .probe_in1(XYZ_Axis_Coordinator_0_target_speed),
-        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer));
+        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer),
+        .probe_in3(Buttons_Vector_0_keys));
 endmodule

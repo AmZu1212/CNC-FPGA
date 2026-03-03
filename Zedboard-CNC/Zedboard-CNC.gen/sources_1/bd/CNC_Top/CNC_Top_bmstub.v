@@ -7,8 +7,6 @@
 (* BLOCK_STUB = "true" *)
 module CNC_Top (
   sys_clock,
-  right,
-  left,
   directionX,
   stepX,
   resetX,
@@ -30,17 +28,20 @@ module CNC_Top (
   resetZ,
   ms1Z,
   ms2Z,
-  ms3Z
+  ms3Z,
+  ResetSwitch,
+  Middle,
+  Left,
+  Right,
+  Up,
+  Down,
+  Zswitch
 );
 
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *)
   (* X_INTERFACE_MODE = "slave CLK.SYS_CLOCK" *)
   (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN CNC_Top_sys_clock, INSERT_VIP 0" *)
   input sys_clock;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input right;
-  (* X_INTERFACE_IGNORE = "true" *)
-  input left;
   (* X_INTERFACE_IGNORE = "true" *)
   output directionX;
   (* X_INTERFACE_IGNORE = "true" *)
@@ -87,6 +88,20 @@ module CNC_Top (
   output ms2Z;
   (* X_INTERFACE_IGNORE = "true" *)
   output ms3Z;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input ResetSwitch;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Middle;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Left;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Right;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Up;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Down;
+  (* X_INTERFACE_IGNORE = "true" *)
+  input Zswitch;
 
   // stub module has no contents
 

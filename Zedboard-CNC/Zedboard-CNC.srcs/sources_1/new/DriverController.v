@@ -47,7 +47,7 @@ module DriverController(
 	       step <= 0;
 	       step_risingedge <= 0;
 	   end else begin
-	       en <= hold;
+	       en <= (hold || active);
 	       if((clk_counter < cycle_count) && active) begin
 	           clk_counter <= clk_counter + 1;
 	           step <= (clk_counter  < (cycle_count >> 1));// ? 1 : 0

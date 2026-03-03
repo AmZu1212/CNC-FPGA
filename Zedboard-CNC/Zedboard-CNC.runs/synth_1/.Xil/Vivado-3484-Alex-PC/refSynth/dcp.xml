@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Checkpoint Version="23" Minor="0">
+	<BUILD_NUMBER Name="5239630"/>
+	<FULL_BUILD Name="SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024"/>
+	<PRODUCT Name="Vivado v2024.2 (64-bit)"/>
+	<Part Name="xc7z020clg484-1"/>
+	<FeatureSet Name="FeatureSet_Classic"/>
+	<NEXTGEN_VERSAL Name="0"/>
+	<Top Name="CNC_Top_wrapper"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<MacroLevel Name="1"/>
+	<RunGenerated Name="1"/>
+	<HDPlatform Name="0"/>
+	<XPMLIBRARY Name="XPM_CDC"/>
+	<File Type="VERILOG_STUB" Name="CNC_Top_wrapper_stub.v" ModTime="1772564560"/>
+	<File Type="VHDL_STUB" Name="CNC_Top_wrapper_stub.vhdl" ModTime="1772564560"/>
+	<File Type="PARAMXML" Name="CNC_Top_wrapper_param.xml" ModTime="1772564560"/>
+	<File Type="PARAMXML" Name="CNC_Top_wrapper_param.xml" ModTime="1772564560"/>
+	<File Type="SHAPE" Name="CNC_Top_wrapper.shape" ModTime="1772564560"/>
+	<File Type="XN" Name="CNC_Top_wrapper.xn" ModTime="1772564560"/>
+	<File Type="EDIF" Name="CNC_Top_wrapper.edf" ModTime="1772564560"/>
+	<File Type="INCR" Name="CNC_Top_wrapper.incr" ModTime="1772564560"/>
+	<File Type="RDA" Name="CNC_Top_wrapper.rda" ModTime="1772564560"/>
+	<File Type="JSON_RDA" Name="CNC_Top_wrapper_rda.json" ModTime="1772564560"/>
+	<File Type="WDF" Name="CNC_Top_wrapper.wdf" ModTime="1772564560"/>
+	<File Type="SYNTH" Name="CNC_Top_wrapper.synth" ModTime="1772564560"/>
+	<File Type="HWDEF" Name="CNC_Top_wrapper.hwdef" ModTime="1772564560"/>
+	<File Type="HWDEF" Name="CNC_Top_wrapper.hwdef" ModTime="1772564560"/>
+</Checkpoint>
+

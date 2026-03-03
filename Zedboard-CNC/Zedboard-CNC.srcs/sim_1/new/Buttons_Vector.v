@@ -18,16 +18,13 @@
 
 
 module Buttons_Vector(
-    input X_POS,
-    input X_NEG,
-    input Y_POS,
-    input Y_NEG,
-    input Z_POS,
-    input Z_NEG,
-    
-    output [5:0] keys
+    input left,
+    input right,
+    input up,
+    input down,
+    input Zswitch,
+    output [4:0] keys
     );
-
-assign keys = {X_POS, X_NEG, Y_POS, Y_NEG, Z_POS, Z_NEG};
-
+                                                // 4, 3, 2, 1, 0 -> annoying, i know.
+assign keys = {Zswitch, up, down, right, left}; // -x, +x, -y/z, +y/z, zswitch.
 endmodule

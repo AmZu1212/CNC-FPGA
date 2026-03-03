@@ -4,15 +4,21 @@ set_property IOSTANDARD LVCMOS33 [get_ports sys_clock]
 # create_clock -period 10.000 -name sys_clk -waveform {0 5} [get_ports sys_clock]
 
 # Button inputs
-set_property PACKAGE_PIN N15 [get_ports left]
-set_property PACKAGE_PIN R18 [get_ports right]
-set_property PULLTYPE PULLDOWN [get_ports {left right}]
-set_property IOSTANDARD LVCMOS33 [get_ports {left right}]
+set_property PACKAGE_PIN N15 [get_ports Left]
+set_property PACKAGE_PIN R18 [get_ports Right]
+set_property PACKAGE_PIN T18 [get_ports Up]
+set_property PACKAGE_PIN R16 [get_ports Down]
+set_property PACKAGE_PIN P16 [get_ports Middle]
+set_property PULLTYPE PULLDOWN [get_ports {Left Right Middle Up Down}]
+set_property IOSTANDARD LVCMOS33 [get_ports {Left Right Middle Up Down}]
 
 # control switches - TBD
-##
-##
-##
+# "switch 7" - reset
+# "switch 0" - Z select
+set_property PACKAGE_PIN M15 [get_ports ResetSwitch] 
+set_property PACKAGE_PIN F22 [get_ports Zswitch]     
+set_property PULLTYPE PULLDOWN [get_ports {ResetSwitch Zswitch}]
+set_property IOSTANDARD LVCMOS33 [get_ports {ResetSwitch Zswitch}]
 
 # LED pins
 set_property IOSTANDARD LVCMOS33 [get_ports {led[*]}]

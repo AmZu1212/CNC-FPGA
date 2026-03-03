@@ -73,23 +73,9 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   motor_dir_y,
   motor_dir_z,
   load_next_line,
-  curr_pos_x,
-  curr_pos_y,
-  curr_pos_z,
-  start_pos_x,
-  start_pos_y,
-  start_pos_z,
-  position_reached,
-  target_pos_x,
-  target_pos_y,
-  target_pos_z,
-  distance_x,
-  distance_y,
-  distance_z,
   current_speed,
   target_speed,
-  direction_change_buffer,
-  passed_midpoint
+  direction_change_buffer
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -108,7 +94,7 @@ input wire [31 : 0] next_pos_z;
 input wire step_feedback_x;
 input wire step_feedback_y;
 input wire step_feedback_z;
-input wire [5 : 0] manual_move;
+input wire [4 : 0] manual_move;
 output wire [63 : 0] cycles_per_step_x;
 output wire [63 : 0] cycles_per_step_y;
 output wire [63 : 0] cycles_per_step_z;
@@ -116,23 +102,9 @@ output wire motor_dir_x;
 output wire motor_dir_y;
 output wire motor_dir_z;
 output wire load_next_line;
-output wire [31 : 0] curr_pos_x;
-output wire [31 : 0] curr_pos_y;
-output wire [31 : 0] curr_pos_z;
-output wire [31 : 0] start_pos_x;
-output wire [31 : 0] start_pos_y;
-output wire [31 : 0] start_pos_z;
-output wire position_reached;
-output wire [31 : 0] target_pos_x;
-output wire [31 : 0] target_pos_y;
-output wire [31 : 0] target_pos_z;
-output wire [31 : 0] distance_x;
-output wire [31 : 0] distance_y;
-output wire [31 : 0] distance_z;
 output wire [7 : 0] current_speed;
 output wire [7 : 0] target_speed;
 output wire [31 : 0] direction_change_buffer;
-output wire passed_midpoint;
 
   XYZ_Axis_Coordinator inst (
     .clk(clk),
@@ -153,22 +125,8 @@ output wire passed_midpoint;
     .motor_dir_y(motor_dir_y),
     .motor_dir_z(motor_dir_z),
     .load_next_line(load_next_line),
-    .curr_pos_x(curr_pos_x),
-    .curr_pos_y(curr_pos_y),
-    .curr_pos_z(curr_pos_z),
-    .start_pos_x(start_pos_x),
-    .start_pos_y(start_pos_y),
-    .start_pos_z(start_pos_z),
-    .position_reached(position_reached),
-    .target_pos_x(target_pos_x),
-    .target_pos_y(target_pos_y),
-    .target_pos_z(target_pos_z),
-    .distance_x(distance_x),
-    .distance_y(distance_y),
-    .distance_z(distance_z),
     .current_speed(current_speed),
     .target_speed(target_speed),
-    .direction_change_buffer(direction_change_buffer),
-    .passed_midpoint(passed_midpoint)
+    .direction_change_buffer(direction_change_buffer)
   );
 endmodule

@@ -110,7 +110,7 @@ set rc [catch {
   set_param chipscope.maxJobs 4
   set_param project.hsv.suppressChildGraphs 0
   set_param xicom.use_bs_reader 1
-  set_param runs.launchOptions { -jobs 8  }
+  set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property design_mode GateLvl [current_fileset]

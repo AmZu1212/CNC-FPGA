@@ -48,7 +48,7 @@
 `timescale 1ns / 1ps
 module CNC_Top_vio_0_0 (
 clk,
-probe_in0,probe_in1,probe_in2
+probe_in0,probe_in1,probe_in2,probe_in3
 
 );
 
@@ -56,6 +56,7 @@ input clk;
 input [7 : 0] probe_in0;
 input [7 : 0] probe_in1;
 input [31 : 0] probe_in2;
+input [4 : 0] probe_in3;
 
 
 
