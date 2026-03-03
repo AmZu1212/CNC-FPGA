@@ -40,6 +40,7 @@
         "rst": [ { "direction": "in" } ],
         "cycles_per_step": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
         "dir": [ { "direction": "in" } ],
+        "hold": [ { "direction": "in" } ],
         "en": [ { "direction": "out" } ],
         "step": [ { "direction": "out" } ],
         "step_risingedge": [ { "direction": "out" } ],

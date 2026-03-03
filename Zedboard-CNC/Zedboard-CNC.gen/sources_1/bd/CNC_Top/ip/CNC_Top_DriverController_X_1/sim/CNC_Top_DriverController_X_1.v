@@ -59,6 +59,7 @@ module CNC_Top_DriverController_X_1 (
   rst,
   cycles_per_step,
   dir,
+  hold,
   en,
   step,
   step_risingedge,
@@ -75,6 +76,7 @@ input wire clk;
 input wire rst;
 input wire [63 : 0] cycles_per_step;
 input wire dir;
+input wire hold;
 output wire en;
 output wire step;
 output wire step_risingedge;
@@ -85,6 +87,7 @@ output wire dir_out;
     .rst(rst),
     .cycles_per_step(cycles_per_step),
     .dir(dir),
+    .hold(hold),
     .en(en),
     .step(step),
     .step_risingedge(step_risingedge),

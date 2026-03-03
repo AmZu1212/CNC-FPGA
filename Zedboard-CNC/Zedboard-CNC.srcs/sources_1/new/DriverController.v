@@ -22,6 +22,7 @@ module DriverController(
 	input rst,
 	input [63:0] cycles_per_step,
 	input dir,
+	input hold,
     
 	//outputs
 	output reg en,
@@ -34,32 +35,27 @@ module DriverController(
 	wire active = (cycles_per_step > 0);
 	
 	reg [63:0] clk_counter;
+	//reg [63:0] cycle_target;
 	wire [63:0] cycle_count;
 	assign cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH) : (cycles_per_step);
     
 	always @(posedge clk) begin
 	   dir_out <= dir;
-	   if(rst || !active) begin
-	   //"reset" start
+	   if(rst) begin
 	       clk_counter <= 0;
-	       en <= 0;
+	       en <= hold;
 	       step <= 0;
 	       step_risingedge <= 0;
-	   //"reset" end
 	   end else begin
-	       en <= 1;
-	       if(clk_counter < cycle_count) begin
-	       //"step cycle running" start
+	       en <= hold;
+	       if((clk_counter < cycle_count) && active) begin
 	           clk_counter <= clk_counter + 1;
-	           en <= 1;
 	           step <= (clk_counter  < (cycle_count >> 1));// ? 1 : 0
 	           step_risingedge <= 0;
-	       //"step cycle running" end
 	       end else begin
-	       //"step cycle finished" start
 	           clk_counter <= 0;
-	           step_risingedge <= 1;
-	       //"step cycle finished" end
+	           step <= 0;
+	           step_risingedge <= active;
 	       end
 	   end
 	end

@@ -12,7 +12,7 @@
     },
     "design_tree": {
       "clk_wiz": "",
-      "Ground": "",
+      "High_Bit": "",
       "A4988_Driver_IO": "",
       "DriverController_X": "",
       "LED_IO_0": "",
@@ -22,11 +22,9 @@
       "DriverController_Z": "",
       "A4988_Driver_IO1": "",
       "A4988_Driver_IO2": "",
-      "vio_0": "",
-      "vio_1": "",
-      "vio_2": "",
       "Buttons_Vector_0": "",
-      "Ground1": ""
+      "Ground1": "",
+      "vio_0": ""
     },
     "ports": {
       "sys_clock": {
@@ -170,12 +168,12 @@
           }
         }
       },
-      "Ground": {
+      "High_Bit": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "9",
         "xci_name": "CNC_Top_xlconstant_0_1",
         "xci_path": "ip\\CNC_Top_xlconstant_0_1\\CNC_Top_xlconstant_0_1.xci",
-        "inst_hier_path": "Ground",
+        "inst_hier_path": "High_Bit",
         "parameters": {
           "CONST_VAL": {
             "value": "1"
@@ -320,6 +318,9 @@
             "right": "0"
           },
           "dir": {
+            "direction": "I"
+          },
+          "hold": {
             "direction": "I"
           },
           "en": {
@@ -482,21 +483,21 @@
             "left": "63",
             "right": "0"
           },
-          "motor_dir_x": {
-            "direction": "O"
-          },
           "cycles_per_step_y": {
             "direction": "O",
             "left": "63",
             "right": "0"
           },
-          "motor_dir_y": {
-            "direction": "O"
-          },
           "cycles_per_step_z": {
             "direction": "O",
             "left": "63",
             "right": "0"
+          },
+          "motor_dir_x": {
+            "direction": "O"
+          },
+          "motor_dir_y": {
+            "direction": "O"
           },
           "motor_dir_z": {
             "direction": "O"
@@ -534,11 +535,6 @@
             "left": "31",
             "right": "0"
           },
-          "clk_counter": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
           "position_reached": {
             "direction": "O"
           },
@@ -553,21 +549,6 @@
             "right": "0"
           },
           "target_pos_z": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "state": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "state_timer": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
-          },
-          "distance": {
             "direction": "O",
             "left": "31",
             "right": "0"
@@ -587,15 +568,23 @@
             "left": "31",
             "right": "0"
           },
-          "next_num_clk_cycles": {
+          "current_speed": {
             "direction": "O",
-            "left": "63",
+            "left": "7",
             "right": "0"
           },
-          "squared_distance": {
+          "target_speed": {
             "direction": "O",
-            "left": "63",
+            "left": "7",
             "right": "0"
+          },
+          "direction_change_buffer": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "passed_midpoint": {
+            "direction": "O"
           }
         }
       },
@@ -670,21 +659,6 @@
           },
           "enable": {
             "direction": "O"
-          },
-          "curr_line": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "state": {
-            "direction": "O",
-            "left": "2",
-            "right": "0"
-          },
-          "detected_count": {
-            "direction": "O",
-            "left": "31",
-            "right": "0"
           }
         }
       },
@@ -737,6 +711,9 @@
             "right": "0"
           },
           "dir": {
+            "direction": "I"
+          },
+          "hold": {
             "direction": "I"
           },
           "en": {
@@ -802,6 +779,9 @@
             "right": "0"
           },
           "dir": {
+            "direction": "I"
+          },
+          "hold": {
             "direction": "I"
           },
           "en": {
@@ -990,129 +970,6 @@
           }
         }
       },
-      "vio_0": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "ip_revision": "26",
-        "xci_name": "CNC_Top_vio_0_1",
-        "xci_path": "ip\\CNC_Top_vio_0_1\\CNC_Top_vio_0_1.xci",
-        "inst_hier_path": "vio_0",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "13"
-          },
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
-          },
-          "C_PROBE_IN0_WIDTH": {
-            "value": "16"
-          },
-          "C_PROBE_IN10_WIDTH": {
-            "value": "64"
-          },
-          "C_PROBE_IN11_WIDTH": {
-            "value": "64"
-          },
-          "C_PROBE_IN12_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN1_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN2_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN3_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN4_WIDTH": {
-            "value": "64"
-          },
-          "C_PROBE_IN5_WIDTH": {
-            "value": "64"
-          },
-          "C_PROBE_IN6_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN7_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN8_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN9_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
-      "vio_1": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "ip_revision": "26",
-        "xci_name": "CNC_Top_vio_1_0",
-        "xci_path": "ip\\CNC_Top_vio_1_0\\CNC_Top_vio_1_0.xci",
-        "inst_hier_path": "vio_1",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "4"
-          },
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
-          },
-          "C_PROBE_IN0_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN1_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN2_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN3_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
-      "vio_2": {
-        "vlnv": "xilinx.com:ip:vio:3.0",
-        "ip_revision": "26",
-        "xci_name": "CNC_Top_vio_2_0",
-        "xci_path": "ip\\CNC_Top_vio_2_0\\CNC_Top_vio_2_0.xci",
-        "inst_hier_path": "vio_2",
-        "parameters": {
-          "C_NUM_PROBE_IN": {
-            "value": "7"
-          },
-          "C_NUM_PROBE_OUT": {
-            "value": "0"
-          },
-          "C_PROBE_IN1_WIDTH": {
-            "value": "3"
-          },
-          "C_PROBE_IN2_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN3_WIDTH": {
-            "value": "3"
-          },
-          "C_PROBE_IN4_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN5_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN6_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN7_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN8_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE_IN9_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
       "Buttons_Vector_0": {
         "vlnv": "xilinx.com:module_ref:Buttons_Vector:1.0",
         "ip_revision": "1",
@@ -1162,6 +1019,30 @@
           },
           "CONST_WIDTH": {
             "value": "1"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "ip_revision": "26",
+        "xci_name": "CNC_Top_vio_0_0",
+        "xci_path": "ip\\CNC_Top_vio_0_0\\CNC_Top_vio_0_0.xci",
+        "inst_hier_path": "vio_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "3"
+          },
+          "C_NUM_PROBE_OUT": {
+            "value": "0"
+          },
+          "C_PROBE_IN0_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE_IN1_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE_IN2_WIDTH": {
+            "value": "32"
           }
         }
       }
@@ -1374,43 +1255,31 @@
           "A4988_Driver_IO2/step"
         ]
       },
-      "GCODE_Parser_0_curr_line": {
-        "ports": [
-          "GCODE_Parser_0/curr_line",
-          "vio_0/probe_in0"
-        ]
-      },
-      "GCODE_Parser_0_detected_count": {
-        "ports": [
-          "GCODE_Parser_0/detected_count",
-          "vio_0/probe_in12"
-        ]
-      },
       "GCODE_Parser_0_enable": {
         "ports": [
           "GCODE_Parser_0/enable",
           "LED_IO_0/in7",
+          "DriverController_X/hold",
+          "DriverController_Y/hold",
+          "DriverController_Z/hold",
           "XYZ_Axis_Coordinator_0/enable"
         ]
       },
       "GCODE_Parser_0_next_pos_x": {
         "ports": [
           "GCODE_Parser_0/next_pos_x",
-          "vio_2/probe_in4",
           "XYZ_Axis_Coordinator_0/next_pos_x"
         ]
       },
       "GCODE_Parser_0_next_pos_y": {
         "ports": [
           "GCODE_Parser_0/next_pos_y",
-          "vio_2/probe_in5",
           "XYZ_Axis_Coordinator_0/next_pos_y"
         ]
       },
       "GCODE_Parser_0_next_pos_z": {
         "ports": [
           "GCODE_Parser_0/next_pos_z",
-          "vio_2/probe_in6",
           "XYZ_Axis_Coordinator_0/next_pos_z"
         ]
       },
@@ -1418,12 +1287,6 @@
         "ports": [
           "GCODE_Parser_0/next_speed",
           "XYZ_Axis_Coordinator_0/next_speed"
-        ]
-      },
-      "GCODE_Parser_0_state": {
-        "ports": [
-          "GCODE_Parser_0/state",
-          "vio_2/probe_in3"
         ]
       },
       "Ground1_dout": {
@@ -1443,41 +1306,21 @@
           "led"
         ]
       },
-      "XYZ_Axis_Coordinator_0_clk_counter": {
+      "XYZ_Axis_Coordinator_0_current_speed": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/clk_counter",
-          "vio_1/probe_in0"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_curr_pos_x": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/curr_pos_x",
-          "vio_0/probe_in1"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_curr_pos_y": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/curr_pos_y",
-          "vio_0/probe_in2"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_curr_pos_z": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/curr_pos_z",
-          "vio_0/probe_in3"
+          "XYZ_Axis_Coordinator_0/current_speed",
+          "vio_0/probe_in0"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_x": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_x",
-          "vio_0/probe_in4",
           "DriverController_X/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_y": {
         "ports": [
           "XYZ_Axis_Coordinator_0/cycles_per_step_y",
-          "vio_0/probe_in5",
           "DriverController_Y/cycles_per_step"
         ]
       },
@@ -1505,28 +1348,10 @@
           "DriverController_Z/dir"
         ]
       },
-      "XYZ_Axis_Coordinator_0_distance": {
+      "XYZ_Axis_Coordinator_0_direction_change_buffer": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/distance",
-          "vio_0/probe_in6"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_distance_x": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/distance_x",
-          "vio_0/probe_in7"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_distance_y": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/distance_y",
-          "vio_0/probe_in8"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_distance_z": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/distance_z",
-          "vio_0/probe_in9"
+          "XYZ_Axis_Coordinator_0/direction_change_buffer",
+          "vio_0/probe_in2"
         ]
       },
       "XYZ_Axis_Coordinator_0_load_next_line": {
@@ -1536,65 +1361,21 @@
           "GCODE_Parser_0/load_next_line"
         ]
       },
-      "XYZ_Axis_Coordinator_0_next_num_clk_cycles": {
+      "XYZ_Axis_Coordinator_0_target_speed": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/next_num_clk_cycles",
-          "vio_0/probe_in10"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_position_reached": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/position_reached",
-          "vio_2/probe_in0"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_squared_distance": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/squared_distance",
-          "vio_0/probe_in11"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_start_pos_x": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/start_pos_x",
-          "vio_1/probe_in1"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_start_pos_y": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/start_pos_y",
-          "vio_1/probe_in2"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_start_pos_z": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/start_pos_z",
-          "vio_1/probe_in3"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_state": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/state",
-          "vio_2/probe_in1"
-        ]
-      },
-      "XYZ_Axis_Coordinator_0_state_timer": {
-        "ports": [
-          "XYZ_Axis_Coordinator_0/state_timer",
-          "vio_2/probe_in2"
+          "XYZ_Axis_Coordinator_0/target_speed",
+          "vio_0/probe_in1"
         ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
-          "vio_0/clk",
-          "vio_1/clk",
-          "vio_2/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
           "DriverController_Z/clk",
+          "GCODE_Parser_0/clk",
           "XYZ_Axis_Coordinator_0/clk",
-          "GCODE_Parser_0/clk"
+          "vio_0/clk"
         ]
       },
       "left_1": {
@@ -1613,8 +1394,8 @@
           "DriverController_X/rst",
           "DriverController_Y/rst",
           "DriverController_Z/rst",
-          "XYZ_Axis_Coordinator_0/rst",
-          "GCODE_Parser_0/rst"
+          "GCODE_Parser_0/rst",
+          "XYZ_Axis_Coordinator_0/rst"
         ]
       },
       "sys_clock_1": {
@@ -1625,7 +1406,7 @@
       },
       "xlconstant_1_dout": {
         "ports": [
-          "Ground/dout",
+          "High_Bit/dout",
           "A4988_Driver_IO/ms1",
           "A4988_Driver_IO/ms2",
           "A4988_Driver_IO2/ms1",

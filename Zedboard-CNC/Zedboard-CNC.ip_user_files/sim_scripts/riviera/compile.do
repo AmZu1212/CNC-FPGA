@@ -42,9 +42,6 @@ vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../Zedboard-CNC.gen/source
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_DriverController_X_1/sim/CNC_Top_DriverController_X_1.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_1/sim/CNC_Top_A4988_Driver_IO_1.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_2/sim/CNC_Top_A4988_Driver_IO_2.v" \
-"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_1/sim/CNC_Top_vio_0_1.v" \
-"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_1_0/sim/CNC_Top_vio_1_0.v" \
-"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_2_0/sim/CNC_Top_vio_2_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_0/sim/CNC_Top_Buttons_Vector_0_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Ground_0/sim/CNC_Top_Ground_0.v" \
 "../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/sim/CNC_Top.v" \

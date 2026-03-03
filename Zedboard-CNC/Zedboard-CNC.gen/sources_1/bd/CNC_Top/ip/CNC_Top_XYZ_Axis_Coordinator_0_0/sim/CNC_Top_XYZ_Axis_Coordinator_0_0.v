@@ -67,10 +67,10 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   step_feedback_z,
   manual_move,
   cycles_per_step_x,
-  motor_dir_x,
   cycles_per_step_y,
-  motor_dir_y,
   cycles_per_step_z,
+  motor_dir_x,
+  motor_dir_y,
   motor_dir_z,
   load_next_line,
   curr_pos_x,
@@ -79,19 +79,17 @@ module CNC_Top_XYZ_Axis_Coordinator_0_0 (
   start_pos_x,
   start_pos_y,
   start_pos_z,
-  clk_counter,
   position_reached,
   target_pos_x,
   target_pos_y,
   target_pos_z,
-  state,
-  state_timer,
-  distance,
   distance_x,
   distance_y,
   distance_z,
-  next_num_clk_cycles,
-  squared_distance
+  current_speed,
+  target_speed,
+  direction_change_buffer,
+  passed_midpoint
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -112,10 +110,10 @@ input wire step_feedback_y;
 input wire step_feedback_z;
 input wire [5 : 0] manual_move;
 output wire [63 : 0] cycles_per_step_x;
-output wire motor_dir_x;
 output wire [63 : 0] cycles_per_step_y;
-output wire motor_dir_y;
 output wire [63 : 0] cycles_per_step_z;
+output wire motor_dir_x;
+output wire motor_dir_y;
 output wire motor_dir_z;
 output wire load_next_line;
 output wire [31 : 0] curr_pos_x;
@@ -124,19 +122,17 @@ output wire [31 : 0] curr_pos_z;
 output wire [31 : 0] start_pos_x;
 output wire [31 : 0] start_pos_y;
 output wire [31 : 0] start_pos_z;
-output wire [31 : 0] clk_counter;
 output wire position_reached;
 output wire [31 : 0] target_pos_x;
 output wire [31 : 0] target_pos_y;
 output wire [31 : 0] target_pos_z;
-output wire [2 : 0] state;
-output wire [31 : 0] state_timer;
-output wire [31 : 0] distance;
 output wire [31 : 0] distance_x;
 output wire [31 : 0] distance_y;
 output wire [31 : 0] distance_z;
-output wire [63 : 0] next_num_clk_cycles;
-output wire [63 : 0] squared_distance;
+output wire [7 : 0] current_speed;
+output wire [7 : 0] target_speed;
+output wire [31 : 0] direction_change_buffer;
+output wire passed_midpoint;
 
   XYZ_Axis_Coordinator inst (
     .clk(clk),
@@ -151,10 +147,10 @@ output wire [63 : 0] squared_distance;
     .step_feedback_z(step_feedback_z),
     .manual_move(manual_move),
     .cycles_per_step_x(cycles_per_step_x),
-    .motor_dir_x(motor_dir_x),
     .cycles_per_step_y(cycles_per_step_y),
-    .motor_dir_y(motor_dir_y),
     .cycles_per_step_z(cycles_per_step_z),
+    .motor_dir_x(motor_dir_x),
+    .motor_dir_y(motor_dir_y),
     .motor_dir_z(motor_dir_z),
     .load_next_line(load_next_line),
     .curr_pos_x(curr_pos_x),
@@ -163,18 +159,16 @@ output wire [63 : 0] squared_distance;
     .start_pos_x(start_pos_x),
     .start_pos_y(start_pos_y),
     .start_pos_z(start_pos_z),
-    .clk_counter(clk_counter),
     .position_reached(position_reached),
     .target_pos_x(target_pos_x),
     .target_pos_y(target_pos_y),
     .target_pos_z(target_pos_z),
-    .state(state),
-    .state_timer(state_timer),
-    .distance(distance),
     .distance_x(distance_x),
     .distance_y(distance_y),
     .distance_z(distance_z),
-    .next_num_clk_cycles(next_num_clk_cycles),
-    .squared_distance(squared_distance)
+    .current_speed(current_speed),
+    .target_speed(target_speed),
+    .direction_change_buffer(direction_change_buffer),
+    .passed_midpoint(passed_midpoint)
   );
 endmodule

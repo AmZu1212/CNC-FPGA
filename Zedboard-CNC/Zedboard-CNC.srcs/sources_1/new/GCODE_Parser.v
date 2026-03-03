@@ -31,14 +31,11 @@ module GCODE_Parser(
     output reg signed [31:0] next_pos_x,
     output reg signed [31:0] next_pos_y,
     output reg signed [31:0] next_pos_z,
-    output reg enable,
-    output reg [15:0] curr_line,
-    output reg [2:0] state,
-    output reg unsigned [31:0] detected_count
+    output reg enable
     );
     
-    localparam max_line = 2256;//912;
-    //reg [15:0] curr_line;
+    localparam max_line = 905;//912;
+    reg [15:0] curr_line;
     reg [15:0] speed [0:max_line-1]; //[0:911]
     reg signed [20:0] pos_x [0:max_line-1];
     reg signed [20:0] pos_y [0:max_line-1];
@@ -51,7 +48,7 @@ module GCODE_Parser(
     wire start_risingedge;
     assign start_risingedge = start && !start_prev;
     
-    //reg [2:0] state;
+    reg [2:0] state;
     localparam IDLE     = 0;
     localparam RUNNING  = 1;
     localparam RETURN   = 2;
@@ -80,14 +77,12 @@ module GCODE_Parser(
             next_pos_y <= pos_y[0];
             next_pos_z <= pos_z[0];
             
-            detected_count <= 0;
             risingedge_buffer <= 100000000;
         end else begin
             start_prev <= start;
             enable <= 0;
             
             if (start_risingedge) begin
-                if (!risingedge_buffer) detected_count <= detected_count + 1;
                 risingedge_buffer <= 100000000;
             end else if (risingedge_buffer > 0) risingedge_buffer <= risingedge_buffer - 1;
             
