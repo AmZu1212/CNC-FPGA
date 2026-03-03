@@ -69,7 +69,7 @@ module XYZ_Axis_Coordinator(
     localparam HOMING_CYCLES_PER_STEP_Y = (100000/HOMING_SPEED_XY)*MICRONS_PER_STEP_Y;
     localparam HOMING_CYCLES_PER_STEP_Z = (100000/HOMING_SPEED_Z )*MICRONS_PER_STEP_Z;    
     
-    localparam ACCEL_CLK_TIMER = 75000;
+    localparam ACCEL_CLK_TIMER = 50000;
     localparam MAX_INSTANT_SPEED_CHANGE = 10;
     localparam DELTA_SPEED = 1;
     
