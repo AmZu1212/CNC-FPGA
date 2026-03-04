@@ -56,8 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param general.maxThreads 24
 set_param chipscope.maxJobs 6
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -88,6 +91,7 @@ read_verilog -library xil_defaultlib {
   E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v
   E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/GCODE_Parser.v
   E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sim_1/new/Buttons_Vector.v
+  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/GcodeFetcher.v
   E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v
 }
 add_files E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/bd/CNC_Top/CNC_Top.bd

@@ -60,6 +60,14 @@ module CNC_Top_GCODE_Parser_0_0 (
   rst,
   start,
   load_next_line,
+  cmd_valid,
+  cmd_last,
+  cmd_speed,
+  cmd_pos_x,
+  cmd_pos_y,
+  cmd_pos_z,
+  cmd_ready,
+  rewind,
   next_speed,
   next_pos_x,
   next_pos_y,
@@ -77,6 +85,14 @@ input wire clk;
 input wire rst;
 input wire start;
 input wire load_next_line;
+input wire cmd_valid;
+input wire cmd_last;
+input wire [7 : 0] cmd_speed;
+input wire [31 : 0] cmd_pos_x;
+input wire [31 : 0] cmd_pos_y;
+input wire [31 : 0] cmd_pos_z;
+output wire cmd_ready;
+output wire rewind;
 output wire [7 : 0] next_speed;
 output wire [31 : 0] next_pos_x;
 output wire [31 : 0] next_pos_y;
@@ -88,6 +104,14 @@ output wire enable;
     .rst(rst),
     .start(start),
     .load_next_line(load_next_line),
+    .cmd_valid(cmd_valid),
+    .cmd_last(cmd_last),
+    .cmd_speed(cmd_speed),
+    .cmd_pos_x(cmd_pos_x),
+    .cmd_pos_y(cmd_pos_y),
+    .cmd_pos_z(cmd_pos_z),
+    .cmd_ready(cmd_ready),
+    .rewind(rewind),
     .next_speed(next_speed),
     .next_pos_x(next_pos_x),
     .next_pos_y(next_pos_y),

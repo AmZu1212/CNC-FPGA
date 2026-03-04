@@ -23,7 +23,8 @@
       "A4988_Driver_IO1": "",
       "A4988_Driver_IO2": "",
       "vio_0": "",
-      "Buttons_Vector_0": ""
+      "Buttons_Vector_0": "",
+      "GcodeFetcher_0": ""
     },
     "ports": {
       "sys_clock": {
@@ -585,6 +586,38 @@
           "load_next_line": {
             "direction": "I"
           },
+          "cmd_valid": {
+            "direction": "I"
+          },
+          "cmd_last": {
+            "direction": "I"
+          },
+          "cmd_speed": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "cmd_pos_x": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "cmd_pos_y": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "cmd_pos_z": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "cmd_ready": {
+            "direction": "O"
+          },
+          "rewind": {
+            "direction": "O"
+          },
           "next_speed": {
             "direction": "O",
             "left": "7",
@@ -978,6 +1011,83 @@
             "right": "0"
           }
         }
+      },
+      "GcodeFetcher_0": {
+        "vlnv": "xilinx.com:module_ref:GcodeFetcher:1.0",
+        "ip_revision": "1",
+        "xci_name": "CNC_Top_GcodeFetcher_0_0",
+        "xci_path": "ip\\CNC_Top_GcodeFetcher_0_0\\CNC_Top_GcodeFetcher_0_0.xci",
+        "inst_hier_path": "GcodeFetcher_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "GcodeFetcher",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "rewind": {
+            "direction": "I"
+          },
+          "cmd_ready": {
+            "direction": "I"
+          },
+          "cmd_valid": {
+            "direction": "O"
+          },
+          "cmd_last": {
+            "direction": "O"
+          },
+          "cmd_speed": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "cmd_pos_x": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "cmd_pos_y": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "cmd_pos_z": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
@@ -1195,6 +1305,12 @@
           "A4988_Driver_IO2/step"
         ]
       },
+      "GCODE_Parser_0_cmd_ready": {
+        "ports": [
+          "GCODE_Parser_0/cmd_ready",
+          "GcodeFetcher_0/cmd_ready"
+        ]
+      },
       "GCODE_Parser_0_enable": {
         "ports": [
           "GCODE_Parser_0/enable",
@@ -1229,6 +1345,48 @@
           "XYZ_Axis_Coordinator_0/next_speed"
         ]
       },
+      "GCODE_Parser_0_rewind": {
+        "ports": [
+          "GCODE_Parser_0/rewind",
+          "GcodeFetcher_0/rewind"
+        ]
+      },
+      "GcodeFetcher_0_cmd_last": {
+        "ports": [
+          "GcodeFetcher_0/cmd_last",
+          "GCODE_Parser_0/cmd_last"
+        ]
+      },
+      "GcodeFetcher_0_cmd_pos_x": {
+        "ports": [
+          "GcodeFetcher_0/cmd_pos_x",
+          "GCODE_Parser_0/cmd_pos_x"
+        ]
+      },
+      "GcodeFetcher_0_cmd_pos_y": {
+        "ports": [
+          "GcodeFetcher_0/cmd_pos_y",
+          "GCODE_Parser_0/cmd_pos_y"
+        ]
+      },
+      "GcodeFetcher_0_cmd_pos_z": {
+        "ports": [
+          "GcodeFetcher_0/cmd_pos_z",
+          "GCODE_Parser_0/cmd_pos_z"
+        ]
+      },
+      "GcodeFetcher_0_cmd_speed": {
+        "ports": [
+          "GcodeFetcher_0/cmd_speed",
+          "GCODE_Parser_0/cmd_speed"
+        ]
+      },
+      "GcodeFetcher_0_cmd_valid": {
+        "ports": [
+          "GcodeFetcher_0/cmd_valid",
+          "GCODE_Parser_0/cmd_valid"
+        ]
+      },
       "LED_IO_0_led": {
         "ports": [
           "LED_IO_0/led",
@@ -1250,13 +1408,14 @@
       "ResetSwitch_1": {
         "ports": [
           "ResetSwitch",
-          "GCODE_Parser_0/rst",
           "A4988_Driver_IO/reset",
           "A4988_Driver_IO2/reset",
           "A4988_Driver_IO1/reset",
           "DriverController_X/rst",
           "DriverController_Y/rst",
           "DriverController_Z/rst",
+          "GCODE_Parser_0/rst",
+          "GcodeFetcher_0/rst",
           "XYZ_Axis_Coordinator_0/rst"
         ]
       },
@@ -1342,11 +1501,12 @@
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
-          "GCODE_Parser_0/clk",
           "vio_0/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
           "DriverController_Z/clk",
+          "GCODE_Parser_0/clk",
+          "GcodeFetcher_0/clk",
           "XYZ_Axis_Coordinator_0/clk"
         ]
       },

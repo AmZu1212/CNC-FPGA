@@ -45,6 +45,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_vio
 # IP: bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_1/CNC_Top_Buttons_Vector_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_Buttons_Vector_0_1 || ORIG_REF_NAME==CNC_Top_Buttons_Vector_0_1} -quiet] -quiet
 
+# IP: bd/CNC_Top/ip/CNC_Top_GcodeFetcher_0_0/CNC_Top_GcodeFetcher_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_GcodeFetcher_0_0 || ORIG_REF_NAME==CNC_Top_GcodeFetcher_0_0} -quiet] -quiet
+
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
 

@@ -2,15 +2,15 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Tue Mar  3 21:14:58 2026
-//Host        : Alex-PC running 64-bit major release  (build 9200)
+//Date        : Wed Mar  4 16:57:43 2026
+//Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=10,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
+(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
 module CNC_Top
    (Down,
     Left,
@@ -87,11 +87,19 @@ module CNC_Top
   wire DriverController_Z_dir_out;
   wire DriverController_Z_en;
   wire DriverController_Z_step;
+  wire GCODE_Parser_0_cmd_ready;
   wire GCODE_Parser_0_enable;
   wire [31:0]GCODE_Parser_0_next_pos_x;
   wire [31:0]GCODE_Parser_0_next_pos_y;
   wire [31:0]GCODE_Parser_0_next_pos_z;
   wire [7:0]GCODE_Parser_0_next_speed;
+  wire GCODE_Parser_0_rewind;
+  wire GcodeFetcher_0_cmd_last;
+  wire [31:0]GcodeFetcher_0_cmd_pos_x;
+  wire [31:0]GcodeFetcher_0_cmd_pos_y;
+  wire [31:0]GcodeFetcher_0_cmd_pos_z;
+  wire [7:0]GcodeFetcher_0_cmd_speed;
+  wire GcodeFetcher_0_cmd_valid;
   wire Left;
   wire Middle;
   wire ResetSwitch;
@@ -218,14 +226,33 @@ module CNC_Top
         .step_risingedge(DriverController_X2_step_risingedge));
   CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
        (.clk(clk_wiz_clk_out1),
+        .cmd_last(GcodeFetcher_0_cmd_last),
+        .cmd_pos_x(GcodeFetcher_0_cmd_pos_x),
+        .cmd_pos_y(GcodeFetcher_0_cmd_pos_y),
+        .cmd_pos_z(GcodeFetcher_0_cmd_pos_z),
+        .cmd_ready(GCODE_Parser_0_cmd_ready),
+        .cmd_speed(GcodeFetcher_0_cmd_speed),
+        .cmd_valid(GcodeFetcher_0_cmd_valid),
         .enable(GCODE_Parser_0_enable),
         .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
         .next_pos_x(GCODE_Parser_0_next_pos_x),
         .next_pos_y(GCODE_Parser_0_next_pos_y),
         .next_pos_z(GCODE_Parser_0_next_pos_z),
         .next_speed(GCODE_Parser_0_next_speed),
+        .rewind(GCODE_Parser_0_rewind),
         .rst(ResetSwitch),
         .start(Middle));
+  CNC_Top_GcodeFetcher_0_0 GcodeFetcher_0
+       (.clk(clk_wiz_clk_out1),
+        .cmd_last(GcodeFetcher_0_cmd_last),
+        .cmd_pos_x(GcodeFetcher_0_cmd_pos_x),
+        .cmd_pos_y(GcodeFetcher_0_cmd_pos_y),
+        .cmd_pos_z(GcodeFetcher_0_cmd_pos_z),
+        .cmd_ready(GCODE_Parser_0_cmd_ready),
+        .cmd_speed(GcodeFetcher_0_cmd_speed),
+        .cmd_valid(GcodeFetcher_0_cmd_valid),
+        .rewind(GCODE_Parser_0_rewind),
+        .rst(ResetSwitch));
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
   CNC_Top_LED_IO_0_0 LED_IO_0

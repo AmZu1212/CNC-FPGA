@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  3 21:14:59 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar  4 16:57:43 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -21,13 +21,14 @@
     </PORT>
     <PORT DIR="I" NAME="ResetSwitch" SIGIS="undef" SIGNAME="External_Ports_ResetSwitch">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
         <CONNECTION INSTANCE="A4988_Driver_IO" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="reset"/>
         <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="GcodeFetcher_0" PORT="rst"/>
         <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
@@ -627,6 +628,41 @@
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="cmd_last" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_last"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cmd_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cmd_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="cmd_pos_z" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_pos_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cmd_ready" SIGIS="undef" SIGNAME="GCODE_Parser_0_cmd_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="cmd_speed" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cmd_valid" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="cmd_valid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
@@ -661,6 +697,11 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_speed"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="rewind" SIGIS="undef" SIGNAME="GCODE_Parser_0_rewind">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="rewind"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
@@ -669,6 +710,66 @@
         <PORT DIR="I" NAME="start" SIGIS="undef" SIGNAME="External_Ports_Middle">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Middle"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/GcodeFetcher_0" HWVERSION="1.0" INSTANCE="GcodeFetcher_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="GcodeFetcher" VLNV="xilinx.com:module_ref:GcodeFetcher:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="CNC_Top_GcodeFetcher_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cmd_last" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_last"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cmd_pos_x" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_pos_x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cmd_pos_y" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_y">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_pos_y"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="cmd_pos_z" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_pos_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_pos_z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cmd_ready" SIGIS="undef" SIGNAME="GCODE_Parser_0_cmd_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="cmd_speed" RIGHT="0" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_speed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_speed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="cmd_valid" SIGIS="undef" SIGNAME="GcodeFetcher_0_cmd_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="cmd_valid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rewind" SIGIS="undef" SIGNAME="GCODE_Parser_0_rewind">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rewind"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1460,11 +1561,12 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
             <CONNECTION INSTANCE="vio_0" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
+            <CONNECTION INSTANCE="GcodeFetcher_0" PORT="clk"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
