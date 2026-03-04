@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Tue Mar  3 21:17:11 2026
-| Host         : Alex-PC running 64-bit major release  (build 9200)
+| Date         : Wed Mar  4 15:23:46 2026
+| Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
 | Design       : CNC_Top_wrapper
 | Device       : xc7z020clg484-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 8800 |     0 |          0 |     53200 | 16.54 |
-|   LUT as Logic          | 8800 |     0 |          0 |     53200 | 16.54 |
+| Slice LUTs*             | 8955 |     0 |          0 |     53200 | 16.83 |
+|   LUT as Logic          | 8955 |     0 |          0 |     53200 | 16.83 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         | 1549 |     0 |          0 |    106400 |  1.46 |
-|   Register as Flip Flop | 1549 |     0 |          0 |    106400 |  1.46 |
+| Slice Registers         | 1548 |     0 |          0 |    106400 |  1.45 |
+|   Register as Flip Flop | 1548 |     0 |          0 |    106400 |  1.45 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
@@ -59,8 +59,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 20    |          Yes |         Set |            - |
-| 1529  |          Yes |       Reset |            - |
+| 21    |          Yes |         Set |            - |
+| 1527  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -152,17 +152,17 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| LUT3       | 6322 |                 LUT |
+| LUT3       | 6365 |                 LUT |
 | CARRY4     | 2247 |          CarryLogic |
-| FDRE       | 1529 |        Flop & Latch |
-| LUT2       | 1224 |                 LUT |
-| LUT4       |  714 |                 LUT |
-| LUT6       |  515 |                 LUT |
-| LUT1       |  433 |                 LUT |
-| LUT5       |  406 |                 LUT |
+| FDRE       | 1527 |        Flop & Latch |
+| LUT2       | 1214 |                 LUT |
+| LUT4       |  682 |                 LUT |
+| LUT6       |  600 |                 LUT |
+| LUT1       |  515 |                 LUT |
+| LUT5       |  437 |                 LUT |
 | OBUF       |   29 |                  IO |
 | DSP48E1    |   22 |    Block Arithmetic |
-| FDSE       |   20 |        Flop & Latch |
+| FDSE       |   21 |        Flop & Latch |
 | IBUF       |    8 |                  IO |
 | RAMB36E1   |    2 |        Block Memory |
 | BUFG       |    2 |               Clock |
