@@ -50,7 +50,7 @@ module GCODE_Parser(
     localparam RETURN_SPEED_XY = 60;
 
     assign start_risingedge = start && !start_prev;
-    assign cmd_ready = (state == RUNNING) && !next_valid;
+    assign cmd_ready = (state == RUNNING) && !next_valid && !rewind;
     assign feeder_transfer = cmd_valid && cmd_ready;
 
     always @(posedge clk) begin
@@ -100,9 +100,16 @@ module GCODE_Parser(
                         rewind <= 1;
                         state <= RUNNING;
                         return_state <= XY_CHECK;
+                        next_speed <= 0;
+                        next_pos_x <= 0;
+                        next_pos_y <= 0;
+                        next_pos_z <= 0;
                         next_valid <= 0;
                         next_last <= 0;
                         prev_valid <= 0;
+                        prev_pos_x <= 0;
+                        prev_pos_y <= 0;
+                        prev_pos_z <= 0;
                     end
                 end
 

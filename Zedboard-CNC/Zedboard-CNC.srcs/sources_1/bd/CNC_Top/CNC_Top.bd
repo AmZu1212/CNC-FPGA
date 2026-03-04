@@ -1414,9 +1414,9 @@
           "DriverController_X/rst",
           "DriverController_Y/rst",
           "DriverController_Z/rst",
-          "GCODE_Parser_0/rst",
           "GcodeFetcher_0/rst",
-          "XYZ_Axis_Coordinator_0/rst"
+          "XYZ_Axis_Coordinator_0/rst",
+          "GCODE_Parser_0/rst"
         ]
       },
       "Right_1": {
@@ -1505,9 +1505,9 @@
           "DriverController_X/clk",
           "DriverController_Y/clk",
           "DriverController_Z/clk",
-          "GCODE_Parser_0/clk",
           "GcodeFetcher_0/clk",
-          "XYZ_Axis_Coordinator_0/clk"
+          "XYZ_Axis_Coordinator_0/clk",
+          "GCODE_Parser_0/clk"
         ]
       },
       "sys_clock_1": {
