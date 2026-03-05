@@ -59,6 +59,12 @@ module CNC_Top_GcodeFetcher_0_0 (
   rst,
   rewind,
   cmd_ready,
+  x,
+  y,
+  z,
+  speed,
+  interconnect_in,
+  interconnect_out,
   cmd_valid,
   cmd_last,
   cmd_speed,
@@ -77,6 +83,12 @@ input wire clk;
 input wire rst;
 input wire rewind;
 input wire cmd_ready;
+input wire [31 : 0] x;
+input wire [31 : 0] y;
+input wire [31 : 0] z;
+input wire [7 : 0] speed;
+input wire [7 : 0] interconnect_in;
+output wire [7 : 0] interconnect_out;
 output wire cmd_valid;
 output wire cmd_last;
 output wire [7 : 0] cmd_speed;
@@ -89,6 +101,12 @@ output wire [31 : 0] cmd_pos_z;
     .rst(rst),
     .rewind(rewind),
     .cmd_ready(cmd_ready),
+    .x(x),
+    .y(y),
+    .z(z),
+    .speed(speed),
+    .interconnect_in(interconnect_in),
+    .interconnect_out(interconnect_out),
     .cmd_valid(cmd_valid),
     .cmd_last(cmd_last),
     .cmd_speed(cmd_speed),
