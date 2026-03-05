@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.tcl"
+  variable script "E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "SD_System_axi_gpio_1_0_synth_1" START { ROLLUP_AUTO }
+set_param bd.open.in_stealth_mode 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
@@ -66,21 +67,21 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.cache/wt [current_project]
-set_property parent.project_path X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.xpr [current_project]
+set_property webtalk.parent_dir E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.cache/wt [current_project]
+set_property parent.project_path E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/zuabi/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/AmZu/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
-set_property ip_output_repo x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.cache/ip [current_project]
+set_property ip_output_repo e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.srcs/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.xci
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.xdc]
+read_ip -quiet E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.srcs/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.xci
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -96,7 +97,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1 -new_name SD_System_axi_gpio_1_0 -ip [get_ips SD_System_axi_gpio_1_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1 -new_name SD_System_axi_gpio_1_0 -ip [get_ips SD_System_axi_gpio_1_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -151,32 +152,32 @@ generate_parallel_reports -reports { "report_utilization -file SD_System_axi_gpi
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.dcp x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.dcp
+  file copy -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.dcp e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v
+  write_verilog -force -mode synth_stub e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl
+  write_vhdl -force -mode synth_stub e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.v
+  write_verilog -force -mode funcsim e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -186,32 +187,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.dcp x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.dcp
+  file copy -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0.dcp e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_stub.v x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v
+  file rename -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_stub.v e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_stub.vhdl x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl
+  file rename -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_stub.vhdl e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_sim_netlist.v x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.v
+  file rename -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_sim_netlist.v e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_sim_netlist.vhdl x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.vhdl
+  file rename -force E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_axi_gpio_1_0_synth_1/SD_System_axi_gpio_1_0_sim_netlist.vhdl e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -219,15 +220,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0]} {
+if {[file isdir E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0]} {
   catch { 
-    file copy -force x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0
+    file copy -force e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.v E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0
   }
 }
 
-if {[file isdir X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0]} {
+if {[file isdir E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0]} {
   catch { 
-    file copy -force x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0
+    file copy -force e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_1_0/SD_System_axi_gpio_1_0_stub.vhdl E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.ip_user_files/ip/SD_System_axi_gpio_1_0
   }
 }
 file delete __synthesis_is_running__

@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
 // Date        : Thu Dec 25 21:41:53 2025
 // Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_0/SD_System_axi_gpio_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top SD_System_axi_gpio_0_0 -prefix
+//               SD_System_axi_gpio_0_0_ SD_System_axi_gpio_0_0_stub.v
 // Design      : SD_System_axi_gpio_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

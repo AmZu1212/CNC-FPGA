@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Thu Dec 25 21:41:51 2025
-// Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+// Date        : Thu Mar  5 13:26:46 2026
+// Host        : OBSIDIAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_Interconnect_Manager_0_0/SD_System_Interconnect_Manager_0_0_sim_netlist.v
+//               e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_Interconnect_Manager_0_0/SD_System_Interconnect_Manager_0_0_sim_netlist.v
 // Design      : SD_System_Interconnect_Manager_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,7 +27,7 @@ module SD_System_Interconnect_Manager_0_0
     led);
   input [31:0]X;
   input [31:0]Y;
-  input [15:0]Z;
+  input [31:0]Z;
   input [7:0]CMD;
   input [7:0]PS_Channel;
   input switch0;
@@ -39,7 +39,7 @@ module SD_System_Interconnect_Manager_0_0
   wire [7:0]PS_Channel;
   wire [31:0]X;
   wire [31:0]Y;
-  wire [15:0]Z;
+  wire [31:0]Z;
   wire [4:0]\^led ;
   wire switch0;
 
@@ -77,7 +77,7 @@ module SD_System_Interconnect_Manager_0_0_Interconnect_Manager
   output [4:0]led;
   input [31:0]X;
   input [31:0]Y;
-  input [15:0]Z;
+  input [31:0]Z;
   input [7:0]CMD;
   input [7:0]PS_Channel;
 
@@ -85,7 +85,7 @@ module SD_System_Interconnect_Manager_0_0_Interconnect_Manager
   wire [7:0]PS_Channel;
   wire [31:0]X;
   wire [31:0]Y;
-  wire [15:0]Z;
+  wire [31:0]Z;
   wire [4:0]led;
   wire \led0_inferred__0/led[1]_INST_0_i_1_n_0 ;
   wire \led0_inferred__0/led[1]_INST_0_i_2_n_0 ;
@@ -95,6 +95,10 @@ module SD_System_Interconnect_Manager_0_0_Interconnect_Manager
   wire \led0_inferred__0/led[1]_INST_0_i_6_n_0 ;
   wire \led0_inferred__1/led[2]_INST_0_i_1_n_0 ;
   wire \led0_inferred__1/led[2]_INST_0_i_2_n_0 ;
+  wire \led0_inferred__1/led[2]_INST_0_i_3_n_0 ;
+  wire \led0_inferred__1/led[2]_INST_0_i_4_n_0 ;
+  wire \led0_inferred__1/led[2]_INST_0_i_5_n_0 ;
+  wire \led0_inferred__1/led[2]_INST_0_i_6_n_0 ;
   wire \led0_inferred__2/led[3]_INST_0_i_1_n_0 ;
   wire \led0_inferred__3/led[4]_INST_0_i_1_n_0 ;
   wire \led[0]_INST_0_i_1_n_0 ;
@@ -173,33 +177,69 @@ module SD_System_Interconnect_Manager_0_0_Interconnect_Manager
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \led0_inferred__1/led[2]_INST_0 
-       (.I0(Z[2]),
-        .I1(Z[3]),
-        .I2(Z[0]),
-        .I3(Z[1]),
-        .I4(\led0_inferred__1/led[2]_INST_0_i_1_n_0 ),
-        .I5(\led0_inferred__1/led[2]_INST_0_i_2_n_0 ),
+       (.I0(\led0_inferred__1/led[2]_INST_0_i_1_n_0 ),
+        .I1(\led0_inferred__1/led[2]_INST_0_i_2_n_0 ),
+        .I2(\led0_inferred__1/led[2]_INST_0_i_3_n_0 ),
+        .I3(\led0_inferred__1/led[2]_INST_0_i_4_n_0 ),
+        .I4(\led0_inferred__1/led[2]_INST_0_i_5_n_0 ),
+        .I5(\led0_inferred__1/led[2]_INST_0_i_6_n_0 ),
         .O(led[2]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \led0_inferred__1/led[2]_INST_0_i_1 
-       (.I0(Z[14]),
-        .I1(Z[15]),
-        .I2(Z[12]),
-        .I3(Z[13]),
-        .I4(Z[11]),
-        .I5(Z[10]),
+       (.I0(Z[12]),
+        .I1(Z[13]),
+        .I2(Z[10]),
+        .I3(Z[11]),
+        .I4(Z[9]),
+        .I5(Z[8]),
         .O(\led0_inferred__1/led[2]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \led0_inferred__1/led[2]_INST_0_i_2 
-       (.I0(Z[8]),
-        .I1(Z[9]),
-        .I2(Z[6]),
-        .I3(Z[7]),
-        .I4(Z[5]),
-        .I5(Z[4]),
+       (.I0(Z[18]),
+        .I1(Z[19]),
+        .I2(Z[16]),
+        .I3(Z[17]),
+        .I4(Z[15]),
+        .I5(Z[14]),
         .O(\led0_inferred__1/led[2]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \led0_inferred__1/led[2]_INST_0_i_3 
+       (.I0(Z[30]),
+        .I1(Z[31]),
+        .I2(Z[28]),
+        .I3(Z[29]),
+        .I4(Z[27]),
+        .I5(Z[26]),
+        .O(\led0_inferred__1/led[2]_INST_0_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \led0_inferred__1/led[2]_INST_0_i_4 
+       (.I0(Z[24]),
+        .I1(Z[25]),
+        .I2(Z[22]),
+        .I3(Z[23]),
+        .I4(Z[21]),
+        .I5(Z[20]),
+        .O(\led0_inferred__1/led[2]_INST_0_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \led0_inferred__1/led[2]_INST_0_i_5 
+       (.I0(Z[0]),
+        .I1(Z[1]),
+        .O(\led0_inferred__1/led[2]_INST_0_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \led0_inferred__1/led[2]_INST_0_i_6 
+       (.I0(Z[6]),
+        .I1(Z[7]),
+        .I2(Z[4]),
+        .I3(Z[5]),
+        .I4(Z[3]),
+        .I5(Z[2]),
+        .O(\led0_inferred__1/led[2]_INST_0_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hFFFEFFFF)) 
     \led0_inferred__2/led[3]_INST_0 

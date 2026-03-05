@@ -1343,7 +1343,7 @@
             "value": "1"
           },
           "C_GPIO_WIDTH": {
-            "value": "16"
+            "value": "32"
           },
           "GPIO_BOARD_INTERFACE": {
             "value": "Custom"
@@ -1404,7 +1404,7 @@
           },
           "Z": {
             "direction": "I",
-            "left": "15",
+            "left": "31",
             "right": "0"
           },
           "CMD": {

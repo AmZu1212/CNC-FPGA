@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -80,13 +80,13 @@ input wire s_sc_aclk;
 input wire s_sc_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC REQ" *)
 (* X_INTERFACE_MODE = "slave" *)
-input wire [3 : 0] s_sc_req;
+input wire [4 : 0] s_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC INFO" *)
-input wire [3 : 0] s_sc_info;
+input wire [4 : 0] s_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC SEND" *)
-input wire [3 : 0] s_sc_send;
+input wire [4 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
-output wire [3 : 0] s_sc_recv;
+output wire [4 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
 input wire [8 : 0] s_sc_payld;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
@@ -118,13 +118,13 @@ output wire [8 : 0] m_sc_payld;
     .C_FIFO_OUTPUT_REG(1),
     .C_ENABLE_PIPELINING(8'H01),
     .C_SYNCHRONIZATION_STAGES(3),
-    .C_NUM_SI(4),
+    .C_NUM_SI(5),
     .C_NUM_MI(1),
     .C_CHANNEL(4),
     .C_PAYLD_WIDTH(9),
-    .C_S_NUM_BYTES_ARRAY(128'H00000004000000040000000400000004),
+    .C_S_NUM_BYTES_ARRAY(160'H0000000400000004000000040000000400000004),
     .C_M_NUM_BYTES_ARRAY(32'H00000004),
-    .C_PRIORITY_ARB_ARRAY(4'B0000),
+    .C_PRIORITY_ARB_ARRAY(5'B00000),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
     .C_SC_ROUTE_WIDTH(3),

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Dec 25 21:48:17 2025
-| Host             : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+| Date             : Thu Mar  5 13:28:41 2026
+| Host             : OBSIDIAN running 64-bit major release  (build 9200)
 | Command          : report_power -file SD_System_wrapper_power_routed.rpt -pb SD_System_wrapper_power_summary_routed.pb -rpx SD_System_wrapper_power_routed.rpx
 | Design           : SD_System_wrapper
 | Device           : xc7z020clg484-1
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.687        |
+| Total On-Chip Power (W)  | 1.689        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.542        |
-| Device Static (W)        | 0.144        |
+| Dynamic (W)              | 1.544        |
+| Device Static (W)        | 0.145        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 65.5         |
 | Junction Temperature (C) | 44.5         |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.007 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3226 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     1069 |     53200 |            2.01 |
-|   Register              |    <0.001 |     1434 |    106400 |            1.35 |
+| Clocks                  |     0.009 |        3 |       --- |             --- |
+| Slice Logic             |     0.003 |     3291 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     1128 |     53200 |            2.12 |
+|   Register              |    <0.001 |     1496 |    106400 |            1.41 |
 |   CARRY4                |    <0.001 |        5 |     13300 |            0.04 |
 |   Others                |     0.000 |      449 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        2 |     17400 |            0.01 |
-| Signals                 |     0.003 |     2257 |       --- |             --- |
+| Signals                 |     0.003 |     2321 |       --- |             --- |
 | I/O                     |    <0.001 |        9 |       200 |            4.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
-| Static Power            |     0.144 |          |           |                 |
-| Total                   |     1.687 |          |           |                 |
+| Static Power            |     0.145 |          |           |                 |
+| Total                   |     1.689 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.013 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.030 |       0.015 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,14 +149,18 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| SD_System_wrapper        |     1.542 |
-|   SD_System_i            |     1.542 |
+| SD_System_wrapper        |     1.544 |
+|   SD_System_i            |     1.544 |
 |     X_GPIO               |     0.001 |
 |       U0                 |     0.001 |
-|     axi_smc              |     0.009 |
-|       inst               |     0.009 |
-|     processing_system7_0 |     1.529 |
-|       inst               |     1.529 |
+|     Y_GPIO               |     0.001 |
+|       U0                 |     0.001 |
+|     Z_GPIO               |     0.001 |
+|       U0                 |     0.001 |
+|     axi_smc              |     0.010 |
+|       inst               |     0.010 |
+|     processing_system7_0 |     1.530 |
+|       inst               |     1.530 |
 +--------------------------+-----------+
 
 

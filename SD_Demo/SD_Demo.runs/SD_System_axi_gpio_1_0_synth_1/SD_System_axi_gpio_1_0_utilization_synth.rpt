@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Dec 25 20:41:01 2025
-| Host         : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+| Date         : Thu Mar  5 13:26:45 2026
+| Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file SD_System_axi_gpio_1_0_utilization_synth.rpt -pb SD_System_axi_gpio_1_0_utilization_synth.pb
 | Design       : SD_System_axi_gpio_1_0
 | Device       : xc7z020clg484-1
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             |   64 |     0 |          0 |     53200 |  0.12 |
 |   LUT as Logic          |   64 |     0 |          0 |     53200 |  0.12 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         |   96 |     0 |          0 |    106400 |  0.09 |
-|   Register as Flip Flop |   96 |     0 |          0 |    106400 |  0.09 |
+| Slice Registers         |  158 |     0 |          0 |    106400 |  0.15 |
+|   Register as Flip Flop |  158 |     0 |          0 |    106400 |  0.15 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 95    |          Yes |       Reset |            - |
+| 157   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,12 +149,12 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   95 |        Flop & Latch |
-| LUT6     |   24 |                 LUT |
-| LUT4     |   20 |                 LUT |
-| LUT5     |    9 |                 LUT |
+| FDRE     |  157 |        Flop & Latch |
+| LUT6     |   40 |                 LUT |
 | LUT2     |    9 |                 LUT |
+| LUT5     |    8 |                 LUT |
 | LUT3     |    7 |                 LUT |
+| LUT4     |    4 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -68,7 +68,7 @@ module SD_System_Interconnect_Manager_0_0 (
 
 input wire [31 : 0] X;
 input wire [31 : 0] Y;
-input wire [15 : 0] Z;
+input wire [31 : 0] Z;
 input wire [7 : 0] CMD;
 input wire [7 : 0] PS_Channel;
 input wire switch0;

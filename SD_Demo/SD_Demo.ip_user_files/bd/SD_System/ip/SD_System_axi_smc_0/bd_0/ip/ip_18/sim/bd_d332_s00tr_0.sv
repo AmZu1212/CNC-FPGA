@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -333,7 +333,7 @@ output wire m_axi_rready;
     .C_NUM_WRITE_THREADS(1),
     .C_MEP_IDENTIFIER_WIDTH(1),
     .C_MEP_IDENTIFIER(1),
-    .C_SEP_ROUTE_WIDTH(2),
+    .C_SEP_ROUTE_WIDTH(3),
     .C_RDATA_WIDTH(32),
     .C_WDATA_WIDTH(32),
     .C_S_ID_WIDTH(12),

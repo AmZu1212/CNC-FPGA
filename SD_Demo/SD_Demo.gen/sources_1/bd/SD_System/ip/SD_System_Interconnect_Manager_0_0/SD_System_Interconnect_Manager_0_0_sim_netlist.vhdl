@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Thu Dec 25 21:41:51 2025
--- Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+-- Date        : Thu Mar  5 13:26:46 2026
+-- Host        : OBSIDIAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_Interconnect_Manager_0_0/SD_System_Interconnect_Manager_0_0_sim_netlist.vhdl
+--               e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_Interconnect_Manager_0_0/SD_System_Interconnect_Manager_0_0_sim_netlist.vhdl
 -- Design      : SD_System_Interconnect_Manager_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,7 +20,7 @@ entity SD_System_Interconnect_Manager_0_0_Interconnect_Manager is
     led : out STD_LOGIC_VECTOR ( 4 downto 0 );
     X : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Y : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Z : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Z : in STD_LOGIC_VECTOR ( 31 downto 0 );
     CMD : in STD_LOGIC_VECTOR ( 7 downto 0 );
     PS_Channel : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
@@ -37,6 +37,10 @@ architecture STRUCTURE of SD_System_Interconnect_Manager_0_0_Interconnect_Manage
   signal \led0_inferred__0/led[1]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal \led0_inferred__1/led[2]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \led0_inferred__1/led[2]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \led0_inferred__1/led[2]_INST_0_i_3_n_0\ : STD_LOGIC;
+  signal \led0_inferred__1/led[2]_INST_0_i_4_n_0\ : STD_LOGIC;
+  signal \led0_inferred__1/led[2]_INST_0_i_5_n_0\ : STD_LOGIC;
+  signal \led0_inferred__1/led[2]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal \led0_inferred__2/led[3]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \led0_inferred__3/led[4]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \led[0]_INST_0_i_1_n_0\ : STD_LOGIC;
@@ -138,12 +142,12 @@ begin
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => Z(2),
-      I1 => Z(3),
-      I2 => Z(0),
-      I3 => Z(1),
-      I4 => \led0_inferred__1/led[2]_INST_0_i_1_n_0\,
-      I5 => \led0_inferred__1/led[2]_INST_0_i_2_n_0\,
+      I0 => \led0_inferred__1/led[2]_INST_0_i_1_n_0\,
+      I1 => \led0_inferred__1/led[2]_INST_0_i_2_n_0\,
+      I2 => \led0_inferred__1/led[2]_INST_0_i_3_n_0\,
+      I3 => \led0_inferred__1/led[2]_INST_0_i_4_n_0\,
+      I4 => \led0_inferred__1/led[2]_INST_0_i_5_n_0\,
+      I5 => \led0_inferred__1/led[2]_INST_0_i_6_n_0\,
       O => led(2)
     );
 \led0_inferred__1/led[2]_INST_0_i_1\: unisim.vcomponents.LUT6
@@ -151,12 +155,12 @@ begin
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => Z(14),
-      I1 => Z(15),
-      I2 => Z(12),
-      I3 => Z(13),
-      I4 => Z(11),
-      I5 => Z(10),
+      I0 => Z(12),
+      I1 => Z(13),
+      I2 => Z(10),
+      I3 => Z(11),
+      I4 => Z(9),
+      I5 => Z(8),
       O => \led0_inferred__1/led[2]_INST_0_i_1_n_0\
     );
 \led0_inferred__1/led[2]_INST_0_i_2\: unisim.vcomponents.LUT6
@@ -164,13 +168,61 @@ begin
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => Z(8),
-      I1 => Z(9),
-      I2 => Z(6),
-      I3 => Z(7),
-      I4 => Z(5),
-      I5 => Z(4),
+      I0 => Z(18),
+      I1 => Z(19),
+      I2 => Z(16),
+      I3 => Z(17),
+      I4 => Z(15),
+      I5 => Z(14),
       O => \led0_inferred__1/led[2]_INST_0_i_2_n_0\
+    );
+\led0_inferred__1/led[2]_INST_0_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => Z(30),
+      I1 => Z(31),
+      I2 => Z(28),
+      I3 => Z(29),
+      I4 => Z(27),
+      I5 => Z(26),
+      O => \led0_inferred__1/led[2]_INST_0_i_3_n_0\
+    );
+\led0_inferred__1/led[2]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => Z(24),
+      I1 => Z(25),
+      I2 => Z(22),
+      I3 => Z(23),
+      I4 => Z(21),
+      I5 => Z(20),
+      O => \led0_inferred__1/led[2]_INST_0_i_4_n_0\
+    );
+\led0_inferred__1/led[2]_INST_0_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => Z(0),
+      I1 => Z(1),
+      O => \led0_inferred__1/led[2]_INST_0_i_5_n_0\
+    );
+\led0_inferred__1/led[2]_INST_0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => Z(6),
+      I1 => Z(7),
+      I2 => Z(4),
+      I3 => Z(5),
+      I4 => Z(3),
+      I5 => Z(2),
+      O => \led0_inferred__1/led[2]_INST_0_i_6_n_0\
     );
 \led0_inferred__2/led[3]_INST_0\: unisim.vcomponents.LUT5
     generic map(
@@ -314,7 +366,7 @@ entity SD_System_Interconnect_Manager_0_0 is
   port (
     X : in STD_LOGIC_VECTOR ( 31 downto 0 );
     Y : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    Z : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Z : in STD_LOGIC_VECTOR ( 31 downto 0 );
     CMD : in STD_LOGIC_VECTOR ( 7 downto 0 );
     PS_Channel : in STD_LOGIC_VECTOR ( 7 downto 0 );
     switch0 : in STD_LOGIC;
@@ -361,7 +413,7 @@ inst: entity work.SD_System_Interconnect_Manager_0_0_Interconnect_Manager
       PS_Channel(7 downto 0) => PS_Channel(7 downto 0),
       X(31 downto 0) => X(31 downto 0),
       Y(31 downto 0) => Y(31 downto 0),
-      Z(15 downto 0) => Z(15 downto 0),
+      Z(31 downto 0) => Z(31 downto 0),
       led(4 downto 0) => \^led\(4 downto 0)
     );
 end STRUCTURE;

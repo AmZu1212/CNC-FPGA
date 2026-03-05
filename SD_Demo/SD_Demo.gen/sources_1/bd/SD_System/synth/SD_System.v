@@ -2,8 +2,8 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Thu Dec 25 21:40:39 2025
-//Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
+//Date        : Thu Mar  5 13:25:40 2026
+//Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target SD_System.bd
 //Design      : SD_System
 //Purpose     : IP block netlist
@@ -85,7 +85,7 @@ module SD_System
   wire [7:0]Interconnect_Manager_0_PL_Channel;
   wire [31:0]XY_GPIO_gpio_io_o;
   wire [31:0]Y_GPIO_gpio_io_o;
-  wire [15:0]Z_GPIO_gpio_io_o;
+  wire [31:0]Z_GPIO_gpio_io_o;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
   wire axi_smc_M00_AXI_ARVALID;

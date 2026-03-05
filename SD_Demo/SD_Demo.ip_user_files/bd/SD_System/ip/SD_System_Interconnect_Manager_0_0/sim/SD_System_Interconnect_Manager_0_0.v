@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -59,18 +59,18 @@ module SD_System_Interconnect_Manager_0_0 (
   Y,
   Z,
   CMD,
-  switch0,
   PS_Channel,
+  switch0,
   PL_Channel,
   led
 );
 
 input wire [31 : 0] X;
 input wire [31 : 0] Y;
-input wire [15 : 0] Z;
+input wire [31 : 0] Z;
 input wire [7 : 0] CMD;
-input wire switch0;
 input wire [7 : 0] PS_Channel;
+input wire switch0;
 output wire [7 : 0] PL_Channel;
 output wire [7 : 0] led;
 
@@ -79,8 +79,8 @@ output wire [7 : 0] led;
     .Y(Y),
     .Z(Z),
     .CMD(CMD),
-    .switch0(switch0),
     .PS_Channel(PS_Channel),
+    .switch0(switch0),
     .PL_Channel(PL_Channel),
     .led(led)
   );

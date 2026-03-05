@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Wed Dec 24 00:53:42 2025
+// Date        : Wed Dec 24 00:53:41 2025
 // Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_rst_ps7_0_100M_0/SD_System_rst_ps7_0_100M_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top SD_System_rst_ps7_0_100M_0 -prefix
+//               SD_System_rst_ps7_0_100M_0_ SD_System_rst_ps7_0_100M_0_sim_netlist.v
 // Design      : SD_System_rst_ps7_0_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,7 +70,6 @@ module SD_System_rst_ps7_0_100M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module SD_System_rst_ps7_0_100M_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -266,7 +265,6 @@ module SD_System_rst_ps7_0_100M_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module SD_System_rst_ps7_0_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -421,7 +419,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module SD_System_rst_ps7_0_100M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -538,7 +535,6 @@ module SD_System_rst_ps7_0_100M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module SD_System_rst_ps7_0_100M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -779,7 +775,6 @@ module SD_System_rst_ps7_0_100M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module SD_System_rst_ps7_0_100M_0_upcnt_n
    (Q,
     seq_clr,

@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
 -- Date        : Thu Dec 25 21:41:53 2025
 -- Host        : OBSIDIAN-NITRO running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/ip/SD_System_axi_gpio_0_3/SD_System_axi_gpio_0_3_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top SD_System_axi_gpio_0_3 -prefix
+--               SD_System_axi_gpio_0_3_ SD_System_axi_gpio_0_3_sim_netlist.vhdl
 -- Design      : SD_System_axi_gpio_0_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33,8 +33,6 @@ entity SD_System_axi_gpio_0_3_GPIO_Core is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_GPIO_Core : entity is "GPIO_Core";
 end SD_System_axi_gpio_0_3_GPIO_Core;
 
 architecture STRUCTURE of SD_System_axi_gpio_0_3_GPIO_Core is
@@ -1169,8 +1167,6 @@ entity SD_System_axi_gpio_0_3_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_pselect_f : entity is "pselect_f";
 end SD_System_axi_gpio_0_3_pselect_f;
 
 architecture STRUCTURE of SD_System_axi_gpio_0_3_pselect_f is
@@ -1236,8 +1232,6 @@ entity SD_System_axi_gpio_0_3_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_awready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_address_decoder : entity is "address_decoder";
 end SD_System_axi_gpio_0_3_address_decoder;
 
 architecture STRUCTURE of SD_System_axi_gpio_0_3_address_decoder is
@@ -1440,8 +1434,6 @@ entity SD_System_axi_gpio_0_3_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_slave_attachment : entity is "slave_attachment";
 end SD_System_axi_gpio_0_3_slave_attachment;
 
 architecture STRUCTURE of SD_System_axi_gpio_0_3_slave_attachment is
@@ -2362,8 +2354,6 @@ entity SD_System_axi_gpio_0_3_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_axi_lite_ipif : entity is "axi_lite_ipif";
 end SD_System_axi_gpio_0_3_axi_lite_ipif;
 
 architecture STRUCTURE of SD_System_axi_gpio_0_3_axi_lite_ipif is
@@ -2461,8 +2451,6 @@ entity SD_System_axi_gpio_0_3_axi_gpio is
   attribute C_TRI_DEFAULT of SD_System_axi_gpio_0_3_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of SD_System_axi_gpio_0_3_axi_gpio : entity is "32'b11111111111111111111111111111111";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of SD_System_axi_gpio_0_3_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of SD_System_axi_gpio_0_3_axi_gpio : entity is "yes";
   attribute ip_group : string;

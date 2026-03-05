@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=X:/Xilinx/Vitis/2024.2/bin;X:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;X:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:X:/Xilinx/Vivado/2024.2/bin
+  PATH=E:/Programs/Xilinx/Vitis/2024.2/bin;E:/Programs/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Programs/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Programs/Xilinx/Vivado/2024.2/bin
 else
-  PATH=X:/Xilinx/Vitis/2024.2/bin;X:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;X:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:X:/Xilinx/Vivado/2024.2/bin:$PATH
+  PATH=E:/Programs/Xilinx/Vitis/2024.2/bin;E:/Programs/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Programs/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Programs/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='X:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_Interconnect_Manager_0_0_synth_1'
+HD_PWD='E:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.runs/SD_System_Interconnect_Manager_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

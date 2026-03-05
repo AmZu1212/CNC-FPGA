@@ -1,5 +1,5 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 // -------------------------------------------------------------------------------
 
 `timescale 1 ps / 1 ps
@@ -27,7 +27,7 @@ module SD_System (
   FIXED_IO_ps_srstb,
   FIXED_IO_ps_clk,
   FIXED_IO_ps_porb,
-  leds,
+  led,
   sw0
 );
 
@@ -78,7 +78,7 @@ module SD_System (
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *)
   inout FIXED_IO_ps_porb;
   (* X_INTERFACE_IGNORE = "true" *)
-  output [7:0]leds;
+  output [7:0]led;
   (* X_INTERFACE_IGNORE = "true" *)
   input sw0;
 

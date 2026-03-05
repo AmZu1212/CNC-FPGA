@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zuabi" Host="OBSIDIAN-NITRO" Pid="99020" HostCore="12" HostMemory="016438304768">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="26880" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>

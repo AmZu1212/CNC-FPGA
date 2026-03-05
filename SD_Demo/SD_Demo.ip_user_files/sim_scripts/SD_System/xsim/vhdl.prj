@@ -5,6 +5,7 @@ vhdl xil_defaultlib  \
 "../../../bd/SD_System/ip/SD_System_axi_gpio_1_0/sim/SD_System_axi_gpio_1_0.vhd" \
 "../../../bd/SD_System/ip/SD_System_axi_gpio_0_1/sim/SD_System_axi_gpio_0_1.vhd" \
 "../../../bd/SD_System/ip/SD_System_axi_gpio_0_2/sim/SD_System_axi_gpio_0_2.vhd" \
+"../../../bd/SD_System/ip/SD_System_axi_gpio_0_3/sim/SD_System_axi_gpio_0_3.vhd" \
 
 # Do not sort compile order
 nosort

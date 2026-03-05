@@ -33,4 +33,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SD_System_a
 # IP: bd/SD_System/ip/SD_System_axi_gpio_0_3/SD_System_axi_gpio_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==SD_System_axi_gpio_0_3 || ORIG_REF_NAME==SD_System_axi_gpio_0_3} -quiet] -quiet
 
-# XDC: x:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/SD_System_ooc.xdc
+# XDC: e:/Git-Repos/CNC-FPGA/SD_Demo/SD_Demo.gen/sources_1/bd/SD_System/SD_System_ooc.xdc

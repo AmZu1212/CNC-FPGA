@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -267,7 +267,7 @@ output wire m_axi_rready;
     .C_ADDR_WIDTH(9),
     .C_M_PROTOCOL(2),
     .C_HAS_LOCK(0),
-    .C_NUM_MSC(4),
+    .C_NUM_MSC(5),
     .C_SINGLE_ISSUING(1),
     .C_M_LIMIT_READ_LENGTH(0),
     .C_M_LIMIT_WRITE_LENGTH(0),
