@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (C) 2010 - 2022 Xilinx, Inc.  All rights reserved.
-* Copyright (C) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (C) 2022 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -179,8 +179,7 @@
 * 5.4   mus  09/12/24 Updated XScuGic_Disable, XScuGic_InterruptMaptoCpu,
 *                     and XScuGic_UnmapAllInterruptsFromCpu APIs to skip
 *                     Un-mapping of interrupts in case of GICv3.
-* 5.5   ml   12/20/24 Fixed GCC warnings
-* 5.6   ml   08/10/25 Fixed ARMCLANG warning
+*
 * </pre>
 *
 ******************************************************************************/
@@ -483,8 +482,8 @@ s32  XScuGic_CfgInitialize(XScuGic *InstancePtr,
 			* the callback reference to this instance so that
 			* unhandled interrupts can be tracked.
 			*/
-			if (InstancePtr->Config->HandlerTable[Int_Id].Handler
-			     == (Xil_InterruptHandler)NULL) {
+			if ((InstancePtr->Config->HandlerTable[Int_Id].Handler
+			     == (Xil_InterruptHandler)NULL)) {
 				InstancePtr->Config->HandlerTable[Int_Id].Handler
 					= (Xil_InterruptHandler)StubHandler;
 			}
@@ -739,10 +738,9 @@ void XScuGic_Enable(XScuGic *InstancePtr, u32 Int_Id)
 void XScuGic_Disable(XScuGic *InstancePtr, u32 Int_Id)
 {
 	u32 Mask;
+	u8 Cpu_Identifier = (u8)CpuId;
 #if defined (GICv3)
 	u32 Temp;
-#else
-	u8 Cpu_Identifier = (u8)CpuId;
 #endif
 
 	/*

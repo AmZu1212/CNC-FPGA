@@ -1,6 +1,6 @@
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
+-- Build files have been written to: X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp
 -- Cache values
 // BOARD
 BOARD:STRING=zedboard
@@ -11,14 +11,11 @@ CMAKE_BUILD_TYPE:STRING=
 // Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/bsp
 
-// CMAKE MACHINE
-CMAKE_MACHINE:STRING=Zynq
-
 // Size
 CMAKE_SIZE:FILEPATH=arm-none-eabi-size
 
 // Specs file path for using CMAKE toolchain files
-CMAKE_SPECS_FILE:STRING=E:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/Xilinx.spec
+CMAKE_SPECS_FILE:STRING=X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/Xilinx.spec
 
 // Device Id
 DEVICE_ID:STRING=7z020
@@ -33,19 +30,19 @@ NUMBER_OF_SLRS:STRING=0x1
 SUBDIR_LIST:STRING=ALL
 
 // ASM FLAGS
-TOOLCHAIN_ASM_FLAGS:STRING= -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TOOLCHAIN_ASM_FLAGS:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
 
 // CXXFLAGS
-TOOLCHAIN_CXX_FLAGS:STRING= -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TOOLCHAIN_CXX_FLAGS:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
 
 // CFLAGS
-TOOLCHAIN_C_FLAGS:STRING= -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TOOLCHAIN_C_FLAGS:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
 
 // Flags used by compiler to generate dependency files
 TOOLCHAIN_DEP_FLAGS:STRING= -MMD -MP
 
 // Extra CFLAGS
-TOOLCHAIN_EXTRA_C_FLAGS:STRING= -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+TOOLCHAIN_EXTRA_C_FLAGS:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
 
 // 0:Disable exFAT, 1:Enable exFAT(Also Enables LFN)
 XILFFS_enable_exfat:BOOL=OFF
@@ -114,10 +111,10 @@ proc_assembler:STRING=arm-none-eabi-gcc
 proc_compiler:STRING=arm-none-eabi-gcc.exe
 
 // Compiler Flags used in BSP and library generation.'-c'flag stands for 'compile and assemble, but do not link'.Without this flag, gcc tries to link the code, which will fail because there is no application involved during libgen.'-O2' can be overwritten by extra compile flags.
-proc_compiler_flags:STRING= -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c
+proc_compiler_flags:STRING= -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c
 
 // Extra Compiler Flags used in BSP and library generation
-proc_extra_compiler_flags:STRING= -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns
+proc_extra_compiler_flags:STRING= -g -Wall -Wextra -fno-tree-loop-distribute-patterns
 
 // This option is not supported in the Unified Vitis IDE in this version. Change to the classic IDE if you want to use this option
 standalone_enable_sw_intrusive_profiling:STRING=None
@@ -143,6 +140,6 @@ standalone_stdout:STRING=ps7_uart_1
 // Deprecated in favor of xiltimer
 standalone_ttc_select_cntr:STRING=None
 
-// Enable xpm support
-standalone_xpm_support:BOOL=OFF
+// This option is not supported in the Unified Vitis IDE in this version. Change to the classic IDE if you want to use this option.
+standalone_xpm_support:STRING=None
 

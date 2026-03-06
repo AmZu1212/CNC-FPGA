@@ -1,5 +1,4 @@
-
-# Copyright (C) 2023 - 2025 Advanced Micro Devices, Inc.  All rights reserved.
+# Copyright (C) 2023 - 2024 Advanced Micro Devices, Inc.  All rights reserved.
 # SPDX-License-Identifier: MIT
 
 option(YOCTO "Yocto based embeddedsw FLOW" OFF)
@@ -7,9 +6,13 @@ set(CMAKE_POLICY_DEFAULT_CMP0140 OLD)
 
 if (YOCTO)
 find_package(commonmeta QUIET)
-ADD_COMPILE_DEFINITIONS(-DYOCTO_FLOW)
 endif()
 
+if("${CMAKE_HOST_NAME}" STREQUAL "Linux")
+    add_compile_options("-D__FILENAME__=\"$(subst ${CMAKE_SOURCE_DIR}/,,$(abspath $<))\"")
+else()
+    add_compile_options("-D__FILENAME__='__FILE__'")
+endif()
 set (CMAKE_INSTALL_LIBDIR "lib")
 function (collector_create name base)
   set_property (GLOBAL PROPERTY "COLLECT_${name}_LIST")
@@ -39,41 +42,6 @@ function (collect name)
   endforeach ()
   set_property (GLOBAL APPEND PROPERTY "COLLECT_${name}_LIST" "${_list}")
 endfunction (collect)
-
-function(collect_by_extension name extension)
-  # Retrieve the collector's base directory
-  collector_base(_base "${name}")
-
-  string(COMPARE NOTEQUAL "${_base}" "" _has_base)
-  if(NOT _has_base)
-    message(FATAL_ERROR "No base directory set for collector '${name}'")
-  endif()
-
-  # Current directory where this function is called
-  set(current_dir "${CMAKE_CURRENT_LIST_DIR}")
-
-  # Collect files matching the extension in the current directory and subdirectories
-  file(GLOB files CONFIGURE_DEPENDS "${current_dir}/${extension}")
-
-  # Initialize list to store adjusted file paths
-  set(_list)
-
-  # Process each file
-  foreach(s IN LISTS files)
-    # Ensure we have the absolute path (GLOB_RECURSE provides absolute paths)
-    get_filename_component(abs_s "${s}" ABSOLUTE)
-
-    # Adjust the path to be relative to the collector's base directory
-    file(RELATIVE_PATH rel_s "${_base}" "${abs_s}")
-
-    # Append the adjusted path to the list
-    list(APPEND _list "${rel_s}")
-  endforeach()
-
-  # Append the adjusted paths to the collector's list property
-  set_property(GLOBAL APPEND PROPERTY "COLLECT_${name}_LIST" "${_list}")
-endfunction()
-
 
 function(LIST_INDEX index match PROP)
     foreach (prop ${PROP})
@@ -108,19 +76,6 @@ endmacro()
 
 function (linker_gen path)
     if (NOT EXISTS "${USER_LINKER_SCRIPT}")
-	if ("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "microblaze")
-		if (DEFINED BASE_VECTOR)
-			MATH(EXPR V_RESET "${BASE_VECTOR}" OUTPUT_FORMAT HEXADECIMAL)
-			MATH(EXPR V_EXCEPTION "${BASE_VECTOR} + 0x8" OUTPUT_FORMAT HEXADECIMAL)
-			MATH(EXPR V_INTERRUPT "${BASE_VECTOR} + 0x10" OUTPUT_FORMAT HEXADECIMAL)
-			MATH(EXPR V_HWEXCEPTION "${BASE_VECTOR} + 0x20" OUTPUT_FORMAT HEXADECIMAL)
-		else()
-			set(V_RESET 0x0)
-			set(V_EXCEPTION 0x8)
-			set(V_INTERRUPT 0x10)
-			set(V_HWEXCEPTION 0x20)
-		endif()
-	endif()
 	if (NOT DEFINED STACK_SIZE)
 		if(("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "microblaze") OR
 			("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "microblaze_riscv"))
@@ -291,38 +246,6 @@ function(add_dependency_on_bsp sources)
     file(GLOB bsp_archives "${CMAKE_LIBRARY_PATH}/*.a")
     set_source_files_properties(${${sources}} OBJECT_DEPENDS "${bsp_archives}")
   endif()
-endfunction()
-
-function(split_string_by_length INPUT_STRING CHUNK_SIZE OUTPUT_LIST)
-    string(LENGTH "${INPUT_STRING}" STRING_LENGTH)
-    set(INDEX 0)
-    set(RESULT)
-
-    while(INDEX LESS STRING_LENGTH)
-        math(EXPR NEXT_INDEX "${INDEX} + ${CHUNK_SIZE}")
-        string(SUBSTRING "${INPUT_STRING}" ${INDEX} ${CHUNK_SIZE} CHUNK)
-        list(APPEND RESULT "${CHUNK}")
-        set(INDEX "${NEXT_INDEX}")
-    endwhile()
-
-    set(${OUTPUT_LIST} "${RESULT}" PARENT_SCOPE)
-endfunction()
-
-function(print_build_info_target target_name compiler_flags compile_defs linker_flags linker_command)
-    split_string_by_length("Compiler Flags: ${compiler_flags}  ${compile_defs}" 100 cflag_print)
-    split_string_by_length("Linker Flags: ${linker_flags} ${linker_command}" 100 linker_flag_print)
-
-    add_custom_target(print_build_info ALL
-        COMMAND ${CMAKE_COMMAND} -E echo ""
-        COMMAND ${CMAKE_COMMAND} -E cmake_echo_color ${cflag_print}
-        COMMAND ${CMAKE_COMMAND} -E echo ""
-        COMMAND ${CMAKE_COMMAND} -E cmake_echo_color ${linker_flag_print}
-        COMMAND ${CMAKE_COMMAND} -E echo ""
-        COMMAND ${CMAKE_COMMAND} -E echo "==========================================="
-        COMMENT "==========Application Build Information =========="
-        VERBATIM
-    )
-    add_dependencies(${target_name} print_build_info)
 endfunction()
 
 macro(remove_pg)

@@ -1,4 +1,4 @@
-# Copyright (C) 2023 - 2025 Advanced Micro Devices, Inc.  All rights reserved.
+# Copyright (C) 2023 - 2024 Advanced Micro Devices, Inc.  All rights reserved.
 # SPDX-License-Identifier: MIT
 cmake_minimum_required(VERSION 3.3)
 
@@ -150,11 +150,9 @@ if (("${XILTIMER_sleep_timer}" STREQUAL "Default") OR
 	set(XSLEEPTIMER_FREQ XPAR_CPU_TIMESTAMP_CLK_FREQ)
     endif()
 
-    if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexr5")
+    if(("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexr5") OR
+       ("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexr52"))
 	set(XSLEEPTIMER_FREQ XPAR_CPU_CORE_CLOCK_FREQ_HZ/64)
-    endif()
-    if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexr52")
-	set(XSLEEPTIMER_FREQ XPAR_CPU_TIMESTAMP_CLK_FREQ)
     endif()
 
     if(("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "cortexa9"))
@@ -201,11 +199,11 @@ if (${CONFIG_AXI_TIMER})
 endif()
 
 if(${CONFIG_TTCPS})
-    list(REVERSE TOTAL_TTCPS_PROP_LIST)
     if(XILTIMER_sleep_timer IN_LIST TTCPS_NUM_DRIVER_INSTANCES)
         set(XSLEEPTIMER_IS_TTCPS " ")
         set(index 0)
         LIST_INDEX(${index} ${XILTIMER_sleep_timer} "${TTCPS_NUM_DRIVER_INSTANCES}")
+        list(REVERSE TOTAL_TTCPS_PROP_LIST)
         list(GET TOTAL_TTCPS_PROP_LIST ${index} reg)
         set(tmp ${${reg}})
         list(GET tmp -2 base_addr)

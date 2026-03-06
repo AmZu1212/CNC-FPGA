@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (c) 2009 - 2021 Xilinx, Inc.  All rights reserved.
-* Copyright (C) 2024 - 2025 Advanced Micro Devices, Inc.  All rights reserved.
+* Copyright (C) 2024 Advanced Micro Devices, Inc.  All rights reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -28,8 +28,6 @@
 * 9.2   adk  08/05/24 Define __FILENAME__ macro in cmake which points to
 * 		      just name of file instead of full file path, replace
 * 		      __FILE__ with __FILENAME__ in assert APIs.
-* 9.3   vmt  03/03/25 Fixed compilation warning of strrchr
-*                     [-Wbuiltin-declaration-mismatch]
 * </pre>
 *
 ******************************************************************************/
@@ -42,7 +40,6 @@
 #define XIL_ASSERT_H	/* by using protection macros */
 
 #include "xil_types.h"
-#include <string.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -55,8 +52,6 @@ extern "C" {
 /************************** Constant Definitions *****************************/
 #if ! defined(SDT)
 #define __FILENAME__	__FILE__
-#else
-#define __FILENAME__	(strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__))
 #endif
 
 #define XIL_ASSERT_NONE     0U

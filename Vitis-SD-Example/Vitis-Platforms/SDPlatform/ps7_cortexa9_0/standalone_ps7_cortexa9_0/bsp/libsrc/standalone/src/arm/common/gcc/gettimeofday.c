@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2024 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -16,9 +16,6 @@ extern "C" {
 __attribute__((weak)) int
 gettimeofday (struct timeval *restrict tp, void * restrict tzp);
 
-__attribute__((weak)) int
-_gettimeofday (struct timeval *restrict tp, void * restrict tzp);
-
 #ifdef __cplusplus
 }
 #endif
@@ -30,13 +27,6 @@ _gettimeofday (struct timeval *restrict tp, void * restrict tzp);
  */
 __attribute__((weak)) int
 gettimeofday (struct timeval *restrict tp, void * restrict tzp)
-{
-  (void)tp;
-  (void)tzp;
-  return 0;
-}
-__attribute__((weak)) int
-_gettimeofday (struct timeval *restrict tp, void * restrict tzp)
 {
   (void)tp;
   (void)tzp;

@@ -1,4 +1,4 @@
-# Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright (c) 2023 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 # SPDX-License-Identifier: MIT
 
 collect (PROJECT_LIB_SOURCES print.c)
@@ -34,9 +34,6 @@ collect (PROJECT_LIB_SOURCES outbyte.c)
 collect (PROJECT_LIB_SOURCES inbyte.c)
 collect (PROJECT_LIB_HEADERS xmem_config.h)
 collect (PROJECT_LIB_HEADERS xil_cryptoalginfo.h)
-collect (PROJECT_LIB_SOURCES xpm_init.c)
-collect (PROJECT_LIB_HEADERS xpm_init.h)
-
 if(("${CMAKE_MACHINE}" STREQUAL "Versal") OR
    ("${CMAKE_MACHINE}" STREQUAL "VersalNet") OR
    ("${CMAKE_MACHINE}" STREQUAL "ZynqMP"))
@@ -90,9 +87,5 @@ add_subdirectory(versal)
 endif()
 
 if("${CMAKE_MACHINE}" STREQUAL "VersalNet")
-	if("${CMAKE_SUBMACHINE}" STREQUAL "VersalNet")
-		add_subdirectory(versal_net)
-	elseif("${CMAKE_SUBMACHINE}" STREQUAL "Versal_2VE_2VM")
-		add_subdirectory(versal_2ve_2vm)
-	endif()
+add_subdirectory(versal_net)
 endif()

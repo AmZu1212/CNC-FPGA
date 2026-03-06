@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (C) 2010 - 2021 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2022 - 2023 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -51,9 +51,7 @@
 *                       the same operation for 2 times.
 * 3.18  ml    09/07/23  Added U to numerical to fix MISRA-C violation for Rule 10.4
 * 3.18  ml    09/08/23  Typecast with u32 to fix MISRA-C violation for Rule 12.2 and 10.7
-* 3.18  ml    09/08/23  Added comments to fix HIS COMF violations.
-* 3.21  ml    04/03/25  Added support for interrupt handling when a single interrupt
-*                       is used for all three counters.
+* 3.18  ml     09/08/23 Added comments to fix HIS COMF violations.
 * </pre>
 *
 ******************************************************************************/
@@ -61,7 +59,6 @@
 /***************************** Include Files *********************************/
 
 #include "xttcps.h"
-#include "xparameters.h"
 #if defined  (XPM_SUPPORT)
 #include "pm_defs.h"
 #include "pm_api_sys.h"
@@ -79,11 +76,7 @@
 
 /************************** Function Prototypes ******************************/
 static void StubStatusHandler(const void *CallBackRef, u32 StatusEvent);
-static u32 GetIndexFromBaseAddr(u32 BaseAddress);
 /************************** Variable Definitions *****************************/
-
-static XTtcPs_StatusHandlerTableEntry StatusHandlerTable[XPAR_XTTCPS_NUM_INSTANCES];
-extern XTtcPs_Config XTtcPs_ConfigTable[XPAR_XTTCPS_NUM_INSTANCES];
 
 #if defined  (XPM_SUPPORT)
 /*
@@ -100,7 +93,8 @@ extern XTtcPs_Config XTtcPs_ConfigTable[XPAR_XTTCPS_NUM_INSTANCES];
  */
 static u32 TtcNodeState[XPAR_XTTCPS_NUM_INSTANCES];
 
-#ifndef SDT
+extern XTtcPs_Config XTtcPs_ConfigTable[XPAR_XTTCPS_NUM_INSTANCES];
+
 static u32 GetTtcNodeAddress(u16 DeviceId)
 {
 	u32 Index;
@@ -113,19 +107,6 @@ static u32 GetTtcNodeAddress(u16 DeviceId)
 	return 0;
 }
 #endif
-#endif
-
-static u32 GetIndexFromBaseAddr(u32 BaseAddress) {
-        u32 Index;
-
-        for (Index = 0U; Index < XPAR_XTTCPS_NUM_INSTANCES; Index++) {
-                if ((XTtcPs_ConfigTable[Index].BaseAddress == BaseAddress) ||
-                     !BaseAddress) {
-                        break;
-                }
-        }
-        return Index;
-}
 
 /*****************************************************************************/
 /**
@@ -170,7 +151,6 @@ s32 XTtcPs_CfgInitialize(XTtcPs *InstancePtr, XTtcPs_Config *ConfigPtr,
 	u32 IsStartResult;
 #if defined  (XPM_SUPPORT)
 	u32 TtcNodeAddr;
-	u32 Index;
 #endif
 #ifdef SDT
 	u16 Count;
@@ -183,11 +163,7 @@ s32 XTtcPs_CfgInitialize(XTtcPs *InstancePtr, XTtcPs_Config *ConfigPtr,
 	Xil_AssertNonvoid(ConfigPtr != NULL);
 
 #if defined  (XPM_SUPPORT)
-#ifndef SDT
 	TtcNodeAddr = GetTtcNodeAddress((ConfigPtr->DeviceId / 3) * 3);
-#else
-	TtcNodeAddr = ConfigPtr->BaseAddress;
-#endif
 
 	Status = XPm_RequestNode(XpmGetNodeId((UINTPTR)TtcNodeAddr), PM_CAP_ACCESS, MAX_QOS, REQUEST_ACK_BLOCKING);
 	if (XST_SUCCESS != Status) {
@@ -200,12 +176,8 @@ s32 XTtcPs_CfgInitialize(XTtcPs *InstancePtr, XTtcPs_Config *ConfigPtr,
 		xdbg_printf(XDBG_DEBUG_ERROR, "Ttc: XPm_ResetAssert() ERROR=0x%x \r\n", Status);
 		return Status;
 	}
-#ifndef SDT
+
 	TtcNodeState[ConfigPtr->DeviceId]++;
-#else
-	Index = GetIndexFromBaseAddr(ConfigPtr->BaseAddress);
-	TtcNodeState[Index]++;
-#endif
 #endif
 
 	/*
@@ -322,18 +294,12 @@ u32 XTtcPs_Release(XTtcPs *InstancePtr)
 	u32 Status = XST_SUCCESS;
 #if defined (XPM_SUPPORT)
 	u32 TtcNodeAddr;
-	u32 Index;
 #endif
 
 	Xil_AssertNonvoid(InstancePtr != NULL);
 
 #if defined (XPM_SUPPORT)
-#ifndef SDT
 	if (InstancePtr->Config.DeviceId >= XPAR_XTTCPS_NUM_INSTANCES) {
-#else
-	Index = GetIndexFromBaseAddr(InstancePtr->Config.BaseAddress);
-	if (Index >= XPAR_XTTCPS_NUM_INSTANCES) {
-#endif
 		Status = XST_FAILURE;
 	} else {
 		/* Stop ttc */
@@ -347,22 +313,12 @@ u32 XTtcPs_Release(XTtcPs *InstancePtr)
 		XTtcPs_DisableInterrupts(InstancePtr, XTTCPS_IXR_ALL_MASK);
 
 		/* Release node, if no other counter in use under that ttc node */
-#ifndef SDT
 		if (TRUE == CheckTtcNodeState(InstancePtr->Config.DeviceId)) {
-#else
-		if (TRUE == CheckTtcNodeState(Index)) {
-#endif
 			Status = XST_FAILURE;
 		} else {
-#ifndef SDT
 			TtcNodeAddr = GetTtcNodeAddress((InstancePtr->Config.DeviceId / 3) * 3);
 			Status = XPm_ReleaseNode(XpmGetNodeId((UINTPTR)TtcNodeAddr));
 			TtcNodeState[InstancePtr->Config.DeviceId]--;
-#else
-			TtcNodeAddr = InstancePtr->Config.BaseAddress;
-			Status = XPm_ReleaseNode(XpmGetNodeId((UINTPTR)TtcNodeAddr));
-			TtcNodeState[Index]--;
-#endif
 		}
 	}
 #endif
@@ -667,37 +623,11 @@ void XTtcPs_CalcIntervalFromFreq(XTtcPs *InstancePtr, u32 Freq,
 
 u32 XTtcPs_InterruptHandler(XTtcPs *InstancePtr)
 {
-	u32 XTtcPsStatusReg,Index;
-	UINTPTR BaseAddr;
+	u32 XTtcPsStatusReg;
 
-	BaseAddr = InstancePtr->Config.BaseAddress & COUNTER_BASE_ADDRESS_MASK;
-
-	Index = GetIndexFromBaseAddr(BaseAddr);
-
-        /*
-         * Check the interrupt status register (ISR) of counter 0
-         * If an interrupt is set, call the assigned handler
-         */
-	if((XTtcPsStatusReg = Xil_In32( BaseAddr + XTTCPS_ISR_OFFSET)) != 0){
-		StatusHandlerTable[Index].StatusHandler(StatusHandlerTable[Index].StatusRef, XTtcPsStatusReg);
-	}
-
-        /*
-         * Check the interrupt status register (ISR) of counter 1
-         * If an interrupt is set, call the assigned handler
-         */
-	if((XTtcPsStatusReg = Xil_In32( BaseAddr + 4 + XTTCPS_ISR_OFFSET)) != 0){
-		StatusHandlerTable[Index + 1].StatusHandler(StatusHandlerTable[Index + 1].StatusRef, XTtcPsStatusReg);
-	}
-
-        /*
-         * Check the interrupt status register (ISR) of counter 2
-         * If an interrupt is set, call the assigned handler
-         */
-	if((XTtcPsStatusReg = Xil_In32( BaseAddr + 8 + XTTCPS_ISR_OFFSET)) != 0){
-		StatusHandlerTable[Index + 2].StatusHandler(StatusHandlerTable[Index + 2].StatusRef, XTtcPsStatusReg);
-	}
-
+	XTtcPsStatusReg = XTtcPs_GetInterruptStatus(InstancePtr);
+	InstancePtr->StatusHandler(InstancePtr->StatusRef,
+				   XTtcPsStatusReg);
 	return XST_SUCCESS;
 }
 
@@ -727,17 +657,16 @@ u32 XTtcPs_InterruptHandler(XTtcPs *InstancePtr)
 void XTtcPs_SetStatusHandler(XTtcPs *InstancePtr, void *CallBackRef,
 			     XTtcPs_StatusHandler FuncPointer)
 {
-	u32 Index;
 	/*
 	 * Validate input arguments and in case of error conditions assert.
 	 */
 	Xil_AssertVoid(InstancePtr != NULL);
 	Xil_AssertVoid(FuncPointer != NULL);
 	Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-	Index = GetIndexFromBaseAddr(InstancePtr->Config.BaseAddress);
-	StatusHandlerTable[Index].StatusHandler = FuncPointer;
-	StatusHandlerTable[Index].StatusRef  = CallBackRef;
+	InstancePtr->StatusHandler = FuncPointer;
+	InstancePtr->StatusRef = CallBackRef;
 }
+
 
 /*****************************************************************************/
 /**

@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (c) 2021-2022 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2022 - 2023 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 /*****************************************************************************/
@@ -23,12 +23,6 @@
 *  	adk	 12/01/22 Fix compilation errors.
 *  1.1	adk      08/08/22 Added support for versal net.
 *  	adk      08/08/22 Added doxygen tags.
-*  2.2  adk	 05/03/25 Update LPD_RST_TIMESTAMP and XIOU_SCNTRS_BASEADDR
-*  			  defines for Versal 2VE and 2VM platforms.
-*  	adk      09/05/25 Adjust the delay calculation logic for the R52
-*  	                  processor to use XIOU_SCNTRS_FREQ.
-*  2.3  adk      02/09/25 Updated the code to initialize global timer only
-*  			  once to avoid issues in AMP systems.
  *</pre>
  *
  *@note
@@ -43,13 +37,8 @@
 #endif
 
 #if defined (ARMR52)
-#if defined (VERSAL_2VE_2VM)
-#define LPD_RST_TIMESTAMP  0xEB5E03A4U
-#define XIOU_SCNTRS_BASEADDR 0xEA470000U
-#else
 #define LPD_RST_TIMESTAMP  0xEB5E035CU
 #define XIOU_SCNTRS_BASEADDR 0xEB5B0000U
-#endif
 #define XIOU_SCNTRS_CNT_CNTRL_REG_OFFSET 0x0U
 #define XIOU_SCNTRS_CNT_CNTRL_REG_EN_MASK 0x1U
 #define XIOU_SCNTRS_CNT_CNTRL_REG_EN 0x1U
@@ -101,30 +90,17 @@ u32 XilSleepTimer_Init(XTimer *InstancePtr)
 static void XGlobalTimer_Start(XTimer *InstancePtr)
 {
 	(void) InstancePtr;
-	u32 IsEnabled;
-	u32 TimeStampFreq;
+	/* Take LPD_TIMESTAMP out of reset */
+	Xil_Out32(LPD_RST_TIMESTAMP, 0x0);
 
-	IsEnabled = Xil_In32(XIOU_SCNTRS_BASEADDR +
-			     XIOU_SCNTRS_CNT_CNTRL_REG_OFFSET);
-	TimeStampFreq = Xil_In32(XIOU_SCNTRS_BASEADDR +
-				 XIOU_SCNTRS_FREQ_REG_OFFSET);
+	/*write frequency to System Time Stamp Generator Register*/
+	Xil_Out32((XIOU_SCNTRS_BASEADDR + XIOU_SCNTRS_FREQ_REG_OFFSET),
+		  XIOU_SCNTRS_FREQ);
+	/*Enable the timer/counter*/
+	Xil_Out32((XIOU_SCNTRS_BASEADDR + XIOU_SCNTRS_CNT_CNTRL_REG_OFFSET),
+		  XIOU_SCNTRS_CNT_CNTRL_REG_EN);
 
-	if ((!(IsEnabled & XIOU_SCNTRS_CNT_CNTRL_REG_EN)) && !TimeStampFreq) {
-		/* Take LPD_TIMESTAMP out of reset */
-		Xil_Out32(LPD_RST_TIMESTAMP, 0x0);
-
-		/* write frequency to System Time Stamp Generator Register */
-		Xil_Out32((XIOU_SCNTRS_BASEADDR +
-			   XIOU_SCNTRS_FREQ_REG_OFFSET),
-			  XIOU_SCNTRS_FREQ);
-
-		/* Enable the timer/counter */
-		Xil_Out32((XIOU_SCNTRS_BASEADDR +
-			   XIOU_SCNTRS_CNT_CNTRL_REG_OFFSET),
-			  XIOU_SCNTRS_CNT_CNTRL_REG_EN);
-	}
 }
-
 static inline u64 arch_counter_get_cntvct(void)
  {
           u64 cval;
@@ -163,8 +139,6 @@ static void XCortexr5_ModifyInterval(XTimer *InstancePtr, u32 delay,
 #else
 	u32 frequency = XGet_CpuFreq()/64;
 #endif
-#else
-	u32 frequency = XIOU_SCNTRS_FREQ;
 #endif
 #if defined (ARMR52)
 	static u8 IsSleepTimerStarted = FALSE;
@@ -180,7 +154,11 @@ static void XCortexr5_ModifyInterval(XTimer *InstancePtr, u32 delay,
 	Xpm_ReadCycleCounterVal(TimeLowVal1);
 #endif
 
+#if defined (ARMR52)
+	tEnd = (u64)TimeLowVal1 + ((u64)(delay) * (DelayType));
+#else
 	tEnd = (u64)TimeLowVal1 + ((u64)(delay) * (frequency/(DelayType)));
+#endif
 
 	do {
 #if defined (ARMR52)

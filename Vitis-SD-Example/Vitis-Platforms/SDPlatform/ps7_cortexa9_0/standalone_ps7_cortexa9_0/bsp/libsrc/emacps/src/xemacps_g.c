@@ -8,11 +8,9 @@ XEmacPs_Config XEmacPs_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) =
 		0x0, /* dma-coherent */
 		0x4016, /* interrupts */
 		0xf8f01000, /* interrupt-parent */
-		0xd, /* clocks */
+		0x0, /* ref-clk */
 		"rgmii-id", /* phy-mode */
-		0x0, /* phy-handle */
-		0x0, /* mdioproducer-baseaddr */
-		0x0 /* gmiitorgmii-addr */
+		0x0 /* phy-handle */
 	},
 	 {
 		 NULL

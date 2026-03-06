@@ -1,13 +1,8 @@
-# Copyright (c) 2023 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
+# Copyright (c) 2023 Advanced Micro Devices, Inc. All Rights Reserved.
 # SPDX-License-Identifier: MIT
 
-if("${proc_compiler}" STREQUAL "armclang")
-  add_subdirectory(armclang)
-elseif("${proc_compiler}" STREQUAL "iccarm.exe")
-  add_subdirectory(iccarm)
-elseif(NOT ("${proc_compiler}" STREQUAL "armcc"))
-  add_subdirectory(gcc)
-endif()
+add_subdirectory(gcc)
+
 collect (PROJECT_LIB_SOURCES putnum.c)
 collect (PROJECT_LIB_SOURCES vectors.c)
 collect (PROJECT_LIB_SOURCES xil_exception.c)

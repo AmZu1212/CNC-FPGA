@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (c) 2014 - 2021 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2023 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2023 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -48,12 +48,7 @@
 * 9.0    mus 07/27/23 Updated XGetCoreId API to support A9, R5 and A53 processor.
 * 9.1    mus 06/28/24 Fix typo in XGetCoreId, due to this XGetCoreId
 *                     always returns 0 in case of A78 processor CR#1204077.
-* 9.2    mus 09/23/24 Fix XGetBootStatus for Versal 2VE and 2VM devices.
-* 9.2    tnt 02/10/25 Replace all RPU_PCI_[XY]_PWRDWN for Versal 2VE and 2VM
-                      devices with XPS_PSX_RPU_CLUSTER_XY_CORE_X_PWRDWN
-                      registers.
-* 9.4    vmt 28/10/25 Added XIOCoherencySupported() API to check cache coherency
-		      support.
+* 9.2    mus 09/23/24 Fix XGetBootStatus for VersalGen2.
 * </pre>
 *
 ******************************************************************************/
@@ -260,7 +255,7 @@ u8 XGetBootStatus(void)
 
 	return (Status & XPS_CORE_X_PWRDWN_EN_MASK);
 #else
-#if defined (VERSAL_2VE_2VM)
+#if defined (VERSAL_AIEPG2)
 	u8 ClusterId = XGetClusterId();
 
 	/*
@@ -271,58 +266,26 @@ u8 XGetBootStatus(void)
 	 * - Cluster C,D,E: cluster offset 0x40, core offset 0x20
 	 */
 
+	if (ClusterId > 1) {
+		Addr = (XPS_RPU_PCIL_CLUSTER_C_D_E_OFFSET * (ClusterId - XPS_CLUSTER_C_ID)) + XPS_RPU_PCIL_C0_PWRDWN;
+		Addr += (XGetCoreId() * XPS_RPU_PCIL_CORE_OFFSET_FOR_CLUSTER_C_D_E);
 
-	Addr = (XPS_PSX_RPU_PWRDWN_CLUSTER_OFFSET * ClusterId) + XPS_PSX_RPU_CLUSTER_A0_CORE_0_PWRDWN;
-	Addr += (XGetCoreId() * XPS_PSX_RPU_PWRDWN_CORE_OFFSET);
-	Status = Xil_In32(Addr);
-
-	return (Status & XPS_PSX_RPU_CORE_X_PWRDWN_EN_MASK);
+	} else {
+		Addr = (XPS_RPU_PCIL_CLUSTER_OFFSET * ClusterId) + XPS_RPU_PCIL_A0_PWRDWN;
+		Addr += (XGetCoreId() * XPS_RPU_PCIL_CORE_OFFSET);
+	}
 #else
 	Addr = (XPS_RPU_PCIL_CLUSTER_OFFSET * XGetClusterId()) + XPS_RPU_PCIL_A0_PWRDWN;
 	Addr += (XGetCoreId() * XPS_RPU_PCIL_CORE_OFFSET);
+#endif
+
 	Status = Xil_In32(Addr);
 
 	return (Status & XPS_RPU_PCIL_X_PWRDWN_EN_MASK);
 #endif
 
-#endif
-
 }
 
 #endif
-
-/*****************************************************************************/
-/**
- *
- * @brief    This API checks if cache coherency is supported on the current processor.
- *           For ARM AArch64 processors, coherency through CCI/CMN is allowed only at
- *           EL1 NonSecure. For other cores such as Cortex-R5, MicroBlaze, and RISC-V,
- *           coherency is not supported.
- *
- * @return   TRUE if coherency is supported, otherwise FALSE.
- *
- ******************************************************************************/
-u32 XIOCoherencySupported(void)
-{
-#if defined (__aarch64__)
-	u64 CurrentEL;
-	u32 ExceptionLevel;
-
-	/* Read CurrentEL register */
-	__asm__ __volatile__ ("mrs %0, CurrentEL" : "=r" (CurrentEL));
-
-	ExceptionLevel = (u32)((CurrentEL >> 2U) & 0x3U);
-
-	/* Baremetal coherency allowed at EL1 Non-Secure */
-	if (ExceptionLevel == APU_EL1) {
-		return TRUE;
-	}
-	return FALSE;
-
-#else
-	/* For ARM Cortex-R5, MicroBlaze and RISC-V */
-	return FALSE;
-#endif
-}
 
 /** @} */

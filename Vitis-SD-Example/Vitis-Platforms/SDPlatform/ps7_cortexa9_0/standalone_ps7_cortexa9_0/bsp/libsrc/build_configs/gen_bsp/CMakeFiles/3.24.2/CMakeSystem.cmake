@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Windows")
 set(CMAKE_HOST_SYSTEM_VERSION "10.0.26200")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "AMD64")
 
-include("E:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/cortexa9_toolchain.cmake")
+include("X:/Git-Repos/CNC-FPGA/Vitis-Platforms/SDPlatform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/cortexa9_toolchain.cmake")
 
 set(CMAKE_SYSTEM "Generic")
 set(CMAKE_SYSTEM_NAME "Generic")

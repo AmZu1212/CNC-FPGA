@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2023 - 2025 Advanced Micro Devices, Inc. All rights reserved.
+* Copyright (c) 2023 - 2024 Advanced Micro Devices, Inc. All rights reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -22,8 +22,6 @@
 *                     CSRs only when supervisory mode is implemented.
 * 9.2   ml   17/01/24 Modified description and code for Xil_ExceptionRegisterHandler and
 *                     Xil_ExceptionRemoveHandler API's to fix doxygen warnings.
-* 9.3   ml   02/19/25 Add support for RISC-V Interrupt Handling
-* 9.4   ml   11/06/25 Add support for RISC-V Exception Handling
 * </pre>
 *
 * @note
@@ -125,7 +123,7 @@ void Xil_ExceptionDisable(void)
 *           argument for the handler when it is called.
 *
 * @param    Exception_id : contains the 32 bit ID of the exception source and should be
-*           in the range XIL_INTERRUPT_ID_FIRST to XIL_INTERRUPT_ID_LAST.
+*           XIL_EXCEPTION_ID_INT or be in the range 0 to XIL_EXCEPTION_ID_LAST.
 *           See xil_exception.h for further information.
 * @param    Handler : handler function to be registered for exception
 * @param    Data : a reference to data that will be passed to the handler
@@ -135,12 +133,12 @@ void Xil_ExceptionDisable(void)
 void Xil_ExceptionRegisterHandler(u32 Exception_id, Xil_ExceptionHandler Handler,
 				  void *Data)
 {
-	if (Exception_id >= XIL_INTERRUPT_ID_FIRST && Exception_id <= XIL_INTERRUPT_ID_LAST) {
+	if (Exception_id >= XIL_INTERRUPT_ID_FIRST) {
 		RISCV_InterruptVectorTable[Exception_id - XIL_INTERRUPT_ID_FIRST].
 		Handler = Handler;
 		RISCV_InterruptVectorTable[Exception_id - XIL_INTERRUPT_ID_FIRST].
 		CallBackRef = Data;
-	} else if (Exception_id <= XIL_EXCEPTION_ID_LAST) {
+	} else {
 		RISCV_ExceptionVectorTable[Exception_id].Handler = Handler;
 		RISCV_ExceptionVectorTable[Exception_id].CallBackRef = Data;
 	}
@@ -153,19 +151,20 @@ void Xil_ExceptionRegisterHandler(u32 Exception_id, Xil_ExceptionHandler Handler
 *           is then registered for this exception Id.
 *
 * @param    Exception_id : contains the 32 bit ID of the exception source and should be
-*           in the range XIL_INTERRUPT_ID_FIRST to XIL_INTERRUPT_ID_LAST.
+*           XIL_EXCEPTION_ID_INT or in the range 0 to XIL_EXCEPTION_ID_LAST.
 *           See xil_exception.h for further information.
 *
 ****************************************************************************/
 void Xil_ExceptionRemoveHandler(u32 Exception_id)
 {
-	if (Exception_id >= XIL_INTERRUPT_ID_FIRST && Exception_id <= XIL_INTERRUPT_ID_LAST) {
+	if (Exception_id >= XIL_INTERRUPT_ID_FIRST) {
 		RISCV_InterruptVectorTable[Exception_id - XIL_INTERRUPT_ID_FIRST].
 		Handler = Xil_ExceptionNullHandler;
-		RISCV_InterruptVectorTable[Exception_id - XIL_INTERRUPT_ID_FIRST].
+		RISCV_InterruptVectorTable[Exception_id - XIL_EXCEPTION_ID_FIRST].
 		CallBackRef = NULL;
-	} else if (Exception_id <= XIL_EXCEPTION_ID_LAST) {
-		RISCV_ExceptionVectorTable[Exception_id].Handler = Xil_ExceptionNullHandler;
+	} else {
+		RISCV_ExceptionVectorTable[Exception_id].Handler =
+			Xil_ExceptionNullHandler;
 		RISCV_ExceptionVectorTable[Exception_id].CallBackRef = NULL;
 	}
 }

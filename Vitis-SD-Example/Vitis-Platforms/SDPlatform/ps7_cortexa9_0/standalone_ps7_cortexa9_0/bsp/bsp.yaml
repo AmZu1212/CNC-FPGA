@@ -1,11 +1,11 @@
-sdt: hw_artifacts/ps7_cortexa9_0_baremetal.dts
+sdt: hw_artifacts\ps7_cortexa9_0_baremetal.dts
 family: Zynq
-path: E:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
-config: reconfig
+path: X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
+config: None
 os: standalone
 os_info:
   standalone:
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\lib\bsp\standalone_v9_4
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\bsp\standalone_v9_2
 os_config:
   standalone:
     standalone_enable_sw_intrusive_profiling:
@@ -89,13 +89,13 @@ os_config:
     standalone_xpm_support:
       name: standalone_xpm_support
       permission: read_write
-      type: boolean
+      type: string
       value: None
-      default: 'false'
+      default: None
       options:
-      - 'true'
-      - 'false'
-      description: Enable xpm support
+      - None
+      description: This option is not supported in the Unified Vitis IDE in this version.
+        Change to the classic IDE if you want to use this option.
 toolchain_file: cortexa9_toolchain.cmake
 specs_file: Xilinx.spec
 proc: ps7_cortexa9_0
@@ -131,7 +131,7 @@ proc_config:
       permission: readonly
       type: string
       value: ' -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c'
-      default: ' -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c'
+      default: ' -O2 -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard;-c'
       options: []
       description: Compiler Flags used in BSP and library generation.'-c'flag stands
         for 'compile and assemble, but do not link'.Without this flag, gcc tries to
@@ -142,11 +142,10 @@ proc_config:
       permission: read_write
       type: string
       value: ' -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
-      default: ' -O2 -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
+      default: ' -g -Wall -Wextra -fno-tree-loop-distribute-patterns'
       options: []
       description: Extra Compiler Flags used in BSP and library generation
 template: empty_application
-compiler: gcc
 compiler_flags: ''
 include_folder: include
 lib_folder: lib
@@ -155,23 +154,23 @@ drv_info:
   COMMAND_GPIO:
     driver: gpio
     ip_name: axi_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
   INTERCONNECT_GPIO:
     driver: gpio
     ip_name: axi_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
   X_GPIO:
     driver: gpio
     ip_name: axi_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
   Y_GPIO:
     driver: gpio
     ip_name: axi_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
   Z_GPIO:
     driver: gpio
     ip_name: axi_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpio_v4_12
   ps7_afi_0: None
   ps7_afi_1: None
   ps7_afi_2: None
@@ -179,31 +178,31 @@ drv_info:
   ps7_coresight_comp_0:
     driver: coresightps_dcc
     ip_name: ps7_coresight_comp
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\coresightps_dcc_v1_13
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\coresightps_dcc_v1_11
   ps7_ddrc_0: None
   ps7_dev_cfg_0:
     driver: devcfg
     ip_name: ps7_dev_cfg
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\devcfg_v3_9
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\devcfg_v3_8
   ps7_dma_ns: None
   ps7_dma_s:
     driver: dmaps
     ip_name: ps7_dma
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\dmaps_v2_11
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\dmaps_v2_11
   ps7_ethernet_0:
     driver: emacps
     ip_name: ps7_ethernet
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\emacps_v3_23
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\emacps_v3_21
   ps7_globaltimer_0: None
   ps7_gpio_0:
     driver: gpiops
     ip_name: ps7_gpio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\gpiops_v3_14
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\gpiops_v3_13
   ps7_gpv_0: None
   ps7_intc_dist_0:
     driver: scugic
     ip_name: ps7_intc_dist
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scugic_v5_6
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\scugic_v5_4
   ps7_iop_bus_config_0: None
   ps7_ocmc_0: None
   ps7_pl310_0: None
@@ -211,50 +210,42 @@ drv_info:
   ps7_qspi_0:
     driver: qspips
     ip_name: ps7_qspi
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\qspips_v3_14
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\qspips_v3_13
   ps7_scuc_0: None
   ps7_scutimer_0:
     driver: scutimer
     ip_name: ps7_scutimer
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scutimer_v2_7
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\scutimer_v2_6
   ps7_scuwdt_0:
     driver: scuwdt
     ip_name: ps7_scuwdt
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\scuwdt_v2_6
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\scuwdt_v2_6
   ps7_sd_0:
     driver: sdps
     ip_name: ps7_sdio
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\sdps_v4_5
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\sdps_v4_4
   ps7_slcr_0: None
   ps7_ttc_0:
     driver: ttcps
     ip_name: ps7_ttc
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ttcps_v3_22
-  ps7_ttc_1:
-    driver: ttcps
-    ip_name: ps7_ttc
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ttcps_v3_22
-  ps7_ttc_2:
-    driver: ttcps
-    ip_name: ps7_ttc
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\ttcps_v3_22
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\ttcps_v3_20
   ps7_uart_1:
     driver: uartps
     ip_name: ps7_uart
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\uartps_v3_17
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\uartps_v3_15
   ps7_usb_0:
     driver: usbps
     ip_name: ps7_usb
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\usbps_v2_10
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\usbps_v2_9
   ps7_xadc_0:
     driver: xadcps
     ip_name: ps7_xadc
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\XilinxProcessorIPLib\drivers\xadcps_v2_7
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\XilinxProcessorIPLib\drivers\xadcps_v2_7
 lib_info:
   xiltimer:
     path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_services\xiltimer_v2_1
   xilffs:
-    path: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\lib\sw_services\xilffs_v5_5
+    path: X:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_services\xilffs_v5_3
     examples:
       xilffs_polled_example.c: []
 lib_config:

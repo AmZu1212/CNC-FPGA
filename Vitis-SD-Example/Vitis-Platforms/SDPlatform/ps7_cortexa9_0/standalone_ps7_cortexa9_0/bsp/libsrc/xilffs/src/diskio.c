@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------*/
 /******************************************************************************
 * Copyright (c) 2015 - 2022 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2022 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ******************************************************************************/
 
 /*****************************************************************************/
@@ -524,7 +524,7 @@ DRESULT disk_read (
 *		RES_OK		Command successful
 *		RES_PARERR	Command is invalid
 *		RES_NOTRDY	Drive not initialized
-*		RES_ERROR	Error occurred
+*		RES_ERROR	Error occured
 *
 * @note
 *
@@ -539,9 +539,7 @@ DRESULT disk_ioctl (
 
 #ifdef FILE_SYSTEM_INTERFACE_SD
 	void *LocBuff = buff;
-#ifdef XPAR_XSDPS_NUM_INSTANCES
 	DWORD *SendBuff = (DWORD *)(void *)buff;
-#endif
 #ifdef XPAR_XUFSPSXC_NUM_INSTANCES
 	u32 Status = XST_FAILURE;
 #endif
@@ -601,7 +599,7 @@ DRESULT disk_ioctl (
 		case (BYTE)GET_SECTOR_SIZE : /* Get sector size on the disk (DWORD) */
 			if (pdrv < XSDPS_NUM_INSTANCES) {
 #ifdef XPAR_XSDPS_NUM_INSTANCES
-				(*((WORD*)((void *)buff))) = ((WORD)512U);
+				(*((DWORD*)((void *)buff))) = ((DWORD)512U);
 #endif
 			} else {
 #ifdef XPAR_XUFSPSXC_NUM_INSTANCES
@@ -617,7 +615,7 @@ DRESULT disk_ioctl (
 					LunId = pdrv - XUFSPSXC_START_INDEX;
 				}
 
-				(*((WORD*)((void *)buff))) = ((WORD)UfsInstance.LUNInfo[LunId].BlockSize);
+				(*((DWORD*)((void *)buff))) = ((DWORD)UfsInstance.LUNInfo[LunId].BlockSize);
 #endif
 			}
 			res = RES_OK;

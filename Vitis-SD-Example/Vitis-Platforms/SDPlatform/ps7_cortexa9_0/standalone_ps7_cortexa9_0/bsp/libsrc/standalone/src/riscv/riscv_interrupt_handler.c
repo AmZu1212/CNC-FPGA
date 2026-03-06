@@ -1,5 +1,5 @@
 /******************************************************************************
-* Copyright (c) 2023 - 2025 Advanced Micro Devices, Inc. All rights reserved.
+* Copyright (c) 2023 Advanced Micro Devices, Inc. All rights reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -13,11 +13,9 @@
 * <pre>
 * MODIFICATION HISTORY:
 *
-* Ver   Who  Date     Changes
-* ----- ---- -------- -----------------------------------------------
-* 1.0   mus  11/21/22 First release
-* 9.3   ml   02/19/25 Add support for RISC-V Interrupt Handling
-*
+* Ver   Date     Changes
+* ----- -------- -----------------------------------------------
+* 1.0   11/21/22 First release
 * </pre>
 *
 ******************************************************************************/
@@ -58,8 +56,8 @@ void riscv_register_handler(XInterruptHandler Handler, void *DataPtr);
 ****************************************************************************/
 void riscv_register_handler(XInterruptHandler Handler, void *DataPtr)
 {
-	RISCV_InterruptVectorTable[XIL_INTERRUPT_ID_MACHINE_EXTERNAL - XIL_INTERRUPT_ID_FIRST].
+	RISCV_InterruptVectorTable[XIL_INTERRUPT_ID_MACHINE_EXTERNAL].
 		Handler = Handler;
-	RISCV_InterruptVectorTable[XIL_INTERRUPT_ID_MACHINE_EXTERNAL - XIL_INTERRUPT_ID_FIRST].
+	RISCV_InterruptVectorTable[XIL_INTERRUPT_ID_MACHINE_EXTERNAL].
 		CallBackRef = DataPtr;
 }

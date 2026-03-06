@@ -1,6 +1,6 @@
 /******************************************************************************/
 /**
-* Copyright (C) 2024 - 2025 Advanced Micro Devices, Inc.  All rights reserved.
+* Copyright (C) 2024 Advanced Micro Devices, Inc.  All rights reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -24,15 +24,6 @@
 * Ver   Who      Date     Changes
 * ----- -------- -------- -----------------------------------------------
 * 9.2   kpt      04/21/19 First release.
-* 9.3   sk       02/05/25 Added overlap check in Xil_MemCpy64
-* 9.3   ml       02/19/25 Fix Type Mismatch in Xil_UtilRMW32
-*       ng       03/25/25 Prevent compiler optimization by using volatile for status variable,
-*                         add checks for RISC-V MB proc and zeroize memory before return
-*       ng       04/07/25 Prevent overwriting of the status variable in Xil_SReverseData
-* 9.4   ml       09/01/25 Fix MISRA-C violation for Rule 17.7
-* 9.4   vmt      24/09/25 Added extended address support for RISC-V
-*       har      10/10/25 Updated datatype of Len in Xil_ConvertStringToHex
-*       hj       14/10/25 Remove zero address check in Xil_SMemCpy
 *
 * </pre>
 *
@@ -49,7 +40,6 @@
 #define MAX_NIBBLES	8U /**< maximum nibbles */
 #define XIL_WORD_SIZE		    (4U) /**< WORD size in BYTES */
 #define XIL_WORD_ALIGN_MASK		(XIL_WORD_SIZE - 1U)/**< WORD alignment */
-#define XIL_ONE_BYTE	(1U) /**< One byte length */
 
 /************************** Function Prototypes *****************************/
 
@@ -133,16 +123,15 @@ u32 Xil_ConvertCharToNibble(u8 InChar, u8 *Num)
  *
  * @return
  *          XST_SUCCESS - Input string is converted to hex
- *          XST_FAILURE - Invalid character in input string
+ *          XST_FAILURE - Invalid character in inpit string
  *
  * @note    None.
  *
  *****************************************************************************/
-u32 Xil_ConvertStringToHex(const char *Str, u32 *buf, u32 Len)
+u32 Xil_ConvertStringToHex(const char *Str, u32 *buf, u8 Len)
 {
 	u32 Status = XST_FAILURE;
-	u32 ConvertedLen = 0U;
-	u32 index = 0U;
+	u8 ConvertedLen = 0U, index = 0U;
 	u8 Nibble[MAX_NIBBLES] = {0U};
 	u8 i;
 
@@ -346,7 +335,7 @@ END:
  * @return	None
  *
  *****************************************************************************/
-void Xil_UtilRMW32(UINTPTR Addr, u32 Mask, u32 Value)
+void Xil_UtilRMW32(u32 Addr, u32 Mask, u32 Value)
 {
 	u32 Val;
 
@@ -540,8 +529,7 @@ s32 Xil_SMemCmp_CT(const void *Src1, const u32 Src1Size,
 /**
  * @brief	This is wrapper function to memcpy function. This function
  *		takes size of two memory regions to make sure not read from
- *		or write to out of bound memory region. Since 0 is valid address,
-*		Src and Dest paramemter are not checked for NULL
+ *		or write to out of bound memory region.
  *
  * @param	Dest      - Pointer to destination memory
  * @param	DestSize  - Memory available at destination
@@ -563,7 +551,9 @@ s32 Xil_SMemCpy(void *Dest, const u32 DestSize,
 	void *volatile DestTemp = Dest;
 	const void *volatile SrcTemp = Src;
 
-	if ((CopyLen == 0U) || (DestSize < CopyLen) || (SrcSize < CopyLen)) {
+	if ((Dest == NULL) || (Src == NULL)) {
+		Status =  XST_INVALID_PARAM;
+	} else if ((CopyLen == 0U) || (DestSize < CopyLen) || (SrcSize < CopyLen)) {
 		Status =  XST_INVALID_PARAM;
 	}
 	/* Return error for overlap string */
@@ -914,27 +904,25 @@ s32 Xil_SChangeEndiannessAndCpy(void *Dest, const u32 DestSize,
 
 /*****************************************************************************/
 /**
- * @brief	This function changes the endianness of given buffer by reversing the byte order.
+ * @brief	This function changes the endianness of given buffer.
  *
- * @param	Buf - Pointer to the buffer whose data needs to be reversed.
- * @param	Size - is the size of the buffer in bytes to be reversed.
+ * @param	Buf - is pointer to the variable containing data.
+ * @param   Size  -  Size of the data.
  *
  * @return
- *		XST_SUCCESS - Data successfully reversed
- *		XST_INVALID_PARAM - Invalid parameters (NULL buffer or zero size)
- *		XST_FAILURE - Failed to reverse data or zeroize temporary variables
+ *		XST_SUCCESS - Copy is successful
+ * 		XST_INVALID_PARAM - Invalid inputs
+ *      XST_FAILURE       - On failure
  *
  ******************************************************************************/
 s32 Xil_SReverseData(void *Buf, u32 Size)
 {
-	volatile s32 Status = XST_FAILURE;
-	volatile s32 SStatus = XST_FAILURE;
+	s32 Status = XST_FAILURE;
 	volatile u32 Index = 0U;
 	u8 *Buffer = (u8 *)Buf;
 	u8 Data= 0U;
 	u32 LoopCnt = 0U;
 
-	/* Input validation */
 	if ((Buf == NULL) || (Size == 0U)) {
 		Status = XST_INVALID_PARAM;
 		goto END;
@@ -946,14 +934,8 @@ s32 Xil_SReverseData(void *Buf, u32 Size)
 		Buffer[Size - Index - 1U] = Buffer[Index];
 		Buffer[Index] = Data;
 	}
-
 	if (Index == LoopCnt) {
 		Status = XST_SUCCESS;
-	}
-
-	SStatus = Xil_SecureZeroize(&Data, XIL_ONE_BYTE);
-	if (Status == XST_SUCCESS) {
-		Status = SStatus;
 	}
 
 END:
@@ -972,15 +954,16 @@ END:
  *************************************************************************************************/
 void Xil_MemCpy64(u64 DstAddr, u64 SrcAddr, u32 Cnt)
 {
+#if defined(VERSAL_PLM) || (defined(__MICROBLAZE__) && (XPAR_MICROBLAZE_ADDR_SIZE > 32) &&\
+    (XPAR_MICROBLAZE_DATA_SIZE == 32))
+
+	u64 Dst = DstAddr;
+	u64 Src = SrcAddr;
+	u32 Count = Cnt;
+
 	/* Checking for overlap */
-	if (((SrcAddr < DstAddr) && ((SrcAddr + Cnt) <= DstAddr)) ||
-	    ((DstAddr < SrcAddr) && ((DstAddr + Cnt) <= SrcAddr))) {
-#if (defined(__riscv) && (__riscv_xlen == 32) && (XPAR_MICROBLAZE_RISCV_ADDR_SIZE > 32)) || \
-    (defined(__MICROBLAZE__) && (XPAR_MICROBLAZE_ADDR_SIZE > 32) && (XPAR_MICROBLAZE_DATA_SIZE == 32)) || \
-    defined(VERSAL_PLM)
-			u64 Dst = DstAddr;
-			u64 Src = SrcAddr;
-			u32 Count = Cnt;
+	if (((SrcAddr < DstAddr) && (SrcAddr + Cnt <= DstAddr)) ||
+	    ((DstAddr < SrcAddr) && (DstAddr + Cnt <= SrcAddr))) {
 			if (((Dst & XIL_WORD_ALIGN_MASK) == 0U) &&
 			    ((Src & XIL_WORD_ALIGN_MASK) == 0U)) {
 					while (Count >= sizeof (int)) {
@@ -998,7 +981,6 @@ void Xil_MemCpy64(u64 DstAddr, u64 SrcAddr, u32 Cnt)
 			}
 		}
 #else
-		(void)memcpy((void *)(UINTPTR)DstAddr, (void *)(UINTPTR)SrcAddr, Cnt);
-	}
+	memcpy((void *)(UINTPTR)DstAddr, (void *)(UINTPTR)SrcAddr, Cnt);
 #endif
 }

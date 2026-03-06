@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (C) 2010 - 2022 Xilinx, Inc.  All rights reserved.
-* Copyright (C) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (C) 2022 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -71,10 +71,7 @@
 * 5.1   mus  02/15/23 Added support for VERSAL_NET APU and RPU GIC.
 * 5.2   ml   03/02/23 Add description to fix Doxygen warnings.
 * 5.2   mus  03/26/23 Fixed calculation for XSCUGIC_RDIST_INT_PRIORITY_OFFSET_CALC.
-* 5.4   ksr  07/23/24 Added support for Versal_2VE_2VM
-* 5.5   ml   01/08/25 Update datatype of function arguments from u32 to UINTPTR to
-*                     support both 32bit and 64bit platforms.
-* 5.6   ml   07/21/25 Fixed GCC warnings.
+* 5.4   ksr  07/23/24 Added support for Versal Gen2
 * </pre>
 *
 ******************************************************************************/
@@ -118,10 +115,10 @@ extern "C" {
 #define XSCUGIC_MAX_NUM_INTR_INPUTS    95U /**< Maximum number of
                                                 interrupt defined by
                                                 Zynq */
-#elif defined (VERSAL_2VE_2VM)
+#elif defined (VERSAL_AIEPG2)
 #define XSCUGIC_MAX_NUM_INTR_INPUTS     288U /**< Maximum number of
                                                   interrupt sources in
-                                                  Versal_2VE_2VM */
+                                                  VersalGen2 */
 #elif defined (VERSAL_NET)
 #define XSCUGIC_MAX_NUM_INTR_INPUTS     256U /**< Maximum number of
                                                   interrupt sources in
@@ -528,13 +525,8 @@ extern "C" {
 #define XSCUGIC_RDIST_START_ADDR        0xE2100000U
 #define XSCUGIC_RDIST_END_ADDR          0xE2130000U
 #else
-#if EL1_NONSECURE
-#define XSCUGIC_RDIST_START_ADDR        0x03020000U
-#define XSCUGIC_RDIST_END_ADDR          0x03040000U
-#else
 #define XSCUGIC_RDIST_START_ADDR        0xF9080000U
 #define XSCUGIC_RDIST_END_ADDR          0xF90B0000U
-#endif
 #endif
 #define XSCUGIC_RDIST_OFFSET		0x20000U /* offset between consecutive redistributors */
 #define XSCUGIC_RDIST_SGI_PPI_OFFSET	0x10000U  /* offset between control redistributor and SGI/PPI redistributor */
@@ -557,7 +549,7 @@ extern "C" {
 /*
  * GICR_IGROUPR  register definitions
  */
-#if defined EL3
+#if EL3
 #define XSCUGIC_DEFAULT_SECURITY    0x0U
 #else
 #define XSCUGIC_DEFAULT_SECURITY    0xFFFFFFFFU
@@ -738,20 +730,20 @@ extern "C" {
 
 void XScuGic_DeviceInterruptHandler(void *DeviceId);
 s32  XScuGic_DeviceInitialize(u32 DeviceId);
-void XScuGic_RegisterHandler(UINTPTR BaseAddress, s32 InterruptID,
+void XScuGic_RegisterHandler(u32 BaseAddress, s32 InterruptID,
 			     Xil_InterruptHandler IntrHandler, void *CallBackRef);
-void XScuGic_SetPriTrigTypeByDistAddr(UINTPTR DistBaseAddress, u32 Int_Id,
+void XScuGic_SetPriTrigTypeByDistAddr(u32 DistBaseAddress, u32 Int_Id,
                                         u8 Priority, u8 Trigger);
-void XScuGic_GetPriTrigTypeByDistAddr(UINTPTR DistBaseAddress, u32 Int_Id,
+void XScuGic_GetPriTrigTypeByDistAddr(u32 DistBaseAddress, u32 Int_Id,
 					u8 *Priority, u8 *Trigger);
-void XScuGic_InterruptMapFromCpuByDistAddr(UINTPTR DistBaseAddress,
+void XScuGic_InterruptMapFromCpuByDistAddr(u32 DistBaseAddress,
 							u8 Cpu_Id, u32 Int_Id);
-void XScuGic_InterruptUnmapFromCpuByDistAddr(UINTPTR DistBaseAddress,
+void XScuGic_InterruptUnmapFromCpuByDistAddr(u32 DistBaseAddress,
 											u8 Cpu_Id, u32 Int_Id);
-void XScuGic_UnmapAllInterruptsFromCpuByDistAddr(UINTPTR DistBaseAddress,
+void XScuGic_UnmapAllInterruptsFromCpuByDistAddr(u32 DistBaseAddress,
 												u8 Cpu_Id);
-void XScuGic_EnableIntr (UINTPTR DistBaseAddress, u32 Int_Id);
-void XScuGic_DisableIntr (UINTPTR DistBaseAddress, u32 Int_Id);
+void XScuGic_EnableIntr (u32 DistBaseAddress, u32 Int_Id);
+void XScuGic_DisableIntr (u32 DistBaseAddress, u32 Int_Id);
 #if defined(GICv3)
 UINTPTR XScuGic_GetRedistBaseAddr(void);
 #endif

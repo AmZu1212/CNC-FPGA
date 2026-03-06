@@ -1,6 +1,6 @@
 /******************************************************************************
 *
-* Copyright (c) 2023 - 2025 Advanced Micro Devices, Inc. All rights reserved.
+* Copyright (c) 2023 - 2024 Advanced Micro Devices, Inc. All rights reserved.
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,6 @@
 * 9.0   sa   06/21/23 Fix sleep related macros based on HW configuration.
 *                     It fixes CR#1162997.
 * 9.1   ml   11/16/23 Fix compilation errors reported with -std=c2x compiler flag
-* 9.4   vmt  24/09/25 Added extended address support for RISC-V
 * </pre>
 *
 ******************************************************************************/
@@ -90,69 +89,69 @@ extern void riscv_scrub(void);                                          /* Scrub
 /* FSL Access Macros */
 
 /* Blocking Data Read and Write to FSL no. id */
-#define getfsl(val, id)         { register unsigned int _item __asm__("t0"); \
-		__asm__ __volatile__ (".word (" stringify(id) " << 15) | 0x000022AB # rd = %0" : "=r" (_item)); \
+#define getfsl(val, id)         { register unsigned int _item asm("t0"); \
+		__asm volatile (".word (" stringify(id) " << 15) | 0x000022AB # rd = %0" : "=r" (_item)); \
 		val = _item; }
-#define putfsl(val, id)         { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ (".word 0x0002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
+#define putfsl(val, id)         { register unsigned int _item asm("t0") = val; \
+		__asm volatile (".word 0x0002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
 
 /* Non-blocking Data Read and Write to FSL no. id */
-#define ngetfsl(val, id)        { register unsigned int _item __asm__("t0"); \
-		__asm__ __volatile__ (".word (" stringify(id) " << 15) | 0x400022AB # rd = %0" : "=r" (_item)); \
+#define ngetfsl(val, id)        { register unsigned int _item asm("t0"); \
+		__asm volatile (".word (" stringify(id) " << 15) | 0x400022AB # rd = %0" : "=r" (_item)); \
 		val = _item; }
-#define nputfsl(val, id)        { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ (".word 0x4002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
+#define nputfsl(val, id)        { register unsigned int _item asm("t0") = val; \
+		__asm volatile (".word 0x4002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
 
 /* Blocking Control Read and Write to FSL no. id */
-#define cgetfsl(val, id)        { register unsigned int _item __asm__("t0"); \
-		__asm__ __volatile__ (".word (" stringify(id) " << 15) | 0x800022AB # rd = %0" : "=r" (_item)); \
+#define cgetfsl(val, id)        { register unsigned int _item asm("t0"); \
+		__asm volatile (".word (" stringify(id) " << 15) | 0x800022AB # rd = %0" : "=r" (_item)); \
 		val = _item; }
-#define cputfsl(val, id)        { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ (".word 0x8002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
+#define cputfsl(val, id)        { register unsigned int _item asm("t0") = val; \
+		__asm volatile (".word 0x8002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
 
 /* Non-blocking Control Read and Write to FSL no. id */
-#define ncgetfsl(val, id)       { register unsigned int _item __asm__("t0"); \
-		__asm__ __volatile__ (".word (" stringify(id) " << 15) | 0xC00022AB # rd = %0" : "=r" (_item)); \
+#define ncgetfsl(val, id)       { register unsigned int _item asm("t0"); \
+		__asm volatile (".word (" stringify(id) " << 15) | 0xC00022AB # rd = %0" : "=r" (_item)); \
 		val = _item; }
-#define ncputfsl(val, id)       { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ (".word 0xC002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
+#define ncputfsl(val, id)       { register unsigned int _item asm("t0") = val; \
+		__asm volatile (".word 0xC002B02B | (" stringify(id) " << 7) # rs1 = %0" :: "r" (_item)); }
 
 /* Polling versions of FSL access macros. This makes the FSL access interruptible */
-#define getfsl_interruptible(val, id)       { register unsigned int _item __asm__("t0");       \
-		__asm__ __volatile__ ("\n1:\n\t.word (" stringify(id) " << 15) | 0x400022AB # rd = %0\n\t" \
+#define getfsl_interruptible(val, id)       { register unsigned int _item asm("t0");       \
+		__asm volatile ("\n1:\n\t.word (" stringify(id) " << 15) | 0x400022AB # rd = %0\n\t" \
 				      "csrr\tt1,0x7C0\n\t"           \
 				      "andi\tt1,t1,0x1\n\t"          \
 				      "bnez\tt1,1b\n"                \
 				      : "=r" (_item) :: "t1");       \
 		val = _item; }
 
-#define putfsl_interruptible(val, id)       { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ ("\n1:\n\t.word 0x4002B02B | (" stringify(id) " << 7) # rs1 = %0\n\t" \
+#define putfsl_interruptible(val, id)       { register unsigned int _item asm("t0") = val; \
+		__asm volatile ("\n1:\n\t.word 0x4002B02B | (" stringify(id) " << 7) # rs1 = %0\n\t" \
 				      "csrr\tt1,0x7C0\n\t"             \
 				      "andi\tt1,t1,0x1\n\t"            \
 				      "bnez\tt1,1b\n"                  \
 				      :: "r" (_item) : "t1"); }
 
-#define cgetfsl_interruptible(val, id)      { register unsigned int _item __asm__("t0");       \
-		__asm__ __volatile__ ("\n1:\n\t.word (" stringify(id) " << 15) | 0xC00022AB # rd = %0\n\t" \
+#define cgetfsl_interruptible(val, id)      { register unsigned int _item asm("t0");       \
+		__asm volatile ("\n1:\n\t.word (" stringify(id) " << 15) | 0xC00022AB # rd = %0\n\t" \
 				      "csrr\tt1,0x7C0\n\t"           \
 				      "andi\tt1,t1,0x1\n\t"          \
 				      "bnez\tt1,1b\n"                \
 				      : "=r" (_item) :: "t1");       \
 		val = _item; }
 
-#define cputfsl_interruptible(val, id)      { register unsigned int _item __asm__("t0") = val; \
-		__asm__ __volatile__ ("\n1:\n\t.word 0xC002B02B | (" stringify(id) " << 7) # rs1 = %0\n\t" \
+#define cputfsl_interruptible(val, id)      { register unsigned int _item asm("t0") = val; \
+		__asm volatile ("\n1:\n\t.word 0xC002B02B | (" stringify(id) " << 7) # rs1 = %0\n\t" \
 				      "csrr\tt1,0x7C0\n\t"           \
 				      "andi\tt1,t1,0x1\n\t"          \
 				      "bnez\tt1,1b\n"                \
 				      :: "r" (_item) : "t1"); }
 
 /* FSL valid and error check macros. */
-#define fsl_isinvalid(result)               __asm__ __volatile__ ("csrr\t%0,0x7C0\n\t"  \
+#define fsl_isinvalid(result)               __asm volatile ("csrr\t%0,0x7C0\n\t"             \
 	"andi\t%0,%0,0x1\n\t"            \
 	: "=r" (result))
-#define fsl_iserror(error)                  __asm__ __volatile__ ("csrr\t%0,0x7C0\n\t"  \
+#define fsl_iserror(error)                  __asm volatile ("csrr\t%0,0x7C0\n\t"             \
 	"andi\t%0,%0,0x2"                \
 	: "=r" (error))
 /* Pseudo assembler instructions */
@@ -186,50 +185,6 @@ extern void riscv_scrub(void);                                          /* Scrub
 #define mb_hibernate() 	({ __asm__ __volatile__ ("csrwi 0x7c4, 2 ; wfi\t"); })
 #define mb_suspend()   	({ __asm__ __volatile__ ("csrwi 0x7c4, 4 ; wfi\t"); })
 #endif
-
-/* Extended address custom instructions */
-#if __riscv_xlen == 32
-
-/**
-Executes an extended address load instruction in the MicroBlaze RISC-V processor
-@param lladdr Long long integer (64-bit) address
-@param instr  Instruction code
-@return data read from lladdr
-*/
-#define _load_ea(lladdr, instr) ({				      \
-	register unsigned long long int _addr_lsh asm("t1") = lladdr; \
-	register unsigned int _result asm("t0");		      \
-	__asm__ __volatile__ (					      \
-		".word " stringify(instr) " # rd = %0, rs1 = %1" : "=r" (_result): "r" (_addr_lsh) \
-	); \
-	_result; \
-})
-
-#define lbea(lladdr)  _load_ea(lladdr, 0x020322AB)
-#define lhea(lladdr)  _load_ea(lladdr, 0x220322AB)
-#define lwea(lladdr)  _load_ea(lladdr, 0x420322AB)
-#define lbuea(lladdr) _load_ea(lladdr, 0x820322AB)
-#define lhuea(lladdr) _load_ea(lladdr, 0xA20322AB)
-
-/**
-Executes an extended address store instruction in the MicroBlaze RISC-V processor
-@param lladdr Long long integer (64-bit) address
-@param data   Data to be written to lladdr
-@param instr  Instruction code
-*/
-#define _store_ea(lladdr, data, instr) {			      \
-	register unsigned long long int _addr_lsh asm("t1") = lladdr; \
-	register unsigned int _data asm("t0") = data;		      \
-	__asm__ __volatile__ (					      \
-		".word " stringify(instr) " # rs1 = %1, rs2 = %0" :: "r" (_data), "r" (_addr_lsh) \
-	); \
-}
-
-#define sbea(lladdr, data) _store_ea(lladdr, data, 0x0253302B)
-#define shea(lladdr, data) _store_ea(lladdr, data, 0x2253302B)
-#define swea(lladdr, data) _store_ea(lladdr, data, 0x4253302B)
-
-#endif // __riscv_xlen == 32
 
 #ifdef __cplusplus
 }

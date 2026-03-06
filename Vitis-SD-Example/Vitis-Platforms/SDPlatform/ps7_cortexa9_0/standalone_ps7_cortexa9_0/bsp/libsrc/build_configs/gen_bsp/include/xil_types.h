@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (c) 2010 - 2021 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2022 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -32,8 +32,6 @@
 * 9.0   ml   04/14/23 Add parenthesis on sub-expression to fix misra-c violation.
 * 9.2   ml   09/26/24 Removed checks to fix below compilation warning
 *                     XPAR_MICROBLAZE_ADDR_SIZE is not defined, evaluates to 0
-* 9.3   ml   12/20/24 Fixed GCC warnings
-* 9.4   vmt  24/09/25 Added extended address support for RISC-V
 * </pre>
 *
 ******************************************************************************/
@@ -133,9 +131,8 @@ typedef int64_t s64;
 typedef uint64_t u64;
 typedef int sint32;
 
-#if (defined(__MICROBLAZE__) && !defined(__arch64__) && \
-    (defined(XPAR_MICROBLAZE_ADDR_SIZE) && (XPAR_MICROBLAZE_ADDR_SIZE > 32))) || \
-    (defined(__riscv) && (__riscv_xlen == 32) && (XPAR_MICROBLAZE_RISCV_ADDR_SIZE > 32))
+#if defined(__MICROBLAZE__) && !defined(__arch64__) && \
+    (XPAR_MICROBLAZE_ADDR_SIZE > 32)
 typedef uint64_t UINTPTR;
 typedef int64_t INTPTR;
 #else

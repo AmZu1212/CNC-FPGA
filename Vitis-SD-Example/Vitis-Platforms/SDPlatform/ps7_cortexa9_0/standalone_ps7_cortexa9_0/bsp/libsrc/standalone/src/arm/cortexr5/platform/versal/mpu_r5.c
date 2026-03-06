@@ -1,6 +1,6 @@
 /******************************************************************************
 * Copyright (c) 2018 - 2022 Xilinx, Inc.  All rights reserved.
-* Copyright (c) 2022 - 2025 Advanced Micro Devices, Inc. All Rights Reserved.
+* Copyright (c) 2022 - 2024 Advanced Micro Devices, Inc. All Rights Reserved.
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
@@ -57,8 +57,6 @@
 *                     TCM regions. Updated Init_MPU to configure DDR region based on
 *                     DDR end address, so that it would always include whole DDR
 *                     region into MPU region.
-* 9.3   ml   12/20/24 Fixed GCC warnings
-* 9.4   ml   07/24/25 Fixed compilation warnings
 * </pre>
 *
 * @note
@@ -87,7 +85,7 @@
 /************************** Constant Definitions *****************************/
 
 /************************** Variable Definitions *****************************/
-#if defined(XPAR_AXI_NOC_DDR_LOW_0_BASEADDR) || defined(XPAR_AXI_NOC_0_BASEADDRESS) || defined(XPAR_AXI_NOC2_DDR_LOW_0_BASEADDR)
+
 static const struct {
 	u64 size;
 	u32 encoding;
@@ -121,7 +119,7 @@ static const struct {
 	{ 0x80000000U, REGION_2G },
 	{ 0x100000000U, REGION_4G },
 };
-#endif
+
 /************************** Function Prototypes ******************************/
 #if defined (__GNUC__)
 void Init_MPU(void) __attribute__((__section__(".boot")));
@@ -171,20 +169,19 @@ void Init_MPU(void)
 	u32 Addr;
 	u32 RegSize = 0U;
 	u32 Attrib;
-	u32 RegNum = 0;
+	u32 RegNum = 0, i;
+	u64 size;
 
 	Xil_DisableMPURegions();
 	Addr = 0x00000000U;
 #if defined(XPAR_AXI_NOC_DDR_LOW_0_BASEADDR) || defined(XPAR_AXI_NOC_0_BASEADDRESS) || defined(XPAR_AXI_NOC2_DDR_LOW_0_BASEADDR)
-	u32 i;
-	u64 size;
 #ifdef XPAR_AXI_NOC_DDR_LOW_0_BASEADDR
 	/* If the DDR is present, configure region as per DDR size */
-	size = (UINTPTR)XPAR_AXI_NOC_DDR_LOW_0_HIGHADDR + 1U;
+	size = XPAR_AXI_NOC_DDR_LOW_0_HIGHADDR + 1;
 #elif defined(XPAR_AXI_NOC_0_BASEADDRESS)
-	size = XPAR_AXI_NOC_0_HIGHADDRESS + 1U;
+	size = XPAR_AXI_NOC_0_HIGHADDRESS + 1;
 #elif defined(XPAR_AXI_NOC2_DDR_LOW_0_BASEADDR)
-	size = XPAR_AXI_NOC2_DDR_LOW_0_HIGHADDR + 1U;
+	size = XPAR_AXI_NOC2_DDR_LOW_0_HIGHADDR + 1;
 #endif
 
 	if (size < 0x80000000) {
