@@ -8,9 +8,9 @@ module GcodeFetcher(
     input signed [31:0] y,
     input signed [31:0] z,
     input [7:0] speed,
-    input [7:0] interconnect_in,
+    input [3:0] interconnect_in,
 
-    output reg [7:0] interconnect_out,
+    output reg [3:0] interconnect_out,
     output reg cmd_valid,
     output reg cmd_last,
     output reg [7:0] cmd_speed,

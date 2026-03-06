@@ -55,32 +55,35 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CNC_Top_LED_IO_0_0 (
+  rstSwitch,
   X,
   Y,
   Z,
   SPEED,
   PS_Channel,
-  rstSwitch,
+  PL_State,
   PL_Channel,
   led
 );
 
+input wire rstSwitch;
 input wire [31 : 0] X;
 input wire [31 : 0] Y;
 input wire [31 : 0] Z;
 input wire [7 : 0] SPEED;
-input wire [7 : 0] PS_Channel;
-input wire rstSwitch;
-output wire [7 : 0] PL_Channel;
+input wire [3 : 0] PS_Channel;
+input wire [3 : 0] PL_State;
+output wire [3 : 0] PL_Channel;
 output wire [7 : 0] led;
 
   LED_IO inst (
+    .rstSwitch(rstSwitch),
     .X(X),
     .Y(Y),
     .Z(Z),
     .SPEED(SPEED),
     .PS_Channel(PS_Channel),
-    .rstSwitch(rstSwitch),
+    .PL_State(PL_State),
     .PL_Channel(PL_Channel),
     .led(led)
   );

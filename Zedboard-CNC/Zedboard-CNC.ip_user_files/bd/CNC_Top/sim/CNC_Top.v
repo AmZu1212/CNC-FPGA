@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Fri Mar  6 16:18:22 2026
+//Date        : Fri Mar  6 21:24:37 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=11,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
+(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=22,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_board_cnt=11,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
 module CNC_Top
    (DDR_addr,
     DDR_ba,
@@ -164,8 +164,8 @@ module CNC_Top
   wire [31:0]GcodeFetcher_0_cmd_pos_z;
   wire [7:0]GcodeFetcher_0_cmd_speed;
   wire GcodeFetcher_0_cmd_valid;
-  wire [7:0]GcodeFetcher_0_interconnect_out;
-  wire [7:0]INTERCONNECT_GPIO_gpio_io_o;
+  wire [3:0]INTERCONNECT_GPIO_gpio_io_o;
+  wire [3:0]LED_IO_0_PL_Channel;
   wire Left;
   wire Middle;
   wire ResetSwitch;
@@ -185,6 +185,91 @@ module CNC_Top
   wire [31:0]Y_GPIO_gpio_io_o;
   wire [31:0]Z_GPIO_gpio_io_o;
   wire Zswitch;
+  wire [8:0]axi_smc_M00_AXI_ARADDR;
+  wire axi_smc_M00_AXI_ARREADY;
+  wire axi_smc_M00_AXI_ARVALID;
+  wire [8:0]axi_smc_M00_AXI_AWADDR;
+  wire axi_smc_M00_AXI_AWREADY;
+  wire axi_smc_M00_AXI_AWVALID;
+  wire axi_smc_M00_AXI_BREADY;
+  wire [1:0]axi_smc_M00_AXI_BRESP;
+  wire axi_smc_M00_AXI_BVALID;
+  wire [31:0]axi_smc_M00_AXI_RDATA;
+  wire axi_smc_M00_AXI_RREADY;
+  wire [1:0]axi_smc_M00_AXI_RRESP;
+  wire axi_smc_M00_AXI_RVALID;
+  wire [31:0]axi_smc_M00_AXI_WDATA;
+  wire axi_smc_M00_AXI_WREADY;
+  wire [3:0]axi_smc_M00_AXI_WSTRB;
+  wire axi_smc_M00_AXI_WVALID;
+  wire [8:0]axi_smc_M01_AXI_ARADDR;
+  wire axi_smc_M01_AXI_ARREADY;
+  wire axi_smc_M01_AXI_ARVALID;
+  wire [8:0]axi_smc_M01_AXI_AWADDR;
+  wire axi_smc_M01_AXI_AWREADY;
+  wire axi_smc_M01_AXI_AWVALID;
+  wire axi_smc_M01_AXI_BREADY;
+  wire [1:0]axi_smc_M01_AXI_BRESP;
+  wire axi_smc_M01_AXI_BVALID;
+  wire [31:0]axi_smc_M01_AXI_RDATA;
+  wire axi_smc_M01_AXI_RREADY;
+  wire [1:0]axi_smc_M01_AXI_RRESP;
+  wire axi_smc_M01_AXI_RVALID;
+  wire [31:0]axi_smc_M01_AXI_WDATA;
+  wire axi_smc_M01_AXI_WREADY;
+  wire [3:0]axi_smc_M01_AXI_WSTRB;
+  wire axi_smc_M01_AXI_WVALID;
+  wire [8:0]axi_smc_M02_AXI_ARADDR;
+  wire axi_smc_M02_AXI_ARREADY;
+  wire axi_smc_M02_AXI_ARVALID;
+  wire [8:0]axi_smc_M02_AXI_AWADDR;
+  wire axi_smc_M02_AXI_AWREADY;
+  wire axi_smc_M02_AXI_AWVALID;
+  wire axi_smc_M02_AXI_BREADY;
+  wire [1:0]axi_smc_M02_AXI_BRESP;
+  wire axi_smc_M02_AXI_BVALID;
+  wire [31:0]axi_smc_M02_AXI_RDATA;
+  wire axi_smc_M02_AXI_RREADY;
+  wire [1:0]axi_smc_M02_AXI_RRESP;
+  wire axi_smc_M02_AXI_RVALID;
+  wire [31:0]axi_smc_M02_AXI_WDATA;
+  wire axi_smc_M02_AXI_WREADY;
+  wire [3:0]axi_smc_M02_AXI_WSTRB;
+  wire axi_smc_M02_AXI_WVALID;
+  wire [8:0]axi_smc_M03_AXI_ARADDR;
+  wire axi_smc_M03_AXI_ARREADY;
+  wire axi_smc_M03_AXI_ARVALID;
+  wire [8:0]axi_smc_M03_AXI_AWADDR;
+  wire axi_smc_M03_AXI_AWREADY;
+  wire axi_smc_M03_AXI_AWVALID;
+  wire axi_smc_M03_AXI_BREADY;
+  wire [1:0]axi_smc_M03_AXI_BRESP;
+  wire axi_smc_M03_AXI_BVALID;
+  wire [31:0]axi_smc_M03_AXI_RDATA;
+  wire axi_smc_M03_AXI_RREADY;
+  wire [1:0]axi_smc_M03_AXI_RRESP;
+  wire axi_smc_M03_AXI_RVALID;
+  wire [31:0]axi_smc_M03_AXI_WDATA;
+  wire axi_smc_M03_AXI_WREADY;
+  wire [3:0]axi_smc_M03_AXI_WSTRB;
+  wire axi_smc_M03_AXI_WVALID;
+  wire [8:0]axi_smc_M04_AXI_ARADDR;
+  wire axi_smc_M04_AXI_ARREADY;
+  wire axi_smc_M04_AXI_ARVALID;
+  wire [8:0]axi_smc_M04_AXI_AWADDR;
+  wire axi_smc_M04_AXI_AWREADY;
+  wire axi_smc_M04_AXI_AWVALID;
+  wire axi_smc_M04_AXI_BREADY;
+  wire [1:0]axi_smc_M04_AXI_BRESP;
+  wire axi_smc_M04_AXI_BVALID;
+  wire [31:0]axi_smc_M04_AXI_RDATA;
+  wire axi_smc_M04_AXI_RREADY;
+  wire [1:0]axi_smc_M04_AXI_RRESP;
+  wire axi_smc_M04_AXI_RVALID;
+  wire [31:0]axi_smc_M04_AXI_WDATA;
+  wire axi_smc_M04_AXI_WREADY;
+  wire [3:0]axi_smc_M04_AXI_WSTRB;
+  wire axi_smc_M04_AXI_WVALID;
   wire clk_wiz_clk_out1;
   wire directionX;
   wire directionY;
@@ -202,7 +287,6 @@ module CNC_Top
   wire ms3X;
   wire ms3Y;
   wire ms3Z;
-  wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
   wire [31:0]processing_system7_0_M_AXI_GP0_ARADDR;
@@ -246,91 +330,7 @@ module CNC_Top
   wire resetX;
   wire resetY;
   wire resetZ;
-  wire [8:0]smartconnect_0_M00_AXI_ARADDR;
-  wire smartconnect_0_M00_AXI_ARREADY;
-  wire smartconnect_0_M00_AXI_ARVALID;
-  wire [8:0]smartconnect_0_M00_AXI_AWADDR;
-  wire smartconnect_0_M00_AXI_AWREADY;
-  wire smartconnect_0_M00_AXI_AWVALID;
-  wire smartconnect_0_M00_AXI_BREADY;
-  wire [1:0]smartconnect_0_M00_AXI_BRESP;
-  wire smartconnect_0_M00_AXI_BVALID;
-  wire [31:0]smartconnect_0_M00_AXI_RDATA;
-  wire smartconnect_0_M00_AXI_RREADY;
-  wire [1:0]smartconnect_0_M00_AXI_RRESP;
-  wire smartconnect_0_M00_AXI_RVALID;
-  wire [31:0]smartconnect_0_M00_AXI_WDATA;
-  wire smartconnect_0_M00_AXI_WREADY;
-  wire [3:0]smartconnect_0_M00_AXI_WSTRB;
-  wire smartconnect_0_M00_AXI_WVALID;
-  wire [8:0]smartconnect_0_M01_AXI_ARADDR;
-  wire smartconnect_0_M01_AXI_ARREADY;
-  wire smartconnect_0_M01_AXI_ARVALID;
-  wire [8:0]smartconnect_0_M01_AXI_AWADDR;
-  wire smartconnect_0_M01_AXI_AWREADY;
-  wire smartconnect_0_M01_AXI_AWVALID;
-  wire smartconnect_0_M01_AXI_BREADY;
-  wire [1:0]smartconnect_0_M01_AXI_BRESP;
-  wire smartconnect_0_M01_AXI_BVALID;
-  wire [31:0]smartconnect_0_M01_AXI_RDATA;
-  wire smartconnect_0_M01_AXI_RREADY;
-  wire [1:0]smartconnect_0_M01_AXI_RRESP;
-  wire smartconnect_0_M01_AXI_RVALID;
-  wire [31:0]smartconnect_0_M01_AXI_WDATA;
-  wire smartconnect_0_M01_AXI_WREADY;
-  wire [3:0]smartconnect_0_M01_AXI_WSTRB;
-  wire smartconnect_0_M01_AXI_WVALID;
-  wire [8:0]smartconnect_0_M02_AXI_ARADDR;
-  wire smartconnect_0_M02_AXI_ARREADY;
-  wire smartconnect_0_M02_AXI_ARVALID;
-  wire [8:0]smartconnect_0_M02_AXI_AWADDR;
-  wire smartconnect_0_M02_AXI_AWREADY;
-  wire smartconnect_0_M02_AXI_AWVALID;
-  wire smartconnect_0_M02_AXI_BREADY;
-  wire [1:0]smartconnect_0_M02_AXI_BRESP;
-  wire smartconnect_0_M02_AXI_BVALID;
-  wire [31:0]smartconnect_0_M02_AXI_RDATA;
-  wire smartconnect_0_M02_AXI_RREADY;
-  wire [1:0]smartconnect_0_M02_AXI_RRESP;
-  wire smartconnect_0_M02_AXI_RVALID;
-  wire [31:0]smartconnect_0_M02_AXI_WDATA;
-  wire smartconnect_0_M02_AXI_WREADY;
-  wire [3:0]smartconnect_0_M02_AXI_WSTRB;
-  wire smartconnect_0_M02_AXI_WVALID;
-  wire [8:0]smartconnect_0_M03_AXI_ARADDR;
-  wire smartconnect_0_M03_AXI_ARREADY;
-  wire smartconnect_0_M03_AXI_ARVALID;
-  wire [8:0]smartconnect_0_M03_AXI_AWADDR;
-  wire smartconnect_0_M03_AXI_AWREADY;
-  wire smartconnect_0_M03_AXI_AWVALID;
-  wire smartconnect_0_M03_AXI_BREADY;
-  wire [1:0]smartconnect_0_M03_AXI_BRESP;
-  wire smartconnect_0_M03_AXI_BVALID;
-  wire [31:0]smartconnect_0_M03_AXI_RDATA;
-  wire smartconnect_0_M03_AXI_RREADY;
-  wire [1:0]smartconnect_0_M03_AXI_RRESP;
-  wire smartconnect_0_M03_AXI_RVALID;
-  wire [31:0]smartconnect_0_M03_AXI_WDATA;
-  wire smartconnect_0_M03_AXI_WREADY;
-  wire [3:0]smartconnect_0_M03_AXI_WSTRB;
-  wire smartconnect_0_M03_AXI_WVALID;
-  wire [8:0]smartconnect_0_M04_AXI_ARADDR;
-  wire smartconnect_0_M04_AXI_ARREADY;
-  wire smartconnect_0_M04_AXI_ARVALID;
-  wire [8:0]smartconnect_0_M04_AXI_AWADDR;
-  wire smartconnect_0_M04_AXI_AWREADY;
-  wire smartconnect_0_M04_AXI_AWVALID;
-  wire smartconnect_0_M04_AXI_BREADY;
-  wire [1:0]smartconnect_0_M04_AXI_BRESP;
-  wire smartconnect_0_M04_AXI_BVALID;
-  wire [31:0]smartconnect_0_M04_AXI_RDATA;
-  wire smartconnect_0_M04_AXI_RREADY;
-  wire [1:0]smartconnect_0_M04_AXI_RRESP;
-  wire smartconnect_0_M04_AXI_RVALID;
-  wire [31:0]smartconnect_0_M04_AXI_WDATA;
-  wire smartconnect_0_M04_AXI_WREADY;
-  wire [3:0]smartconnect_0_M04_AXI_WSTRB;
-  wire smartconnect_0_M04_AXI_WVALID;
+  wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire stepX;
   wire stepY;
   wire stepZ;
@@ -447,7 +447,6 @@ module CNC_Top
         .cmd_speed(GcodeFetcher_0_cmd_speed),
         .cmd_valid(GcodeFetcher_0_cmd_valid),
         .interconnect_in(INTERCONNECT_GPIO_gpio_io_o),
-        .interconnect_out(GcodeFetcher_0_interconnect_out),
         .rewind(GCODE_Parser_0_rewind),
         .rst(ResetSwitch),
         .speed(COMMAND_GPIO_gpio_io_o),
@@ -457,29 +456,31 @@ module CNC_Top
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
   CNC_Top_axi_gpio_0_5 INTERCONNECT_GPIO
-       (.gpio2_io_i(GcodeFetcher_0_interconnect_out),
+       (.gpio2_io_i(LED_IO_0_PL_Channel),
         .gpio_io_o(INTERCONNECT_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(smartconnect_0_M04_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_arready(smartconnect_0_M04_AXI_ARREADY),
-        .s_axi_arvalid(smartconnect_0_M04_AXI_ARVALID),
-        .s_axi_awaddr(smartconnect_0_M04_AXI_AWADDR),
-        .s_axi_awready(smartconnect_0_M04_AXI_AWREADY),
-        .s_axi_awvalid(smartconnect_0_M04_AXI_AWVALID),
-        .s_axi_bready(smartconnect_0_M04_AXI_BREADY),
-        .s_axi_bresp(smartconnect_0_M04_AXI_BRESP),
-        .s_axi_bvalid(smartconnect_0_M04_AXI_BVALID),
-        .s_axi_rdata(smartconnect_0_M04_AXI_RDATA),
-        .s_axi_rready(smartconnect_0_M04_AXI_RREADY),
-        .s_axi_rresp(smartconnect_0_M04_AXI_RRESP),
-        .s_axi_rvalid(smartconnect_0_M04_AXI_RVALID),
-        .s_axi_wdata(smartconnect_0_M04_AXI_WDATA),
-        .s_axi_wready(smartconnect_0_M04_AXI_WREADY),
-        .s_axi_wstrb(smartconnect_0_M04_AXI_WSTRB),
-        .s_axi_wvalid(smartconnect_0_M04_AXI_WVALID));
+        .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M00_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M00_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M00_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M00_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M00_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M00_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M00_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M00_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M00_AXI_RDATA),
+        .s_axi_rready(axi_smc_M00_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M00_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M00_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M00_AXI_WDATA),
+        .s_axi_wready(axi_smc_M00_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M00_AXI_WVALID));
   CNC_Top_LED_IO_0_0 LED_IO_0
-       (.PS_Channel(INTERCONNECT_GPIO_gpio_io_o),
+       (.PL_Channel(LED_IO_0_PL_Channel),
+        .PL_State({GcodeFetcher_0_cmd_valid,GcodeFetcher_0_cmd_valid,GcodeFetcher_0_cmd_valid,GcodeFetcher_0_cmd_valid}),
+        .PS_Channel(INTERCONNECT_GPIO_gpio_io_o),
         .SPEED(COMMAND_GPIO_gpio_io_o),
         .X(X_GPIO_gpio_io_o),
         .Y(Y_GPIO_gpio_io_o),
@@ -489,24 +490,24 @@ module CNC_Top
   CNC_Top_axi_gpio_0_4 SPEED_GPIO
        (.gpio_io_o(COMMAND_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(smartconnect_0_M03_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_arready(smartconnect_0_M03_AXI_ARREADY),
-        .s_axi_arvalid(smartconnect_0_M03_AXI_ARVALID),
-        .s_axi_awaddr(smartconnect_0_M03_AXI_AWADDR),
-        .s_axi_awready(smartconnect_0_M03_AXI_AWREADY),
-        .s_axi_awvalid(smartconnect_0_M03_AXI_AWVALID),
-        .s_axi_bready(smartconnect_0_M03_AXI_BREADY),
-        .s_axi_bresp(smartconnect_0_M03_AXI_BRESP),
-        .s_axi_bvalid(smartconnect_0_M03_AXI_BVALID),
-        .s_axi_rdata(smartconnect_0_M03_AXI_RDATA),
-        .s_axi_rready(smartconnect_0_M03_AXI_RREADY),
-        .s_axi_rresp(smartconnect_0_M03_AXI_RRESP),
-        .s_axi_rvalid(smartconnect_0_M03_AXI_RVALID),
-        .s_axi_wdata(smartconnect_0_M03_AXI_WDATA),
-        .s_axi_wready(smartconnect_0_M03_AXI_WREADY),
-        .s_axi_wstrb(smartconnect_0_M03_AXI_WSTRB),
-        .s_axi_wvalid(smartconnect_0_M03_AXI_WVALID));
+        .s_axi_araddr(axi_smc_M01_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M01_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M01_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M01_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M01_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M01_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M01_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M01_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M01_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M01_AXI_RDATA),
+        .s_axi_rready(axi_smc_M01_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M01_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M01_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M01_AXI_WDATA),
+        .s_axi_wready(axi_smc_M01_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M01_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M01_AXI_WVALID));
   CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator_0
        (.clk(clk_wiz_clk_out1),
         .current_speed(XYZ_Axis_Coordinator_0_current_speed),
@@ -532,77 +533,196 @@ module CNC_Top
   CNC_Top_axi_gpio_0_1 X_GPIO
        (.gpio_io_o(X_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(smartconnect_0_M00_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_arready(smartconnect_0_M00_AXI_ARREADY),
-        .s_axi_arvalid(smartconnect_0_M00_AXI_ARVALID),
-        .s_axi_awaddr(smartconnect_0_M00_AXI_AWADDR),
-        .s_axi_awready(smartconnect_0_M00_AXI_AWREADY),
-        .s_axi_awvalid(smartconnect_0_M00_AXI_AWVALID),
-        .s_axi_bready(smartconnect_0_M00_AXI_BREADY),
-        .s_axi_bresp(smartconnect_0_M00_AXI_BRESP),
-        .s_axi_bvalid(smartconnect_0_M00_AXI_BVALID),
-        .s_axi_rdata(smartconnect_0_M00_AXI_RDATA),
-        .s_axi_rready(smartconnect_0_M00_AXI_RREADY),
-        .s_axi_rresp(smartconnect_0_M00_AXI_RRESP),
-        .s_axi_rvalid(smartconnect_0_M00_AXI_RVALID),
-        .s_axi_wdata(smartconnect_0_M00_AXI_WDATA),
-        .s_axi_wready(smartconnect_0_M00_AXI_WREADY),
-        .s_axi_wstrb(smartconnect_0_M00_AXI_WSTRB),
-        .s_axi_wvalid(smartconnect_0_M00_AXI_WVALID));
+        .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M02_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M02_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M02_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M02_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M02_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M02_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M02_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M02_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M02_AXI_RDATA),
+        .s_axi_rready(axi_smc_M02_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M02_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M02_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M02_AXI_WDATA),
+        .s_axi_wready(axi_smc_M02_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
   CNC_Top_axi_gpio_0_2 Y_GPIO
        (.gpio_io_o(Y_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(smartconnect_0_M01_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_arready(smartconnect_0_M01_AXI_ARREADY),
-        .s_axi_arvalid(smartconnect_0_M01_AXI_ARVALID),
-        .s_axi_awaddr(smartconnect_0_M01_AXI_AWADDR),
-        .s_axi_awready(smartconnect_0_M01_AXI_AWREADY),
-        .s_axi_awvalid(smartconnect_0_M01_AXI_AWVALID),
-        .s_axi_bready(smartconnect_0_M01_AXI_BREADY),
-        .s_axi_bresp(smartconnect_0_M01_AXI_BRESP),
-        .s_axi_bvalid(smartconnect_0_M01_AXI_BVALID),
-        .s_axi_rdata(smartconnect_0_M01_AXI_RDATA),
-        .s_axi_rready(smartconnect_0_M01_AXI_RREADY),
-        .s_axi_rresp(smartconnect_0_M01_AXI_RRESP),
-        .s_axi_rvalid(smartconnect_0_M01_AXI_RVALID),
-        .s_axi_wdata(smartconnect_0_M01_AXI_WDATA),
-        .s_axi_wready(smartconnect_0_M01_AXI_WREADY),
-        .s_axi_wstrb(smartconnect_0_M01_AXI_WSTRB),
-        .s_axi_wvalid(smartconnect_0_M01_AXI_WVALID));
+        .s_axi_araddr(axi_smc_M03_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M03_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M03_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M03_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M03_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M03_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M03_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M03_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M03_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M03_AXI_RDATA),
+        .s_axi_rready(axi_smc_M03_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M03_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M03_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M03_AXI_WDATA),
+        .s_axi_wready(axi_smc_M03_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M03_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M03_AXI_WVALID));
   CNC_Top_axi_gpio_0_3 Z_GPIO
        (.gpio_io_o(Z_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(smartconnect_0_M02_AXI_ARADDR),
-        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s_axi_arready(smartconnect_0_M02_AXI_ARREADY),
-        .s_axi_arvalid(smartconnect_0_M02_AXI_ARVALID),
-        .s_axi_awaddr(smartconnect_0_M02_AXI_AWADDR),
-        .s_axi_awready(smartconnect_0_M02_AXI_AWREADY),
-        .s_axi_awvalid(smartconnect_0_M02_AXI_AWVALID),
-        .s_axi_bready(smartconnect_0_M02_AXI_BREADY),
-        .s_axi_bresp(smartconnect_0_M02_AXI_BRESP),
-        .s_axi_bvalid(smartconnect_0_M02_AXI_BVALID),
-        .s_axi_rdata(smartconnect_0_M02_AXI_RDATA),
-        .s_axi_rready(smartconnect_0_M02_AXI_RREADY),
-        .s_axi_rresp(smartconnect_0_M02_AXI_RRESP),
-        .s_axi_rvalid(smartconnect_0_M02_AXI_RVALID),
-        .s_axi_wdata(smartconnect_0_M02_AXI_WDATA),
-        .s_axi_wready(smartconnect_0_M02_AXI_WREADY),
-        .s_axi_wstrb(smartconnect_0_M02_AXI_WSTRB),
-        .s_axi_wvalid(smartconnect_0_M02_AXI_WVALID));
+        .s_axi_araddr(axi_smc_M04_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M04_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M04_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M04_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M04_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M04_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M04_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M04_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M04_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M04_AXI_RDATA),
+        .s_axi_rready(axi_smc_M04_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M04_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M04_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M04_AXI_WDATA),
+        .s_axi_wready(axi_smc_M04_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M04_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M04_AXI_WVALID));
+  CNC_Top_axi_smc_0 axi_smc
+       (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
+        .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),
+        .M00_AXI_arvalid(axi_smc_M00_AXI_ARVALID),
+        .M00_AXI_awaddr(axi_smc_M00_AXI_AWADDR),
+        .M00_AXI_awready(axi_smc_M00_AXI_AWREADY),
+        .M00_AXI_awvalid(axi_smc_M00_AXI_AWVALID),
+        .M00_AXI_bready(axi_smc_M00_AXI_BREADY),
+        .M00_AXI_bresp(axi_smc_M00_AXI_BRESP),
+        .M00_AXI_bvalid(axi_smc_M00_AXI_BVALID),
+        .M00_AXI_rdata(axi_smc_M00_AXI_RDATA),
+        .M00_AXI_rready(axi_smc_M00_AXI_RREADY),
+        .M00_AXI_rresp(axi_smc_M00_AXI_RRESP),
+        .M00_AXI_rvalid(axi_smc_M00_AXI_RVALID),
+        .M00_AXI_wdata(axi_smc_M00_AXI_WDATA),
+        .M00_AXI_wready(axi_smc_M00_AXI_WREADY),
+        .M00_AXI_wstrb(axi_smc_M00_AXI_WSTRB),
+        .M00_AXI_wvalid(axi_smc_M00_AXI_WVALID),
+        .M01_AXI_araddr(axi_smc_M01_AXI_ARADDR),
+        .M01_AXI_arready(axi_smc_M01_AXI_ARREADY),
+        .M01_AXI_arvalid(axi_smc_M01_AXI_ARVALID),
+        .M01_AXI_awaddr(axi_smc_M01_AXI_AWADDR),
+        .M01_AXI_awready(axi_smc_M01_AXI_AWREADY),
+        .M01_AXI_awvalid(axi_smc_M01_AXI_AWVALID),
+        .M01_AXI_bready(axi_smc_M01_AXI_BREADY),
+        .M01_AXI_bresp(axi_smc_M01_AXI_BRESP),
+        .M01_AXI_bvalid(axi_smc_M01_AXI_BVALID),
+        .M01_AXI_rdata(axi_smc_M01_AXI_RDATA),
+        .M01_AXI_rready(axi_smc_M01_AXI_RREADY),
+        .M01_AXI_rresp(axi_smc_M01_AXI_RRESP),
+        .M01_AXI_rvalid(axi_smc_M01_AXI_RVALID),
+        .M01_AXI_wdata(axi_smc_M01_AXI_WDATA),
+        .M01_AXI_wready(axi_smc_M01_AXI_WREADY),
+        .M01_AXI_wstrb(axi_smc_M01_AXI_WSTRB),
+        .M01_AXI_wvalid(axi_smc_M01_AXI_WVALID),
+        .M02_AXI_araddr(axi_smc_M02_AXI_ARADDR),
+        .M02_AXI_arready(axi_smc_M02_AXI_ARREADY),
+        .M02_AXI_arvalid(axi_smc_M02_AXI_ARVALID),
+        .M02_AXI_awaddr(axi_smc_M02_AXI_AWADDR),
+        .M02_AXI_awready(axi_smc_M02_AXI_AWREADY),
+        .M02_AXI_awvalid(axi_smc_M02_AXI_AWVALID),
+        .M02_AXI_bready(axi_smc_M02_AXI_BREADY),
+        .M02_AXI_bresp(axi_smc_M02_AXI_BRESP),
+        .M02_AXI_bvalid(axi_smc_M02_AXI_BVALID),
+        .M02_AXI_rdata(axi_smc_M02_AXI_RDATA),
+        .M02_AXI_rready(axi_smc_M02_AXI_RREADY),
+        .M02_AXI_rresp(axi_smc_M02_AXI_RRESP),
+        .M02_AXI_rvalid(axi_smc_M02_AXI_RVALID),
+        .M02_AXI_wdata(axi_smc_M02_AXI_WDATA),
+        .M02_AXI_wready(axi_smc_M02_AXI_WREADY),
+        .M02_AXI_wstrb(axi_smc_M02_AXI_WSTRB),
+        .M02_AXI_wvalid(axi_smc_M02_AXI_WVALID),
+        .M03_AXI_araddr(axi_smc_M03_AXI_ARADDR),
+        .M03_AXI_arready(axi_smc_M03_AXI_ARREADY),
+        .M03_AXI_arvalid(axi_smc_M03_AXI_ARVALID),
+        .M03_AXI_awaddr(axi_smc_M03_AXI_AWADDR),
+        .M03_AXI_awready(axi_smc_M03_AXI_AWREADY),
+        .M03_AXI_awvalid(axi_smc_M03_AXI_AWVALID),
+        .M03_AXI_bready(axi_smc_M03_AXI_BREADY),
+        .M03_AXI_bresp(axi_smc_M03_AXI_BRESP),
+        .M03_AXI_bvalid(axi_smc_M03_AXI_BVALID),
+        .M03_AXI_rdata(axi_smc_M03_AXI_RDATA),
+        .M03_AXI_rready(axi_smc_M03_AXI_RREADY),
+        .M03_AXI_rresp(axi_smc_M03_AXI_RRESP),
+        .M03_AXI_rvalid(axi_smc_M03_AXI_RVALID),
+        .M03_AXI_wdata(axi_smc_M03_AXI_WDATA),
+        .M03_AXI_wready(axi_smc_M03_AXI_WREADY),
+        .M03_AXI_wstrb(axi_smc_M03_AXI_WSTRB),
+        .M03_AXI_wvalid(axi_smc_M03_AXI_WVALID),
+        .M04_AXI_araddr(axi_smc_M04_AXI_ARADDR),
+        .M04_AXI_arready(axi_smc_M04_AXI_ARREADY),
+        .M04_AXI_arvalid(axi_smc_M04_AXI_ARVALID),
+        .M04_AXI_awaddr(axi_smc_M04_AXI_AWADDR),
+        .M04_AXI_awready(axi_smc_M04_AXI_AWREADY),
+        .M04_AXI_awvalid(axi_smc_M04_AXI_AWVALID),
+        .M04_AXI_bready(axi_smc_M04_AXI_BREADY),
+        .M04_AXI_bresp(axi_smc_M04_AXI_BRESP),
+        .M04_AXI_bvalid(axi_smc_M04_AXI_BVALID),
+        .M04_AXI_rdata(axi_smc_M04_AXI_RDATA),
+        .M04_AXI_rready(axi_smc_M04_AXI_RREADY),
+        .M04_AXI_rresp(axi_smc_M04_AXI_RRESP),
+        .M04_AXI_rvalid(axi_smc_M04_AXI_RVALID),
+        .M04_AXI_wdata(axi_smc_M04_AXI_WDATA),
+        .M04_AXI_wready(axi_smc_M04_AXI_WREADY),
+        .M04_AXI_wstrb(axi_smc_M04_AXI_WSTRB),
+        .M04_AXI_wvalid(axi_smc_M04_AXI_WVALID),
+        .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
+        .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
+        .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
+        .S00_AXI_arid(processing_system7_0_M_AXI_GP0_ARID),
+        .S00_AXI_arlen(processing_system7_0_M_AXI_GP0_ARLEN),
+        .S00_AXI_arlock(processing_system7_0_M_AXI_GP0_ARLOCK),
+        .S00_AXI_arprot(processing_system7_0_M_AXI_GP0_ARPROT),
+        .S00_AXI_arqos(processing_system7_0_M_AXI_GP0_ARQOS),
+        .S00_AXI_arready(processing_system7_0_M_AXI_GP0_ARREADY),
+        .S00_AXI_arsize(processing_system7_0_M_AXI_GP0_ARSIZE),
+        .S00_AXI_arvalid(processing_system7_0_M_AXI_GP0_ARVALID),
+        .S00_AXI_awaddr(processing_system7_0_M_AXI_GP0_AWADDR),
+        .S00_AXI_awburst(processing_system7_0_M_AXI_GP0_AWBURST),
+        .S00_AXI_awcache(processing_system7_0_M_AXI_GP0_AWCACHE),
+        .S00_AXI_awid(processing_system7_0_M_AXI_GP0_AWID),
+        .S00_AXI_awlen(processing_system7_0_M_AXI_GP0_AWLEN),
+        .S00_AXI_awlock(processing_system7_0_M_AXI_GP0_AWLOCK),
+        .S00_AXI_awprot(processing_system7_0_M_AXI_GP0_AWPROT),
+        .S00_AXI_awqos(processing_system7_0_M_AXI_GP0_AWQOS),
+        .S00_AXI_awready(processing_system7_0_M_AXI_GP0_AWREADY),
+        .S00_AXI_awsize(processing_system7_0_M_AXI_GP0_AWSIZE),
+        .S00_AXI_awvalid(processing_system7_0_M_AXI_GP0_AWVALID),
+        .S00_AXI_bid(processing_system7_0_M_AXI_GP0_BID),
+        .S00_AXI_bready(processing_system7_0_M_AXI_GP0_BREADY),
+        .S00_AXI_bresp(processing_system7_0_M_AXI_GP0_BRESP),
+        .S00_AXI_bvalid(processing_system7_0_M_AXI_GP0_BVALID),
+        .S00_AXI_rdata(processing_system7_0_M_AXI_GP0_RDATA),
+        .S00_AXI_rid(processing_system7_0_M_AXI_GP0_RID),
+        .S00_AXI_rlast(processing_system7_0_M_AXI_GP0_RLAST),
+        .S00_AXI_rready(processing_system7_0_M_AXI_GP0_RREADY),
+        .S00_AXI_rresp(processing_system7_0_M_AXI_GP0_RRESP),
+        .S00_AXI_rvalid(processing_system7_0_M_AXI_GP0_RVALID),
+        .S00_AXI_wdata(processing_system7_0_M_AXI_GP0_WDATA),
+        .S00_AXI_wid(processing_system7_0_M_AXI_GP0_WID),
+        .S00_AXI_wlast(processing_system7_0_M_AXI_GP0_WLAST),
+        .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
+        .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
+        .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
+        .aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(rst_ps7_0_100M_peripheral_aresetn));
   CNC_Top_clk_wiz_0 clk_wiz
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_clk_out1),
         .reset(ResetSwitch));
-  CNC_Top_proc_sys_reset_0_0 proc_sys_reset_0
-       (.aux_reset_in(1'b1),
-        .dcm_locked(1'b1),
-        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
-        .mb_debug_sys_rst(1'b0),
-        .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   CNC_Top_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr),
         .DDR_BankAddr(DDR_ba),
@@ -666,133 +786,14 @@ module CNC_Top
         .PS_CLK(FIXED_IO_ps_clk),
         .PS_PORB(FIXED_IO_ps_porb),
         .PS_SRSTB(FIXED_IO_ps_srstb),
-        .SDIO0_CDN(1'b0));
-  CNC_Top_smartconnect_0_0 smartconnect_0
-       (.M00_AXI_araddr(smartconnect_0_M00_AXI_ARADDR),
-        .M00_AXI_arready(smartconnect_0_M00_AXI_ARREADY),
-        .M00_AXI_arvalid(smartconnect_0_M00_AXI_ARVALID),
-        .M00_AXI_awaddr(smartconnect_0_M00_AXI_AWADDR),
-        .M00_AXI_awready(smartconnect_0_M00_AXI_AWREADY),
-        .M00_AXI_awvalid(smartconnect_0_M00_AXI_AWVALID),
-        .M00_AXI_bready(smartconnect_0_M00_AXI_BREADY),
-        .M00_AXI_bresp(smartconnect_0_M00_AXI_BRESP),
-        .M00_AXI_bvalid(smartconnect_0_M00_AXI_BVALID),
-        .M00_AXI_rdata(smartconnect_0_M00_AXI_RDATA),
-        .M00_AXI_rready(smartconnect_0_M00_AXI_RREADY),
-        .M00_AXI_rresp(smartconnect_0_M00_AXI_RRESP),
-        .M00_AXI_rvalid(smartconnect_0_M00_AXI_RVALID),
-        .M00_AXI_wdata(smartconnect_0_M00_AXI_WDATA),
-        .M00_AXI_wready(smartconnect_0_M00_AXI_WREADY),
-        .M00_AXI_wstrb(smartconnect_0_M00_AXI_WSTRB),
-        .M00_AXI_wvalid(smartconnect_0_M00_AXI_WVALID),
-        .M01_AXI_araddr(smartconnect_0_M01_AXI_ARADDR),
-        .M01_AXI_arready(smartconnect_0_M01_AXI_ARREADY),
-        .M01_AXI_arvalid(smartconnect_0_M01_AXI_ARVALID),
-        .M01_AXI_awaddr(smartconnect_0_M01_AXI_AWADDR),
-        .M01_AXI_awready(smartconnect_0_M01_AXI_AWREADY),
-        .M01_AXI_awvalid(smartconnect_0_M01_AXI_AWVALID),
-        .M01_AXI_bready(smartconnect_0_M01_AXI_BREADY),
-        .M01_AXI_bresp(smartconnect_0_M01_AXI_BRESP),
-        .M01_AXI_bvalid(smartconnect_0_M01_AXI_BVALID),
-        .M01_AXI_rdata(smartconnect_0_M01_AXI_RDATA),
-        .M01_AXI_rready(smartconnect_0_M01_AXI_RREADY),
-        .M01_AXI_rresp(smartconnect_0_M01_AXI_RRESP),
-        .M01_AXI_rvalid(smartconnect_0_M01_AXI_RVALID),
-        .M01_AXI_wdata(smartconnect_0_M01_AXI_WDATA),
-        .M01_AXI_wready(smartconnect_0_M01_AXI_WREADY),
-        .M01_AXI_wstrb(smartconnect_0_M01_AXI_WSTRB),
-        .M01_AXI_wvalid(smartconnect_0_M01_AXI_WVALID),
-        .M02_AXI_araddr(smartconnect_0_M02_AXI_ARADDR),
-        .M02_AXI_arready(smartconnect_0_M02_AXI_ARREADY),
-        .M02_AXI_arvalid(smartconnect_0_M02_AXI_ARVALID),
-        .M02_AXI_awaddr(smartconnect_0_M02_AXI_AWADDR),
-        .M02_AXI_awready(smartconnect_0_M02_AXI_AWREADY),
-        .M02_AXI_awvalid(smartconnect_0_M02_AXI_AWVALID),
-        .M02_AXI_bready(smartconnect_0_M02_AXI_BREADY),
-        .M02_AXI_bresp(smartconnect_0_M02_AXI_BRESP),
-        .M02_AXI_bvalid(smartconnect_0_M02_AXI_BVALID),
-        .M02_AXI_rdata(smartconnect_0_M02_AXI_RDATA),
-        .M02_AXI_rready(smartconnect_0_M02_AXI_RREADY),
-        .M02_AXI_rresp(smartconnect_0_M02_AXI_RRESP),
-        .M02_AXI_rvalid(smartconnect_0_M02_AXI_RVALID),
-        .M02_AXI_wdata(smartconnect_0_M02_AXI_WDATA),
-        .M02_AXI_wready(smartconnect_0_M02_AXI_WREADY),
-        .M02_AXI_wstrb(smartconnect_0_M02_AXI_WSTRB),
-        .M02_AXI_wvalid(smartconnect_0_M02_AXI_WVALID),
-        .M03_AXI_araddr(smartconnect_0_M03_AXI_ARADDR),
-        .M03_AXI_arready(smartconnect_0_M03_AXI_ARREADY),
-        .M03_AXI_arvalid(smartconnect_0_M03_AXI_ARVALID),
-        .M03_AXI_awaddr(smartconnect_0_M03_AXI_AWADDR),
-        .M03_AXI_awready(smartconnect_0_M03_AXI_AWREADY),
-        .M03_AXI_awvalid(smartconnect_0_M03_AXI_AWVALID),
-        .M03_AXI_bready(smartconnect_0_M03_AXI_BREADY),
-        .M03_AXI_bresp(smartconnect_0_M03_AXI_BRESP),
-        .M03_AXI_bvalid(smartconnect_0_M03_AXI_BVALID),
-        .M03_AXI_rdata(smartconnect_0_M03_AXI_RDATA),
-        .M03_AXI_rready(smartconnect_0_M03_AXI_RREADY),
-        .M03_AXI_rresp(smartconnect_0_M03_AXI_RRESP),
-        .M03_AXI_rvalid(smartconnect_0_M03_AXI_RVALID),
-        .M03_AXI_wdata(smartconnect_0_M03_AXI_WDATA),
-        .M03_AXI_wready(smartconnect_0_M03_AXI_WREADY),
-        .M03_AXI_wstrb(smartconnect_0_M03_AXI_WSTRB),
-        .M03_AXI_wvalid(smartconnect_0_M03_AXI_WVALID),
-        .M04_AXI_araddr(smartconnect_0_M04_AXI_ARADDR),
-        .M04_AXI_arready(smartconnect_0_M04_AXI_ARREADY),
-        .M04_AXI_arvalid(smartconnect_0_M04_AXI_ARVALID),
-        .M04_AXI_awaddr(smartconnect_0_M04_AXI_AWADDR),
-        .M04_AXI_awready(smartconnect_0_M04_AXI_AWREADY),
-        .M04_AXI_awvalid(smartconnect_0_M04_AXI_AWVALID),
-        .M04_AXI_bready(smartconnect_0_M04_AXI_BREADY),
-        .M04_AXI_bresp(smartconnect_0_M04_AXI_BRESP),
-        .M04_AXI_bvalid(smartconnect_0_M04_AXI_BVALID),
-        .M04_AXI_rdata(smartconnect_0_M04_AXI_RDATA),
-        .M04_AXI_rready(smartconnect_0_M04_AXI_RREADY),
-        .M04_AXI_rresp(smartconnect_0_M04_AXI_RRESP),
-        .M04_AXI_rvalid(smartconnect_0_M04_AXI_RVALID),
-        .M04_AXI_wdata(smartconnect_0_M04_AXI_WDATA),
-        .M04_AXI_wready(smartconnect_0_M04_AXI_WREADY),
-        .M04_AXI_wstrb(smartconnect_0_M04_AXI_WSTRB),
-        .M04_AXI_wvalid(smartconnect_0_M04_AXI_WVALID),
-        .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
-        .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
-        .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
-        .S00_AXI_arid(processing_system7_0_M_AXI_GP0_ARID),
-        .S00_AXI_arlen(processing_system7_0_M_AXI_GP0_ARLEN),
-        .S00_AXI_arlock(processing_system7_0_M_AXI_GP0_ARLOCK),
-        .S00_AXI_arprot(processing_system7_0_M_AXI_GP0_ARPROT),
-        .S00_AXI_arqos(processing_system7_0_M_AXI_GP0_ARQOS),
-        .S00_AXI_arready(processing_system7_0_M_AXI_GP0_ARREADY),
-        .S00_AXI_arsize(processing_system7_0_M_AXI_GP0_ARSIZE),
-        .S00_AXI_arvalid(processing_system7_0_M_AXI_GP0_ARVALID),
-        .S00_AXI_awaddr(processing_system7_0_M_AXI_GP0_AWADDR),
-        .S00_AXI_awburst(processing_system7_0_M_AXI_GP0_AWBURST),
-        .S00_AXI_awcache(processing_system7_0_M_AXI_GP0_AWCACHE),
-        .S00_AXI_awid(processing_system7_0_M_AXI_GP0_AWID),
-        .S00_AXI_awlen(processing_system7_0_M_AXI_GP0_AWLEN),
-        .S00_AXI_awlock(processing_system7_0_M_AXI_GP0_AWLOCK),
-        .S00_AXI_awprot(processing_system7_0_M_AXI_GP0_AWPROT),
-        .S00_AXI_awqos(processing_system7_0_M_AXI_GP0_AWQOS),
-        .S00_AXI_awready(processing_system7_0_M_AXI_GP0_AWREADY),
-        .S00_AXI_awsize(processing_system7_0_M_AXI_GP0_AWSIZE),
-        .S00_AXI_awvalid(processing_system7_0_M_AXI_GP0_AWVALID),
-        .S00_AXI_bid(processing_system7_0_M_AXI_GP0_BID),
-        .S00_AXI_bready(processing_system7_0_M_AXI_GP0_BREADY),
-        .S00_AXI_bresp(processing_system7_0_M_AXI_GP0_BRESP),
-        .S00_AXI_bvalid(processing_system7_0_M_AXI_GP0_BVALID),
-        .S00_AXI_rdata(processing_system7_0_M_AXI_GP0_RDATA),
-        .S00_AXI_rid(processing_system7_0_M_AXI_GP0_RID),
-        .S00_AXI_rlast(processing_system7_0_M_AXI_GP0_RLAST),
-        .S00_AXI_rready(processing_system7_0_M_AXI_GP0_RREADY),
-        .S00_AXI_rresp(processing_system7_0_M_AXI_GP0_RRESP),
-        .S00_AXI_rvalid(processing_system7_0_M_AXI_GP0_RVALID),
-        .S00_AXI_wdata(processing_system7_0_M_AXI_GP0_WDATA),
-        .S00_AXI_wid(processing_system7_0_M_AXI_GP0_WID),
-        .S00_AXI_wlast(processing_system7_0_M_AXI_GP0_WLAST),
-        .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
-        .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
-        .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
-        .aclk(processing_system7_0_FCLK_CLK0),
-        .aresetn(proc_sys_reset_0_peripheral_aresetn));
+        .USB0_VBUS_PWRFAULT(1'b0));
+  CNC_Top_rst_ps7_0_100M_0 rst_ps7_0_100M
+       (.aux_reset_in(1'b1),
+        .dcm_locked(1'b1),
+        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
+        .mb_debug_sys_rst(1'b0),
+        .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   CNC_Top_vio_0_0 vio_0
        (.clk(clk_wiz_clk_out1),
         .probe_in0(XYZ_Axis_Coordinator_0_current_speed),

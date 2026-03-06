@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Fri Mar  6 19:25:45 2026
+| Date             : Fri Mar  6 22:54:57 2026
 | Host             : OBSIDIAN running 64-bit major release  (build 9200)
 | Command          : report_power -file CNC_Top_wrapper_power_routed.rpt -pb CNC_Top_wrapper_power_summary_routed.pb -rpx CNC_Top_wrapper_power_routed.rpx
 | Design           : CNC_Top_wrapper
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.026 |        7 |       --- |             --- |
-| Slice Logic              |     0.113 |    18594 |       --- |             --- |
-|   LUT as Logic           |     0.097 |    10483 |     53200 |           19.70 |
+| Clocks                   |     0.024 |        7 |       --- |             --- |
+| Slice Logic              |     0.113 |    18568 |       --- |             --- |
+|   LUT as Logic           |     0.097 |    10482 |     53200 |           19.70 |
 |   CARRY4                 |     0.015 |     2263 |     13300 |           17.02 |
-|   Register               |    <0.001 |     3974 |    106400 |            3.73 |
+|   Register               |    <0.001 |     3956 |    106400 |            3.72 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |       32 |     53200 |            0.06 |
 |   Others                 |     0.000 |      571 |       --- |             --- |
 |   LUT as Shift Register  |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.109 |    15471 |       --- |             --- |
+| Signals                  |     0.111 |    15443 |       --- |             --- |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | DSPs                     |     0.017 |       22 |       220 |           10.00 |
 | I/O                      |     0.006 |       37 |       200 |           18.50 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.282 |       0.264 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.282 |       0.265 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.075 |       0.059 |      0.017 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -161,20 +161,20 @@ Table of Contents
 |   CNC_Top_i                |     1.895 |
 |     GCODE_Parser_0         |     0.002 |
 |       inst                 |     0.002 |
-|     XYZ_Axis_Coordinator_0 |     0.233 |
-|       inst                 |     0.233 |
+|     XYZ_Axis_Coordinator_0 |     0.236 |
+|       inst                 |     0.236 |
 |     X_GPIO                 |     0.001 |
 |       U0                   |     0.001 |
 |     Y_GPIO                 |     0.001 |
 |       U0                   |     0.001 |
 |     Z_GPIO                 |     0.001 |
 |       U0                   |     0.001 |
-|     axi_smc                |     0.011 |
-|       inst                 |     0.011 |
+|     axi_smc                |     0.010 |
+|       inst                 |     0.010 |
 |     clk_wiz                |     0.106 |
 |       inst                 |     0.106 |
-|     processing_system7_0   |     1.530 |
-|       inst                 |     1.530 |
+|     processing_system7_0   |     1.529 |
+|       inst                 |     1.529 |
 |     vio_0                  |     0.004 |
 |       inst                 |     0.004 |
 |   dbg_hub                  |     0.004 |

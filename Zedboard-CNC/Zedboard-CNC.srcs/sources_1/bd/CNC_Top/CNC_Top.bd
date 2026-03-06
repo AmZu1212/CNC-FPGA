@@ -1200,12 +1200,12 @@
           },
           "interconnect_in": {
             "direction": "I",
-            "left": "7",
+            "left": "3",
             "right": "0"
           },
           "interconnect_out": {
             "direction": "O",
-            "left": "7",
+            "left": "3",
             "right": "0"
           },
           "cmd_valid": {
@@ -2235,10 +2235,10 @@
             "value": "1"
           },
           "C_GPIO2_WIDTH": {
-            "value": "8"
+            "value": "4"
           },
           "C_GPIO_WIDTH": {
-            "value": "8"
+            "value": "4"
           },
           "C_IS_DUAL": {
             "value": "1"
@@ -2257,6 +2257,9 @@
           "boundary_crc": "0x0"
         },
         "ports": {
+          "rstSwitch": {
+            "direction": "I"
+          },
           "X": {
             "direction": "I",
             "left": "31",
@@ -2279,15 +2282,17 @@
           },
           "PS_Channel": {
             "direction": "I",
-            "left": "7",
+            "left": "3",
             "right": "0"
           },
-          "rstSwitch": {
-            "direction": "I"
+          "PL_State": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
           },
           "PL_Channel": {
             "direction": "O",
-            "left": "7",
+            "left": "3",
             "right": "0"
           },
           "led": {
@@ -2654,8 +2659,8 @@
       "COMMAND_GPIO_gpio_io_o": {
         "ports": [
           "SPEED_GPIO/gpio_io_o",
-          "GcodeFetcher_0/speed",
-          "LED_IO_0/SPEED"
+          "LED_IO_0/SPEED",
+          "GcodeFetcher_0/speed"
         ]
       },
       "Down_1": {
@@ -2820,14 +2825,20 @@
       "GcodeFetcher_0_interconnect_out": {
         "ports": [
           "GcodeFetcher_0/interconnect_out",
-          "INTERCONNECT_GPIO/gpio2_io_i"
+          "LED_IO_0/PL_State"
         ]
       },
       "INTERCONNECT_GPIO_gpio_io_o": {
         "ports": [
           "INTERCONNECT_GPIO/gpio_io_o",
-          "GcodeFetcher_0/interconnect_in",
-          "LED_IO_0/PS_Channel"
+          "LED_IO_0/PS_Channel",
+          "GcodeFetcher_0/interconnect_in"
+        ]
+      },
+      "LED_IO_0_PL_Channel": {
+        "ports": [
+          "LED_IO_0/PL_Channel",
+          "INTERCONNECT_GPIO/gpio2_io_i"
         ]
       },
       "LED_IO_0_led": {
@@ -2860,8 +2871,8 @@
           "XYZ_Axis_Coordinator_0/rst",
           "GCODE_Parser_0/rst",
           "clk_wiz/reset",
-          "GcodeFetcher_0/rst",
-          "LED_IO_0/rstSwitch"
+          "LED_IO_0/rstSwitch",
+          "GcodeFetcher_0/rst"
         ]
       },
       "Right_1": {
@@ -2939,22 +2950,22 @@
       "X_GPIO_gpio_io_o": {
         "ports": [
           "X_GPIO/gpio_io_o",
-          "GcodeFetcher_0/x",
-          "LED_IO_0/X"
+          "LED_IO_0/X",
+          "GcodeFetcher_0/x"
         ]
       },
       "Y_GPIO_gpio_io_o": {
         "ports": [
           "Y_GPIO/gpio_io_o",
-          "GcodeFetcher_0/y",
-          "LED_IO_0/Y"
+          "LED_IO_0/Y",
+          "GcodeFetcher_0/y"
         ]
       },
       "Z_GPIO_gpio_io_o": {
         "ports": [
           "Z_GPIO/gpio_io_o",
-          "GcodeFetcher_0/z",
-          "LED_IO_0/Z"
+          "LED_IO_0/Z",
+          "GcodeFetcher_0/z"
         ]
       },
       "Zswitch_1": {

@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Fri Mar  6 19:21:12 2026
+//Date        : Fri Mar  6 21:26:36 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -164,8 +164,9 @@ module CNC_Top
   wire [31:0]GcodeFetcher_0_cmd_pos_z;
   wire [7:0]GcodeFetcher_0_cmd_speed;
   wire GcodeFetcher_0_cmd_valid;
-  wire [7:0]GcodeFetcher_0_interconnect_out;
-  wire [7:0]INTERCONNECT_GPIO_gpio_io_o;
+  wire [3:0]GcodeFetcher_0_interconnect_out;
+  wire [3:0]INTERCONNECT_GPIO_gpio_io_o;
+  wire [3:0]LED_IO_0_PL_Channel;
   wire Left;
   wire Middle;
   wire ResetSwitch;
@@ -457,7 +458,7 @@ module CNC_Top
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
   CNC_Top_axi_gpio_0_5 INTERCONNECT_GPIO
-       (.gpio2_io_i(GcodeFetcher_0_interconnect_out),
+       (.gpio2_io_i(LED_IO_0_PL_Channel),
         .gpio_io_o(INTERCONNECT_GPIO_gpio_io_o),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
@@ -479,7 +480,9 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID));
   CNC_Top_LED_IO_0_0 LED_IO_0
-       (.PS_Channel(INTERCONNECT_GPIO_gpio_io_o),
+       (.PL_Channel(LED_IO_0_PL_Channel),
+        .PL_State(GcodeFetcher_0_interconnect_out),
+        .PS_Channel(INTERCONNECT_GPIO_gpio_io_o),
         .SPEED(COMMAND_GPIO_gpio_io_o),
         .X(X_GPIO_gpio_io_o),
         .Y(Y_GPIO_gpio_io_o),

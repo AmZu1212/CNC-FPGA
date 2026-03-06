@@ -16,7 +16,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {Left Right Middle Up Down}]
 # "switch 7" - reset
 # "switch 0" - Z select
 set_property PACKAGE_PIN M15 [get_ports ResetSwitch] 
-set_property PACKAGE_PIN F22 [get_ports Zswitch]     
+set_property PACKAGE_PIN G22 [get_ports Zswitch]     
 set_property PULLTYPE PULLDOWN [get_ports {ResetSwitch Zswitch}]
 set_property IOSTANDARD LVCMOS33 [get_ports {ResetSwitch Zswitch}]
 
