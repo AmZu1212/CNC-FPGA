@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Mar  5 20:05:25 2026
+| Date         : Fri Mar  6 19:24:04 2026
 | Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
 | Design       : CNC_Top_wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*                | 10135 |     0 |          0 |     53200 | 19.05 |
-|   LUT as Logic             | 10133 |     0 |          0 |     53200 | 19.05 |
+| Slice LUTs*                | 10112 |     0 |          0 |     53200 | 19.01 |
+|   LUT as Logic             | 10110 |     0 |          0 |     53200 | 19.00 |
 |   LUT as Memory            |     2 |     0 |          0 |     17400 |  0.01 |
 |     LUT as Distributed RAM |     0 |     0 |            |           |       |
 |     LUT as Shift Register  |     2 |     0 |            |           |       |
@@ -152,14 +152,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+----------------------+
 |  Ref Name  | Used |  Functional Category |
 +------------+------+----------------------+
-| LUT3       | 6645 |                  LUT |
+| LUT3       | 6644 |                  LUT |
 | FDRE       | 3021 |         Flop & Latch |
 | CARRY4     | 2251 |           CarryLogic |
-| LUT2       | 1704 |                  LUT |
-| LUT4       |  766 |                  LUT |
+| LUT2       | 1700 |                  LUT |
+| LUT4       |  767 |                  LUT |
 | LUT1       |  757 |                  LUT |
-| LUT6       |  745 |                  LUT |
-| LUT5       |  667 |                  LUT |
+| LUT6       |  729 |                  LUT |
+| LUT5       |  662 |                  LUT |
 | FDCE       |  234 |         Flop & Latch |
 | BIBUF      |  130 |                   IO |
 | FDSE       |   75 |         Flop & Latch |

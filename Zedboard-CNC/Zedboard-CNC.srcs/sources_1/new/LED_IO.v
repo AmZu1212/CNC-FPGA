@@ -13,13 +13,13 @@ module LED_IO(
 
     // Turn on LEDs when corresponding channel is non-zero.
     // led[0]=X, led[1]=Y, led[2]=Z, led[3]=CMD, led[4]=PS_Channel.
-    assign led[0]   = (X          != 32'd0);
-    assign led[1]   = (Y          != 32'd0);
-    assign led[2]   = (Z          != 32'd0);
-    assign led[3]   = (SPEED        != 8'd0);
-    assign led[4]   = (PS_Channel != 8'd0);
-    assign led[7:5] = 3'b000;
-
+//    assign led[0]   = (X          != 32'd0);
+//    assign led[1]   = (Y          != 32'd0);
+//    assign led[2]   = (Z          != 32'd0);
+//    assign led[3]   = (SPEED        != 8'd0);
+//    assign led[4]   = (PS_Channel != 8'd0);
+//    assign led[7:5] = 3'b000;
+    assign led = SPEED;
     // When switch is high, drive PL_Channel with 1 for a simple loopback test.
     assign PL_Channel = rstSwitch ? 8'h01 : 8'h00;
 

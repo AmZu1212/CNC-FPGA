@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Mar  5 20:03:18 2026
-# Process ID         : 30184
+# Start of session at: Fri Mar  6 19:21:52 2026
+# Process ID         : 24408
 # Current directory  : E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1
 # Command line       : vivado.exe -log CNC_Top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNC_Top_wrapper.tcl
 # Log file           : E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.vds
@@ -19,12 +19,12 @@
 # Host memory        : 34268 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36416 MB
-# Available Virtual  : 15021 MB
+# Available Virtual  : 12640 MB
 #-----------------------------------------------------------
 source CNC_Top_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Programs/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
 INFO: [Project 1-5578] Found utility IPs instantiated in block design E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/bd/CNC_Top/CNC_Top.bd which have equivalent inline hdl with improved performance and reduced diskspace.
 It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
 More information on inline hdl is available in UG994. 
@@ -40,38 +40,38 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32076
+INFO: [Synth 8-7075] Helper process launched with PID 12500
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1146.191 ; gain = 467.707
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1147.586 ; gain = 468.820
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:94]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:95]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:96]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:97]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:83]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:84]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:85]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:86]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:87]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:88]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:89]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_8/synth/bd_77fb_routsw_0.sv:90]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:94]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:95]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:96]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:97]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_77fb_woutsw_0.sv:94]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_77fb_woutsw_0.sv:95]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_77fb_woutsw_0.sv:96]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_10/synth/bd_77fb_woutsw_0.sv:97]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:83]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:84]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:85]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:86]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:87]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:88]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:89]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:90]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:94]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:95]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:96]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:97]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:83]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:84]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:85]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:86]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:87]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:88]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:89]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:90]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:94]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:95]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:96]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:97]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_10/synth/bd_0a6d_woutsw_0.sv:94]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_10/synth/bd_0a6d_woutsw_0.sv:95]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_10/synth/bd_0a6d_woutsw_0.sv:96]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_10/synth/bd_0a6d_woutsw_0.sv:97]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:83]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:84]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:85]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:86]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:87]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:88]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:89]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:90]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_wrapper' [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/hdl/CNC_Top_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:13]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_A4988_Driver_IO_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_0_0/synth/CNC_Top_A4988_Driver_IO_0_0.v:53]
@@ -583,42 +583,22 @@ INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_3' [e:/Git-Repos/CNC
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
 INFO: [Synth 8-3491] module 'axi_gpio' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1269' bound to instance 'U0' of component 'axi_gpio' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/synth/CNC_Top_axi_gpio_0_3.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_3' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/synth/CNC_Top_axi_gpio_0_3.vhd:84]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_clk_wiz_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.v:65]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_clk_wiz_0_clk_wiz' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_clk_wiz.v:65]
-INFO: [Synth 8-6157] synthesizing module 'IBUF' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
-INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
-INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
-	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
-	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
-	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
-	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
-	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
-	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:84588]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2676]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_clk_wiz_0_clk_wiz' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_clk_wiz.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_clk_wiz_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.v:65]
-WARNING: [Synth 8-7071] port 'locked' of module 'CNC_Top_clk_wiz_0' is unconnected for instance 'clk_wiz' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
-WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'CNC_Top_clk_wiz_0' has 4 connections declared, but only 3 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
-INFO: [Synth 8-638] synthesizing module 'CNC_Top_proc_sys_reset_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/synth/CNC_Top_proc_sys_reset_0_0.vhd:74]
+INFO: [Synth 8-6157] synthesizing module 'CNC_Top_axi_smc_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/synth/CNC_Top_axi_smc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_MK5C6W' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2236]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_one_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_0/synth/bd_0a6d_one_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_one_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_0/synth/bd_0a6d_one_0.v:53]
+INFO: [Synth 8-638] synthesizing module 'bd_0a6d_psr_aclk_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/synth/bd_0a6d_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/synth/CNC_Top_proc_sys_reset_0_0.vhd:139]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/synth/bd_0a6d_psr_aclk_0.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b1 
@@ -626,9 +606,9 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-638] synthesizing module 'lpf' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-3491] module 'SRL16' declared at 'E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
-INFO: [Synth 8-6157] synthesizing module 'SRL16' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
@@ -643,50 +623,222 @@ INFO: [Synth 8-638] synthesizing module 'upcnt_n' [e:/Git-Repos/CNC-FPGA/Zedboar
 INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:126]
 INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:304]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
-INFO: [Synth 8-256] done synthesizing module 'CNC_Top_proc_sys_reset_0_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/synth/CNC_Top_proc_sys_reset_0_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'CNC_Top_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:599]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'CNC_Top_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:599]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'CNC_Top_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:599]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'CNC_Top_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:599]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'CNC_Top_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:599]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_processing_system7_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-INFO: [Synth 8-6157] synthesizing module 'BIBUF' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2323]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:2323]
-INFO: [Synth 8-6157] synthesizing module 'PS7' [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:123980]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:123980]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
-INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_processing_system7_0_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'CNC_Top_smartconnect_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/synth/CNC_Top_smartconnect_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1WNMBDU' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2236]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_one_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_0/synth/bd_77fb_one_0.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_one_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_0/synth/bd_77fb_one_0.v:53]
-INFO: [Synth 8-638] synthesizing module 'bd_77fb_psr_aclk_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/synth/bd_77fb_psr_aclk_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'bd_0a6d_psr_aclk_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/synth/bd_0a6d_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_0a6d_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2292]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_0a6d_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2292]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_0a6d_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2292]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_0a6d_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2292]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_0a6d_psr_aclk_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2292]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_MK5C6W' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2236]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1B4VVVN' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2543]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_32/synth/bd_0a6d_m00e_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_32/synth/bd_0a6d_m00e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1B4VVVN' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2543]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_1XBGZDB' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2785]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_27/synth/bd_0a6d_m00arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_27/synth/bd_0a6d_m00arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_29/synth/bd_0a6d_m00awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_29/synth/bd_0a6d_m00awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_31/synth/bd_0a6d_m00bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_31/synth/bd_0a6d_m00bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_28/synth/bd_0a6d_m00rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_28/synth/bd_0a6d_m00rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_30/synth/bd_0a6d_m00wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_30/synth/bd_0a6d_m00wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_1XBGZDB' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2785]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m00s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_26/synth/bd_0a6d_m00s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m00s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_26/synth/bd_0a6d_m00s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_1GXPHWJ' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3027]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_39/synth/bd_0a6d_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_39/synth/bd_0a6d_m01e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_1GXPHWJ' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3027]
+INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_RZG77D' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3269]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_34/synth/bd_0a6d_m01arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_34/synth/bd_0a6d_m01arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_36/synth/bd_0a6d_m01awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_36/synth/bd_0a6d_m01awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_38/synth/bd_0a6d_m01bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_38/synth/bd_0a6d_m01bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_35/synth/bd_0a6d_m01rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_35/synth/bd_0a6d_m01rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_37/synth/bd_0a6d_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_37/synth/bd_0a6d_m01wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_RZG77D' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3269]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m01s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_33/synth/bd_0a6d_m01s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m01s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_33/synth/bd_0a6d_m01s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm02_exit_pipeline_imp_11NENQB' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3511]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_46/synth/bd_0a6d_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_46/synth/bd_0a6d_m02e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_exit_pipeline_imp_11NENQB' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3511]
+INFO: [Synth 8-6157] synthesizing module 'm02_nodes_imp_6V0UQQ' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3753]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_41/synth/bd_0a6d_m02arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_41/synth/bd_0a6d_m02arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_43/synth/bd_0a6d_m02awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_43/synth/bd_0a6d_m02awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_45/synth/bd_0a6d_m02bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_45/synth/bd_0a6d_m02bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_42/synth/bd_0a6d_m02rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_42/synth/bd_0a6d_m02rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_44/synth/bd_0a6d_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_44/synth/bd_0a6d_m02wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm02_nodes_imp_6V0UQQ' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3753]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m02s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_40/synth/bd_0a6d_m02s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m02s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_40/synth/bd_0a6d_m02s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm03_exit_pipeline_imp_144DU8Z' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3995]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_53/synth/bd_0a6d_m03e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_53/synth/bd_0a6d_m03e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm03_exit_pipeline_imp_144DU8Z' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3995]
+INFO: [Synth 8-6157] synthesizing module 'm03_nodes_imp_113KCLW' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4237]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_48/synth/bd_0a6d_m03arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_48/synth/bd_0a6d_m03arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_50/synth/bd_0a6d_m03awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_50/synth/bd_0a6d_m03awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_52/synth/bd_0a6d_m03bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_52/synth/bd_0a6d_m03bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_49/synth/bd_0a6d_m03rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_49/synth/bd_0a6d_m03rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_51/synth/bd_0a6d_m03wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_51/synth/bd_0a6d_m03wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm03_nodes_imp_113KCLW' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4237]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m03s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_47/synth/bd_0a6d_m03s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m03s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_47/synth/bd_0a6d_m03s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'm04_exit_pipeline_imp_1W1RH2B' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4479]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_60/synth/bd_0a6d_m04e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_60/synth/bd_0a6d_m04e_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm04_exit_pipeline_imp_1W1RH2B' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4479]
+INFO: [Synth 8-6157] synthesizing module 'm04_nodes_imp_1QA6MFO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4721]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_55/synth/bd_0a6d_m04arn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_55/synth/bd_0a6d_m04arn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_57/synth/bd_0a6d_m04awn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_57/synth/bd_0a6d_m04awn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_59/synth/bd_0a6d_m04bn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_59/synth/bd_0a6d_m04bn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_56/synth/bd_0a6d_m04rn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_56/synth/bd_0a6d_m04rn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_58/synth/bd_0a6d_m04wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_58/synth/bd_0a6d_m04wn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'm04_nodes_imp_1QA6MFO' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4721]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_m04s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_54/synth/bd_0a6d_m04s2a_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_m04s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_54/synth/bd_0a6d_m04s2a_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_s00a2s_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_20/synth/bd_0a6d_s00a2s_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_s00a2s_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_20/synth/bd_0a6d_s00a2s_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_BVCV1C' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4963]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_s00mmu_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_17/synth/bd_0a6d_s00mmu_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_s00mmu_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_17/synth/bd_0a6d_s00mmu_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_s00sic_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_19/synth/bd_0a6d_s00sic_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_s00sic_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_19/synth/bd_0a6d_s00sic_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_s00tr_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_18/synth/bd_0a6d_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_s00tr_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_18/synth/bd_0a6d_s00tr_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_BVCV1C' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:4963]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_HLQJI2' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:5539]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_sarn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_21/synth/bd_0a6d_sarn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_sarn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_21/synth/bd_0a6d_sarn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_sawn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_23/synth/bd_0a6d_sawn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_sawn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_23/synth/bd_0a6d_sawn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_sbn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_25/synth/bd_0a6d_sbn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_sbn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_25/synth/bd_0a6d_sbn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_srn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_22/synth/bd_0a6d_srn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_srn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_22/synth/bd_0a6d_srn_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_swn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_24/synth/bd_0a6d_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_swn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_24/synth/bd_0a6d_swn_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_HLQJI2' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:5539]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_NGAQZY' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:5781]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_arinsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_2/synth/bd_0a6d_arinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_arinsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_2/synth/bd_0a6d_arinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_aroutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_aroutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_awinsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_4/synth/bd_0a6d_awinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_awinsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_4/synth/bd_0a6d_awinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_awoutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_awoutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_9/synth/bd_0a6d_awoutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_binsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_6/synth/bd_0a6d_binsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_binsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_6/synth/bd_0a6d_binsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_boutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_boutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_11/synth/bd_0a6d_boutsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'i_nodes_imp_144NF9Y' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2301]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_arni_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_12/synth/bd_0a6d_arni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_arni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_12/synth/bd_0a6d_arni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_awni_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_14/synth/bd_0a6d_awni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_awni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_14/synth/bd_0a6d_awni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_bni_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_16/synth/bd_0a6d_bni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_bni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_16/synth/bd_0a6d_bni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_rni_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_13/synth/bd_0a6d_rni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_rni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_13/synth/bd_0a6d_rni_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_wni_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_15/synth/bd_0a6d_wni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_wni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_15/synth/bd_0a6d_wni_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'i_nodes_imp_144NF9Y' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2301]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_rinsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_3/synth/bd_0a6d_rinsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_rinsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_3/synth/bd_0a6d_rinsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_routsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_routsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_8/synth/bd_0a6d_routsw_0.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_0a6d_winsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_5/synth/bd_0a6d_winsw_0.sv:53]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_winsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_5/synth/bd_0a6d_winsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_woutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_10/synth/bd_0a6d_woutsw_0.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_NGAQZY' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:5781]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_axi_smc_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/synth/CNC_Top_axi_smc_0.v:53]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'CNC_Top_axi_smc_0' has 135 connections declared, but only 125 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:595]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75825]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+WARNING: [Synth 8-7071] port 'locked' of module 'CNC_Top_clk_wiz_0' is unconnected for instance 'clk_wiz' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:721]
+WARNING: [Synth 8-7023] instance 'clk_wiz' of module 'CNC_Top_clk_wiz_0' has 4 connections declared, but only 3 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:721]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:336]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'CNC_Top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'CNC_Top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'CNC_Top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'CNC_Top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'CNC_Top_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'CNC_Top_processing_system7_0_0' has 68 connections declared, but only 63 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:725]
+INFO: [Synth 8-638] synthesizing module 'CNC_Top_rst_ps7_0_100M_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/synth/CNC_Top_rst_ps7_0_100M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
-	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
 	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/synth/bd_77fb_psr_aclk_0.vhd:139]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1271' bound to instance 'U0' of component 'proc_sys_reset' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/synth/CNC_Top_rst_ps7_0_100M_0.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'proc_sys_reset__parameterized1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b1 
@@ -694,162 +846,16 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset__parameterized1' [e:/Git
 	Parameter INIT bound to: 1'b1 
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-638] synthesizing module 'lpf__parameterized0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
-INFO: [Synth 8-3491] module 'SRL16' declared at 'E:/Programs/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:149029' bound to instance 'POR_SRL_I' of component 'SRL16' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:873]
 INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
-INFO: [Synth 8-256] done synthesizing module 'bd_77fb_psr_aclk_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/synth/bd_77fb_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_77fb_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2292]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_77fb_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2292]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_77fb_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2292]
-WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_77fb_psr_aclk_0' is unconnected for instance 'psr_aclk' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2292]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_77fb_psr_aclk_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2292]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1WNMBDU' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2236]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_4EK7P5' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2543]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_32/synth/bd_77fb_m00e_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [E:/Programs/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [E:/Programs/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_32/synth/bd_77fb_m00e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_4EK7P5' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2543]
-INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_QM30T1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2785]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_27/synth/bd_77fb_m00arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_27/synth/bd_77fb_m00arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_29/synth/bd_77fb_m00awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_29/synth/bd_77fb_m00awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_31/synth/bd_77fb_m00bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_31/synth/bd_77fb_m00bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_28/synth/bd_77fb_m00rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_28/synth/bd_77fb_m00rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_30/synth/bd_77fb_m00wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_30/synth/bd_77fb_m00wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_QM30T1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2785]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m00s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_26/synth/bd_77fb_m00s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m00s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_26/synth/bd_77fb_m00s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm01_exit_pipeline_imp_6XE43D' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3027]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_39/synth/bd_77fb_m01e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_39/synth/bd_77fb_m01e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_exit_pipeline_imp_6XE43D' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3027]
-INFO: [Synth 8-6157] synthesizing module 'm01_nodes_imp_1I2RA1V' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3269]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_34/synth/bd_77fb_m01arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_34/synth/bd_77fb_m01arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_36/synth/bd_77fb_m01awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_36/synth/bd_77fb_m01awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_38/synth/bd_77fb_m01bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_38/synth/bd_77fb_m01bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_35/synth/bd_77fb_m01rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_35/synth/bd_77fb_m01rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_37/synth/bd_77fb_m01wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_37/synth/bd_77fb_m01wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm01_nodes_imp_1I2RA1V' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3269]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m01s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_33/synth/bd_77fb_m01s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m01s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_33/synth/bd_77fb_m01s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm02_exit_pipeline_imp_9B7IIH' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3511]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_46/synth/bd_77fb_m02e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_46/synth/bd_77fb_m02e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm02_exit_pipeline_imp_9B7IIH' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3511]
-INFO: [Synth 8-6157] synthesizing module 'm02_nodes_imp_1GV0SQG' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3753]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_41/synth/bd_77fb_m02arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_41/synth/bd_77fb_m02arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_43/synth/bd_77fb_m02awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_43/synth/bd_77fb_m02awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_45/synth/bd_77fb_m02bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_45/synth/bd_77fb_m02bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_42/synth/bd_77fb_m02rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_42/synth/bd_77fb_m02rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_44/synth/bd_77fb_m02wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_44/synth/bd_77fb_m02wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm02_nodes_imp_1GV0SQG' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3753]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m02s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_40/synth/bd_77fb_m02s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m02s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_40/synth/bd_77fb_m02s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm03_exit_pipeline_imp_F5X8ZD' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3995]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_53/synth/bd_77fb_m03e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_53/synth/bd_77fb_m03e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm03_exit_pipeline_imp_F5X8ZD' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:3995]
-INFO: [Synth 8-6157] synthesizing module 'm03_nodes_imp_9V1QTQ' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4237]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_48/synth/bd_77fb_m03arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_48/synth/bd_77fb_m03arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_50/synth/bd_77fb_m03awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_50/synth/bd_77fb_m03awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_52/synth/bd_77fb_m03bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_52/synth/bd_77fb_m03bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_49/synth/bd_77fb_m03rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_49/synth/bd_77fb_m03rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_51/synth/bd_77fb_m03wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_51/synth/bd_77fb_m03wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm03_nodes_imp_9V1QTQ' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4237]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m03s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_47/synth/bd_77fb_m03s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m03s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_47/synth/bd_77fb_m03s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'm04_exit_pipeline_imp_N5ZQPL' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4479]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04e_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_60/synth/bd_77fb_m04e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04e_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_60/synth/bd_77fb_m04e_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm04_exit_pipeline_imp_N5ZQPL' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4479]
-INFO: [Synth 8-6157] synthesizing module 'm04_nodes_imp_JHY572' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4721]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04arn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_55/synth/bd_77fb_m04arn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04arn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_55/synth/bd_77fb_m04arn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04awn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_57/synth/bd_77fb_m04awn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04awn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_57/synth/bd_77fb_m04awn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04bn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_59/synth/bd_77fb_m04bn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04bn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_59/synth/bd_77fb_m04bn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04rn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_56/synth/bd_77fb_m04rn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04rn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_56/synth/bd_77fb_m04rn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04wn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_58/synth/bd_77fb_m04wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04wn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_58/synth/bd_77fb_m04wn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'm04_nodes_imp_JHY572' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4721]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_m04s2a_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_54/synth/bd_77fb_m04s2a_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_m04s2a_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_54/synth/bd_77fb_m04s2a_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_s00a2s_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_20/synth/bd_77fb_s00a2s_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_s00a2s_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_20/synth/bd_77fb_s00a2s_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_1340VZU' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4963]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_s00mmu_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_17/synth/bd_77fb_s00mmu_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_s00mmu_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_17/synth/bd_77fb_s00mmu_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_s00sic_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_19/synth/bd_77fb_s00sic_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_s00sic_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_19/synth/bd_77fb_s00sic_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_s00tr_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_18/synth/bd_77fb_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_s00tr_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_18/synth/bd_77fb_s00tr_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_1340VZU' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:4963]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_16JDFXC' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:5539]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_sarn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_21/synth/bd_77fb_sarn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_sarn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_21/synth/bd_77fb_sarn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_sawn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_23/synth/bd_77fb_sawn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_sawn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_23/synth/bd_77fb_sawn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_sbn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_25/synth/bd_77fb_sbn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_sbn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_25/synth/bd_77fb_sbn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_srn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_22/synth/bd_77fb_srn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_srn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_22/synth/bd_77fb_srn_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_swn_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_24/synth/bd_77fb_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_swn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_24/synth/bd_77fb_swn_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_16JDFXC' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:5539]
-INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_1VCHFQS' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:5781]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_arinsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_2/synth/bd_77fb_arinsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_arinsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_2/synth/bd_77fb_arinsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_aroutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_aroutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_7/synth/bd_77fb_aroutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_awinsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_4/synth/bd_77fb_awinsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_awinsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_4/synth/bd_77fb_awinsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_awoutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_awoutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_9/synth/bd_77fb_awoutsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_binsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_6/synth/bd_77fb_binsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_binsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_6/synth/bd_77fb_binsw_0.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_77fb_boutsw_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:53]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_boutsw_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_11/synth/bd_77fb_boutsw_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_arni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_12/synth/bd_77fb_arni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_awni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_14/synth/bd_77fb_awni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_bni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_16/synth/bd_77fb_bni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_rni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_13/synth/bd_77fb_rni_0.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'bd_77fb_wni_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_15/synth/bd_77fb_wni_0.sv:53]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'CNC_Top_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'CNC_Top_smartconnect_0_0' has 135 connections declared, but only 125 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:669]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:795]
+INFO: [Synth 8-256] done synthesizing module 'CNC_Top_rst_ps7_0_100M_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/synth/CNC_Top_rst_ps7_0_100M_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:789]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:789]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:789]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:789]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'CNC_Top_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:789]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:796]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:692]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:692]
 WARNING: [Synth 8-6014] Unused sequential element Dual.ALLOUT0_ND_G1.READ_REG_GEN[2].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:692]
@@ -909,10 +915,10 @@ WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GE
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[30].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:322]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[31].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:322]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.gpio_Data_In_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:489]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_1WNMBDU does not have driver. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/synth/bd_77fb.v:2268]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_MK5C6W does not have driver. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:2268]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity CNC_Top_vio_0_0 does not have driver. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/synth/CNC_Top_vio_0_0.v:74]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'XYZ_Axis_Coordinator_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:510]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:795]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:796]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Buttons_Vector_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:385]
 WARNING: [Synth 8-7129] Port probe_in4[0] in module vio_v3_0_26_vio is either unconnected or has no load
 WARNING: [Synth 8-7129] Port probe_in5[0] in module vio_v3_0_26_vio is either unconnected or has no load
@@ -1016,18 +1022,18 @@ WARNING: [Synth 8-7129] Port probe_in102[0] in module vio_v3_0_26_vio is either 
 WARNING: [Synth 8-7129] Port probe_in103[0] in module vio_v3_0_26_vio is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1438.590 ; gain = 760.105
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1439.730 ; gain = 760.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1438.590 ; gain = 760.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1439.730 ; gain = 760.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1438.590 ; gain = 760.105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1439.730 ; gain = 760.965
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1524.121 ; gain = 8.590
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1525.730 ; gain = 6.297
 INFO: [Netlist 29-17] Analyzing 747 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1048,20 +1054,6 @@ Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/
 Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/CNC_Top_processing_system7_0_0.xdc] for cell 'CNC_Top_i/processing_system7_0/inst'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/CNC_Top_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/CNC_Top_proc_sys_reset_0_0_board.xdc] for cell 'CNC_Top_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/CNC_Top_proc_sys_reset_0_0_board.xdc] for cell 'CNC_Top_i/proc_sys_reset_0/U0'
-Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/CNC_Top_proc_sys_reset_0_0.xdc] for cell 'CNC_Top_i/proc_sys_reset_0/U0'
-Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/CNC_Top_proc_sys_reset_0_0.xdc] for cell 'CNC_Top_i/proc_sys_reset_0/U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_proc_sys_reset_0_0/CNC_Top_proc_sys_reset_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/bd_77fb_psr_aclk_0_board.xdc] for cell 'CNC_Top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/bd_77fb_psr_aclk_0_board.xdc] for cell 'CNC_Top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
-Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/bd_77fb_psr_aclk_0.xdc] for cell 'CNC_Top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/bd_77fb_psr_aclk_0.xdc] for cell 'CNC_Top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/bd_0/ip/ip_1/bd_77fb_psr_aclk_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/smartconnect.xdc] for cell 'CNC_Top_i/smartconnect_0/inst'
-Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_smartconnect_0_0/smartconnect.xdc] for cell 'CNC_Top_i/smartconnect_0/inst'
 Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/CNC_Top_axi_gpio_0_1_board.xdc] for cell 'CNC_Top_i/X_GPIO/U0'
 Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/CNC_Top_axi_gpio_0_1_board.xdc] for cell 'CNC_Top_i/X_GPIO/U0'
 Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/CNC_Top_axi_gpio_0_1.xdc] for cell 'CNC_Top_i/X_GPIO/U0'
@@ -1082,6 +1074,20 @@ Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/
 Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5_board.xdc] for cell 'CNC_Top_i/INTERCONNECT_GPIO/U0'
 Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc] for cell 'CNC_Top_i/INTERCONNECT_GPIO/U0'
 Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc] for cell 'CNC_Top_i/INTERCONNECT_GPIO/U0'
+Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0_board.xdc] for cell 'CNC_Top_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0_board.xdc] for cell 'CNC_Top_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0.xdc] for cell 'CNC_Top_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0.xdc] for cell 'CNC_Top_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/smartconnect.xdc] for cell 'CNC_Top_i/axi_smc/inst'
+Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/smartconnect.xdc] for cell 'CNC_Top_i/axi_smc/inst'
+Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0_board.xdc] for cell 'CNC_Top_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0_board.xdc] for cell 'CNC_Top_i/rst_ps7_0_100M/U0'
+Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xdc] for cell 'CNC_Top_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xdc] for cell 'CNC_Top_i/rst_ps7_0_100M/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CNC_Top_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Parsing XDC File [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc]
 WARNING: [Vivado 12-180] No cells matched '*'. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:95]
@@ -1521,24 +1527,24 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrap
 INFO: [Project 1-1714] 78 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1868.379 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1867.590 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 746 instances were transformed.
   FDR => FDRE: 744 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.209 . Memory (MB): peak = 1868.379 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 1867.590 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1868.379 ; gain = 1189.895
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1867.590 ; gain = 1188.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1868.379 ; gain = 1189.895
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1867.590 ; gain = 1188.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1547,13 +1553,13 @@ Applied set_property keep_hierarchy = soft for CNC_Top_i/clk_wiz/inst. (constrai
 Applied set_property keep_hierarchy = soft for CNC_Top_i/processing_system7_0/inst. (constraint file  e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/CNC_Top_vio_0_0.xdc, line 54).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/clk_wiz/inst. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 262).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/processing_system7_0/inst. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 273).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/proc_sys_reset_0/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 276).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 392).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/X_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 395).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Y_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 403).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Z_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 411).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/SPEED_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 419).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/INTERCONNECT_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 427).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/X_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 276).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Y_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 284).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Z_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 292).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/SPEED_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 300).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/INTERCONNECT_GPIO/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 308).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 426).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/rst_ps7_0_100M/U0. (constraint file  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/dont_touch.xdc, line 429).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/High_Bit. (constraint file  auto generated constraint).
@@ -1569,99 +1575,99 @@ Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/vio_0. (constraint file
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Buttons_Vector_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/GcodeFetcher_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/processing_system7_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/proc_sys_reset_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/X_GPIO. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Y_GPIO. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/Z_GPIO. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/SPEED_GPIO. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/INTERCONNECT_GPIO. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/LED_IO_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_nodes/m01_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_nodes/m02_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_nodes/m03_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_nodes/m04_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/switchboards/i_nodes/i_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m01_exit_pipeline/m01_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m02_exit_pipeline/m02_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m03_exit_pipeline/m03_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/m04_exit_pipeline/m04_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/smartconnect_0/inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_nodes/m00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_nodes/m01_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_nodes/m02_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_nodes/m03_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_nodes/m04_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_nodes/s00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/switchboards/i_nodes/i_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m01_exit_pipeline/m01_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m02_exit_pipeline/m02_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m03_exit_pipeline/m03_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/m04_exit_pipeline/m04_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 1868.379 ; gain = 1189.895
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1867.590 ; gain = 1188.824
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element cycles_per_step_z_result1 was removed.  [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:105]
 WARNING: [Synth 8-6014] Unused sequential element res_reg was removed.  [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:291]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1868.379 ; gain = 1189.895
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1867.590 ; gain = 1188.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1727,8 +1733,8 @@ Detailed RTL Component Info :
 	   2 Input   51 Bit        Muxes := 2     
 	   7 Input   32 Bit        Muxes := 3     
 	   2 Input   32 Bit        Muxes := 14    
-	   4 Input   32 Bit        Muxes := 11    
 	   5 Input   32 Bit        Muxes := 5     
+	   4 Input   32 Bit        Muxes := 11    
 	   3 Input   17 Bit        Muxes := 3     
 	   2 Input   16 Bit        Muxes := 3     
 	   2 Input   12 Bit        Muxes := 5     
@@ -1746,9 +1752,9 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit        Muxes := 2     
 	   4 Input    4 Bit        Muxes := 1     
 	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 7     
 	   4 Input    3 Bit        Muxes := 2     
-	   3 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 73    
 	   4 Input    2 Bit        Muxes := 8     
 	   6 Input    2 Bit        Muxes := 4     
@@ -1772,18 +1778,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1__3.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module cdc_sync__parameterized1__3.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module cdc_sync__parameterized1__3.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module cdc_sync__parameterized1__3.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized1__3.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized1__3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module cdc_sync__parameterized1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module cdc_sync__parameterized1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module cdc_sync__parameterized1.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized1.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset__parameterized1.
 WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset__parameterized1.
-WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module proc_sys_reset__parameterized1.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__2.
@@ -1874,7 +1880,7 @@ INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CR
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 1868.379 ; gain = 1189.895
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1867.590 ; gain = 1188.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -1883,13 +1889,13 @@ WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at 
 WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at line 109 of E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:109]
 WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at line 125 of E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:125]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:19 . Memory (MB): peak = 1870.930 ; gain = 1192.445
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 1878.879 ; gain = 1200.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 2013.844 ; gain = 1335.359
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:37 . Memory (MB): peak = 2021.332 ; gain = 1342.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1938,19 +1944,19 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 2119.375 ; gain = 1440.891
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 2125.957 ; gain = 1447.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 2119.375 ; gain = 1440.891
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 2125.957 ; gain = 1447.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 2122.574 ; gain = 1444.090
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 2129.164 ; gain = 1450.398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2000,11 +2006,11 @@ Report Cell Usage:
 |3     |CARRY4     |  2251|
 |4     |DSP48E1    |    22|
 |8     |LUT1       |   757|
-|9     |LUT2       |  1704|
-|10    |LUT3       |  6645|
-|11    |LUT4       |   766|
-|12    |LUT5       |   667|
-|13    |LUT6       |   745|
+|9     |LUT2       |  1700|
+|10    |LUT3       |  6644|
+|11    |LUT4       |   767|
+|12    |LUT5       |   662|
+|13    |LUT6       |   729|
 |14    |MMCME2_ADV |     1|
 |15    |MUXF7      |    32|
 |16    |PS7        |     1|
@@ -2017,31 +2023,31 @@ Report Cell Usage:
 |23    |OBUF       |    29|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 2122.574 ; gain = 1444.090
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 2129.164 ; gain = 1450.398
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:20 . Memory (MB): peak = 2122.574 ; gain = 1014.301
-Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:40 . Memory (MB): peak = 2122.574 ; gain = 1444.090
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:25 . Memory (MB): peak = 2129.164 ; gain = 1022.539
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 2129.164 ; gain = 1450.398
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.855 . Memory (MB): peak = 2131.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.773 . Memory (MB): peak = 2137.727 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 2324 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: CNC_Top_i/vio_0 UUID: 31a22d3a-3281-58d4-8b8f-b85a979acfba 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2192.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2200.828 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 18 instances were transformed.
   FDR => FDRE: 16 instances
   SRL16 => SRL16E: 2 instances
 
-Synth Design complete | Checksum: 2a6c40dc
+Synth Design complete | Checksum: 357f9088
 INFO: [Common 17-83] Releasing license: Synthesis
-516 Infos, 488 Warnings, 6 Critical Warnings and 0 Errors encountered.
+516 Infos, 494 Warnings, 6 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:57 . Memory (MB): peak = 2192.086 ; gain = 1758.504
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:02:00 . Memory (MB): peak = 2200.828 ; gain = 1764.301
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2192.086 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2200.828 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar  5 20:05:25 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar  6 19:24:04 2026...

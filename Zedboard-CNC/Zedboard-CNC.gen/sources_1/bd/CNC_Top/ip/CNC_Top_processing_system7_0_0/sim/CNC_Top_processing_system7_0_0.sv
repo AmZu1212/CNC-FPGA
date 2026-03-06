@@ -677,6 +677,12 @@
 
 //MODULE DECLARATION
  module CNC_Top_processing_system7_0_0 (
+  TTC0_WAVE0_OUT,
+  TTC0_WAVE1_OUT,
+  TTC0_WAVE2_OUT,
+  USB0_PORT_INDCTL,
+  USB0_VBUS_PWRSELECT,
+  USB0_VBUS_PWRFAULT,
   M_AXI_GP0_ARVALID,
   M_AXI_GP0_AWVALID,
   M_AXI_GP0_BREADY,
@@ -802,6 +808,12 @@
 
 //INPUT AND OUTPUT PORTS
 
+      output  TTC0_WAVE0_OUT;
+      output  TTC0_WAVE1_OUT;
+      output  TTC0_WAVE2_OUT;
+      output  [1 : 0] USB0_PORT_INDCTL;
+      output  USB0_VBUS_PWRSELECT;
+      input  USB0_VBUS_PWRFAULT;
       output  M_AXI_GP0_ARVALID;
       output  M_AXI_GP0_AWVALID;
       output  M_AXI_GP0_BREADY;
@@ -867,6 +879,11 @@
 
 //REG DECLARATIONS
 
+      reg TTC0_WAVE0_OUT;
+      reg TTC0_WAVE1_OUT;
+      reg TTC0_WAVE2_OUT;
+      reg [1 : 0] USB0_PORT_INDCTL;
+      reg USB0_VBUS_PWRSELECT;
       reg M_AXI_GP0_ARVALID;
       reg M_AXI_GP0_AWVALID;
       reg M_AXI_GP0_BREADY;
@@ -1052,7 +1069,7 @@ output bit M_AXI_GP0_RREADY
      FCLK_CLK0 = 1'b0;
   end
 
-  always #(10.0) FCLK_CLK0 <= ~FCLK_CLK0;
+  always #(5.0) FCLK_CLK0 <= ~FCLK_CLK0;
 
   always@(posedge FCLK_CLK0)
   begin

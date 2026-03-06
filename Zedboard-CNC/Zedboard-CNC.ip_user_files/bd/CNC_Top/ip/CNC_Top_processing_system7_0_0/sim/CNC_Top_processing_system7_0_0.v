@@ -56,6 +56,7 @@
 `timescale 1ns/1ps
 
 module CNC_Top_processing_system7_0_0 (
+SDIO0_CDN, 
 M_AXI_GP0_ARVALID, 
 M_AXI_GP0_AWVALID, 
 M_AXI_GP0_BREADY, 
@@ -119,6 +120,7 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
+input SDIO0_CDN;
 output M_AXI_GP0_ARVALID;
 output M_AXI_GP0_AWVALID;
 output M_AXI_GP0_BREADY;
