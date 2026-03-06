@@ -2,4 +2,5 @@
 <section name="Workbench">
 	<item key="scw_hwspec" value="E:\Git-Repos\CNC-FPGA\Zedboard-CNC"/>
 	<item key="scw_hwspec_file_selection" value="E:\Git-Repos\CNC-FPGA\Zedboard-CNC"/>
+	<item key="sdx_program_fpga_view_bit_bmm_browse_key" value="E:\Git-Repos\CNC-FPGA\Zedboard-CNC\Zedboard-CNC.runs\impl_1"/>
 </section>

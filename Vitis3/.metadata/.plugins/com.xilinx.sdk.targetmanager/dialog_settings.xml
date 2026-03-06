@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="SDReader_system-bitFile" value="${project_loc:SDReader}/_ide/bitstream/CNC_Top_wrapper.bit"/>
+	<item key="SDReader_system-bitFile" value="E:\Git-Repos\CNC-FPGA\Zedboard-CNC\Zedboard-CNC.runs\impl_1\CNC_Top_wrapper.bit"/>
 	<item key="SDReader_system-bmmFile" value=""/>
 	<item key="SDReader_system-target" value="Local"/>
 	<item key="SDReader_system-device" value="Auto Detect"/>

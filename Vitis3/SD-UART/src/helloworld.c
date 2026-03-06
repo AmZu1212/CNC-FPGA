@@ -7,8 +7,31 @@
 #include "ff.h"
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
-#define SPEED_REG 			XPAR_SPEED_GPIO_BASEADDR			//  8 bit
+#define X_REG               XPAR_X_GPIO_BASEADDR
+#define Y_REG               XPAR_Y_GPIO_BASEADDR
+#define Z_REG               XPAR_Z_GPIO_BASEADDR
+#define SPEED_REG           XPAR_SPEED_GPIO_BASEADDR
+#define INTRC_REG           XPAR_INTERCONNECT_GPIO_BASEADDR
+#define INTRC_OUT_REG       (INTRC_REG + 0x00)
+#define INTRC_IN_REG        (INTRC_REG + 0x08)
+#define SLEEP_DURATION_USEC 1
+
+#define IN_START_REQ_MASK   0x01U
+#define IN_NEXT_REQ_MASK    0x02U
+
+#define OUT_LINE_READY_MASK 0x01U
+#define OUT_LAST_LINE_MASK  0x02U
+#define OUT_ERROR_MASK      0x04U
+
+typedef struct {
+    s32 x;
+    s32 y;
+    s32 z;
+    u8 speed;
+    u8 cmd;
+} MotionCommand;
 
 static int read_line(FIL *fil, char *buf, unsigned int buf_size)
 {
@@ -29,9 +52,9 @@ static int read_line(FIL *fil, char *buf, unsigned int buf_size)
 
         if (br == 0U) {
             if (idx == 0U) {
-                return 0; // EOF, no data
+                return 0;
             }
-            break; // EOF after partial line
+            break;
         }
 
         if (ch == '\r') {
@@ -51,80 +74,324 @@ static int read_line(FIL *fil, char *buf, unsigned int buf_size)
     return 1;
 }
 
+static void write_width(u32 addr, u8 width_bits, u32 value)
+{
+    switch (width_bits) {
+    case 32:
+        Xil_Out32(addr, value);
+        break;
+    case 16:
+        Xil_Out16(addr, (u16)value);
+        break;
+    default:
+        Xil_Out8(addr, (u8)value);
+        break;
+    }
+}
+
+static void write_motion_command(const MotionCommand *cmd)
+{
+    if (cmd == NULL) {
+        return;
+    }
+
+    write_width(X_REG, 32U, (u32)cmd->x);
+    write_width(Y_REG, 32U, (u32)cmd->y);
+    write_width(Z_REG, 32U, (u32)cmd->z);
+    write_width(SPEED_REG, 8U, cmd->speed);
+}
+
+static u8 make_out_flags(u8 line_ready, u8 last_line, u8 error)
+{
+    u8 flags = 0U;
+
+    if (line_ready) {
+        flags |= OUT_LINE_READY_MASK;
+    }
+    if (last_line) {
+        flags |= OUT_LAST_LINE_MASK;
+    }
+    if (error) {
+        flags |= OUT_ERROR_MASK;
+    }
+
+    return (u8)(flags & 0x0FU);
+}
+
+static int parse_line(
+    const char *line,
+    double *last_x_mm,
+    double *last_y_mm,
+    double *last_z_mm,
+    double *last_f_mm_min,
+    MotionCommand *out_cmd
+)
+{
+    char buf[128];
+    char *tok;
+    int is_motion = 0;
+    u8 motion_cmd = 0U;
+
+    if (line == NULL || out_cmd == NULL ||
+        last_x_mm == NULL || last_y_mm == NULL ||
+        last_z_mm == NULL || last_f_mm_min == NULL) {
+        return -1;
+    }
+
+    strncpy(buf, line, sizeof(buf) - 1U);
+    buf[sizeof(buf) - 1U] = '\0';
+
+    {
+        char *comment = strchr(buf, ';');
+        if (comment != NULL) {
+            *comment = '\0';
+        }
+    }
+
+    for (tok = strtok(buf, " \t\r\n"); tok != NULL; tok = strtok(NULL, " \t\r\n")) {
+        char prefix = (char)toupper((unsigned char)tok[0]);
+        char *end = NULL;
+
+        if (prefix == 'G') {
+            long code = strtol(tok + 1, &end, 10);
+            if (end == tok + 1 || *end != '\0') {
+                return -1;
+            }
+
+            if (code == 0 || code == 1) {
+                is_motion = 1;
+                motion_cmd = (u8)code;
+            } else {
+                return 0;
+            }
+        } else if (prefix == 'X' || prefix == 'Y' || prefix == 'Z' || prefix == 'F') {
+            double value = strtod(tok + 1, &end);
+            if (end == tok + 1 || *end != '\0') {
+                return -1;
+            }
+
+            if (prefix == 'X') {
+                *last_x_mm = value;
+            } else if (prefix == 'Y') {
+                *last_y_mm = value;
+            } else if (prefix == 'Z') {
+                *last_z_mm = value;
+            } else {
+                *last_f_mm_min = value;
+            }
+        }
+    }
+
+    if (!is_motion) {
+        return 0;
+    }
+
+    out_cmd->cmd = motion_cmd;
+    out_cmd->x = (s32)(*last_x_mm * 1000.0);
+    out_cmd->y = (s32)(*last_y_mm * 1000.0);
+    out_cmd->z = (s32)(*last_z_mm * 1000.0);
+
+    {
+        s32 speed_mm_s = (s32)(*last_f_mm_min / 60.0);
+        if (speed_mm_s < 0 || speed_mm_s > 255) {
+            return -1;
+        }
+        out_cmd->speed = (u8)speed_mm_s;
+    }
+
+    return 1;
+}
+
+static int read_next_motion_command(
+    FIL *fil,
+    double *last_x_mm,
+    double *last_y_mm,
+    double *last_z_mm,
+    double *last_f_mm_min,
+    MotionCommand *out_cmd
+)
+{
+    char line[128];
+    int rc;
+
+    if (fil == NULL) {
+        return -1;
+    }
+
+    while (1) {
+        rc = read_line(fil, line, sizeof(line));
+        if (rc <= 0) {
+            return rc;
+        }
+
+        rc = parse_line(line, last_x_mm, last_y_mm, last_z_mm, last_f_mm_min, out_cmd);
+        if (rc < 0) {
+            return -1;
+        }
+        if (rc == 1) {
+            return 1;
+        }
+    }
+}
+
 int main(void)
 {
     FATFS fs;
     FIL fil;
-    FRESULT result;
-    char line[128];
+    u8 file_loaded = 0U;
+    u8 error_active = 0U;
+    u8 line_ready = 0U;
+    u8 last_line = 0U;
+    u8 prev_start_req = 0U;
+    u8 prev_next_req = 0U;
+    double last_x_mm = 0.0;
+    double last_y_mm = 0.0;
+    double last_z_mm = 0.0;
+    double last_f_mm_min = 0.0;
+    MotionCommand current_cmd = {0};
+    MotionCommand prefetched_cmd = {0};
+    u8 prefetched_valid = 0U;
+    int read_rc;
 
     init_platform();
-    xil_printf("RUN.G LED reader\r\n");
+    xil_printf("PS Starting...\r\n");
 
-    Xil_Out8(SPEED_REG, 0U);
-
-    result = f_mount(&fs, "0:/", 1);
-    xil_printf("mount = %d\r\n", result);
-    if (result != FR_OK) {
-        xil_printf("Mount failed\r\n");
-        while (1) {
-            sleep(1);
-        }
-    }
-
-    result = f_open(&fil, "0:/RUN.G", FA_READ);
-    xil_printf("open = %d\r\n", result);
-    if (result != FR_OK) {
-        xil_printf("Open failed\r\n");
-        while (1) {
-            sleep(1);
-        }
-    }
-
-    xil_printf("Reading RUN.G\r\n");
+    write_width(X_REG, 32U, 0U);
+    write_width(Y_REG, 32U, 0U);
+    write_width(Z_REG, 32U, 0U);
+    write_width(SPEED_REG, 8U, 0U);
+    write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
 
     while (1) {
-        char *endptr;
-        unsigned long value;
+        u8 intrc_in = (u8)(Xil_In8(INTRC_IN_REG) & 0x0FU);
+        u8 start_req = (intrc_in & IN_START_REQ_MASK) ? 1U : 0U;
+        u8 next_req = (intrc_in & IN_NEXT_REQ_MASK) ? 1U : 0U;
+        u8 start_edge = (u8)(start_req && !prev_start_req);
+        u8 next_edge = (u8)(next_req && !prev_next_req);
 
-        int line_rc = read_line(&fil, line, sizeof(line));
+        if (start_edge) {
+            line_ready = 0U;
+            last_line = 0U;
+            prefetched_valid = 0U;
+            error_active = 0U;
+            write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
 
-        if (line_rc < 0) {
-            xil_printf("Read failed\r\n");
-            break;
-        }
-
-        if (line_rc == 0) {
-            xil_printf("EOF reached, rewinding\r\n");
-            result = f_lseek(&fil, 0);
-            xil_printf("rewind = %d\r\n", result);
-            if (result != FR_OK) {
-                xil_printf("Rewind failed\r\n");
-                break;
+            if (file_loaded) {
+                f_close(&fil);
+                f_mount(NULL, "0:/", 0);
+                file_loaded = 0U;
             }
-            continue;
+
+            if (f_mount(&fs, "0:/", 1) != FR_OK) {
+                xil_printf("Mount failed\r\n");
+                error_active = 1U;
+            } else if (f_open(&fil, "0:/RUN.G", FA_READ) != FR_OK) {
+                xil_printf("Open failed\r\n");
+                f_mount(NULL, "0:/", 0);
+                error_active = 1U;
+            } else {
+                file_loaded = 1U;
+                last_x_mm = 0.0;
+                last_y_mm = 0.0;
+                last_z_mm = 0.0;
+                last_f_mm_min = 0.0;
+
+                read_rc = read_next_motion_command(
+                    &fil,
+                    &last_x_mm,
+                    &last_y_mm,
+                    &last_z_mm,
+                    &last_f_mm_min,
+                    &current_cmd
+                );
+
+                if (read_rc != 1) {
+                    xil_printf("RUN.G has no valid G0/G1 motion lines\r\n");
+                    error_active = 1U;
+                    f_close(&fil);
+                    f_mount(NULL, "0:/", 0);
+                    file_loaded = 0U;
+                } else {
+                    write_motion_command(&current_cmd);
+
+                    read_rc = read_next_motion_command(
+                        &fil,
+                        &last_x_mm,
+                        &last_y_mm,
+                        &last_z_mm,
+                        &last_f_mm_min,
+                        &prefetched_cmd
+                    );
+
+                    if (read_rc < 0) {
+                        error_active = 1U;
+                        line_ready = 0U;
+                        last_line = 0U;
+                        f_close(&fil);
+                        f_mount(NULL, "0:/", 0);
+                        file_loaded = 0U;
+                    } else {
+                        prefetched_valid = (read_rc == 1) ? 1U : 0U;
+                        line_ready = 1U;
+                        last_line = prefetched_valid ? 0U : 1U;
+                    }
+                }
+            }
+        } else if (next_edge) {
+            if (!error_active && file_loaded && line_ready) {
+                u8 was_last = last_line;
+
+                line_ready = 0U;
+                last_line = 0U;
+                write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
+
+                if (was_last) {
+                    f_close(&fil);
+                    f_mount(NULL, "0:/", 0);
+                    file_loaded = 0U;
+                } else if (prefetched_valid) {
+                    current_cmd = prefetched_cmd;
+                    write_motion_command(&current_cmd);
+
+                    read_rc = read_next_motion_command(
+                        &fil,
+                        &last_x_mm,
+                        &last_y_mm,
+                        &last_z_mm,
+                        &last_f_mm_min,
+                        &prefetched_cmd
+                    );
+
+                    if (read_rc < 0) {
+                        error_active = 1U;
+                        line_ready = 0U;
+                        last_line = 0U;
+                        prefetched_valid = 0U;
+                        f_close(&fil);
+                        f_mount(NULL, "0:/", 0);
+                        file_loaded = 0U;
+                    } else {
+                        prefetched_valid = (read_rc == 1) ? 1U : 0U;
+                        line_ready = 1U;
+                        last_line = prefetched_valid ? 0U : 1U;
+                    }
+                } else {
+                    error_active = 1U;
+                    line_ready = 0U;
+                    last_line = 0U;
+                    f_close(&fil);
+                    f_mount(NULL, "0:/", 0);
+                    file_loaded = 0U;
+                }
+            }
         }
 
-        if (line[0] == '\0') {
-            continue;
-        }
-
-        value = strtoul(line, &endptr, 0);
-        if (endptr == line) {
-            xil_printf("Skipping line: %s", line);
-            continue;
-        }
-
-        xil_printf("LED = %d\r\n", (int)(value & 0xFFUL));
-        Xil_Out8(SPEED_REG, (u8)(value & 0xFFUL));
-        sleep(1);
-
-        Xil_Out8(SPEED_REG, 0U);
-        sleep(1);
+        write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
+        prev_start_req = start_req;
+        prev_next_req = next_req;
+        usleep(SLEEP_DURATION_USEC);
     }
 
-    f_close(&fil);
-    f_mount(NULL, "0:/", 0);
     cleanup_platform();
     return 0;
 }

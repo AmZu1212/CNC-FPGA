@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL7\export\CNC-PL7"/>
+	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL7\export\CNC-PL7;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL8\export\CNC-PL8;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL9\export\CNC-PL9"/>
 </section>

@@ -1,4 +1,4 @@
-19:37:21 **** Incremental Build of configuration Debug for project SD-UART ****
+23:17:08 **** Incremental Build of configuration Debug for project SD-UART ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,5 +6,5 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 make[1]: Nothing to be done for 'main-build'.
 
-19:37:21 Build Finished (took 455ms)
+23:17:08 Build Finished (took 465ms)
 
