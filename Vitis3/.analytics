@@ -1,0 +1,94 @@
+timestamp=[2026-03-06 16:08:49], mode=WORKBENCH_START, duration=0:00:04.277, duration_ms=4277, data={}
+timestamp=[2026-03-06 16:08:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.409, duration_ms=409, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2026-03-06 16:08:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.693, duration_ms=693, data={}
+timestamp=[2026-03-06 16:09:43], mode=PLATFORM_CREATION, duration=0:00:08.685, duration_ms=8685, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-06 16:10:18], mode=APP_CREATION, duration=0:00:04.432, duration_ms=4432, data={name=SDReader, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=CNC-PL3, application_type=application}
+timestamp=[2026-03-06 16:11:55], mode=PLATFORM_GENERATION, duration=0:00:14.735, duration_ms=14735, data={name=CNC-PL3}
+timestamp=[2026-03-06 16:12:01], mode=BUILD, duration=0:00:01.471, duration_ms=1471, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:12:26], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=SDReader, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 16:12:28], mode=BUILD, duration=0:00:02.089, duration_ms=2089, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:12:37], mode=BUILD, duration=0:00:08.075, duration_ms=8075, data={name=SDReader_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:12:45], mode=BUILD, duration=0:00:00.507, duration_ms=507, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:12:53], mode=BUILD, duration=0:00:07.714, duration_ms=7714, data={name=SDReader_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:14:26], mode=BUILD, duration=0:00:01.150, duration_ms=1150, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:14:41], mode=BUILD, duration=0:00:01.284, duration_ms=1284, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:14:49], mode=BUILD, duration=0:00:07.869, duration_ms=7869, data={name=SDReader_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 16:31:37], mode=PLATFORM_GENERATION, duration=0:00:03.273, duration_ms=3273, data={name=CNC-PL3}
+timestamp=[2026-03-06 16:31:38], mode=BUILD, duration=0:00:00.777, duration_ms=777, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:28:21], mode=WORKBENCH_START, duration=0:00:06.970, duration_ms=6970, data={}
+timestamp=[2026-03-06 17:28:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.774, duration_ms=774, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=CNC-PL3,RemoteSystemsTempFiles,SDReader,SDReader_system}
+timestamp=[2026-03-06 17:28:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.261, duration_ms=261, data={}
+timestamp=[2026-03-06 17:29:26], mode=PLATFORM_GENERATION, duration=0:00:10.153, duration_ms=10153, data={name=CNC-PL3}
+timestamp=[2026-03-06 17:30:49], mode=PLATFORM_CREATION, duration=0:00:07.356, duration_ms=7356, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-06 17:30:56], mode=BUILD, duration=0:00:00.263, duration_ms=263, data={name=SDReader, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:30:56], mode=BUILD, duration=0:00:00.200, duration_ms=200, data={name=SDReader_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:31:35], mode=PLATFORM_GENERATION, duration=0:00:14.626, duration_ms=14626, data={name=CNC-PL4}
+timestamp=[2026-03-06 17:31:36], mode=BUILD, duration=0:00:01.818, duration_ms=1818, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:32:04], mode=BUILD, duration=0:00:01.266, duration_ms=1266, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:32:13], mode=BUILD, duration=0:00:08.963, duration_ms=8963, data={name=SDReader_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:34:37], mode=BUILD, duration=0:00:01.206, duration_ms=1206, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:34:45], mode=BUILD, duration=0:00:07.840, duration_ms=7840, data={name=SDReader_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:40:48], mode=PLATFORM_GENERATION, duration=0:00:07.597, duration_ms=7597, data={name=CNC-PL4}
+timestamp=[2026-03-06 17:40:48], mode=BUILD, duration=0:00:00.268, duration_ms=268, data={name=SDReader, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:40:48], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=SDReader_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:41:03], mode=PLATFORM_GENERATION, duration=0:00:12.669, duration_ms=12669, data={name=CNC-PL4}
+timestamp=[2026-03-06 17:41:05], mode=BUILD, duration=0:00:02.003, duration_ms=2003, data={name=SDReader, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:51:40], mode=PLATFORM_CREATION, duration=0:00:08.866, duration_ms=8866, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-06 17:53:23], mode=APP_CREATION, duration=0:00:04.730, duration_ms=4730, data={name=SD-UART, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=CNC-PL5, application_type=application}
+timestamp=[2026-03-06 17:55:21], mode=PLATFORM_GENERATION, duration=0:00:15.294, duration_ms=15294, data={name=CNC-PL5}
+timestamp=[2026-03-06 17:55:27], mode=BUILD, duration=0:00:02.462, duration_ms=2462, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:55:36], mode=BUILD, duration=0:00:08.146, duration_ms=8146, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:58:36], mode=PLATFORM_GENERATION, duration=0:00:07.956, duration_ms=7956, data={name=CNC-PL5}
+timestamp=[2026-03-06 17:58:36], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:58:36], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 17:58:53], mode=PLATFORM_GENERATION, duration=0:00:12.710, duration_ms=12710, data={name=CNC-PL5}
+timestamp=[2026-03-06 17:58:56], mode=BUILD, duration=0:00:02.396, duration_ms=2396, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 17:59:04], mode=BUILD, duration=0:00:08.082, duration_ms=8082, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:05:04], mode=BUILD, duration=0:00:01.287, duration_ms=1287, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:05:12], mode=BUILD, duration=0:00:08.024, duration_ms=8024, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:10:32], mode=PLATFORM_GENERATION, duration=0:00:06.912, duration_ms=6912, data={name=CNC-PL5}
+timestamp=[2026-03-06 18:10:41], mode=BUILD, duration=0:00:00.272, duration_ms=272, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:10:42], mode=BUILD, duration=0:00:01.345, duration_ms=1345, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:11:50], mode=BUILD, duration=0:00:01.216, duration_ms=1216, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:11:59], mode=BUILD, duration=0:00:08.194, duration_ms=8194, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:18:35], mode=PLATFORM_GENERATION, duration=0:00:07.560, duration_ms=7560, data={name=CNC-PL5}
+timestamp=[2026-03-06 18:18:44], mode=BUILD, duration=0:00:01.462, duration_ms=1462, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:20:22], mode=PLATFORM_GENERATION, duration=0:00:12.888, duration_ms=12888, data={name=CNC-PL5}
+timestamp=[2026-03-06 18:20:40], mode=PLATFORM_GENERATION, duration=0:00:08.430, duration_ms=8430, data={name=CNC-PL5}
+timestamp=[2026-03-06 18:20:40], mode=BUILD, duration=0:00:00.267, duration_ms=267, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:20:40], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:21:06], mode=PLATFORM_GENERATION, duration=0:00:13.137, duration_ms=13137, data={name=CNC-PL5}
+timestamp=[2026-03-06 18:21:07], mode=BUILD, duration=0:00:01.654, duration_ms=1654, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:21:16], mode=BUILD, duration=0:00:08.216, duration_ms=8216, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:39:00], mode=PLATFORM_CREATION, duration=0:00:10.018, duration_ms=10018, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-06 18:42:06], mode=PLATFORM_GENERATION, duration=0:00:16.348, duration_ms=16348, data={name=CNC-PL6}
+timestamp=[2026-03-06 18:43:05], mode=BUILD, duration=0:00:00.461, duration_ms=461, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:43:14], mode=BUILD, duration=0:00:08.336, duration_ms=8336, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:45:23], mode=BUILD, duration=0:00:01.341, duration_ms=1341, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:45:32], mode=BUILD, duration=0:00:07.954, duration_ms=7954, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:47:54], mode=BUILD, duration=0:00:01.208, duration_ms=1208, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:48:03], mode=BUILD, duration=0:00:07.949, duration_ms=7949, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:51:54], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:52:06], mode=PLATFORM_GENERATION, duration=0:00:08.080, duration_ms=8080, data={name=CNC-PL6}
+timestamp=[2026-03-06 18:52:06], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:52:06], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:52:14], mode=PLATFORM_GENERATION, duration=0:00:02.932, duration_ms=2932, data={name=CNC-PL6}
+timestamp=[2026-03-06 18:52:15], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:52:15], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 18:52:28], mode=PLATFORM_GENERATION, duration=0:00:12.701, duration_ms=12701, data={name=CNC-PL6}
+timestamp=[2026-03-06 18:52:29], mode=BUILD, duration=0:00:01.645, duration_ms=1645, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 18:52:38], mode=BUILD, duration=0:00:07.901, duration_ms=7901, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:29:06], mode=PLATFORM_CREATION, duration=0:00:12.687, duration_ms=12687, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-06 19:31:44], mode=PLATFORM_GENERATION, duration=0:00:20.371, duration_ms=20371, data={name=CNC-PL7}
+timestamp=[2026-03-06 19:31:51], mode=BUILD, duration=0:00:01.412, duration_ms=1412, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:33:12], mode=PLATFORM_GENERATION, duration=0:00:09.073, duration_ms=9073, data={name=CNC-PL7}
+timestamp=[2026-03-06 19:33:16], mode=PLATFORM_GENERATION, duration=0:00:03.214, duration_ms=3214, data={name=CNC-PL7}
+timestamp=[2026-03-06 19:33:16], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 19:33:16], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-06 19:33:35], mode=PLATFORM_GENERATION, duration=0:00:16.033, duration_ms=16033, data={name=CNC-PL7}
+timestamp=[2026-03-06 19:33:41], mode=BUILD, duration=0:00:01.716, duration_ms=1716, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:33:50], mode=BUILD, duration=0:00:08.949, duration_ms=8949, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:36:46], mode=BUILD, duration=0:00:01.359, duration_ms=1359, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:36:56], mode=BUILD, duration=0:00:09.516, duration_ms=9516, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:37:21], mode=BUILD, duration=0:00:00.465, duration_ms=465, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-06 19:37:31], mode=BUILD, duration=0:00:08.837, duration_ms=8837, data={name=SD-UART_system, configuration=Debug, clean_build=false}

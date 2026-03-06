@@ -1,0 +1,8 @@
+17:40:48 **** Clean-only build of configuration Debug for project SDReader_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
+
+17:40:48 Build Finished (took 209ms)
+

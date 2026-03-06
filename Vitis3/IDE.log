@@ -1,0 +1,1633 @@
+16:08:47 DEBUG : Logs will be stored at 'E:/Git-Repos/CNC-FPGA/Vitis3/IDE.log'.
+16:08:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\Git-Repos\CNC-FPGA\Vitis3\temp_xsdb_launch_script.tcl
+16:08:50 INFO  : Registering command handlers for Vitis TCF services
+16:08:51 INFO  : Platform repository initialization has completed.
+16:08:53 INFO  : XSCT server has started successfully.
+16:08:53 INFO  : Successfully done setting XSCT server connection channel  
+16:08:53 INFO  : plnx-install-location is set to ''
+16:08:53 INFO  : Successfully done query RDI_DATADIR 
+16:08:53 INFO  : Successfully done setting workspace for the tool. 
+16:09:42 INFO  : Result from executing command 'getProjects': CNC-PL3
+16:09:42 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:11:54 INFO  : Result from executing command 'getProjects': CNC-PL3
+16:11:54 INFO  : Result from executing command 'getPlatforms': CNC-PL3|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/CNC-PL3.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:11:59 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:12:26 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:12:45 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:14:25 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:14:39 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:15:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+16:15:20 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit"
+16:31:03 ERROR : Failed to update hardware specification for project 'CNC-PL3'.
+Reason: Failed to execute command 'platform config -updatehw {E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa}'. Click on details for more information.
+16:31:37 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+16:31:37 INFO  : Result from executing command 'getProjects': CNC-PL3;RemoteSystemsTempFiles;SDReader;SDReader_system
+16:31:37 WARN  : Failed to closehw "E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa"
+Reason: E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:31:37 INFO  : Result from executing command 'getProjects': CNC-PL3;RemoteSystemsTempFiles;SDReader;SDReader_system
+16:31:37 ERROR : Failed to openhw "E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa"
+Reason: E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:31:37 ERROR : Failed to update application flags from BSP for 'SDReader'. Reason: null
+java.lang.NullPointerException: null
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.<init>(SDxSwPlatform.java:305) ~[com.xilinx.sdx.sw_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sw.internal.SDxSwPlatform.create(SDxSwPlatform.java:214) ~[com.xilinx.sdx.sw_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdk.core.util.SdkPlatformHelper.getSwPlatform(SdkPlatformHelper.java:64) ~[com.xilinx.sdx.sdk.core_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.getSwPlatform(SdkMakefileGenerationListener.java:160) ~[com.xilinx.sdx.sdk.core_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.syncAppFlags(SdkMakefileGenerationListener.java:78) [com.xilinx.sdx.sdk.core_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdk.core.build.SdkMakefileGenerationListener.preMakefileGeneration(SdkMakefileGenerationListener.java:48) [com.xilinx.sdx.sdk.core_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.notifyPreMakefileGenerationListeners(XilinxGnuMakefileGenerator.java:91) [com.xilinx.sdk.managedbuilder_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.managedbuilder.XilinxGnuMakefileGenerator.generateMakefiles(XilinxGnuMakefileGenerator.java:40) [com.xilinx.sdk.managedbuilder_1.0.0.202411031917.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performMakefileGeneration(CommonBuilder.java:1008) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.performPrebuildGeneration(CommonBuilder.java:873) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:748) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:510) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.cdt.managedbuilder.internal.core.CommonBuilder.build(CommonBuilder.java:459) [org.eclipse.cdt.managedbuilder.core_8.6.0.201802261533.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:515) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:412) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:291) [org.eclipse.ui.ide_3.17.0.v20200217-1511.jar:?]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42) [org.eclipse.core.resources_3.13.700.v20200209-1624.jar:?]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:?]
+16:31:39 ERROR : Failed to compute checksum of hardware specification file used by project 'SDReader'
+16:31:39 INFO  : Result from executing command 'getProjects': CNC-PL3;RemoteSystemsTempFiles;SDReader;SDReader_system
+16:31:39 ERROR : Failed to openhw "E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa"
+Reason: E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:31:39 INFO  : Result from executing command 'getProjects': CNC-PL3;RemoteSystemsTempFiles;SDReader;SDReader_system
+16:31:39 ERROR : Failed to openhw "E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa"
+Reason: E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+16:31:39 INFO  : Result from executing command 'getProjects': CNC-PL3;RemoteSystemsTempFiles;SDReader;SDReader_system
+16:31:39 ERROR : Failed to openhw "E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa"
+Reason: E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL3/export/CNC-PL3/hw/CNC_Top_wrapper.xsa is not available in the current workspace
+use 'getprojects' command to see list of available projects in current workspace
+17:28:18 DEBUG : Logs will be stored at 'E:/Git-Repos/CNC-FPGA/Vitis3/IDE.log'.
+17:28:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\Git-Repos\CNC-FPGA\Vitis3\temp_xsdb_launch_script.tcl
+17:28:22 INFO  : Platform repository initialization has completed.
+17:28:22 INFO  : Registering command handlers for Vitis TCF services
+17:28:22 INFO  : XSCT server has started successfully.
+17:28:22 INFO  : plnx-install-location is set to ''
+17:28:23 INFO  : Successfully done setting XSCT server connection channel  
+17:28:23 INFO  : Successfully done query RDI_DATADIR 
+17:28:23 INFO  : Successfully done setting workspace for the tool. 
+17:29:00 INFO  : No changes in MSS file content so sources will not be generated.
+17:29:04 INFO  : No changes in MSS file content so sources will not be generated.
+17:29:26 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:29:26 ERROR : Failed to get platform details for the project 'SDReader'. Cannot sync application flags.
+17:29:47 ERROR : Failed to update hardware specification for project 'CNC-PL3'.
+Reason: Failed to execute command 'platform config -updatehw {E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa}'. Click on details for more information.
+17:29:55 ERROR : Failed to update hardware specification for project 'CNC-PL3'.
+Reason: Failed to execute command 'platform config -updatehw {E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa}'. Click on details for more information.
+17:30:49 INFO  : Result from executing command 'getProjects': CNC-PL4
+17:30:49 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:30:57 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:30:57 ERROR : Failed to get platform details for the project 'SDReader'. Cannot sync application flags.
+17:31:11 INFO  : The hardware specification used by project 'SDReader' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:31:13 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\bitstream\CNC_Top_wrapper.bit' stored in project is removed.
+17:31:13 INFO  : The updated bitstream files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\bitstream' in project 'SDReader'.
+17:31:13 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\psinit\ps7_init.tcl' stored in project is removed.
+17:31:15 INFO  : The updated ps init files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\psinit' in project 'SDReader'.
+17:31:34 INFO  : Result from executing command 'getProjects': CNC-PL4
+17:31:34 INFO  : Result from executing command 'getPlatforms': CNC-PL4|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/CNC-PL4.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:31:35 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:32:02 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:33:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:33:36 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/impl_1/CNC_Top_wrapper.bit"
+17:33:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:54 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:33:54 INFO  : 'jtag frequency' command is executed.
+17:33:54 INFO  : Context for 'APU' is selected.
+17:33:54 INFO  : System reset is completed.
+17:33:57 INFO  : 'after 3000' command is executed.
+17:33:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:34:00 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit"
+17:34:00 INFO  : Context for 'APU' is selected.
+17:34:00 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa'.
+17:34:00 INFO  : 'configparams force-mem-access 1' command is executed.
+17:34:00 INFO  : Context for 'APU' is selected.
+17:34:00 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl' is done.
+17:34:00 INFO  : 'ps7_init' command is executed.
+17:34:00 INFO  : 'ps7_post_config' command is executed.
+17:34:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:34:00 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:34:00 INFO  : 'configparams force-mem-access 0' command is executed.
+17:34:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:34:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:34:00 INFO  : 'con' command is executed.
+17:34:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:34:00 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader_system\_ide\scripts\systemdebugger_sdreader_system_standalone.tcl'
+17:34:35 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:34:59 INFO  : Disconnected from the channel tcfchan#4.
+17:35:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:35:00 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:35:00 INFO  : 'jtag frequency' command is executed.
+17:35:03 INFO  : Context for 'APU' is selected.
+17:35:03 INFO  : System reset is completed.
+17:35:06 INFO  : 'after 3000' command is executed.
+17:35:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:35:08 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit"
+17:35:08 INFO  : Context for 'APU' is selected.
+17:35:08 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa'.
+17:35:08 INFO  : 'configparams force-mem-access 1' command is executed.
+17:35:08 INFO  : Context for 'APU' is selected.
+17:35:08 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl' is done.
+17:35:09 INFO  : 'ps7_init' command is executed.
+17:35:09 INFO  : 'ps7_post_config' command is executed.
+17:35:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:35:09 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:35:09 INFO  : 'configparams force-mem-access 0' command is executed.
+17:35:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:35:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:35:09 INFO  : 'con' command is executed.
+17:35:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:35:09 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader_system\_ide\scripts\systemdebugger_sdreader_system_1_standalone.tcl'
+17:38:07 INFO  : Disconnected from the channel tcfchan#6.
+17:38:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:38:08 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:38:08 INFO  : 'jtag frequency' command is executed.
+17:38:11 INFO  : Context for 'APU' is selected.
+17:38:11 INFO  : System reset is completed.
+17:38:14 INFO  : 'after 3000' command is executed.
+17:38:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:38:17 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit"
+17:38:17 INFO  : Context for 'APU' is selected.
+17:38:17 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa'.
+17:38:17 INFO  : 'configparams force-mem-access 1' command is executed.
+17:38:17 INFO  : Context for 'APU' is selected.
+17:38:17 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl' is done.
+17:38:17 INFO  : 'ps7_init' command is executed.
+17:38:17 INFO  : 'ps7_post_config' command is executed.
+17:38:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:38:17 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:38:17 INFO  : 'configparams force-mem-access 0' command is executed.
+17:38:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:38:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:38:17 INFO  : 'con' command is executed.
+17:38:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:38:17 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader_system\_ide\scripts\systemdebugger_sdreader_system_2_standalone.tcl'
+17:38:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:38:32 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:38:32 INFO  : 'jtag frequency' command is executed.
+17:38:33 INFO  : Context for 'APU' is selected.
+17:38:33 INFO  : System reset is completed.
+17:38:36 INFO  : 'after 3000' command is executed.
+17:38:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:38:38 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit"
+17:38:38 INFO  : Context for 'APU' is selected.
+17:38:38 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa'.
+17:38:38 INFO  : 'configparams force-mem-access 1' command is executed.
+17:38:38 INFO  : Context for 'APU' is selected.
+17:38:38 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl' is done.
+17:38:38 INFO  : 'ps7_init' command is executed.
+17:38:38 INFO  : 'ps7_post_config' command is executed.
+17:38:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:38:38 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:38:38 INFO  : 'configparams force-mem-access 0' command is executed.
+17:38:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SDReader/Debug/SDReader.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:38:39 INFO  : 'con' command is executed.
+17:38:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:38:39 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader_system\_ide\scripts\systemdebugger_sdreader_system_3_standalone.tcl'
+17:40:43 INFO  : Result from executing command 'removePlatformRepo': 
+17:41:02 INFO  : Result from executing command 'getProjects': CNC-PL4
+17:41:02 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:41:03 INFO  : Checking for BSP changes to sync application flags for project 'SDReader'...
+17:51:40 INFO  : Result from executing command 'getProjects': CNC-PL4;CNC-PL5
+17:51:40 INFO  : Result from executing command 'getPlatforms': CNC-PL4|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL4/export/CNC-PL4/CNC-PL4.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:52:17 INFO  : The hardware specification used by project 'SDReader' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:52:18 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\bitstream\CNC_Top_wrapper.bit' stored in project is removed.
+17:52:18 INFO  : The updated bitstream files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\bitstream' in project 'SDReader'.
+17:52:18 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\psinit\ps7_init.tcl' stored in project is removed.
+17:52:22 INFO  : The updated ps init files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SDReader\_ide\psinit' in project 'SDReader'.
+17:55:20 INFO  : Result from executing command 'getProjects': CNC-PL5
+17:55:20 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:55:25 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+17:55:46 INFO  : Disconnected from the channel tcfchan#7.
+17:55:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:55:48 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:55:48 INFO  : 'jtag frequency' command is executed.
+17:55:48 INFO  : Context for 'APU' is selected.
+17:55:48 INFO  : System reset is completed.
+17:55:51 INFO  : 'after 3000' command is executed.
+17:55:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:55:53 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+17:55:53 INFO  : Context for 'APU' is selected.
+17:55:53 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+17:55:53 INFO  : 'configparams force-mem-access 1' command is executed.
+17:55:53 INFO  : Context for 'APU' is selected.
+17:55:53 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+17:55:53 INFO  : 'ps7_init' command is executed.
+17:55:53 INFO  : 'ps7_post_config' command is executed.
+17:55:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:55:53 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:55:54 INFO  : 'configparams force-mem-access 0' command is executed.
+17:55:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:55:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:55:54 INFO  : 'con' command is executed.
+17:55:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:55:54 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_standalone.tcl'
+17:56:30 WARN  : channel "tcfchan#7" closed
+17:56:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:56:31 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:56:31 INFO  : 'jtag frequency' command is executed.
+17:56:31 INFO  : Context for 'APU' is selected.
+17:56:32 INFO  : System reset is completed.
+17:56:35 INFO  : 'after 3000' command is executed.
+17:56:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:56:37 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+17:56:37 INFO  : Context for 'APU' is selected.
+17:56:37 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+17:56:37 INFO  : 'configparams force-mem-access 1' command is executed.
+17:56:37 INFO  : Context for 'APU' is selected.
+17:56:37 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+17:56:37 INFO  : 'ps7_init' command is executed.
+17:56:37 INFO  : 'ps7_post_config' command is executed.
+17:56:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:56:37 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:56:37 INFO  : 'configparams force-mem-access 0' command is executed.
+17:56:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:56:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:56:37 INFO  : 'con' command is executed.
+17:56:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:56:37 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_1_standalone.tcl'
+17:58:31 INFO  : Result from executing command 'removePlatformRepo': 
+17:58:53 INFO  : Result from executing command 'getProjects': CNC-PL5
+17:58:53 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+17:58:53 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+17:59:41 INFO  : Disconnected from the channel tcfchan#12.
+17:59:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:59:42 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+17:59:42 INFO  : 'jtag frequency' command is executed.
+17:59:42 INFO  : Context for 'APU' is selected.
+17:59:42 INFO  : System reset is completed.
+17:59:45 INFO  : 'after 3000' command is executed.
+17:59:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+17:59:47 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+17:59:47 INFO  : Context for 'APU' is selected.
+17:59:47 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+17:59:47 INFO  : 'configparams force-mem-access 1' command is executed.
+17:59:47 INFO  : Context for 'APU' is selected.
+17:59:47 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+17:59:47 INFO  : 'ps7_init' command is executed.
+17:59:47 INFO  : 'ps7_post_config' command is executed.
+17:59:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:59:48 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+17:59:48 INFO  : 'configparams force-mem-access 0' command is executed.
+17:59:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+17:59:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+17:59:48 INFO  : 'con' command is executed.
+17:59:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+17:59:48 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_2_standalone.tcl'
+18:05:03 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:05:23 WARN  : channel "tcfchan#12" closed
+18:05:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:05:24 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:05:24 INFO  : 'jtag frequency' command is executed.
+18:05:24 INFO  : Context for 'APU' is selected.
+18:05:24 INFO  : System reset is completed.
+18:05:27 INFO  : 'after 3000' command is executed.
+18:05:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:05:30 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:05:30 INFO  : Context for 'APU' is selected.
+18:05:30 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:05:30 INFO  : 'configparams force-mem-access 1' command is executed.
+18:05:30 INFO  : Context for 'APU' is selected.
+18:05:30 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:05:30 INFO  : 'ps7_init' command is executed.
+18:05:30 INFO  : 'ps7_post_config' command is executed.
+18:05:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:05:30 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:05:30 INFO  : 'configparams force-mem-access 0' command is executed.
+18:05:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:05:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:05:30 INFO  : 'con' command is executed.
+18:05:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:05:30 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_3_standalone.tcl'
+18:06:40 INFO  : Disconnected from the channel tcfchan#16.
+18:06:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:06:41 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:06:41 INFO  : 'jtag frequency' command is executed.
+18:06:41 INFO  : Context for 'APU' is selected.
+18:06:41 INFO  : System reset is completed.
+18:06:44 INFO  : 'after 3000' command is executed.
+18:06:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:06:46 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:06:46 INFO  : Context for 'APU' is selected.
+18:06:46 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:06:46 INFO  : 'configparams force-mem-access 1' command is executed.
+18:06:46 INFO  : Context for 'APU' is selected.
+18:06:46 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:06:47 INFO  : 'ps7_init' command is executed.
+18:06:47 INFO  : 'ps7_post_config' command is executed.
+18:06:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:06:47 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:06:47 INFO  : 'configparams force-mem-access 0' command is executed.
+18:06:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:06:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:06:47 INFO  : 'con' command is executed.
+18:06:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:06:47 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_4_standalone.tcl'
+18:10:32 INFO  : Result from executing command 'getProjects': CNC-PL5
+18:10:32 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:10:41 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:10:41 INFO  : Updating application flags with new BSP settings...
+18:10:41 INFO  : Successfully updated application flags for project SD-UART.
+18:11:49 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:12:12 WARN  : channel "tcfchan#16" closed
+18:12:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:12:13 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:12:13 INFO  : 'jtag frequency' command is executed.
+18:12:13 INFO  : Context for 'APU' is selected.
+18:12:13 INFO  : System reset is completed.
+18:12:16 INFO  : 'after 3000' command is executed.
+18:12:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:12:19 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:12:19 INFO  : Context for 'APU' is selected.
+18:12:19 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:12:19 INFO  : 'configparams force-mem-access 1' command is executed.
+18:12:19 INFO  : Context for 'APU' is selected.
+18:12:19 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:12:19 INFO  : 'ps7_init' command is executed.
+18:12:19 INFO  : 'ps7_post_config' command is executed.
+18:12:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:19 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:12:19 INFO  : 'configparams force-mem-access 0' command is executed.
+18:12:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:12:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:19 INFO  : 'con' command is executed.
+18:12:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:12:19 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_5_standalone.tcl'
+18:12:50 INFO  : Disconnected from the channel tcfchan#18.
+18:12:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:12:51 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:12:51 INFO  : 'jtag frequency' command is executed.
+18:12:51 INFO  : Context for 'APU' is selected.
+18:12:51 INFO  : System reset is completed.
+18:12:54 INFO  : 'after 3000' command is executed.
+18:12:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:12:56 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:12:56 INFO  : Context for 'APU' is selected.
+18:12:56 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:12:56 INFO  : 'configparams force-mem-access 1' command is executed.
+18:12:56 INFO  : Context for 'APU' is selected.
+18:12:56 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:12:57 INFO  : 'ps7_init' command is executed.
+18:12:57 INFO  : 'ps7_post_config' command is executed.
+18:12:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:57 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:12:57 INFO  : 'configparams force-mem-access 0' command is executed.
+18:12:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:12:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:12:57 INFO  : 'con' command is executed.
+18:12:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:12:57 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_6_standalone.tcl'
+18:15:09 WARN  : channel "tcfchan#18" closed
+18:15:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:10 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:15:10 INFO  : 'jtag frequency' command is executed.
+18:15:10 INFO  : Context for 'APU' is selected.
+18:15:10 INFO  : System reset is completed.
+18:15:13 INFO  : 'after 3000' command is executed.
+18:15:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:15:16 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:15:16 INFO  : Context for 'APU' is selected.
+18:15:16 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:15:16 INFO  : 'configparams force-mem-access 1' command is executed.
+18:15:16 INFO  : Context for 'APU' is selected.
+18:15:16 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:15:16 INFO  : 'ps7_init' command is executed.
+18:15:16 INFO  : 'ps7_post_config' command is executed.
+18:15:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:16 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:15:16 INFO  : 'configparams force-mem-access 0' command is executed.
+18:15:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:15:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:15:16 INFO  : 'con' command is executed.
+18:15:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:15:16 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_7_standalone.tcl'
+18:18:25 INFO  : No changes in MSS file content so sources will not be generated.
+18:18:35 INFO  : Result from executing command 'getProjects': CNC-PL5
+18:18:35 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:18:43 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:18:43 INFO  : Updating application flags with new BSP settings...
+18:18:43 INFO  : Successfully updated application flags for project SD-UART.
+18:19:26 INFO  : No changes in MSS file content so sources will not be generated.
+18:20:01 ERROR : (XSDB Server)rm: cannot lstat `*.o': Invalid argument
+
+18:20:01 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+18:20:22 INFO  : Result from executing command 'getProjects': CNC-PL5
+18:20:22 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:20:27 INFO  : No changes in MSS file content so sources will not be generated.
+18:20:34 INFO  : Result from executing command 'removePlatformRepo': 
+18:21:05 INFO  : Result from executing command 'getProjects': CNC-PL5
+18:21:05 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:21:06 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:21:27 INFO  : Disconnected from the channel tcfchan#21.
+18:21:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:21:28 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:21:28 INFO  : 'jtag frequency' command is executed.
+18:21:28 INFO  : Context for 'APU' is selected.
+18:21:28 INFO  : System reset is completed.
+18:21:31 INFO  : 'after 3000' command is executed.
+18:21:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:21:33 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:21:33 INFO  : Context for 'APU' is selected.
+18:21:33 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:21:33 INFO  : 'configparams force-mem-access 1' command is executed.
+18:21:33 INFO  : Context for 'APU' is selected.
+18:21:33 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:21:33 INFO  : 'ps7_init' command is executed.
+18:21:33 INFO  : 'ps7_post_config' command is executed.
+18:21:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:34 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:21:34 INFO  : 'configparams force-mem-access 0' command is executed.
+18:21:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:21:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:21:34 INFO  : 'con' command is executed.
+18:21:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:21:34 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_8_standalone.tcl'
+18:25:02 WARN  : channel "tcfchan#21" closed
+18:25:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:25:03 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:25:03 INFO  : 'jtag frequency' command is executed.
+18:25:03 INFO  : Context for 'APU' is selected.
+18:25:03 INFO  : System reset is completed.
+18:25:06 INFO  : 'after 3000' command is executed.
+18:25:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:25:09 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:25:09 INFO  : Context for 'APU' is selected.
+18:25:09 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:25:09 INFO  : 'configparams force-mem-access 1' command is executed.
+18:25:09 INFO  : Context for 'APU' is selected.
+18:25:09 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:25:09 INFO  : 'ps7_init' command is executed.
+18:25:09 INFO  : 'ps7_post_config' command is executed.
+18:25:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:09 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:25:09 INFO  : 'configparams force-mem-access 0' command is executed.
+18:25:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:25:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:09 INFO  : 'con' command is executed.
+18:25:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:25:09 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_9_standalone.tcl'
+18:25:33 INFO  : Disconnected from the channel tcfchan#27.
+18:25:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:25:34 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:25:34 INFO  : 'jtag frequency' command is executed.
+18:25:34 INFO  : Context for 'APU' is selected.
+18:25:34 INFO  : System reset is completed.
+18:25:37 INFO  : 'after 3000' command is executed.
+18:25:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:25:39 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:25:39 INFO  : Context for 'APU' is selected.
+18:25:39 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa'.
+18:25:39 INFO  : 'configparams force-mem-access 1' command is executed.
+18:25:39 INFO  : Context for 'APU' is selected.
+18:25:39 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:25:39 INFO  : 'ps7_init' command is executed.
+18:25:39 INFO  : 'ps7_post_config' command is executed.
+18:25:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:40 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:25:40 INFO  : 'configparams force-mem-access 0' command is executed.
+18:25:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:25:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:25:40 INFO  : 'con' command is executed.
+18:25:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:25:40 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_10_standalone.tcl'
+18:37:41 ERROR : Failed to update hardware specification for project 'CNC-PL5'.
+Reason: Failed to execute command 'platform config -updatehw {E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa}'. Click on details for more information.
+18:38:23 ERROR : Failed to update hardware specification for project 'CNC-PL5'.
+Reason: Failed to execute command 'platform config -updatehw {E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa}'. Click on details for more information.
+18:38:59 INFO  : Result from executing command 'getProjects': CNC-PL5;CNC-PL6
+18:38:59 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:39:17 INFO  : No changes in MSS file content so sources will not be generated.
+18:39:22 INFO  : No changes in MSS file content so sources will not be generated.
+18:39:35 INFO  : No changes in MSS file content so sources will not be generated.
+18:39:39 INFO  : No changes in MSS file content so sources will not be generated.
+18:39:44 INFO  : No changes in MSS file content so sources will not be generated.
+18:40:01 INFO  : No changes in MSS file content so sources will not be generated.
+18:40:11 INFO  : The hardware specification used by project 'SD-UART' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:40:12 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream\CNC_Top_wrapper.bit' stored in project is removed.
+18:40:12 INFO  : The updated bitstream files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream' in project 'SD-UART'.
+18:40:12 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit\ps7_init.tcl' stored in project is removed.
+18:40:16 INFO  : The updated ps init files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit' in project 'SD-UART'.
+18:40:42 INFO  : No changes in MSS file content so sources will not be generated.
+18:41:06 ERROR : (XSDB Server)rm: cannot lstat `*.o': Invalid argument
+
+18:41:06 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+18:41:20 ERROR : (XSDB Server)rm: cannot lstat `*.o': Invalid argument
+
+18:41:20 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+18:42:05 INFO  : Result from executing command 'getProjects': CNC-PL5;CNC-PL6
+18:42:05 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;CNC-PL6|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/CNC-PL6.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:43:05 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:43:20 WARN  : channel "tcfchan#27" closed
+18:43:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:21 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:43:21 INFO  : 'jtag frequency' command is executed.
+18:43:21 INFO  : Context for 'APU' is selected.
+18:43:22 INFO  : System reset is completed.
+18:43:25 INFO  : 'after 3000' command is executed.
+18:43:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:43:27 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:43:27 INFO  : Context for 'APU' is selected.
+18:43:27 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:43:27 INFO  : 'configparams force-mem-access 1' command is executed.
+18:43:27 INFO  : Context for 'APU' is selected.
+18:43:27 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:43:27 INFO  : 'ps7_init' command is executed.
+18:43:27 INFO  : 'ps7_post_config' command is executed.
+18:43:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:27 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:43:27 INFO  : 'configparams force-mem-access 0' command is executed.
+18:43:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:43:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:28 INFO  : 'con' command is executed.
+18:43:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:43:28 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_standalone.tcl'
+18:43:49 INFO  : Disconnected from the channel tcfchan#28.
+18:43:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:50 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:43:50 INFO  : 'jtag frequency' command is executed.
+18:43:50 INFO  : Context for 'APU' is selected.
+18:43:50 INFO  : System reset is completed.
+18:43:53 INFO  : 'after 3000' command is executed.
+18:43:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:43:55 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:43:55 INFO  : Context for 'APU' is selected.
+18:43:55 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:43:55 INFO  : 'configparams force-mem-access 1' command is executed.
+18:43:55 INFO  : Context for 'APU' is selected.
+18:43:55 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:43:56 INFO  : 'ps7_init' command is executed.
+18:43:56 INFO  : 'ps7_post_config' command is executed.
+18:43:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:56 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:43:56 INFO  : 'configparams force-mem-access 0' command is executed.
+18:43:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:43:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:43:56 INFO  : 'con' command is executed.
+18:43:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:43:56 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_1_standalone.tcl'
+18:45:22 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:46:07 WARN  : channel "tcfchan#28" closed
+18:46:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:46:08 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:46:08 INFO  : 'jtag frequency' command is executed.
+18:46:08 INFO  : Context for 'APU' is selected.
+18:46:08 INFO  : System reset is completed.
+18:46:11 INFO  : 'after 3000' command is executed.
+18:46:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:46:13 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:46:14 INFO  : Context for 'APU' is selected.
+18:46:14 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:46:14 INFO  : 'configparams force-mem-access 1' command is executed.
+18:46:14 INFO  : Context for 'APU' is selected.
+18:46:14 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:46:14 INFO  : 'ps7_init' command is executed.
+18:46:14 INFO  : 'ps7_post_config' command is executed.
+18:46:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:14 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:46:14 INFO  : 'configparams force-mem-access 0' command is executed.
+18:46:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:46:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:46:14 INFO  : 'con' command is executed.
+18:46:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:46:14 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_2_standalone.tcl'
+18:47:53 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:48:21 ERROR : (XRT Server)C:/Xilinx/Vitis/2024.2/bin/unwrapped/win64.o/xrt_server.exe: error: illegal option '-'
+Usage: agent [OPTION]...
+Start Target Communication Framework agent.
+  -d               run in daemon mode (output is sent to system logger)
+  -i               run in interactive mode
+  -L<file>         enable logging, use -L- to send log to stderr
+  -l<level>        set log level, the level is comma separated list of:
+      alloc        memory allocation and deallocation (0x1)
+      eventcore    main event queue (0x2)
+      waitpid      waitpid() events (0x4)
+      events       low-level debugger events (0x8)
+      protocol     communication protocol (0x20)
+      context      debug context actions (0x40)
+      children     debug context children (0x10)
+      discovery    discovery (0x80)
+      asyncreq     async I/O (0x100)
+      proxy        proxy state (0x200)
+      tcflog       proxy traffic (0x400)
+      elf          ELF reader (0x800)
+      stack        stack trace service (0x2000)
+      plugin       plugins (0x4000)
+      shutdown     shutdown of subsystems (0x8000)
+      disasm       disassembly service (0x10000)
+  -s<url>          set agent listening port and protocol, default is tcp::0
+  -S               print server properties in Json format to stdout
+  -g<port>         start GDB Remote Serial Protocol server at the specified TCP port
+  -I<idle-seconds> exit if there are no connections for the specified time
+
+18:49:21 ERROR : Timed out. 60 seconds have elapsed while waiting for the XRT server to launch.
+18:49:23 INFO  : Disconnected from the channel tcfchan#31.
+18:49:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:25 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:49:25 INFO  : 'jtag frequency' command is executed.
+18:49:25 INFO  : Context for 'APU' is selected.
+18:49:25 INFO  : System reset is completed.
+18:49:28 INFO  : 'after 3000' command is executed.
+18:49:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:49:30 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:49:30 INFO  : Context for 'APU' is selected.
+18:49:30 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:49:30 INFO  : 'configparams force-mem-access 1' command is executed.
+18:49:30 INFO  : Context for 'APU' is selected.
+18:49:30 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:49:30 INFO  : 'ps7_init' command is executed.
+18:49:30 INFO  : 'ps7_post_config' command is executed.
+18:49:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:49:30 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:49:30 INFO  : 'configparams force-mem-access 0' command is executed.
+18:49:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:49:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:49:31 INFO  : 'con' command is executed.
+18:49:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:49:31 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_3_standalone.tcl'
+18:50:40 WARN  : channel "tcfchan#31" closed
+18:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:50:41 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:50:41 INFO  : 'jtag frequency' command is executed.
+18:50:41 INFO  : Context for 'APU' is selected.
+18:50:42 INFO  : System reset is completed.
+18:50:45 INFO  : 'after 3000' command is executed.
+18:50:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:50:47 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:50:47 INFO  : Context for 'APU' is selected.
+18:50:47 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:50:47 INFO  : 'configparams force-mem-access 1' command is executed.
+18:50:47 INFO  : Context for 'APU' is selected.
+18:50:47 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:50:47 INFO  : 'ps7_init' command is executed.
+18:50:47 INFO  : 'ps7_post_config' command is executed.
+18:50:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:48 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:50:48 INFO  : 'configparams force-mem-access 0' command is executed.
+18:50:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:50:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:50:48 INFO  : 'con' command is executed.
+18:50:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:50:48 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_4_standalone.tcl'
+18:52:01 INFO  : Result from executing command 'removePlatformRepo': 
+18:52:14 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+18:52:27 INFO  : Result from executing command 'getProjects': CNC-PL5;CNC-PL6
+18:52:27 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+18:52:28 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+18:53:08 INFO  : Disconnected from the channel tcfchan#34.
+18:53:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:53:09 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:53:09 INFO  : 'jtag frequency' command is executed.
+18:53:09 INFO  : Context for 'APU' is selected.
+18:53:09 INFO  : System reset is completed.
+18:53:13 INFO  : 'after 3000' command is executed.
+18:53:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:53:15 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:53:15 INFO  : Context for 'APU' is selected.
+18:53:15 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:53:15 INFO  : 'configparams force-mem-access 1' command is executed.
+18:53:15 INFO  : Context for 'APU' is selected.
+18:53:15 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:53:15 INFO  : 'ps7_init' command is executed.
+18:53:15 INFO  : 'ps7_post_config' command is executed.
+18:53:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:15 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:53:15 INFO  : 'configparams force-mem-access 0' command is executed.
+18:53:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:53:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:53:15 INFO  : 'con' command is executed.
+18:53:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:53:15 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_5_standalone.tcl'
+18:57:04 WARN  : channel "tcfchan#34" closed
+18:57:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:05 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:57:05 INFO  : 'jtag frequency' command is executed.
+18:57:05 INFO  : Context for 'APU' is selected.
+18:57:05 INFO  : System reset is completed.
+18:57:08 INFO  : 'after 3000' command is executed.
+18:57:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:57:10 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:57:10 INFO  : Context for 'APU' is selected.
+18:57:10 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:57:10 INFO  : 'configparams force-mem-access 1' command is executed.
+18:57:10 INFO  : Context for 'APU' is selected.
+18:57:10 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:57:11 INFO  : 'ps7_init' command is executed.
+18:57:11 INFO  : 'ps7_post_config' command is executed.
+18:57:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:11 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:57:11 INFO  : 'configparams force-mem-access 0' command is executed.
+18:57:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:57:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:11 INFO  : 'con' command is executed.
+18:57:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:57:11 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_6_standalone.tcl'
+18:57:24 INFO  : Disconnected from the channel tcfchan#39.
+18:57:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:57:25 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:57:25 INFO  : 'jtag frequency' command is executed.
+18:57:25 INFO  : Context for 'APU' is selected.
+18:57:25 INFO  : System reset is completed.
+18:57:28 INFO  : 'after 3000' command is executed.
+18:57:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:57:30 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:57:30 INFO  : Context for 'APU' is selected.
+18:57:30 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:57:30 INFO  : 'configparams force-mem-access 1' command is executed.
+18:57:30 INFO  : Context for 'APU' is selected.
+18:57:30 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:57:30 INFO  : 'ps7_init' command is executed.
+18:57:30 INFO  : 'ps7_post_config' command is executed.
+18:57:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:31 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:57:31 INFO  : 'configparams force-mem-access 0' command is executed.
+18:57:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:57:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:57:31 INFO  : 'con' command is executed.
+18:57:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:57:31 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_7_standalone.tcl'
+18:58:12 WARN  : channel "tcfchan#39" closed
+18:58:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:58:13 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+18:58:13 INFO  : 'jtag frequency' command is executed.
+18:58:13 INFO  : Context for 'APU' is selected.
+18:58:13 INFO  : System reset is completed.
+18:58:16 INFO  : 'after 3000' command is executed.
+18:58:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+18:58:18 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+18:58:18 INFO  : Context for 'APU' is selected.
+18:58:18 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+18:58:18 INFO  : 'configparams force-mem-access 1' command is executed.
+18:58:18 INFO  : Context for 'APU' is selected.
+18:58:18 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+18:58:19 INFO  : 'ps7_init' command is executed.
+18:58:19 INFO  : 'ps7_post_config' command is executed.
+18:58:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:19 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:58:19 INFO  : 'configparams force-mem-access 0' command is executed.
+18:58:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:58:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:58:19 INFO  : 'con' command is executed.
+18:58:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+18:58:19 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_8_standalone.tcl'
+19:00:18 INFO  : Disconnected from the channel tcfchan#40.
+19:00:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:00:19 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:00:19 INFO  : 'jtag frequency' command is executed.
+19:00:19 INFO  : Context for 'APU' is selected.
+19:00:19 INFO  : System reset is completed.
+19:00:22 INFO  : 'after 3000' command is executed.
+19:00:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:00:24 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:00:24 INFO  : Context for 'APU' is selected.
+19:00:24 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+19:00:24 INFO  : 'configparams force-mem-access 1' command is executed.
+19:00:24 INFO  : Context for 'APU' is selected.
+19:00:24 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:00:24 INFO  : 'ps7_init' command is executed.
+19:00:24 INFO  : 'ps7_post_config' command is executed.
+19:00:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:25 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:00:25 INFO  : 'configparams force-mem-access 0' command is executed.
+19:00:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:00:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:00:25 INFO  : 'con' command is executed.
+19:00:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:00:25 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_9_standalone.tcl'
+19:01:21 WARN  : channel "tcfchan#40" closed
+19:01:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:01:22 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:01:22 INFO  : 'jtag frequency' command is executed.
+19:01:22 INFO  : Context for 'APU' is selected.
+19:01:22 INFO  : System reset is completed.
+19:01:25 INFO  : 'after 3000' command is executed.
+19:01:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:01:27 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:01:27 INFO  : Context for 'APU' is selected.
+19:01:27 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+19:01:27 INFO  : 'configparams force-mem-access 1' command is executed.
+19:01:27 INFO  : Context for 'APU' is selected.
+19:01:27 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:01:27 INFO  : 'ps7_init' command is executed.
+19:01:27 INFO  : 'ps7_post_config' command is executed.
+19:01:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:28 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:01:28 INFO  : 'configparams force-mem-access 0' command is executed.
+19:01:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:01:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:01:28 INFO  : 'con' command is executed.
+19:01:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:01:28 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_10_standalone.tcl'
+19:02:10 INFO  : Disconnected from the channel tcfchan#41.
+19:02:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:02:12 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:02:12 INFO  : 'jtag frequency' command is executed.
+19:02:12 INFO  : Context for 'APU' is selected.
+19:02:12 INFO  : System reset is completed.
+19:02:15 INFO  : 'after 3000' command is executed.
+19:02:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:02:17 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:02:17 INFO  : Context for 'APU' is selected.
+19:02:17 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa'.
+19:02:17 INFO  : 'configparams force-mem-access 1' command is executed.
+19:02:17 INFO  : Context for 'APU' is selected.
+19:02:17 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:02:17 INFO  : 'ps7_init' command is executed.
+19:02:17 INFO  : 'ps7_post_config' command is executed.
+19:02:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:02:17 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:02:17 INFO  : 'configparams force-mem-access 0' command is executed.
+19:02:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:02:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:02:18 INFO  : 'con' command is executed.
+19:02:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:02:18 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_11_standalone.tcl'
+19:29:06 INFO  : Result from executing command 'getProjects': CNC-PL5;CNC-PL6;CNC-PL7
+19:29:06 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:30:39 INFO  : The hardware specification used by project 'SD-UART' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:30:41 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream\CNC_Top_wrapper.bit' stored in project is removed.
+19:30:41 INFO  : The updated bitstream files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream' in project 'SD-UART'.
+19:30:41 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit\ps7_init.tcl' stored in project is removed.
+19:30:47 INFO  : The updated ps init files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit' in project 'SD-UART'.
+19:31:43 INFO  : Result from executing command 'getProjects': CNC-PL5;CNC-PL6;CNC-PL7
+19:31:43 INFO  : Result from executing command 'getPlatforms': CNC-PL5|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL5/export/CNC-PL5/CNC-PL5.xpfm;CNC-PL6|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL6/export/CNC-PL6/CNC-PL6.xpfm;CNC-PL7|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/CNC-PL7.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:31:49 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+19:31:49 INFO  : Updating application flags with new BSP settings...
+19:31:49 INFO  : Successfully updated application flags for project SD-UART.
+19:32:42 INFO  : No changes in MSS file content so sources will not be generated.
+19:33:06 INFO  : Result from executing command 'removePlatformRepo': 
+19:33:15 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+19:33:34 INFO  : Result from executing command 'getProjects': CNC-PL7
+19:33:34 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+19:33:39 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+19:33:39 INFO  : Updating application flags with new BSP settings...
+19:33:39 INFO  : Successfully updated application flags for project SD-UART.
+19:34:11 WARN  : channel "tcfchan#41" closed
+19:34:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:34:30 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:34:42 INFO  : Disconnected from the channel tcfchan#42.
+19:34:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:44 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:34:44 INFO  : 'jtag frequency' command is executed.
+19:34:44 INFO  : Context for 'APU' is selected.
+19:34:44 INFO  : System reset is completed.
+19:34:47 INFO  : 'after 3000' command is executed.
+19:34:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:34:49 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:34:49 INFO  : Context for 'APU' is selected.
+19:34:49 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa'.
+19:34:49 INFO  : 'configparams force-mem-access 1' command is executed.
+19:34:49 INFO  : Context for 'APU' is selected.
+19:34:49 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:34:50 INFO  : 'ps7_init' command is executed.
+19:34:50 INFO  : 'ps7_post_config' command is executed.
+19:34:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:34:50 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:34:50 INFO  : 'configparams force-mem-access 0' command is executed.
+19:34:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:34:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:34:50 INFO  : 'con' command is executed.
+19:34:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:34:50 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_standalone.tcl'
+19:36:44 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+19:37:21 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+19:37:39 INFO  : Disconnected from the channel tcfchan#48.
+19:37:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:37:39 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:37:39 INFO  : 'jtag frequency' command is executed.
+19:37:39 INFO  : Context for 'APU' is selected.
+19:37:39 INFO  : System reset is completed.
+19:37:42 INFO  : 'after 3000' command is executed.
+19:37:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:37:45 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:37:45 INFO  : Context for 'APU' is selected.
+19:37:45 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa'.
+19:37:45 INFO  : 'configparams force-mem-access 1' command is executed.
+19:37:45 INFO  : Context for 'APU' is selected.
+19:37:45 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:37:45 INFO  : 'ps7_init' command is executed.
+19:37:45 INFO  : 'ps7_post_config' command is executed.
+19:37:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:45 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:37:45 INFO  : 'configparams force-mem-access 0' command is executed.
+19:37:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:37:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:37:45 INFO  : 'con' command is executed.
+19:37:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:37:45 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_standalone.tcl'
+19:38:37 INFO  : Disconnected from the channel tcfchan#51.
+19:38:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:38:37 INFO  : Jtag cable 'Digilent Zed 210248585425' is selected.
+19:38:37 INFO  : 'jtag frequency' command is executed.
+19:38:37 INFO  : Context for 'APU' is selected.
+19:38:37 INFO  : System reset is completed.
+19:38:40 INFO  : 'after 3000' command is executed.
+19:38:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}' command is executed.
+19:38:42 INFO  : Device configured successfully with "E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit"
+19:38:42 INFO  : Context for 'APU' is selected.
+19:38:42 INFO  : Hardware design and registers information is loaded from 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa'.
+19:38:42 INFO  : 'configparams force-mem-access 1' command is executed.
+19:38:42 INFO  : Context for 'APU' is selected.
+19:38:42 INFO  : Sourcing of 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl' is done.
+19:38:43 INFO  : 'ps7_init' command is executed.
+19:38:43 INFO  : 'ps7_post_config' command is executed.
+19:38:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:38:43 INFO  : The application 'E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:38:43 INFO  : 'configparams force-mem-access 0' command is executed.
+19:38:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248585425" && level==0 && jtag_device_ctx=="jsn-Zed-210248585425-23727093-0"}
+fpga -file E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL7/export/CNC-PL7/hw/CNC_Top_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:38:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:38:43 INFO  : 'con' command is executed.
+19:38:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:38:43 INFO  : Launch script is exported to file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_standalone.tcl'

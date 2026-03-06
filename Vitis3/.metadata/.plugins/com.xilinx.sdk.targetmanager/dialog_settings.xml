@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="SDReader_system-bitFile" value="${project_loc:SDReader}/_ide/bitstream/CNC_Top_wrapper.bit"/>
+	<item key="SDReader_system-bmmFile" value=""/>
+	<item key="SDReader_system-target" value="Local"/>
+	<item key="SDReader_system-device" value="Auto Detect"/>
+	<item key="SDReader_system-partial_bit" value="false"/>
+	<item key="SDReader_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="SDReader_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zed 210248585425&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zed-210248585425-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zed-210248585425-23727093-0&quot;}}]}"/>
+</section>
