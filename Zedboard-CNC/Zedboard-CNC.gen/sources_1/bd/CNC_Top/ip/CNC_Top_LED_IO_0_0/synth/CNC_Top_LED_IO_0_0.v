@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -56,36 +56,36 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CNC_Top_LED_IO_0_0 (
-  rstSwitch,
-  X,
-  Y,
-  Z,
-  SPEED,
-  PS_Channel,
-  PL_State,
-  PL_Channel,
+  in0,
+  in1,
+  in2,
+  in3,
+  in4,
+  in5,
+  in6,
+  in7,
   led
 );
 
-input wire rstSwitch;
-input wire [31 : 0] X;
-input wire [31 : 0] Y;
-input wire [31 : 0] Z;
-input wire [7 : 0] SPEED;
-input wire [3 : 0] PS_Channel;
-input wire [3 : 0] PL_State;
-output wire [3 : 0] PL_Channel;
+input wire in0;
+input wire in1;
+input wire in2;
+input wire in3;
+input wire in4;
+input wire in5;
+input wire in6;
+input wire in7;
 output wire [7 : 0] led;
 
   LED_IO inst (
-    .rstSwitch(rstSwitch),
-    .X(X),
-    .Y(Y),
-    .Z(Z),
-    .SPEED(SPEED),
-    .PS_Channel(PS_Channel),
-    .PL_State(PL_State),
-    .PL_Channel(PL_Channel),
+    .in0(in0),
+    .in1(in1),
+    .in2(in2),
+    .in3(in3),
+    .in4(in4),
+    .in5(in5),
+    .in6(in6),
+    .in7(in7),
     .led(led)
   );
 endmodule

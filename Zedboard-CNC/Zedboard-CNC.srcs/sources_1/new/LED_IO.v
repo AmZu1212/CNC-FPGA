@@ -1,31 +1,41 @@
-`timescale 1ns / 1ps
-
+/////////////////////////////////////////////////////////////////////////////////
+// Company: The Technion
+// Engineer: Amir Zuabi
+// 
+// Create Date: 06/18/2025 02:15:31 AM
+// Design Name: LED_IO Module
+// Module Name: LED_IO
+// Project Name: CNC-FPGA
+// Target Devices: Zedboard Devkit
+// Tool Versions: Vivado 2024.2
+// Description: 
+// 	Zedboard LED IO Interface
+// Dependencies: 
+// 	Vivado 2024.2
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+/////////////////////////////////////////////////////////////////////////////////
 module LED_IO(
-    input rstSwitch,
-    input [31:0] X,
-    input [31:0] Y,
-    input [31:0] Z,
-    input [7:0] SPEED,
-    input [3:0] PS_Channel,
-    input [3:0] PL_State,
-    
-    output reg [3:0] PL_Channel,
-    output [7:0] led
+	input in0,
+	input in1,
+	input in2,
+	input in3,
+	input in4,
+	input in5,
+	input in6,
+	input in7,
+	output [7:0] led
     );
 
-    always @(*) begin
-        if(rstSwitch == 1'b1) begin
-            // inform software layer on hardware reset
-            PL_Channel = 4'b1111;
-        end else begin
-            // pass state forward
-            PL_Channel = PL_State;
-            end
-    end
-    
-    
-    // leds for each module
-    assign led[3:0] = PS_Channel;
-    assign led[7:4] = PL_Channel;
-   
+	assign led [0] = in0;
+	assign led [1] = in1;
+	assign led [2] = in2;
+	assign led [3] = in3;
+	assign led [4] = in4;
+	assign led [5] = in5;
+	assign led [6] = in6;
+	assign led [7] = in7;
+
 endmodule

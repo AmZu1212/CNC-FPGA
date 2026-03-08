@@ -59,19 +59,18 @@ module CNC_Top_GCODE_Parser_0_0 (
   rst,
   start,
   load_next_line,
-  cmd_valid,
-  cmd_last,
-  cmd_speed,
-  cmd_pos_x,
-  cmd_pos_y,
-  cmd_pos_z,
-  cmd_ready,
-  rewind,
-  next_speed,
-  next_pos_x,
-  next_pos_y,
-  next_pos_z,
-  enable
+  next_line_speed,
+  next_x,
+  next_y,
+  next_z,
+  speed,
+  x,
+  y,
+  z,
+  enable,
+  request_next_line,
+  phase,
+  start_program
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -84,37 +83,35 @@ input wire clk;
 input wire rst;
 input wire start;
 input wire load_next_line;
-input wire cmd_valid;
-input wire cmd_last;
-input wire [7 : 0] cmd_speed;
-input wire [31 : 0] cmd_pos_x;
-input wire [31 : 0] cmd_pos_y;
-input wire [31 : 0] cmd_pos_z;
-output wire cmd_ready;
-output wire rewind;
-output wire [7 : 0] next_speed;
-output wire [31 : 0] next_pos_x;
-output wire [31 : 0] next_pos_y;
-output wire [31 : 0] next_pos_z;
+input wire [7 : 0] next_line_speed;
+input wire [31 : 0] next_x;
+input wire [31 : 0] next_y;
+input wire [31 : 0] next_z;
+output wire [7 : 0] speed;
+output wire [31 : 0] x;
+output wire [31 : 0] y;
+output wire [31 : 0] z;
 output wire enable;
+output wire request_next_line;
+output wire [1 : 0] phase;
+output wire start_program;
 
   GCODE_Parser inst (
     .clk(clk),
     .rst(rst),
     .start(start),
     .load_next_line(load_next_line),
-    .cmd_valid(cmd_valid),
-    .cmd_last(cmd_last),
-    .cmd_speed(cmd_speed),
-    .cmd_pos_x(cmd_pos_x),
-    .cmd_pos_y(cmd_pos_y),
-    .cmd_pos_z(cmd_pos_z),
-    .cmd_ready(cmd_ready),
-    .rewind(rewind),
-    .next_speed(next_speed),
-    .next_pos_x(next_pos_x),
-    .next_pos_y(next_pos_y),
-    .next_pos_z(next_pos_z),
-    .enable(enable)
+    .next_line_speed(next_line_speed),
+    .next_x(next_x),
+    .next_y(next_y),
+    .next_z(next_z),
+    .speed(speed),
+    .x(x),
+    .y(y),
+    .z(z),
+    .enable(enable),
+    .request_next_line(request_next_line),
+    .phase(phase),
+    .start_program(start_program)
   );
 endmodule

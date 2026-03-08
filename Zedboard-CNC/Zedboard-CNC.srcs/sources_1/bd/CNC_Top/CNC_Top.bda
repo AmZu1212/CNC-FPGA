@@ -187,96 +187,6 @@
                 "VH": "2",
                 "VT": "PM",
                 "TU": "active"
-            },
-            "V3": {
-                "VT": "AC",
-                "BA": "0x41210000",
-                "HA": "0x4121FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/processing_system7_0",
-                "MI": "M_AXI_GP0",
-                "MS": "SEG_COMMAND_GPIO_Reg",
-                "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/SPEED_GPIO",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V4": {
-                "VT": "AC",
-                "BA": "0x41220000",
-                "HA": "0x4122FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/processing_system7_0",
-                "MI": "M_AXI_GP0",
-                "MS": "SEG_INTERCONNECT_GPIO_Reg",
-                "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/INTERCONNECT_GPIO",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V5": {
-                "VT": "AC",
-                "BA": "0x41230000",
-                "HA": "0x4123FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/processing_system7_0",
-                "MI": "M_AXI_GP0",
-                "MS": "SEG_X_GPIO_Reg",
-                "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/X_GPIO",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V6": {
-                "VT": "AC",
-                "BA": "0x41240000",
-                "HA": "0x4124FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/processing_system7_0",
-                "MI": "M_AXI_GP0",
-                "MS": "SEG_Y_GPIO_Reg",
-                "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/Y_GPIO",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
-            },
-            "V7": {
-                "VT": "AC",
-                "BA": "0x41250000",
-                "HA": "0x4125FFFF",
-                "BP": "C_BASEADDR",
-                "HP": "C_HIGHADDR",
-                "MA": "Data",
-                "MX": "/processing_system7_0",
-                "MI": "M_AXI_GP0",
-                "MS": "SEG_Z_GPIO_Reg",
-                "MV": "xilinx.com:ip:processing_system7:5.5",
-                "SX": "/Z_GPIO",
-                "SI": "S_AXI",
-                "SS": "Reg",
-                "SV": "xilinx.com:ip:axi_gpio:2.0",
-                "TM": "both",
-                "TU": "register"
             }
         },
         "edges": [
@@ -287,31 +197,6 @@
             {
                 "src": "V1",
                 "trg": "V2"
-            },
-            {
-                "src": "V3",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V4",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V5",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V6",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V7",
-                "trg": "V2",
-                "EH": "2"
             }
         ]
     }

@@ -39,7 +39,7 @@
     <Object name="CNC_Top_i/&lt;const0>_5" gui_info=""/>
     <Object name="CNC_Top_i/&lt;const0>_6" gui_info=""/>
     <Object name="CNC_Top_i/&lt;const0>_7" gui_info=""/>
-    <Object name="CNC_Top_i/Buttons_Vector_0_keys[4:0]" gui_info="hw_vios/hw_vio_1=0"/>
+    <Object name="CNC_Top_i/Buttons_Vector_0_keys[4:0]" gui_info="hw_vios/hw_vio_1=3"/>
     <Object name="CNC_Top_i/GCODE_Parser_0/line_finished" gui_info="Trigger Setup=0,Capture Setup=0"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_curr_line[10:0]" gui_info="Trigger Setup=0"/>
     <Object name="CNC_Top_i/GCODE_Parser_0_curr_line[15:0]" gui_info="hw_vios/hw_vio_1=20"/>
@@ -120,7 +120,7 @@
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_x[31:0]" gui_info="hw_vios/hw_vio_3=24"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_y[31:0]" gui_info="hw_vios/hw_vio_3=9"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=2,hw_vios/hw_vio_3=10"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_speed[7:0]" gui_info="hw_vios/hw_vio_3=6,hw_vios/hw_vio_1=3"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_speed[7:0]" gui_info="hw_vios/hw_vio_3=6,hw_vios/hw_vio_1=0"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_x_reached" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_y_reached" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_z_reached" gui_info="hw_vios/hw_vio_1=6"/>
@@ -133,7 +133,7 @@
     <Object name="XADC" gui_info="hw_vios=[TEMPERATURE=-65281;SCAN_RATE=1000;TRACK_TIME=1;]"/>
   </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
-    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	758	Name	0	2147483647	15	425	425	Value	1	2147483647	15	163	163	Activity	2	2147483647	15	44	44	Direction	3	2147483647	15	58	58	VIO	4	2147483647	15	68	68			1	6	1	Name	Value	Activity	Direction	VIO"/>
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	1041	Name	0	2147483647	15	574	574	Value	1	2147483647	15	256	256	Activity	2	2147483647	15	60	60	Direction	3	2147483647	15	72	72	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
     <Object name="hw_vio_3" gui_info="hw_vios/hw_vio_3/TablePreference=5	978	Name	0	2147483647	15	603	603	Value	1	2147483647	15	128	128	Activity	2	2147483647	15	78	78	Direction	3	2147483647	15	90	90	VIO	4	2147483647	15	79	79			1	6	1	Name	Value	Activity	Direction	VIO"/>
   </ObjectList>
   <probeset name="hw project" active="false">
