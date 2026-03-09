@@ -264,6 +264,48 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_axi
 # IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_67/bd_0a6d_m05e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_68/bd_0a6d_m06s2a_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_69/bd_0a6d_m06arn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_70/bd_0a6d_m06rn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_71/bd_0a6d_m06awn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_72/bd_0a6d_m06wn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_73/bd_0a6d_m06bn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_74/bd_0a6d_m06e_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_75/bd_0a6d_m07s2a_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_76/bd_0a6d_m07arn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_77/bd_0a6d_m07rn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_78/bd_0a6d_m07awn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_79/bd_0a6d_m07wn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_80/bd_0a6d_m07bn_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
+# IP: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_81/bd_0a6d_m07e_0.xci
+# DONT_TOUCH constraint suppressed by (parent) sub-design file.
+
 # IP: bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_rst_ps7_0_100M_0 || ORIG_REF_NAME==CNC_Top_rst_ps7_0_100M_0} -quiet] -quiet
 
@@ -281,6 +323,12 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_axi
 
 # IP: bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_5 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_5} -quiet] -quiet
+
+# IP: bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_6 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_6} -quiet] -quiet
+
+# IP: bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_7 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_7} -quiet] -quiet
 
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_clk_wiz_0 || ORIG_REF_NAME==CNC_Top_clk_wiz_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
@@ -424,6 +472,30 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_66/bd_0a6d_m05bn_0_ooc.xdc
 
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_68/bd_0a6d_m06s2a_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_69/bd_0a6d_m06arn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_70/bd_0a6d_m06rn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_71/bd_0a6d_m06awn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_72/bd_0a6d_m06wn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_73/bd_0a6d_m06bn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_75/bd_0a6d_m07s2a_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_76/bd_0a6d_m07arn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_77/bd_0a6d_m07rn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_78/bd_0a6d_m07awn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_79/bd_0a6d_m07wn_0_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_80/bd_0a6d_m07bn_0_ooc.xdc
+
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/ooc.xdc
 
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/smartconnect.xdc
@@ -474,5 +546,21 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_5 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_5} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_6 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_6} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_6 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_6} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_7 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_7} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7_ooc.xdc
+
+# XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==CNC_Top_axi_gpio_0_7 || ORIG_REF_NAME==CNC_Top_axi_gpio_0_7} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
 
 # XDC: e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc

@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 6
-set_param bd.open.in_stealth_mode 1
 set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
@@ -163,6 +162,18 @@ set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_64/bd_0a6d_m05awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_65/bd_0a6d_m05wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_66/bd_0a6d_m05bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_68/bd_0a6d_m06s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_69/bd_0a6d_m06arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_70/bd_0a6d_m06rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_71/bd_0a6d_m06awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_72/bd_0a6d_m06wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_73/bd_0a6d_m06bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_75/bd_0a6d_m07s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_76/bd_0a6d_m07arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_77/bd_0a6d_m07rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_78/bd_0a6d_m07awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_79/bd_0a6d_m07wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_80/bd_0a6d_m07bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0_board.xdc]
@@ -182,6 +193,12 @@ set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5_board.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5_ooc.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/CNC_Top_axi_gpio_0_6.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7_board.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7_ooc.xdc]
+set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/CNC_Top_axi_gpio_0_7.xdc]
 set_property used_in_implementation false [get_files -all e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/CNC_Top_ooc.xdc]
 
 OPTRACE "Adding files" END { }
