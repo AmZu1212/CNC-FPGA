@@ -39,3 +39,5 @@ domain active {standalone_domain}
 bsp reload
 bsp reload
 platform generate -domains 
+platform clean
+platform generate

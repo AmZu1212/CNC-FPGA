@@ -18,6 +18,7 @@
 #define LAST_LINE_REG  XPAR_LAST_LINE_GPIO_BASEADDR
 #define MOUNT_OK_REG   XPAR_MOUNT_OK_GPIO_BASEADDR
 #define MOUNT_FAIL_REG XPAR_MOUNT_FAIL_GPIO_BASEADDR
+#define DEFAULT_SPEED  180U
 
 typedef struct {
     s32 x;
@@ -318,12 +319,17 @@ int main(void)
             current_valid = 0;
             buffered_valid = 0;
             current_is_last = 0;
+            current_cmd.x = 0;
+            current_cmd.y = 0;
+            current_cmd.z = 0;
+            current_cmd.speed = DEFAULT_SPEED;
             Xil_Out8(ACK_REG, ack_phase);
             Xil_Out8(LAST_LINE_REG, 0U);
             Xil_Out8(MOUNT_OK_REG, mount_ok);
             Xil_Out8(MOUNT_FAIL_REG, mount_fail);
 
             if (load_next_motion(&file, line, sizeof(line), &current_cmd, &motion_count) > 0) {
+                buffered_cmd = current_cmd;
                 int preload_status = load_next_motion(&file, line, sizeof(line), &buffered_cmd, &motion_count);
 
                 current_valid = 1;
