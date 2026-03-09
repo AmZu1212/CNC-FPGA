@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
@@ -111,6 +110,8 @@ set rc [catch {
   set_param runs.launchOptions { -jobs 24  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
+  set_property board_part_repo_paths {C:/Users/AmZu/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
@@ -119,7 +120,7 @@ OPTRACE "set parameters" START { }
   set_property parent.project_path E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.xpr [current_project]
   set_property ip_output_repo E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.dcp
@@ -266,7 +267,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi CNC_Top_wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

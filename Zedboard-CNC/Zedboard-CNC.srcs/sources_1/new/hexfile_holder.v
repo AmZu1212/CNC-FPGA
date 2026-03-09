@@ -8,7 +8,8 @@ module hexfile_holder(
     output reg [7:0] next_line_speed,
     output reg signed [31:0] next_x,
     output reg signed [31:0] next_y,
-    output reg signed [31:0] next_z
+    output reg signed [31:0] next_z,
+    output reg [1:0] ack_phase
     );
 
     localparam MAX_LINE = 905;
@@ -54,6 +55,7 @@ module hexfile_holder(
             start_run_prev <= 0;
             session_active <= 0;
             last_phase <= 2'b00;
+            ack_phase <= 2'b00;
             next_line_speed <= 0;
             next_x <= 0;
             next_y <= 0;
@@ -66,14 +68,19 @@ module hexfile_holder(
                 session_active <= 1;
                 last_phase <= 2'b00;
                 load_line(0);
+                ack_phase <= valid_phase ? phase : 2'b00;
             end else if (session_active && request_next_line && phase_advanced) begin
                 last_phase <= phase;
                 if (line_index < (MAX_LINE - 1)) begin
                     line_index <= line_index + 1;
                     load_line(line_index + 1);
+                    ack_phase <= phase;
                 end else begin
                     session_active <= 0;
+                    ack_phase <= phase;
                 end
+            end else if (!session_active) begin
+                ack_phase <= 2'b00;
             end
         end
     end

@@ -9,6 +9,7 @@ module GCODE_Parser(
     input signed [31:0] next_x,
     input signed [31:0] next_y,
     input signed [31:0] next_z,
+    input [1:0] ack_phase,
 
     //Outputs
     // The coordinator consumes the current command from these outputs.
@@ -29,6 +30,7 @@ module GCODE_Parser(
     reg signed [31:0] prev_pos_x;
     reg signed [31:0] prev_pos_y;
     reg signed [31:0] prev_pos_z;
+    reg request_pending;
 
     reg [31:0] risingedge_buffer;
 
@@ -51,8 +53,8 @@ module GCODE_Parser(
     localparam RETURN_SPEED_Z   = 20;   //mm/s
     localparam RETURN_SPEED_XY  = 60;
 
-    // Only request another line during the normal running path.
-    assign request_next_line = (state == RUNNING) && load_next_line;
+    // Hold the request high until the feeder acknowledges the matching phase.
+    assign request_next_line = request_pending;
 
 
     always @(posedge clk) begin
@@ -73,6 +75,7 @@ module GCODE_Parser(
             prev_pos_x <= 0;
             prev_pos_y <= 0;
             prev_pos_z <= 0;
+            request_pending <= 0;
 
             risingedge_buffer <= 100000000;
         end else begin
@@ -88,20 +91,25 @@ module GCODE_Parser(
                 IDLE    : begin
                     if (start_risingedge && !risingedge_buffer) begin
                         state <= RUNNING;
-                        phase <= 2'b00;
+                        phase <= 2'b01;
                         prev_speed <= 0;
                         prev_pos_x <= 0;
                         prev_pos_y <= 0;
                         prev_pos_z <= 0;
+                        request_pending <= 1;
                         start_program <= 1;
                     end
                 end
 
                 RUNNING : begin
                     enable <= 1;
+                    if (request_pending && (ack_phase == phase) && (phase != 2'b00)) begin
+                        request_pending <= 0;
+                    end
 					// A second press cancels the run and enters the return path.
                     if (start_risingedge && !risingedge_buffer) begin
                         state <= RETURN;
+                        request_pending <= 0;
                     end else begin
                         if (load_next_line) begin
                             // Save the command that was just accepted so return mode
@@ -110,11 +118,8 @@ module GCODE_Parser(
                             prev_pos_x <= x;
                             prev_pos_y <= y;
                             prev_pos_z <= z;
-                            if (phase == 2'b00) begin
-                                phase <= 2'b01;
-                            end else begin
-                                phase <= (phase == 2'b01) ? 2'b10 : 2'b01;
-                            end
+                            phase <= (phase == 2'b01) ? 2'b10 : 2'b01;
+                            request_pending <= 1;
                         end
 
 						// Continuously present the feeder's current next command.
@@ -164,6 +169,7 @@ module GCODE_Parser(
                                 state <= IDLE;
                                 return_state <= XY_CHECK;
                                 phase <= 2'b00;
+                                request_pending <= 0;
                             end
                         end
 

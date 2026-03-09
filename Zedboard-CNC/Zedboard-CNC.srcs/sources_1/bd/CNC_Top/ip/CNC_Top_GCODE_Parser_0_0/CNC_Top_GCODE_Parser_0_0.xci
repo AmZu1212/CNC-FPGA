@@ -44,6 +44,7 @@
         "next_x": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "next_y": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "next_z": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "ack_phase": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "speed": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
         "x": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
         "y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],

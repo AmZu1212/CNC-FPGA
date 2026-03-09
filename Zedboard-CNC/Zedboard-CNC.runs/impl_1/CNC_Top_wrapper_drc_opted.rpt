@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Mon Mar  9 00:46:41 2026
+| Date         : Mon Mar  9 02:03:28 2026
 | Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_drc -file CNC_Top_wrapper_drc_opted.rpt -pb CNC_Top_wrapper_drc_opted.pb -rpx CNC_Top_wrapper_drc_opted.rpx
 | Design       : CNC_Top_wrapper
@@ -24,14 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 86
+             Checks found: 85
 +--------+----------+------------------------+--------+
 | Rule   | Severity | Description            | Checks |
 +--------+----------+------------------------+--------+
 | DPIP-1 | Warning  | Input pipelining       | 41     |
 | DPOP-1 | Warning  | PREG Output pipelining | 22     |
 | DPOP-2 | Warning  | MREG Output pipelining | 22     |
-| ZPS7-1 | Warning  | PS7 block required     | 1      |
 +--------+----------+------------------------+--------+
 
 2. REPORT DETAILS
@@ -73,22 +72,22 @@ Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__1 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__1 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__2 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__2/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__2 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/cycles_per_step_z_result1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
@@ -103,17 +102,17 @@ Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#15 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#16 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance0__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#17 Warning
@@ -203,17 +202,17 @@ Related violations: <none>
 
 DPIP-1#34 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__3 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__3/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#35 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#36 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#37 Warning
@@ -228,17 +227,17 @@ Related violations: <none>
 
 DPIP-1#39 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__5 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__5/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#40 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 input CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
@@ -459,11 +458,6 @@ Related violations: <none>
 DPOP-2#22 Warning
 MREG Output pipelining  
 DSP CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6 multiplier stage CNC_Top_i/XYZ_Axis_Coordinator_0/inst/squared_distance1__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-ZPS7-1#1 Warning
-PS7 block required  
-The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
 Related violations: <none>
 
 

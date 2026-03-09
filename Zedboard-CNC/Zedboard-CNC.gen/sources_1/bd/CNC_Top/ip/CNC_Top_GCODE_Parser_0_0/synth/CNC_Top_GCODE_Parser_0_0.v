@@ -64,6 +64,7 @@ module CNC_Top_GCODE_Parser_0_0 (
   next_x,
   next_y,
   next_z,
+  ack_phase,
   speed,
   x,
   y,
@@ -88,6 +89,7 @@ input wire [7 : 0] next_line_speed;
 input wire [31 : 0] next_x;
 input wire [31 : 0] next_y;
 input wire [31 : 0] next_z;
+input wire [1 : 0] ack_phase;
 output wire [7 : 0] speed;
 output wire [31 : 0] x;
 output wire [31 : 0] y;
@@ -106,6 +108,7 @@ output wire start_program;
     .next_x(next_x),
     .next_y(next_y),
     .next_z(next_z),
+    .ack_phase(ack_phase),
     .speed(speed),
     .x(x),
     .y(y),

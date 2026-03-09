@@ -64,7 +64,8 @@ module CNC_Top_hexfile_holder_0_0 (
   next_line_speed,
   next_x,
   next_y,
-  next_z
+  next_z,
+  ack_phase
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -82,6 +83,7 @@ output wire [7 : 0] next_line_speed;
 output wire [31 : 0] next_x;
 output wire [31 : 0] next_y;
 output wire [31 : 0] next_z;
+output wire [1 : 0] ack_phase;
 
   hexfile_holder inst (
     .clk(clk),
@@ -92,6 +94,7 @@ output wire [31 : 0] next_z;
     .next_line_speed(next_line_speed),
     .next_x(next_x),
     .next_y(next_y),
-    .next_z(next_z)
+    .next_z(next_z),
+    .ack_phase(ack_phase)
   );
 endmodule

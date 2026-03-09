@@ -13,7 +13,7 @@
 #define Y_REG               XPAR_Y_GPIO_BASEADDR
 #define Z_REG               XPAR_Z_GPIO_BASEADDR
 #define SPEED_REG           XPAR_SPEED_GPIO_BASEADDR
-#define INTRC_REG           XPAR_INTERCONNECT_GPIO_BASEADDR
+#define INTRC_REG           XPAR_PS_GPIO_BASEADDR
 #define INTRC_OUT_REG       (INTRC_REG + 0x00)
 #define INTRC_IN_REG        (INTRC_REG + 0x08)
 #define SLEEP_DURATION_USEC 1
@@ -32,6 +32,31 @@ typedef struct {
     u8 speed;
     u8 cmd;
 } MotionCommand;
+
+static void print_flags(const char *tag, u8 flags)
+{
+    xil_printf("%s flags=0x%x ready=%d last=%d err=%d\r\n",
+               tag,
+               (unsigned int)(flags & 0x0FU),
+               (int)((flags & OUT_LINE_READY_MASK) ? 1 : 0),
+               (int)((flags & OUT_LAST_LINE_MASK) ? 1 : 0),
+               (int)((flags & OUT_ERROR_MASK) ? 1 : 0));
+}
+
+static void print_motion_command(const char *tag, const MotionCommand *cmd)
+{
+    if (cmd == NULL) {
+        return;
+    }
+
+    xil_printf("%s G%d X=%d Y=%d Z=%d F=%d\r\n",
+               tag,
+               (int)cmd->cmd,
+               (int)cmd->x,
+               (int)cmd->y,
+               (int)cmd->z,
+               (int)cmd->speed);
+}
 
 static int read_line(FIL *fil, char *buf, unsigned int buf_size)
 {
@@ -261,6 +286,7 @@ int main(void)
     write_width(Z_REG, 32U, 0U);
     write_width(SPEED_REG, 8U, 0U);
     write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
+    print_flags("TX", make_out_flags(line_ready, last_line, error_active));
 
     while (1) {
         u8 intrc_in = (u8)(Xil_In8(INTRC_IN_REG) & 0x0FU);
@@ -270,13 +296,16 @@ int main(void)
         u8 next_edge = (u8)(next_req && !prev_next_req);
 
         if (start_edge) {
+            xil_printf("RX start_req flags=0x%x\r\n", (unsigned int)intrc_in);
             line_ready = 0U;
             last_line = 0U;
             prefetched_valid = 0U;
             error_active = 0U;
             write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
+            print_flags("TX", make_out_flags(line_ready, last_line, error_active));
 
             if (file_loaded) {
+                xil_printf("Closing previous RUN.G session\r\n");
                 f_close(&fil);
                 f_mount(NULL, "0:/", 0);
                 file_loaded = 0U;
@@ -290,6 +319,7 @@ int main(void)
                 f_mount(NULL, "0:/", 0);
                 error_active = 1U;
             } else {
+                xil_printf("Opened RUN.G\r\n");
                 file_loaded = 1U;
                 last_x_mm = 0.0;
                 last_y_mm = 0.0;
@@ -313,6 +343,7 @@ int main(void)
                     file_loaded = 0U;
                 } else {
                     write_motion_command(&current_cmd);
+                    print_motion_command("LOAD current", &current_cmd);
 
                     read_rc = read_next_motion_command(
                         &fil,
@@ -334,24 +365,36 @@ int main(void)
                         prefetched_valid = (read_rc == 1) ? 1U : 0U;
                         line_ready = 1U;
                         last_line = prefetched_valid ? 0U : 1U;
+                        if (prefetched_valid) {
+                            print_motion_command("PREFETCH", &prefetched_cmd);
+                        } else {
+                            xil_printf("PREFETCH EOF\r\n");
+                        }
                     }
                 }
             }
         } else if (next_edge) {
+            xil_printf("RX next_req flags=0x%x ready=%d last=%d\r\n",
+                       (unsigned int)intrc_in,
+                       (int)line_ready,
+                       (int)last_line);
             if (!error_active && file_loaded && line_ready) {
                 u8 was_last = last_line;
 
                 line_ready = 0U;
                 last_line = 0U;
                 write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
+                print_flags("TX", make_out_flags(line_ready, last_line, error_active));
 
                 if (was_last) {
+                    xil_printf("Consumed last line, closing file\r\n");
                     f_close(&fil);
                     f_mount(NULL, "0:/", 0);
                     file_loaded = 0U;
                 } else if (prefetched_valid) {
                     current_cmd = prefetched_cmd;
                     write_motion_command(&current_cmd);
+                    print_motion_command("LOAD current", &current_cmd);
 
                     read_rc = read_next_motion_command(
                         &fil,
@@ -374,8 +417,14 @@ int main(void)
                         prefetched_valid = (read_rc == 1) ? 1U : 0U;
                         line_ready = 1U;
                         last_line = prefetched_valid ? 0U : 1U;
+                        if (prefetched_valid) {
+                            print_motion_command("PREFETCH", &prefetched_cmd);
+                        } else {
+                            xil_printf("PREFETCH EOF\r\n");
+                        }
                     }
                 } else {
+                    xil_printf("Protocol error: next_req with no prefetched command\r\n");
                     error_active = 1U;
                     line_ready = 0U;
                     last_line = 0U;
