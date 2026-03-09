@@ -44,6 +44,7 @@
         "next_x": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "next_y": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "next_z": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "last_line": [ { "direction": "in" } ],
         "ack_phase": [ { "direction": "in", "size_left": "1", "size_right": "0" } ],
         "mount_ok": [ { "direction": "in" } ],
         "mount_fail": [ { "direction": "in" } ],

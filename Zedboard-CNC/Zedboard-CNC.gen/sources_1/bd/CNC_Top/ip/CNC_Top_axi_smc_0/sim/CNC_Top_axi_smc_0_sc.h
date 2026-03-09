@@ -96,6 +96,8 @@ public:
   xtlm::xtlm_aximm_initiator_socket* M07_AXI_tlm_aximm_write_socket;
   xtlm::xtlm_aximm_initiator_socket* M08_AXI_tlm_aximm_read_socket;
   xtlm::xtlm_aximm_initiator_socket* M08_AXI_tlm_aximm_write_socket;
+  xtlm::xtlm_aximm_initiator_socket* M09_AXI_tlm_aximm_read_socket;
+  xtlm::xtlm_aximm_initiator_socket* M09_AXI_tlm_aximm_write_socket;
 
   // module socket-to-socket TLM interfaces
 

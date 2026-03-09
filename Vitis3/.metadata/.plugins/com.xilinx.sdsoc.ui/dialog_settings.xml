@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL1\export\CNC-PL1;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-NEW\export\CNC-PL-NEW;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-FINAL\export\CNC-PL-FINAL"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-FINAL\export\CNC-PL-FINAL"/>
+	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL1\export\CNC-PL1;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-NEW\export\CNC-PL-NEW;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-FINAL\export\CNC-PL-FINAL;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL333\export\CNC-PL333"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL333\export\CNC-PL333"/>
 </section>

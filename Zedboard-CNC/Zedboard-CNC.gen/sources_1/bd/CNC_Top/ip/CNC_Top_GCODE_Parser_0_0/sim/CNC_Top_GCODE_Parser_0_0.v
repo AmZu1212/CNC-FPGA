@@ -63,6 +63,7 @@ module CNC_Top_GCODE_Parser_0_0 (
   next_x,
   next_y,
   next_z,
+  last_line,
   ack_phase,
   mount_ok,
   mount_fail,
@@ -91,6 +92,7 @@ input wire [7 : 0] next_line_speed;
 input wire [31 : 0] next_x;
 input wire [31 : 0] next_y;
 input wire [31 : 0] next_z;
+input wire last_line;
 input wire [1 : 0] ack_phase;
 input wire mount_ok;
 input wire mount_fail;
@@ -113,6 +115,7 @@ output wire mount_req;
     .next_x(next_x),
     .next_y(next_y),
     .next_z(next_z),
+    .last_line(last_line),
     .ack_phase(ack_phase),
     .mount_ok(mount_ok),
     .mount_fail(mount_fail),

@@ -14,6 +14,7 @@
 #define ACK_REG        XPAR_ACK_GPIO_BASEADDR
 #define REQ_REG        XPAR_REQ_GPIO_BASEADDR
 #define MOUNT_REQ_REG  XPAR_MOUNT_REQ_GPIO_BASEADDR
+#define LAST_LINE_REG  XPAR_LAST_LINE_GPIO_BASEADDR
 #define MOUNT_OK_REG   XPAR_MOUNT_OK_GPIO_BASEADDR
 #define MOUNT_FAIL_REG XPAR_MOUNT_FAIL_GPIO_BASEADDR
 
@@ -27,7 +28,7 @@ typedef struct {
 static int read_line(FIL *fp, char *buf, unsigned int buf_size)
 {
     UINT bytes_read = 0;
-    unsigned int idx = 0;
+    unsigned int idx = 0U;
     char ch = 0;
 
     if ((fp == 0) || (buf == 0) || (buf_size < 2U)) {
@@ -101,7 +102,6 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
 {
     char *cursor = line;
     int saw_motion = 0;
-    int motion_type = -1;
 
     strip_comments(line);
 
@@ -120,7 +120,6 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
             cursor++;
             g_code = strtol(cursor, &cursor, 10);
             if ((g_code == 0L) || (g_code == 1L)) {
-                motion_type = (int)g_code;
                 saw_motion = 1;
             }
             continue;
@@ -179,7 +178,7 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
         return 0;
     }
 
-    return (motion_type == 0) ? 1 : 1;
+    return 1;
 }
 
 static int load_next_motion(FIL *fp,
@@ -226,24 +225,28 @@ int main(void)
     FIL file;
     FRESULT fr;
     char line[256];
+    MotionCommand current_cmd = {0, 0, 0, 0U};
+    MotionCommand buffered_cmd = {0, 0, 0, 0U};
     unsigned int motion_count = 0U;
-    MotionCommand cmd = {0, 0, 0, 0U};
-    u8 ack_phase = 0U;
     u8 mount_ok = 0U;
     u8 mount_fail = 0U;
+    u8 ack_phase = 0U;
     int mounted = 0;
     int file_open = 0;
-    int eof_reached = 0;
+    int current_valid = 0;
+    int buffered_valid = 0;
+    int current_is_last = 0;
 
     init_platform();
 
-    Xil_Out8(ACK_REG, 0U);
-    Xil_Out8(MOUNT_OK_REG, 0U);
-    Xil_Out8(MOUNT_FAIL_REG, 0U);
     Xil_Out32(X_REG, 0U);
     Xil_Out32(Y_REG, 0U);
     Xil_Out32(Z_REG, 0U);
     Xil_Out8(SPEED_REG, 0U);
+    Xil_Out8(ACK_REG, 0U);
+    Xil_Out8(LAST_LINE_REG, 0U);
+    Xil_Out8(MOUNT_OK_REG, 0U);
+    Xil_Out8(MOUNT_FAIL_REG, 0U);
 
     xil_printf("PS protocol loop starting\r\n");
 
@@ -263,12 +266,15 @@ int main(void)
                 xil_printf("Unmounted\r\n");
             }
 
-            eof_reached = 0;
             motion_count = 0U;
             ack_phase = 0U;
             mount_ok = 0U;
             mount_fail = 0U;
+            current_valid = 0;
+            buffered_valid = 0;
+            current_is_last = 0;
             Xil_Out8(ACK_REG, ack_phase);
+            Xil_Out8(LAST_LINE_REG, 0U);
             Xil_Out8(MOUNT_OK_REG, mount_ok);
             Xil_Out8(MOUNT_FAIL_REG, mount_fail);
             continue;
@@ -300,23 +306,33 @@ int main(void)
 
             file_open = 1;
             mounted = 1;
+            motion_count = 0U;
+            ack_phase = 0U;
             mount_ok = 1U;
             mount_fail = 0U;
-            ack_phase = 0U;
-            eof_reached = 0;
-            motion_count = 0U;
+            current_valid = 0;
+            buffered_valid = 0;
+            current_is_last = 0;
+            Xil_Out8(ACK_REG, ack_phase);
+            Xil_Out8(LAST_LINE_REG, 0U);
             Xil_Out8(MOUNT_OK_REG, mount_ok);
             Xil_Out8(MOUNT_FAIL_REG, mount_fail);
-            Xil_Out8(ACK_REG, ack_phase);
 
-            if (load_next_motion(&file, line, sizeof(line), &cmd, &motion_count) > 0) {
-                write_motion_regs(&cmd);
+            if (load_next_motion(&file, line, sizeof(line), &current_cmd, &motion_count) > 0) {
+                int preload_status = load_next_motion(&file, line, sizeof(line), &buffered_cmd, &motion_count);
+
+                current_valid = 1;
+                buffered_valid = (preload_status > 0);
+                current_is_last = !buffered_valid;
+
+                write_motion_regs(&current_cmd);
+                Xil_Out8(LAST_LINE_REG, current_is_last ? 1U : 0U);
                 xil_printf("PRELOAD %d: X=%d Y=%d Z=%d F=%d\r\n",
                            (int)motion_count,
-                           (int)cmd.x,
-                           (int)cmd.y,
-                           (int)cmd.z,
-                           (int)cmd.speed);
+                           (int)current_cmd.x,
+                           (int)current_cmd.y,
+                           (int)current_cmd.z,
+                           (int)current_cmd.speed);
             } else {
                 f_close(&file);
                 file_open = 0;
@@ -332,28 +348,36 @@ int main(void)
             continue;
         }
 
-        if (eof_reached) {
+        if (!current_valid) {
             continue;
         }
 
         if (((req_phase == 0x01U) || (req_phase == 0x02U)) && (req_phase != ack_phase)) {
-            int next_status = load_next_motion(&file, line, sizeof(line), &cmd, &motion_count);
-            if (next_status > 0) {
-                write_motion_regs(&cmd);
+            if (current_is_last) {
                 ack_phase = req_phase;
                 Xil_Out8(ACK_REG, ack_phase);
-                xil_printf("PHASE 0x%x -> %d: X=%d Y=%d Z=%d F=%d\r\n",
+                xil_printf("LAST LINE ACK 0x%x\r\n", (unsigned int)ack_phase);
+            } else {
+                int next_status;
+
+                current_cmd = buffered_cmd;
+                write_motion_regs(&current_cmd);
+                ack_phase = req_phase;
+                Xil_Out8(ACK_REG, ack_phase);
+
+                next_status = load_next_motion(&file, line, sizeof(line), &buffered_cmd, &motion_count);
+                buffered_valid = (next_status > 0);
+                current_is_last = !buffered_valid;
+                Xil_Out8(LAST_LINE_REG, current_is_last ? 1U : 0U);
+
+                xil_printf("PHASE 0x%x -> %d: X=%d Y=%d Z=%d F=%d%s\r\n",
                            (unsigned int)ack_phase,
                            (int)motion_count,
-                           (int)cmd.x,
-                           (int)cmd.y,
-                           (int)cmd.z,
-                           (int)cmd.speed);
-            } else {
-                ack_phase = req_phase;
-                eof_reached = 1;
-                Xil_Out8(ACK_REG, ack_phase);
-                xil_printf("EOF after %d motions\r\n", (int)motion_count);
+                           (int)current_cmd.x,
+                           (int)current_cmd.y,
+                           (int)current_cmd.z,
+                           (int)current_cmd.speed,
+                           current_is_last ? " LAST" : "");
             }
         }
     }

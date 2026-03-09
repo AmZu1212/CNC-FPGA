@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Mar  9 17:26:14 2026
-# Process ID         : 18492
+# Start of session at: Mon Mar  9 18:12:49 2026
+# Process ID         : 25592
 # Current directory  : E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1
 # Command line       : vivado.exe -log CNC_Top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CNC_Top_wrapper.tcl
 # Log file           : E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.vds
@@ -19,6 +19,6 @@
 # Host memory        : 34268 MB
 # Swap memory        : 2147 MB
 # Total Virtual      : 36416 MB
-# Available Virtual  : 13699 MB
+# Available Virtual  : 14353 MB
 #-----------------------------------------------------------
 source CNC_Top_wrapper.tcl -notrace

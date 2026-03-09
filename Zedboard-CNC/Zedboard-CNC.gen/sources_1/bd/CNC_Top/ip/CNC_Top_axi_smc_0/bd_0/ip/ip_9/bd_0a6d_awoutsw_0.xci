@@ -12,9 +12,9 @@
         "M_PIPELINES": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "S_LATENCY": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "NUM_SI": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "NUM_MI": [ { "value": "9", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "NUM_MI": [ { "value": "10", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "TESTING_MODE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "PAYLD_WIDTH": [ { "value": "152", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "PAYLD_WIDTH": [ { "value": "153", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "M00_S00_CONNECTIVITY": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "M00_S01_CONNECTIVITY": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "M00_S02_CONNECTIVITY": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -274,15 +274,15 @@
         "Component_Name": [ { "value": "bd_0a6d_awoutsw_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "C_PAYLD_WIDTH": [ { "value": "152", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_PAYLD_WIDTH": [ { "value": "153", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "K_MAX_INFO_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_PIPELINES": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M_PIPELINES": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_LATENCY": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_NUM_SI": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_NUM_MI": [ { "value": "9", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_NUM_MI": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_TESTING_MODE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_CONNECTIVITY": [ { "value": "0b111111111", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ]
+        "C_CONNECTIVITY": [ { "value": "0b1111111111", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -312,16 +312,16 @@
       "ports": {
         "aclk": [ { "direction": "in" } ],
         "aclken": [ { "direction": "in", "driver_value": "1" } ],
-        "s_sc_send": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "s_sc_req": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "s_sc_info": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "s_sc_payld": [ { "direction": "in", "size_left": "151", "size_right": "0" } ],
-        "s_sc_recv": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
-        "m_sc_recv": [ { "direction": "in", "size_left": "8", "size_right": "0" } ],
-        "m_sc_send": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
-        "m_sc_req": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
-        "m_sc_info": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
-        "m_sc_payld": [ { "direction": "out", "size_left": "1367", "size_right": "0" } ]
+        "s_sc_send": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "s_sc_req": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "s_sc_info": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "s_sc_payld": [ { "direction": "in", "size_left": "152", "size_right": "0" } ],
+        "s_sc_recv": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "m_sc_recv": [ { "direction": "in", "size_left": "9", "size_right": "0" } ],
+        "m_sc_send": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "m_sc_req": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "m_sc_info": [ { "direction": "out", "size_left": "9", "size_right": "0" } ],
+        "m_sc_payld": [ { "direction": "out", "size_left": "1529", "size_right": "0" } ]
       },
       "interfaces": {
         "aclk": {
@@ -361,11 +361,11 @@
             "BRIDGES": [ { "value": "M00_SC:M01_SC:M02_SC:M03_SC:M04_SC:M05_SC:M06_SC:M07_SC:M08_SC:M09_SC:M10_SC:M11_SC:M12_SC:M13_SC:M14_SC:M15_SC", "value_src": "constant", "value_permission": "bd", "usage": "all" } ]
           },
           "port_maps": {
-            "SEND": [ { "physical_name": "s_sc_send", "physical_left": "8", "physical_right": "0" } ],
-            "REQ": [ { "physical_name": "s_sc_req", "physical_left": "8", "physical_right": "0" } ],
-            "INFO": [ { "physical_name": "s_sc_info", "physical_left": "8", "physical_right": "0" } ],
-            "PAYLD": [ { "physical_name": "s_sc_payld", "physical_left": "151", "physical_right": "0" } ],
-            "RECV": [ { "physical_name": "s_sc_recv", "physical_left": "8", "physical_right": "0" } ]
+            "SEND": [ { "physical_name": "s_sc_send", "physical_left": "9", "physical_right": "0" } ],
+            "REQ": [ { "physical_name": "s_sc_req", "physical_left": "9", "physical_right": "0" } ],
+            "INFO": [ { "physical_name": "s_sc_info", "physical_left": "9", "physical_right": "0" } ],
+            "PAYLD": [ { "physical_name": "s_sc_payld", "physical_left": "152", "physical_right": "0" } ],
+            "RECV": [ { "physical_name": "s_sc_recv", "physical_left": "9", "physical_right": "0" } ]
           }
         },
         "M00_SC": {
@@ -377,7 +377,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "0", "physical_right": "0" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "0", "physical_right": "0" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "0", "physical_right": "0" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "151", "physical_right": "0" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "152", "physical_right": "0" } ]
           }
         },
         "M01_SC": {
@@ -389,7 +389,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "1", "physical_right": "1" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "1", "physical_right": "1" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "1", "physical_right": "1" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "303", "physical_right": "152" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "305", "physical_right": "153" } ]
           }
         },
         "M02_SC": {
@@ -401,7 +401,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "2", "physical_right": "2" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "2", "physical_right": "2" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "2", "physical_right": "2" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "455", "physical_right": "304" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "458", "physical_right": "306" } ]
           }
         },
         "M03_SC": {
@@ -413,7 +413,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "3", "physical_right": "3" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "3", "physical_right": "3" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "3", "physical_right": "3" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "607", "physical_right": "456" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "611", "physical_right": "459" } ]
           }
         },
         "M04_SC": {
@@ -425,7 +425,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "4", "physical_right": "4" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "4", "physical_right": "4" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "4", "physical_right": "4" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "759", "physical_right": "608" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "764", "physical_right": "612" } ]
           }
         },
         "M05_SC": {
@@ -437,7 +437,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "5", "physical_right": "5" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "5", "physical_right": "5" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "5", "physical_right": "5" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "911", "physical_right": "760" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "917", "physical_right": "765" } ]
           }
         },
         "M06_SC": {
@@ -449,7 +449,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "6", "physical_right": "6" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "6", "physical_right": "6" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "6", "physical_right": "6" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1063", "physical_right": "912" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1070", "physical_right": "918" } ]
           }
         },
         "M07_SC": {
@@ -461,7 +461,7 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "7", "physical_right": "7" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "7", "physical_right": "7" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "7", "physical_right": "7" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1215", "physical_right": "1064" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1223", "physical_right": "1071" } ]
           }
         },
         "M08_SC": {
@@ -473,7 +473,19 @@
             "SEND": [ { "physical_name": "m_sc_send", "physical_left": "8", "physical_right": "8" } ],
             "REQ": [ { "physical_name": "m_sc_req", "physical_left": "8", "physical_right": "8" } ],
             "INFO": [ { "physical_name": "m_sc_info", "physical_left": "8", "physical_right": "8" } ],
-            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1367", "physical_right": "1216" } ]
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1376", "physical_right": "1224" } ]
+          }
+        },
+        "M09_SC": {
+          "vlnv": "xilinx.com:interface:sc:1.0",
+          "abstraction_type": "xilinx.com:interface:sc_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "RECV": [ { "physical_name": "m_sc_recv", "physical_left": "9", "physical_right": "9" } ],
+            "SEND": [ { "physical_name": "m_sc_send", "physical_left": "9", "physical_right": "9" } ],
+            "REQ": [ { "physical_name": "m_sc_req", "physical_left": "9", "physical_right": "9" } ],
+            "INFO": [ { "physical_name": "m_sc_info", "physical_left": "9", "physical_right": "9" } ],
+            "PAYLD": [ { "physical_name": "m_sc_payld", "physical_left": "1529", "physical_right": "1377" } ]
           }
         }
       }
