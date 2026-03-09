@@ -1,7 +1,7 @@
-18:20:47 **** Incremental Build of configuration Debug for project SD-UART_system ****
+19:42:47 **** Incremental Build of configuration Debug for project SD-UART_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 60561 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/CNC-PL333.xpfm standalone_domain E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif
+generate_system_bif.bat 62852 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/CNC-PL333.xpfm standalone_domain E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif
 
 ****** Software Commandline Tool (XSCT) v2024.2.0
   **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
@@ -17,5 +17,5 @@ sdcard_gen --xpfm E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/CNC-PL
 creating BOOT.BIN using E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
 Running C:/Xilinx/Vitis/2024.2/bin/bootgen  -image E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-18:20:56 Build Finished (took 8s.351ms)
+19:42:55 Build Finished (took 7s.952ms)
 

@@ -6,6 +6,7 @@
 #include "ff.h"
 #include <ctype.h>
 #include <stdlib.h>
+#include "sleep.h"
 
 #define X_REG          XPAR_X_GPIO_BASEADDR
 #define Y_REG          XPAR_Y_GPIO_BASEADDR
@@ -273,6 +274,10 @@ int main(void)
             current_valid = 0;
             buffered_valid = 0;
             current_is_last = 0;
+            Xil_Out32(X_REG, 0U);
+            Xil_Out32(Y_REG, 0U);
+            Xil_Out32(Z_REG, 0U);
+            Xil_Out8(SPEED_REG, 0U);
             Xil_Out8(ACK_REG, ack_phase);
             Xil_Out8(LAST_LINE_REG, 0U);
             Xil_Out8(MOUNT_OK_REG, mount_ok);
@@ -327,6 +332,8 @@ int main(void)
 
                 write_motion_regs(&current_cmd);
                 Xil_Out8(LAST_LINE_REG, current_is_last ? 1U : 0U);
+                usleep(5U);
+                Xil_Out8(MOUNT_OK_REG, mount_ok);
                 xil_printf("PRELOAD %d: X=%d Y=%d Z=%d F=%d\r\n",
                            (int)motion_count,
                            (int)current_cmd.x,
@@ -354,6 +361,7 @@ int main(void)
 
         if (((req_phase == 0x01U) || (req_phase == 0x02U)) && (req_phase != ack_phase)) {
             if (current_is_last) {
+                usleep(5U);
                 ack_phase = req_phase;
                 Xil_Out8(ACK_REG, ack_phase);
                 xil_printf("LAST LINE ACK 0x%x\r\n", (unsigned int)ack_phase);
@@ -362,6 +370,7 @@ int main(void)
 
                 current_cmd = buffered_cmd;
                 write_motion_regs(&current_cmd);
+                usleep(5U);
                 ack_phase = req_phase;
                 Xil_Out8(ACK_REG, ack_phase);
 

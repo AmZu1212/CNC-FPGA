@@ -26,3 +26,16 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate
+platform generate
+platform active {CNC-PL333}
+catch {platform remove CNC-PL-NEW}
+catch {platform remove CNC-PL-FINAL}
+catch {platform remove CNC-PL1}
+platform active {CNC-PL333}
+domain active {zynq_fsbl}
+bsp reload
+bsp reload
+domain active {standalone_domain}
+bsp reload
+bsp reload
+platform generate -domains 
