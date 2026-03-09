@@ -128,3 +128,35 @@ timestamp=[2026-03-09 02:13:44], mode=PLATFORM_GENERATION, duration=0:00:16.927,
 timestamp=[2026-03-09 02:14:03], mode=BUILD, duration=0:00:00.721, duration_ms=721, data={name=SD-UART, configuration=Debug, clean_build=false}
 timestamp=[2026-03-09 02:14:23], mode=BUILD, duration=0:00:01.711, duration_ms=1711, data={name=SD-UART, configuration=Debug, clean_build=false}
 timestamp=[2026-03-09 02:14:32], mode=BUILD, duration=0:00:08.243, duration_ms=8243, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 16:34:31], mode=WORKBENCH_START, duration=0:00:08.659, duration_ms=8659, data={}
+timestamp=[2026-03-09 16:34:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.692, duration_ms=692, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=CNC-PL1,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
+timestamp=[2026-03-09 16:34:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.249, duration_ms=249, data={}
+timestamp=[2026-03-09 16:40:35], mode=PLATFORM_CREATION, duration=0:00:12.035, duration_ms=12035, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-09 16:42:30], mode=PLATFORM_GENERATION, duration=0:00:14.584, duration_ms=14584, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 16:44:23], mode=PLATFORM_GENERATION, duration=0:00:10.710, duration_ms=10710, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 16:47:22], mode=PLATFORM_CREATION, duration=0:00:03.721, duration_ms=3721, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2026-03-09 16:48:30], mode=PLATFORM_GENERATION, duration=0:00:06.663, duration_ms=6663, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 16:48:41], mode=PLATFORM_GENERATION, duration=0:00:05.619, duration_ms=5619, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 16:48:49], mode=PLATFORM_GENERATION, duration=0:00:06.293, duration_ms=6293, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 16:48:53], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-09 16:48:59], mode=BUILD, duration=0:00:00.724, duration_ms=724, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 16:53:55], mode=BUILD, duration=0:00:02.079, duration_ms=2079, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 16:54:04], mode=BUILD, duration=0:00:08.980, duration_ms=8980, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 16:56:05], mode=BUILD, duration=0:00:00.456, duration_ms=456, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 16:56:13], mode=BUILD, duration=0:00:08.204, duration_ms=8204, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:02:03], mode=PLATFORM_GENERATION, duration=0:00:05.573, duration_ms=5573, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 17:02:12], mode=PLATFORM_GENERATION, duration=0:00:06.159, duration_ms=6159, data={name=CNC-PL-NEW}
+timestamp=[2026-03-09 17:02:18], mode=BUILD, duration=0:00:01.272, duration_ms=1272, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:02:27], mode=BUILD, duration=0:00:08.200, duration_ms=8200, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:02:44], mode=BUILD, duration=0:00:00.451, duration_ms=451, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:02:52], mode=BUILD, duration=0:00:08.264, duration_ms=8264, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:07:00], mode=BUILD, duration=0:00:01.275, duration_ms=1275, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:07:09], mode=BUILD, duration=0:00:08.268, duration_ms=8268, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:08:51], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-09 17:08:51], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-09 17:08:59], mode=BUILD, duration=0:00:01.514, duration_ms=1514, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:09:08], mode=BUILD, duration=0:00:08.341, duration_ms=8341, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:11:58], mode=BUILD, duration=0:00:00.285, duration_ms=285, data={name=SD-UART, configuration=Debug, clean_build=true}
+timestamp=[2026-03-09 17:11:59], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=SD-UART_system, configuration=Debug, clean_build=true}
+timestamp=[2026-03-09 17:12:03], mode=BUILD, duration=0:00:01.584, duration_ms=1584, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-03-09 17:12:12], mode=BUILD, duration=0:00:08.538, duration_ms=8538, data={name=SD-UART_system, configuration=Debug, clean_build=false}

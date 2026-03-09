@@ -1,84 +1,40 @@
 #include "platform.h"
 #include "xil_printf.h"
-#include "xparameters.h"
-#include "xil_io.h"
-#include "sleep.h"
 #include "xil_types.h"
+#include "xil_io.h"
+#include "xparameters.h"
 #include "ff.h"
-#include <stdlib.h>
-#include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
-#define X_REG               XPAR_X_GPIO_BASEADDR
-#define Y_REG               XPAR_Y_GPIO_BASEADDR
-#define Z_REG               XPAR_Z_GPIO_BASEADDR
-#define SPEED_REG           XPAR_SPEED_GPIO_BASEADDR
-#define INTRC_REG           XPAR_PS_GPIO_BASEADDR
-#define INTRC_OUT_REG       (INTRC_REG + 0x00)
-#define INTRC_IN_REG        (INTRC_REG + 0x08)
-#define SLEEP_DURATION_USEC 1
-
-#define IN_START_REQ_MASK   0x01U
-#define IN_NEXT_REQ_MASK    0x02U
-
-#define OUT_LINE_READY_MASK 0x01U
-#define OUT_LAST_LINE_MASK  0x02U
-#define OUT_ERROR_MASK      0x04U
+#define ACK_REG        XPAR_ACK_GPIO_BASEADDR
+#define REQ_REG        XPAR_REQ_GPIO_BASEADDR
+#define MOUNT_OK_REG   XPAR_MOUNT_OK_GPIO_BASEADDR
+#define MOUNT_FAIL_REG XPAR_MOUNT_FAIL_GPIO_BASEADDR
 
 typedef struct {
     s32 x;
     s32 y;
     s32 z;
     u8 speed;
-    u8 cmd;
 } MotionCommand;
 
-static void print_flags(const char *tag, u8 flags)
+static int read_line(FIL *fp, char *buf, unsigned int buf_size)
 {
-    xil_printf("%s flags=0x%x ready=%d last=%d err=%d\r\n",
-               tag,
-               (unsigned int)(flags & 0x0FU),
-               (int)((flags & OUT_LINE_READY_MASK) ? 1 : 0),
-               (int)((flags & OUT_LAST_LINE_MASK) ? 1 : 0),
-               (int)((flags & OUT_ERROR_MASK) ? 1 : 0));
-}
+    UINT bytes_read = 0;
+    unsigned int idx = 0;
+    char ch = 0;
 
-static void print_motion_command(const char *tag, const MotionCommand *cmd)
-{
-    if (cmd == NULL) {
-        return;
-    }
-
-    xil_printf("%s G%d X=%d Y=%d Z=%d F=%d\r\n",
-               tag,
-               (int)cmd->cmd,
-               (int)cmd->x,
-               (int)cmd->y,
-               (int)cmd->z,
-               (int)cmd->speed);
-}
-
-static int read_line(FIL *fil, char *buf, unsigned int buf_size)
-{
-    UINT br = 0U;
-    unsigned int idx = 0U;
-    char ch;
-    FRESULT res;
-
-    if (fil == NULL || buf == NULL || buf_size < 2U) {
+    if ((fp == 0) || (buf == 0) || (buf_size < 2U)) {
         return -1;
     }
 
-    while (1) {
-        res = f_read(fil, &ch, 1U, &br);
-        if (res != FR_OK) {
+    while (idx < (buf_size - 1U)) {
+        if (f_read(fp, &ch, 1U, &bytes_read) != FR_OK) {
             return -1;
         }
 
-        if (br == 0U) {
-            if (idx == 0U) {
-                return 0;
-            }
+        if (bytes_read == 0U) {
             break;
         }
 
@@ -90,355 +46,218 @@ static int read_line(FIL *fil, char *buf, unsigned int buf_size)
             break;
         }
 
-        if (idx < (buf_size - 1U)) {
-            buf[idx++] = ch;
-        }
+        buf[idx] = ch;
+        idx++;
     }
 
     buf[idx] = '\0';
-    return 1;
-}
 
-static void write_width(u32 addr, u8 width_bits, u32 value)
-{
-    switch (width_bits) {
-    case 32:
-        Xil_Out32(addr, value);
-        break;
-    case 16:
-        Xil_Out16(addr, (u16)value);
-        break;
-    default:
-        Xil_Out8(addr, (u8)value);
-        break;
-    }
-}
-
-static void write_motion_command(const MotionCommand *cmd)
-{
-    if (cmd == NULL) {
-        return;
-    }
-
-    write_width(X_REG, 32U, (u32)cmd->x);
-    write_width(Y_REG, 32U, (u32)cmd->y);
-    write_width(Z_REG, 32U, (u32)cmd->z);
-    write_width(SPEED_REG, 8U, cmd->speed);
-}
-
-static u8 make_out_flags(u8 line_ready, u8 last_line, u8 error)
-{
-    u8 flags = 0U;
-
-    if (line_ready) {
-        flags |= OUT_LINE_READY_MASK;
-    }
-    if (last_line) {
-        flags |= OUT_LAST_LINE_MASK;
-    }
-    if (error) {
-        flags |= OUT_ERROR_MASK;
-    }
-
-    return (u8)(flags & 0x0FU);
-}
-
-static int parse_line(
-    const char *line,
-    double *last_x_mm,
-    double *last_y_mm,
-    double *last_z_mm,
-    double *last_f_mm_min,
-    MotionCommand *out_cmd
-)
-{
-    char buf[128];
-    char *tok;
-    int is_motion = 0;
-    u8 motion_cmd = 0U;
-
-    if (line == NULL || out_cmd == NULL ||
-        last_x_mm == NULL || last_y_mm == NULL ||
-        last_z_mm == NULL || last_f_mm_min == NULL) {
-        return -1;
-    }
-
-    strncpy(buf, line, sizeof(buf) - 1U);
-    buf[sizeof(buf) - 1U] = '\0';
-
-    {
-        char *comment = strchr(buf, ';');
-        if (comment != NULL) {
-            *comment = '\0';
-        }
-    }
-
-    for (tok = strtok(buf, " \t\r\n"); tok != NULL; tok = strtok(NULL, " \t\r\n")) {
-        char prefix = (char)toupper((unsigned char)tok[0]);
-        char *end = NULL;
-
-        if (prefix == 'G') {
-            long code = strtol(tok + 1, &end, 10);
-            if (end == tok + 1 || *end != '\0') {
-                return -1;
-            }
-
-            if (code == 0 || code == 1) {
-                is_motion = 1;
-                motion_cmd = (u8)code;
-            } else {
-                return 0;
-            }
-        } else if (prefix == 'X' || prefix == 'Y' || prefix == 'Z' || prefix == 'F') {
-            double value = strtod(tok + 1, &end);
-            if (end == tok + 1 || *end != '\0') {
-                return -1;
-            }
-
-            if (prefix == 'X') {
-                *last_x_mm = value;
-            } else if (prefix == 'Y') {
-                *last_y_mm = value;
-            } else if (prefix == 'Z') {
-                *last_z_mm = value;
-            } else {
-                *last_f_mm_min = value;
-            }
-        }
-    }
-
-    if (!is_motion) {
+    if ((idx == 0U) && (bytes_read == 0U)) {
         return 0;
     }
 
-    out_cmd->cmd = motion_cmd;
-    out_cmd->x = (s32)(*last_x_mm * 1000.0);
-    out_cmd->y = (s32)(*last_y_mm * 1000.0);
-    out_cmd->z = (s32)(*last_z_mm * 1000.0);
-
-    {
-        s32 speed_mm_s = (s32)(*last_f_mm_min / 60.0);
-        if (speed_mm_s < 0 || speed_mm_s > 255) {
-            return -1;
-        }
-        out_cmd->speed = (u8)speed_mm_s;
-    }
-
     return 1;
 }
 
-static int read_next_motion_command(
-    FIL *fil,
-    double *last_x_mm,
-    double *last_y_mm,
-    double *last_z_mm,
-    double *last_f_mm_min,
-    MotionCommand *out_cmd
-)
+static void strip_comments(char *line)
 {
-    char line[128];
-    int rc;
+    unsigned int read_idx = 0U;
+    unsigned int write_idx = 0U;
+    int in_paren_comment = 0;
 
-    if (fil == NULL) {
-        return -1;
+    while (line[read_idx] != '\0') {
+        if (line[read_idx] == ';') {
+            break;
+        }
+
+        if (line[read_idx] == '(') {
+            in_paren_comment = 1;
+            read_idx++;
+            continue;
+        }
+
+        if (in_paren_comment) {
+            if (line[read_idx] == ')') {
+                in_paren_comment = 0;
+            }
+            read_idx++;
+            continue;
+        }
+
+        line[write_idx] = line[read_idx];
+        write_idx++;
+        read_idx++;
     }
 
-    while (1) {
-        rc = read_line(fil, line, sizeof(line));
-        if (rc <= 0) {
-            return rc;
+    line[write_idx] = '\0';
+}
+
+static int parse_motion_line(char *line, MotionCommand *cmd)
+{
+    char *cursor = line;
+    int saw_motion = 0;
+    int motion_type = -1;
+
+    strip_comments(line);
+
+    while (*cursor != '\0') {
+        while (isspace((unsigned char)*cursor)) {
+            cursor++;
         }
 
-        rc = parse_line(line, last_x_mm, last_y_mm, last_z_mm, last_f_mm_min, out_cmd);
-        if (rc < 0) {
-            return -1;
+        if (*cursor == '\0') {
+            break;
         }
-        if (rc == 1) {
-            return 1;
+
+        if (toupper((unsigned char)*cursor) == 'G') {
+            long g_code;
+
+            cursor++;
+            g_code = strtol(cursor, &cursor, 10);
+            if ((g_code == 0L) || (g_code == 1L)) {
+                motion_type = (int)g_code;
+                saw_motion = 1;
+            }
+            continue;
+        }
+
+        if (!saw_motion) {
+            while ((*cursor != '\0') && !isspace((unsigned char)*cursor)) {
+                cursor++;
+            }
+            continue;
+        }
+
+        if (toupper((unsigned char)*cursor) == 'X') {
+            double value;
+            cursor++;
+            value = strtod(cursor, &cursor);
+            cmd->x = (s32)(value * 1000.0);
+            continue;
+        }
+
+        if (toupper((unsigned char)*cursor) == 'Y') {
+            double value;
+            cursor++;
+            value = strtod(cursor, &cursor);
+            cmd->y = (s32)(value * 1000.0);
+            continue;
+        }
+
+        if (toupper((unsigned char)*cursor) == 'Z') {
+            double value;
+            cursor++;
+            value = strtod(cursor, &cursor);
+            cmd->z = (s32)(value * 1000.0);
+            continue;
+        }
+
+        if (toupper((unsigned char)*cursor) == 'F') {
+            double value;
+            long converted;
+            cursor++;
+            value = strtod(cursor, &cursor);
+            converted = (long)(value / 60.0);
+            if ((converted < 0L) || (converted > 255L)) {
+                return -1;
+            }
+            cmd->speed = (u8)converted;
+            continue;
+        }
+
+        while ((*cursor != '\0') && !isspace((unsigned char)*cursor)) {
+            cursor++;
         }
     }
+
+    if (!saw_motion) {
+        return 0;
+    }
+
+    return (motion_type == 0) ? 1 : 1;
 }
 
 int main(void)
 {
-    FATFS fs;
-    FIL fil;
-    u8 file_loaded = 0U;
-    u8 error_active = 0U;
-    u8 line_ready = 0U;
-    u8 last_line = 0U;
-    u8 prev_start_req = 0U;
-    u8 prev_next_req = 0U;
-    double last_x_mm = 0.0;
-    double last_y_mm = 0.0;
-    double last_z_mm = 0.0;
-    double last_f_mm_min = 0.0;
-    MotionCommand current_cmd = {0};
-    MotionCommand prefetched_cmd = {0};
-    u8 prefetched_valid = 0U;
-    int read_rc;
+    FATFS fatfs;
+    FIL file;
+    FRESULT fr;
+    char line[256];
+    int line_status;
+    int parse_status;
+    unsigned int line_num = 0U;
+    MotionCommand cmd = {0, 0, 0, 0U};
 
     init_platform();
-    xil_printf("PS Starting...\r\n");
 
-    write_width(X_REG, 32U, 0U);
-    write_width(Y_REG, 32U, 0U);
-    write_width(Z_REG, 32U, 0U);
-    write_width(SPEED_REG, 8U, 0U);
-    write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
-    print_flags("TX", make_out_flags(line_ready, last_line, error_active));
+    Xil_Out8(ACK_REG, 0U);
+    Xil_Out8(MOUNT_OK_REG, 0U);
+    Xil_Out8(MOUNT_FAIL_REG, 0U);
+
+    xil_printf("SD smoke test starting\r\n");
+    xil_printf("REQ=0x%x\r\n", (unsigned int)(Xil_In8(REQ_REG) & 0x03U));
+
+    fr = f_mount(&fatfs, "0:/", 1U);
+    xil_printf("f_mount -> %d\r\n", (int)fr);
+    if (fr != FR_OK) {
+        Xil_Out8(MOUNT_FAIL_REG, 1U);
+        xil_printf("Mount failed\r\n");
+        while (1) {
+        }
+    }
+
+    Xil_Out8(MOUNT_OK_REG, 1U);
+    xil_printf("Mount ok\r\n");
+
+    fr = f_open(&file, "0:/RUN.G", FA_READ);
+    xil_printf("f_open(RUN.G) -> %d\r\n", (int)fr);
+    if (fr != FR_OK) {
+        Xil_Out8(MOUNT_OK_REG, 0U);
+        Xil_Out8(MOUNT_FAIL_REG, 1U);
+        xil_printf("Open failed\r\n");
+        while (1) {
+        }
+    }
+
+    xil_printf("RUN.G opened\r\n");
 
     while (1) {
-        u8 intrc_in = (u8)(Xil_In8(INTRC_IN_REG) & 0x0FU);
-        u8 start_req = (intrc_in & IN_START_REQ_MASK) ? 1U : 0U;
-        u8 next_req = (intrc_in & IN_NEXT_REQ_MASK) ? 1U : 0U;
-        u8 start_edge = (u8)(start_req && !prev_start_req);
-        u8 next_edge = (u8)(next_req && !prev_next_req);
-
-        if (start_edge) {
-            xil_printf("RX start_req flags=0x%x\r\n", (unsigned int)intrc_in);
-            line_ready = 0U;
-            last_line = 0U;
-            prefetched_valid = 0U;
-            error_active = 0U;
-            write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
-            print_flags("TX", make_out_flags(line_ready, last_line, error_active));
-
-            if (file_loaded) {
-                xil_printf("Closing previous RUN.G session\r\n");
-                f_close(&fil);
-                f_mount(NULL, "0:/", 0);
-                file_loaded = 0U;
-            }
-
-            if (f_mount(&fs, "0:/", 1) != FR_OK) {
-                xil_printf("Mount failed\r\n");
-                error_active = 1U;
-            } else if (f_open(&fil, "0:/RUN.G", FA_READ) != FR_OK) {
-                xil_printf("Open failed\r\n");
-                f_mount(NULL, "0:/", 0);
-                error_active = 1U;
-            } else {
-                xil_printf("Opened RUN.G\r\n");
-                file_loaded = 1U;
-                last_x_mm = 0.0;
-                last_y_mm = 0.0;
-                last_z_mm = 0.0;
-                last_f_mm_min = 0.0;
-
-                read_rc = read_next_motion_command(
-                    &fil,
-                    &last_x_mm,
-                    &last_y_mm,
-                    &last_z_mm,
-                    &last_f_mm_min,
-                    &current_cmd
-                );
-
-                if (read_rc != 1) {
-                    xil_printf("RUN.G has no valid G0/G1 motion lines\r\n");
-                    error_active = 1U;
-                    f_close(&fil);
-                    f_mount(NULL, "0:/", 0);
-                    file_loaded = 0U;
-                } else {
-                    write_motion_command(&current_cmd);
-                    print_motion_command("LOAD current", &current_cmd);
-
-                    read_rc = read_next_motion_command(
-                        &fil,
-                        &last_x_mm,
-                        &last_y_mm,
-                        &last_z_mm,
-                        &last_f_mm_min,
-                        &prefetched_cmd
-                    );
-
-                    if (read_rc < 0) {
-                        error_active = 1U;
-                        line_ready = 0U;
-                        last_line = 0U;
-                        f_close(&fil);
-                        f_mount(NULL, "0:/", 0);
-                        file_loaded = 0U;
-                    } else {
-                        prefetched_valid = (read_rc == 1) ? 1U : 0U;
-                        line_ready = 1U;
-                        last_line = prefetched_valid ? 0U : 1U;
-                        if (prefetched_valid) {
-                            print_motion_command("PREFETCH", &prefetched_cmd);
-                        } else {
-                            xil_printf("PREFETCH EOF\r\n");
-                        }
-                    }
-                }
-            }
-        } else if (next_edge) {
-            xil_printf("RX next_req flags=0x%x ready=%d last=%d\r\n",
-                       (unsigned int)intrc_in,
-                       (int)line_ready,
-                       (int)last_line);
-            if (!error_active && file_loaded && line_ready) {
-                u8 was_last = last_line;
-
-                line_ready = 0U;
-                last_line = 0U;
-                write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
-                print_flags("TX", make_out_flags(line_ready, last_line, error_active));
-
-                if (was_last) {
-                    xil_printf("Consumed last line, closing file\r\n");
-                    f_close(&fil);
-                    f_mount(NULL, "0:/", 0);
-                    file_loaded = 0U;
-                } else if (prefetched_valid) {
-                    current_cmd = prefetched_cmd;
-                    write_motion_command(&current_cmd);
-                    print_motion_command("LOAD current", &current_cmd);
-
-                    read_rc = read_next_motion_command(
-                        &fil,
-                        &last_x_mm,
-                        &last_y_mm,
-                        &last_z_mm,
-                        &last_f_mm_min,
-                        &prefetched_cmd
-                    );
-
-                    if (read_rc < 0) {
-                        error_active = 1U;
-                        line_ready = 0U;
-                        last_line = 0U;
-                        prefetched_valid = 0U;
-                        f_close(&fil);
-                        f_mount(NULL, "0:/", 0);
-                        file_loaded = 0U;
-                    } else {
-                        prefetched_valid = (read_rc == 1) ? 1U : 0U;
-                        line_ready = 1U;
-                        last_line = prefetched_valid ? 0U : 1U;
-                        if (prefetched_valid) {
-                            print_motion_command("PREFETCH", &prefetched_cmd);
-                        } else {
-                            xil_printf("PREFETCH EOF\r\n");
-                        }
-                    }
-                } else {
-                    xil_printf("Protocol error: next_req with no prefetched command\r\n");
-                    error_active = 1U;
-                    line_ready = 0U;
-                    last_line = 0U;
-                    f_close(&fil);
-                    f_mount(NULL, "0:/", 0);
-                    file_loaded = 0U;
-                }
-            }
+        line_status = read_line(&file, line, sizeof(line));
+        if (line_status < 0) {
+            xil_printf("read_line error\r\n");
+            break;
         }
 
-        write_width(INTRC_OUT_REG, 8U, make_out_flags(line_ready, last_line, error_active));
-        prev_start_req = start_req;
-        prev_next_req = next_req;
-        usleep(SLEEP_DURATION_USEC);
+        if (line_status == 0) {
+            xil_printf("EOF\r\n");
+            break;
+        }
+
+        parse_status = parse_motion_line(line, &cmd);
+        if (parse_status < 0) {
+            line_num++;
+            xil_printf("%d: parse error\r\n", (int)line_num);
+            continue;
+        }
+
+        if (parse_status == 0) {
+            continue;
+        }
+
+        line_num++;
+        xil_printf("%d: X=%d Y=%d Z=%d F=%d\r\n",
+                   (int)line_num,
+                   (int)cmd.x,
+                   (int)cmd.y,
+                   (int)cmd.z,
+                   (int)cmd.speed);
+    }
+
+    f_close(&file);
+    f_mount(0, "0:/", 1U);
+    xil_printf("Done\r\n");
+
+    while (1) {
     }
 
     cleanup_platform();

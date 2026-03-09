@@ -1971,3 +1971,33 @@ Reason: ERROR: [Common 17-39] 'hsi::close_hw_design' failed due to earlier error
 02:14:02 INFO  : Updating application flags with new BSP settings...
 02:14:03 INFO  : Successfully updated application flags for project SD-UART.
 02:14:22 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+16:34:27 DEBUG : Logs will be stored at 'E:/Git-Repos/CNC-FPGA/Vitis3/IDE.log'.
+16:34:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\Git-Repos\CNC-FPGA\Vitis3\temp_xsdb_launch_script.tcl
+16:34:32 INFO  : XSCT server has started successfully.
+16:34:32 INFO  : plnx-install-location is set to ''
+16:34:32 INFO  : Successfully done setting XSCT server connection channel  
+16:34:32 INFO  : Successfully done setting workspace for the tool. 
+16:34:32 INFO  : Platform repository initialization has completed.
+16:34:33 INFO  : Registering command handlers for Vitis TCF services
+16:34:35 INFO  : Successfully done query RDI_DATADIR 
+16:40:35 INFO  : Result from executing command 'getProjects': CNC-PL-NEW;CNC-PL1
+16:40:35 INFO  : Result from executing command 'getPlatforms': CNC-PL1|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL1/export/CNC-PL1/CNC-PL1.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:41:32 ERROR : (XSDB Server)rm: cannot lstat `*.o': Invalid argument
+
+16:41:32 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+16:42:03 INFO  : The hardware specification used by project 'SD-UART' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:42:05 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream\CNC_Top_wrapper.bit' stored in project is removed.
+16:42:05 INFO  : The updated bitstream files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\bitstream' in project 'SD-UART'.
+16:42:05 INFO  : The file 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit\ps7_init.tcl' stored in project is removed.
+16:42:10 INFO  : The updated ps init files are copied from platform to folder 'E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\_ide\psinit' in project 'SD-UART'.
+16:47:22 INFO  : Result from executing command 'getProjects': CNC-PL-NEW;CNC-PL1
+16:47:22 INFO  : Result from executing command 'getPlatforms': CNC-PL1|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL1/export/CNC-PL1/CNC-PL1.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:48:29 INFO  : Result from executing command 'getProjects': CNC-PL-NEW;CNC-PL1
+16:48:29 INFO  : Result from executing command 'getPlatforms': CNC-PL-NEW|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-NEW/export/CNC-PL-NEW/CNC-PL-NEW.xpfm;CNC-PL1|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL1/export/CNC-PL1/CNC-PL1.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:48:38 INFO  : Result from executing command 'removePlatformRepo': 
+16:48:48 INFO  : Result from executing command 'getProjects': CNC-PL-NEW;CNC-PL1
+16:48:48 INFO  : Result from executing command 'getPlatforms': CNC-PL1|E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL1/export/CNC-PL1/CNC-PL1.xpfm;xilinx_zcu102_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_202420_1/xilinx_zcu102_base_202420_1.xpfm;xilinx_zcu102_base_dfx_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu102_base_dfx_202420_1/xilinx_zcu102_base_dfx_202420_1.xpfm;xilinx_zcu104_base_202420_1|C:/Xilinx/Vitis/2024.2/base_platforms/xilinx_zcu104_base_202420_1/xilinx_zcu104_base_202420_1.xpfm
+16:48:58 INFO  : Checking for BSP changes to sync application flags for project 'SD-UART'...
+16:48:58 INFO  : Updating application flags with new BSP settings...
+16:48:58 INFO  : Successfully updated application flags for project SD-UART.

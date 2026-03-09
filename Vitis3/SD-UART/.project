@@ -3,7 +3,6 @@
 	<name>SD-UART</name>
 	<comment>Created by Vitis v2024.2</comment>
 	<projects>
-		<project>CNC-PL1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
