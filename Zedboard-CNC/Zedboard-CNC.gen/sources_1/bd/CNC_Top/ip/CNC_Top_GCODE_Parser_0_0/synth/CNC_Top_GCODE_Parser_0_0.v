@@ -65,6 +65,8 @@ module CNC_Top_GCODE_Parser_0_0 (
   next_y,
   next_z,
   ack_phase,
+  mount_ok,
+  mount_fail,
   speed,
   x,
   y,
@@ -72,7 +74,8 @@ module CNC_Top_GCODE_Parser_0_0 (
   enable,
   request_next_line,
   phase,
-  start_program
+  start_program,
+  mount_req
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -90,6 +93,8 @@ input wire [31 : 0] next_x;
 input wire [31 : 0] next_y;
 input wire [31 : 0] next_z;
 input wire [1 : 0] ack_phase;
+input wire mount_ok;
+input wire mount_fail;
 output wire [7 : 0] speed;
 output wire [31 : 0] x;
 output wire [31 : 0] y;
@@ -98,6 +103,7 @@ output wire enable;
 output wire request_next_line;
 output wire [1 : 0] phase;
 output wire start_program;
+output wire mount_req;
 
   GCODE_Parser inst (
     .clk(clk),
@@ -109,6 +115,8 @@ output wire start_program;
     .next_y(next_y),
     .next_z(next_z),
     .ack_phase(ack_phase),
+    .mount_ok(mount_ok),
+    .mount_fail(mount_fail),
     .speed(speed),
     .x(x),
     .y(y),
@@ -116,6 +124,7 @@ output wire start_program;
     .enable(enable),
     .request_next_line(request_next_line),
     .phase(phase),
-    .start_program(start_program)
+    .start_program(start_program),
+    .mount_req(mount_req)
   );
 endmodule

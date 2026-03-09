@@ -58,14 +58,16 @@
 module CNC_Top_hexfile_holder_0_0 (
   clk,
   rst,
-  start_run,
+  mount_req,
   request_next_line,
   phase,
   next_line_speed,
   next_x,
   next_y,
   next_z,
-  ack_phase
+  ack_phase,
+  mount_ok,
+  mount_fail
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -76,7 +78,7 @@ input wire clk;
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 input wire rst;
-input wire start_run;
+input wire mount_req;
 input wire request_next_line;
 input wire [1 : 0] phase;
 output wire [7 : 0] next_line_speed;
@@ -84,17 +86,21 @@ output wire [31 : 0] next_x;
 output wire [31 : 0] next_y;
 output wire [31 : 0] next_z;
 output wire [1 : 0] ack_phase;
+output wire mount_ok;
+output wire mount_fail;
 
   hexfile_holder inst (
     .clk(clk),
     .rst(rst),
-    .start_run(start_run),
+    .mount_req(mount_req),
     .request_next_line(request_next_line),
     .phase(phase),
     .next_line_speed(next_line_speed),
     .next_x(next_x),
     .next_y(next_y),
     .next_z(next_z),
-    .ack_phase(ack_phase)
+    .ack_phase(ack_phase),
+    .mount_ok(mount_ok),
+    .mount_fail(mount_fail)
   );
 endmodule

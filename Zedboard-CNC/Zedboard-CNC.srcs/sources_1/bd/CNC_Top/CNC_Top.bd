@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7C34EF831ED4AB85",
+      "boundary_crc": "0x7C34EF832180C74F",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top",
       "name": "CNC_Top",
@@ -793,6 +793,12 @@
             "left": "1",
             "right": "0"
           },
+          "mount_ok": {
+            "direction": "I"
+          },
+          "mount_fail": {
+            "direction": "I"
+          },
           "speed": {
             "direction": "O",
             "left": "7",
@@ -825,6 +831,9 @@
             "right": "0"
           },
           "start_program": {
+            "direction": "O"
+          },
+          "mount_req": {
             "direction": "O"
           }
         }
@@ -1241,7 +1250,7 @@
               }
             }
           },
-          "start_run": {
+          "mount_req": {
             "direction": "I"
           },
           "request_next_line": {
@@ -1276,6 +1285,12 @@
             "direction": "O",
             "left": "1",
             "right": "0"
+          },
+          "mount_ok": {
+            "direction": "O"
+          },
+          "mount_fail": {
+            "direction": "O"
           }
         }
       },
@@ -2390,6 +2405,12 @@
           "XYZ_Axis_Coordinator_0/enable"
         ]
       },
+      "GCODE_Parser_0_mount_req": {
+        "ports": [
+          "GCODE_Parser_0/mount_req",
+          "hexfile_holder_0/mount_req"
+        ]
+      },
       "GCODE_Parser_0_next_pos_x": {
         "ports": [
           "GCODE_Parser_0/x",
@@ -2426,12 +2447,6 @@
           "XYZ_Axis_Coordinator_0/next_speed"
         ]
       },
-      "GCODE_Parser_0_start_program": {
-        "ports": [
-          "GCODE_Parser_0/start_program",
-          "hexfile_holder_0/start_run"
-        ]
-      },
       "LED_IO_0_led": {
         "ports": [
           "LED_IO_0/led",
@@ -2460,9 +2475,9 @@
           "DriverController_Y/rst",
           "DriverController_Z/rst",
           "XYZ_Axis_Coordinator_0/rst",
-          "hexfile_holder_0/rst",
+          "clk_wiz/reset",
           "GCODE_Parser_0/rst",
-          "clk_wiz/reset"
+          "hexfile_holder_0/rst"
         ]
       },
       "Right_1": {
@@ -2552,14 +2567,26 @@
           "DriverController_Y/clk",
           "DriverController_Z/clk",
           "XYZ_Axis_Coordinator_0/clk",
-          "hexfile_holder_0/clk",
-          "GCODE_Parser_0/clk"
+          "GCODE_Parser_0/clk",
+          "hexfile_holder_0/clk"
         ]
       },
       "hexfile_holder_0_ack_phase": {
         "ports": [
           "hexfile_holder_0/ack_phase",
           "GCODE_Parser_0/ack_phase"
+        ]
+      },
+      "hexfile_holder_0_mount_fail": {
+        "ports": [
+          "hexfile_holder_0/mount_fail",
+          "GCODE_Parser_0/mount_fail"
+        ]
+      },
+      "hexfile_holder_0_mount_ok": {
+        "ports": [
+          "hexfile_holder_0/mount_ok",
+          "GCODE_Parser_0/mount_ok"
         ]
       },
       "hexfile_holder_0_next_line_speed": {

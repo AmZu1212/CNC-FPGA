@@ -1,15 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="4660" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="22864" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="26720" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="29356" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="17464" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>

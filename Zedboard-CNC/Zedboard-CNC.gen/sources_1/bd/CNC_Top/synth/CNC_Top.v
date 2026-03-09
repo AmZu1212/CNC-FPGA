@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 01:59:59 2026
+//Date        : Mon Mar  9 14:12:55 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -151,13 +151,13 @@ module CNC_Top
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire GCODE_Parser_0_enable;
+  wire GCODE_Parser_0_mount_req;
   wire [31:0]GCODE_Parser_0_next_pos_x;
   wire [31:0]GCODE_Parser_0_next_pos_y;
   wire [31:0]GCODE_Parser_0_next_pos_z;
   wire [1:0]GCODE_Parser_0_phase;
   wire GCODE_Parser_0_request_next_line;
   wire [7:0]GCODE_Parser_0_speed;
-  wire GCODE_Parser_0_start_program;
   wire Left;
   wire Middle;
   wire ResetSwitch;
@@ -284,6 +284,8 @@ module CNC_Top
   wire enableY;
   wire enableZ;
   wire [1:0]hexfile_holder_0_ack_phase;
+  wire hexfile_holder_0_mount_fail;
+  wire hexfile_holder_0_mount_ok;
   wire [7:0]hexfile_holder_0_next_line_speed;
   wire [31:0]hexfile_holder_0_next_x;
   wire [31:0]hexfile_holder_0_next_y;
@@ -435,6 +437,9 @@ module CNC_Top
         .clk(clk_wiz_clk_out1),
         .enable(GCODE_Parser_0_enable),
         .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
+        .mount_fail(hexfile_holder_0_mount_fail),
+        .mount_ok(hexfile_holder_0_mount_ok),
+        .mount_req(GCODE_Parser_0_mount_req),
         .next_line_speed(hexfile_holder_0_next_line_speed),
         .next_x(hexfile_holder_0_next_x),
         .next_y(hexfile_holder_0_next_y),
@@ -444,7 +449,6 @@ module CNC_Top
         .rst(ResetSwitch),
         .speed(GCODE_Parser_0_speed),
         .start(Middle),
-        .start_program(GCODE_Parser_0_start_program),
         .x(GCODE_Parser_0_next_pos_x),
         .y(GCODE_Parser_0_next_pos_y),
         .z(GCODE_Parser_0_next_pos_z));
@@ -753,14 +757,16 @@ module CNC_Top
   CNC_Top_hexfile_holder_0_0 hexfile_holder_0
        (.ack_phase(hexfile_holder_0_ack_phase),
         .clk(clk_wiz_clk_out1),
+        .mount_fail(hexfile_holder_0_mount_fail),
+        .mount_ok(hexfile_holder_0_mount_ok),
+        .mount_req(GCODE_Parser_0_mount_req),
         .next_line_speed(hexfile_holder_0_next_line_speed),
         .next_x(hexfile_holder_0_next_x),
         .next_y(hexfile_holder_0_next_y),
         .next_z(hexfile_holder_0_next_z),
         .phase(GCODE_Parser_0_phase),
         .request_next_line(GCODE_Parser_0_request_next_line),
-        .rst(ResetSwitch),
-        .start_run(GCODE_Parser_0_start_program));
+        .rst(ResetSwitch));
   CNC_Top_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr),
         .DDR_BankAddr(DDR_ba),

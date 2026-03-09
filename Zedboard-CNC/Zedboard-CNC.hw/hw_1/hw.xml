@@ -5,7 +5,7 @@
 <!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z020_1" gui_info="dashboard1=hw_vios[xc7z020_1/hw_vio_1=VIO_PROBES_1;]"/>
+  <device name="xc7z020_1" gui_info="dashboard1=hw_vios[xc7z020_1/hw_vio_1=VIO_PROBES_1;xc7z020_1/XADC=XADC_PLOT_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/CNC_Top_wrapper.ltx"/>
@@ -86,10 +86,10 @@
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_y[31:0]" gui_info="hw_vios/hw_vio_1=14,hw_vios/hw_vio_3=17"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[15:0]" gui_info="hw_vios/hw_vio_1=1"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_curr_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=15,hw_vios/hw_vio_3=18"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_current_speed[7:0]" gui_info="hw_vios/hw_vio_3=22,hw_vios/hw_vio_1=1"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_current_speed[7:0]" gui_info="hw_vios/hw_vio_3=22,hw_vios/hw_vio_1=0"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_x[63:0]" gui_info="hw_vios/hw_vio_1=16,hw_vios/hw_vio_3=23"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_cycles_per_step_y[63:0]" gui_info="hw_vios/hw_vio_1=17,hw_vios/hw_vio_3=8"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_direction_change_buffer[31:0]" gui_info="hw_vios/hw_vio_3=2,hw_vios/hw_vio_1=2"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_direction_change_buffer[31:0]" gui_info="hw_vios/hw_vio_3=2,hw_vios/hw_vio_1=1"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_direction_change_buffer[63:0]" gui_info="hw_vios/hw_vio_3=16"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance[31:0]" gui_info="hw_vios/hw_vio_1=21,Trigger Setup=12,hw_vios/hw_vio_3=14"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_distance_1[31:0]" gui_info="hw_vios/hw_vio_1=1"/>
@@ -120,7 +120,7 @@
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_x[31:0]" gui_info="hw_vios/hw_vio_3=24"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_y[31:0]" gui_info="hw_vios/hw_vio_3=9"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_pos_z[31:0]" gui_info="hw_vios/hw_vio_1=2,hw_vios/hw_vio_3=10"/>
-    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_speed[7:0]" gui_info="hw_vios/hw_vio_3=6,hw_vios/hw_vio_1=0"/>
+    <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_target_speed[7:0]" gui_info="hw_vios/hw_vio_3=6,hw_vios/hw_vio_1=2"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_x_reached" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_y_reached" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="CNC_Top_i/XYZ_Axis_Coordinator_0_z_reached" gui_info="hw_vios/hw_vio_1=6"/>

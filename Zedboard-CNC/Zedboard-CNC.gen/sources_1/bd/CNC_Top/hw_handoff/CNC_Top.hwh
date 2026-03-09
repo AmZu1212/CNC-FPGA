@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  9 02:00:25 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  9 14:13:07 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -69,7 +69,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_RAS_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" NAME="DDR_reset_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
+    <PORT DIR="IO" NAME="DDR_reset_n" SIGIS="rst" SIGNAME="processing_system7_0_DDR_DRSTB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DRSTB"/>
       </CONNECTIONS>
@@ -133,9 +133,9 @@
         <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
         <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="rst"/>
-        <CONNECTION INSTANCE="hexfile_holder_0" PORT="rst"/>
-        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
         <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
+        <CONNECTION INSTANCE="GCODE_Parser_0" PORT="rst"/>
+        <CONNECTION INSTANCE="hexfile_holder_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Right" SIGIS="undef" SIGNAME="External_Ports_Right">
@@ -798,6 +798,21 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="mount_fail" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_fail">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_fail"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mount_ok" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_ok">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_ok"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mount_req" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_req"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_line_speed">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hexfile_holder_0" PORT="next_line_speed"/>
@@ -843,11 +858,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Middle"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="start_program" SIGIS="undef" SIGNAME="GCODE_Parser_0_start_program">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="start_run"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="start_program" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="x" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_x">
           <CONNECTIONS>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="next_pos_x"/>
@@ -4884,8 +4895,8 @@
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="clk"/>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="clk"/>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="clk"/>
+            <CONNECTION INSTANCE="hexfile_holder_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
@@ -4911,6 +4922,21 @@
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mount_fail" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_fail">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_fail"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="mount_ok" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_ok">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_ok"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mount_req" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_req"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_line_speed">
@@ -4946,11 +4972,6 @@
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="ResetSwitch"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="start_run" SIGIS="undef" SIGNAME="GCODE_Parser_0_start_program">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="start_program"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

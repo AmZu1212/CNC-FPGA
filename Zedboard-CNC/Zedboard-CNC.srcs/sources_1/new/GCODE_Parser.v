@@ -10,6 +10,8 @@ module GCODE_Parser(
     input signed [31:0] next_y,
     input signed [31:0] next_z,
     input [1:0] ack_phase,
+    input mount_ok,
+    input mount_fail,
 
     //Outputs
     // The coordinator consumes the current command from these outputs.
@@ -21,7 +23,8 @@ module GCODE_Parser(
     // Pulse to the feeder when the coordinator has consumed the current line.
     output request_next_line,
     output reg [1:0] phase,
-    output reg start_program
+    output reg start_program,
+    output reg mount_req
     );
 
     // Keep a stable copy of the previously accepted command so cancel/return
@@ -40,8 +43,9 @@ module GCODE_Parser(
 
     reg [2:0] state;
     localparam IDLE     = 0;
-    localparam RUNNING  = 1;
-    localparam RETURN   = 2;
+    localparam WAIT_MOUNT = 1;
+    localparam RUNNING  = 2;
+    localparam RETURN   = 3;
 
     reg [1:0] return_state;
     localparam XY_CHECK     = 0;
@@ -65,6 +69,7 @@ module GCODE_Parser(
             return_state <= XY_CHECK;
             phase <= 2'b00;
             start_program <= 0;
+            mount_req <= 0;
 
             speed <= next_line_speed;
             x <= next_x;
@@ -90,12 +95,25 @@ module GCODE_Parser(
             case (state)
                 IDLE    : begin
                     if (start_risingedge && !risingedge_buffer) begin
-                        state <= RUNNING;
-                        phase <= 2'b01;
+                        state <= WAIT_MOUNT;
+                        phase <= 2'b00;
                         prev_speed <= 0;
                         prev_pos_x <= 0;
                         prev_pos_y <= 0;
                         prev_pos_z <= 0;
+                        request_pending <= 0;
+                        mount_req <= 1;
+                    end
+                end
+
+                WAIT_MOUNT : begin
+                    if (mount_fail) begin
+                        state <= IDLE;
+                        phase <= 2'b00;
+                        mount_req <= 0;
+                    end else if (mount_ok) begin
+                        state <= RUNNING;
+                        phase <= 2'b01;
                         request_pending <= 1;
                         start_program <= 1;
                     end
@@ -106,7 +124,7 @@ module GCODE_Parser(
                     if (request_pending && (ack_phase == phase) && (phase != 2'b00)) begin
                         request_pending <= 0;
                     end
-					// A second press cancels the run and enters the return path.
+                    // A second press cancels the run and enters the return path.
                     if (start_risingedge && !risingedge_buffer) begin
                         state <= RETURN;
                         request_pending <= 0;
@@ -170,6 +188,7 @@ module GCODE_Parser(
                                 return_state <= XY_CHECK;
                                 phase <= 2'b00;
                                 request_pending <= 0;
+                                mount_req <= 0;
                             end
                         end
 
