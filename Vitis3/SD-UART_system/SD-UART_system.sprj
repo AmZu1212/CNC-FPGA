@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="SD-UART_system" platform="E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-NEW/export/CNC-PL-NEW/CNC-PL-NEW.xpfm" platformUID="xilinx:zedboard::0.0(custom)" sysConfig="CNC-PL-NEW" runtime="C/C++" dimmRepoPath="" rootFSLocation="" linuxImage="" sysroot="">
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="SD-UART_system" platform="E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/CNC-PL-FINAL.xpfm" platformUID="xilinx:zedboard::0.0(custom)" sysConfig="CNC-PL-FINAL" runtime="C/C++" dimmRepoPath="" rootFSLocation="" linuxImage="" sysroot="">
   <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.1330243982">
     <configBuildOptions xsi:type="systemproject:SystemOptions">
       <applications name="SD-UART" domainName="standalone_domain" domainPrettyName="standalone_domain" appBuildConfig="Debug"/>
