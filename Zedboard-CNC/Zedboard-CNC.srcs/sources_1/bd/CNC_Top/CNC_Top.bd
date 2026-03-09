@@ -35,7 +35,8 @@
       "ACK_GPIO": "",
       "REQ_GPIO": "",
       "MOUNT_OK_GPIO": "",
-      "MOUNT_FAIL_GPIO": ""
+      "MOUNT_FAIL_GPIO": "",
+      "MOUNT_REQ_GPIO": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1813,7 +1814,7 @@
         "inst_hier_path": "axi_smc",
         "parameters": {
           "NUM_MI": {
-            "value": "8"
+            "value": "9"
           },
           "NUM_SI": {
             "value": "1"
@@ -1840,7 +1841,8 @@
               "M04_AXI",
               "M05_AXI",
               "M06_AXI",
-              "M07_AXI"
+              "M07_AXI",
+              "M08_AXI"
             ]
           },
           "M00_AXI": {
@@ -2042,6 +2044,31 @@
                 "value": "0"
               }
             }
+          },
+          "M08_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
           }
         }
       },
@@ -2210,6 +2237,21 @@
             "value": "true"
           }
         }
+      },
+      "MOUNT_REQ_GPIO": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "ip_revision": "35",
+        "xci_name": "CNC_Top_axi_gpio_0_8",
+        "xci_path": "ip\\CNC_Top_axi_gpio_0_8\\CNC_Top_axi_gpio_0_8.xci",
+        "inst_hier_path": "MOUNT_REQ_GPIO",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2259,6 +2301,12 @@
         "interface_ports": [
           "axi_smc/M07_AXI",
           "MOUNT_OK_GPIO/S_AXI"
+        ]
+      },
+      "axi_smc_M08_AXI": {
+        "interface_ports": [
+          "axi_smc/M08_AXI",
+          "MOUNT_REQ_GPIO/S_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -2513,7 +2561,7 @@
           "GCODE_Parser_0/mount_req",
           "hexfile_holder_0/mount_req",
           "LED_IO_0/PL_Phase",
-          "REQ_GPIO/gpio_io_i"
+          "MOUNT_REQ_GPIO/gpio_io_i"
         ]
       },
       "GCODE_Parser_0_next_pos_x": {
@@ -2537,7 +2585,8 @@
       "GCODE_Parser_0_phase": {
         "ports": [
           "GCODE_Parser_0/phase",
-          "hexfile_holder_0/phase"
+          "hexfile_holder_0/phase",
+          "REQ_GPIO/gpio_io_i"
         ]
       },
       "GCODE_Parser_0_request_next_line": {
@@ -2726,7 +2775,8 @@
           "Y_GPIO/s_axi_aclk",
           "Z_GPIO/s_axi_aclk",
           "MOUNT_FAIL_GPIO/s_axi_aclk",
-          "MOUNT_OK_GPIO/s_axi_aclk"
+          "MOUNT_OK_GPIO/s_axi_aclk",
+          "MOUNT_REQ_GPIO/s_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2746,7 +2796,8 @@
           "Y_GPIO/s_axi_aresetn",
           "Z_GPIO/s_axi_aresetn",
           "MOUNT_FAIL_GPIO/s_axi_aresetn",
-          "MOUNT_OK_GPIO/s_axi_aresetn"
+          "MOUNT_OK_GPIO/s_axi_aresetn",
+          "MOUNT_REQ_GPIO/s_axi_aresetn"
         ]
       },
       "sys_clock_1": {
@@ -2785,6 +2836,11 @@
               "SEG_MOUNT_OK_GPIO_Reg": {
                 "address_block": "/MOUNT_OK_GPIO/S_AXI/Reg",
                 "offset": "0x41270000",
+                "range": "64K"
+              },
+              "SEG_MOUNT_REQ_GPIO_Reg": {
+                "address_block": "/MOUNT_REQ_GPIO/S_AXI/Reg",
+                "offset": "0x41280000",
                 "range": "64K"
               },
               "SEG_PL_GPIO_Reg": {
