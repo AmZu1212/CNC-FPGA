@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 15:33:41 2026
+//Date        : Mon Mar  9 16:27:56 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -115,6 +115,7 @@ module CNC_Top
   output stepZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN CNC_Top_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
 
+  wire [1:0]ACK_GPIO_gpio_io_o;
   wire [4:0]Buttons_Vector_0_keys;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -159,9 +160,12 @@ module CNC_Top
   wire GCODE_Parser_0_request_next_line;
   wire [7:0]GCODE_Parser_0_speed;
   wire Left;
+  wire [0:0]MOUNT_FAIL_GPIO_gpio_io_o;
+  wire [0:0]MOUNT_OK_GPIO_gpio_io_o;
   wire Middle;
   wire ResetSwitch;
   wire Right;
+  wire [7:0]SPEED_GPIO_gpio_io_o;
   wire Up;
   wire [7:0]XYZ_Axis_Coordinator_0_current_speed;
   wire [63:0]XYZ_Axis_Coordinator_0_cycles_per_step_x;
@@ -173,6 +177,9 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_direction_change_buffer;
   wire XYZ_Axis_Coordinator_0_load_next_line;
   wire [7:0]XYZ_Axis_Coordinator_0_target_speed;
+  wire [31:0]X_GPIO_gpio_io_o;
+  wire [31:0]Y_GPIO_gpio_io_o;
+  wire [31:0]Z_GPIO_gpio_io_o;
   wire Zswitch;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
@@ -317,13 +324,6 @@ module CNC_Top
   wire enableX;
   wire enableY;
   wire enableZ;
-  wire [1:0]hexfile_holder_0_ack_phase;
-  wire hexfile_holder_0_mount_fail;
-  wire hexfile_holder_0_mount_ok;
-  wire [7:0]hexfile_holder_0_next_line_speed;
-  wire [31:0]hexfile_holder_0_next_x;
-  wire [31:0]hexfile_holder_0_next_y;
-  wire [31:0]hexfile_holder_0_next_z;
   wire [7:0]led;
   wire ms1X;
   wire ms1Y;
@@ -430,7 +430,8 @@ module CNC_Top
         .reset(ResetSwitch),
         .step(DriverController_Z_step));
   CNC_Top_axi_gpio_0_4 ACK_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(ACK_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M02_AXI_ARREADY),
@@ -487,17 +488,17 @@ module CNC_Top
         .step(DriverController_Z_step),
         .step_risingedge(DriverController_X2_step_risingedge));
   CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
-       (.ack_phase(hexfile_holder_0_ack_phase),
+       (.ack_phase(ACK_GPIO_gpio_io_o),
         .clk(clk_wiz_clk_out1),
         .enable(GCODE_Parser_0_enable),
         .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
-        .mount_fail(hexfile_holder_0_mount_fail),
-        .mount_ok(hexfile_holder_0_mount_ok),
+        .mount_fail(MOUNT_FAIL_GPIO_gpio_io_o),
+        .mount_ok(MOUNT_OK_GPIO_gpio_io_o),
         .mount_req(GCODE_Parser_0_mount_req),
-        .next_line_speed(hexfile_holder_0_next_line_speed),
-        .next_x(hexfile_holder_0_next_x),
-        .next_y(hexfile_holder_0_next_y),
-        .next_z(hexfile_holder_0_next_z),
+        .next_line_speed(SPEED_GPIO_gpio_io_o),
+        .next_x(X_GPIO_gpio_io_o),
+        .next_y(Y_GPIO_gpio_io_o),
+        .next_z(Z_GPIO_gpio_io_o),
         .phase(GCODE_Parser_0_phase),
         .request_next_line(GCODE_Parser_0_request_next_line),
         .rst(ResetSwitch),
@@ -509,17 +510,16 @@ module CNC_Top
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
   CNC_Top_LED_IO_0_0 LED_IO_0
-       (.in0(enableX),
-        .in1(directionX),
-        .in2(stepX),
-        .in3(xlconstant_1_dout),
-        .in4(xlconstant_1_dout),
-        .in5(XYZ_Axis_Coordinator_0_load_next_line),
-        .in6(xlconstant_1_dout),
-        .in7(GCODE_Parser_0_enable),
-        .led(led));
+       (.PL_Phase({GCODE_Parser_0_mount_req,GCODE_Parser_0_mount_req}),
+        .PS_Phase(ACK_GPIO_gpio_io_o),
+        .in1(xlconstant_1_dout),
+        .in2(xlconstant_1_dout),
+        .led(led),
+        .mount_fail(MOUNT_FAIL_GPIO_gpio_io_o),
+        .mount_ok(MOUNT_OK_GPIO_gpio_io_o));
   CNC_Top_axi_gpio_0_7 MOUNT_FAIL_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(MOUNT_FAIL_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M06_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M06_AXI_ARREADY),
@@ -539,7 +539,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M06_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M06_AXI_WVALID));
   CNC_Top_axi_gpio_0_6 MOUNT_OK_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(MOUNT_OK_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M07_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M07_AXI_ARREADY),
@@ -559,7 +560,7 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M07_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M07_AXI_WVALID));
   CNC_Top_axi_gpio_0_5 REQ_GPIO
-       (.gpio_io_i({1'b0,1'b0}),
+       (.gpio_io_i({GCODE_Parser_0_mount_req,GCODE_Parser_0_mount_req}),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M01_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -580,7 +581,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M01_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M01_AXI_WVALID));
   CNC_Top_axi_gpio_0_3 SPEED_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(SPEED_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M03_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M03_AXI_ARREADY),
@@ -622,7 +624,8 @@ module CNC_Top
         .step_feedback_z(DriverController_X2_step_risingedge),
         .target_speed(XYZ_Axis_Coordinator_0_target_speed));
   CNC_Top_axi_gpio_0_0 X_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(X_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M00_AXI_ARREADY),
@@ -642,7 +645,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID));
   CNC_Top_axi_gpio_0_1 Y_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(Y_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M04_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M04_AXI_ARREADY),
@@ -662,7 +666,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M04_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M04_AXI_WVALID));
   CNC_Top_axi_gpio_0_2 Z_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(Z_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M05_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M05_AXI_ARREADY),
@@ -863,15 +868,8 @@ module CNC_Top
         .clk_out1(clk_wiz_clk_out1),
         .reset(ResetSwitch));
   CNC_Top_hexfile_holder_0_0 hexfile_holder_0
-       (.ack_phase(hexfile_holder_0_ack_phase),
-        .clk(clk_wiz_clk_out1),
-        .mount_fail(hexfile_holder_0_mount_fail),
-        .mount_ok(hexfile_holder_0_mount_ok),
+       (.clk(clk_wiz_clk_out1),
         .mount_req(GCODE_Parser_0_mount_req),
-        .next_line_speed(hexfile_holder_0_next_line_speed),
-        .next_x(hexfile_holder_0_next_x),
-        .next_y(hexfile_holder_0_next_y),
-        .next_z(hexfile_holder_0_next_z),
         .phase(GCODE_Parser_0_phase),
         .request_next_line(GCODE_Parser_0_request_next_line),
         .rst(ResetSwitch));

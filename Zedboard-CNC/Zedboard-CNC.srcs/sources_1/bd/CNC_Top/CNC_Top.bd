@@ -548,16 +548,32 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "in0": {
+          "mount_ok": {
             "direction": "I"
+          },
+          "mount_fail": {
+            "direction": "I"
+          },
+          "PL_Phase": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "PS_Phase": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
           },
           "in1": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
           },
           "in2": {
-            "direction": "I"
-          },
-          "in3": {
             "direction": "I",
             "parameters": {
               "POLARITY": {
@@ -565,30 +581,6 @@
                 "value_src": "user_prop"
               }
             }
-          },
-          "in4": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "in5": {
-            "direction": "I"
-          },
-          "in6": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "in7": {
-            "direction": "I"
           },
           "led": {
             "direction": "O",
@@ -2376,15 +2368,13 @@
       "A4988_Driver_IO_drv_direction": {
         "ports": [
           "A4988_Driver_IO/drv_direction",
-          "directionX",
-          "LED_IO_0/in1"
+          "directionX"
         ]
       },
       "A4988_Driver_IO_drv_enable": {
         "ports": [
           "A4988_Driver_IO/drv_enable",
-          "enableX",
-          "LED_IO_0/in0"
+          "enableX"
         ]
       },
       "A4988_Driver_IO_drv_ms1": {
@@ -2414,8 +2404,14 @@
       "A4988_Driver_IO_drv_step": {
         "ports": [
           "A4988_Driver_IO/drv_step",
-          "stepX",
-          "LED_IO_0/in2"
+          "stepX"
+        ]
+      },
+      "ACK_GPIO_gpio_io_o": {
+        "ports": [
+          "ACK_GPIO/gpio_io_o",
+          "GCODE_Parser_0/ack_phase",
+          "LED_IO_0/PS_Phase"
         ]
       },
       "Buttons_Vector_0_keys": {
@@ -2506,7 +2502,6 @@
       "GCODE_Parser_0_enable": {
         "ports": [
           "GCODE_Parser_0/enable",
-          "LED_IO_0/in7",
           "DriverController_X/hold",
           "DriverController_Y/hold",
           "DriverController_Z/hold",
@@ -2516,7 +2511,9 @@
       "GCODE_Parser_0_mount_req": {
         "ports": [
           "GCODE_Parser_0/mount_req",
-          "hexfile_holder_0/mount_req"
+          "hexfile_holder_0/mount_req",
+          "LED_IO_0/PL_Phase",
+          "REQ_GPIO/gpio_io_i"
         ]
       },
       "GCODE_Parser_0_next_pos_x": {
@@ -2567,6 +2564,20 @@
           "Buttons_Vector_0/left"
         ]
       },
+      "MOUNT_FAIL_GPIO_gpio_io_o": {
+        "ports": [
+          "MOUNT_FAIL_GPIO/gpio_io_o",
+          "GCODE_Parser_0/mount_fail",
+          "LED_IO_0/mount_fail"
+        ]
+      },
+      "MOUNT_OK_GPIO_gpio_io_o": {
+        "ports": [
+          "MOUNT_OK_GPIO/gpio_io_o",
+          "GCODE_Parser_0/mount_ok",
+          "LED_IO_0/mount_ok"
+        ]
+      },
       "Middle_1": {
         "ports": [
           "Middle",
@@ -2592,6 +2603,12 @@
         "ports": [
           "Right",
           "Buttons_Vector_0/right"
+        ]
+      },
+      "SPEED_GPIO_gpio_io_o": {
+        "ports": [
+          "SPEED_GPIO/gpio_io_o",
+          "GCODE_Parser_0/next_line_speed"
         ]
       },
       "Up_1": {
@@ -2651,7 +2668,6 @@
       "XYZ_Axis_Coordinator_0_load_next_line": {
         "ports": [
           "XYZ_Axis_Coordinator_0/load_next_line",
-          "LED_IO_0/in5",
           "GCODE_Parser_0/load_next_line"
         ]
       },
@@ -2659,6 +2675,24 @@
         "ports": [
           "XYZ_Axis_Coordinator_0/target_speed",
           "vio_0/probe_in1"
+        ]
+      },
+      "X_GPIO_gpio_io_o": {
+        "ports": [
+          "X_GPIO/gpio_io_o",
+          "GCODE_Parser_0/next_x"
+        ]
+      },
+      "Y_GPIO_gpio_io_o": {
+        "ports": [
+          "Y_GPIO/gpio_io_o",
+          "GCODE_Parser_0/next_y"
+        ]
+      },
+      "Z_GPIO_gpio_io_o": {
+        "ports": [
+          "Z_GPIO/gpio_io_o",
+          "GCODE_Parser_0/next_z"
         ]
       },
       "Zswitch_1": {
@@ -2677,48 +2711,6 @@
           "XYZ_Axis_Coordinator_0/clk",
           "GCODE_Parser_0/clk",
           "hexfile_holder_0/clk"
-        ]
-      },
-      "hexfile_holder_0_ack_phase": {
-        "ports": [
-          "hexfile_holder_0/ack_phase",
-          "GCODE_Parser_0/ack_phase"
-        ]
-      },
-      "hexfile_holder_0_mount_fail": {
-        "ports": [
-          "hexfile_holder_0/mount_fail",
-          "GCODE_Parser_0/mount_fail"
-        ]
-      },
-      "hexfile_holder_0_mount_ok": {
-        "ports": [
-          "hexfile_holder_0/mount_ok",
-          "GCODE_Parser_0/mount_ok"
-        ]
-      },
-      "hexfile_holder_0_next_line_speed": {
-        "ports": [
-          "hexfile_holder_0/next_line_speed",
-          "GCODE_Parser_0/next_line_speed"
-        ]
-      },
-      "hexfile_holder_0_next_x": {
-        "ports": [
-          "hexfile_holder_0/next_x",
-          "GCODE_Parser_0/next_x"
-        ]
-      },
-      "hexfile_holder_0_next_y": {
-        "ports": [
-          "hexfile_holder_0/next_y",
-          "GCODE_Parser_0/next_y"
-        ]
-      },
-      "hexfile_holder_0_next_z": {
-        "ports": [
-          "hexfile_holder_0/next_z",
-          "GCODE_Parser_0/next_z"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -2775,9 +2767,8 @@
           "A4988_Driver_IO1/ms3",
           "A4988_Driver_IO2/ms3",
           "A4988_Driver_IO/ms3",
-          "LED_IO_0/in4",
-          "LED_IO_0/in3",
-          "LED_IO_0/in6"
+          "LED_IO_0/in1",
+          "LED_IO_0/in2"
         ]
       }
     },

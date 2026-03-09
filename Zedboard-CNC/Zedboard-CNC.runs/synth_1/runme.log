@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Mon Mar  9 15:34:02 2026
+  **** Start of session at: Mon Mar  9 16:28:18 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -31,9 +31,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13140
+INFO: [Synth 8-7075] Helper process launched with PID 22180
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1159.020 ; gain = 469.156
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1157.695 ; gain = 468.215
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:94]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_7/synth/bd_0a6d_aroutsw_0.sv:95]
@@ -158,8 +158,6 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [e:/Git-Repos/CNC-
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1355]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_4' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_4/synth/CNC_Top_axi_gpio_0_4.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_4' is unconnected for instance 'ACK_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:432]
-WARNING: [Synth 8-7023] instance 'ACK_GPIO' of module 'CNC_Top_axi_gpio_0_4' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:432]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_Buttons_Vector_0_1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_Buttons_Vector_0_1/synth/CNC_Top_Buttons_Vector_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'Buttons_Vector' [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sim_1/new/Buttons_Vector.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'Buttons_Vector' (0#1) [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sim_1/new/Buttons_Vector.v:20]
@@ -177,15 +175,15 @@ INFO: [Synth 8-6157] synthesizing module 'GCODE_Parser' [E:/Git-Repos/CNC-FPGA/Z
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/GCODE_Parser.v:95]
 INFO: [Synth 8-6155] done synthesizing module 'GCODE_Parser' (0#1) [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/GCODE_Parser.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_GCODE_Parser_0_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_GCODE_Parser_0_0/synth/CNC_Top_GCODE_Parser_0_0.v:53]
-WARNING: [Synth 8-7071] port 'start_program' of module 'CNC_Top_GCODE_Parser_0_0' is unconnected for instance 'GCODE_Parser_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:489]
-WARNING: [Synth 8-7023] instance 'GCODE_Parser_0' of module 'CNC_Top_GCODE_Parser_0_0' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:489]
+WARNING: [Synth 8-7071] port 'start_program' of module 'CNC_Top_GCODE_Parser_0_0' is unconnected for instance 'GCODE_Parser_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:490]
+WARNING: [Synth 8-7023] instance 'GCODE_Parser_0' of module 'CNC_Top_GCODE_Parser_0_0' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:490]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_xlconstant_0_1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_xlconstant_0_1/synth/CNC_Top_xlconstant_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_9_xlconstant' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_9_xlconstant' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_xlconstant_0_1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_xlconstant_0_1/synth/CNC_Top_xlconstant_0_1.v:53]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_LED_IO_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_LED_IO_0_0/synth/CNC_Top_LED_IO_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'LED_IO' [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/LED_IO.v:20]
-INFO: [Synth 8-6155] done synthesizing module 'LED_IO' (0#1) [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/LED_IO.v:20]
+INFO: [Synth 8-6157] synthesizing module 'LED_IO' [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/LED_IO.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'LED_IO' (0#1) [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/LED_IO.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CNC_Top_LED_IO_0_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_LED_IO_0_0/synth/CNC_Top_LED_IO_0_0.v:53]
 INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_7' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/synth/CNC_Top_axi_gpio_0_7.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -224,8 +222,6 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (0#1) [e
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1355]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_7' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/synth/CNC_Top_axi_gpio_0_7.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_7' is unconnected for instance 'MOUNT_FAIL_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:521]
-WARNING: [Synth 8-7023] instance 'MOUNT_FAIL_GPIO' of module 'CNC_Top_axi_gpio_0_7' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:521]
 INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_6' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/synth/CNC_Top_axi_gpio_0_6.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -244,8 +240,6 @@ INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_6' [e:/Git-Repos/CNC
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
 INFO: [Synth 8-3491] module 'axi_gpio' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1269' bound to instance 'U0' of component 'axi_gpio' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/synth/CNC_Top_axi_gpio_0_6.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_6' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/synth/CNC_Top_axi_gpio_0_6.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_6' is unconnected for instance 'MOUNT_OK_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:541]
-WARNING: [Synth 8-7023] instance 'MOUNT_OK_GPIO' of module 'CNC_Top_axi_gpio_0_6' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:541]
 INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_5' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/synth/CNC_Top_axi_gpio_0_5.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -390,8 +384,6 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (0#1) [e
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized2' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized5' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1355]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_3' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/synth/CNC_Top_axi_gpio_0_3.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_3' is unconnected for instance 'SPEED_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:582]
-WARNING: [Synth 8-7023] instance 'SPEED_GPIO' of module 'CNC_Top_axi_gpio_0_3' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:582]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_XYZ_Axis_Coordinator_0_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_XYZ_Axis_Coordinator_0_0/synth/CNC_Top_XYZ_Axis_Coordinator_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'XYZ_Axis_Coordinator' [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:21]
 INFO: [Synth 8-155] case statement is not full and has no default [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:182]
@@ -649,8 +641,6 @@ INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (0#1) [e
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core__parameterized3' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:181]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio__parameterized7' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1355]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_0/synth/CNC_Top_axi_gpio_0_0.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_0' is unconnected for instance 'X_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:624]
-WARNING: [Synth 8-7023] instance 'X_GPIO' of module 'CNC_Top_axi_gpio_0_0' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:624]
 INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_1' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/synth/CNC_Top_axi_gpio_0_1.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -669,8 +659,6 @@ INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_1' [e:/Git-Repos/CNC
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
 INFO: [Synth 8-3491] module 'axi_gpio' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1269' bound to instance 'U0' of component 'axi_gpio' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/synth/CNC_Top_axi_gpio_0_1.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/synth/CNC_Top_axi_gpio_0_1.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_1' is unconnected for instance 'Y_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:644]
-WARNING: [Synth 8-7023] instance 'Y_GPIO' of module 'CNC_Top_axi_gpio_0_1' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:644]
 INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_2' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_2/synth/CNC_Top_axi_gpio_0_2.vhd:84]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
@@ -689,8 +677,6 @@ INFO: [Synth 8-638] synthesizing module 'CNC_Top_axi_gpio_0_2' [e:/Git-Repos/CNC
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
 INFO: [Synth 8-3491] module 'axi_gpio' declared at 'e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:1269' bound to instance 'U0' of component 'axi_gpio' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_2/synth/CNC_Top_axi_gpio_0_2.vhd:173]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_axi_gpio_0_2' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_2/synth/CNC_Top_axi_gpio_0_2.vhd:84]
-WARNING: [Synth 8-7071] port 'gpio_io_o' of module 'CNC_Top_axi_gpio_0_2' is unconnected for instance 'Z_GPIO' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:664]
-WARNING: [Synth 8-7023] instance 'Z_GPIO' of module 'CNC_Top_axi_gpio_0_2' has 20 connections declared, but only 19 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:664]
 INFO: [Synth 8-6157] synthesizing module 'CNC_Top_axi_smc_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/synth/CNC_Top_axi_smc_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'bd_0a6d' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:10]
 INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_MK5C6W' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3298]
@@ -894,23 +880,23 @@ INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_s00tr_0' (0#1) [e:/Git-Re
 INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_BVCV1C' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:7495]
 INFO: [Synth 8-6155] done synthesizing module 'bd_0a6d_sarn_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_21/synth/bd_0a6d_sarn_0.sv:53]
 INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'CNC_Top_axi_smc_0' has 192 connections declared, but only 176 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:684]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M04_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M04_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M06_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M06_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'CNC_Top_axi_smc_0' is unconnected for instance 'axi_smc' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'CNC_Top_axi_smc_0' has 192 connections declared, but only 176 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:689]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
@@ -924,10 +910,19 @@ WARNING: [Synth 8-7023] instance 'axi_smc' of module 'CNC_Top_axi_smc_0' has 192
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
 INFO: [Synth 8-3876] $readmem data file 'speed.hex' is read successfully [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/hexfile_holder.v:49]
 INFO: [Synth 8-3876] $readmem data file 'pos_x.hex' is read successfully [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/hexfile_holder.v:50]
 INFO: [Synth 8-3876] $readmem data file 'pos_y.hex' is read successfully [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/hexfile_holder.v:51]
 INFO: [Synth 8-3876] $readmem data file 'pos_z.hex' is read successfully [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/hexfile_holder.v:52]
+WARNING: [Synth 8-7071] port 'next_line_speed' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'next_x' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'next_y' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'next_z' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'ack_phase' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'mount_ok' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7071] port 'mount_fail' of module 'CNC_Top_hexfile_holder_0_0' is unconnected for instance 'hexfile_holder_0' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
+WARNING: [Synth 8-7023] instance 'hexfile_holder_0' of module 'CNC_Top_hexfile_holder_0_0' has 12 connections declared, but only 5 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:870]
 WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
 WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
 WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/synth/CNC_Top_processing_system7_0_0.v:320]
@@ -964,12 +959,12 @@ INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2024.2/scripts
 INFO: [Synth 8-256] done synthesizing module 'lpf__parameterized0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:821]
 INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset__parameterized1' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1330]
 INFO: [Synth 8-256] done synthesizing module 'CNC_Top_rst_ps7_0_100M_0' (0#1) [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/synth/CNC_Top_rst_ps7_0_100M_0.vhd:74]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:941]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:941]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:941]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:941]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'CNC_Top_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:941]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:948]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:939]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:939]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:939]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'CNC_Top_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:939]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'CNC_Top_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:939]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:946]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:322]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:322]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.gpio_Data_In_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:489]
@@ -1022,9 +1017,9 @@ WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GE
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.gpio_Data_In_reg was removed.  [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd:489]
 WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_MK5C6W does not have driver. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/synth/bd_0a6d.v:3342]
 WARNING: [Synth 8-3848] Net sl_iport0 in module/entity CNC_Top_vio_0_0 does not have driver. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/synth/CNC_Top_vio_0_0.v:74]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'XYZ_Axis_Coordinator_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:602]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:948]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Buttons_Vector_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:452]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'XYZ_Axis_Coordinator_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:604]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:946]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Buttons_Vector_0'. This will prevent further optimization [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/synth/CNC_Top.v:453]
 WARNING: [Synth 8-7129] Port probe_in4[0] in module vio_v3_0_26_vio is either unconnected or has no load
 WARNING: [Synth 8-7129] Port probe_in5[0] in module vio_v3_0_26_vio is either unconnected or has no load
 WARNING: [Synth 8-7129] Port probe_in6[0] in module vio_v3_0_26_vio is either unconnected or has no load
@@ -1127,18 +1122,18 @@ WARNING: [Synth 8-7129] Port probe_in102[0] in module vio_v3_0_26_vio is either 
 WARNING: [Synth 8-7129] Port probe_in103[0] in module vio_v3_0_26_vio is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1480.906 ; gain = 791.043
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1479.742 ; gain = 790.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1480.906 ; gain = 791.043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1479.742 ; gain = 790.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1480.906 ; gain = 791.043
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1479.742 ; gain = 790.262
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1685.664 ; gain = 20.871
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1682.617 ; gain = 19.555
 INFO: [Netlist 29-17] Analyzing 687 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1644,24 +1639,24 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/CNC_Top_wrap
 INFO: [Project 1-1714] 111 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2045.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2044.012 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 686 instances were transformed.
   FDR => FDRE: 684 instances
   SRL16 => SRL16E: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 2045.223 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.225 . Memory (MB): peak = 2044.012 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1819,12 +1814,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_entry_
 Applied set_property KEEP_HIERARCHY = SOFT for CNC_Top_i/axi_smc/inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
 Applied set_property KEEP = true for sys_clock. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element cycles_per_step_z_result1 was removed.  [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:125]
 WARNING: [Synth 8-6014] Unused sequential element res_reg was removed.  [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/XYZ_Axis_Coordinator.v:311]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1894,8 +1889,8 @@ Detailed RTL Component Info :
 	   7 Input   32 Bit        Muxes := 3     
 	   2 Input   32 Bit        Muxes := 23    
 	   5 Input   32 Bit        Muxes := 9     
-	   4 Input   32 Bit        Muxes := 9     
 	 906 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 9     
 	   8 Input   32 Bit        Muxes := 1     
 	   3 Input   17 Bit        Muxes := 3     
 	   2 Input   16 Bit        Muxes := 4     
@@ -1910,8 +1905,8 @@ Detailed RTL Component Info :
 	   2 Input    8 Bit        Muxes := 20    
 	   4 Input    8 Bit        Muxes := 2     
 	   8 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 9     
 	   4 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 9     
 	   6 Input    7 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 3     
 	   2 Input    5 Bit        Muxes := 1     
@@ -1944,6 +1939,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized3__3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized3__3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module cdc_sync__parameterized3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module cdc_sync__parameterized3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module cdc_sync__parameterized3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized3.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized3.
+WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset__parameterized1.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync.
@@ -1956,78 +1963,18 @@ INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CR
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized0.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized0__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[4].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[5].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[6].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[7].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
-INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module cdc_sync__parameterized1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized3__1.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module cdc_sync__parameterized3__2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module cdc_sync__parameterized3__2.
+WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (PR_OUT_DFF[0].FDRE_PER) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module proc_sys_reset.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[0].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
@@ -2044,27 +1991,72 @@ INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[13].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
 INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[4].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[5].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[6].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[7].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
+INFO: [Synth 8-3332] Sequential element (GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module cdc_sync__parameterized2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:14 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 47 of e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc. [e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/CNC_Top_axi_gpio_0_5.xdc:47]
 WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at line 105 of E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:105]
 WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at line 109 of E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:109]
 WARNING: [Synth 8-3321] set_multicycle_path : Empty from list for constraint at line 125 of E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc. [E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/constrs_1/new/cnc_constraints.xdc:125]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:01:31 . Memory (MB): peak = 2045.223 ; gain = 1355.359
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:23 . Memory (MB): peak = 2044.012 ; gain = 1354.531
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/hexfile_holder_0/inst/next_x_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance CNC_Top_i/hexfile_holder_0/inst/next_y_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:43 ; elapsed = 00:01:50 . Memory (MB): peak = 2110.930 ; gain = 1421.066
+Finished Technology Mapping : Time (s): cpu = 00:01:30 ; elapsed = 00:01:42 . Memory (MB): peak = 2086.867 ; gain = 1397.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2113,19 +2105,19 @@ WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[2] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin inst:sl_iport0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 2215.699 ; gain = 1525.836
+Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:01:46 . Memory (MB): peak = 2191.754 ; gain = 1502.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:46 ; elapsed = 00:01:54 . Memory (MB): peak = 2215.699 ; gain = 1525.836
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:01:46 . Memory (MB): peak = 2191.754 ; gain = 1502.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:47 ; elapsed = 00:01:54 . Memory (MB): peak = 2238.961 ; gain = 1549.098
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:46 . Memory (MB): peak = 2191.754 ; gain = 1502.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2172,52 +2164,51 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BIBUF      |   130|
 |2     |BUFG       |     3|
-|3     |CARRY4     |  2241|
+|3     |CARRY4     |  2251|
 |4     |DSP48E1    |    22|
-|8     |LUT1       |   912|
-|9     |LUT2       |  1677|
-|10    |LUT3       |  6716|
-|11    |LUT4       |   712|
-|12    |LUT5       |   757|
-|13    |LUT6       |   700|
+|8     |LUT1       |   856|
+|9     |LUT2       |  1793|
+|10    |LUT3       |  6689|
+|11    |LUT4       |   783|
+|12    |LUT5       |   741|
+|13    |LUT6       |   684|
 |14    |MMCME2_ADV |     1|
-|15    |MUXF7      |    40|
+|15    |MUXF7      |    32|
 |16    |PS7        |     1|
-|17    |RAMB36E1   |     2|
-|19    |SRL16      |     2|
-|20    |FDCE       |   333|
-|21    |FDR        |     8|
-|22    |FDRE       |  2992|
-|23    |FDSE       |    90|
-|24    |IBUF       |     8|
-|25    |OBUF       |    29|
+|17    |SRL16      |     2|
+|18    |FDCE       |   333|
+|19    |FDR        |    16|
+|20    |FDRE       |  3044|
+|21    |FDSE       |    95|
+|22    |IBUF       |     8|
+|23    |OBUF       |    29|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:47 ; elapsed = 00:01:55 . Memory (MB): peak = 2238.961 ; gain = 1549.098
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:46 . Memory (MB): peak = 2191.754 ; gain = 1502.273
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:01:33 . Memory (MB): peak = 2238.961 ; gain = 984.781
-Synthesis Optimization Complete : Time (s): cpu = 00:01:47 ; elapsed = 00:01:55 . Memory (MB): peak = 2238.961 ; gain = 1549.098
+Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:24 . Memory (MB): peak = 2191.754 ; gain = 938.004
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:46 . Memory (MB): peak = 2191.754 ; gain = 1502.273
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.882 . Memory (MB): peak = 2238.961 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2316 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.977 . Memory (MB): peak = 2202.344 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2324 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Chipscope 16-324] Core: CNC_Top_i/vio_0 UUID: 31a22d3a-3281-58d4-8b8f-b85a979acfba 
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2324.191 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2305.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10 instances were transformed.
-  FDR => FDRE: 8 instances
+  A total of 18 instances were transformed.
+  FDR => FDRE: 16 instances
   SRL16 => SRL16E: 2 instances
 
-Synth Design complete | Checksum: 3f7743d7
+Synth Design complete | Checksum: e4a196a
 INFO: [Common 17-83] Releasing license: Synthesis
-549 Infos, 515 Warnings, 6 Critical Warnings and 0 Errors encountered.
+539 Infos, 517 Warnings, 6 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:58 ; elapsed = 00:02:14 . Memory (MB): peak = 2324.191 ; gain = 1876.723
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:02:05 . Memory (MB): peak = 2305.164 ; gain = 1857.062
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2324.191 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 2305.164 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1/CNC_Top_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file CNC_Top_wrapper_utilization_synth.rpt -pb CNC_Top_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 15:36:32 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 16:30:34 2026...

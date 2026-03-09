@@ -1,35 +1,35 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.819499",
-   "Default View_TopLeft":"1053,-33",
+   "Default View_ScaleFactor":"0.441941",
+   "Default View_TopLeft":"539,-480",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"/DriverController_X|/A4988_Driver_IO2|/A4988_Driver_IO|/A4988_Driver_IO1|/XYZ_Axis_Coordinator_0|/GCODE_Parser_0|",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 11 -x 3990 -y -690 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 11 -x 3990 -y -670 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 10 -x 3900 -y -690 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 10 -x 3900 -y -670 -defaultsOSRD
 preplace port port-id_sys_clock -pg 1 -lvl 0 -x -250 -y 360 -defaultsOSRD
-preplace port port-id_directionX -pg 1 -lvl 11 -x 3990 -y -40 -defaultsOSRD
-preplace port port-id_stepX -pg 1 -lvl 11 -x 3990 -y -10 -defaultsOSRD
-preplace port port-id_resetX -pg 1 -lvl 11 -x 3990 -y 20 -defaultsOSRD
-preplace port port-id_ms1X -pg 1 -lvl 11 -x 3990 -y 50 -defaultsOSRD
-preplace port port-id_ms2X -pg 1 -lvl 11 -x 3990 -y 80 -defaultsOSRD
-preplace port port-id_ms3X -pg 1 -lvl 11 -x 3990 -y 110 -defaultsOSRD
-preplace port port-id_enableX -pg 1 -lvl 11 -x 3990 -y -70 -defaultsOSRD
-preplace port port-id_enableY -pg 1 -lvl 11 -x 3990 -y 190 -defaultsOSRD
-preplace port port-id_directionY -pg 1 -lvl 11 -x 3990 -y 210 -defaultsOSRD
-preplace port port-id_stepY -pg 1 -lvl 11 -x 3990 -y 240 -defaultsOSRD
-preplace port port-id_resetY -pg 1 -lvl 11 -x 3990 -y 270 -defaultsOSRD
-preplace port port-id_ms1Y -pg 1 -lvl 11 -x 3990 -y 300 -defaultsOSRD
-preplace port port-id_ms2Y -pg 1 -lvl 11 -x 3990 -y 330 -defaultsOSRD
-preplace port port-id_ms3Y -pg 1 -lvl 11 -x 3990 -y 360 -defaultsOSRD
-preplace port port-id_enableZ -pg 1 -lvl 11 -x 3990 -y 400 -defaultsOSRD
-preplace port port-id_directionZ -pg 1 -lvl 11 -x 3990 -y 430 -defaultsOSRD
-preplace port port-id_stepZ -pg 1 -lvl 11 -x 3990 -y 460 -defaultsOSRD
-preplace port port-id_resetZ -pg 1 -lvl 11 -x 3990 -y 490 -defaultsOSRD
-preplace port port-id_ms1Z -pg 1 -lvl 11 -x 3990 -y 520 -defaultsOSRD
-preplace port port-id_ms2Z -pg 1 -lvl 11 -x 3990 -y 550 -defaultsOSRD
-preplace port port-id_ms3Z -pg 1 -lvl 11 -x 3990 -y 580 -defaultsOSRD
+preplace port port-id_directionX -pg 1 -lvl 10 -x 3900 -y -40 -defaultsOSRD
+preplace port port-id_stepX -pg 1 -lvl 10 -x 3900 -y -10 -defaultsOSRD
+preplace port port-id_resetX -pg 1 -lvl 10 -x 3900 -y 20 -defaultsOSRD
+preplace port port-id_ms1X -pg 1 -lvl 10 -x 3900 -y 50 -defaultsOSRD
+preplace port port-id_ms2X -pg 1 -lvl 10 -x 3900 -y 80 -defaultsOSRD
+preplace port port-id_ms3X -pg 1 -lvl 10 -x 3900 -y 110 -defaultsOSRD
+preplace port port-id_enableX -pg 1 -lvl 10 -x 3900 -y -70 -defaultsOSRD
+preplace port port-id_enableY -pg 1 -lvl 10 -x 3900 -y 190 -defaultsOSRD
+preplace port port-id_directionY -pg 1 -lvl 10 -x 3900 -y 210 -defaultsOSRD
+preplace port port-id_stepY -pg 1 -lvl 10 -x 3900 -y 240 -defaultsOSRD
+preplace port port-id_resetY -pg 1 -lvl 10 -x 3900 -y 270 -defaultsOSRD
+preplace port port-id_ms1Y -pg 1 -lvl 10 -x 3900 -y 300 -defaultsOSRD
+preplace port port-id_ms2Y -pg 1 -lvl 10 -x 3900 -y 330 -defaultsOSRD
+preplace port port-id_ms3Y -pg 1 -lvl 10 -x 3900 -y 360 -defaultsOSRD
+preplace port port-id_enableZ -pg 1 -lvl 10 -x 3900 -y 400 -defaultsOSRD
+preplace port port-id_directionZ -pg 1 -lvl 10 -x 3900 -y 430 -defaultsOSRD
+preplace port port-id_stepZ -pg 1 -lvl 10 -x 3900 -y 460 -defaultsOSRD
+preplace port port-id_resetZ -pg 1 -lvl 10 -x 3900 -y 490 -defaultsOSRD
+preplace port port-id_ms1Z -pg 1 -lvl 10 -x 3900 -y 520 -defaultsOSRD
+preplace port port-id_ms2Z -pg 1 -lvl 10 -x 3900 -y 550 -defaultsOSRD
+preplace port port-id_ms3Z -pg 1 -lvl 10 -x 3900 -y 580 -defaultsOSRD
 preplace port port-id_ResetSwitch -pg 1 -lvl 0 -x -250 -y 210 -defaultsOSRD
 preplace port port-id_Middle -pg 1 -lvl 0 -x -250 -y 280 -defaultsOSRD
 preplace port port-id_Left -pg 1 -lvl 0 -x -250 -y 480 -defaultsOSRD
@@ -37,117 +37,117 @@ preplace port port-id_Right -pg 1 -lvl 0 -x -250 -y 510 -defaultsOSRD
 preplace port port-id_Up -pg 1 -lvl 0 -x -250 -y 540 -defaultsOSRD
 preplace port port-id_Down -pg 1 -lvl 0 -x -250 -y 570 -defaultsOSRD
 preplace port port-id_Zswitch -pg 1 -lvl 0 -x -250 -y 600 -defaultsOSRD
-preplace portBus led -pg 1 -lvl 11 -x 3990 -y -150 -defaultsOSRD
-preplace inst clk_wiz -pg 1 -lvl 3 -x 1180 -y 390 -defaultsOSRD
-preplace inst High_Bit -pg 1 -lvl 8 -x 3220 -y -140 -defaultsOSRD
-preplace inst A4988_Driver_IO -pg 1 -lvl 9 -x 3600 -y 50 -defaultsOSRD
-preplace inst DriverController_X -pg 1 -lvl 8 -x 3220 -y 50 -defaultsOSRD
-preplace inst LED_IO_0 -pg 1 -lvl 10 -x 3860 -y -150 -defaultsOSRD
-preplace inst XYZ_Axis_Coordinator_0 -pg 1 -lvl 6 -x 2520 -y 320 -defaultsOSRD
-preplace inst GCODE_Parser_0 -pg 1 -lvl 5 -x 2030 -y 280 -defaultsOSRD
-preplace inst DriverController_Y -pg 1 -lvl 8 -x 3220 -y 250 -defaultsOSRD
-preplace inst DriverController_Z -pg 1 -lvl 8 -x 3220 -y 450 -defaultsOSRD
-preplace inst A4988_Driver_IO1 -pg 1 -lvl 9 -x 3600 -y 520 -defaultsOSRD
-preplace inst A4988_Driver_IO2 -pg 1 -lvl 9 -x 3600 -y 300 -defaultsOSRD
-preplace inst vio_0 -pg 1 -lvl 7 -x 2890 -y 660 -defaultsOSRD
-preplace inst Buttons_Vector_0 -pg 1 -lvl 5 -x 2030 -y 540 -defaultsOSRD
-preplace inst hexfile_holder_0 -pg 1 -lvl 4 -x 1590 -y 230 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 560 -y -620 -defaultsOSRD
-preplace inst X_GPIO -pg 1 -lvl 2 -x 560 -y -190 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 10 -x 3900 -y -250 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 3 -x 1300 -y 390 -defaultsOSRD
+preplace inst High_Bit -pg 1 -lvl 5 -x 2160 -y -90 -defaultsOSRD
+preplace inst A4988_Driver_IO -pg 1 -lvl 9 -x 3720 -y 50 -defaultsOSRD
+preplace inst DriverController_X -pg 1 -lvl 8 -x 3340 -y 50 -defaultsOSRD
+preplace inst LED_IO_0 -pg 1 -lvl 5 -x 2160 -y -250 -defaultsOSRD
+preplace inst XYZ_Axis_Coordinator_0 -pg 1 -lvl 6 -x 2640 -y 320 -defaultsOSRD
+preplace inst GCODE_Parser_0 -pg 1 -lvl 5 -x 2160 -y 280 -defaultsOSRD
+preplace inst DriverController_Y -pg 1 -lvl 8 -x 3340 -y 250 -defaultsOSRD
+preplace inst DriverController_Z -pg 1 -lvl 8 -x 3340 -y 450 -defaultsOSRD
+preplace inst A4988_Driver_IO1 -pg 1 -lvl 9 -x 3720 -y 520 -defaultsOSRD
+preplace inst A4988_Driver_IO2 -pg 1 -lvl 9 -x 3720 -y 300 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 7 -x 3010 -y 660 -defaultsOSRD
+preplace inst Buttons_Vector_0 -pg 1 -lvl 5 -x 2160 -y 540 -defaultsOSRD
+preplace inst hexfile_holder_0 -pg 1 -lvl 4 -x 1710 -y 230 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 680 -y -620 -defaultsOSRD
+preplace inst X_GPIO -pg 1 -lvl 2 -x 680 -y -190 -defaultsOSRD
 preplace inst axi_smc -pg 1 -lvl 1 -x -70 -y -640 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1180 -y -520 -defaultsOSRD
-preplace inst Y_GPIO -pg 1 -lvl 2 -x 560 -y -50 -defaultsOSRD
-preplace inst Z_GPIO -pg 1 -lvl 2 -x 560 -y 90 -defaultsOSRD
-preplace inst SPEED_GPIO -pg 1 -lvl 2 -x 560 -y 230 -defaultsOSRD
-preplace inst ACK_GPIO -pg 1 -lvl 3 -x 1180 -y -280 -defaultsOSRD
-preplace inst REQ_GPIO -pg 1 -lvl 3 -x 1180 -y -140 -defaultsOSRD
-preplace inst MOUNT_OK_GPIO -pg 1 -lvl 3 -x 1180 -y 0 -defaultsOSRD
-preplace inst MOUNT_FAIL_GPIO -pg 1 -lvl 3 -x 1180 -y 140 -defaultsOSRD
-preplace netloc A4988_Driver_IO1_drv_direction 1 9 2 3730 430 NJ
-preplace netloc A4988_Driver_IO1_drv_enable 1 9 2 3720J 420 3950
-preplace netloc A4988_Driver_IO1_drv_ms1 1 9 2 3770 520 NJ
-preplace netloc A4988_Driver_IO1_drv_ms2 1 9 2 3720 550 NJ
-preplace netloc A4988_Driver_IO1_drv_ms3 1 9 2 N 580 NJ
-preplace netloc A4988_Driver_IO1_drv_reset 1 9 2 3760 490 NJ
-preplace netloc A4988_Driver_IO1_drv_step 1 9 2 3750 460 NJ
-preplace netloc A4988_Driver_IO2_drv_direction 1 9 2 3720 250 3960
-preplace netloc A4988_Driver_IO2_drv_enable 1 9 2 NJ 240 3950
-preplace netloc A4988_Driver_IO2_drv_ms1 1 9 2 3770 300 N
-preplace netloc A4988_Driver_IO2_drv_ms2 1 9 2 3720 330 N
-preplace netloc A4988_Driver_IO2_drv_ms3 1 9 2 N 360 N
-preplace netloc A4988_Driver_IO2_drv_reset 1 9 2 3760 270 N
-preplace netloc A4988_Driver_IO2_drv_step 1 9 2 3740 260 3970
-preplace netloc A4988_Driver_IO_drv_direction 1 9 2 3730 -20 3960
-preplace netloc A4988_Driver_IO_drv_enable 1 9 2 3760 -10 3950
-preplace netloc A4988_Driver_IO_drv_ms1 1 9 2 NJ 70 3960
-preplace netloc A4988_Driver_IO_drv_ms2 1 9 2 NJ 90 3950
-preplace netloc A4988_Driver_IO_drv_ms3 1 9 2 NJ 110 N
-preplace netloc A4988_Driver_IO_drv_reset 1 9 2 NJ 50 3950
-preplace netloc A4988_Driver_IO_drv_step 1 9 2 3740 0 3960
-preplace netloc Buttons_Vector_0_keys 1 5 2 2260 540 2720
-preplace netloc Down_1 1 0 5 NJ 570 N 570 N 570 N 570 1760
-preplace netloc DriverController_0_en 1 8 1 3390 -10n
-preplace netloc DriverController_0_step 1 8 1 3430 30n
-preplace netloc DriverController_X1_step_risingedge 1 5 4 2320 550 N 550 N 550 3400
-preplace netloc DriverController_X2_step_risingedge 1 5 4 2270 560 N 560 N 560 3390
-preplace netloc DriverController_X_dir_out 1 8 1 3400 10n
-preplace netloc DriverController_X_step_risingedge 1 5 4 2310 480 NJ 480 3040 350 3390
-preplace netloc DriverController_Y_dir_out 1 8 1 3420 280n
-preplace netloc DriverController_Y_en 1 8 1 3460 220n
-preplace netloc DriverController_Y_step 1 8 1 3430 240n
-preplace netloc DriverController_Z_dir_out 1 8 1 3410 260n
-preplace netloc DriverController_Z_en 1 8 1 3470 240n
-preplace netloc DriverController_Z_step 1 8 1 3480 280n
-preplace netloc GCODE_Parser_0_enable 1 5 5 2280J 490 NJ 490 3020 150 3460J 170 3750
-preplace netloc GCODE_Parser_0_next_pos_x 1 5 1 2250J 220n
-preplace netloc GCODE_Parser_0_next_pos_y 1 5 1 2240J 240n
-preplace netloc GCODE_Parser_0_next_pos_z 1 5 1 2230J 260n
-preplace netloc GCODE_Parser_0_phase 1 3 3 1420 640 NJ 640 2210
-preplace netloc GCODE_Parser_0_request_next_line 1 3 3 1400 660 NJ 660 2220
-preplace netloc GCODE_Parser_0_speed 1 5 1 2290 200n
-preplace netloc LED_IO_0_led 1 10 1 N -150
-preplace netloc Left_1 1 0 5 NJ 480 N 480 N 480 N 480 1760
-preplace netloc Middle_1 1 0 5 -230J 190 110 -290 1000 -360 N -360 1830
-preplace netloc ResetSwitch_1 1 0 9 NJ 210 80 -270 940 220 1400 110 1860 110 2310 110 N 110 3030 -50 3440
-preplace netloc Right_1 1 0 5 NJ 510 N 510 N 510 N 510 1850
+preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1300 -y -520 -defaultsOSRD
+preplace inst Y_GPIO -pg 1 -lvl 2 -x 680 -y -50 -defaultsOSRD
+preplace inst Z_GPIO -pg 1 -lvl 2 -x 680 -y 90 -defaultsOSRD
+preplace inst SPEED_GPIO -pg 1 -lvl 2 -x 680 -y 230 -defaultsOSRD
+preplace inst ACK_GPIO -pg 1 -lvl 3 -x 1300 -y -280 -defaultsOSRD
+preplace inst REQ_GPIO -pg 1 -lvl 3 -x 1300 -y -140 -defaultsOSRD
+preplace inst MOUNT_OK_GPIO -pg 1 -lvl 3 -x 1300 -y 0 -defaultsOSRD
+preplace inst MOUNT_FAIL_GPIO -pg 1 -lvl 3 -x 1300 -y 140 -defaultsOSRD
+preplace netloc A4988_Driver_IO1_drv_direction 1 9 1 3850 430n
+preplace netloc A4988_Driver_IO1_drv_enable 1 9 1 3840J 400n
+preplace netloc A4988_Driver_IO1_drv_ms1 1 9 1 3880 520n
+preplace netloc A4988_Driver_IO1_drv_ms2 1 9 1 3840 550n
+preplace netloc A4988_Driver_IO1_drv_ms3 1 9 1 N 580
+preplace netloc A4988_Driver_IO1_drv_reset 1 9 1 3870 490n
+preplace netloc A4988_Driver_IO1_drv_step 1 9 1 3860 460n
+preplace netloc A4988_Driver_IO2_drv_direction 1 9 1 3850 210n
+preplace netloc A4988_Driver_IO2_drv_enable 1 9 1 3840J 190n
+preplace netloc A4988_Driver_IO2_drv_ms1 1 9 1 3880 300n
+preplace netloc A4988_Driver_IO2_drv_ms2 1 9 1 3840 330n
+preplace netloc A4988_Driver_IO2_drv_ms3 1 9 1 N 360
+preplace netloc A4988_Driver_IO2_drv_reset 1 9 1 3870 270n
+preplace netloc A4988_Driver_IO2_drv_step 1 9 1 3860 240n
+preplace netloc A4988_Driver_IO_drv_direction 1 9 1 3850 -40n
+preplace netloc A4988_Driver_IO_drv_enable 1 9 1 3840 -70n
+preplace netloc A4988_Driver_IO_drv_ms1 1 9 1 3880J 50n
+preplace netloc A4988_Driver_IO_drv_ms2 1 9 1 3840J 80n
+preplace netloc A4988_Driver_IO_drv_ms3 1 9 1 NJ 110
+preplace netloc A4988_Driver_IO_drv_reset 1 9 1 3870J 20n
+preplace netloc A4988_Driver_IO_drv_step 1 9 1 3860 -10n
+preplace netloc Buttons_Vector_0_keys 1 5 2 2420 540 2850
+preplace netloc Down_1 1 0 5 NJ 570 N 570 N 570 N 570 1880
+preplace netloc DriverController_0_en 1 8 1 3510 -10n
+preplace netloc DriverController_0_step 1 8 1 3530 30n
+preplace netloc DriverController_X1_step_risingedge 1 5 4 2440 550 N 550 N 550 3520
+preplace netloc DriverController_X2_step_risingedge 1 5 4 2410 560 N 560 N 560 3510
+preplace netloc DriverController_X_dir_out 1 8 1 3520 10n
+preplace netloc DriverController_X_step_risingedge 1 5 4 2430 480 NJ 480 3160 350 3510
+preplace netloc DriverController_Y_dir_out 1 8 1 3540 280n
+preplace netloc DriverController_Y_en 1 8 1 3590 220n
+preplace netloc DriverController_Y_step 1 8 1 3550 240n
+preplace netloc DriverController_Z_dir_out 1 8 1 3530 260n
+preplace netloc DriverController_Z_en 1 8 1 3580 240n
+preplace netloc DriverController_Z_step 1 8 1 3600 280n
+preplace netloc GCODE_Parser_0_enable 1 5 3 2400J 490 NJ 490 3140
+preplace netloc GCODE_Parser_0_next_pos_x 1 5 1 2380J 220n
+preplace netloc GCODE_Parser_0_next_pos_y 1 5 1 2370J 240n
+preplace netloc GCODE_Parser_0_next_pos_z 1 5 1 2360J 260n
+preplace netloc GCODE_Parser_0_phase 1 3 3 1530 650 NJ 650 2330
+preplace netloc GCODE_Parser_0_request_next_line 1 3 3 1540 440 NJ 440 2340
+preplace netloc GCODE_Parser_0_speed 1 5 1 2410 200n
+preplace netloc LED_IO_0_led 1 5 5 N -250 N -250 N -250 N -250 N
+preplace netloc Left_1 1 0 5 NJ 480 N 480 N 480 N 480 1880
+preplace netloc Middle_1 1 0 5 -230J 200 110 -290 880 -400 N -400 1980
+preplace netloc ResetSwitch_1 1 0 9 NJ 210 80 -280 1060 -360 1500 90 1940 110 2430 110 N 110 3150 -50 3560
+preplace netloc Right_1 1 0 5 NJ 510 N 510 N 510 N 510 1880
 preplace netloc Up_1 1 0 5 NJ 540 N 540 N 540 N 540 N
-preplace netloc XYZ_Axis_Coordinator_0_current_speed 1 6 1 2770 370n
-preplace netloc XYZ_Axis_Coordinator_0_cycles_per_step_x 1 6 2 2730 50 N
+preplace netloc XYZ_Axis_Coordinator_0_current_speed 1 6 1 2880 370n
+preplace netloc XYZ_Axis_Coordinator_0_cycles_per_step_x 1 6 2 2840 50 N
 preplace netloc XYZ_Axis_Coordinator_0_cycles_per_step_y 1 6 2 N 250 N
-preplace netloc XYZ_Axis_Coordinator_0_cycles_per_step_z 1 6 2 N 270 3000
-preplace netloc XYZ_Axis_Coordinator_0_dir_x 1 6 2 2760 70 N
-preplace netloc XYZ_Axis_Coordinator_0_dir_y 1 6 2 2770 280 3010
-preplace netloc XYZ_Axis_Coordinator_0_dir_z 1 6 2 2770 340 2990
-preplace netloc XYZ_Axis_Coordinator_0_direction_change_buffer 1 6 1 2730 410n
-preplace netloc XYZ_Axis_Coordinator_0_load_next_line 1 4 6 1860 440 2230J 500 2750 -200 N -200 N -200 3720
-preplace netloc XYZ_Axis_Coordinator_0_target_speed 1 6 1 2740 390n
-preplace netloc Zswitch_1 1 0 5 NJ 600 N 600 N 600 N 600 1850
-preplace netloc clk_wiz_clk_out1 1 3 5 1390 100 1850 120 2300 160 2790J 160 3050
-preplace netloc hexfile_holder_0_ack_phase 1 4 1 1780 250n
-preplace netloc hexfile_holder_0_next_line_speed 1 4 1 1820 170n
-preplace netloc hexfile_holder_0_next_x 1 4 1 1810 190n
-preplace netloc hexfile_holder_0_next_y 1 4 1 1800 210n
-preplace netloc hexfile_holder_0_next_z 1 4 1 1790 230n
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -230 -500 310 -480 990
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 1010 -580n
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 -210 200 330 -280 950J -370 1350
-preplace netloc sys_clock_1 1 0 3 NJ 360 N 360 760
-preplace netloc xlconstant_1_dout 1 8 2 3450 -140 3770
-preplace netloc hexfile_holder_0_mount_ok 1 4 1 1770 270n
-preplace netloc hexfile_holder_0_mount_fail 1 4 1 1760 290n
-preplace netloc GCODE_Parser_0_mount_req 1 3 3 1410 650 NJ 650 2200
-preplace netloc axi_smc_M00_AXI 1 1 1 350 -710n
-preplace netloc axi_smc_M01_AXI 1 1 2 340 -470 970
-preplace netloc axi_smc_M02_AXI 1 1 2 360 -520 1010
+preplace netloc XYZ_Axis_Coordinator_0_cycles_per_step_z 1 6 2 N 270 3120
+preplace netloc XYZ_Axis_Coordinator_0_dir_x 1 6 2 2850 70 N
+preplace netloc XYZ_Axis_Coordinator_0_dir_y 1 6 2 2880 280 3130
+preplace netloc XYZ_Axis_Coordinator_0_dir_z 1 6 2 2840 340 3110
+preplace netloc XYZ_Axis_Coordinator_0_direction_change_buffer 1 6 1 2860 410n
+preplace netloc XYZ_Axis_Coordinator_0_load_next_line 1 4 3 1990 640 NJ 640 2840
+preplace netloc XYZ_Axis_Coordinator_0_target_speed 1 6 1 2870 390n
+preplace netloc Zswitch_1 1 0 5 NJ 600 N 600 N 600 N 600 1880
+preplace netloc clk_wiz_clk_out1 1 3 5 1520 110 1920 120 2420 160 2910J 160 3170
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -230 -500 440 -470 1100
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 1110 -580n
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 0 4 -210 220 450 -270 1130J -390 1470
+preplace netloc sys_clock_1 1 0 3 NJ 360 N 360 880
+preplace netloc xlconstant_1_dout 1 4 5 1990 -370 2420 -90 N -90 N -90 3570
+preplace netloc GCODE_Parser_0_mount_req 1 3 3 1510 -260 1890J -360 2350
+preplace netloc MOUNT_FAIL_GPIO_gpio_io_o 1 3 2 1470 80 1960
+preplace netloc MOUNT_OK_GPIO_gpio_io_o 1 3 2 N 10 1950
+preplace netloc ACK_GPIO_gpio_io_o 1 3 2 N -270 1910
+preplace netloc X_GPIO_gpio_io_o 1 2 3 1080J -380 NJ -380 1970
+preplace netloc Y_GPIO_gpio_io_o 1 2 3 1120J -370 NJ -370 1930
+preplace netloc Z_GPIO_gpio_io_o 1 2 3 880J 220 1480J 100 1880
+preplace netloc SPEED_GPIO_gpio_io_o 1 2 3 NJ 240 1470J 350 1890
+preplace netloc axi_smc_M00_AXI 1 1 1 470 -710n
+preplace netloc axi_smc_M01_AXI 1 1 2 480 -520 1110
+preplace netloc axi_smc_M02_AXI 1 1 2 460 -490 1090
 preplace netloc axi_smc_M03_AXI 1 1 1 90 -650n
 preplace netloc axi_smc_M04_AXI 1 1 1 100 -630n
 preplace netloc axi_smc_M05_AXI 1 1 1 70 -610n
-preplace netloc processing_system7_0_DDR 1 2 9 790J -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 2 9 820J -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 -220 -510 N -510 790J
-preplace netloc axi_smc_M06_AXI 1 1 2 330J -490 960
-preplace netloc axi_smc_M07_AXI 1 1 2 320J -500 980
-levelinfo -pg 1 -250 -70 560 1180 1590 2030 2520 2890 3220 3600 3860 3990
+preplace netloc processing_system7_0_DDR 1 2 8 890J -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ -690 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 8 940J -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ -670 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 3 -220 -510 N -510 890J
+preplace netloc axi_smc_M06_AXI 1 1 2 450J -500 1070
+preplace netloc axi_smc_M07_AXI 1 1 2 80J -480 890
+levelinfo -pg 1 -250 -70 680 1300 1710 2160 2640 3010 3340 3720 3900
 pagesize -pg 1 -db -bbox -sgen -380 -1010 4110 1470
 "
 }

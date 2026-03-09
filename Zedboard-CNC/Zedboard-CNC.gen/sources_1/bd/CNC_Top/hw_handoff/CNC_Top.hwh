@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  9 15:33:56 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar  9 16:28:11 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -333,13 +333,11 @@
         <PORT DIR="O" NAME="drv_direction" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="directionX"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_enable" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_enable">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="enableX"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="drv_ms1" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_ms1">
@@ -365,7 +363,6 @@
         <PORT DIR="O" NAME="drv_step" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="stepX"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="DriverController_X_en">
@@ -756,7 +753,12 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4122FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="ACK_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="ack_phase"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="PS_Phase"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -1126,9 +1128,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="1" NAME="ack_phase" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_ack_phase">
+        <PORT DIR="I" LEFT="1" NAME="ack_phase" RIGHT="0" SIGIS="undef" SIGNAME="ACK_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="ack_phase"/>
+            <CONNECTION INSTANCE="ACK_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
@@ -1138,7 +1140,6 @@
         </PORT>
         <PORT DIR="O" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in7"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="hold"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="hold"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="hold"/>
@@ -1150,39 +1151,41 @@
             <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="mount_fail" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_fail">
+        <PORT DIR="I" NAME="mount_fail" SIGIS="undef" SIGNAME="MOUNT_FAIL_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_fail"/>
+            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="mount_ok" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_ok">
+        <PORT DIR="I" NAME="mount_ok" SIGIS="undef" SIGNAME="MOUNT_OK_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_ok"/>
+            <CONNECTION INSTANCE="MOUNT_OK_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mount_req" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
           <CONNECTIONS>
             <CONNECTION INSTANCE="hexfile_holder_0" PORT="mount_req"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="PL_Phase"/>
+            <CONNECTION INSTANCE="REQ_GPIO" PORT="gpio_io_i"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_line_speed">
+        <PORT DIR="I" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef" SIGNAME="SPEED_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="next_line_speed"/>
+            <CONNECTION INSTANCE="SPEED_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="next_x" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_x">
+        <PORT DIR="I" LEFT="31" NAME="next_x" RIGHT="0" SIGIS="undef" SIGNAME="X_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="next_x"/>
+            <CONNECTION INSTANCE="X_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="next_y" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_y">
+        <PORT DIR="I" LEFT="31" NAME="next_y" RIGHT="0" SIGIS="undef" SIGNAME="Y_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="next_y"/>
+            <CONNECTION INSTANCE="Y_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="next_z" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_z">
+        <PORT DIR="I" LEFT="31" NAME="next_z" RIGHT="0" SIGIS="undef" SIGNAME="Z_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="hexfile_holder_0" PORT="next_z"/>
+            <CONNECTION INSTANCE="Z_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="phase" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_phase">
@@ -1249,9 +1252,8 @@
             <CONNECTION INSTANCE="A4988_Driver_IO1" PORT="ms3"/>
             <CONNECTION INSTANCE="A4988_Driver_IO2" PORT="ms3"/>
             <CONNECTION INSTANCE="A4988_Driver_IO" PORT="ms3"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in4"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in3"/>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in6"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in1"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="in2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1264,49 +1266,39 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="in0" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_enable">
+        <PORT DIR="I" LEFT="1" NAME="PL_Phase" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_enable"/>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_req"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in1" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_direction">
+        <PORT DIR="I" LEFT="1" NAME="PS_Phase" RIGHT="0" SIGIS="undef" SIGNAME="ACK_GPIO_gpio_io_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_direction"/>
+            <CONNECTION INSTANCE="ACK_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in2" SIGIS="undef" SIGNAME="A4988_Driver_IO_drv_step">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="A4988_Driver_IO" PORT="drv_step"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="in3" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="High_Bit_dout">
+        <PORT DIR="I" NAME="in1" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="High_Bit_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="in4" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="High_Bit_dout">
+        <PORT DIR="I" NAME="in2" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="High_Bit_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="in5" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_load_next_line">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator_0" PORT="load_next_line"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="in6" POLARITY="ACTIVE_HIGH" SIGIS="undef" SIGNAME="High_Bit_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="High_Bit" PORT="dout"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="in7" SIGIS="undef" SIGNAME="GCODE_Parser_0_enable">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="LED_IO_0_led">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mount_fail" SIGIS="undef" SIGNAME="MOUNT_FAIL_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mount_ok" SIGIS="undef" SIGNAME="MOUNT_OK_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MOUNT_OK_GPIO" PORT="gpio_io_o"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1507,7 +1499,12 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4126FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="MOUNT_FAIL_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_fail"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="mount_fail"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -1859,7 +1856,12 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4127FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="MOUNT_OK_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_ok"/>
+            <CONNECTION INSTANCE="LED_IO_0" PORT="mount_ok"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -2211,7 +2213,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4121FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="1" NAME="gpio_io_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="1" NAME="gpio_io_i" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_req"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -2563,7 +2569,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4123FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="7" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="SPEED_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_line_speed"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -2764,7 +2774,6 @@
         </PORT>
         <PORT DIR="O" NAME="load_next_line" SIGIS="undef" SIGNAME="XYZ_Axis_Coordinator_0_load_next_line">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="LED_IO_0" PORT="in5"/>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="load_next_line"/>
           </CONNECTIONS>
         </PORT>
@@ -3031,7 +3040,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4120FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="X_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_x"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -3383,7 +3396,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4124FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="Y_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_y"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -3735,7 +3752,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4125FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="Z_GPIO_gpio_io_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_z"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -5892,51 +5913,23 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="1" NAME="ack_phase" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_ack_phase">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="ack_phase"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ack_phase" RIGHT="0" SIGIS="undef"/>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz" PORT="clk_out1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="mount_fail" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_fail">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_fail"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="mount_ok" SIGIS="undef" SIGNAME="hexfile_holder_0_mount_ok">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_ok"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" NAME="mount_fail" SIGIS="undef"/>
+        <PORT DIR="O" NAME="mount_ok" SIGIS="undef"/>
         <PORT DIR="I" NAME="mount_req" SIGIS="undef" SIGNAME="GCODE_Parser_0_mount_req">
           <CONNECTIONS>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="mount_req"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_line_speed">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_line_speed"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="next_x" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_x">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_x"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="next_y" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_y">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_y"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="next_z" RIGHT="0" SIGIS="undef" SIGNAME="hexfile_holder_0_next_z">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="GCODE_Parser_0" PORT="next_z"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="next_line_speed" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="next_x" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="next_y" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="next_z" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="1" NAME="phase" RIGHT="0" SIGIS="undef" SIGNAME="GCODE_Parser_0_phase">
           <CONNECTIONS>
             <CONNECTION INSTANCE="GCODE_Parser_0" PORT="phase"/>
