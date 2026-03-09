@@ -27,3 +27,4 @@ bsp reload
 catch {bsp regenerate}
 catch {platform remove CNC-PL9}
 platform generate
+platform active {CNC-PL1}

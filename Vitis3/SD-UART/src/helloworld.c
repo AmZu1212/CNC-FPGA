@@ -7,8 +7,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+#define X_REG          XPAR_X_GPIO_BASEADDR
+#define Y_REG          XPAR_Y_GPIO_BASEADDR
+#define Z_REG          XPAR_Z_GPIO_BASEADDR
+#define SPEED_REG      XPAR_SPEED_GPIO_BASEADDR
 #define ACK_REG        XPAR_ACK_GPIO_BASEADDR
 #define REQ_REG        XPAR_REQ_GPIO_BASEADDR
+#define MOUNT_REQ_REG  XPAR_MOUNT_REQ_GPIO_BASEADDR
 #define MOUNT_OK_REG   XPAR_MOUNT_OK_GPIO_BASEADDR
 #define MOUNT_FAIL_REG XPAR_MOUNT_FAIL_GPIO_BASEADDR
 
@@ -177,66 +182,24 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
     return (motion_type == 0) ? 1 : 1;
 }
 
-int main(void)
+static int load_next_motion(FIL *fp,
+                            char *line,
+                            unsigned int line_size,
+                            MotionCommand *cmd,
+                            unsigned int *motion_count)
 {
-    FATFS fatfs;
-    FIL file;
-    FRESULT fr;
-    char line[256];
     int line_status;
     int parse_status;
-    unsigned int line_num = 0U;
-    MotionCommand cmd = {0, 0, 0, 0U};
-
-    init_platform();
-
-    Xil_Out8(ACK_REG, 0U);
-    Xil_Out8(MOUNT_OK_REG, 0U);
-    Xil_Out8(MOUNT_FAIL_REG, 0U);
-
-    xil_printf("SD smoke test starting\r\n");
-    xil_printf("REQ=0x%x\r\n", (unsigned int)(Xil_In8(REQ_REG) & 0x03U));
-
-    fr = f_mount(&fatfs, "0:/", 1U);
-    xil_printf("f_mount -> %d\r\n", (int)fr);
-    if (fr != FR_OK) {
-        Xil_Out8(MOUNT_FAIL_REG, 1U);
-        xil_printf("Mount failed\r\n");
-        while (1) {
-        }
-    }
-
-    Xil_Out8(MOUNT_OK_REG, 1U);
-    xil_printf("Mount ok\r\n");
-
-    fr = f_open(&file, "0:/RUN.G", FA_READ);
-    xil_printf("f_open(RUN.G) -> %d\r\n", (int)fr);
-    if (fr != FR_OK) {
-        Xil_Out8(MOUNT_OK_REG, 0U);
-        Xil_Out8(MOUNT_FAIL_REG, 1U);
-        xil_printf("Open failed\r\n");
-        while (1) {
-        }
-    }
-
-    xil_printf("RUN.G opened\r\n");
 
     while (1) {
-        line_status = read_line(&file, line, sizeof(line));
-        if (line_status < 0) {
-            xil_printf("read_line error\r\n");
-            break;
+        line_status = read_line(fp, line, line_size);
+        if (line_status <= 0) {
+            return line_status;
         }
 
-        if (line_status == 0) {
-            xil_printf("EOF\r\n");
-            break;
-        }
-
-        parse_status = parse_motion_line(line, &cmd);
+        parse_status = parse_motion_line(line, cmd);
         if (parse_status < 0) {
-            line_num++;
-            xil_printf("%d: parse error\r\n", (int)line_num);
+            xil_printf("parse error: %s\r\n", line);
             continue;
         }
 
@@ -244,20 +207,155 @@ int main(void)
             continue;
         }
 
-        line_num++;
-        xil_printf("%d: X=%d Y=%d Z=%d F=%d\r\n",
-                   (int)line_num,
-                   (int)cmd.x,
-                   (int)cmd.y,
-                   (int)cmd.z,
-                   (int)cmd.speed);
+        *motion_count = *motion_count + 1U;
+        return 1;
     }
+}
 
-    f_close(&file);
-    f_mount(0, "0:/", 1U);
-    xil_printf("Done\r\n");
+static void write_motion_regs(const MotionCommand *cmd)
+{
+    Xil_Out32(X_REG, (u32)cmd->x);
+    Xil_Out32(Y_REG, (u32)cmd->y);
+    Xil_Out32(Z_REG, (u32)cmd->z);
+    Xil_Out8(SPEED_REG, cmd->speed);
+}
+
+int main(void)
+{
+    FATFS fatfs;
+    FIL file;
+    FRESULT fr;
+    char line[256];
+    unsigned int motion_count = 0U;
+    MotionCommand cmd = {0, 0, 0, 0U};
+    u8 ack_phase = 0U;
+    u8 mount_ok = 0U;
+    u8 mount_fail = 0U;
+    int mounted = 0;
+    int file_open = 0;
+    int eof_reached = 0;
+
+    init_platform();
+
+    Xil_Out8(ACK_REG, 0U);
+    Xil_Out8(MOUNT_OK_REG, 0U);
+    Xil_Out8(MOUNT_FAIL_REG, 0U);
+    Xil_Out32(X_REG, 0U);
+    Xil_Out32(Y_REG, 0U);
+    Xil_Out32(Z_REG, 0U);
+    Xil_Out8(SPEED_REG, 0U);
+
+    xil_printf("PS protocol loop starting\r\n");
 
     while (1) {
+        u8 mount_req = (u8)(Xil_In8(MOUNT_REQ_REG) & 0x01U);
+        u8 req_phase = (u8)(Xil_In8(REQ_REG) & 0x03U);
+
+        if (mount_req == 0U) {
+            if (file_open) {
+                f_close(&file);
+                file_open = 0;
+            }
+
+            if (mounted) {
+                f_mount(0, "0:/", 1U);
+                mounted = 0;
+                xil_printf("Unmounted\r\n");
+            }
+
+            eof_reached = 0;
+            motion_count = 0U;
+            ack_phase = 0U;
+            mount_ok = 0U;
+            mount_fail = 0U;
+            Xil_Out8(ACK_REG, ack_phase);
+            Xil_Out8(MOUNT_OK_REG, mount_ok);
+            Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+            continue;
+        }
+
+        if (mount_fail != 0U) {
+            continue;
+        }
+
+        if (!mounted) {
+            fr = f_mount(&fatfs, "0:/", 1U);
+            xil_printf("f_mount -> %d\r\n", (int)fr);
+            if (fr != FR_OK) {
+                mount_fail = 1U;
+                Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+                xil_printf("Mount failed\r\n");
+                continue;
+            }
+
+            fr = f_open(&file, "0:/RUN.G", FA_READ);
+            xil_printf("f_open(RUN.G) -> %d\r\n", (int)fr);
+            if (fr != FR_OK) {
+                f_mount(0, "0:/", 1U);
+                mount_fail = 1U;
+                Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+                xil_printf("Open failed\r\n");
+                continue;
+            }
+
+            file_open = 1;
+            mounted = 1;
+            mount_ok = 1U;
+            mount_fail = 0U;
+            ack_phase = 0U;
+            eof_reached = 0;
+            motion_count = 0U;
+            Xil_Out8(MOUNT_OK_REG, mount_ok);
+            Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+            Xil_Out8(ACK_REG, ack_phase);
+
+            if (load_next_motion(&file, line, sizeof(line), &cmd, &motion_count) > 0) {
+                write_motion_regs(&cmd);
+                xil_printf("PRELOAD %d: X=%d Y=%d Z=%d F=%d\r\n",
+                           (int)motion_count,
+                           (int)cmd.x,
+                           (int)cmd.y,
+                           (int)cmd.z,
+                           (int)cmd.speed);
+            } else {
+                f_close(&file);
+                file_open = 0;
+                f_mount(0, "0:/", 1U);
+                mounted = 0;
+                mount_ok = 0U;
+                mount_fail = 1U;
+                Xil_Out8(MOUNT_OK_REG, mount_ok);
+                Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+                xil_printf("RUN.G has no valid G0/G1 motions\r\n");
+            }
+
+            continue;
+        }
+
+        if (eof_reached) {
+            continue;
+        }
+
+        if (((req_phase == 0x01U) || (req_phase == 0x02U)) && (req_phase != ack_phase)) {
+            int next_status = load_next_motion(&file, line, sizeof(line), &cmd, &motion_count);
+            if (next_status > 0) {
+                write_motion_regs(&cmd);
+                ack_phase = req_phase;
+                Xil_Out8(ACK_REG, ack_phase);
+                xil_printf("PHASE 0x%x -> %d: X=%d Y=%d Z=%d F=%d\r\n",
+                           (unsigned int)ack_phase,
+                           (int)motion_count,
+                           (int)cmd.x,
+                           (int)cmd.y,
+                           (int)cmd.z,
+                           (int)cmd.speed);
+            } else {
+                ack_phase = req_phase;
+                eof_reached = 1;
+                Xil_Out8(ACK_REG, ack_phase);
+                xil_printf("EOF after %d motions\r\n", (int)motion_count);
+            }
+        }
     }
 
     cleanup_platform();

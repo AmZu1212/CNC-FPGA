@@ -1,2 +1,47 @@
 Nothing to build in platform 'CNC-PL-FINAL'
 
+17:43:02 **** Incremental Build of configuration Debug for project SD-UART ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/sw/CNC-PL-FINAL/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/sw/CNC-PL-FINAL/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: SD-UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/sw/CNC-PL-FINAL/standalone_domain/bsplib/lib -o "SD-UART.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SD-UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SD-UART.elf  |tee "SD-UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  87284	   1860	  25776	 114920	  1c0e8	SD-UART.elf
+'Finished building: SD-UART.elf.size'
+' '
+17:43:05 **** Incremental Build of configuration Debug for project SD-UART_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 60561 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/CNC-PL-FINAL.xpfm standalone_domain E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif
+
+****** Software Commandline Tool (XSCT) v2024.2.0
+  **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+sdcard_gen --xpfm E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-FINAL/export/CNC-PL-FINAL/CNC-PL-FINAL.xpfm --sys_config CNC-PL-FINAL --bif E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif --bitstream E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit --elf E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf,ps7_cortexa9_0
+creating BOOT.BIN using E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
+Running C:/Xilinx/Vitis/2024.2/bin/bootgen  -image E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
