@@ -27,6 +27,19 @@ typedef struct {
     u8 speed;
 } MotionCommand;
 
+static s32 clamp_axis_mm1000(s32 value, s32 min_value, s32 max_value)
+{
+    if (value < min_value) {
+        return min_value;
+    }
+
+    if (value > max_value) {
+        return max_value;
+    }
+
+    return value;
+}
+
 static int read_line(FIL *fp, char *buf, unsigned int buf_size)
 {
     UINT bytes_read = 0;
@@ -138,7 +151,7 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
             double value;
             cursor++;
             value = strtod(cursor, &cursor);
-            cmd->x = (s32)(value * 1000.0);
+            cmd->x = clamp_axis_mm1000((s32)(value * 1000.0), 0, 190000);
             continue;
         }
 
@@ -146,7 +159,7 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
             double value;
             cursor++;
             value = strtod(cursor, &cursor);
-            cmd->y = (s32)(value * 1000.0);
+            cmd->y = clamp_axis_mm1000((s32)(value * 1000.0), 0, 190000);
             continue;
         }
 
@@ -154,7 +167,7 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
             double value;
             cursor++;
             value = strtod(cursor, &cursor);
-            cmd->z = (s32)(value * 1000.0);
+            cmd->z = clamp_axis_mm1000((s32)(value * 1000.0), 0, 20000);
             continue;
         }
 
