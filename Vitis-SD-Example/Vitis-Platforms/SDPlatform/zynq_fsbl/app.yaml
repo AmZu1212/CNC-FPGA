@@ -1,4 +1,0 @@
-domain_path: X:\Git-Repos\CNC-FPGA\Vitis-Platforms\SDPlatform\zynq_fsbl\zynq_fsbl_bsp
-app_src_dir: X:\Xilinx\Vitis\2024.2\data\embeddedsw\lib\sw_apps\zynq_fsbl
-template: zynq_fsbl
-lang: c
