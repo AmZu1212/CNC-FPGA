@@ -41,3 +41,5 @@ bsp reload
 platform generate -domains 
 platform clean
 platform generate
+platform generate
+platform active {CNC-PL333}

@@ -8,16 +8,21 @@
 #include <stdlib.h>
 #include "sleep.h"
 
+/* PS -> PL motion payload registers */
 #define X_REG          XPAR_X_GPIO_BASEADDR
 #define Y_REG          XPAR_Y_GPIO_BASEADDR
 #define Z_REG          XPAR_Z_GPIO_BASEADDR
 #define SPEED_REG      XPAR_SPEED_GPIO_BASEADDR
+
+/* PS <-> PL handshake and session-state registers */
 #define ACK_REG        XPAR_ACK_GPIO_BASEADDR
 #define REQ_REG        XPAR_REQ_GPIO_BASEADDR
 #define MOUNT_REQ_REG  XPAR_MOUNT_REQ_GPIO_BASEADDR
 #define LAST_LINE_REG  XPAR_LAST_LINE_GPIO_BASEADDR
 #define MOUNT_OK_REG   XPAR_MOUNT_OK_GPIO_BASEADDR
 #define MOUNT_FAIL_REG XPAR_MOUNT_FAIL_GPIO_BASEADDR
+
+/* Default rapid speed used before the first explicit F word is parsed. */
 #define DEFAULT_SPEED  180U
 
 typedef struct {
@@ -27,6 +32,15 @@ typedef struct {
     u8 speed;
 } MotionCommand;
 
+/**
+ * @brief Clamp a position value, represented in microns, to the machine work area.
+ *
+ * @param value Position value to clamp, in microns.
+ * @param min_value Lower bound, in microns.
+ * @param max_value Upper bound, in microns.
+ *
+ * @return The clamped position value.
+ */
 static s32 clamp_axis_mm1000(s32 value, s32 min_value, s32 max_value)
 {
     if (value < min_value) {
@@ -40,6 +54,20 @@ static s32 clamp_axis_mm1000(s32 value, s32 min_value, s32 max_value)
     return value;
 }
 
+/**
+ * @brief Read one text line from an open FatFs file.
+ *
+ * Reads until '\n', EOF, or the buffer is full. '\r' characters are ignored.
+ * The destination buffer is always NUL-terminated on success.
+ *
+ * @param fp Open file handle.
+ * @param buf Destination buffer for the line contents.
+ * @param buf_size Size of @p buf in bytes. Must be at least 2.
+ *
+ * @return 1 if a line was read successfully.
+ * @return 0 if end-of-file was reached before any characters were read.
+ * @return -1 on file read error or invalid arguments.
+ */
 static int read_line(FIL *fp, char *buf, unsigned int buf_size)
 {
     UINT bytes_read = 0;
@@ -80,6 +108,15 @@ static int read_line(FIL *fp, char *buf, unsigned int buf_size)
     return 1;
 }
 
+/**
+ * @brief Remove G-code comments from a line buffer in place.
+ *
+ * Removes everything after a ';' comment marker and removes any text inside
+ * parenthesis comments "(...)". The cleaned line is written back into the
+ * same buffer.
+ *
+ * @param line NUL-terminated line buffer to sanitize.
+ */
 static void strip_comments(char *line)
 {
     unsigned int read_idx = 0U;
@@ -113,6 +150,23 @@ static void strip_comments(char *line)
     line[write_idx] = '\0';
 }
 
+/**
+ * @brief Parse a single G-code line into the current modal motion command.
+ *
+ * Accepts only G0 and G1 motion lines. Position values are converted from mm
+ * to microns and clamped to the machine work area. Feed values are converted
+ * from mm/min to mm/s and clamped to the u8 register range.
+ *
+ * Missing X, Y, Z, or F words preserve the previous modal values already
+ * stored in @p cmd.
+ *
+ * @param line NUL-terminated G-code line buffer. The line is sanitized in place.
+ * @param cmd Current modal motion command, updated in place.
+ *
+ * @return 1 if a valid G0/G1 motion line was parsed.
+ * @return 0 if the line does not contain a supported motion command.
+ * @return -1 if the line contains an invalid feed value.
+ */
 static int parse_motion_line(char *line, MotionCommand *cmd)
 {
     char *cursor = line;
@@ -196,11 +250,24 @@ static int parse_motion_line(char *line, MotionCommand *cmd)
     return 1;
 }
 
-static int load_next_motion(FIL *fp,
-                            char *line,
-                            unsigned int line_size,
-                            MotionCommand *cmd,
-                            unsigned int *motion_count)
+/**
+ * @brief Advance through the file until the next valid G0/G1 motion is found.
+ *
+ * Reads lines until it finds a supported motion command. Comment-only,
+ * non-motion, or malformed-but-skippable lines are ignored.
+ *
+ * @param fp Open file handle for RUN.G.
+ * @param line Scratch buffer used to read raw file lines.
+ * @param line_size Size of the scratch buffer in bytes.
+ * @param cmd Current modal motion command, updated in place when a valid
+ *            motion line is found.
+ * @param motion_count Running count of accepted motion commands.
+ *
+ * @return 1 if a new valid motion command was loaded into @p cmd.
+ * @return 0 if end-of-file was reached before another motion command was found.
+ * @return -1 on file read error.
+ */
+static int load_next_motion(FIL *fp, char *line, unsigned int line_size, MotionCommand *cmd, unsigned int *motion_count)
 {
     int line_status;
     int parse_status;
@@ -226,6 +293,11 @@ static int load_next_motion(FIL *fp,
     }
 }
 
+/**
+ * @brief Write one motion command into the PL-facing AXI GPIO payload registers.
+ *
+ * @param cmd Motion command to publish to the PL.
+ */
 static void write_motion_regs(const MotionCommand *cmd)
 {
     Xil_Out32(X_REG, (u32)cmd->x);
@@ -266,10 +338,12 @@ int main(void)
     xil_printf("PS protocol loop starting\r\n");
 
     while (1) {
+        /* Sample the current PL request state once per polling iteration. */
         u8 mount_req = (u8)(Xil_In8(MOUNT_REQ_REG) & 0x01U);
         u8 req_phase = (u8)(Xil_In8(REQ_REG) & 0x03U);
 
         if (mount_req == 0U) {
+            /* Session closed by PL: tear down local file state and drive the interface back to idle. */
             if (file_open) {
                 f_close(&file);
                 file_open = 0;
@@ -292,6 +366,8 @@ int main(void)
             Xil_Out32(Y_REG, 0U);
             Xil_Out32(Z_REG, 0U);
             Xil_Out8(SPEED_REG, 0U);
+            /* Give the payload registers a short guard time before clearing the handshake bits. */
+            usleep(10U);
             Xil_Out8(ACK_REG, ack_phase);
             Xil_Out8(LAST_LINE_REG, 0U);
             Xil_Out8(MOUNT_OK_REG, mount_ok);
@@ -304,6 +380,7 @@ int main(void)
         }
 
         if (!mounted) {
+            /* A new file session begins only after PL raises mount_req. */
             fr = f_mount(&fatfs, "0:/", 1U);
             xil_printf("f_mount -> %d\r\n", (int)fr);
             if (fr != FR_OK) {
@@ -332,27 +409,27 @@ int main(void)
             current_valid = 0;
             buffered_valid = 0;
             current_is_last = 0;
+
+            /* Reset the modal command state for the new file session. */
             current_cmd.x = 0;
             current_cmd.y = 0;
             current_cmd.z = 0;
             current_cmd.speed = DEFAULT_SPEED;
             Xil_Out8(ACK_REG, ack_phase);
             Xil_Out8(LAST_LINE_REG, 0U);
-            Xil_Out8(MOUNT_OK_REG, mount_ok);
+
             Xil_Out8(MOUNT_FAIL_REG, mount_fail);
+            /* Guard delay before exposing the initial preloaded command to the PL. */
+            usleep(10U);
 
             if (load_next_motion(&file, line, sizeof(line), &current_cmd, &motion_count) > 0) {
                 buffered_cmd = current_cmd;
                 int preload_status = load_next_motion(&file, line, sizeof(line), &buffered_cmd, &motion_count);
-
                 current_valid = 1;
                 buffered_valid = (preload_status > 0);
                 current_is_last = !buffered_valid;
-
                 write_motion_regs(&current_cmd);
                 Xil_Out8(LAST_LINE_REG, current_is_last ? 1U : 0U);
-                usleep(5U);
-                Xil_Out8(MOUNT_OK_REG, mount_ok);
                 xil_printf("PRELOAD %d: X=%d Y=%d Z=%d F=%d\r\n",
                            (int)motion_count,
                            (int)current_cmd.x,
@@ -366,11 +443,11 @@ int main(void)
                 mounted = 0;
                 mount_ok = 0U;
                 mount_fail = 1U;
-                Xil_Out8(MOUNT_OK_REG, mount_ok);
                 Xil_Out8(MOUNT_FAIL_REG, mount_fail);
                 xil_printf("RUN.G has no valid G0/G1 motions\r\n");
             }
 
+            Xil_Out8(MOUNT_OK_REG, mount_ok);
             continue;
         }
 
@@ -379,6 +456,7 @@ int main(void)
         }
 
         if (((req_phase == 0x01U) || (req_phase == 0x02U)) && (req_phase != ack_phase)) {
+            /* ACK is updated only after the new payload has been written and delayed. */
             if (current_is_last) {
                 usleep(5U);
                 ack_phase = req_phase;

@@ -1,7 +1,7 @@
-22:59:51 **** Incremental Build of configuration Debug for project SD-UART_system ****
+16:47:39 **** Incremental Build of configuration Debug for project SD-UART_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 62852 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/CNC-PL333.xpfm standalone_domain E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif
+generate_system_bif.bat 53793 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/export/CNC-PL-PRE-RELEASE/CNC-PL-PRE-RELEASE.xpfm standalone_domain E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif
 
 ****** Software Commandline Tool (XSCT) v2024.2.0
   **** SW Build 5239620 on Sun Nov 10 09:56:12 MST 2024
@@ -13,9 +13,9 @@ Warning: XSCT is deprecated and will be removed in future releases.
 We recommend using the new Python command-line tool for project management and debugging:
 - Run "vitis -i" for interactive mode.
 - Run "vitis -s <script>" for script mode.
-sdcard_gen --xpfm E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/CNC-PL333.xpfm --sys_config CNC-PL333 --bif E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif --bitstream E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit --elf E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf,ps7_cortexa9_0
+sdcard_gen --xpfm E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/export/CNC-PL-PRE-RELEASE/CNC-PL-PRE-RELEASE.xpfm --sys_config CNC-PL-PRE-RELEASE --bif E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/system.bif --bitstream E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit --elf E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/Debug/SD-UART.elf,ps7_cortexa9_0
 creating BOOT.BIN using E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART/_ide/bitstream/CNC_Top_wrapper.bit
 Running C:/Xilinx/Vitis/2024.2/bin/bootgen  -image E:/Git-Repos/CNC-FPGA/Vitis3/SD-UART_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-22:59:59 Build Finished (took 8s.466ms)
+16:47:47 Build Finished (took 8s.66ms)
 

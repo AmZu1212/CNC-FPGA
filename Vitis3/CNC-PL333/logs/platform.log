@@ -5696,3 +5696,1158 @@ TRACE::2026-03-09.21:01:01::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/
 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
 
 TRACE::2026-03-09.21:01:01::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:19::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:19::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:19::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:19::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:19::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:19::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:19::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWReader::Active system found as  CNC-PL333
+TRACE::2026-03-10.15:38:22::SCWReader::Handling sysconfig CNC-PL333
+TRACE::2026-03-10.15:38:22::SCWDomain::checking for install qemu data   : 
+TRACE::2026-03-10.15:38:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-03-10.15:38:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-03-10.15:38:22::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-03-10.15:38:22::SCWMssOS::updating the scw layer about changes
+TRACE::2026-03-10.15:38:22::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-03-10.15:38:22::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-10.15:38:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-10.15:38:22::SCWMssOS::Commit changes completed.
+TRACE::2026-03-10.15:38:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-03-10.15:38:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWReader::No isolation master present  
+TRACE::2026-03-10.15:38:22::SCWDomain::checking for install qemu data   : 
+TRACE::2026-03-10.15:38:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-03-10.15:38:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2026-03-10.15:38:22::SCWMssOS::updating the scw layer about changes
+TRACE::2026-03-10.15:38:22::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS:: library already available in sw design:  xiltimer:2.1
+TRACE::2026-03-10.15:38:22::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-10.15:38:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-10.15:38:22::SCWMssOS::Commit changes completed.
+TRACE::2026-03-10.15:38:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-03-10.15:38:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWReader::No isolation master present  
+LOG::2026-03-10.15:38:22::SCWPlatform::Started generating the artifacts platform CNC-PL333
+TRACE::2026-03-10.15:38:22::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-03-10.15:38:22::SCWPlatform::Started generating the artifacts for system configuration CNC-PL333
+LOG::2026-03-10.15:38:22::SCWSystem::Checking the domain zynq_fsbl
+LOG::2026-03-10.15:38:22::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2026-03-10.15:38:22::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-03-10.15:38:22::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:22::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:22::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:22::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:22::SCWBDomain::Completed writing the mss file at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2026-03-10.15:38:22::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-03-10.15:38:22::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-03-10.15:38:22::SCWBDomain::System Command Ran  E:&  cd  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl& make -C  zynq_fsbl_bsp & make 
+TRACE::2026-03-10.15:38:22::SCWBDomain::make: Entering directory 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make --no-print-directory seq_libs
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-non
+TRACE::2026-03-10.15:38:22::SCWBDomain::e-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2026-03-10.15:38:22::SCWBDomain::hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2026-03-10.15:38:22::SCWBDomain::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2026-03-10.15:38:22::SCWBDomain::d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:22::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:22::SCWBDomain::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:22::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:22::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+TRACE::2026-03-10.15:38:22::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:22::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:22::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:23::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:23::SCWBDomain::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:23::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:23::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2026-03-10.15:38:23::SCWBDomain::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2026-03-10.15:38:23::SCWBDomain::startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:23::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:23::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2026-03-10.15:38:23::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2026-03-10.15:38:23::SCWBDomain::tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+TRACE::2026-03-10.15:38:23::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2026-03-10.15:38:23::SCWBDomain::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2026-03-10.15:38:23::SCWBDomain::nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:24::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+TRACE::2026-03-10.15:38:24::SCWBDomain::make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2026-03-10.15:38:24::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2026-03-10.15:38:24::SCWBDomain::tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:24::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+TRACE::2026-03-10.15:38:24::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:24::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:24::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v5_3/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_8/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_8/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:25::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:25::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::'Finished building libraries sequentially.'
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -j 22 --no-print-directory par_libs
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-non
+TRACE::2026-03-10.15:38:25::SCWBDomain::e-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2026-03-10.15:38:25::SCWBDomain::hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2026-03-10.15:38:25::SCWBDomain::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2026-03-10.15:38:25::SCWBDomain::d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:25::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:25::SCWBDomain::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:25::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:25::SCWBDomain::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2026-03-10.15:38:25::SCWBDomain::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2026-03-10.15:38:25::SCWBDomain::startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2026-03-10.15:38:25::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2026-03-10.15:38:25::SCWBDomain::tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2026-03-10.15:38:25::SCWBDomain::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2026-03-10.15:38:25::SCWBDomain::nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2026-03-10.15:38:25::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2026-03-10.15:38:25::SCWBDomain::tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v5_3/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_8/src"
+
+TRACE::2026-03-10.15:38:25::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:25::SCWBDomain:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:25::SCWBDomain::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2026-03-10.15:38:26::SCWBDomain::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2026-03-10.15:38:26::SCWBDomain::d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2026-03-10.15:38:26::SCWBDomain::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2026-03-10.15:38:26::SCWBDomain::nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2026-03-10.15:38:26::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2026-03-10.15:38:26::SCWBDomain::iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2026-03-10.15:38:26::SCWBDomain::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2026-03-10.15:38:26::SCWBDomain::iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:26::SCWBDomain::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:26::SCWBDomain::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2026-03-10.15:38:26::SCWBDomain::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2026-03-10.15:38:26::SCWBDomain::les -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2026-03-10.15:38:26::SCWBDomain::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2026-03-10.15:38:26::SCWBDomain::tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2026-03-10.15:38:26::SCWBDomain::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2026-03-10.15:38:26::SCWBDomain::tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v5_3/src"
+
+TRACE::2026-03-10.15:38:26::SCWBDomain::make -C ps7_cortexa9_0/libsrc/xilffs_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:26::SCWBDomain::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:26::SCWBDomain::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:27::SCWBDomain::'Finished building libraries parallelly.'
+
+TRACE::2026-03-10.15:38:27::SCWBDomain::make --no-print-directory archive
+
+TRACE::2026-03-10.15:38:27::SCWBDomain::arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/_sbrk
+TRACE::2026-03-10.15:38:27::SCWBDomain::.o ps7_cortexa9_0/lib/abort.o ps7_cortexa9_0/lib/asm_vectors.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/lib/close.o ps7_cortexa
+TRACE::2026-03-10.15:38:27::SCWBDomain::9_0/lib/cpputest_time.o ps7_cortexa9_0/lib/cpu_init.o ps7_cortexa9_0/lib/errno.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa9_0/lib/
+TRACE::2026-03-10.15:38:27::SCWBDomain::fstat.o ps7_cortexa9_0/lib/getentropy.o ps7_cortexa9_0/lib/getpid.o ps7_cortexa9_0/lib/gettimeofday.o ps7_cortexa9_0/lib/inbyte
+TRACE::2026-03-10.15:38:27::SCWBDomain::.o ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0/lib/kill.o ps7_cortexa9_0/lib/lseek.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/li
+TRACE::2026-03-10.15:38:27::SCWBDomain::b/outbyte.o ps7_cortexa9_0/lib/print.o ps7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/read.o ps7_cortexa9_0/lib/sbrk.o ps7_cort
+TRACE::2026-03-10.15:38:27::SCWBDomain::exa9_0/lib/sleep.o ps7_cortexa9_0/lib/time.o ps7_cortexa9_0/lib/translation_table.o ps7_cortexa9_0/lib/unlink.o ps7_cortexa9_0/
+TRACE::2026-03-10.15:38:27::SCWBDomain::lib/usleep.o ps7_cortexa9_0/lib/vectors.o ps7_cortexa9_0/lib/write.o ps7_cortexa9_0/lib/xadcps.o ps7_cortexa9_0/lib/xadcps_g.o 
+TRACE::2026-03-10.15:38:27::SCWBDomain::ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xadcps_selftest.o ps7_cortexa9_0/lib/xadcps_sinit.o ps7_cortexa9_0/lib/xcor
+TRACE::2026-03-10.15:38:27::SCWBDomain::esightpsdcc.o ps7_cortexa9_0/lib/xdevcfg.o ps7_cortexa9_0/lib/xdevcfg_g.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xd
+TRACE::2026-03-10.15:38:27::SCWBDomain::evcfg_intr.o ps7_cortexa9_0/lib/xdevcfg_selftest.o ps7_cortexa9_0/lib/xdevcfg_sinit.o ps7_cortexa9_0/lib/xdmaps.o ps7_cortexa9_
+TRACE::2026-03-10.15:38:27::SCWBDomain::0/lib/xdmaps_g.o ps7_cortexa9_0/lib/xdmaps_hw.o ps7_cortexa9_0/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cort
+TRACE::2026-03-10.15:38:27::SCWBDomain::exa9_0/lib/xgpio.o ps7_cortexa9_0/lib/xgpio_extra.o ps7_cortexa9_0/lib/xgpio_g.o ps7_cortexa9_0/lib/xgpio_intr.o ps7_cortexa9_0
+TRACE::2026-03-10.15:38:27::SCWBDomain::/lib/xgpio_selftest.o ps7_cortexa9_0/lib/xgpio_sinit.o ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_0/lib/xil_assert.o ps7_cortex
+TRACE::2026-03-10.15:38:27::SCWBDomain::a9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xil_clocking.o ps7_cortexa9_0/lib/xil_exception.o ps7_cortexa9_0/lib/xil_mem.o ps7_cort
+TRACE::2026-03-10.15:38:27::SCWBDomain::exa9_0/lib/xil_misc_psreset_api.o ps7_cortexa9_0/lib/xil_mmu.o ps7_cortexa9_0/lib/xil_printf.o ps7_cortexa9_0/lib/xil_sleepcomm
+TRACE::2026-03-10.15:38:27::SCWBDomain::on.o ps7_cortexa9_0/lib/xil_sleeptimer.o ps7_cortexa9_0/lib/xil_spinlock.o ps7_cortexa9_0/lib/xil_sutil.o ps7_cortexa9_0/lib/xi
+TRACE::2026-03-10.15:38:27::SCWBDomain::l_testcache.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/lib/xil_testmem.o ps7_cortexa9_0/lib/xil_util.o ps7_cortexa9_0/lib
+TRACE::2026-03-10.15:38:27::SCWBDomain::/xinterrupt_wrap.o ps7_cortexa9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xplatform_info.o ps7_cortexa9_0/lib/xpm_counter.o ps7_
+TRACE::2026-03-10.15:38:27::SCWBDomain::cortexa9_0/lib/xpm_init.o ps7_cortexa9_0/lib/xscugic.o ps7_cortexa9_0/lib/xscugic_g.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_corte
+TRACE::2026-03-10.15:38:27::SCWBDomain::xa9_0/lib/xscugic_intr.o ps7_cortexa9_0/lib/xscugic_selftest.o ps7_cortexa9_0/lib/xscugic_sinit.o ps7_cortexa9_0/lib/xscutimer.
+TRACE::2026-03-10.15:38:27::SCWBDomain::o ps7_cortexa9_0/lib/xscutimer_g.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortexa9_0/
+TRACE::2026-03-10.15:38:27::SCWBDomain::lib/xscuwdt.o ps7_cortexa9_0/lib/xscuwdt_g.o ps7_cortexa9_0/lib/xscuwdt_selftest.o ps7_cortexa9_0/lib/xscuwdt_sinit.o ps7_corte
+TRACE::2026-03-10.15:38:27::SCWBDomain::xa9_0/lib/xsdps.o ps7_cortexa9_0/lib/xsdps_card.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0/l
+TRACE::2026-03-10.15:38:27::SCWBDomain::ib/xsdps_options.o ps7_cortexa9_0/lib/xsdps_sinit.o ps7_cortexa9_0/lib/xtime_l.o ps7_cortexa9_0/lib/xuartps.o ps7_cortexa9_0/li
+TRACE::2026-03-10.15:38:27::SCWBDomain::b/xuartps_g.o ps7_cortexa9_0/lib/xuartps_hw.o ps7_cortexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortex
+TRACE::2026-03-10.15:38:27::SCWBDomain::a9_0/lib/xuartps_selftest.o ps7_cortexa9_0/lib/xuartps_sinit.o
+
+TRACE::2026-03-10.15:38:28::SCWBDomain::'Finished building libraries'
+
+TRACE::2026-03-10.15:38:28::SCWBDomain::make: Leaving directory 'E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp'
+
+TRACE::2026-03-10.15:38:28::SCWBDomain::arm-none-eabi-gcc -o fsbl.elf fsbl_handoff.o fsbl_hooks.o image_mover.o main.o md5.o nand.o nor.o pcap.o ps7_init.o qspi.o rsa.
+TRACE::2026-03-10.15:38:28::SCWBDomain::o sd.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id
+TRACE::2026-03-10.15:38:28::SCWBDomain::=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-
+TRACE::2026-03-10.15:38:28::SCWBDomain::group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                        -Wl,--gc-sections -Lzynq_fsbl_
+TRACE::2026-03-10.15:38:28::SCWBDomain::bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+LOG::2026-03-10.15:38:29::SCWSystem::Checking the domain standalone_domain
+LOG::2026-03-10.15:38:29::SCWSystem::Not a boot domain 
+LOG::2026-03-10.15:38:29::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2026-03-10.15:38:29::SCWDomain::Generating domain artifcats
+TRACE::2026-03-10.15:38:29::SCWMssOS::Generating standalone artifcats
+TRACE::2026-03-10.15:38:29::SCWMssOS::Copying the qemu file from  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/resources/CNC-PL333/standalone_domain/qemu_args.txt To E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/sw/CNC-PL333/qemu/
+TRACE::2026-03-10.15:38:29::SCWMssOS::Copying the qemu file from  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/resources/CNC-PL333/standalone_domain/qemu_args.txt To E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/export/CNC-PL333/sw/CNC-PL333/standalone_domain/qemu/
+TRACE::2026-03-10.15:38:29::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-03-10.15:38:29::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:29::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:29::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:29::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:29::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:29::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:29::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:29::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:29::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:29::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:29::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:29::SCWMssOS::Completed writing the mss file at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2026-03-10.15:38:29::SCWMssOS::Mss edits present, copying mssfile into export location E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:29::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-03-10.15:38:29::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-03-10.15:38:29::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2026-03-10.15:38:29::SCWMssOS::doing bsp build ... 
+TRACE::2026-03-10.15:38:29::SCWMssOS::System Command Ran  E: & cd  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2026-03-10.15:38:29::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -j 22 --no-print-directory par_libs
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-non
+TRACE::2026-03-10.15:38:29::SCWMssOS::e-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2026-03-10.15:38:29::SCWMssOS::hard -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2026-03-10.15:38:29::SCWMssOS::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2026-03-10.15:38:29::SCWMssOS::d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:29::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:29::SCWMssOS::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:29::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:29::SCWMssOS::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2026-03-10.15:38:29::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2026-03-10.15:38:29::SCWMssOS::startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2026-03-10.15:38:29::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2026-03-10.15:38:29::SCWMssOS::tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2026-03-10.15:38:29::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2026-03-10.15:38:29::SCWMssOS::nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2026-03-10.15:38:29::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2026-03-10.15:38:29::SCWMssOS::tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v5_3/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v5_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2026-03-10.15:38:29::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2026-03-10.15:38:29::SCWMssOS::artfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xiltimer_v2_1/src"
+
+TRACE::2026-03-10.15:38:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xiltimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2026-03-10.15:38:29::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2026-03-10.15:38:29::SCWMssOS::startfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-e
+TRACE::2026-03-10.15:38:30::SCWMssOS::abi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=har
+TRACE::2026-03-10.15:38:30::SCWMssOS::d -nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2026-03-10.15:38:30::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2026-03-10.15:38:30::SCWMssOS::nostartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_2/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2026-03-10.15:38:30::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2026-03-10.15:38:30::SCWMssOS::iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_8/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_11/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_12/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_12/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2026-03-10.15:38:30::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2026-03-10.15:38:30::SCWMssOS::iles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v5_4/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v5_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_6/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:30::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:30::SCWMssOS::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_6/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v4_4/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v4_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2026-03-10.15:38:30::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2026-03-10.15:38:30::SCWMssOS::les -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v9_2/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v9_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2026-03-10.15:38:30::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2026-03-10.15:38:30::SCWMssOS::tartfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_15/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_15/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2026-03-10.15:38:30::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2026-03-10.15:38:30::SCWMssOS::tfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_7/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v5_3/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v5_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2026-03-10.15:38:30::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2026-03-10.15:38:30::SCWMssOS::files -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xiltimer_v2_1/src"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xiltimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2026-03-10.15:38:30::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2026-03-10.15:38:30::SCWMssOS::rtfiles -g -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2026-03-10.15:38:30::SCWMssOS::"Compiling xiltimer Library"
+
+TRACE::2026-03-10.15:38:31::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2026-03-10.15:38:31::SCWMssOS::make --no-print-directory archive
+
+TRACE::2026-03-10.15:38:31::SCWMssOS::arm-none-eabi-ar -r  ps7_cortexa9_0/lib/libxil.a ps7_cortexa9_0/lib/_exit.o ps7_cortexa9_0/lib/_open.o ps7_cortexa9_0/lib/_sbrk
+TRACE::2026-03-10.15:38:31::SCWMssOS::.o ps7_cortexa9_0/lib/abort.o ps7_cortexa9_0/lib/asm_vectors.o ps7_cortexa9_0/lib/boot.o ps7_cortexa9_0/lib/close.o ps7_cortexa
+TRACE::2026-03-10.15:38:31::SCWMssOS::9_0/lib/cpputest_time.o ps7_cortexa9_0/lib/cpu_init.o ps7_cortexa9_0/lib/errno.o ps7_cortexa9_0/lib/fcntl.o ps7_cortexa9_0/lib/
+TRACE::2026-03-10.15:38:31::SCWMssOS::fstat.o ps7_cortexa9_0/lib/getentropy.o ps7_cortexa9_0/lib/getpid.o ps7_cortexa9_0/lib/gettimeofday.o ps7_cortexa9_0/lib/inbyte
+TRACE::2026-03-10.15:38:31::SCWMssOS::.o ps7_cortexa9_0/lib/isatty.o ps7_cortexa9_0/lib/kill.o ps7_cortexa9_0/lib/lseek.o ps7_cortexa9_0/lib/open.o ps7_cortexa9_0/li
+TRACE::2026-03-10.15:38:31::SCWMssOS::b/outbyte.o ps7_cortexa9_0/lib/print.o ps7_cortexa9_0/lib/putnum.o ps7_cortexa9_0/lib/read.o ps7_cortexa9_0/lib/sbrk.o ps7_cort
+TRACE::2026-03-10.15:38:31::SCWMssOS::exa9_0/lib/time.o ps7_cortexa9_0/lib/translation_table.o ps7_cortexa9_0/lib/unlink.o ps7_cortexa9_0/lib/vectors.o ps7_cortexa9_
+TRACE::2026-03-10.15:38:31::SCWMssOS::0/lib/write.o ps7_cortexa9_0/lib/xadcps.o ps7_cortexa9_0/lib/xadcps_g.o ps7_cortexa9_0/lib/xadcps_intr.o ps7_cortexa9_0/lib/xad
+TRACE::2026-03-10.15:38:31::SCWMssOS::cps_selftest.o ps7_cortexa9_0/lib/xadcps_sinit.o ps7_cortexa9_0/lib/xcoresightpsdcc.o ps7_cortexa9_0/lib/xdevcfg.o ps7_cortexa9
+TRACE::2026-03-10.15:38:31::SCWMssOS::_0/lib/xdevcfg_g.o ps7_cortexa9_0/lib/xdevcfg_hw.o ps7_cortexa9_0/lib/xdevcfg_intr.o ps7_cortexa9_0/lib/xdevcfg_selftest.o ps7_
+TRACE::2026-03-10.15:38:31::SCWMssOS::cortexa9_0/lib/xdevcfg_sinit.o ps7_cortexa9_0/lib/xdmaps.o ps7_cortexa9_0/lib/xdmaps_g.o ps7_cortexa9_0/lib/xdmaps_hw.o ps7_cor
+TRACE::2026-03-10.15:38:31::SCWMssOS::texa9_0/lib/xdmaps_selftest.o ps7_cortexa9_0/lib/xdmaps_sinit.o ps7_cortexa9_0/lib/xgpio.o ps7_cortexa9_0/lib/xgpio_extra.o ps7
+TRACE::2026-03-10.15:38:31::SCWMssOS::_cortexa9_0/lib/xgpio_g.o ps7_cortexa9_0/lib/xgpio_intr.o ps7_cortexa9_0/lib/xgpio_selftest.o ps7_cortexa9_0/lib/xgpio_sinit.o 
+TRACE::2026-03-10.15:38:31::SCWMssOS::ps7_cortexa9_0/lib/xil-crt0.o ps7_cortexa9_0/lib/xil_assert.o ps7_cortexa9_0/lib/xil_cache.o ps7_cortexa9_0/lib/xil_clocking.o 
+TRACE::2026-03-10.15:38:31::SCWMssOS::ps7_cortexa9_0/lib/xil_exception.o ps7_cortexa9_0/lib/xil_mem.o ps7_cortexa9_0/lib/xil_misc_psreset_api.o ps7_cortexa9_0/lib/xi
+TRACE::2026-03-10.15:38:31::SCWMssOS::l_mmu.o ps7_cortexa9_0/lib/xil_printf.o ps7_cortexa9_0/lib/xil_spinlock.o ps7_cortexa9_0/lib/xil_sutil.o ps7_cortexa9_0/lib/xil
+TRACE::2026-03-10.15:38:31::SCWMssOS::_testcache.o ps7_cortexa9_0/lib/xil_testio.o ps7_cortexa9_0/lib/xil_testmem.o ps7_cortexa9_0/lib/xil_util.o ps7_cortexa9_0/lib/
+TRACE::2026-03-10.15:38:31::SCWMssOS::xinterrupt_wrap.o ps7_cortexa9_0/lib/xl2cc_counter.o ps7_cortexa9_0/lib/xplatform_info.o ps7_cortexa9_0/lib/xpm_counter.o ps7_c
+TRACE::2026-03-10.15:38:31::SCWMssOS::ortexa9_0/lib/xpm_init.o ps7_cortexa9_0/lib/xscugic.o ps7_cortexa9_0/lib/xscugic_g.o ps7_cortexa9_0/lib/xscugic_hw.o ps7_cortex
+TRACE::2026-03-10.15:38:31::SCWMssOS::a9_0/lib/xscugic_intr.o ps7_cortexa9_0/lib/xscugic_selftest.o ps7_cortexa9_0/lib/xscugic_sinit.o ps7_cortexa9_0/lib/xscutimer.o
+TRACE::2026-03-10.15:38:31::SCWMssOS:: ps7_cortexa9_0/lib/xscutimer_g.o ps7_cortexa9_0/lib/xscutimer_selftest.o ps7_cortexa9_0/lib/xscutimer_sinit.o ps7_cortexa9_0/l
+TRACE::2026-03-10.15:38:31::SCWMssOS::ib/xscuwdt.o ps7_cortexa9_0/lib/xscuwdt_g.o ps7_cortexa9_0/lib/xscuwdt_selftest.o ps7_cortexa9_0/lib/xscuwdt_sinit.o ps7_cortex
+TRACE::2026-03-10.15:38:31::SCWMssOS::a9_0/lib/xsdps.o ps7_cortexa9_0/lib/xsdps_card.o ps7_cortexa9_0/lib/xsdps_g.o ps7_cortexa9_0/lib/xsdps_host.o ps7_cortexa9_0/li
+TRACE::2026-03-10.15:38:31::SCWMssOS::b/xsdps_options.o ps7_cortexa9_0/lib/xsdps_sinit.o ps7_cortexa9_0/lib/xuartps.o ps7_cortexa9_0/lib/xuartps_g.o ps7_cortexa9_0/l
+TRACE::2026-03-10.15:38:31::SCWMssOS::ib/xuartps_hw.o ps7_cortexa9_0/lib/xuartps_intr.o ps7_cortexa9_0/lib/xuartps_options.o ps7_cortexa9_0/lib/xuartps_selftest.o ps
+TRACE::2026-03-10.15:38:31::SCWMssOS::7_cortexa9_0/lib/xuartps_sinit.o
+
+TRACE::2026-03-10.15:38:31::SCWMssOS::'Finished building libraries'
+
+TRACE::2026-03-10.15:38:32::SCWMssOS::Copying to export directory.
+TRACE::2026-03-10.15:38:32::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-03-10.15:38:32::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2026-03-10.15:38:32::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2026-03-10.15:38:32::SCWSystem::Completed Processing the sysconfig CNC-PL333
+LOG::2026-03-10.15:38:32::SCWPlatform::Completed generating the artifacts for system configuration CNC-PL333
+TRACE::2026-03-10.15:38:32::SCWPlatform::Started preparing the platform 
+TRACE::2026-03-10.15:38:32::SCWSystem::Writing the bif file for system config CNC-PL333
+TRACE::2026-03-10.15:38:32::SCWSystem::dir created 
+TRACE::2026-03-10.15:38:32::SCWSystem::Writing the bif 
+TRACE::2026-03-10.15:38:32::SCWPlatform::Started writing the spfm file 
+TRACE::2026-03-10.15:38:32::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-03-10.15:38:32::SCWPlatform::Completed generating the platform
+TRACE::2026-03-10.15:38:32::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-10.15:38:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-10.15:38:32::SCWMssOS::Commit changes completed.
+TRACE::2026-03-10.15:38:32::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-10.15:38:32::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-10.15:38:32::SCWMssOS::Commit changes completed.
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:32::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:32::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:32::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:32::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWWriter::formatted JSON is {
+	"platformName":	"CNC-PL333",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"CNC-PL333",
+	"platHandOff":	"E:/Git-Repos/CNC-FPGA/Zedboard-CNC/CNC_Top_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/CNC_Top_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"CNC-PL333",
+	"systems":	[{
+			"systemName":	"CNC-PL333",
+			"systemDesc":	"CNC-PL333",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"CNC-PL333",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"822b05f43d93911360d956bc0e0ec2b0",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/CNC-PL333/standalone_domain/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/CNC-PL333/standalone_domain/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"1f052e2e937e2802a9dd83c449a39e80",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xiltimer:2.1"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-03-10.15:38:32::SCWPlatform::updated the xpfm file.
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-10.15:38:32::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_0
+TRACE::2026-03-10.15:38:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-10.15:38:32::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-10.15:38:32::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-03-10.15:38:32::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:25::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:25::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:25::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:25::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:25::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:25::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:25::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWReader::Active system found as  CNC-PL333
+TRACE::2026-03-18.16:38:27::SCWReader::Handling sysconfig CNC-PL333
+TRACE::2026-03-18.16:38:27::SCWDomain::checking for install qemu data   : 
+TRACE::2026-03-18.16:38:27::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-03-18.16:38:27::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_1
+TRACE::2026-03-18.16:38:27::SCWMssOS::updating the scw layer about changes
+TRACE::2026-03-18.16:38:27::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-03-18.16:38:27::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-18.16:38:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-18.16:38:27::SCWMssOS::Commit changes completed.
+TRACE::2026-03-18.16:38:27::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-03-18.16:38:27::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWReader::No isolation master present  
+TRACE::2026-03-18.16:38:27::SCWDomain::checking for install qemu data   : 
+TRACE::2026-03-18.16:38:27::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-03-18.16:38:27::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_2
+TRACE::2026-03-18.16:38:27::SCWMssOS::updating the scw layer about changes
+TRACE::2026-03-18.16:38:27::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS:: library already available in sw design:  xiltimer:2.1
+TRACE::2026-03-18.16:38:27::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-03-18.16:38:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-03-18.16:38:27::SCWMssOS::Commit changes completed.
+TRACE::2026-03-18.16:38:27::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-03-18.16:38:27::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/hw/CNC_Top_wrapper.xsa
+TRACE::2026-03-18.16:38:27::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-03-18.16:38:27::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Opened existing hwdb CNC_Top_wrapper_3
+TRACE::2026-03-18.16:38:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-03-18.16:38:27::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2026-03-18.16:38:27::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL333/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-03-18.16:38:27::SCWReader::No isolation master present  
