@@ -1,5 +1,5 @@
 set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_clk_wiz_0/CNC_Top_clk_wiz_0.xdc id:1 order:EARLY scoped_inst:CNC_Top_i/clk_wiz/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/CNC_Top_vio_0_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/CNC_Top_vio_0_0.xdc id:2 order:EARLY scoped_inst:CNC_Top_i/vio_0} [current_design]
+set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/CNC_Top_vio_0_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_vio_0_0/CNC_Top_vio_0_0.xdc id:2 order:EARLY scoped_inst:CNC_Top_i/VIO} [current_design]
 set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/CNC_Top_processing_system7_0_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_processing_system7_0_0/CNC_Top_processing_system7_0_0.xdc id:3 order:EARLY scoped_inst:CNC_Top_i/processing_system7_0/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/bd_0a6d_psr_aclk_0.xdc id:4 order:EARLY scoped_inst:CNC_Top_i/axi_smc/inst/clk_map/psr_aclk/U0} [current_design]
 set_property SRC_FILE_INFO {cfile:e:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xdc rfile:../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/CNC_Top_rst_ps7_0_100M_0.xdc id:5 order:EARLY scoped_inst:CNC_Top_i/rst_ps7_0_100M/U0} [current_design]
@@ -8,7 +8,7 @@ current_instance CNC_Top_i/clk_wiz/inst
 set_property src_info {type:SCOPED_XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.100
 current_instance
-current_instance CNC_Top_i/vio_0
+current_instance CNC_Top_i/VIO
 set_property src_info {type:SCOPED_XDC file:2 line:55 export:INPUT save:INPUT read:READ} [current_design]
 create_waiver -type CDC -id CDC-4 -from [get_pins -filter {REF_PIN_NAME=~C} -of_objects [get_cells -hierarchical -filter {NAME =~ "*probe_in_reg_reg*"}]]  -to [get_pins -filter {REF_PIN_NAME=~D} -of_objects [get_cells -hierarchical -filter {NAME =~ "*data_int_sync1_reg*"}]]  -user "vio" -description {The path has combinational circuit. But from hardware prospective the design works perfectly and the signals crossing happen after a very long time from the source has the value.} -tags "1050886" -scope -internal
 set_property src_info {type:SCOPED_XDC file:2 line:56 export:INPUT save:INPUT read:READ} [current_design]
@@ -245,68 +245,38 @@ set_property PACKAGE_PIN AB9 [get_ports ms2X]
 set_property src_info {type:XDC file:6 line:43 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN AA8 [get_ports ms3X]
 set_property src_info {type:XDC file:6 line:46 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W12 [get_ports directionY]
+set_property PACKAGE_PIN W12 [get_ports directionZ]
 set_property src_info {type:XDC file:6 line:47 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W11 [get_ports stepY]
+set_property PACKAGE_PIN W11 [get_ports stepZ]
 set_property src_info {type:XDC file:6 line:48 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V10 [get_ports resetY]
+set_property PACKAGE_PIN V10 [get_ports resetZ]
 set_property src_info {type:XDC file:6 line:50 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V12 [get_ports enableY]
+set_property PACKAGE_PIN V12 [get_ports enableZ]
 set_property src_info {type:XDC file:6 line:51 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W10 [get_ports ms1Y]
+set_property PACKAGE_PIN W10 [get_ports ms1Z]
 set_property src_info {type:XDC file:6 line:52 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V9 [get_ports ms2Y]
+set_property PACKAGE_PIN V9 [get_ports ms2Z]
 set_property src_info {type:XDC file:6 line:53 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN V8 [get_ports ms3Y]
+set_property PACKAGE_PIN V8 [get_ports ms3Z]
 set_property src_info {type:XDC file:6 line:56 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN AB7 [get_ports directionZ]
+set_property PACKAGE_PIN AB7 [get_ports directionY]
 set_property src_info {type:XDC file:6 line:57 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN AB6 [get_ports stepZ]
+set_property PACKAGE_PIN AB6 [get_ports stepY]
 set_property src_info {type:XDC file:6 line:58 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y4 [get_ports resetZ]
+set_property PACKAGE_PIN Y4 [get_ports resetY]
 set_property src_info {type:XDC file:6 line:60 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN R6 [get_ports enableZ]
+set_property PACKAGE_PIN R6 [get_ports enableY]
 set_property src_info {type:XDC file:6 line:61 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T6 [get_ports ms1Z]
+set_property PACKAGE_PIN T6 [get_ports ms1Y]
 set_property src_info {type:XDC file:6 line:62 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T4 [get_ports ms2Z]
+set_property PACKAGE_PIN T4 [get_ports ms2Y]
 set_property src_info {type:XDC file:6 line:63 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN U4 [get_ports ms3Z]
-set_property src_info {type:XDC file:6 line:97 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 32
-set_property src_info {type:XDC file:6 line:98 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
-set_property src_info {type:XDC file:6 line:101 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 32
-set_property src_info {type:XDC file:6 line:102 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
-set_property src_info {type:XDC file:6 line:106 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
-set_property src_info {type:XDC file:6 line:110 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]] 31
-set_property src_info {type:XDC file:6 line:112 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 32
-set_property src_info {type:XDC file:6 line:113 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
-set_property src_info {type:XDC file:6 line:115 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 32
-set_property src_info {type:XDC file:6 line:116 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
-set_property src_info {type:XDC file:6 line:118 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 32
-set_property src_info {type:XDC file:6 line:119 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]] 31
-set_property src_info {type:XDC file:6 line:122 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -setup -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]] 32
-set_property src_info {type:XDC file:6 line:123 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]] 31
-set_property src_info {type:XDC file:6 line:126 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -hold -from [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]] -to [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]] 31
-set_property src_info {type:XDC file:6 line:129 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U4 [get_ports ms3Y]
+set_property src_info {type:XDC file:6 line:160 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property src_info {type:XDC file:6 line:130 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:6 line:161 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property src_info {type:XDC file:6 line:131 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:6 line:162 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-set_property src_info {type:XDC file:6 line:132 export:INPUT save:INPUT read:READ} [current_design]
+set_property src_info {type:XDC file:6 line:163 export:INPUT save:INPUT read:READ} [current_design]
 connect_debug_port dbg_hub/clk [get_nets clk]

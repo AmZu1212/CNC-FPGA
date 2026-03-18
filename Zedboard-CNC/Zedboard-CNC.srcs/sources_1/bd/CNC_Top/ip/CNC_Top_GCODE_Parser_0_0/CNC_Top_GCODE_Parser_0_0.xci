@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_GCODE_Parser_0_0",
-    "cell_name": "GCODE_Parser_0",
+    "cell_name": "GCODE_Parser",
     "component_reference": "xilinx.com:module_ref:GCODE_Parser:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_GCODE_Parser_0_0",

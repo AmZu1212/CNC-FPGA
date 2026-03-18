@@ -56,7 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 6
 set_param bd.open.in_stealth_mode 1
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Synth 8-7080}  -new_severity {INFO} 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
@@ -77,10 +79,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem {
-  E:/Git-Repos/CNC-FPGA/Documentation/Hexfiles/kirby/pos_z.hex
-  E:/Git-Repos/CNC-FPGA/Documentation/Hexfiles/kirby/pos_y.hex
-  E:/Git-Repos/CNC-FPGA/Documentation/Hexfiles/kirby/pos_x.hex
-  E:/Git-Repos/CNC-FPGA/Documentation/Hexfiles/kirby/speed.hex
+  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/imports/kirby/pos_z.hex
+  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/imports/kirby/pos_y.hex
+  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/imports/kirby/pos_x.hex
+  E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/imports/kirby/speed.hex
 }
 read_verilog -library xil_defaultlib {
   E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.srcs/sources_1/new/A4988_Driver_IO.v

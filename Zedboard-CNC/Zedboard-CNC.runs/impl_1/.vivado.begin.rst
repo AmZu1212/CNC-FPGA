@@ -1,45 +1,20 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="22864" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="14280" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="17464" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="5744" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="8896" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="9164" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="22904" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="27332" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="10396" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="16792" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="2528" HostCore="24" HostMemory="034268721152">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="28324" HostCore="24" HostMemory="034268721152">
+    <Process Command="vivado.bat" Owner="AmZu" Host="OBSIDIAN" Pid="23636" HostCore="24" HostMemory="034268721152">
     </Process>
 </ProcessHandle>

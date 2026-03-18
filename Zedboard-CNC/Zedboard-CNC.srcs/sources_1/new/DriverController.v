@@ -26,9 +26,9 @@ module DriverController(
     
 	//outputs
 	output reg en,
+	output reg dir_out,
 	output reg step,
-	output reg step_risingedge,
-	output reg dir_out
+	output reg step_risingedge
     );
     
     localparam STEP_WIDTH = 3000;

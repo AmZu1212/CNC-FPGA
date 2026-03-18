@@ -13,18 +13,18 @@
     "design_tree": {
       "clk_wiz": "",
       "High_Bit": "",
-      "A4988_Driver_IO": "",
+      "A4988_Driver_IO_X": "",
       "DriverController_X": "",
       "LED_IO_0": "",
-      "XYZ_Axis_Coordinator_0": "",
-      "GCODE_Parser_0": "",
+      "XYZ_Axis_Coordinator": "",
+      "GCODE_Parser": "",
       "DriverController_Y": "",
       "DriverController_Z": "",
-      "A4988_Driver_IO1": "",
-      "A4988_Driver_IO2": "",
-      "vio_0": "",
-      "Buttons_Vector_0": "",
-      "hexfile_holder_0": "",
+      "A4988_Driver_IO_Y": "",
+      "A4988_Driver_IO_Z": "",
+      "VIO": "",
+      "Buttons_Vector": "",
+      "hexfile_holder": "",
       "processing_system7_0": "",
       "X_GPIO": "",
       "axi_smc": "",
@@ -276,33 +276,6 @@
         "left": "7",
         "right": "0"
       },
-      "enableY": {
-        "direction": "O"
-      },
-      "directionY": {
-        "direction": "O"
-      },
-      "stepY": {
-        "direction": "O"
-      },
-      "resetY": {
-        "direction": "O",
-        "parameters": {
-          "POLARITY": {
-            "value": "ACTIVE_HIGH",
-            "value_src": "user_prop"
-          }
-        }
-      },
-      "ms1Y": {
-        "direction": "O"
-      },
-      "ms2Y": {
-        "direction": "O"
-      },
-      "ms3Y": {
-        "direction": "O"
-      },
       "enableZ": {
         "direction": "O"
       },
@@ -328,6 +301,33 @@
         "direction": "O"
       },
       "ms3Z": {
+        "direction": "O"
+      },
+      "enableY": {
+        "direction": "O"
+      },
+      "directionY": {
+        "direction": "O"
+      },
+      "stepY": {
+        "direction": "O"
+      },
+      "resetY": {
+        "direction": "O",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_HIGH",
+            "value_src": "user_prop"
+          }
+        }
+      },
+      "ms1Y": {
+        "direction": "O"
+      },
+      "ms2Y": {
+        "direction": "O"
+      },
+      "ms3Y": {
         "direction": "O"
       },
       "ResetSwitch": {
@@ -389,12 +389,12 @@
           }
         }
       },
-      "A4988_Driver_IO": {
+      "A4988_Driver_IO_X": {
         "vlnv": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_A4988_Driver_IO_0_0",
         "xci_path": "ip\\CNC_Top_A4988_Driver_IO_0_0\\CNC_Top_A4988_Driver_IO_0_0.xci",
-        "inst_hier_path": "A4988_Driver_IO",
+        "inst_hier_path": "A4988_Driver_IO_X",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "A4988_Driver_IO",
@@ -532,13 +532,13 @@
           "en": {
             "direction": "O"
           },
+          "dir_out": {
+            "direction": "O"
+          },
           "step": {
             "direction": "O"
           },
           "step_risingedge": {
-            "direction": "O"
-          },
-          "dir_out": {
             "direction": "O"
           }
         }
@@ -596,12 +596,12 @@
           }
         }
       },
-      "XYZ_Axis_Coordinator_0": {
+      "XYZ_Axis_Coordinator": {
         "vlnv": "xilinx.com:module_ref:XYZ_Axis_Coordinator:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_XYZ_Axis_Coordinator_0_0",
         "xci_path": "ip\\CNC_Top_XYZ_Axis_Coordinator_0_0\\CNC_Top_XYZ_Axis_Coordinator_0_0.xci",
-        "inst_hier_path": "XYZ_Axis_Coordinator_0",
+        "inst_hier_path": "XYZ_Axis_Coordinator",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "XYZ_Axis_Coordinator",
@@ -720,12 +720,12 @@
           }
         }
       },
-      "GCODE_Parser_0": {
+      "GCODE_Parser": {
         "vlnv": "xilinx.com:module_ref:GCODE_Parser:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_GCODE_Parser_0_0",
         "xci_path": "ip\\CNC_Top_GCODE_Parser_0_0\\CNC_Top_GCODE_Parser_0_0.xci",
-        "inst_hier_path": "GCODE_Parser_0",
+        "inst_hier_path": "GCODE_Parser",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "GCODE_Parser",
@@ -899,13 +899,13 @@
           "en": {
             "direction": "O"
           },
+          "dir_out": {
+            "direction": "O"
+          },
           "step": {
             "direction": "O"
           },
           "step_risingedge": {
-            "direction": "O"
-          },
-          "dir_out": {
             "direction": "O"
           }
         }
@@ -967,23 +967,23 @@
           "en": {
             "direction": "O"
           },
+          "dir_out": {
+            "direction": "O"
+          },
           "step": {
             "direction": "O"
           },
           "step_risingedge": {
             "direction": "O"
-          },
-          "dir_out": {
-            "direction": "O"
           }
         }
       },
-      "A4988_Driver_IO1": {
+      "A4988_Driver_IO_Y": {
         "vlnv": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_A4988_Driver_IO_1",
         "xci_path": "ip\\CNC_Top_A4988_Driver_IO_1\\CNC_Top_A4988_Driver_IO_1.xci",
-        "inst_hier_path": "A4988_Driver_IO1",
+        "inst_hier_path": "A4988_Driver_IO_Y",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "A4988_Driver_IO",
@@ -1064,12 +1064,12 @@
           }
         }
       },
-      "A4988_Driver_IO2": {
+      "A4988_Driver_IO_Z": {
         "vlnv": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_A4988_Driver_IO_2",
         "xci_path": "ip\\CNC_Top_A4988_Driver_IO_2\\CNC_Top_A4988_Driver_IO_2.xci",
-        "inst_hier_path": "A4988_Driver_IO2",
+        "inst_hier_path": "A4988_Driver_IO_Z",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "A4988_Driver_IO",
@@ -1150,12 +1150,12 @@
           }
         }
       },
-      "vio_0": {
+      "VIO": {
         "vlnv": "xilinx.com:ip:vio:3.0",
         "ip_revision": "26",
         "xci_name": "CNC_Top_vio_0_0",
         "xci_path": "ip\\CNC_Top_vio_0_0\\CNC_Top_vio_0_0.xci",
-        "inst_hier_path": "vio_0",
+        "inst_hier_path": "VIO",
         "parameters": {
           "C_NUM_PROBE_IN": {
             "value": "4"
@@ -1177,12 +1177,12 @@
           }
         }
       },
-      "Buttons_Vector_0": {
+      "Buttons_Vector": {
         "vlnv": "xilinx.com:module_ref:Buttons_Vector:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_Buttons_Vector_0_1",
         "xci_path": "ip\\CNC_Top_Buttons_Vector_0_1\\CNC_Top_Buttons_Vector_0_1.xci",
-        "inst_hier_path": "Buttons_Vector_0",
+        "inst_hier_path": "Buttons_Vector",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "Buttons_Vector",
@@ -1211,12 +1211,12 @@
           }
         }
       },
-      "hexfile_holder_0": {
+      "hexfile_holder": {
         "vlnv": "xilinx.com:module_ref:hexfile_holder:1.0",
         "ip_revision": "1",
         "xci_name": "CNC_Top_hexfile_holder_0_0",
         "xci_path": "ip\\CNC_Top_hexfile_holder_0_0\\CNC_Top_hexfile_holder_0_0.xci",
-        "inst_hier_path": "hexfile_holder_0",
+        "inst_hier_path": "hexfile_holder",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "hexfile_holder",
@@ -2399,127 +2399,127 @@
     "nets": {
       "A4988_Driver_IO1_drv_direction": {
         "ports": [
-          "A4988_Driver_IO1/drv_direction",
-          "directionZ"
+          "A4988_Driver_IO_Y/drv_direction",
+          "directionY"
         ]
       },
       "A4988_Driver_IO1_drv_enable": {
         "ports": [
-          "A4988_Driver_IO1/drv_enable",
-          "enableZ"
+          "A4988_Driver_IO_Y/drv_enable",
+          "enableY"
         ]
       },
       "A4988_Driver_IO1_drv_ms1": {
         "ports": [
-          "A4988_Driver_IO1/drv_ms1",
-          "ms1Z"
+          "A4988_Driver_IO_Y/drv_ms1",
+          "ms1Y"
         ]
       },
       "A4988_Driver_IO1_drv_ms2": {
         "ports": [
-          "A4988_Driver_IO1/drv_ms2",
-          "ms2Z"
+          "A4988_Driver_IO_Y/drv_ms2",
+          "ms2Y"
         ]
       },
       "A4988_Driver_IO1_drv_ms3": {
         "ports": [
-          "A4988_Driver_IO1/drv_ms3",
-          "ms3Z"
+          "A4988_Driver_IO_Y/drv_ms3",
+          "ms3Y"
         ]
       },
       "A4988_Driver_IO1_drv_reset": {
         "ports": [
-          "A4988_Driver_IO1/drv_reset",
-          "resetZ"
+          "A4988_Driver_IO_Y/drv_reset",
+          "resetY"
         ]
       },
       "A4988_Driver_IO1_drv_step": {
         "ports": [
-          "A4988_Driver_IO1/drv_step",
-          "stepZ"
+          "A4988_Driver_IO_Y/drv_step",
+          "stepY"
         ]
       },
       "A4988_Driver_IO2_drv_direction": {
         "ports": [
-          "A4988_Driver_IO2/drv_direction",
-          "directionY"
+          "A4988_Driver_IO_Z/drv_direction",
+          "directionZ"
         ]
       },
       "A4988_Driver_IO2_drv_enable": {
         "ports": [
-          "A4988_Driver_IO2/drv_enable",
-          "enableY"
+          "A4988_Driver_IO_Z/drv_enable",
+          "enableZ"
         ]
       },
       "A4988_Driver_IO2_drv_ms1": {
         "ports": [
-          "A4988_Driver_IO2/drv_ms1",
-          "ms1Y"
+          "A4988_Driver_IO_Z/drv_ms1",
+          "ms1Z"
         ]
       },
       "A4988_Driver_IO2_drv_ms2": {
         "ports": [
-          "A4988_Driver_IO2/drv_ms2",
-          "ms2Y"
+          "A4988_Driver_IO_Z/drv_ms2",
+          "ms2Z"
         ]
       },
       "A4988_Driver_IO2_drv_ms3": {
         "ports": [
-          "A4988_Driver_IO2/drv_ms3",
-          "ms3Y"
+          "A4988_Driver_IO_Z/drv_ms3",
+          "ms3Z"
         ]
       },
       "A4988_Driver_IO2_drv_reset": {
         "ports": [
-          "A4988_Driver_IO2/drv_reset",
-          "resetY"
+          "A4988_Driver_IO_Z/drv_reset",
+          "resetZ"
         ]
       },
       "A4988_Driver_IO2_drv_step": {
         "ports": [
-          "A4988_Driver_IO2/drv_step",
-          "stepY"
+          "A4988_Driver_IO_Z/drv_step",
+          "stepZ"
         ]
       },
       "A4988_Driver_IO_drv_direction": {
         "ports": [
-          "A4988_Driver_IO/drv_direction",
+          "A4988_Driver_IO_X/drv_direction",
           "directionX"
         ]
       },
       "A4988_Driver_IO_drv_enable": {
         "ports": [
-          "A4988_Driver_IO/drv_enable",
+          "A4988_Driver_IO_X/drv_enable",
           "enableX"
         ]
       },
       "A4988_Driver_IO_drv_ms1": {
         "ports": [
-          "A4988_Driver_IO/drv_ms1",
+          "A4988_Driver_IO_X/drv_ms1",
           "ms1X"
         ]
       },
       "A4988_Driver_IO_drv_ms2": {
         "ports": [
-          "A4988_Driver_IO/drv_ms2",
+          "A4988_Driver_IO_X/drv_ms2",
           "ms2X"
         ]
       },
       "A4988_Driver_IO_drv_ms3": {
         "ports": [
-          "A4988_Driver_IO/drv_ms3",
+          "A4988_Driver_IO_X/drv_ms3",
           "ms3X"
         ]
       },
       "A4988_Driver_IO_drv_reset": {
         "ports": [
-          "A4988_Driver_IO/drv_reset",
+          "A4988_Driver_IO_X/drv_reset",
           "resetX"
         ]
       },
       "A4988_Driver_IO_drv_step": {
         "ports": [
-          "A4988_Driver_IO/drv_step",
+          "A4988_Driver_IO_X/drv_step",
           "stepX"
         ]
       },
@@ -2527,152 +2527,152 @@
         "ports": [
           "ACK_GPIO/gpio_io_o",
           "LED_IO_0/PS_Phase",
-          "GCODE_Parser_0/ack_phase"
+          "GCODE_Parser/ack_phase"
         ]
       },
       "Buttons_Vector_0_keys": {
         "ports": [
-          "Buttons_Vector_0/keys",
-          "vio_0/probe_in3",
-          "XYZ_Axis_Coordinator_0/manual_move"
+          "Buttons_Vector/keys",
+          "VIO/probe_in3",
+          "XYZ_Axis_Coordinator/manual_move"
         ]
       },
       "Down_1": {
         "ports": [
           "Down",
-          "Buttons_Vector_0/down"
+          "Buttons_Vector/down"
         ]
       },
       "DriverController_0_en": {
         "ports": [
           "DriverController_X/en",
-          "A4988_Driver_IO/enable"
+          "A4988_Driver_IO_X/enable"
         ]
       },
       "DriverController_0_step": {
         "ports": [
           "DriverController_X/step",
-          "A4988_Driver_IO/step"
+          "A4988_Driver_IO_X/step"
         ]
       },
       "DriverController_X1_step_risingedge": {
         "ports": [
           "DriverController_Y/step_risingedge",
-          "XYZ_Axis_Coordinator_0/step_feedback_y"
+          "XYZ_Axis_Coordinator/step_feedback_y"
         ]
       },
       "DriverController_X2_step_risingedge": {
         "ports": [
           "DriverController_Z/step_risingedge",
-          "XYZ_Axis_Coordinator_0/step_feedback_z"
+          "XYZ_Axis_Coordinator/step_feedback_z"
         ]
       },
       "DriverController_X_dir_out": {
         "ports": [
           "DriverController_X/dir_out",
-          "A4988_Driver_IO/direction"
+          "A4988_Driver_IO_X/direction"
         ]
       },
       "DriverController_X_step_risingedge": {
         "ports": [
           "DriverController_X/step_risingedge",
-          "XYZ_Axis_Coordinator_0/step_feedback_x"
+          "XYZ_Axis_Coordinator/step_feedback_x"
         ]
       },
       "DriverController_Y_dir_out": {
         "ports": [
           "DriverController_Y/dir_out",
-          "A4988_Driver_IO1/direction"
+          "A4988_Driver_IO_Y/direction"
         ]
       },
       "DriverController_Y_en": {
         "ports": [
           "DriverController_Y/en",
-          "A4988_Driver_IO1/enable"
+          "A4988_Driver_IO_Y/enable"
         ]
       },
       "DriverController_Y_step": {
         "ports": [
           "DriverController_Y/step",
-          "A4988_Driver_IO1/step"
+          "A4988_Driver_IO_Y/step"
         ]
       },
       "DriverController_Z_dir_out": {
         "ports": [
           "DriverController_Z/dir_out",
-          "A4988_Driver_IO2/direction"
+          "A4988_Driver_IO_Z/direction"
         ]
       },
       "DriverController_Z_en": {
         "ports": [
           "DriverController_Z/en",
-          "A4988_Driver_IO2/enable"
+          "A4988_Driver_IO_Z/enable"
         ]
       },
       "DriverController_Z_step": {
         "ports": [
           "DriverController_Z/step",
-          "A4988_Driver_IO2/step"
+          "A4988_Driver_IO_Z/step"
         ]
       },
       "GCODE_Parser_0_enable": {
         "ports": [
-          "GCODE_Parser_0/enable",
+          "GCODE_Parser/enable",
+          "XYZ_Axis_Coordinator/enable",
           "DriverController_X/hold",
           "DriverController_Y/hold",
-          "DriverController_Z/hold",
-          "XYZ_Axis_Coordinator_0/enable"
+          "DriverController_Z/hold"
         ]
       },
       "GCODE_Parser_0_mount_req": {
         "ports": [
-          "GCODE_Parser_0/mount_req",
-          "hexfile_holder_0/mount_req",
+          "GCODE_Parser/mount_req",
+          "hexfile_holder/mount_req",
           "LED_IO_0/PL_Phase",
           "MOUNT_REQ_GPIO/gpio_io_i"
         ]
       },
       "GCODE_Parser_0_next_pos_x": {
         "ports": [
-          "GCODE_Parser_0/x",
-          "XYZ_Axis_Coordinator_0/next_pos_x"
+          "GCODE_Parser/x",
+          "XYZ_Axis_Coordinator/next_pos_x"
         ]
       },
       "GCODE_Parser_0_next_pos_y": {
         "ports": [
-          "GCODE_Parser_0/y",
-          "XYZ_Axis_Coordinator_0/next_pos_y"
+          "GCODE_Parser/y",
+          "XYZ_Axis_Coordinator/next_pos_y"
         ]
       },
       "GCODE_Parser_0_next_pos_z": {
         "ports": [
-          "GCODE_Parser_0/z",
-          "XYZ_Axis_Coordinator_0/next_pos_z"
+          "GCODE_Parser/z",
+          "XYZ_Axis_Coordinator/next_pos_z"
         ]
       },
       "GCODE_Parser_0_phase": {
         "ports": [
-          "GCODE_Parser_0/phase",
-          "hexfile_holder_0/phase",
+          "GCODE_Parser/phase",
+          "hexfile_holder/phase",
           "REQ_GPIO/gpio_io_i"
         ]
       },
       "GCODE_Parser_0_request_next_line": {
         "ports": [
-          "GCODE_Parser_0/request_next_line",
-          "hexfile_holder_0/request_next_line"
+          "GCODE_Parser/request_next_line",
+          "hexfile_holder/request_next_line"
         ]
       },
       "GCODE_Parser_0_speed": {
         "ports": [
-          "GCODE_Parser_0/speed",
-          "XYZ_Axis_Coordinator_0/next_speed"
+          "GCODE_Parser/speed",
+          "XYZ_Axis_Coordinator/next_speed"
         ]
       },
       "LAST_LINE_GPIO_gpio_io_o": {
         "ports": [
           "LAST_LINE_GPIO/gpio_io_o",
-          "GCODE_Parser_0/last_line"
+          "GCODE_Parser/last_line"
         ]
       },
       "LED_IO_0_led": {
@@ -2684,156 +2684,156 @@
       "Left_1": {
         "ports": [
           "Left",
-          "Buttons_Vector_0/left"
+          "Buttons_Vector/left"
         ]
       },
       "MOUNT_FAIL_GPIO_gpio_io_o": {
         "ports": [
           "MOUNT_FAIL_GPIO/gpio_io_o",
           "LED_IO_0/mount_fail",
-          "GCODE_Parser_0/mount_fail"
+          "GCODE_Parser/mount_fail"
         ]
       },
       "MOUNT_OK_GPIO_gpio_io_o": {
         "ports": [
           "MOUNT_OK_GPIO/gpio_io_o",
           "LED_IO_0/mount_ok",
-          "GCODE_Parser_0/mount_ok"
+          "GCODE_Parser/mount_ok"
         ]
       },
       "Middle_1": {
         "ports": [
           "Middle",
-          "GCODE_Parser_0/start"
+          "GCODE_Parser/start"
         ]
       },
       "ResetSwitch_1": {
         "ports": [
           "ResetSwitch",
-          "A4988_Driver_IO/reset",
-          "A4988_Driver_IO2/reset",
-          "A4988_Driver_IO1/reset",
+          "A4988_Driver_IO_X/reset",
+          "A4988_Driver_IO_Z/reset",
+          "A4988_Driver_IO_Y/reset",
+          "XYZ_Axis_Coordinator/rst",
+          "clk_wiz/reset",
+          "hexfile_holder/rst",
+          "GCODE_Parser/rst",
           "DriverController_X/rst",
           "DriverController_Y/rst",
-          "DriverController_Z/rst",
-          "XYZ_Axis_Coordinator_0/rst",
-          "clk_wiz/reset",
-          "hexfile_holder_0/rst",
-          "GCODE_Parser_0/rst"
+          "DriverController_Z/rst"
         ]
       },
       "Right_1": {
         "ports": [
           "Right",
-          "Buttons_Vector_0/right"
+          "Buttons_Vector/right"
         ]
       },
       "SPEED_GPIO_gpio_io_o": {
         "ports": [
           "SPEED_GPIO/gpio_io_o",
-          "GCODE_Parser_0/next_line_speed"
+          "GCODE_Parser/next_line_speed"
         ]
       },
       "Up_1": {
         "ports": [
           "Up",
-          "Buttons_Vector_0/up"
+          "Buttons_Vector/up"
         ]
       },
       "XYZ_Axis_Coordinator_0_current_speed": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/current_speed",
-          "vio_0/probe_in0"
+          "XYZ_Axis_Coordinator/current_speed",
+          "VIO/probe_in0"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_x": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/cycles_per_step_x",
+          "XYZ_Axis_Coordinator/cycles_per_step_x",
           "DriverController_X/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_y": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/cycles_per_step_y",
+          "XYZ_Axis_Coordinator/cycles_per_step_y",
           "DriverController_Y/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_cycles_per_step_z": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/cycles_per_step_z",
+          "XYZ_Axis_Coordinator/cycles_per_step_z",
           "DriverController_Z/cycles_per_step"
         ]
       },
       "XYZ_Axis_Coordinator_0_dir_x": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/motor_dir_x",
+          "XYZ_Axis_Coordinator/motor_dir_x",
           "DriverController_X/dir"
         ]
       },
       "XYZ_Axis_Coordinator_0_dir_y": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/motor_dir_y",
+          "XYZ_Axis_Coordinator/motor_dir_y",
           "DriverController_Y/dir"
         ]
       },
       "XYZ_Axis_Coordinator_0_dir_z": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/motor_dir_z",
+          "XYZ_Axis_Coordinator/motor_dir_z",
           "DriverController_Z/dir"
         ]
       },
       "XYZ_Axis_Coordinator_0_direction_change_buffer": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/direction_change_buffer",
-          "vio_0/probe_in2"
+          "XYZ_Axis_Coordinator/direction_change_buffer",
+          "VIO/probe_in2"
         ]
       },
       "XYZ_Axis_Coordinator_0_load_next_line": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/load_next_line",
-          "GCODE_Parser_0/load_next_line"
+          "XYZ_Axis_Coordinator/load_next_line",
+          "GCODE_Parser/load_next_line"
         ]
       },
       "XYZ_Axis_Coordinator_0_target_speed": {
         "ports": [
-          "XYZ_Axis_Coordinator_0/target_speed",
-          "vio_0/probe_in1"
+          "XYZ_Axis_Coordinator/target_speed",
+          "VIO/probe_in1"
         ]
       },
       "X_GPIO_gpio_io_o": {
         "ports": [
           "X_GPIO/gpio_io_o",
-          "GCODE_Parser_0/next_x"
+          "GCODE_Parser/next_x"
         ]
       },
       "Y_GPIO_gpio_io_o": {
         "ports": [
           "Y_GPIO/gpio_io_o",
-          "GCODE_Parser_0/next_y"
+          "GCODE_Parser/next_y"
         ]
       },
       "Z_GPIO_gpio_io_o": {
         "ports": [
           "Z_GPIO/gpio_io_o",
-          "GCODE_Parser_0/next_z"
+          "GCODE_Parser/next_z"
         ]
       },
       "Zswitch_1": {
         "ports": [
           "Zswitch",
-          "Buttons_Vector_0/Zswitch"
+          "Buttons_Vector/Zswitch"
         ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
           "clk_wiz/clk_out1",
-          "vio_0/clk",
+          "VIO/clk",
+          "XYZ_Axis_Coordinator/clk",
+          "hexfile_holder/clk",
+          "GCODE_Parser/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
-          "DriverController_Z/clk",
-          "XYZ_Axis_Coordinator_0/clk",
-          "hexfile_holder_0/clk",
-          "GCODE_Parser_0/clk"
+          "DriverController_Z/clk"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -2885,15 +2885,15 @@
       "xlconstant_1_dout": {
         "ports": [
           "High_Bit/dout",
-          "A4988_Driver_IO/ms1",
-          "A4988_Driver_IO/ms2",
-          "A4988_Driver_IO2/ms1",
-          "A4988_Driver_IO2/ms2",
-          "A4988_Driver_IO1/ms1",
-          "A4988_Driver_IO1/ms2",
-          "A4988_Driver_IO1/ms3",
-          "A4988_Driver_IO2/ms3",
-          "A4988_Driver_IO/ms3",
+          "A4988_Driver_IO_X/ms1",
+          "A4988_Driver_IO_X/ms2",
+          "A4988_Driver_IO_Z/ms1",
+          "A4988_Driver_IO_Z/ms2",
+          "A4988_Driver_IO_Y/ms1",
+          "A4988_Driver_IO_Y/ms2",
+          "A4988_Driver_IO_Y/ms3",
+          "A4988_Driver_IO_Z/ms3",
+          "A4988_Driver_IO_X/ms3",
           "LED_IO_0/in1",
           "LED_IO_0/in2"
         ]

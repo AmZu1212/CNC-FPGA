@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_A4988_Driver_IO_2",
-    "cell_name": "A4988_Driver_IO2",
+    "cell_name": "A4988_Driver_IO_Z",
     "component_reference": "xilinx.com:module_ref:A4988_Driver_IO:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_A4988_Driver_IO_2",

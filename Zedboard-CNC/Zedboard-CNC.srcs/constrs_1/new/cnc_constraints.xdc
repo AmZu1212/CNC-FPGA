@@ -42,31 +42,31 @@ set_property PACKAGE_PIN AB10 [get_ports ms1X]
 set_property PACKAGE_PIN AB9 [get_ports ms2X]
 set_property PACKAGE_PIN AA8 [get_ports ms3X]
 
-# A4988 Stepper Driver - Axis Y on PMOD JB
-set_property PACKAGE_PIN W12 [get_ports directionY]
-set_property PACKAGE_PIN W11 [get_ports stepY]
-set_property PACKAGE_PIN V10 [get_ports resetY]
-##set_property PACKAGE_PIN W8 [get_ports lssY]
-set_property PACKAGE_PIN V12 [get_ports enableY]
-set_property PACKAGE_PIN W10 [get_ports ms1Y]
-set_property PACKAGE_PIN V9 [get_ports ms2Y]
-set_property PACKAGE_PIN V8 [get_ports ms3Y]
+# A4988 Stepper Driver - Axis Z on PMOD JB
+set_property PACKAGE_PIN W12 [get_ports directionZ]
+set_property PACKAGE_PIN W11 [get_ports stepZ]
+set_property PACKAGE_PIN V10 [get_ports resetZ]
+##set_property PACKAGE_PIN W8 [get_ports lssZ]
+set_property PACKAGE_PIN V12 [get_ports enableZ]
+set_property PACKAGE_PIN W10 [get_ports ms1Z]
+set_property PACKAGE_PIN V9 [get_ports ms2Z]
+set_property PACKAGE_PIN V8 [get_ports ms3Z]
 
-## A4988 Stepper Driver - Axis Z on PMOD JC
-set_property PACKAGE_PIN AB7 [get_ports directionZ]
-set_property PACKAGE_PIN AB6 [get_ports stepZ]
-set_property PACKAGE_PIN Y4 [get_ports resetZ]
-##set_property PACKAGE_PIN AA4 [get_ports lssZ]
-set_property PACKAGE_PIN R6 [get_ports enableZ]
-set_property PACKAGE_PIN T6 [get_ports ms1Z]
-set_property PACKAGE_PIN T4 [get_ports ms2Z]
-set_property PACKAGE_PIN U4 [get_ports ms3Z]
-
-
+## A4988 Stepper Driver - Axis Y on PMOD JC
+set_property PACKAGE_PIN AB7 [get_ports directionY]
+set_property PACKAGE_PIN AB6 [get_ports stepY]
+set_property PACKAGE_PIN Y4 [get_ports resetY]
+##set_property PACKAGE_PIN AA4 [get_ports lssY]
+set_property PACKAGE_PIN R6 [get_ports enableY]
+set_property PACKAGE_PIN T6 [get_ports ms1Y]
+set_property PACKAGE_PIN T4 [get_ports ms2Y]
+set_property PACKAGE_PIN U4 [get_ports ms3Y]
 
 
 
-# PMOD D - Template
+
+
+# PMOD D - Template (unused) - can be used in the future for an SD IO
 #set_property PACKAGE_PIN V7 [get_ports ]
 #set_property PACKAGE_PIN W7 [get_ports ]
 #set_property PACKAGE_PIN V5 [get_ports ]
@@ -92,38 +92,69 @@ set_property PULLTYPE PULLDOWN [get_ports { \
 
 # xdc magic for root function
 # 32-cycle multicycle path from square root result to final x-axis output
-set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
-set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
-set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 32
-set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 31
+#set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
+#set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 31
 
-set _xlnx_shared_i2 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
-set_multicycle_path -setup -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 32
-set_multicycle_path -hold -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 31
+#set _xlnx_shared_i2 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 31
 
-set _xlnx_shared_i3 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
-set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 32
-set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 31
+#set _xlnx_shared_i3 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 31
 
-set _xlnx_shared_i4 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
-set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 32
-set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 31
+#set _xlnx_shared_i4 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 31
 
-set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 32
-set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 31
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 31
 
-set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 32
-set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 31
+#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 31
 
-set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 32
-set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 31
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 31
 
-set _xlnx_shared_i5 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
-set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 32
-set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
+#set _xlnx_shared_i5 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
 
-set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
-set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31#set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
+#set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 31
+
+#set _xlnx_shared_i2 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 31
+
+#set _xlnx_shared_i3 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 31
+
+#set _xlnx_shared_i4 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 32
+#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 31
+
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 31
+
+#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 31
+
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 31
+
+#set _xlnx_shared_i5 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
+#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 32
+#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
+
+#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
+#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31
 
 # debug stuff
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]

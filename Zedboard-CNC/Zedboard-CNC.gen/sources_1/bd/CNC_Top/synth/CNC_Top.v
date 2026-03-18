@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 18:03:18 2026
+//Date        : Wed Mar 18 15:53:46 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -419,7 +419,7 @@ module CNC_Top
   wire sys_clock;
   wire [0:0]xlconstant_1_dout;
 
-  CNC_Top_A4988_Driver_IO_0_0 A4988_Driver_IO
+  CNC_Top_A4988_Driver_IO_0_0 A4988_Driver_IO_X
        (.direction(DriverController_X_dir_out),
         .drv_direction(directionX),
         .drv_enable(enableX),
@@ -434,23 +434,8 @@ module CNC_Top
         .ms3(xlconstant_1_dout),
         .reset(ResetSwitch),
         .step(DriverController_0_step));
-  CNC_Top_A4988_Driver_IO_1 A4988_Driver_IO1
+  CNC_Top_A4988_Driver_IO_1 A4988_Driver_IO_Y
        (.direction(DriverController_Y_dir_out),
-        .drv_direction(directionZ),
-        .drv_enable(enableZ),
-        .drv_ms1(ms1Z),
-        .drv_ms2(ms2Z),
-        .drv_ms3(ms3Z),
-        .drv_reset(resetZ),
-        .drv_step(stepZ),
-        .enable(DriverController_Y_en),
-        .ms1(xlconstant_1_dout),
-        .ms2(xlconstant_1_dout),
-        .ms3(xlconstant_1_dout),
-        .reset(ResetSwitch),
-        .step(DriverController_Y_step));
-  CNC_Top_A4988_Driver_IO_2 A4988_Driver_IO2
-       (.direction(DriverController_Z_dir_out),
         .drv_direction(directionY),
         .drv_enable(enableY),
         .drv_ms1(ms1Y),
@@ -458,6 +443,21 @@ module CNC_Top
         .drv_ms3(ms3Y),
         .drv_reset(resetY),
         .drv_step(stepY),
+        .enable(DriverController_Y_en),
+        .ms1(xlconstant_1_dout),
+        .ms2(xlconstant_1_dout),
+        .ms3(xlconstant_1_dout),
+        .reset(ResetSwitch),
+        .step(DriverController_Y_step));
+  CNC_Top_A4988_Driver_IO_2 A4988_Driver_IO_Z
+       (.direction(DriverController_Z_dir_out),
+        .drv_direction(directionZ),
+        .drv_enable(enableZ),
+        .drv_ms1(ms1Z),
+        .drv_ms2(ms2Z),
+        .drv_ms3(ms3Z),
+        .drv_reset(resetZ),
+        .drv_step(stepZ),
         .enable(DriverController_Z_en),
         .ms1(xlconstant_1_dout),
         .ms2(xlconstant_1_dout),
@@ -485,7 +485,7 @@ module CNC_Top
         .s_axi_wready(axi_smc_M02_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
-  CNC_Top_Buttons_Vector_0_1 Buttons_Vector_0
+  CNC_Top_Buttons_Vector_0_1 Buttons_Vector
        (.Zswitch(Zswitch),
         .down(Down),
         .keys(Buttons_Vector_0_keys),
@@ -522,7 +522,7 @@ module CNC_Top
         .rst(ResetSwitch),
         .step(DriverController_Z_step),
         .step_risingedge(DriverController_X2_step_risingedge));
-  CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
+  CNC_Top_GCODE_Parser_0_0 GCODE_Parser
        (.ack_phase(ACK_GPIO_gpio_io_o),
         .clk(clk_wiz_clk_out1),
         .enable(GCODE_Parser_0_enable),
@@ -679,7 +679,13 @@ module CNC_Top
         .s_axi_wready(axi_smc_M03_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M03_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M03_AXI_WVALID));
-  CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator_0
+  CNC_Top_vio_0_0 VIO
+       (.clk(clk_wiz_clk_out1),
+        .probe_in0(XYZ_Axis_Coordinator_0_current_speed),
+        .probe_in1(XYZ_Axis_Coordinator_0_target_speed),
+        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer),
+        .probe_in3(Buttons_Vector_0_keys));
+  CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator
        (.clk(clk_wiz_clk_out1),
         .current_speed(XYZ_Axis_Coordinator_0_current_speed),
         .cycles_per_step_x(XYZ_Axis_Coordinator_0_cycles_per_step_x),
@@ -979,7 +985,7 @@ module CNC_Top
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_clk_out1),
         .reset(ResetSwitch));
-  CNC_Top_hexfile_holder_0_0 hexfile_holder_0
+  CNC_Top_hexfile_holder_0_0 hexfile_holder
        (.clk(clk_wiz_clk_out1),
         .mount_req(GCODE_Parser_0_mount_req),
         .phase(GCODE_Parser_0_phase),
@@ -1055,10 +1061,4 @@ module CNC_Top
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  CNC_Top_vio_0_0 vio_0
-       (.clk(clk_wiz_clk_out1),
-        .probe_in0(XYZ_Axis_Coordinator_0_current_speed),
-        .probe_in1(XYZ_Axis_Coordinator_0_target_speed),
-        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer),
-        .probe_in3(Buttons_Vector_0_keys));
 endmodule

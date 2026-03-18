@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "CNC_Top_hexfile_holder_0_0",
-    "cell_name": "hexfile_holder_0",
+    "cell_name": "hexfile_holder",
     "component_reference": "xilinx.com:module_ref:hexfile_holder:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_hexfile_holder_0_0",

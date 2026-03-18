@@ -12,7 +12,7 @@
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
-        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BASE_BOARD_PART": [ { "value": "avnet.com:zedboard:part0:1.4" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z020" } ],
         "PACKAGE": [ { "value": "clg484" } ],
@@ -42,9 +42,9 @@
         "dir": [ { "direction": "in" } ],
         "hold": [ { "direction": "in" } ],
         "en": [ { "direction": "out" } ],
+        "dir_out": [ { "direction": "out" } ],
         "step": [ { "direction": "out" } ],
-        "step_risingedge": [ { "direction": "out" } ],
-        "dir_out": [ { "direction": "out" } ]
+        "step_risingedge": [ { "direction": "out" } ]
       },
       "interfaces": {
         "rst": {
