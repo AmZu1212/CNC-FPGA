@@ -68,14 +68,16 @@ This project implements a complete CNC-style execution pipeline:
 5. The FPGA consumes commands and executes motion in hardware
 6. The machine supports homing, start, cancel, return, and resumed runs
 
-This is not just motor stepping from software. It is a hardware/software control stack with:
+<img width="600" alt="machien workflow" src="https://github.com/user-attachments/assets/b1a509a9-09ef-4641-a544-a97cab1e2d93" />
+
+
+This is done using:
 
 - Verilog RTL
-- embedded C firmware
-- AXI register interfaces
 - Vivado block design integration
+- AXI register interfaces
+- Embedded C firmware
 - Vitis deployment flow
-- CNC motion sequencing and control
 
 ---
 
