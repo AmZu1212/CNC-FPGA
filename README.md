@@ -15,7 +15,8 @@ The project combines:
 - SD-card file execution from embedded C software
 - a custom PS/PL handshake for streaming toolpath data
 - synchronized X/Y/Z stepping and homing behavior
-  <img src="https://github.com/user-attachments/assets/36d3c2b8-df92-4526-b27e-2ac13546e288" alt="Machine photo" width="600">
+
+<img src="https://github.com/user-attachments/assets/36d3c2b8-df92-4526-b27e-2ac13546e288" alt="Machine photo" width="600">
 
 ---
 
