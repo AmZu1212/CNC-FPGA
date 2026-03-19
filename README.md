@@ -34,6 +34,11 @@ The project combines:
 
 <img src="https://github.com/user-attachments/assets/6a2135af-0862-4bad-b2f2-593dc473438e" alt="Machine photo" width="600">
 
+### System Overview
+
+<img width="600" alt="system overview" src="https://github.com/user-attachments/assets/c89f4c1b-e395-49c2-884e-f2509f8f151a" />
+
+
 ### Demo Video
 
 GitHub Markdown does not truly embed YouTube playback inline, but you can present it cleanly with a thumbnail link.
