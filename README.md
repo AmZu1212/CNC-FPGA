@@ -344,3 +344,5 @@ This repository represents substantial work in:
 ## Authors
 
 A Project by Amir Zuabi & Alex Vassiliev
+
+![Bottom Banner](https://github.com/user-attachments/assets/37fdd0cc-1e97-464d-82f6-6b3a6e116ac4)
