@@ -1542,6 +1542,9 @@
           "PCW_NOR_PERIPHERAL_ENABLE": {
             "value": "0"
           },
+          "PCW_PERIPHERAL_BOARD_PRESET": {
+            "value": "part0"
+          },
           "PCW_PJTAG_PERIPHERAL_ENABLE": {
             "value": "0"
           },
@@ -1583,9 +1586,6 @@
           },
           "PCW_TTC0_PERIPHERAL_ENABLE": {
             "value": "0"
-          },
-          "PCW_TTC_PERIPHERAL_FREQMHZ": {
-            "value": "50"
           },
           "PCW_UART1_GRP_FULL_ENABLE": {
             "value": "0"
@@ -2714,12 +2714,12 @@
           "A4988_Driver_IO_Z/reset",
           "A4988_Driver_IO_Y/reset",
           "XYZ_Axis_Coordinator/rst",
-          "clk_wiz/reset",
           "hexfile_holder/rst",
           "GCODE_Parser/rst",
           "DriverController_X/rst",
           "DriverController_Y/rst",
-          "DriverController_Z/rst"
+          "DriverController_Z/rst",
+          "clk_wiz/reset"
         ]
       },
       "Right_1": {
@@ -2839,19 +2839,19 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "axi_smc/aclk",
           "X_GPIO/s_axi_aclk",
-          "rst_ps7_0_100M/slowest_sync_clk",
-          "REQ_GPIO/s_axi_aclk",
-          "ACK_GPIO/s_axi_aclk",
-          "SPEED_GPIO/s_axi_aclk",
           "Y_GPIO/s_axi_aclk",
           "Z_GPIO/s_axi_aclk",
-          "MOUNT_FAIL_GPIO/s_axi_aclk",
+          "SPEED_GPIO/s_axi_aclk",
+          "ACK_GPIO/s_axi_aclk",
+          "REQ_GPIO/s_axi_aclk",
           "MOUNT_OK_GPIO/s_axi_aclk",
+          "MOUNT_FAIL_GPIO/s_axi_aclk",
           "MOUNT_REQ_GPIO/s_axi_aclk",
-          "LAST_LINE_GPIO/s_axi_aclk"
+          "LAST_LINE_GPIO/s_axi_aclk",
+          "axi_smc/aclk",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "rst_ps7_0_100M/slowest_sync_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2864,16 +2864,16 @@
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
           "X_GPIO/s_axi_aresetn",
-          "axi_smc/aresetn",
-          "REQ_GPIO/s_axi_aresetn",
-          "ACK_GPIO/s_axi_aresetn",
-          "SPEED_GPIO/s_axi_aresetn",
           "Y_GPIO/s_axi_aresetn",
           "Z_GPIO/s_axi_aresetn",
-          "MOUNT_FAIL_GPIO/s_axi_aresetn",
+          "SPEED_GPIO/s_axi_aresetn",
+          "ACK_GPIO/s_axi_aresetn",
+          "REQ_GPIO/s_axi_aresetn",
           "MOUNT_OK_GPIO/s_axi_aresetn",
+          "MOUNT_FAIL_GPIO/s_axi_aresetn",
           "MOUNT_REQ_GPIO/s_axi_aresetn",
-          "LAST_LINE_GPIO/s_axi_aresetn"
+          "LAST_LINE_GPIO/s_axi_aresetn",
+          "axi_smc/aresetn"
         ]
       },
       "sys_clock_1": {

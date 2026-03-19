@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 18 15:54:02 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 19 17:04:11 2026" VIVADOVERSION="2024.2">
 
-  <SYSTEMINFO ARCH="zynq" BOARD="avnet.com:zedboard:part0:1.4" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="IO" LEFT="14" NAME="DDR_addr" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_Addr">
@@ -130,12 +130,12 @@
         <CONNECTION INSTANCE="A4988_Driver_IO_Z" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO_Y" PORT="reset"/>
         <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="rst"/>
-        <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
         <CONNECTION INSTANCE="hexfile_holder" PORT="rst"/>
         <CONNECTION INSTANCE="GCODE_Parser" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
+        <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Right" SIGIS="undef" SIGNAME="External_Ports_Right">
@@ -8788,19 +8788,19 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="FCLK_CLK0" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
-            <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
             <CONNECTION INSTANCE="X_GPIO" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="REQ_GPIO" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="ACK_GPIO" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="SPEED_GPIO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="Y_GPIO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="Z_GPIO" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="SPEED_GPIO" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="ACK_GPIO" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="REQ_GPIO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="MOUNT_OK_GPIO" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="MOUNT_REQ_GPIO" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="LAST_LINE_GPIO" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="slowest_sync_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -9202,16 +9202,16 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="X_GPIO" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
-            <CONNECTION INSTANCE="REQ_GPIO" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="ACK_GPIO" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="SPEED_GPIO" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="Y_GPIO" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="Z_GPIO" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="SPEED_GPIO" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="ACK_GPIO" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="REQ_GPIO" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="MOUNT_OK_GPIO" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="MOUNT_FAIL_GPIO" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="MOUNT_REQ_GPIO" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="LAST_LINE_GPIO" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>

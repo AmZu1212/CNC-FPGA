@@ -90,72 +90,84 @@ set_property PULLTYPE PULLDOWN [get_ports { \
     stepZ enableZ directionZ ms1Z ms2Z ms3Z \
 }]
 
-# xdc magic for root function
-# 32-cycle multicycle path from square root result to final x-axis output
-#set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
-#set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 31
+# Multicycle paths for timing, 544 = 256*2 + 32 for the total delay between sampling
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
 
-#set _xlnx_shared_i2 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
 
-#set _xlnx_shared_i3 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *curr_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *curr_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
 
-#set _xlnx_shared_i4 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *curr_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *curr_pos_?_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *cycles_per_step_?_result1*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *cycles_per_step_?_result1*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
 
-#set _xlnx_shared_i5 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *cycles_per_step_?_result1*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *cycles_per_step_?_result1*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31#set _xlnx_shared_i0 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_line_reg*" }]]
-#set _xlnx_shared_i1 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*cycles_per_step_*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i1 31
+set_multicycle_path 256 -setup -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *val_reg*]
+set_multicycle_path 255 -hold  -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *val_reg*]
 
-#set _xlnx_shared_i2 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*num_clk_cycles_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i2 -to $_xlnx_shared_i1 31
+set_multicycle_path 256 -setup -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *val_reg*]
+set_multicycle_path 255 -hold  -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *val_reg*]
 
-#set _xlnx_shared_i3 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*curr_pos_*_reg[*]*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i1 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
 
-#set _xlnx_shared_i4 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*distance_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 32
-#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i1 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *direction_change_buffer_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *target_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *direction_change_buffer_reg*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i4 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *direction_change_buffer_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical *start_pos_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *direction_change_buffer_reg*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i2 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *clk_counter_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *clk_counter_reg*]
 
-#set _xlnx_shared_i5 [get_pins -filter { NAME =~  "*reg*" } -of_objects [get_cells -hierarchical -filter { NAME =~  "*val_reg*" }]]
-#set_multicycle_path -setup -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 32
-#set_multicycle_path -hold -from $_xlnx_shared_i0 -to $_xlnx_shared_i5 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *step_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *step_reg*]
 
-#set_multicycle_path -setup -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 32
-#set_multicycle_path -hold -from $_xlnx_shared_i3 -to $_xlnx_shared_i5 31
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *cycles_per_step_?_reg*]
 
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical *cycles_per_step_?_result1*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *move_clk_cycles_counter_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *move_clk_cycles_counter_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *curr_pos_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *curr_pos_?_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *motor_dir_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *motor_dir_?_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *start_pos_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *start_pos_?_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *target_pos_?_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *target_pos_?_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *current_speed_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *target_speed_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *target_speed_reg*]
+
+set_multicycle_path 544 -setup -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *squareroot_start_reg*]
+set_multicycle_path 543 -hold  -from [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *state_reg*] -to [get_cells -hierarchical -filter {IS_SEQUENTIAL == 1} *squareroot_start_reg*]
 # debug stuff
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]

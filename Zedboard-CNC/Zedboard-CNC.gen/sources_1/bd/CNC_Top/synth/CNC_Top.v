@@ -2,8 +2,8 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed Mar 18 15:53:46 2026
-//Host        : OBSIDIAN running 64-bit major release  (build 9200)
+//Date        : Thu Mar 19 17:02:23 2026
+//Host        : Alex-PC running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
 //Purpose     : IP block netlist

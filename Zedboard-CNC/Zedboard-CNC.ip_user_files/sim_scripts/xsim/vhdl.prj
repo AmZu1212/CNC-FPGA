@@ -1,5 +1,36 @@
 vhdl xpm  \
 "C:/Xilinx/Vivado/2024.2/data/ip/xpm/xpm_VCOMP.vhd" \
 
+vhdl axi_lite_ipif_v3_0_4  \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+
+vhdl lib_cdc_v1_0_3  \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd" \
+
+vhdl interrupt_control_v3_1_5  \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+
+vhdl axi_gpio_v2_0_35  \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/6718/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_0/sim/CNC_Top_axi_gpio_0_0.vhd" \
+
+vhdl proc_sys_reset_v5_0_16  \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_1/sim/bd_0a6d_psr_aclk_0.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_rst_ps7_0_100M_0/sim/CNC_Top_rst_ps7_0_100M_0.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_1/sim/CNC_Top_axi_gpio_0_1.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_2/sim/CNC_Top_axi_gpio_0_2.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/sim/CNC_Top_axi_gpio_0_3.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_4/sim/CNC_Top_axi_gpio_0_4.vhd" \
+"../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/sim/CNC_Top_axi_gpio_0_5.vhd" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/sim/CNC_Top_axi_gpio_0_6.vhd" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/sim/CNC_Top_axi_gpio_0_7.vhd" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_8/sim/CNC_Top_axi_gpio_0_8.vhd" \
+"../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ip/CNC_Top_axi_gpio_0_9/sim/CNC_Top_axi_gpio_0_9.vhd" \
+
 # Do not sort compile order
 nosort
