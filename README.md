@@ -1,6 +1,6 @@
 # CNC-FPGA
 
-**Authors:** Amir Zuabi, Alexey Vassiliev  
+**Authors:** Amir Zuabi, Alexey Vassiliev
 **Project Instructor:** Oz Shmueli
 
 **Tech Stack:** Verilog HDL, Embedded C, AMD Vitis + Vivado
@@ -15,19 +15,22 @@ The project combines:
 - SD-card file execution from embedded C software
 - a custom PS/PL handshake for streaming toolpath data
 - synchronized X/Y/Z stepping and homing behavior
-<img src="https://github.com/user-attachments/assets/36d3c2b8-df92-4526-b27e-2ac13546e288" alt="Machine photo" width="600">
+  <img src="https://github.com/user-attachments/assets/36d3c2b8-df92-4526-b27e-2ac13546e288" alt="Machine photo" width="600">
 
 ---
 
 ## Gallery
 
 ### The Finished Machine
+
 <img src="https://github.com/user-attachments/assets/d03e49cb-4d8f-49c4-ba88-ef827f9c7279" alt="Machine photo" width="600">
 
 ### PCB / Electronics
+
 <img src="https://github.com/user-attachments/assets/8159b595-367a-40c8-8b42-88b922629bd5" alt="Unsoldered PCB" width="300"><img src="https://github.com/user-attachments/assets/9ce17300-c851-4805-a044-b256336c854e" alt="Unsoldered PCB" width="300">
 
 ### The Zedboard (Board Platform with PS/PL)
+
 <img src="https://github.com/user-attachments/assets/6a2135af-0862-4bad-b2f2-593dc473438e" alt="Machine photo" width="600">
 
 ### Demo Video
@@ -178,11 +181,13 @@ For normal use, the project should be launched directly from the existing Vitis 
 1. Connect the board to the PC.
 2. Connect the USB cable used for JTAG/programming.
 3. Connect the USB cable used for UART/serial output.
-4. Open the Vitis Classic workspace/project directory.
+4. Open the Vitis Classic workspace/project directory (Please note: open Vitis Classic, and not Vitis Unified).
 5. Open the existing application project.
 6. Make sure the board is powered.
-7. Open the serial terminal if you want runtime prints.
-8. Launch the application on hardware.(right click the project application, and press "launch on hardware")
+7. Launch the application on hardware.(right click the project application, and press "launch on hardware")
+8. Open the serial terminal if you want runtime prints.
+
+
 
 For the normal checked-in working flow, no rebuild is required just to run the design if the workspace is already in a valid state.
 
@@ -246,18 +251,18 @@ motion command is valid and can be executed.
 Typical categories:
 
 - PS → PL:
-  - `X`
-  - `Y`
-  - `Z`
-  - `SPEED`
-  - `ACK`
-  - `MOUNT_OK`
-  - `MOUNT_FAIL`
-  - `LAST_LINE`
+    - `X`
+    - `Y`
+    - `Z`
+    - `SPEED`
+    - `ACK`
+    - `MOUNT_OK`
+    - `MOUNT_FAIL`
+    - `LAST_LINE`
 
 - PL → PS:
-  - `REQ`
-  - `MOUNT_REQ`
+    - `REQ`
+    - `MOUNT_REQ`
 
 ---
 
