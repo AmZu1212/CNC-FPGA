@@ -279,21 +279,18 @@ After that, the PL requests the next motion entry by changing `REQ`. The PS writ
 after the data is ready. Matching `REQ` and `ACK` tells the PL that the next
 motion command is valid and can be executed.
 
-Typical categories:
-
-- PS → PL:
-    - `X`
-    - `Y`
-    - `Z`
-    - `SPEED`
-    - `ACK`
-    - `MOUNT_OK`
-    - `MOUNT_FAIL`
-    - `LAST_LINE`
-
-- PL → PS:
-    - `REQ`
-    - `MOUNT_REQ`
+| Direction | Register Name | Purpose |
+| --------- | ------------- | ------- |
+| PS → PL | `X` | Next command X position written by the C application. |
+| PS → PL | `Y` | Next command Y position written by the C application. |
+| PS → PL | `Z` | Next command Z position written by the C application. |
+| PS → PL | `SPEED` | Speed value associated with the current motion command. |
+| PS → PL | `ACK` | Phase acknowledge register. Updated only after the new command data is valid. |
+| PS → PL | `MOUNT_OK` | Indicates that the PS mounted the SD card and opened the job successfully. |
+| PS → PL | `MOUNT_FAIL` | Indicates that the PS could not mount or open the requested job. |
+| PS → PL | `LAST_LINE` | Marks that the currently served motion command is the final valid line in the file. |
+| PL → PS | `REQ` | Phase request register used by the PL to ask for the next motion command. |
+| PL → PS | `MOUNT_REQ` | Session request bit used by the PL to tell the PS to mount and prepare a file. |
 
 ---
 
