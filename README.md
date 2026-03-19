@@ -304,6 +304,9 @@ motion command is valid and can be executed.
 6. PL executes the path in hardware
 7. On cancel, the machine performs a controlled return-to-home sequence
 
+<img width="600" alt="machine flow" src="https://github.com/user-attachments/assets/593421ec-3dc2-4933-83fd-c1fe5225dd82" />
+
+
 ---
 
 ## Current Status
