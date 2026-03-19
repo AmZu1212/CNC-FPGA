@@ -130,6 +130,9 @@ The processing system is responsible for file-driven command preparation:
 - converting units into machine format
 - writing payload and handshake values into registers
 
+<img width="600" alt="pl ps responsibilities" src="https://github.com/user-attachments/assets/11a07f24-b9dc-4e98-9606-032798debb4d" />
+
+
 ---
 
 ## Supported G-code Behavior
