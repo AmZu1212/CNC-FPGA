@@ -1,5 +1,5 @@
 ![Top Banner](https://github.com/user-attachments/assets/7fda2d74-d90f-4a15-a4f0-2e73835bf580)
-# CNC-FPGA
+# The FPGA Powered CNC Machine Project!
 
 **Authors:** Amir Zuabi, Alexey Vassiliev
 **Project Instructor:** Oz Shmueli
