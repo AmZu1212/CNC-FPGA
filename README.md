@@ -228,25 +228,42 @@ When using runtime prints:
 
 <img width="600" alt="wiring" src="https://github.com/user-attachments/assets/a1596980-f181-4ed6-801f-4c5ce60ab138" />
 
-- X step / direction
-- Y step / direction
-- Z step / direction
-- stepper driver enable lines
-- limit / homing inputs if used
-- manual control buttons / switches if used
+The diagram above shows one complete motor assembly using the PMOD top `A`
+cluster, an A4988 driver, a Nema 17 stepper motor, a limit switch, and a
+12V-to-3.3V step-down supply. The same wiring pattern is reused for each axis.
 
-Suggested format:
+Additional connections from the driver assembly:
 
-```md
-| Signal | Connected To | Notes |
-| ------ | ------------ | ----- |
-| X_STEP | ...          | ...   |
-| X_DIR  | ...          | ...   |
-| Y_STEP | ...          | ...   |
-| Y_DIR  | ...          | ...   |
-| Z_STEP | ...          | ...   |
-| Z_DIR  | ...          | ...   |
-```
+- A4988 `2B`, `2A`, `1A`, `1B` connect to the Nema 17 motor phases.
+- A4988 `VM` is powered from the `12V` supply.
+- A4988 logic `VDD` is powered from the step-down `3.3V` output.
+- All grounds must be common between the ZedBoard, step-down converter, driver, and power supply.
+- A `100 uF` capacitor is placed across the motor supply near the A4988 driver.
+- The PCB is designed for a `12V`, `3A` DC input supply.
+- This can be provided either by a suitable wall power adapter or by a portable battery/power-bank setup, as used in this project, as long as it can reliably supply `12V` at `3A`.
+
+The remaining PMOD clusters use the same signal order:
+
+- PMOD `A`: X axis
+- PMOD `B`: Z axis
+- PMOD `C`: Y axis
+
+The table below shows the shared signal order for all three PMOD motor clusters.
+
+| Pin # | PMOD Pin Name | Signal Definition | A4988 / External Connection |
+| ----- | ------------- | ----------------- | --------------------------- |
+| `1` | `JA1 / JB1 / JC2_P` | `DIR` | A4988 `DIR` |
+| `2` | `JA2 / JB2 / JC1_N` | `STEP` | A4988 `STEP` |
+| `3` | `JA3 / JB3 / JC1_P` | `RST` | A4988 `RST` |
+| `4` | `JA4 / JB4 / JC2_N` | `LSS` | Limit switch signal |
+| `5` | `GND / GND / GND` | `LS-` | Limit switch return |
+| `6` | `VCC / VCC / VCC` | `LS+` | Limit switch `V+` |
+| `7` | `JA7 / JB7 / JC3_P` | `EN` | A4988 `EN` |
+| `8` | `JA8 / JB8 / JC3_N` | `MS1` | A4988 `MS1` |
+| `9` | `JA9 / JB9 / JC4_P` | `MS2` | A4988 `MS2` |
+| `10` | `JA10 / JB10 / JC4_N` | `MS3` | A4988 `MS3` |
+| `11` | `GND / GND / GND` | `GND` | A4988 `GND` / common ground |
+| `12` | `VCC / VCC / VCC` | `SLP` | A4988 `SLP` / 3.3V logic rail |
 
 ### PS / PL Register Interface
 
