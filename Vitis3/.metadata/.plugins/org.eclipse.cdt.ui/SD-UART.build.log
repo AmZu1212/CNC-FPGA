@@ -1,25 +1,10 @@
-16:47:37 **** Incremental Build of configuration Debug for project SD-UART ****
+20:01:20 **** Build of configuration Debug for project SD-UART ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/export/CNC-PL-PRE-RELEASE/sw/CNC-PL-PRE-RELEASE/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: SD-UART.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/Git-Repos/CNC-FPGA/Vitis3/CNC-PL-PRE-RELEASE/export/CNC-PL-PRE-RELEASE/sw/CNC-PL-PRE-RELEASE/standalone_domain/bsplib/lib -o "SD-UART.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: SD-UART.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size SD-UART.elf  |tee "SD-UART.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  87604	   1856	  25744	 115204	  1c204	SD-UART.elf
-'Finished building: SD-UART.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-16:47:38 Build Finished (took 1s.310ms)
+20:01:20 Build Finished (took 437ms)
 

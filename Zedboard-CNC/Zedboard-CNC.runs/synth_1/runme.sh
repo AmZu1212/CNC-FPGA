@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Git Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1'
+HD_PWD='E:/Git-Repos/CNC-FPGA/Zedboard-CNC/Zedboard-CNC.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

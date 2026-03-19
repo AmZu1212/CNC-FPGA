@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2024.2
-| Date         : Thu Mar 19 19:31:10 2026
-| Host         : Alex-PC
+| Date         : Thu Mar 19 19:53:17 2026
+| Host         : OBSIDIAN
 | Design       : design_1
 | Device       : xc7z020-clg484-1--
 -------------------------------------

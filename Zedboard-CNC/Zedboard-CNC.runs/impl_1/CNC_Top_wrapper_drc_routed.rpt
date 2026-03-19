@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Thu Mar 19 19:31:44 2026
-| Host         : Alex-PC running 64-bit major release  (build 9200)
+| Date         : Thu Mar 19 19:53:56 2026
+| Host         : OBSIDIAN running 64-bit major release  (build 9200)
 | Command      : report_drc -file CNC_Top_wrapper_drc_routed.rpt -pb CNC_Top_wrapper_drc_routed.pb -rpx CNC_Top_wrapper_drc_routed.rpx
 | Design       : CNC_Top_wrapper
 | Device       : xc7z020clg484-1
@@ -1275,13 +1275,13 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-74 net(s) have no routable loads. The problem bus(es) and/or net(s) are CNC_Top_i/axi_smc/inst/m03_nodes/m03_w_node/inst/mi_handler_m_sc_areset_pipe,
+74 net(s) have no routable loads. The problem bus(es) and/or net(s) are CNC_Top_i/axi_smc/inst/m00_nodes/m00_w_node/inst/mi_handler_m_sc_areset_pipe,
+CNC_Top_i/axi_smc/inst/m02_nodes/m02_ar_node/inst/mi_handler_m_sc_areset_pipe,
+CNC_Top_i/axi_smc/inst/m03_nodes/m03_ar_node/inst/mi_handler_m_sc_areset_pipe,
+CNC_Top_i/axi_smc/inst/m04_nodes/m04_ar_node/inst/mi_handler_m_sc_areset_pipe,
+CNC_Top_i/axi_smc/inst/m04_nodes/m04_w_node/inst/mi_handler_m_sc_areset_pipe,
 CNC_Top_i/axi_smc/inst/m07_nodes/m07_ar_node/inst/mi_handler_m_sc_areset_pipe,
 CNC_Top_i/axi_smc/inst/m07_nodes/m07_aw_node/inst/mi_handler_m_sc_areset_pipe,
-CNC_Top_i/axi_smc/inst/m08_nodes/m08_w_node/inst/mi_handler_m_sc_areset_pipe,
-CNC_Top_i/axi_smc/inst/s00_nodes/s00_b_node/inst/mi_handler_m_sc_areset_pipe,
-CNC_Top_i/axi_smc/inst/s00_nodes/s00_r_node/inst/mi_handler_m_sc_areset_pipe,
-CNC_Top_i/axi_smc/inst/s00_nodes/s00_w_node/inst/mi_handler_m_sc_areset_pipe,
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1],
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_3_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
 dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0],
