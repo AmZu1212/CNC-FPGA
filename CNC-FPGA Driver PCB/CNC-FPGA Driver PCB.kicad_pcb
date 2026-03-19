@@ -80,7 +80,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "./")
+			(outputdirectory "Gerber/")
 		)
 	)
 	(net 0 "")
@@ -109,7 +109,7 @@
 		(at 255.346526 152.731664 -90)
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
-		(property "Reference" "LimitSwitchZ"
+		(property "Reference" "LimitSwitchY"
 			(at 3 2.54 0)
 			(layer "F.SilkS")
 			(uuid "a1c85dcf-7133-40ea-a40c-ae9b04c0cde8")
@@ -1354,7 +1354,7 @@
 		(at 244.84091 136.855399 90)
 		(descr "Pololu Breakout 16-pin 15.2x20.3mm 0.6x0.8\\")
 		(tags "Pololu Breakout")
-		(property "Reference" "A4988 Z Axis Driver"
+		(property "Reference" "A4988 Y Axis Driver"
 			(at 6.35 -2.54 90)
 			(layer "F.SilkS")
 			(uuid "dfdfd468-e00a-493d-a232-baf4e19102b1")
@@ -2793,7 +2793,7 @@
 		(at 257.58 112 -90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
-		(property "Reference" "StepperZ_2"
+		(property "Reference" "StepperY_2"
 			(at -3 3.58 0)
 			(layer "F.SilkS")
 			(uuid "f1fe3d53-9f59-4929-8a86-d0bc53737ca9")
@@ -3621,7 +3621,7 @@
 		(at 233.81 118.068708 -90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
-		(property "Reference" "StepperY"
+		(property "Reference" "StepperZ"
 			(at -3 3.58 0)
 			(layer "F.SilkS")
 			(uuid "d95ab078-e058-4d71-8328-159b99edfba9")
@@ -4080,7 +4080,7 @@
 		(at 221.11 136.908708 90)
 		(descr "Pololu Breakout 16-pin 15.2x20.3mm 0.6x0.8\\")
 		(tags "Pololu Breakout")
-		(property "Reference" "A4988 Y Axis Driver"
+		(property "Reference" "A4988 Z Axis Driver"
 			(at 6.35 -2.54 90)
 			(layer "F.SilkS")
 			(uuid "9885788b-2553-479e-b863-f8a066063be3")
@@ -4943,7 +4943,7 @@
 		(at 231.614919 152.566218 -90)
 		(descr "Through hole straight pin header, 1x03, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x03 2.54mm single row")
-		(property "Reference" "LimitSwitchY"
+		(property "Reference" "LimitSwitchZ"
 			(at 3 2.54 0)
 			(layer "F.SilkS")
 			(uuid "03a64191-b4da-4091-848a-f11a485b8439")
@@ -5341,7 +5341,7 @@
 		(at 257.58 118.015399 -90)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
-		(property "Reference" "StepperZ_1"
+		(property "Reference" "StepperY_1"
 			(at -3 3.58 0)
 			(layer "F.SilkS")
 			(uuid "0b70b7fb-2190-4550-b059-e1c51cf067f0")
@@ -5679,7 +5679,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Revision 1.0"
+	(gr_text "Revision 1.1"
 		(at 269.209217 137.579545 90)
 		(layer "F.SilkS")
 		(uuid "eed2cc40-f08d-4bcb-9d9f-59423627b142")
