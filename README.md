@@ -225,6 +225,7 @@ When using runtime prints:
 - SD card inserted (a micro-sd to SD adapter can be used and is recommended)
 
 ### Motion / Driver Wiring
+
 <img width="600" alt="wiring" src="https://github.com/user-attachments/assets/a1596980-f181-4ed6-801f-4c5ce60ab138" />
 
 - X step / direction
