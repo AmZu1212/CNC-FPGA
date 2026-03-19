@@ -3,7 +3,7 @@
 **Authors:** Amir Zuabi, Alexey Vassiliev
 **Project Instructor:** Oz Shmueli
 
-**Tech Stack:** Verilog HDL, Embedded C, AMD Vitis + Vivado
+**Tech Stack:** Verilog HDL, Embedded C, AMD Vitis + Vivado 2024.2
 
 FPGA-driven CNC / pen-plotter control system built around the AMD/Xilinx Zynq-7000
 ZedBoard. The machine uses a ballpoint pen as its toolhead and draws 2D paths on
