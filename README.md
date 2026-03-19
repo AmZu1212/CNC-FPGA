@@ -39,23 +39,6 @@ The project combines:
 
 <img width="600" alt="system overview" src="https://github.com/user-attachments/assets/c89f4c1b-e395-49c2-884e-f2509f8f151a" />
 
-
-### Demo Video
-
-GitHub Markdown does not truly embed YouTube playback inline, but you can present it cleanly with a thumbnail link.
-
-Replace the placeholders below when you have the final link:
-
-```md
-[![Watch the demo](path/to/video_thumbnail.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
-
-Or use a plain link:
-
-```md
-[Project Demo Video](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
-
 ---
 
 ## What This Project Does
