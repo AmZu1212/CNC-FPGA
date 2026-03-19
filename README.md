@@ -3,6 +3,8 @@
 **Authors:** Amir Zuabi, Alexey Vassiliev  
 **Project Instructor:** Oz Shmueli
 
+**Tech Stack:** Verilog HDL, Embedded C, AMD Vitis + Vivado
+
 FPGA-driven CNC / pen-plotter control system built around the AMD/Xilinx Zynq-7000
 ZedBoard. The machine uses a ballpoint pen as its toolhead and draws 2D paths on
 paper by coordinating X/Y motion and pen lift on the Z axis.
@@ -18,22 +20,14 @@ The project combines:
 
 ## Gallery
 
-### Machine
-
-Add a machine photo here:
-
-```md
-![Machine](path/to/machine_photo.jpg)
-```
+### The Finished Machine
+<img src="https://github.com/user-attachments/assets/d03e49cb-4d8f-49c4-ba88-ef827f9c7279" alt="Machine photo" width="600">
 
 ### PCB / Electronics
+<img src="https://github.com/user-attachments/assets/8159b595-367a-40c8-8b42-88b922629bd5" alt="Unsoldered PCB" width="300"><img src="https://github.com/user-attachments/assets/9ce17300-c851-4805-a044-b256336c854e" alt="Unsoldered PCB" width="300">
 
-Add PCB and electronics photos here:
-
-```md
-![PCB Front](path/to/pcb_front.jpg)
-![PCB Back](path/to/pcb_back.jpg)
-```
+### The Zedboard (Board Platform with PS/PL)
+<img src="https://github.com/user-attachments/assets/6a2135af-0862-4bad-b2f2-593dc473438e" alt="Machine photo" width="600">
 
 ### Demo Video
 
