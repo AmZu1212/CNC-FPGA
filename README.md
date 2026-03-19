@@ -182,12 +182,18 @@ For normal use, the project should be launched directly from the existing Vitis 
 2. Connect the USB cable used for JTAG/programming.
 3. Connect the USB cable used for UART/serial output.
 4. Open the Vitis Classic workspace/project directory (Please note: open Vitis Classic, and not Vitis Unified).
-5. Open the existing application project.
-6. Make sure the board is powered.
-7. Launch the application on hardware.(right click the project application, and press "launch on hardware")
-8. Open the serial terminal if you want runtime prints.
 
+<img width="600" alt="step1" src="https://github.com/user-attachments/assets/b2b0048d-760e-4615-b305-27fab7dc5f3c" />
 
+6. Open the existing application project.
+7. Make sure the board is powered.
+8. Launch the application on hardware.(right click the project application, and press "launch on hardware")
+
+<img width="600" alt="step2" src="https://github.com/user-attachments/assets/01fa42e6-dfd0-4dfa-b00f-7ca646f8e2a5" />
+
+10. Open the serial terminal if you want runtime prints.
+
+<img width="600" alt="com port prints" src="https://github.com/user-attachments/assets/5a779245-2032-49f0-8de0-2d31fbf907c7" />
 
 For the normal checked-in working flow, no rebuild is required just to run the design if the workspace is already in a valid state.
 
