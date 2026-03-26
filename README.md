@@ -1,4 +1,5 @@
-# CNC-FPGA
+![Top Banner](https://github.com/user-attachments/assets/7fda2d74-d90f-4a15-a4f0-2e73835bf580)
+# The FPGA Powered CNC Machine Project!
 
 **Authors:** Amir Zuabi, Alexey Vassiliev
 **Project Instructor:** Oz Shmueli
@@ -37,23 +38,6 @@ The project combines:
 ### System Overview
 
 <img width="600" alt="system overview" src="https://github.com/user-attachments/assets/c89f4c1b-e395-49c2-884e-f2509f8f151a" />
-
-
-### Demo Video
-
-GitHub Markdown does not truly embed YouTube playback inline, but you can present it cleanly with a thumbnail link.
-
-Replace the placeholders below when you have the final link:
-
-```md
-[![Watch the demo](path/to/video_thumbnail.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
-
-Or use a plain link:
-
-```md
-[Project Demo Video](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
 
 ---
 
@@ -343,3 +327,5 @@ This repository represents substantial work in:
 ## Authors
 
 A Project by Amir Zuabi & Alex Vassiliev
+
+![Bottom Banner](https://github.com/user-attachments/assets/37fdd0cc-1e97-464d-82f6-6b3a6e116ac4)
