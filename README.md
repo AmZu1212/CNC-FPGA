@@ -19,6 +19,11 @@ The project combines:
 
 <img src="https://github.com/user-attachments/assets/36d3c2b8-df92-4526-b27e-2ac13546e288" alt="Machine photo" width="600">
 
+## Project Extras
+- [Project Book](https://docs.google.com/document/d/1OV_ynCNoAT1X2owSJ-zEwvw9sg0V5Sw3wNW-7_P0xBw/edit?usp=sharing)
+- [Project Final Presentation](https://docs.google.com/presentation/d/1b78aWw7C5DXjPr4mND8HU1x7PuBJLt62-B5t3x_5M5w/edit?usp=sharing)
+- [Project Poster](https://docs.google.com/presentation/d/1uY4deVW8epaZUn2_C40akR2pndnsqMq7fAAhxBZv-9M/edit?usp=sharing)
+
 ---
 
 ## Gallery
