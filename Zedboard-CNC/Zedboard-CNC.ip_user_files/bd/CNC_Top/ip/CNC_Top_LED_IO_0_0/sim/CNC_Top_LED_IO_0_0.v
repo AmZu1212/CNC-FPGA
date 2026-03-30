@@ -55,36 +55,30 @@
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module CNC_Top_LED_IO_0_0 (
-  in0,
+  mount_ok,
+  mount_fail,
+  PL_Phase,
+  PS_Phase,
   in1,
   in2,
-  in3,
-  in4,
-  in5,
-  in6,
-  in7,
   led
 );
 
-input wire in0;
+input wire mount_ok;
+input wire mount_fail;
+input wire [1 : 0] PL_Phase;
+input wire [1 : 0] PS_Phase;
 input wire in1;
 input wire in2;
-input wire in3;
-input wire in4;
-input wire in5;
-input wire in6;
-input wire in7;
 output wire [7 : 0] led;
 
   LED_IO inst (
-    .in0(in0),
+    .mount_ok(mount_ok),
+    .mount_fail(mount_fail),
+    .PL_Phase(PL_Phase),
+    .PS_Phase(PS_Phase),
     .in1(in1),
     .in2(in2),
-    .in3(in3),
-    .in4(in4),
-    .in5(in5),
-    .in6(in6),
-    .in7(in7),
     .led(led)
   );
 endmodule

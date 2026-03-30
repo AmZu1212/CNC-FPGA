@@ -36,13 +36,6 @@ module CNC_Top (
   ms3X,
   enableX,
   led,
-  enableY,
-  directionY,
-  stepY,
-  resetY,
-  ms1Y,
-  ms2Y,
-  ms3Y,
   enableZ,
   directionZ,
   stepZ,
@@ -50,6 +43,13 @@ module CNC_Top (
   ms1Z,
   ms2Z,
   ms3Z,
+  enableY,
+  directionY,
+  stepY,
+  resetY,
+  ms1Y,
+  ms2Y,
+  ms3Y,
   ResetSwitch,
   Middle,
   Left,
@@ -128,20 +128,6 @@ module CNC_Top (
   (* X_INTERFACE_IGNORE = "true" *)
   output [7:0]led;
   (* X_INTERFACE_IGNORE = "true" *)
-  output enableY;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output directionY;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output stepY;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output resetY;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output ms1Y;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output ms2Y;
-  (* X_INTERFACE_IGNORE = "true" *)
-  output ms3Y;
-  (* X_INTERFACE_IGNORE = "true" *)
   output enableZ;
   (* X_INTERFACE_IGNORE = "true" *)
   output directionZ;
@@ -155,6 +141,20 @@ module CNC_Top (
   output ms2Z;
   (* X_INTERFACE_IGNORE = "true" *)
   output ms3Z;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output enableY;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output directionY;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output stepY;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output resetY;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output ms1Y;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output ms2Y;
+  (* X_INTERFACE_IGNORE = "true" *)
+  output ms3Y;
   (* X_INTERFACE_IGNORE = "true" *)
   input ResetSwitch;
   (* X_INTERFACE_IGNORE = "true" *)

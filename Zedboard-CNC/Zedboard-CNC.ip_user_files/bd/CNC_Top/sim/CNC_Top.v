@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Mon Mar  9 14:12:55 2026
+//Date        : Mon Mar 30 23:44:51 2026
 //Host        : OBSIDIAN running 64-bit major release  (build 9200)
 //Command     : generate_target CNC_Top.bd
 //Design      : CNC_Top
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=16,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
+(* CORE_GENERATION_INFO = "CNC_Top,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=CNC_Top,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=27,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=11,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=25,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=None}" *) (* HW_HANDOFF = "CNC_Top.hwdef" *) 
 module CNC_Top
    (DDR_addr,
     DDR_ba,
@@ -115,6 +115,7 @@ module CNC_Top
   output stepZ;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN CNC_Top_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
 
+  wire [1:0]ACK_GPIO_gpio_io_o;
   wire [4:0]Buttons_Vector_0_keys;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -158,10 +159,14 @@ module CNC_Top
   wire [1:0]GCODE_Parser_0_phase;
   wire GCODE_Parser_0_request_next_line;
   wire [7:0]GCODE_Parser_0_speed;
+  wire [0:0]LAST_LINE_GPIO_gpio_io_o;
   wire Left;
+  wire [0:0]MOUNT_FAIL_GPIO_gpio_io_o;
+  wire [0:0]MOUNT_OK_GPIO_gpio_io_o;
   wire Middle;
   wire ResetSwitch;
   wire Right;
+  wire [7:0]SPEED_GPIO_gpio_io_o;
   wire Up;
   wire [7:0]XYZ_Axis_Coordinator_0_current_speed;
   wire [63:0]XYZ_Axis_Coordinator_0_cycles_per_step_x;
@@ -173,6 +178,9 @@ module CNC_Top
   wire [31:0]XYZ_Axis_Coordinator_0_direction_change_buffer;
   wire XYZ_Axis_Coordinator_0_load_next_line;
   wire [7:0]XYZ_Axis_Coordinator_0_target_speed;
+  wire [31:0]X_GPIO_gpio_io_o;
+  wire [31:0]Y_GPIO_gpio_io_o;
+  wire [31:0]Z_GPIO_gpio_io_o;
   wire Zswitch;
   wire [8:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
@@ -276,6 +284,74 @@ module CNC_Top
   wire axi_smc_M05_AXI_WREADY;
   wire [3:0]axi_smc_M05_AXI_WSTRB;
   wire axi_smc_M05_AXI_WVALID;
+  wire [8:0]axi_smc_M06_AXI_ARADDR;
+  wire axi_smc_M06_AXI_ARREADY;
+  wire axi_smc_M06_AXI_ARVALID;
+  wire [8:0]axi_smc_M06_AXI_AWADDR;
+  wire axi_smc_M06_AXI_AWREADY;
+  wire axi_smc_M06_AXI_AWVALID;
+  wire axi_smc_M06_AXI_BREADY;
+  wire [1:0]axi_smc_M06_AXI_BRESP;
+  wire axi_smc_M06_AXI_BVALID;
+  wire [31:0]axi_smc_M06_AXI_RDATA;
+  wire axi_smc_M06_AXI_RREADY;
+  wire [1:0]axi_smc_M06_AXI_RRESP;
+  wire axi_smc_M06_AXI_RVALID;
+  wire [31:0]axi_smc_M06_AXI_WDATA;
+  wire axi_smc_M06_AXI_WREADY;
+  wire [3:0]axi_smc_M06_AXI_WSTRB;
+  wire axi_smc_M06_AXI_WVALID;
+  wire [8:0]axi_smc_M07_AXI_ARADDR;
+  wire axi_smc_M07_AXI_ARREADY;
+  wire axi_smc_M07_AXI_ARVALID;
+  wire [8:0]axi_smc_M07_AXI_AWADDR;
+  wire axi_smc_M07_AXI_AWREADY;
+  wire axi_smc_M07_AXI_AWVALID;
+  wire axi_smc_M07_AXI_BREADY;
+  wire [1:0]axi_smc_M07_AXI_BRESP;
+  wire axi_smc_M07_AXI_BVALID;
+  wire [31:0]axi_smc_M07_AXI_RDATA;
+  wire axi_smc_M07_AXI_RREADY;
+  wire [1:0]axi_smc_M07_AXI_RRESP;
+  wire axi_smc_M07_AXI_RVALID;
+  wire [31:0]axi_smc_M07_AXI_WDATA;
+  wire axi_smc_M07_AXI_WREADY;
+  wire [3:0]axi_smc_M07_AXI_WSTRB;
+  wire axi_smc_M07_AXI_WVALID;
+  wire [8:0]axi_smc_M08_AXI_ARADDR;
+  wire axi_smc_M08_AXI_ARREADY;
+  wire axi_smc_M08_AXI_ARVALID;
+  wire [8:0]axi_smc_M08_AXI_AWADDR;
+  wire axi_smc_M08_AXI_AWREADY;
+  wire axi_smc_M08_AXI_AWVALID;
+  wire axi_smc_M08_AXI_BREADY;
+  wire [1:0]axi_smc_M08_AXI_BRESP;
+  wire axi_smc_M08_AXI_BVALID;
+  wire [31:0]axi_smc_M08_AXI_RDATA;
+  wire axi_smc_M08_AXI_RREADY;
+  wire [1:0]axi_smc_M08_AXI_RRESP;
+  wire axi_smc_M08_AXI_RVALID;
+  wire [31:0]axi_smc_M08_AXI_WDATA;
+  wire axi_smc_M08_AXI_WREADY;
+  wire [3:0]axi_smc_M08_AXI_WSTRB;
+  wire axi_smc_M08_AXI_WVALID;
+  wire [8:0]axi_smc_M09_AXI_ARADDR;
+  wire axi_smc_M09_AXI_ARREADY;
+  wire axi_smc_M09_AXI_ARVALID;
+  wire [8:0]axi_smc_M09_AXI_AWADDR;
+  wire axi_smc_M09_AXI_AWREADY;
+  wire axi_smc_M09_AXI_AWVALID;
+  wire axi_smc_M09_AXI_BREADY;
+  wire [1:0]axi_smc_M09_AXI_BRESP;
+  wire axi_smc_M09_AXI_BVALID;
+  wire [31:0]axi_smc_M09_AXI_RDATA;
+  wire axi_smc_M09_AXI_RREADY;
+  wire [1:0]axi_smc_M09_AXI_RRESP;
+  wire axi_smc_M09_AXI_RVALID;
+  wire [31:0]axi_smc_M09_AXI_WDATA;
+  wire axi_smc_M09_AXI_WREADY;
+  wire [3:0]axi_smc_M09_AXI_WSTRB;
+  wire axi_smc_M09_AXI_WVALID;
   wire clk_wiz_clk_out1;
   wire directionX;
   wire directionY;
@@ -283,13 +359,6 @@ module CNC_Top
   wire enableX;
   wire enableY;
   wire enableZ;
-  wire [1:0]hexfile_holder_0_ack_phase;
-  wire hexfile_holder_0_mount_fail;
-  wire hexfile_holder_0_mount_ok;
-  wire [7:0]hexfile_holder_0_next_line_speed;
-  wire [31:0]hexfile_holder_0_next_x;
-  wire [31:0]hexfile_holder_0_next_y;
-  wire [31:0]hexfile_holder_0_next_z;
   wire [7:0]led;
   wire ms1X;
   wire ms1Y;
@@ -350,7 +419,7 @@ module CNC_Top
   wire sys_clock;
   wire [0:0]xlconstant_1_dout;
 
-  CNC_Top_A4988_Driver_IO_0_0 A4988_Driver_IO
+  CNC_Top_A4988_Driver_IO_0_0 A4988_Driver_IO_X
        (.direction(DriverController_X_dir_out),
         .drv_direction(directionX),
         .drv_enable(enableX),
@@ -365,23 +434,8 @@ module CNC_Top
         .ms3(xlconstant_1_dout),
         .reset(ResetSwitch),
         .step(DriverController_0_step));
-  CNC_Top_A4988_Driver_IO_1 A4988_Driver_IO1
+  CNC_Top_A4988_Driver_IO_1 A4988_Driver_IO_Y
        (.direction(DriverController_Y_dir_out),
-        .drv_direction(directionZ),
-        .drv_enable(enableZ),
-        .drv_ms1(ms1Z),
-        .drv_ms2(ms2Z),
-        .drv_ms3(ms3Z),
-        .drv_reset(resetZ),
-        .drv_step(stepZ),
-        .enable(DriverController_Y_en),
-        .ms1(xlconstant_1_dout),
-        .ms2(xlconstant_1_dout),
-        .ms3(xlconstant_1_dout),
-        .reset(ResetSwitch),
-        .step(DriverController_Y_step));
-  CNC_Top_A4988_Driver_IO_2 A4988_Driver_IO2
-       (.direction(DriverController_Z_dir_out),
         .drv_direction(directionY),
         .drv_enable(enableY),
         .drv_ms1(ms1Y),
@@ -389,13 +443,49 @@ module CNC_Top
         .drv_ms3(ms3Y),
         .drv_reset(resetY),
         .drv_step(stepY),
+        .enable(DriverController_Y_en),
+        .ms1(xlconstant_1_dout),
+        .ms2(xlconstant_1_dout),
+        .ms3(xlconstant_1_dout),
+        .reset(ResetSwitch),
+        .step(DriverController_Y_step));
+  CNC_Top_A4988_Driver_IO_2 A4988_Driver_IO_Z
+       (.direction(DriverController_Z_dir_out),
+        .drv_direction(directionZ),
+        .drv_enable(enableZ),
+        .drv_ms1(ms1Z),
+        .drv_ms2(ms2Z),
+        .drv_ms3(ms3Z),
+        .drv_reset(resetZ),
+        .drv_step(stepZ),
         .enable(DriverController_Z_en),
         .ms1(xlconstant_1_dout),
         .ms2(xlconstant_1_dout),
         .ms3(xlconstant_1_dout),
         .reset(ResetSwitch),
         .step(DriverController_Z_step));
-  CNC_Top_Buttons_Vector_0_1 Buttons_Vector_0
+  CNC_Top_axi_gpio_0_4 ACK_GPIO
+       (.gpio_io_o(ACK_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M02_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M02_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M02_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M02_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M02_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M02_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M02_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M02_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M02_AXI_RDATA),
+        .s_axi_rready(axi_smc_M02_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M02_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M02_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M02_AXI_WDATA),
+        .s_axi_wready(axi_smc_M02_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
+  CNC_Top_Buttons_Vector_0_1 Buttons_Vector
        (.Zswitch(Zswitch),
         .down(Down),
         .keys(Buttons_Vector_0_keys),
@@ -432,18 +522,19 @@ module CNC_Top
         .rst(ResetSwitch),
         .step(DriverController_Z_step),
         .step_risingedge(DriverController_X2_step_risingedge));
-  CNC_Top_GCODE_Parser_0_0 GCODE_Parser_0
-       (.ack_phase(hexfile_holder_0_ack_phase),
+  CNC_Top_GCODE_Parser_0_0 GCODE_Parser
+       (.ack_phase(ACK_GPIO_gpio_io_o),
         .clk(clk_wiz_clk_out1),
         .enable(GCODE_Parser_0_enable),
+        .last_line(LAST_LINE_GPIO_gpio_io_o),
         .load_next_line(XYZ_Axis_Coordinator_0_load_next_line),
-        .mount_fail(hexfile_holder_0_mount_fail),
-        .mount_ok(hexfile_holder_0_mount_ok),
+        .mount_fail(MOUNT_FAIL_GPIO_gpio_io_o),
+        .mount_ok(MOUNT_OK_GPIO_gpio_io_o),
         .mount_req(GCODE_Parser_0_mount_req),
-        .next_line_speed(hexfile_holder_0_next_line_speed),
-        .next_x(hexfile_holder_0_next_x),
-        .next_y(hexfile_holder_0_next_y),
-        .next_z(hexfile_holder_0_next_z),
+        .next_line_speed(SPEED_GPIO_gpio_io_o),
+        .next_x(X_GPIO_gpio_io_o),
+        .next_y(Y_GPIO_gpio_io_o),
+        .next_z(Z_GPIO_gpio_io_o),
         .phase(GCODE_Parser_0_phase),
         .request_next_line(GCODE_Parser_0_request_next_line),
         .rst(ResetSwitch),
@@ -454,18 +545,100 @@ module CNC_Top
         .z(GCODE_Parser_0_next_pos_z));
   CNC_Top_xlconstant_0_1 High_Bit
        (.dout(xlconstant_1_dout));
+  CNC_Top_axi_gpio_0_9 LAST_LINE_GPIO
+       (.gpio_io_o(LAST_LINE_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M09_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M09_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M09_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M09_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M09_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M09_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M09_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M09_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M09_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M09_AXI_RDATA),
+        .s_axi_rready(axi_smc_M09_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M09_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M09_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M09_AXI_WDATA),
+        .s_axi_wready(axi_smc_M09_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M09_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M09_AXI_WVALID));
   CNC_Top_LED_IO_0_0 LED_IO_0
-       (.in0(enableX),
-        .in1(directionX),
-        .in2(stepX),
-        .in3(xlconstant_1_dout),
-        .in4(xlconstant_1_dout),
-        .in5(XYZ_Axis_Coordinator_0_load_next_line),
-        .in6(xlconstant_1_dout),
-        .in7(GCODE_Parser_0_enable),
-        .led(led));
-  CNC_Top_axi_gpio_0_5 PL_GPIO
-       (.gpio_io_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+       (.PL_Phase({GCODE_Parser_0_mount_req,GCODE_Parser_0_mount_req}),
+        .PS_Phase(ACK_GPIO_gpio_io_o),
+        .in1(xlconstant_1_dout),
+        .in2(xlconstant_1_dout),
+        .led(led),
+        .mount_fail(MOUNT_FAIL_GPIO_gpio_io_o),
+        .mount_ok(MOUNT_OK_GPIO_gpio_io_o));
+  CNC_Top_axi_gpio_0_7 MOUNT_FAIL_GPIO
+       (.gpio_io_o(MOUNT_FAIL_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M06_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M06_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M06_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M06_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M06_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M06_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M06_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M06_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M06_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M06_AXI_RDATA),
+        .s_axi_rready(axi_smc_M06_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M06_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M06_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M06_AXI_WDATA),
+        .s_axi_wready(axi_smc_M06_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M06_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M06_AXI_WVALID));
+  CNC_Top_axi_gpio_0_6 MOUNT_OK_GPIO
+       (.gpio_io_o(MOUNT_OK_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M07_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M07_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M07_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M07_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M07_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M07_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M07_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M07_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M07_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M07_AXI_RDATA),
+        .s_axi_rready(axi_smc_M07_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M07_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M07_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M07_AXI_WDATA),
+        .s_axi_wready(axi_smc_M07_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M07_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M07_AXI_WVALID));
+  CNC_Top_axi_gpio_0_8 MOUNT_REQ_GPIO
+       (.gpio_io_i(GCODE_Parser_0_mount_req),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(axi_smc_M08_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(axi_smc_M08_AXI_ARREADY),
+        .s_axi_arvalid(axi_smc_M08_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M08_AXI_AWADDR),
+        .s_axi_awready(axi_smc_M08_AXI_AWREADY),
+        .s_axi_awvalid(axi_smc_M08_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M08_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M08_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M08_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M08_AXI_RDATA),
+        .s_axi_rready(axi_smc_M08_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M08_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M08_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M08_AXI_WDATA),
+        .s_axi_wready(axi_smc_M08_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M08_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M08_AXI_WVALID));
+  CNC_Top_axi_gpio_0_5 REQ_GPIO
+       (.gpio_io_i(GCODE_Parser_0_phase),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M01_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -485,28 +658,9 @@ module CNC_Top
         .s_axi_wready(axi_smc_M01_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M01_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M01_AXI_WVALID));
-  CNC_Top_axi_gpio_0_4 PS_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
-        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .s_axi_arready(axi_smc_M02_AXI_ARREADY),
-        .s_axi_arvalid(axi_smc_M02_AXI_ARVALID),
-        .s_axi_awaddr(axi_smc_M02_AXI_AWADDR),
-        .s_axi_awready(axi_smc_M02_AXI_AWREADY),
-        .s_axi_awvalid(axi_smc_M02_AXI_AWVALID),
-        .s_axi_bready(axi_smc_M02_AXI_BREADY),
-        .s_axi_bresp(axi_smc_M02_AXI_BRESP),
-        .s_axi_bvalid(axi_smc_M02_AXI_BVALID),
-        .s_axi_rdata(axi_smc_M02_AXI_RDATA),
-        .s_axi_rready(axi_smc_M02_AXI_RREADY),
-        .s_axi_rresp(axi_smc_M02_AXI_RRESP),
-        .s_axi_rvalid(axi_smc_M02_AXI_RVALID),
-        .s_axi_wdata(axi_smc_M02_AXI_WDATA),
-        .s_axi_wready(axi_smc_M02_AXI_WREADY),
-        .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
-        .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
   CNC_Top_axi_gpio_0_3 SPEED_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(SPEED_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M03_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M03_AXI_ARREADY),
@@ -525,7 +679,13 @@ module CNC_Top
         .s_axi_wready(axi_smc_M03_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M03_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M03_AXI_WVALID));
-  CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator_0
+  CNC_Top_vio_0_0 VIO
+       (.clk(clk_wiz_clk_out1),
+        .probe_in0(XYZ_Axis_Coordinator_0_current_speed),
+        .probe_in1(XYZ_Axis_Coordinator_0_target_speed),
+        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer),
+        .probe_in3(Buttons_Vector_0_keys));
+  CNC_Top_XYZ_Axis_Coordinator_0_0 XYZ_Axis_Coordinator
        (.clk(clk_wiz_clk_out1),
         .current_speed(XYZ_Axis_Coordinator_0_current_speed),
         .cycles_per_step_x(XYZ_Axis_Coordinator_0_cycles_per_step_x),
@@ -548,7 +708,8 @@ module CNC_Top
         .step_feedback_z(DriverController_X2_step_risingedge),
         .target_speed(XYZ_Axis_Coordinator_0_target_speed));
   CNC_Top_axi_gpio_0_0 X_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(X_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M00_AXI_ARREADY),
@@ -568,7 +729,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID));
   CNC_Top_axi_gpio_0_1 Y_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(Y_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M04_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M04_AXI_ARREADY),
@@ -588,7 +750,8 @@ module CNC_Top
         .s_axi_wstrb(axi_smc_M04_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M04_AXI_WVALID));
   CNC_Top_axi_gpio_0_2 Z_GPIO
-       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.gpio_io_o(Z_GPIO_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M05_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .s_axi_arready(axi_smc_M05_AXI_ARREADY),
@@ -710,6 +873,74 @@ module CNC_Top
         .M05_AXI_wready(axi_smc_M05_AXI_WREADY),
         .M05_AXI_wstrb(axi_smc_M05_AXI_WSTRB),
         .M05_AXI_wvalid(axi_smc_M05_AXI_WVALID),
+        .M06_AXI_araddr(axi_smc_M06_AXI_ARADDR),
+        .M06_AXI_arready(axi_smc_M06_AXI_ARREADY),
+        .M06_AXI_arvalid(axi_smc_M06_AXI_ARVALID),
+        .M06_AXI_awaddr(axi_smc_M06_AXI_AWADDR),
+        .M06_AXI_awready(axi_smc_M06_AXI_AWREADY),
+        .M06_AXI_awvalid(axi_smc_M06_AXI_AWVALID),
+        .M06_AXI_bready(axi_smc_M06_AXI_BREADY),
+        .M06_AXI_bresp(axi_smc_M06_AXI_BRESP),
+        .M06_AXI_bvalid(axi_smc_M06_AXI_BVALID),
+        .M06_AXI_rdata(axi_smc_M06_AXI_RDATA),
+        .M06_AXI_rready(axi_smc_M06_AXI_RREADY),
+        .M06_AXI_rresp(axi_smc_M06_AXI_RRESP),
+        .M06_AXI_rvalid(axi_smc_M06_AXI_RVALID),
+        .M06_AXI_wdata(axi_smc_M06_AXI_WDATA),
+        .M06_AXI_wready(axi_smc_M06_AXI_WREADY),
+        .M06_AXI_wstrb(axi_smc_M06_AXI_WSTRB),
+        .M06_AXI_wvalid(axi_smc_M06_AXI_WVALID),
+        .M07_AXI_araddr(axi_smc_M07_AXI_ARADDR),
+        .M07_AXI_arready(axi_smc_M07_AXI_ARREADY),
+        .M07_AXI_arvalid(axi_smc_M07_AXI_ARVALID),
+        .M07_AXI_awaddr(axi_smc_M07_AXI_AWADDR),
+        .M07_AXI_awready(axi_smc_M07_AXI_AWREADY),
+        .M07_AXI_awvalid(axi_smc_M07_AXI_AWVALID),
+        .M07_AXI_bready(axi_smc_M07_AXI_BREADY),
+        .M07_AXI_bresp(axi_smc_M07_AXI_BRESP),
+        .M07_AXI_bvalid(axi_smc_M07_AXI_BVALID),
+        .M07_AXI_rdata(axi_smc_M07_AXI_RDATA),
+        .M07_AXI_rready(axi_smc_M07_AXI_RREADY),
+        .M07_AXI_rresp(axi_smc_M07_AXI_RRESP),
+        .M07_AXI_rvalid(axi_smc_M07_AXI_RVALID),
+        .M07_AXI_wdata(axi_smc_M07_AXI_WDATA),
+        .M07_AXI_wready(axi_smc_M07_AXI_WREADY),
+        .M07_AXI_wstrb(axi_smc_M07_AXI_WSTRB),
+        .M07_AXI_wvalid(axi_smc_M07_AXI_WVALID),
+        .M08_AXI_araddr(axi_smc_M08_AXI_ARADDR),
+        .M08_AXI_arready(axi_smc_M08_AXI_ARREADY),
+        .M08_AXI_arvalid(axi_smc_M08_AXI_ARVALID),
+        .M08_AXI_awaddr(axi_smc_M08_AXI_AWADDR),
+        .M08_AXI_awready(axi_smc_M08_AXI_AWREADY),
+        .M08_AXI_awvalid(axi_smc_M08_AXI_AWVALID),
+        .M08_AXI_bready(axi_smc_M08_AXI_BREADY),
+        .M08_AXI_bresp(axi_smc_M08_AXI_BRESP),
+        .M08_AXI_bvalid(axi_smc_M08_AXI_BVALID),
+        .M08_AXI_rdata(axi_smc_M08_AXI_RDATA),
+        .M08_AXI_rready(axi_smc_M08_AXI_RREADY),
+        .M08_AXI_rresp(axi_smc_M08_AXI_RRESP),
+        .M08_AXI_rvalid(axi_smc_M08_AXI_RVALID),
+        .M08_AXI_wdata(axi_smc_M08_AXI_WDATA),
+        .M08_AXI_wready(axi_smc_M08_AXI_WREADY),
+        .M08_AXI_wstrb(axi_smc_M08_AXI_WSTRB),
+        .M08_AXI_wvalid(axi_smc_M08_AXI_WVALID),
+        .M09_AXI_araddr(axi_smc_M09_AXI_ARADDR),
+        .M09_AXI_arready(axi_smc_M09_AXI_ARREADY),
+        .M09_AXI_arvalid(axi_smc_M09_AXI_ARVALID),
+        .M09_AXI_awaddr(axi_smc_M09_AXI_AWADDR),
+        .M09_AXI_awready(axi_smc_M09_AXI_AWREADY),
+        .M09_AXI_awvalid(axi_smc_M09_AXI_AWVALID),
+        .M09_AXI_bready(axi_smc_M09_AXI_BREADY),
+        .M09_AXI_bresp(axi_smc_M09_AXI_BRESP),
+        .M09_AXI_bvalid(axi_smc_M09_AXI_BVALID),
+        .M09_AXI_rdata(axi_smc_M09_AXI_RDATA),
+        .M09_AXI_rready(axi_smc_M09_AXI_RREADY),
+        .M09_AXI_rresp(axi_smc_M09_AXI_RRESP),
+        .M09_AXI_rvalid(axi_smc_M09_AXI_RVALID),
+        .M09_AXI_wdata(axi_smc_M09_AXI_WDATA),
+        .M09_AXI_wready(axi_smc_M09_AXI_WREADY),
+        .M09_AXI_wstrb(axi_smc_M09_AXI_WSTRB),
+        .M09_AXI_wvalid(axi_smc_M09_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -754,16 +985,9 @@ module CNC_Top
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_clk_out1),
         .reset(ResetSwitch));
-  CNC_Top_hexfile_holder_0_0 hexfile_holder_0
-       (.ack_phase(hexfile_holder_0_ack_phase),
-        .clk(clk_wiz_clk_out1),
-        .mount_fail(hexfile_holder_0_mount_fail),
-        .mount_ok(hexfile_holder_0_mount_ok),
+  CNC_Top_hexfile_holder_0_0 hexfile_holder
+       (.clk(clk_wiz_clk_out1),
         .mount_req(GCODE_Parser_0_mount_req),
-        .next_line_speed(hexfile_holder_0_next_line_speed),
-        .next_x(hexfile_holder_0_next_x),
-        .next_y(hexfile_holder_0_next_y),
-        .next_z(hexfile_holder_0_next_z),
         .phase(GCODE_Parser_0_phase),
         .request_next_line(GCODE_Parser_0_request_next_line),
         .rst(ResetSwitch));
@@ -837,10 +1061,4 @@ module CNC_Top
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
-  CNC_Top_vio_0_0 vio_0
-       (.clk(clk_wiz_clk_out1),
-        .probe_in0(XYZ_Axis_Coordinator_0_current_speed),
-        .probe_in1(XYZ_Axis_Coordinator_0_target_speed),
-        .probe_in2(XYZ_Axis_Coordinator_0_direction_change_buffer),
-        .probe_in3(Buttons_Vector_0_keys));
 endmodule

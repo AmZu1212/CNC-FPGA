@@ -7,6 +7,10 @@ vhdl xil_defaultlib  \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/sim/CNC_Top_axi_gpio_0_3.vhd" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_4/sim/CNC_Top_axi_gpio_0_4.vhd" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/sim/CNC_Top_axi_gpio_0_5.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/sim/CNC_Top_axi_gpio_0_6.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/sim/CNC_Top_axi_gpio_0_7.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_8/sim/CNC_Top_axi_gpio_0_8.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_9/sim/CNC_Top_axi_gpio_0_9.vhd" \
 
 # Do not sort compile order
 nosort

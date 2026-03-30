@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL333\export\CNC-PL333;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-PRE-RELEASE\export\CNC-PL-PRE-RELEASE;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-FINAL-RELEASE\export\CNC-FPGA-FINAL-RELEASE"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-FINAL-RELEASE\export\CNC-FPGA-FINAL-RELEASE"/>
+	<item key="sdx.custom.platform.repository.locations" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL333\export\CNC-PL333;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-PL-PRE-RELEASE\export\CNC-PL-PRE-RELEASE;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-FINAL-RELEASE\export\CNC-FPGA-FINAL-RELEASE;E:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-PLATFORM\export\CNC-FPGA-PLATFORM"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="E:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-PLATFORM\export\CNC-FPGA-PLATFORM"/>
 </section>

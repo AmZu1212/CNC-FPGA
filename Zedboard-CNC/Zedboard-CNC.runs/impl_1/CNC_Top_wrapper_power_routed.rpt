@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Thu Mar 19 19:54:11 2026
+| Date             : Tue Mar 31 00:01:02 2026
 | Host             : OBSIDIAN running 64-bit major release  (build 9200)
 | Command          : report_power -file CNC_Top_wrapper_power_routed.rpt -pb CNC_Top_wrapper_power_summary_routed.pb -rpx CNC_Top_wrapper_power_routed.rpx
 | Design           : CNC_Top_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.053        |
+| Total On-Chip Power (W)  | 2.060        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.902        |
+| Dynamic (W)              | 1.908        |
 | Device Static (W)        | 0.152        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 61.3         |
-| Junction Temperature (C) | 48.7         |
+| Max Ambient (C)          | 61.2         |
+| Junction Temperature (C) | 48.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.022 |        7 |       --- |             --- |
-| Slice Logic              |     0.114 |    19673 |       --- |             --- |
-|   LUT as Logic           |     0.098 |    10978 |     53200 |           20.64 |
-|   CARRY4                 |     0.015 |     2263 |     13300 |           17.02 |
-|   Register               |    <0.001 |     4266 |    106400 |            4.01 |
+| Clocks                   |     0.024 |        7 |       --- |             --- |
+| Slice Logic              |     0.117 |    19817 |       --- |             --- |
+|   LUT as Logic           |     0.101 |    10826 |     53200 |           20.35 |
+|   CARRY4                 |     0.015 |     2203 |     13300 |           16.56 |
+|   Register               |    <0.001 |     4432 |    106400 |            4.17 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   Others                 |     0.000 |      771 |       --- |             --- |
 |   LUT as Shift Register  |     0.000 |        2 |     17400 |            0.01 |
-| Signals                  |     0.106 |    16179 |       --- |             --- |
+| Signals                  |     0.111 |    16119 |       --- |             --- |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
-| DSPs                     |     0.017 |       22 |       220 |           10.00 |
-| I/O                      |     0.009 |       37 |       200 |           18.50 |
+| DSPs                     |     0.016 |       22 |       220 |           10.00 |
+| I/O                      |     0.007 |       37 |       200 |           18.50 |
 | PS7                      |     1.527 |        1 |       --- |             --- |
 | Static Power             |     0.152 |          |           |                 |
-| Total                    |     2.053 |          |           |                 |
+| Total                    |     2.060 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.278 |       0.260 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.285 |       0.268 |      0.018 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.076 |       0.059 |      0.017 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -156,14 +156,20 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| CNC_Top_wrapper          |     1.902 |
-|   CNC_Top_i              |     1.890 |
+| CNC_Top_wrapper          |     1.908 |
+|   CNC_Top_i              |     1.897 |
+|     DriverController_X   |     0.002 |
+|       inst               |     0.002 |
+|     DriverController_Y   |     0.001 |
+|       inst               |     0.001 |
+|     DriverController_Z   |     0.002 |
+|       inst               |     0.002 |
 |     GCODE_Parser         |     0.003 |
 |       inst               |     0.003 |
 |     VIO                  |     0.004 |
 |       inst               |     0.004 |
-|     XYZ_Axis_Coordinator |     0.231 |
-|       inst               |     0.231 |
+|     XYZ_Axis_Coordinator |     0.234 |
+|       inst               |     0.234 |
 |     X_GPIO               |     0.001 |
 |       U0                 |     0.001 |
 |     axi_smc              |     0.011 |

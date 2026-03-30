@@ -58,9 +58,14 @@ module GCODE_Parser(
     localparam Z_SAFE_HEIGHT    = 5000; //microns
     localparam RETURN_SPEED_Z   = 20;   //mm/s
     localparam RETURN_SPEED_XY  = 60;
+    localparam DATA_SETTLE_CYCLES = 50;
 
     // Hold the request high until the feeder acknowledges the matching phase.
     assign request_next_line = request_pending;
+
+    reg [7:0] settle_counter;
+    reg pending_mount_accept;
+    reg pending_phase_accept;
 
 
     always @(posedge clk) begin
@@ -84,6 +89,9 @@ module GCODE_Parser(
             prev_pos_z <= 0;
             current_line_last <= 0;
             request_pending <= 0;
+            settle_counter <= 0;
+            pending_mount_accept <= 0;
+            pending_phase_accept <= 0;
 
             risingedge_buffer <= 100000000;
         end else begin
@@ -106,6 +114,9 @@ module GCODE_Parser(
                         prev_pos_z <= 0;
                         current_line_last <= 0;
                         request_pending <= 0;
+                        settle_counter <= 0;
+                        pending_mount_accept <= 0;
+                        pending_phase_accept <= 0;
                         mount_req <= 1;
                     end
                 end
@@ -114,34 +125,55 @@ module GCODE_Parser(
                     if (mount_fail) begin
                         state <= IDLE;
                         phase <= 2'b00;
+                        settle_counter <= 0;
+                        pending_mount_accept <= 0;
                         mount_req <= 0;
+                    end else if (pending_mount_accept) begin
+                        if (settle_counter > 0) begin
+                            settle_counter <= settle_counter - 1;
+                        end else begin
+                            pending_mount_accept <= 0;
+                            state <= RUNNING;
+                            phase <= 2'b00;
+                            request_pending <= 0;
+                            current_line_last <= last_line;
+                            speed <= next_line_speed;
+                            x <= next_x;
+                            y <= next_y;
+                            z <= next_z;
+                            start_program <= 1;
+                        end
                     end else if (mount_ok) begin
-                        state <= RUNNING;
-                        phase <= 2'b00;
-                        request_pending <= 0;
-                        current_line_last <= last_line;
-                        speed <= next_line_speed;
-                        x <= next_x;
-                        y <= next_y;
-                        z <= next_z;
-                        start_program <= 1;
+                        pending_mount_accept <= 1;
+                        settle_counter <= DATA_SETTLE_CYCLES - 1;
                     end
                 end
 
                 RUNNING : begin
                     enable <= 1;
-                    if (request_pending && (ack_phase == phase) && (phase != 2'b00)) begin
-                        request_pending <= 0;
-                        current_line_last <= last_line;
-                        speed <= next_line_speed;
-                        x <= next_x;
-                        y <= next_y;
-                        z <= next_z;
+                    if (pending_phase_accept) begin
+                        if (settle_counter > 0) begin
+                            settle_counter <= settle_counter - 1;
+                        end else begin
+                            pending_phase_accept <= 0;
+                            request_pending <= 0;
+                            current_line_last <= last_line;
+                            speed <= next_line_speed;
+                            x <= next_x;
+                            y <= next_y;
+                            z <= next_z;
+                        end
+                    end else if (request_pending && (ack_phase == phase) && (phase != 2'b00)) begin
+                        pending_phase_accept <= 1;
+                        settle_counter <= DATA_SETTLE_CYCLES - 1;
                     end
                     // A second press cancels the run and enters the return path.
                     if (start_risingedge && !risingedge_buffer) begin
-                        state <= RETURN;
                         request_pending <= 0;
+                        pending_mount_accept <= 0;
+                        pending_phase_accept <= 0;
+                        settle_counter <= 0;
+                        state <= RETURN;
                         mount_req <= 0;
                     end else begin
                         if (load_next_line) begin
@@ -154,6 +186,8 @@ module GCODE_Parser(
                             if (current_line_last) begin
                                 state <= RETURN;
                                 request_pending <= 0;
+                                pending_phase_accept <= 0;
+                                settle_counter <= 0;
                                 mount_req <= 0;
                             end else begin
                                 phase <= (phase == 2'b01) ? 2'b10 : 2'b01;
@@ -204,6 +238,9 @@ module GCODE_Parser(
                                 phase <= 2'b00;
                                 request_pending <= 0;
                                 current_line_last <= 0;
+                                settle_counter <= 0;
+                                pending_mount_accept <= 0;
+                                pending_phase_accept <= 0;
                                 mount_req <= 0;
                             end
                         end

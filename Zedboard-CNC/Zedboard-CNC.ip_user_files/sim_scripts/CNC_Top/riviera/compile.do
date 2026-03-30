@@ -218,6 +218,34 @@ vlog -work xil_defaultlib  -incr "+incdir+../../../../Zedboard-CNC.gen/sources_1
 "../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_65/sim/bd_0a6d_m05wn_0.sv" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_66/sim/bd_0a6d_m05bn_0.sv" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_67/sim/bd_0a6d_m05e_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_68/sim/bd_0a6d_m06s2a_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_69/sim/bd_0a6d_m06arn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_70/sim/bd_0a6d_m06rn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_71/sim/bd_0a6d_m06awn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_72/sim/bd_0a6d_m06wn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_73/sim/bd_0a6d_m06bn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_74/sim/bd_0a6d_m06e_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_75/sim/bd_0a6d_m07s2a_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_76/sim/bd_0a6d_m07arn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_77/sim/bd_0a6d_m07rn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_78/sim/bd_0a6d_m07awn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_79/sim/bd_0a6d_m07wn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_80/sim/bd_0a6d_m07bn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_81/sim/bd_0a6d_m07e_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_82/sim/bd_0a6d_m08s2a_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_83/sim/bd_0a6d_m08arn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_84/sim/bd_0a6d_m08rn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_85/sim/bd_0a6d_m08awn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_86/sim/bd_0a6d_m08wn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_87/sim/bd_0a6d_m08bn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_88/sim/bd_0a6d_m08e_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_89/sim/bd_0a6d_m09s2a_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_90/sim/bd_0a6d_m09arn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_91/sim/bd_0a6d_m09rn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_92/sim/bd_0a6d_m09awn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_93/sim/bd_0a6d_m09wn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_94/sim/bd_0a6d_m09bn_0.sv" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_smc_0/bd_0/ip/ip_95/sim/bd_0a6d_m09e_0.sv" \
 
 vlog -work axi_register_slice_v2_1_33  -incr -v2k5 "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/ec67/hdl" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/86fe/hdl" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/f0b6/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0127/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/814a/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/1017/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/4506/hdl" "+incdir+C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l xlconstant_v1_1_9 -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_19 -l processing_system7_vip_v1_0_21 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_3 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_35 -l proc_sys_reset_v5_0_16 -l smartconnect_v1_0 -l axi_register_slice_v2_1_33 \
 "../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v" \
@@ -232,6 +260,10 @@ vcom -work xil_defaultlib -93  -incr \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_3/sim/CNC_Top_axi_gpio_0_3.vhd" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_4/sim/CNC_Top_axi_gpio_0_4.vhd" \
 "../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_5/sim/CNC_Top_axi_gpio_0_5.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_6/sim/CNC_Top_axi_gpio_0_6.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_7/sim/CNC_Top_axi_gpio_0_7.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_8/sim/CNC_Top_axi_gpio_0_8.vhd" \
+"../../../bd/CNC_Top/ip/CNC_Top_axi_gpio_0_9/sim/CNC_Top_axi_gpio_0_9.vhd" \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/3cbc" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/ec67/hdl" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/86fe/hdl" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/f0b6/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/0127/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/814a/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/1017/hdl/verilog" "+incdir+../../../../Zedboard-CNC.gen/sources_1/bd/CNC_Top/ipshared/4506/hdl" "+incdir+C:/Xilinx/Vivado/2024.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l xil_defaultlib -l xlconstant_v1_1_9 -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_19 -l processing_system7_vip_v1_0_21 -l axi_lite_ipif_v3_0_4 -l lib_cdc_v1_0_3 -l interrupt_control_v3_1_5 -l axi_gpio_v2_0_35 -l proc_sys_reset_v5_0_16 -l smartconnect_v1_0 -l axi_register_slice_v2_1_33 \
 "../../../bd/CNC_Top/sim/CNC_Top.v" \

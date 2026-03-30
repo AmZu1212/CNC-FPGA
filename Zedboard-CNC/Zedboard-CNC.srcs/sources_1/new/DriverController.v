@@ -35,25 +35,28 @@ module DriverController(
 	wire active = (cycles_per_step > 0);
 	
 	reg [63:0] clk_counter;
-	//reg [63:0] cycle_target;
-	wire [63:0] cycle_count;
-	assign cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH) : (cycles_per_step);
+	reg [63:0] cycle_count_latched;
+	wire [63:0] next_cycle_count;
+	assign next_cycle_count = (cycles_per_step < (STEP_WIDTH)) ? (STEP_WIDTH) : (cycles_per_step);
     
 	always @(posedge clk) begin
-	   dir_out <= dir;
 	   if(rst) begin
 	       clk_counter <= 0;
+	       cycle_count_latched <= STEP_WIDTH;
 	       en <= hold;
+	       dir_out <= dir;
 	       step <= 0;
 	       step_risingedge <= 0;
 	   end else begin
 	       en <= (hold || active);
-	       if((clk_counter < cycle_count) && active) begin
+	       if((clk_counter < cycle_count_latched) && active) begin
 	           clk_counter <= clk_counter + 1;
-	           step <= (clk_counter  < (cycle_count >> 1));// ? 1 : 0
+	           step <= (clk_counter  < (cycle_count_latched >> 1));// ? 1 : 0
 	           step_risingedge <= 0;
 	       end else begin
 	           clk_counter <= 0;
+	           cycle_count_latched <= next_cycle_count;
+	           if(!step) dir_out <= dir;
 	           step <= 0;
 	           step_risingedge <= active;
 	       end

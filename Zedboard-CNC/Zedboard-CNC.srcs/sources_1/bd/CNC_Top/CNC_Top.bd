@@ -2618,10 +2618,10 @@
       "GCODE_Parser_0_enable": {
         "ports": [
           "GCODE_Parser/enable",
-          "XYZ_Axis_Coordinator/enable",
           "DriverController_X/hold",
           "DriverController_Y/hold",
-          "DriverController_Z/hold"
+          "DriverController_Z/hold",
+          "XYZ_Axis_Coordinator/enable"
         ]
       },
       "GCODE_Parser_0_mount_req": {
@@ -2713,13 +2713,13 @@
           "A4988_Driver_IO_X/reset",
           "A4988_Driver_IO_Z/reset",
           "A4988_Driver_IO_Y/reset",
-          "XYZ_Axis_Coordinator/rst",
           "hexfile_holder/rst",
           "GCODE_Parser/rst",
           "DriverController_X/rst",
           "DriverController_Y/rst",
           "DriverController_Z/rst",
-          "clk_wiz/reset"
+          "clk_wiz/reset",
+          "XYZ_Axis_Coordinator/rst"
         ]
       },
       "Right_1": {
@@ -2828,12 +2828,12 @@
         "ports": [
           "clk_wiz/clk_out1",
           "VIO/clk",
-          "XYZ_Axis_Coordinator/clk",
           "hexfile_holder/clk",
           "GCODE_Parser/clk",
           "DriverController_X/clk",
           "DriverController_Y/clk",
-          "DriverController_Z/clk"
+          "DriverController_Z/clk",
+          "XYZ_Axis_Coordinator/clk"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {

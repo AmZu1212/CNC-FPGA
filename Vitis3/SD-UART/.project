@@ -3,7 +3,7 @@
 	<name>SD-UART</name>
 	<comment>Created by Vitis v2024.2</comment>
 	<projects>
-		<project>CNC-FPGA-FINAL-RELEASE</project>
+		<project>CNC-FPGA-PLATFORM</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

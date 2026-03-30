@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 19 17:04:11 2026" VIVADOVERSION="2024.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 30 23:45:09 2026" VIVADOVERSION="2024.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="CNC_Top" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -129,13 +129,13 @@
         <CONNECTION INSTANCE="A4988_Driver_IO_X" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO_Z" PORT="reset"/>
         <CONNECTION INSTANCE="A4988_Driver_IO_Y" PORT="reset"/>
-        <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="rst"/>
         <CONNECTION INSTANCE="hexfile_holder" PORT="rst"/>
         <CONNECTION INSTANCE="GCODE_Parser" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_X" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Y" PORT="rst"/>
         <CONNECTION INSTANCE="DriverController_Z" PORT="rst"/>
         <CONNECTION INSTANCE="clk_wiz" PORT="reset"/>
+        <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Right" SIGIS="undef" SIGNAME="External_Ports_Right">
@@ -1143,10 +1143,10 @@
         </PORT>
         <PORT DIR="O" NAME="enable" SIGIS="undef" SIGNAME="GCODE_Parser_enable">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="enable"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="hold"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="hold"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="hold"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="last_line" SIGIS="undef"/>
@@ -7701,12 +7701,12 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VIO" PORT="clk"/>
-            <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="clk"/>
             <CONNECTION INSTANCE="hexfile_holder" PORT="clk"/>
             <CONNECTION INSTANCE="GCODE_Parser" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_X" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Y" PORT="clk"/>
             <CONNECTION INSTANCE="DriverController_Z" PORT="clk"/>
+            <CONNECTION INSTANCE="XYZ_Axis_Coordinator" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="External_Ports_ResetSwitch">

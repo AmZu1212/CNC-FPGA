@@ -61,9 +61,9 @@ module CNC_Top_DriverController_X_1 (
   dir,
   hold,
   en,
+  dir_out,
   step,
-  step_risingedge,
-  dir_out
+  step_risingedge
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
@@ -78,9 +78,9 @@ input wire [63 : 0] cycles_per_step;
 input wire dir;
 input wire hold;
 output wire en;
+output wire dir_out;
 output wire step;
 output wire step_risingedge;
-output wire dir_out;
 
   DriverController inst (
     .clk(clk),
@@ -89,8 +89,8 @@ output wire dir_out;
     .dir(dir),
     .hold(hold),
     .en(en),
+    .dir_out(dir_out),
     .step(step),
-    .step_risingedge(step_risingedge),
-    .dir_out(dir_out)
+    .step_risingedge(step_risingedge)
   );
 endmodule
