@@ -125,9 +125,9 @@ module XYZ_Axis_Coordinator(
     assign cycles_per_step_z_result = ((distance_z > 0 && current_speed > 0) && (state == CALC_2 || state == MOVE)) ? ((MICRONS_PER_STEP_Z * 100000 * distance) / (current_speed * distance_z)) : 0;
     
     
-    assign x_reached = (curr_pos_x > target_pos_x - MICRONS_PER_STEP_X && curr_pos_x < target_pos_x + MICRONS_PER_STEP_X);
-    assign y_reached = (curr_pos_y > target_pos_y - MICRONS_PER_STEP_Y && curr_pos_y < target_pos_y + MICRONS_PER_STEP_Y);
-    assign z_reached = (curr_pos_z > target_pos_z - MICRONS_PER_STEP_Z && curr_pos_z < target_pos_z + MICRONS_PER_STEP_Z);
+    assign x_reached = (target_pos_x >= start_pos_x) ? (curr_pos_x >= target_pos_x) : (curr_pos_x <= target_pos_x);
+    assign y_reached = (target_pos_y >= start_pos_y) ? (curr_pos_y >= target_pos_y) : (curr_pos_y <= target_pos_y);
+    assign z_reached = (target_pos_z >= start_pos_z) ? (curr_pos_z >= target_pos_z) : (curr_pos_z <= target_pos_z);
     
     
     wire signed [31:0] midpoint_x;
