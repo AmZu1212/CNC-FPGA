@@ -22,3 +22,4 @@ _ide/.wsdata
 
 # Ignore Verilog simulation outputs
 Verilog Library
+alternate*
