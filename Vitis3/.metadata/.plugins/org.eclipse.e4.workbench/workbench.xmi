@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-FPGA-PLATFORM/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-FPGA-PLATFORM/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-FPGA-FINAL-RELEASE/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-FPGA-FINAL-RELEASE/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL-PRE-RELEASE/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL-PRE-RELEASE/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL333/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL333/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;SD-UART/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SD-UART/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL-FINAL/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL-FINAL/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL-NEW/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL-NEW/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL1/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL1/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL10/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL10/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL11/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL11/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL9/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL9/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL8/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL8/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform.c&quot; tooltip=&quot;SD-UART/src/platform.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SD-UART/src/platform.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform.h&quot; tooltip=&quot;SD-UART/src/platform.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SD-UART/src/platform.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL7/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL7/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL5/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL5/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL6/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL6/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;SD-UART.prj&quot; tooltip=&quot;SD-UART/SD-UART.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/SD-UART/SD-UART.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;CNC-PL4/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/CNC-PL4/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_p4H7sSLYEfGfGtZDuSfv3g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_p4H7siLYEfGfGtZDuSfv3g" x="277" y="-16" width="1280" height="720">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_p4H7sSLYEfGfGtZDuSfv3g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_p4H7siLYEfGfGtZDuSfv3g" x="450" y="-18" width="1094" height="720">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -39,17 +39,16 @@
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedLibraryWizard</tags>
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedKernelWizard</tags>
           <tags>persp.newWizSC:com.xilinx.sdx.npw.revisedPlatformWizard</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_p4H7tSLYEfGfGtZDuSfv3g" selectedElement="_p4H7uyLYEfGfGtZDuSfv3g" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_p4H7tiLYEfGfGtZDuSfv3g" containerData="1766" selectedElement="_p4H7uSLYEfGfGtZDuSfv3g">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_p4H7tSLYEfGfGtZDuSfv3g" selectedElement="_p4H7tiLYEfGfGtZDuSfv3g" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_p4H7tiLYEfGfGtZDuSfv3g" containerData="1766" selectedElement="_p4H7tyLYEfGfGtZDuSfv3g">
               <children xsi:type="basic:PartStack" xmi:id="_p4H7tyLYEfGfGtZDuSfv3g" elementId="com.xilinx.ide.projectExplorerMStack" containerData="6362" selectedElement="_p4H7uCLYEfGfGtZDuSfv3g">
-                <tags>noFocus</tags>
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_p4H7uCLYEfGfGtZDuSfv3g" elementId="com.xilinx.ide.projectExplorer" ref="_p4IjVCLYEfGfGtZDuSfv3g" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Vitis</tags>
                 </children>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_p4H7uSLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdx.assistant.assistantViewMStack" containerData="3638" selectedElement="_p4H7uiLYEfGfGtZDuSfv3g">
-                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_p4H7uiLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdx.assistant.assistantView" ref="_p4IknyLYEfGfGtZDuSfv3g" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Vitis</tags>
@@ -85,7 +84,7 @@
                     <tags>categoryTag:Vitis</tags>
                   </children>
                 </children>
-                <children xsi:type="basic:PartStack" xmi:id="_p4H7xiLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdk.targetmanager.ui.TargetManagementViewMStack" containerData="4291" selectedElement="_p4H7yiLYEfGfGtZDuSfv3g">
+                <children xsi:type="basic:PartStack" xmi:id="_p4H7xiLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdk.targetmanager.ui.TargetManagementViewMStack" containerData="4291" selectedElement="_p4H7ySLYEfGfGtZDuSfv3g">
                   <tags>Terminal</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_p4H7xyLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdk.targetmanager.ui.TargetManagementView" toBeRendered="false" ref="_p4Ik0yLYEfGfGtZDuSfv3g" closeable="true">
                     <tags>View</tags>
@@ -99,7 +98,7 @@
                     <tags>View</tags>
                     <tags>categoryTag:Terminal</tags>
                   </children>
-                  <children xsi:type="advanced:Placeholder" xmi:id="_p4H7yiLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView:1" ref="_p4IlOCLYEfGfGtZDuSfv3g" closeable="true">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_p4H7yiLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView:1" toBeRendered="false" ref="_p4IlOCLYEfGfGtZDuSfv3g" closeable="true">
                     <tags>View</tags>
                     <tags>categoryTag:Terminal</tags>
                   </children>
@@ -429,24 +428,6 @@
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_p4IjUiLYEfGfGtZDuSfv3g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CNC-PL333" iconURI="platform:/plugin/com.xilinx.sdx.scw/icons/ide_16.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; partName=&quot;CNC-PL333&quot; title=&quot;CNC-PL333&quot; tooltip=&quot;CNC-PL333/platform.spr&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CNC-PL333/platform.spr&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>com.xilinx.sdx.scw.ui.editor.ScwEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_p4IjUyLYEfGfGtZDuSfv3g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CNC-PL-PRE-RELEASE" iconURI="platform:/plugin/com.xilinx.sdx.scw/icons/ide_16.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; partName=&quot;CNC-PL-PRE-RELEASE&quot; title=&quot;CNC-PL-PRE-RELEASE&quot; tooltip=&quot;CNC-PL-PRE-RELEASE/platform.spr&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CNC-PL-PRE-RELEASE/platform.spr&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>com.xilinx.sdx.scw.ui.editor.ScwEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_cFAuECO9EfGukqaMxle_dg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CNC-FPGA-FINAL-RELEASE" iconURI="platform:/plugin/com.xilinx.sdx.scw/icons/ide_16.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; partName=&quot;CNC-FPGA-FINAL-RELEASE&quot; title=&quot;CNC-FPGA-FINAL-RELEASE&quot; tooltip=&quot;CNC-FPGA-FINAL-RELEASE/platform.spr&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CNC-FPGA-FINAL-RELEASE/platform.spr&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>com.xilinx.sdx.scw.ui.editor.ScwEditor</tags>
-        </children>
         <children xsi:type="basic:Part" xmi:id="_xoA7MCx-EfGwEZ5Z9SToug" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CNC-FPGA-PLATFORM" iconURI="platform:/plugin/com.xilinx.sdx.scw/icons/ide_16.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; partName=&quot;CNC-FPGA-PLATFORM&quot; title=&quot;CNC-FPGA-PLATFORM&quot; tooltip=&quot;CNC-FPGA-PLATFORM/platform.spr&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CNC-FPGA-PLATFORM/platform.spr&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -461,6 +442,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;1&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Vitis</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_p4IjVSLYEfGfGtZDuSfv3g" elementId="com.xilinx.ide.projectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -504,6 +487,18 @@
       <menus xsi:type="menu:PopupMenu" xmi:id="_pd3kQCx-EfGwEZ5Z9SToug" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
         <tags>menuContribution:popup</tags>
       </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_eoA6ADEpEfG6ldZiv0_LzA" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_01p8QDQbEfG8BrVE3ueGQg" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_SZUuIDQfEfGHWNSkr_i3Hw" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_UAHBUDwYEfGQ9JpI5uu-Nw" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
       <toolbar xmi:id="_p4IkmiLYEfGfGtZDuSfv3g" elementId="com.xilinx.ide.projectExplorer"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_p4IknyLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdx.assistant.assistantView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Assistant" iconURI="platform:/plugin/com.xilinx.sdx.assistant/icons/assistant_view.png" tooltip="Assistant to manage Scout project setup, builds, and reports." closeable="true">
@@ -512,8 +507,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view AssistantView.EXPANSION=&quot;SD-UART_system,SD-UART_system/SD-UART&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Vitis</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_p4IkoCLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdx.assistant.assistantView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -938,7 +931,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_p4IlNyLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" visible="false"/>
+      <toolbar xmi:id="_p4IlNyLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_p4IlOCLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView:1" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Terminal 1" iconURI="platform:/plugin/org.eclipse.tm.terminal.view.ui/icons/eview16/terminal_view.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.tm.terminal.view.ui"/>
@@ -950,7 +943,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_p4IlOyLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView"/>
+      <toolbar xmi:id="_p4IlOyLYEfGfGtZDuSfv3g" elementId="org.eclipse.tm.terminal.view.ui.TerminalsView" visible="false"/>
     </sharedElements>
     <trimBars xmi:id="_p4IlRyLYEfGfGtZDuSfv3g" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.ui.workbench">
       <children xsi:type="menu:ToolBar" xmi:id="_p4IlSCLYEfGfGtZDuSfv3g" elementId="group.file" toBeRendered="false">
@@ -3585,6 +3578,10 @@
   <addons xmi:id="_p4LDBCLYEfGfGtZDuSfv3g" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_QAGKsCO9EfGukqaMxle_dg" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_m7ixcSx-EfGwEZ5Z9SToug" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_dZwXITEpEfG6ldZiv0_LzA" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_zq1H4TQbEfG8BrVE3ueGQg" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_RoqGMTQfEfGHWNSkr_i3Hw" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_SuscwDwYEfGQ9JpI5uu-Nw" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <categories xmi:id="_p4LDBSLYEfGfGtZDuSfv3g" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_p4LDBiLYEfGfGtZDuSfv3g" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
   <categories xmi:id="_p4LDByLYEfGfGtZDuSfv3g" elementId="org.eclipse.ui.category.edit" name="Edit"/>

@@ -2943,3 +2943,727 @@ E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/
 E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
 
 TRACE::2026-03-31.00:25:41::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:11::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:11::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:11::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:11::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:11::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:11::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:11::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWReader::Active system found as  CNC-FPGA-PLATFORM
+TRACE::2026-04-05.22:56:13::SCWReader::Handling sysconfig CNC-FPGA-PLATFORM
+TRACE::2026-04-05.22:56:13::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-05.22:56:13::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-05.22:56:13::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-04-05.22:56:13::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-04-05.22:56:13::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-05.22:56:13::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:13::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:13::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-04-05.22:56:13::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-05.22:56:13::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-05.22:56:13::SCWMssOS::Commit changes completed.
+TRACE::2026-04-05.22:56:13::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-05.22:56:13::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:13::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWReader::No isolation master present  
+TRACE::2026-04-05.22:56:13::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-05.22:56:13::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-05.22:56:13::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:13::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:13::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:13::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:13::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:13::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2026-04-05.22:56:14::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-05.22:56:14::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:14::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:14::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:14::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:14::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:14::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-05.22:56:14::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-05.22:56:14::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-05.22:56:14::SCWMssOS::Commit changes completed.
+TRACE::2026-04-05.22:56:14::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-05.22:56:14::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-05.22:56:14::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-05.22:56:14::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-05.22:56:14::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-05.22:56:14::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-05.22:56:14::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-05.22:56:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-05.22:56:14::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-05.22:56:14::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-05.22:56:14::SCWReader::No isolation master present  
+TRACE::2026-04-09.16:56:01::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:01::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:01::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:01::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:01::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:01::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:01::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWReader::Active system found as  CNC-FPGA-PLATFORM
+TRACE::2026-04-09.16:56:04::SCWReader::Handling sysconfig CNC-FPGA-PLATFORM
+TRACE::2026-04-09.16:56:04::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-09.16:56:04::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-09.16:56:04::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-04-09.16:56:04::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-04-09.16:56:04::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-09.16:56:04::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-04-09.16:56:04::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-09.16:56:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-09.16:56:04::SCWMssOS::Commit changes completed.
+TRACE::2026-04-09.16:56:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-09.16:56:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWReader::No isolation master present  
+TRACE::2026-04-09.16:56:04::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-09.16:56:04::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-09.16:56:04::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2026-04-09.16:56:04::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-09.16:56:04::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-09.16:56:04::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-09.16:56:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-09.16:56:04::SCWMssOS::Commit changes completed.
+TRACE::2026-04-09.16:56:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-09.16:56:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.16:56:04::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.16:56:04::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.16:56:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.16:56:04::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.16:56:04::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.16:56:04::SCWReader::No isolation master present  
+TRACE::2026-04-09.17:20:42::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:42::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:42::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:42::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:42::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:42::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:42::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWReader::Active system found as  CNC-FPGA-PLATFORM
+TRACE::2026-04-09.17:20:44::SCWReader::Handling sysconfig CNC-FPGA-PLATFORM
+TRACE::2026-04-09.17:20:44::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-09.17:20:44::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-09.17:20:44::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-04-09.17:20:44::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-04-09.17:20:44::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-09.17:20:44::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-04-09.17:20:44::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-09.17:20:44::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-09.17:20:44::SCWMssOS::Commit changes completed.
+TRACE::2026-04-09.17:20:44::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-09.17:20:44::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWReader::No isolation master present  
+TRACE::2026-04-09.17:20:44::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-09.17:20:44::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-09.17:20:44::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2026-04-09.17:20:44::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-09.17:20:44::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-09.17:20:44::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-09.17:20:44::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-09.17:20:44::SCWMssOS::Commit changes completed.
+TRACE::2026-04-09.17:20:44::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-09.17:20:44::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-09.17:20:44::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-09.17:20:44::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-09.17:20:44::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-09.17:20:44::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-09.17:20:44::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-09.17:20:44::SCWReader::No isolation master present  
+TRACE::2026-04-19.20:51:00::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:00::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:00::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:00::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:00::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:00::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:00::SCWPlatform::Do not have an existing db opened. 
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened new HwDB with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWReader::Active system found as  CNC-FPGA-PLATFORM
+TRACE::2026-04-19.20:51:02::SCWReader::Handling sysconfig CNC-FPGA-PLATFORM
+TRACE::2026-04-19.20:51:02::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-19.20:51:02::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-19.20:51:02::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2026-04-19.20:51:02::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2026-04-19.20:51:02::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-19.20:51:02::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS:: library already available in sw design:  xilrsa:1.8
+TRACE::2026-04-19.20:51:02::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-19.20:51:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-19.20:51:02::SCWMssOS::Commit changes completed.
+TRACE::2026-04-19.20:51:02::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-19.20:51:02::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWReader::No isolation master present  
+TRACE::2026-04-19.20:51:02::SCWDomain::checking for install qemu data   : 
+TRACE::2026-04-19.20:51:02::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2026-04-19.20:51:02::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::No sw design opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::mss exists loading the mss file  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Opened the sw design from mss  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Adding the swdes entry E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2026-04-19.20:51:02::SCWMssOS::updating the scw layer about changes
+TRACE::2026-04-19.20:51:02::SCWMssOS::Opened the sw design.  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS:: library already available in sw design:  xilffs:5.3
+TRACE::2026-04-19.20:51:02::SCWMssOS::Saving the mss changes E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-04-19.20:51:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-04-19.20:51:02::SCWMssOS::Commit changes completed.
+TRACE::2026-04-19.20:51:02::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2026-04-19.20:51:02::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to open the hw design at E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA given E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA absoulate path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform::DSA directory E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Platform Path E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/hw/CNC_FPGA_HW.xsa
+TRACE::2026-04-19.20:51:02::SCWPlatform:: Unique name xilinx:zedboard::0.0
+TRACE::2026-04-19.20:51:02::SCWPlatform::Trying to set the existing hwdb with name CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Opened existing hwdb CNC_Top_wrapper
+TRACE::2026-04-19.20:51:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-04-19.20:51:02::SCWMssOS::Checking the sw design at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWMssOS::DEBUG:  swdes dump  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2026-04-19.20:51:02::SCWMssOS::Sw design exists and opened at  E:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2026-04-19.20:51:02::SCWReader::No isolation master present  

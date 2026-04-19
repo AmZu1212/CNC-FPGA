@@ -2,12 +2,12 @@
 # In Vitis IDE create a Single Application Debug launch configuration,
 # change the debug type to 'Attach to running target' and provide this 
 # tcl script in 'Execute Script' option.
-# Path of this script: E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_12_standalone.tcl
+# Path of this script: E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_17_standalone.tcl
 # 
 # 
 # Usage with xsct:
 # To debug using xsct, launch xsct and run below command
-# source E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_12_standalone.tcl
+# source E:\Git-Repos\CNC-FPGA\Vitis3\SD-UART_system\_ide\scripts\systemdebugger_sd-uart_system_17_standalone.tcl
 # 
 connect -url tcp:127.0.0.1:3121
 targets -set -nocase -filter {name =~"APU*"}
