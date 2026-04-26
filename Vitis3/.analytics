@@ -257,3 +257,18 @@ timestamp=[2026-04-09 17:20:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00
 timestamp=[2026-04-19 20:50:54], mode=WORKBENCH_START, duration=0:00:08.691, duration_ms=8691, data={}
 timestamp=[2026-04-19 20:50:54], mode=WORKBENCH_UI_INIT, duration=0:00:00.753, duration_ms=753, data={editors_count=5, platform_editors_count=4, projects_count=7, platform_projects_count=4, active_platform_editor=true, projects=CNC-FPGA-FINAL-RELEASE,CNC-FPGA-PLATFORM,CNC-PL-PRE-RELEASE,CNC-PL333,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
 timestamp=[2026-04-19 20:50:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.478, duration_ms=478, data={}
+timestamp=[2026-04-19 23:03:00], mode=WORKBENCH_START, duration=0:00:11.403, duration_ms=11403, data={}
+timestamp=[2026-04-19 23:03:01], mode=WORKBENCH_UI_INIT, duration=0:00:00.900, duration_ms=900, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=CNC-FPGA-PLATFORM,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
+timestamp=[2026-04-19 23:03:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.297, duration_ms=1297, data={}
+timestamp=[2026-04-19 23:07:21], mode=PLATFORM_GENERATION, duration=0:00:24.911, duration_ms=24911, data={name=CNC-FPGA-PLATFORM}
+timestamp=[2026-04-19 23:07:27], mode=BUILD, duration=0:00:02.407, duration_ms=2407, data={name=SD-UART, configuration=Debug, clean_build=false}
+timestamp=[2026-04-19 23:07:39], mode=BUILD, duration=0:00:11.530, duration_ms=11530, data={name=SD-UART_system, configuration=Debug, clean_build=false}
+timestamp=[2026-04-26 10:31:09], mode=WORKBENCH_START, duration=0:00:09.456, duration_ms=9456, data={}
+timestamp=[2026-04-26 10:31:10], mode=WORKBENCH_UI_INIT, duration=0:00:00.615, duration_ms=615, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=CNC-FPGA-PLATFORM,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
+timestamp=[2026-04-26 10:31:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.843, duration_ms=843, data={}
+timestamp=[2026-04-26 13:00:59], mode=WORKBENCH_START, duration=0:00:12.040, duration_ms=12040, data={}
+timestamp=[2026-04-26 13:01:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.952, duration_ms=952, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=CNC-FPGA-PLATFORM,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
+timestamp=[2026-04-26 13:01:02], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.259, duration_ms=1259, data={}
+timestamp=[2026-04-26 14:16:33], mode=WORKBENCH_START, duration=0:00:13.721, duration_ms=13721, data={}
+timestamp=[2026-04-26 14:16:34], mode=WORKBENCH_UI_INIT, duration=0:00:01.173, duration_ms=1173, data={editors_count=2, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=CNC-FPGA-PLATFORM,RemoteSystemsTempFiles,SD-UART,SD-UART_system}
+timestamp=[2026-04-26 14:16:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.501, duration_ms=1501, data={}

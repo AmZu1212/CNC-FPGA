@@ -1,4 +1,4 @@
-00:25:54 **** Incremental Build of configuration Debug for project SD-UART ****
+23:07:24 **** Build of configuration Debug for project SD-UART ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -6,17 +6,17 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IX:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IX:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
 'Building target: SD-UART.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bsplib/lib -o "SD-UART.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LX:/Git-Repos/CNC-FPGA/Vitis3/CNC-FPGA-PLATFORM/export/CNC-FPGA-PLATFORM/sw/CNC-FPGA-PLATFORM/standalone_domain/bsplib/lib -o "SD-UART.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: SD-UART.elf'
 ' '
 'Invoking: ARM v7 Print Size'
@@ -26,5 +26,5 @@ arm-none-eabi-size SD-UART.elf  |tee "SD-UART.elf.size"
 'Finished building: SD-UART.elf.size'
 ' '
 
-00:25:55 Build Finished (took 1s.573ms)
+23:07:27 Build Finished (took 2s.365ms)
 

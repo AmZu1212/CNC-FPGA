@@ -34,3 +34,8 @@ platform active {CNC-FPGA-PLATFORM}
 catch {platform remove CNC-PL333}
 catch {platform remove CNC-PL-PRE-RELEASE}
 catch {platform remove CNC-FPGA-FINAL-RELEASE}
+platform active {CNC-FPGA-PLATFORM}
+platform generate
+platform active {CNC-FPGA-PLATFORM}
+platform active {CNC-FPGA-PLATFORM}
+platform active {CNC-FPGA-PLATFORM}

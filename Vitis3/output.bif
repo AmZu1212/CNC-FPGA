@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]X:\Git-Repos\CNC-FPGA\Vitis3\CNC-FPGA-PLATFORM\zynq_fsbl\fsbl.elf
+	X:\Git-Repos\CNC-FPGA\Zedboard-CNC\Zedboard-CNC.runs\impl_1\CNC_Top_wrapper.bit
+	X:\Git-Repos\CNC-FPGA\Vitis3\SD-UART\Debug\SD-UART.elf
+}
